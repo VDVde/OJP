@@ -37,7 +37,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-
 	<!-- ==== LocationInformation Service=============================================== -->
 	<xs:element name="OJPLocationInformationRequest" type="OJPLocationInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPLocationInformationRequestStructure">

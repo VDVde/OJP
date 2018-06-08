@@ -133,7 +133,6 @@
 			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
-	
 	<!-- ================ Filters ======================================================= -->
 	<xs:complexType name="PtModeFilterStructure">
 		<xs:annotation>

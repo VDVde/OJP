@@ -16,8 +16,7 @@
 				<Date>
 					<Modified>2007-03-29</Modified>
 				</Date>
-				<Date>
-					<Modified>2011-04-19</Modified>
+				<Date><Modified>2011-04-19</Modified>
 					 Add explicit incldue of ifopt time so that will validate 
 				</Date>
 				<Description>

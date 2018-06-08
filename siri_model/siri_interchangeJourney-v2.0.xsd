@@ -10,12 +10,10 @@
 				<Contributor>Gustav Thiessen BLIC thi@BLIC.DE</Contributor>
 				<Coverage>Europe</Coverage>
 				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-				<Date>
-					<Created>2012-03-29</Created>
+				<Date><Created>2012-03-29</Created>
 					  Factored out of conection timnetable servcie
 				</Date>
-				<Date>
-					<Modified>2012-03-20</Modified>
+				<Date><Modified>2012-03-20</Modified>
 					 +SIRI v2.0
 				</Date>
 				<Description>

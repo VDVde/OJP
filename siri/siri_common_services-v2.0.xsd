@@ -21,32 +21,26 @@
 				<Date>
 					<Modified>2005-05-11</Modified>
 				</Date>
-				<Date>
-					<Modified>2007-04-17</Modified>
+				<Date><Modified>2007-04-17</Modified>
 					 - Name Space changes 
 				</Date>
-				<Date>
-					<Modified>2008-10-09</Modified>
+				<Date><Modified>2008-10-09</Modified>
 					 -- Add Subscriber ref to TermninateSubscription Request 
 				</Date>
-				<Date>
-					<Modified>2008-11-17</Modified>
+				<Date><Modified>2008-11-17</Modified>
 					 -- Revise for substitution groups and move down to siri subdirectory 
 				</Date>
-				<Date>
-					<Modified>2012-03-23</Modified>
+				<Date><Modified>2012-03-23</Modified>
 					 +SIRI v2.0
 					   - Add DataReady to Check Status
 					   - Add DistanceUnits and VelocityUnits to ServiceRequestContext
 					   - [FR]    Add Extensions tag to Terminate SubscriptionRequest
 				</Date>
-				<Date>
-					<Modified>2014-03-31</Modified>
+				<Date><Modified>2014-03-31</Modified>
 					 +SIRI v2.0 Comments
 					   - Add terminate subscription notification
 				</Date>
-				<Date>
-					<Modified>2014-07-30</Modified>
+				<Date><Modified>2014-07-30</Modified>
 					 +SIRI v2.0 revise Comments
 					   -  Inter revision to make CheskStatus a type of ProductResponse. 
 					   -  Mark with SubstoitutionGroups

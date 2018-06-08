@@ -135,7 +135,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-	</xs:group>	
+	</xs:group>
 	<!-- ========================================== Sharing Services ========================== -->
 	<xs:simpleType name="SharingModelEnumeration">
 		<xs:annotation>
@@ -188,7 +188,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- ========================================== Owners ============================= -->
 	<xs:simpleType name="OwnerCodeType">
 		<xs:annotation>
