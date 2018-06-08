@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ===Dependencies ======================================= -->
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
+	<!-- ===========================================================================================================-->
+	<xs:include schemaLocation="OJP_Utility.xsd"/>
+	<xs:annotation>
+		<xs:documentation>========================================= Individual Modes ============================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="IndividualModesEnumeration">
+		<xs:annotation>
+			<xs:documentation>modes which an individual powers themselves (such as walk, cycle)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="walk"/>
+			<xs:enumeration value="cycle"/>
+			<xs:enumeration value="taxi"/>
+			<xs:enumeration value="self-drive-car"/>
+			<xs:enumeration value="others-drive-car"/>
+			<xs:enumeration value="motorcycle"/>
+			<xs:enumeration value="truck"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PrivateModesEnumeration">
+		<xs:annotation>
+			<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="carPooling"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="IndividualTransportOptionsStructure">
+		<xs:annotation>
+			<xs:documentation>Individual modes and their usage limits as stated by the passenger</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Mode" type="IndividualModesEnumeration"/>
+			<xs:element name="MaxDistance" type="siri:DistanceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Maximum distance in meters. If given, it restricts the maximum distance of routes with the given mode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaxDuration" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Maximum duration. If given, it restricts the maximum time of routes with the given mode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MinDistance" type="siri:DistanceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Minimum distance in meters. If given, it restricts the minimum distance of routes with the given mode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MinDuration" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Minimum duration. If given, it restricts the minimum time of routes with the given mode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Speed" type="OpenPercentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Relative speed in percent. If given slows the standard speed (below 100) or fasten it (above 100).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ContinuousModesEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of cmodes that  run at any time without a timetable.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="walk"/>
+			<xs:enumeration value="demandResponsive"/>
+			<xs:enumeration value="replacementService"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:annotation>
+		<xs:documentation>========================================= Interchange Modes ============================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="TransferModesEnumeration">
+		<xs:annotation>
+			<xs:documentation>MODEs dedicated to peform TRANSFERs</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="walk"/>
+			<xs:enumeration value="parkAndRide"/>
+			<xs:enumeration value="bikeAndRide"/>
+			<xs:enumeration value="carHire"/>
+			<xs:enumeration value="bikeHire"/>
+			<xs:enumeration value="protectedConnection"/>
+			<xs:enumeration value="guaranteedConnection"/>
+			<xs:enumeration value="remainInVehicle"/>
+			<xs:enumeration value="changeWithinVehicle"/>
+			<xs:enumeration value="checkIn"/>
+			<xs:enumeration value="checkOut"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:annotation>
+		<xs:documentation>========================================= Public Transport Modes ============================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="ModeStructure">
+		<xs:annotation>
+			<xs:documentation>[a specialisation of MODE in TMv6] an extended range of VEHICLE MODEs, aggregating them with some SUBMODEs</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="ModeGroup"/>
+			<xs:element name="Name" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of the mode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ShortName" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Short name or acronym of the mode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Additional text that further describes the mode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="ModeGroup">
+		<xs:annotation>
+			<xs:documentation>Elements for a Transport Mode</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PtMode" type="siri:VehicleModesOfTransportEnumeration">
+				<xs:annotation>
+					<xs:documentation>Categorisation of mode </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	
+	<!-- ================ Filters ======================================================= -->
+	<xs:complexType name="PtModeFilterStructure">
+		<xs:annotation>
+			<xs:documentation>List of public transport modes ([from SIRI] mode of public transport service, corresponds to VEHICLE MODE) to include or exclude.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether modes in list are to include or exclude from search. Default is exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PtMode" type="siri:VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of PT Transport modes to include/exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PrivateModeFilterStructure">
+		<xs:annotation>
+			<xs:documentation>List of private mobility offers to include or exclude.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether modes in list are to include or exclude from search. Default is exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PrivateMode" type="PrivateModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of private mobility offers to include/exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

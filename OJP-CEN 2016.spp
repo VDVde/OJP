@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;rdf;smil;svg;wml"/>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
+		<Folder FolderName="siri" ExtStr="xds">
+			<File FilePath="siri\siri_all_framework-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri\siri_base-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri\siri_common_services-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri\siri_request_errorConditions-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri\siri_request_support-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri\siri_requests-v2.0.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="siri_utility" ExtStr="xsd">
+			<File FilePath="siri_utility\siri_all_utility-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_utility\siri_location-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_utility\siri_participant-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_utility\siri_permissions-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_utility\siri_types-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_utility\siri_utility-v1.1.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="siri_model" ExtStr="xsd">
+			<File FilePath="siri_model\siri_all-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_all_journeyModel-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_all_model-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_all_situation-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_datedVehicleJourney-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_estimatedVehicleJourney-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_facilities-v1.2.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_facility-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_feature_support-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_interchangeJourney-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_journey-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_journey_support-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_modelPermissions-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_modes-v1.1.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_monitoredVehicleJourney-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_operator_support-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_reference-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_situation-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_situationActions-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_situationAffects-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_situationClassifiers-v1.1.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_situationIdentity-v1.1.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_situationReasons-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_situationServiceTypes-v1.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_targetedVehicleJourney-v2.0.xsd" HomeFolder="Yes"/>
+			<File FilePath="siri_model\siri_time-v2.0.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="acsb">
+			<File FilePath="acsb\acsb_accessibility-v0.3.xsd" HomeFolder="Yes"/>
+			<File FilePath="acsb\acsb_all-v0.3.xsd" HomeFolder="Yes"/>
+			<File FilePath="acsb\acsb_limitations-v0.2.xsd" HomeFolder="Yes"/>
+			<File FilePath="acsb\acsb_passengerMobility-v0.3.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="ifopt">
+			<File FilePath="ifopt\ifopt_administration-v0.3.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_allStopPlace-v0.3.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_checkpoint-v0.3.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_countries-v0.2.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_equipment-v0.3.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_location-v0.3.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_modes-v0.2.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_modification-v0.3.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_path-v0.2.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_stop-v0.3.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_time-v0.2.xsd" HomeFolder="Yes"/>
+			<File FilePath="ifopt\ifopt_types-v0.2.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="datex2" ExtStr="xsd">
+			<File FilePath="datex2\DATEXIISchema_1_0_1_0.xsd" HomeFolder="Yes"/>
+			<File FilePath="datex2\DATEXIISchema_2_0RC1_2_0 with definitions.xsd" HomeFolder="Yes"/>
+			<File FilePath="datex2\DATEXIISchema_2_0RC1_2_0.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<File FilePath="OJP.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_Common.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_FacilitySupport.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_Fare.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_FareSupport.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_JourneySupport.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_Locations.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_LocationSupport.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_ModesSupport.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_Requests.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_RequestSupport.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_SituationSupport.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_StopEvents.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_TripInfo.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_Trips.xsd" HomeFolder="Yes"/>
+		<File FilePath="OJP_Utility.xsd" HomeFolder="Yes"/>
+	</Folder>
+</Project>

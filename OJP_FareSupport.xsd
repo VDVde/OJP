@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="OJP_Common.xsd"/>
+	<xs:simpleType name="TypeOfFareClassEnumeration">
+		<xs:annotation>
+			<xs:documentation>classes of travel available on a particular service which will affect the price to be paid</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="all"/>
+			<xs:enumeration value="first"/>
+			<xs:enumeration value="second"/>
+			<xs:enumeration value="third"/>
+			<xs:enumeration value="business"/>
+			<xs:enumeration value="economy"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="VatRateEnumeration">
+		<xs:annotation>
+			<xs:documentation>Enumeration of Value Added Tax rates.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="full"/>
+			<xs:enumeration value="half"/>
+			<xs:enumeration value="mixed"/>
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ========================================== Fare Authority  ============================= -->
+	<xs:simpleType name="FareAuthorityCodeType">
+		<xs:annotation>
+			<xs:documentation>Identifier of a Fare Authority.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:complexType name="FareAuthorityRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a Fare Authority ([a specialisation of an ORGANISATION in TMv6] ORGANISATION which has the RESPONSIBILITY ROLE for the definition of FARE PRODUCTs).</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="FareAuthorityCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="FareAuthorityRef" type="FareAuthorityRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a Fare Authority.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:group name="FareAuthorityGroup">
+		<xs:annotation>
+			<xs:documentation>Group of attributes for an ORGANISATION which has the RESPONSIBILITY ROLE for the definition of FARE PRODUCTs </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="FareAuthorityRef"/>
+			<xs:element name="FareAuthorityText" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Textual description or name of Fare authority.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:annotation>
+		<xs:documentation>========================================= Zones ================================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="TariffZoneCodeType">
+		<xs:annotation>
+			<xs:documentation>Identifier of a fare zone.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:complexType name="TariffZoneRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a fare zone.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="TariffZoneCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="TariffZoneRef" type="TariffZoneRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a fare zone.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="TariffZoneStructure">
+		<xs:annotation>
+			<xs:documentation>[a more clearly defined equivalent of TARIFF ZONE in TM and NeTEx] A ZONE used to define a zonal fare structure in a zone-counting or zone-matrix system.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="TariffZoneRef"/>
+			<xs:element name="TariffZoneText" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Text describing the fare zone. Passengers will recognize the fare zone by this text. Often published on Fare Zone Maps.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TariffZoneListInAreaStructure">
+		<xs:annotation>
+			<xs:documentation>List of fare zones within the area of a Fare Authority.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="FareAuthorityGroup"/>
+			<xs:element name="TariffZone" type="TariffZoneStructure" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Fare zone in area.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TariffZoneRefListStructure">
+		<xs:annotation>
+			<xs:documentation>List of fare zones references within the area of a Fare Authority.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="FareAuthorityRef"/>
+			<xs:element ref="TariffZoneRef" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================= Passengers ==============================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="PassengerCategoryEnumeration">
+		<xs:annotation>
+			<xs:documentation>[a simplified and specialised view of USER PROFILE in TM and NeTEx] classification of passengers by age or other factors that may determine the fare they will need to pay.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Adult"/>
+			<xs:enumeration value="Child"/>
+			<xs:enumeration value="Senior"/>
+			<xs:enumeration value="Youth"/>
+			<xs:enumeration value="Disabled"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:annotation>
+		<xs:documentation>========================================= Booking  ==============================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="BookingArrangementStructure">
+		<xs:annotation>
+			<xs:documentation>[a more generalised form of BOOKING ARRANGEMENTS in TMv6] arrangement for booking any leg or legs of a journey </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="BookingAgencyName" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of the booking agency (contractual partner).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BookingUrl" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL to online booking service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InfoUrl" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL to information page.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PhoneNumber" type="PhoneNumberType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Phone number for booking.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MinimumBookingPeriod." type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Minimum duration bookings must be completed before trip starts.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BookingArrangementsContainerStructure">
+		<xs:annotation>
+			<xs:documentation>Container for multiple booking arrangements.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="BookingArrangement" type="BookingArrangementStructure" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>[a more generalised form of BOOKING ARRANGEMENTS in TMv6] arrangement for booking any leg or legs of a journey.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================= Tickets ==============================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="FareProductCodeType">
+		<xs:annotation>
+			<xs:documentation>Identifier of a FareProduct</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:complexType name="FareProductRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a FareProduct.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="FareProductCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="FareProductRef" type="FareProductRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a FareProduct.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="EntitlementProductCodeType">
+		<xs:annotation>
+			<xs:documentation>Identifier of a traveller card (f.e. BahnCard50, BahnCard50First etc.).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:complexType name="EntitlementProductRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc).</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="EntitlementProductCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="EntitlementProductRef" type="EntitlementProductRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="FareProductStructure">
+		<xs:annotation>
+			<xs:documentation>[related to FARE PRODUCT in TM and NeTEx] different FARE PRODUCTs that may be available with related information</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FareProductId" type="FareProductCodeType">
+				<xs:annotation>
+					<xs:documentation>Unique Id of the FareProduct.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FareProductName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>printable FareProduct name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="FareAuthorityGroup"/>
+			<xs:group ref="FareProductPriceGroup"/>
+			<xs:group ref="FareProductValidityGroup"/>
+			<xs:group ref="FareProductBookingGroup"/>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="FareProductPriceGroup">
+		<xs:annotation>
+			<xs:documentation>[related to FARE PRODUCT PRICE in TM and NeTEx] price at which a FARE PRODUCT can be purchased.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Price" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>FareProduct price as decimal number.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NetPrice" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Net FareProduct price as decimal number for accounting purposes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Currency" type="xs:NMTOKEN" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>iso 4217 currency code, e.g. EUR for Euro or GBP for Pound Sterling </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VatRate" type="VatRateEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Rate of value added tax. Default is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="FareProductValidityGroup">
+		<xs:annotation>
+			<xs:documentation>conditions of use for a particular FARE PRODUCT.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TravelClass" type="TypeOfFareClassEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Travel class for which the FareProduct is valid.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RequiredCard" type="EntitlementProductRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>One or more traveller cards that are needed for purchase of this FareProduct. In most cases traveller cards offer discounts, f.e. BahnCard50 of Deutsche Bahn.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ValidFor" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Sequence of all passenger categories for which this FareProduct is valid.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ValidityDuration" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Maximum duration of FareProduct validity starting with purchase of ticket or begin of journey (ticket validation).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ValidityDurationText" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Textual description of maximum validity duration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ValidityTariffZones" type="TariffZoneListInAreaStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Spatial validity of FareProduct defined as list of fare zones.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ValidityAreaText" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Textual description of spatial validity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="FareProductBookingGroup">
+		<xs:annotation>
+			<xs:documentation>[aggregation of DISTRIBUTION CHANNEL and BOOKING ARRANGEMENT in TM and NeTEx] Group of information elements related to information to support the process of booking a FARE PRODUCT.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>URL to information for this FareProduct</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SaleUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>URL to buy the FareProduct online</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:annotation>
+		<xs:documentation>========================================= Trip Fare ==============================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="TripLegRangeGroup">
+		<xs:annotation>
+			<xs:documentation>Range of trip legs (from - to) for which a Fare result (ticket) is valid.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FromTripLegIdRef" type="xs:NMTOKEN">
+				<xs:annotation>
+					<xs:documentation>Identifies the "valid from" trip leg.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ToTripLegIdRef" type="xs:NMTOKEN">
+				<xs:annotation>
+					<xs:documentation>Identifies the "valid to" trip leg.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="TripFareResultStructure">
+		<xs:annotation>
+			<xs:documentation>Structure of a Single Trip Fare Request result</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Result-specific error messages </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="TripLegRangeGroup" minOccurs="0"/>
+			<xs:element name="PassedZones" type="TariffZoneListInAreaStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The sequence of passed fare zones.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FareProduct" type="FareProductStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>One ore more FareProducts that are valid for this part of the trip.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StaticInfoUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>URL to static information page on the web.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================= Fare request parameter ==============================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="FarePassengerStructure">
+		<xs:annotation>
+			<xs:documentation>[a specialised form of USER PROFILE in TM and NeTEx] attributes of a passenger that influence the price to be paid by that passenger for a FARE PRODUCT.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="Age" type="xs:nonNegativeInteger">
+					<xs:annotation>
+						<xs:documentation>Age of the passenger on the day of travel.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration">
+					<xs:annotation>
+						<xs:documentation>sequence of all passenger categories, for which this FareProduct is valid</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="EntitlementProduct" type="EntitlementProductRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice minOccurs="0">
+				<xs:element name="ZonesAlreadyPaid" type="TariffZoneRefListStructure">
+					<xs:annotation>
+						<xs:documentation>Fare zones for which the passenger already has a valid FareProduct.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SalesPackageElementRef" type="FareProductRefStructure" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Id of a FareProduct that the passenger already holds and that may be used for the travel or parts of it.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="FareDataFilterGroup">
+		<xs:annotation>
+			<xs:documentation>Data filter group for Fare request.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FareAuthorityFilter" type="FareAuthorityRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Fare authority for which to retrieve Fare information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>sequence of all passenger categories, for which this FareProduct is valid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TravelClass" type="TypeOfFareClassEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Travel class for which to retrieve FareProducts. Refers to TYPE OF FARE CLASS</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="FareParamStructure">
+		<xs:annotation>
+			<xs:documentation>[related to the FARE parameter model in TM and NeTEx] parameters which are used to determine the price to be paid for a FARE PRODUCT by a specific passenger.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="FareDataFilterGroup"/>
+			<xs:element name="Traveller" type="FarePassengerStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Number of travellers that will make the journey and for which Fare information needs to be gathered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

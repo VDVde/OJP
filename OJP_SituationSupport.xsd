@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Werner Kohl (Mentz Datenverarbeitung GmbH) -->
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_all_situation-v2.0.xsd"/>
+	<xs:complexType name="SituationsStructure">
+		<xs:annotation>
+			<xs:documentation>Wrapper type for SIRI PtSituationsElementStructure</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PtSituation" type="siri:PtSituationElementStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>SIRI situation details.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RoadSituation" type="siri:RoadSituationElementStructure" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SituationFullRef" type="SituationFullRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to situation message. Message details might be found in response context or through other communication channels.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="SituationFullRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference structure for situation message. Situation details might be found in response context or through other communication channels.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="siri:SituationFullRefStructure"/>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

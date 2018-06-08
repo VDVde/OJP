@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Werner Kohl (Mentz Datenverarbeitung GmbH) -->
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_facilities-v1.2.xsd"/>
+<!--	<xs:include schemaLocation="OJP_Common.xsd"/>-->
+	<xs:annotation>
+		<xs:documentation>==================================== Facilities from SIRI =============================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="AllFacilitiesGroup">
+		<xs:annotation>
+			<xs:documentation>Wrapper for SIRI facilities.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="siri:AllFacilitiesGroup"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="StopFacilityGroup">
+		<xs:annotation>
+			<xs:documentation>Wrapper for SIRI stop facilities.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="siri:StopFacilityGroup"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="ServiceFacilityGroup">
+		<xs:annotation>
+			<xs:documentation>Wrapper for SIRI service facilities.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="siri:ServiceFacilityGroup"/>
+		</xs:sequence>
+	</xs:group>
+</xs:schema>
