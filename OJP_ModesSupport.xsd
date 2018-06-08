@@ -36,6 +36,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Mode" type="IndividualModesEnumeration"/>
+			<xs:group ref="siri:PrivateModeChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="MaxDistance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Maximum distance in meters. If given, it restricts the maximum distance of routes with the given mode.</xs:documentation>
