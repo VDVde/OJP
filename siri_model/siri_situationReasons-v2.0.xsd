@@ -313,15 +313,15 @@ Rail transport, Roads and road transport
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="pti19_1_Alias_6"/>
-			<xsd:enumeration value="altercation ">
+			<xsd:enumeration value="altercation">
 				<xsd:annotation>
-					<xsd:documentation>altercation . Alias to pti19</xsd:documentation>
+					<xsd:documentation>altercation. Alias to pti19</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="pti19_1_Alias_7"/>
-			<xsd:enumeration value="illVehicleOccupants ">
+			<xsd:enumeration value="illVehicleOccupants">
 				<xsd:annotation>
-					<xsd:documentation>illVehicleOccupants . Alias to pti19</xsd:documentation>
+					<xsd:documentation>illVehicleOccupants. Alias to pti19</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="pti19_6"/>
