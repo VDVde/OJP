@@ -146,6 +146,16 @@
 					<xs:documentation>Deviation from average walk speed in percent. 100% percent is average speed. Less than 100 % slower, Greater than 150% faster.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="BoardingTime" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The extra time that the user takes to board the vehicle.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AlightingTime" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The extra time that the user takes to alight from a vehicle.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripContentFilterGroup">
