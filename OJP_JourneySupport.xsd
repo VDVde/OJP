@@ -529,6 +529,11 @@
 					<xs:documentation>The user is not able to use an ramp.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="NoSight" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The user is not able to see.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="BaseTripContentFilterGroup">
