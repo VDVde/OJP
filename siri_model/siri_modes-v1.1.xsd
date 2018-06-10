@@ -85,6 +85,7 @@ Rail transport, Roads and road transport
 			<xsd:element ref="TelecabinSubmode"/>
 			<xsd:element ref="RailSubmode"/>
 			<xsd:element ref="WaterSubmode"/>
+			<xsd:element ref="TaxiSubmode"/>
 		</xsd:choice>
 	</xsd:group>
 	<xsd:group name="PrivateModeChoiceGroup">
@@ -108,6 +109,7 @@ Rail transport, Roads and road transport
 			<xsd:element ref="RailSubmode"/>
 			<xsd:element ref="TramSubmode"/>
 			<xsd:element ref="WaterSubmode"/>
+			<xsd:element ref="TaxiSubmode"/>
 		</xsd:choice>
 	</xsd:group>
 	<!-- ======================================================================= -->
