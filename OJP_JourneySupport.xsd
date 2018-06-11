@@ -462,12 +462,12 @@
 			<xs:documentation>parameter to control the number of TRIP results before/after a point in time. May NOT be used when departure time at origin AND arrival time at destination are set</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="NumberOfResultsBefore" type="xs:nonNegativeInteger" minOccurs="0">
+			<xs:element name="NumberOfResultsBefore" type="xs:nonNegativeInteger">
 				<xs:annotation>
 					<xs:documentation>The desired number of trip results before the given time (at origin or destination).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NumberOfResultsAfter" type="xs:nonNegativeInteger" minOccurs="0">
+			<xs:element name="NumberOfResultsAfter" type="xs:nonNegativeInteger">
 				<xs:annotation>
 					<xs:documentation>The desired number of trip results after the given time (at origin or destination).</xs:documentation>
 				</xs:annotation>
