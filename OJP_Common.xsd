@@ -181,7 +181,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="SharingServiceUsageGroup" minOccurs="0"/>
-			<xs:element name="InfoURL" type="WebLinkStructure" minOccurs="0">
+			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Link to web page providing more details on service.</xs:documentation>
 				</xs:annotation>
@@ -333,7 +333,7 @@
 					<xs:documentation>Importance of the attribute.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InfoURL" type="xs:anyURI" minOccurs="0">
+			<xs:element name="InfoUrl" type="xs:anyURI" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>URL to additional information on this general attribute. If available, the whole attribute text has to be used as the marked link.</xs:documentation>
 				</xs:annotation>
