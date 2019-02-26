@@ -146,7 +146,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganisationRef" type="siri:OperatorRefStructure" minOccurs="0"/>
-			<xs:element name="InfoURL" type="WebLinkStructure" minOccurs="0">
+			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Link to web page providing more details on service.</xs:documentation>
 				</xs:annotation>
