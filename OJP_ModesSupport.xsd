@@ -61,6 +61,11 @@
 					<xs:documentation>Relative speed in percent. If given slows the standard speed (below 100) or fasten it (above 100).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AdditionalTime" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Additional time added to the actual traveling time needed to use a specific mode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="ContinuousModesEnumeration">
