@@ -146,6 +146,11 @@
 					<xs:documentation>Deviation from average walk speed in percent. 100% percent is average speed. Less than 100 % slower, Greater than 150% faster.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AdditionalTransferTime" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripContentFilterGroup">
