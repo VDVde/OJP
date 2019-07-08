@@ -15,7 +15,7 @@
 		<xs:sequence>
 			<xs:element name="PlaceRef" type="PlaceRefStructure">
 				 <xs:annotation>
-					<xs:documentation>Name or description of stop point (or similar) for use in passenger information.</xs:documentation>
+					<xs:documentation>Stop point (or stop place) for use in passenger information.</xs:documentation>
 				 </xs:annotation>
 			</xs:element>
 			<xs:element name="NameSuffix" type="InternationalTextStructure" minOccurs="0">
