@@ -20,7 +20,7 @@
 			</xs:element>
 			<xs:element name="NameSuffix" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Additional description of the stop point that may be appended to the name if enough space is available. F.e. "opposite main entrance".</xs:documentation>
+					<xs:documentation>Additional description of the stop point (or stop place) that may be appended to the name if enough space is available. F.e. "opposite main entrance".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PlannedQuay" type="InternationalTextStructure" minOccurs="0">
