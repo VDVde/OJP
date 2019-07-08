@@ -13,12 +13,7 @@
 			<xs:documentation>A stop point with id and name</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element ref="siri:StopPointRef"/>
-			<xs:element name="StopPointName" type="InternationalTextStructure">
-				<xs:annotation>
-					<xs:documentation>Name or description of stop point for use in passenger information.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:element ref="PlaceRefStructure"/>
 			<xs:element name="NameSuffix" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Additional description of the stop point that may be appended to the name if enough space is available. F.e. "opposite main entrance".</xs:documentation>
