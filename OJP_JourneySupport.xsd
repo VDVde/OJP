@@ -432,7 +432,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="AbstractResponseContextStructure">
+	<xs:complexType name="ResponseContextStructure">
 		<xs:annotation>
 			<xs:documentation>Abstract structure providing response contexts related to journeys.</xs:documentation>
 		</xs:annotation>

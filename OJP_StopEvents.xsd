@@ -137,7 +137,7 @@
 			<xs:documentation>Response structure for departure and arrival events at stops</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="StopEventResponseContext" type="StopEventResponseContextStructure" minOccurs="0">
+			<xs:element name="StopEventResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Container for data that is referenced multiple times.</xs:documentation>
 				</xs:annotation>
@@ -209,14 +209,6 @@
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="StopEventResponseContextStructure">
-		<xs:annotation>
-			<xs:documentation>Stop event response context. May hold objects that are referenced several times.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="AbstractResponseContextStructure"/>
-		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="CallAtNearStopStructure">
 		<xs:annotation>
