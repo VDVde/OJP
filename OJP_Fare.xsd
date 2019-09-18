@@ -119,6 +119,11 @@
 	</xs:element>
 	<xs:group name="FareResponseGroup">
 		<xs:sequence>
+			<xs:element name="FareResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="FareResult" type="FareResultStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Fare result choice element.</xs:documentation>
