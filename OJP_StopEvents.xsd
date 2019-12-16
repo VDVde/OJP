@@ -6,11 +6,6 @@
 	<!-- ===========================================================================================================-->
 	<xs:include schemaLocation="OJP_Common.xsd"/>
 	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
-	<xs:element name="StopEventRequest" type="StopEventRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Request element for departure and arrival events at stops</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:group name="StopEventRequestGroup">
 		<xs:annotation>
 			<xs:documentation>Request structure for departure and arrival events at stops</xs:documentation>
@@ -28,11 +23,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="StopEventRequestStructure">
-		<xs:sequence>
-			<xs:group ref="StopEventRequestGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="StopEventParamStructure">
 		<xs:annotation>
 			<xs:documentation>Request specific parameters (parameters which define what is to be included in a Stop  Event result)</xs:documentation>
@@ -127,11 +117,6 @@
 	<xs:annotation>
 		<xs:documentation>====================================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="StopEventResponse" type="StopEventResponseStructure">
-		<xs:annotation>
-			<xs:documentation>Response element for departure and arrival events at stops</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:group name="StopEventResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Response structure for departure and arrival events at stops</xs:documentation>
@@ -149,16 +134,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="StopEventResponseStructure">
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Error messages that refer to the stop event response as a whole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="StopEventResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="StopEventResultStructure">
 		<xs:annotation>
 			<xs:documentation>Wrapper element for a single stop event result.</xs:documentation>
