@@ -44,12 +44,6 @@
 		</xs:annotation>
 		<xs:restriction base="xs:nonNegativeInteger"/>
 	</xs:simpleType>
-	<xs:simpleType name="SpeedType">
-		<xs:annotation>
-			<xs:documentation>Data type for speed, in meter per second.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:nonNegativeInteger"/>
-	</xs:simpleType>
 	<xs:simpleType name="PhoneNumberType">
 		<xs:annotation>
 			<xs:documentation>Type definition for phone numbers</xs:documentation>

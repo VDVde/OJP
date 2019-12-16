@@ -10,11 +10,6 @@
 	<xs:annotation>
 		<xs:documentation>===== Request Structures ===============================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="TripRequest" type="TripRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Trip request element.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:group name="TripRequestGroup">
 		<xs:annotation>
 			<xs:documentation>Trip request structure.</xs:documentation>
@@ -52,11 +47,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="TripRequestStructure">
-		<xs:sequence>
-			<xs:group ref="TripRequestGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="TripParamStructure">
 		<xs:annotation>
 			<xs:documentation>Trip request parameter structure.</xs:documentation>
@@ -215,11 +205,6 @@
 	<xs:annotation>
 		<xs:documentation>====================================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="TripResponse" type="TripResponseStructure">
-		<xs:annotation>
-			<xs:documentation>Trip response element</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:group name="TripResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Trip response structure.</xs:documentation>
@@ -237,16 +222,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="TripResponseStructure">
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Error messages related to the trip request as a whole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="TripResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="TripResponseContextStructure">
 		<xs:annotation>
 			<xs:documentation>Context for a trip response.</xs:documentation>
@@ -805,7 +780,6 @@
 	<xs:annotation>
 		<xs:documentation>===== Multi-point trip request ===============================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="MultiPointTripRequest" type="MultiPointTripRequestStructure"/>
 	<xs:group name="MultiPointTripRequestGroup">
 		<xs:annotation>
 			<xs:documentation>Multi-point trip request structure.</xs:documentation>
@@ -843,11 +817,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="MultiPointTripRequestStructure">
-		<xs:sequence>
-			<xs:group ref="MultiPointTripRequestGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="MultiPointTripParamStructure">
 		<xs:annotation>
 			<xs:documentation>Multi-point trip request parameter structure.</xs:documentation>
@@ -907,11 +876,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:element name="MultiPointTripResponse" type="MultiPointTripResponseStructure">
-		<xs:annotation>
-			<xs:documentation>Multi-point trip response element</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:group name="MultiPointTripResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Multi-point trip response structure.</xs:documentation>
@@ -929,19 +893,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="MultiPointTripResponseStructure">
-		<xs:annotation>
-			<xs:documentation>Multi-point trip response structure.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Error messages related to the trip request as a whole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="MultiPointTripResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="MultiPointTripResultStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for a single trip result and its accompanying error messages.</xs:documentation>
