@@ -89,7 +89,7 @@
 		<xs:sequence>
 			<xs:element name="OriginStopPointRef" type="siri:StopPointRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>First stop of the vehicle journey.</xs:documentation>
+					<xs:documentation>First stop of the vehicle journey; origin stop point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OriginText" type="InternationalTextStructure">
@@ -106,7 +106,7 @@
 		<xs:sequence>
 			<xs:element name="DestinationStopPointRef" type="siri:StopPointRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Last stop of vehicle journey.</xs:documentation>
+					<xs:documentation>Last stop of vehicle journey; destination stop point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DestinationText" type="InternationalTextStructure">

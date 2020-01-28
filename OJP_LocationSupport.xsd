@@ -395,15 +395,31 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice minOccurs="0">
-				<xs:element name="StopPoint" type="StopPointStructure"/>
-				<xs:element name="StopPlace" type="StopPlaceStructure"/>
+				<xs:element name="StopPoint" type="StopPointStructure">
+					<xs:annotation>
+						<xs:documentation>Model of a stop point </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="StopPlace" type="StopPlaceStructure">
+					<xs:annotation>
+						<xs:documentation>Model of a stop place</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 				<xs:element name="TopographicPlace" type="TopographicPlaceStructure">
 					<xs:annotation>
 						<xs:documentation>TopographicPlace, village or city.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="PointOfInterest" type="PointOfInterestStructure"/>
-				<xs:element name="Address" type="AddressStructure"/>
+				<xs:element name="PointOfInterest" type="PointOfInterestStructure">
+					<xs:annotation>
+						<xs:documentation>Model of a POI </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Address" type="AddressStructure">
+					<xs:annotation>
+						<xs:documentation>Model of an address </xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 			<xs:element name="LocationName" type="InternationalTextStructure">
 				<xs:annotation>
