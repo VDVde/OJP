@@ -163,7 +163,11 @@
 					<xs:documentation>Preferred language in which to return text values.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0"/>
+			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (eg: in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The location information service is expected to support a response volume of at least 500 location objects within one single response.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Tells the server to skip the mentioned number of results in its response. Can be used in a follow-up request to get further results. The value is usually taken from the previous response.</xs:documentation>

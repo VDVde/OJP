@@ -35,7 +35,11 @@
 			<xs:documentation>Individual modes and their usage limits as stated by the passenger</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Mode" type="IndividualModesEnumeration"/>
+			<xs:element name="Mode" type="IndividualModesEnumeration">
+				<xs:annotation>
+					<xs:documentation>Mode of individual transport.	When mode self-drive-car is used the connection to another mode will need a parking space for the car. Thus, this mode is a generalisation of all park and ride use cases. The mode others-drive-car, however, only needs a place to let a person be set down from a car.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="MaxDistance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Maximum distance in meters. If given, it restricts the maximum distance of routes with the given mode.</xs:documentation>
