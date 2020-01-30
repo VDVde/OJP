@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
@@ -548,6 +547,11 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="LineIdAtBoarding" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Identifier of the boarded line/service at the boarding. This is not a reference. This identifier is used to recognize in a distributed environment, that two systems refer to the same line service (or service) while using their own internal references.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>This stop fulfils one of the via requirements stated in the request data.</xs:documentation>
@@ -581,6 +585,11 @@
 						<xs:group ref="ServiceTimeGroup"/>
 					</xs:sequence>
 				</xs:complexType>
+			</xs:element>
+			<xs:element name="LineIdAtAlighting" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Identifier of the alighted line/service at the alighting. This is not a reference. This identifier is used to recognize in a distributed environment, that two systems refer to the same line service (or service) while using their own internal references.</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
