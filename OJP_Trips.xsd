@@ -168,6 +168,11 @@
 				<xs:annotation>
 					<xs:documentation>Whether the result should include operating day information - as encoded bit string and in natural language.</xs:documentation>
 				</xs:annotation>
+			</xs:element>	
+			<xs:element name="MinimizeResponseContext" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>hether the ResponseContext should be minimized to absolut essential content. As it is useful in many use cases. The default false means, that the context is sent.</xs:documentation>
+				</xs:annotation>				
 			</xs:element>
 		</xs:sequence>
 	</xs:group>

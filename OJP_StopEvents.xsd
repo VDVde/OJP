@@ -112,6 +112,11 @@
 					<xs:documentation>Whether realtime information of this stop event should be included in the response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="MinimizeResponseContext" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the ResponseContext should be minimized to absolut essential content. As it is useful in many use cases. The default false means, that the context is sent.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 		</xs:sequence>
 	</xs:group>
 	<xs:simpleType name="StopEventTypeEnumeration">
