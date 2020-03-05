@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Mit XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) von Katarzyna Piwonska (HaCon Ingenieurgesellschaft mbH) bearbeitet -->
-<!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
@@ -341,6 +339,11 @@
 			<xs:element name="TravelDurationEstimate" type="xs:duration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Rough estimate of the travel duration from the specified location to this exchange point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WaitDuration" type="xs:duration" minOccurs="0" default="PT0M">
+				<xs:annotation>
+					<xs:documentation>Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it has to take care, that feeding arrival and fetching departure are at least this duration apart.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BorderPoint" type="xs:boolean" default="false" minOccurs="0">
