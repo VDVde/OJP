@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="OJP_Common.xsd"/>
 	<xs:simpleType name="TypeOfFareClassEnumeration">
@@ -239,7 +240,7 @@
 			<xs:group ref="FareAuthorityGroup"/>
 			<xs:element name="ProtoProduct" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Is the product a proto product? If yes, it should not be shown to the user directly. Instead a proto product transports fare product information, which usually has to be processed further. Default is false. In a distributed environment (e.g. EU-Spirit) partial systems may generate incomplete product information, which has to be combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Is this product a proto product? Default is false. If true, it should not be shown to the user. In a distributed environment (e.g. EU-Spirit) partial systems may generate incomplete product information (proto product), which has to be be processed further and combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="FareProductPriceGroup"/>
