@@ -238,6 +238,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="FareAuthorityGroup"/>
+			<xs:element name="ProtoProduct" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Is this product a proto product? Default is false. If true, it should not be shown to the user. In a distributed environment (e.g. EU-Spirit) partial systems may generate incomplete product information (proto product), which has to be be processed further and combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:group ref="FareProductPriceGroup"/>
 			<xs:group ref="FareProductValidityGroup"/>
 			<xs:group ref="FareProductBookingGroup"/>
