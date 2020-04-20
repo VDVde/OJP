@@ -33,12 +33,6 @@ function travis-branch-commit() {
         err "failed to commit updates"
         return 1
     fi
-    # add to your .travis.yml: `branches\n  except:\n  - "/\\+travis\\d+$/"\n`
-    local git_tag=SOME_TAG_TRAVIS_WILL_NOT_BUILD+travis$TRAVIS_BUILD_NUMBER
-    if ! git tag "$git_tag" -m "Generated tag from Travis CI build $TRAVIS_BUILD_NUMBER"; then
-        err "failed to create git tag: $git_tag"
-        return 1
-    fi
     local remote=origin
     if [[ $GH_TOKEN ]]; then
         remote=https://$GH_TOKEN@github.com/$GH_REPO
