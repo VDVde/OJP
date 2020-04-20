@@ -14,10 +14,10 @@ function travis-branch-commit() {
         err "failed to get $TRAVIS_BRANCH reference"
         return 1
     fi
-    if [[ $head_ref != $branch_ref ]]; then
+    if [[ $head_ref != "$branch_ref" ]]; then
         msg "HEAD ref ($head_ref) does not match $TRAVIS_BRANCH ref ($branch_ref)"
         msg "Someone may have pushed new commits before this build cloned the repo"
-        return 0
+        return 1
     fi
     if ! git checkout "$TRAVIS_BRANCH"; then
         err "failed to checkout $TRAVIS_BRANCH"
