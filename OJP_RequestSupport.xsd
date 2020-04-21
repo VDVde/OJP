@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri/siri_all_framework-v2.0.xsd"/>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_journey_support-v2.0.xsd"/>
