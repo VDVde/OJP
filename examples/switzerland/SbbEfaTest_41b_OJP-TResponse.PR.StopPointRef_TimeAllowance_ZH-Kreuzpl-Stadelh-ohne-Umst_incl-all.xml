@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+	<siri:OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2020-01-13T10:13:02Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_test</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<ojp:OJPTripDelivery>
+				<siri:ResponseTimestamp>2020-01-13T10:13:02Z</siri:ResponseTimestamp>
+				<siri:Status>false</siri:Status>
+				<siri:ErrorCondition>
+					<siri:Description>TRIP_NOTRIPFOUND</siri:Description>
+				</siri:ErrorCondition>
+				<ojp:CalcTime>114</ojp:CalcTime>
+			</ojp:OJPTripDelivery>
+		</siri:ServiceDelivery>
+	</siri:OJPResponse>
+</siri:OJP>
+
+    

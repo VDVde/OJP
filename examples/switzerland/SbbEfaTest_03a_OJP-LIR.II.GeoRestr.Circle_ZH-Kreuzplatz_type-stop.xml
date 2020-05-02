@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+	<OJPRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-01-19T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPLocationInformationRequest>
+				<RequestTimestamp>2020-01-19T12:00:00Z</RequestTimestamp>
+				<MessageIdentifier>4711</MessageIdentifier>
+				<ojp:InitialInput>
+					<ojp:GeoRestriction>
+						<ojp:Circle>
+							<ojp:Center>
+								<Longitude>8.5545</Longitude>
+								<Latitude>47.365</Latitude>
+							</ojp:Center>
+							<ojp:Radius>500</ojp:Radius>
+						</ojp:Circle>
+					</ojp:GeoRestriction>
+				</ojp:InitialInput>
+				<ojp:Restrictions>
+					<ojp:Type>stop</ojp:Type>
+					<ojp:IncludePtModes>true</ojp:IncludePtModes>
+				</ojp:Restrictions>
+			</ojp:OJPLocationInformationRequest>
+		</ServiceRequest>
+	</OJPRequest>
+</OJP>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+	<OJPRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPStopEventRequest>
+				<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
+				<MessageIdentifier>756</MessageIdentifier>
+				<ojp:Location>
+					<ojp:PlaceRef>
+						<ojp:AddressRef>1</ojp:AddressRef>
+						<ojp:LocationName>
+							<ojp:Text>unbekann</ojp:Text>
+						</ojp:LocationName>
+					</ojp:PlaceRef>
+					<ojp:DepArrTime>2020-01-20T12:00:00Z</ojp:DepArrTime>
+				</ojp:Location>
+				<ojp:Params>
+					<ojp:StopEventType>both</ojp:StopEventType>
+					<ojp:IncludePreviousCalls>true</ojp:IncludePreviousCalls>
+					<ojp:IncludeOnwardCalls>true</ojp:IncludeOnwardCalls>
+					<ojp:IncludeOperatingDays>true</ojp:IncludeOperatingDays>
+					<ojp:IncludeRealtimeData>true</ojp:IncludeRealtimeData>
+				</ojp:Params>
+			</ojp:OJPStopEventRequest>
+		</ServiceRequest>
+	</OJPRequest>
+</OJP>

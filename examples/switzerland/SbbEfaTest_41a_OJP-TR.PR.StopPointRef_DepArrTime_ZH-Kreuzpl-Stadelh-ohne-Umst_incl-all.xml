@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+	<OJPRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPTripRequest>
+				<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
+				<ojp:Origin>
+					<ojp:PlaceRef>
+						<StopPointRef>8530813</StopPointRef>
+						<ojp:LocationName>
+							<ojp:Text>Zürich Kreuzplatz</ojp:Text>
+						</ojp:LocationName>
+					</ojp:PlaceRef>
+					<ojp:DepArrTime>2020-01-20T12:00:00Z</ojp:DepArrTime>
+				</ojp:Origin>
+				<ojp:Destination>
+					<ojp:PlaceRef>
+						<StopPointRef>8503003</StopPointRef>
+						<ojp:LocationName>
+							<ojp:Text>Zürich Stadelhofen</ojp:Text>
+						</ojp:LocationName>
+					</ojp:PlaceRef>
+				</ojp:Destination>
+				<ojp:Params>
+					<ojp:IncludeTrackSections>true</ojp:IncludeTrackSections>
+					<ojp:IncludeLegProjection>true</ojp:IncludeLegProjection>
+					<ojp:IncludeTurnDescription>true</ojp:IncludeTurnDescription>
+					<ojp:IncludeAccessibility>true</ojp:IncludeAccessibility>
+					<ojp:IncludeIntermediateStops>true</ojp:IncludeIntermediateStops>
+					<ojp:IncludeFare>true</ojp:IncludeFare>
+				</ojp:Params>
+			</ojp:OJPTripRequest>
+		</ServiceRequest>
+	</OJPRequest>
+</OJP>
