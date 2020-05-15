@@ -83,7 +83,7 @@
 			<xs:documentation>TripInfo response structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripInfoResponseContext" type="TripInfoResponseContextStructure" minOccurs="0">
+			<xs:element name="TripInfoResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Response context.</xs:documentation>
 				</xs:annotation>
@@ -95,14 +95,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="TripInfoResponseContextStructure">
-		<xs:annotation>
-			<xs:documentation>Context for a TripInfo response.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="AbstractResponseContextStructure"/>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:complexType name="TripInfoResultStructure">
 		<xs:annotation>
 			<xs:documentation>TripInfo result structure containing the current status of a trip.</xs:documentation>

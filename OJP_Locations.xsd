@@ -46,6 +46,11 @@
 	</xs:group>
 	<xs:group name="LocationInformationResponseGroup">
 		<xs:sequence>
+			<xs:element name="LocationInformationResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
@@ -298,6 +303,11 @@
 	</xs:group>
 	<xs:group name="ExchangePointsResponseGroup">
 		<xs:sequence>
+			<xs:element name="ExchangePointResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>

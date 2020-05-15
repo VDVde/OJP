@@ -209,7 +209,7 @@
 			<xs:documentation>Trip response structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripResponseContext" type="TripResponseContextStructure" minOccurs="0">
+			<xs:element name="TripResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
 				</xs:annotation>
@@ -221,14 +221,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="TripResponseContextStructure">
-		<xs:annotation>
-			<xs:documentation>Context for a trip response.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="AbstractResponseContextStructure"/>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:complexType name="TripResultStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for a single trip result and its accompanying error messages.</xs:documentation>
@@ -890,7 +882,7 @@
 			<xs:documentation>Multi-point trip response structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripResponseContext" type="TripResponseContextStructure" minOccurs="0">
+			<xs:element name="MultiPointTripResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
 				</xs:annotation>
