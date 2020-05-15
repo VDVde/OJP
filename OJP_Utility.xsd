@@ -54,7 +54,7 @@
 			<xs:documentation>[a restricted view of ALTERNATIVE NAME in TMv6] alternative identified text to be used in specified languages.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Text" type="siri:NaturalLanguageStringStructure">
+			<xs:element name="Text" type="siri:NaturalLanguageStringStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Text content.</xs:documentation>
 				</xs:annotation>

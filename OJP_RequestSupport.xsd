@@ -84,7 +84,7 @@
 					<xs:documentation>identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Language" type="xs:language" default="en" minOccurs="0">
+			<xs:element name="Language" type="xs:language" default="en" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Preferred language in which to return  text  values.</xs:documentation>
 				</xs:annotation>

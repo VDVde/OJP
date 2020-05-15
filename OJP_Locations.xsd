@@ -152,7 +152,7 @@
 	</xs:complexType>
 	<xs:group name="PlacePolicyGroup">
 		<xs:sequence>
-			<xs:element name="Language" type="xs:language" minOccurs="0">
+			<xs:element name="Language" type="xs:language" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Preferred language in which to return text values.</xs:documentation>
 				</xs:annotation>
@@ -288,7 +288,7 @@
 	</xs:group>
 	<xs:group name="ExchangePointsPolicyGroup">
 		<xs:sequence>
-			<xs:element name="Language" type="xs:language" minOccurs="0">
+			<xs:element name="Language" type="xs:language" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Preferred language in which to return text values.</xs:documentation>
 				</xs:annotation>
