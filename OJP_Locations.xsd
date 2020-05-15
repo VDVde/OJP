@@ -20,7 +20,6 @@
 	<xs:annotation>
 		<xs:documentation>All functions integrated into one request / response</xs:documentation>
 	</xs:annotation>
-	<xs:element name="LocationInformationRequest" type="LocationInformationRequestStructure"/>
 	<xs:group name="LocationInformationRequestGroup">
 		<xs:sequence>
 			<xs:choice>
@@ -45,13 +44,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="LocationInformationRequestStructure">
-		<xs:sequence>
-			<xs:group ref="LocationInformationRequestGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="LocationInformationResponse" type="LocationInformationResponseStructure"/>
 	<xs:group name="LocationInformationResponseGroup">
 		<xs:sequence>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
@@ -62,12 +54,6 @@
 			<xs:element name="Location" type="PlaceResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="LocationInformationResponseStructure">
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:group ref="LocationInformationResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>Additional declarations</xs:documentation>
 	</xs:annotation>
@@ -236,7 +222,6 @@
 	<xs:annotation>
 		<xs:documentation>===== Exchange point request ===============================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="ExchangePointsRequest" type="ExchangePointsRequestStructure"/>
 	<xs:group name="ExchangePointsRequestGroup">
 		<xs:sequence>
 			<xs:element name="PlaceRef" type="PlaceRefStructure" minOccurs="0">
@@ -251,12 +236,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="ExchangePointsRequestStructure">
-		<xs:sequence>
-			<xs:group ref="ExchangePointsRequestGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="ExchangePointsParamStructure">
 		<xs:sequence>
 			<xs:group ref="ExchangePointsDataFilterGroup"/>
@@ -317,7 +296,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:element name="ExchangePointsResponse" type="ExchangePointsResponseStructure"/>
 	<xs:group name="ExchangePointsResponseGroup">
 		<xs:sequence>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
@@ -328,12 +306,6 @@
 			<xs:element name="Place" type="ExchangePointsResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="ExchangePointsResponseStructure">
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:group ref="ExchangePointsResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="ExchangePointsResultStructure">
 		<xs:sequence>
 			<xs:element name="Place" type="PlaceStructure">
