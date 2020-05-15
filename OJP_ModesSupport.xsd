@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
@@ -35,7 +34,11 @@
 			<xs:documentation>Individual modes and their usage limits as stated by the passenger</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Mode" type="IndividualModesEnumeration"/>
+			<xs:element name="Mode" type="IndividualModesEnumeration">
+				<xs:annotation>
+					<xs:documentation>Mode of individual transport.	When mode self-drive-car is used the connection to another mode will need a parking space for the car. Thus, this mode is a generalisation of all park and ride use cases. The mode others-drive-car, however, only needs a place to let a person be set down from a car.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="MaxDistance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Maximum distance in meters. If given, it restricts the maximum distance of routes with the given mode.</xs:documentation>
@@ -59,6 +62,11 @@
 			<xs:element name="Speed" type="OpenPercentType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Relative speed in percent. If given slows the standard speed (below 100) or fasten it (above 100).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalTime" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Additional time added to the actual traveling time needed to use a specific mode.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

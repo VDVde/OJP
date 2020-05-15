@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_reference-v2.0.xsd"/>
@@ -70,7 +69,11 @@
 					<xs:documentation>Whether operators in list are to include or exclude from search. Default is exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OperatorRef" type="siri:OperatorRefStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="OperatorRef" type="siri:OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to transport operator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
@@ -169,7 +172,11 @@
 			<xs:documentation>Service that provides shared vehicles.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="OperatorRef" type="siri:OperatorRefStructure"/>
+			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
+				<xs:annotation>
+					<xs:documentation>Identifier of the operator of the sharing service </xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Name" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Public name of the service.</xs:documentation>
@@ -181,7 +188,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="SharingServiceUsageGroup" minOccurs="0"/>
-			<xs:element name="InfoURL" type="WebLinkStructure" minOccurs="0">
+			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Link to web page providing more details on service.</xs:documentation>
 				</xs:annotation>
@@ -333,7 +340,7 @@
 					<xs:documentation>Importance of the attribute.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InfoURL" type="xs:anyURI" minOccurs="0">
+			<xs:element name="InfoUrl" type="xs:anyURI" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>URL to additional information on this general attribute. If available, the whole attribute text has to be used as the marked link.</xs:documentation>
 				</xs:annotation>

@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Mit XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) von Katarzyna Piwonska (HaCon Ingenieurgesellschaft mbH) bearbeitet -->
-<!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
@@ -22,7 +20,6 @@
 	<xs:annotation>
 		<xs:documentation>All functions integrated into one request / response</xs:documentation>
 	</xs:annotation>
-	<xs:element name="LocationInformationRequest" type="LocationInformationRequestStructure"/>
 	<xs:group name="LocationInformationRequestGroup">
 		<xs:sequence>
 			<xs:choice>
@@ -47,13 +44,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="LocationInformationRequestStructure">
-		<xs:sequence>
-			<xs:group ref="LocationInformationRequestGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="LocationInformationResponse" type="LocationInformationResponseStructure"/>
 	<xs:group name="LocationInformationResponseGroup">
 		<xs:sequence>
 			<xs:element name="LocationInformationResponseContext" type="ResponseContextStructure" minOccurs="0">
@@ -69,12 +59,6 @@
 			<xs:element name="Location" type="PlaceResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="LocationInformationResponseStructure">
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:group ref="LocationInformationResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>Additional declarations</xs:documentation>
 	</xs:annotation>
@@ -93,6 +77,11 @@
 			<xs:element name="GeoRestriction" type="GeoRestrictionsStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Restricts the resulting location objects to the given geographical area.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AllowedSystemId" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the location information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the location information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -168,7 +157,11 @@
 					<xs:documentation>Preferred language in which to return text values.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0"/>
+			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (eg: in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The location information service is expected to support a response volume of at least 500 location objects within one single response.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Tells the server to skip the mentioned number of results in its response. Can be used in a follow-up request to get further results. The value is usually taken from the previous response.</xs:documentation>
@@ -234,7 +227,6 @@
 	<xs:annotation>
 		<xs:documentation>===== Exchange point request ===============================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="ExchangePointsRequest" type="ExchangePointsRequestStructure"/>
 	<xs:group name="ExchangePointsRequestGroup">
 		<xs:sequence>
 			<xs:element name="PlaceRef" type="PlaceRefStructure" minOccurs="0">
@@ -249,12 +241,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="ExchangePointsRequestStructure">
-		<xs:sequence>
-			<xs:group ref="ExchangePointsRequestGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="ExchangePointsParamStructure">
 		<xs:sequence>
 			<xs:group ref="ExchangePointsDataFilterGroup"/>
@@ -315,7 +301,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:element name="ExchangePointsResponse" type="ExchangePointsResponseStructure"/>
 	<xs:group name="ExchangePointsResponseGroup">
 		<xs:sequence>
 			<xs:element name="ExchangePointResponseContext" type="ResponseContextStructure" minOccurs="0">
@@ -331,12 +316,6 @@
 			<xs:element name="Place" type="ExchangePointsResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="ExchangePointsResponseStructure">
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:group ref="ExchangePointsResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="ExchangePointsResultStructure">
 		<xs:sequence>
 			<xs:element name="Place" type="PlaceStructure">
@@ -347,6 +326,11 @@
 			<xs:element name="TravelDurationEstimate" type="xs:duration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Rough estimate of the travel duration from the specified location to this exchange point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WaitDuration" type="xs:duration" minOccurs="0" default="PT0M">
+				<xs:annotation>
+					<xs:documentation>Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it has to take care, that feeding arrival and fetching departure are at least this duration apart.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BorderPoint" type="xs:boolean" default="false" minOccurs="0">

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Werner Kohl (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
@@ -44,12 +43,6 @@
 		</xs:annotation>
 		<xs:restriction base="xs:nonNegativeInteger"/>
 	</xs:simpleType>
-	<xs:simpleType name="SpeedType">
-		<xs:annotation>
-			<xs:documentation>Data type for speed, in meter per second.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:nonNegativeInteger"/>
-	</xs:simpleType>
 	<xs:simpleType name="PhoneNumberType">
 		<xs:annotation>
 			<xs:documentation>Type definition for phone numbers</xs:documentation>
@@ -86,6 +79,16 @@
 			<xs:element name="Url" type="xs:anyURI">
 				<xs:annotation>
 					<xs:documentation>URL to resource on web.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MimeType" type="xs:normalizedString" default="text/html" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>MIME type of the referenced resource. To which kind of resource does the URL point to?</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Embeddable" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Is the referenced resource meant to be embedded as a webview in a surrounding context, e.g. app or web page? If yes, the resource has to be fully responsive. Default is false.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

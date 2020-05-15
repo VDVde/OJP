@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
@@ -181,6 +180,11 @@
 			<xs:element name="ParentRef" type="TopographicPlaceRefStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Reference to a parent TopographicPlace.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReferredSystemId" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Used in distributed environments (e.g. EU-Spirit). If set, this topographic place resides within the given system (in EU-Spirit "passive server"). This system can be queried for actual locations within this topographic place. This is used in an distributed environment for a two-steps place identification. In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Area" minOccurs="0">
@@ -395,15 +399,31 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice minOccurs="0">
-				<xs:element name="StopPoint" type="StopPointStructure"/>
-				<xs:element name="StopPlace" type="StopPlaceStructure"/>
+				<xs:element name="StopPoint" type="StopPointStructure">
+					<xs:annotation>
+						<xs:documentation>Model of a stop point </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="StopPlace" type="StopPlaceStructure">
+					<xs:annotation>
+						<xs:documentation>Model of a stop place</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 				<xs:element name="TopographicPlace" type="TopographicPlaceStructure">
 					<xs:annotation>
 						<xs:documentation>TopographicPlace, village or city.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="PointOfInterest" type="PointOfInterestStructure"/>
-				<xs:element name="Address" type="AddressStructure"/>
+				<xs:element name="PointOfInterest" type="PointOfInterestStructure">
+					<xs:annotation>
+						<xs:documentation>Model of a POI </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Address" type="AddressStructure">
+					<xs:annotation>
+						<xs:documentation>Model of an address </xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 			<xs:element name="LocationName" type="InternationalTextStructure">
 				<xs:annotation>

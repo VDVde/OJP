@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.siri.org.uk/siri" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
@@ -89,7 +88,7 @@
 		<xs:sequence>
 			<xs:element name="OriginStopPointRef" type="siri:StopPointRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>First stop of the vehicle journey.</xs:documentation>
+					<xs:documentation>First stop of the vehicle journey; origin stop point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OriginText" type="InternationalTextStructure">
@@ -106,7 +105,7 @@
 		<xs:sequence>
 			<xs:element name="DestinationStopPointRef" type="siri:StopPointRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Last stop of vehicle journey.</xs:documentation>
+					<xs:documentation>Last stop of vehicle journey; destination stop point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DestinationText" type="InternationalTextStructure">
@@ -146,7 +145,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganisationRef" type="siri:OperatorRefStructure" minOccurs="0"/>
-			<xs:element name="InfoURL" type="WebLinkStructure" minOccurs="0">
+			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Link to web page providing more details on service.</xs:documentation>
 				</xs:annotation>
@@ -527,6 +526,11 @@
 			<xs:element name="NoRamp" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The user is not able to use an ramp.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NoSight" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The user is not able to see.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

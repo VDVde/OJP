@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Werner Kohl (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
@@ -10,7 +9,6 @@
 	<xs:annotation>
 		<xs:documentation>====================================================Request definitions====================================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="FareRequest" type="FareRequestStructure"/>
 	<xs:group name="FareRequestGroup">
 		<xs:annotation>
 			<xs:documentation>Fare request structure.</xs:documentation>
@@ -45,15 +43,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="FareRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Fare request element.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:group ref="FareRequestGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="StopFareRequestStructure">
 		<xs:annotation>
 			<xs:documentation>Sub-request: stop-related fare information.</xs:documentation>
@@ -107,16 +96,6 @@
 	<xs:annotation>
 		<xs:documentation>====================================================Response definitions====================================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="FareResponse">
-		<xs:annotation>
-			<xs:documentation>Fare response element.</xs:documentation>
-		</xs:annotation>
-		<xs:complexType>
-			<xs:complexContent>
-				<xs:extension base="FareResponseStructure"/>
-			</xs:complexContent>
-		</xs:complexType>
-	</xs:element>
 	<xs:group name="FareResponseGroup">
 		<xs:sequence>
 			<xs:element name="FareResponseContext" type="ResponseContextStructure" minOccurs="0">
@@ -131,19 +110,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="FareResponseStructure">
-		<xs:annotation>
-			<xs:documentation>Fare response structure.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Error messages related to the request as a whole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="FareResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="FareResultStructure">
 		<xs:annotation>
 			<xs:documentation>Wrapper element for Fare results.</xs:documentation>

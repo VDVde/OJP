@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
@@ -10,11 +9,6 @@
 	<xs:annotation>
 		<xs:documentation>===== Request Structures ===============================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="TripRequest" type="TripRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Trip request element.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:group name="TripRequestGroup">
 		<xs:annotation>
 			<xs:documentation>Trip request structure.</xs:documentation>
@@ -52,11 +46,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="TripRequestStructure">
-		<xs:sequence>
-			<xs:group ref="TripRequestGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="TripParamStructure">
 		<xs:annotation>
 			<xs:documentation>Trip request parameter structure.</xs:documentation>
@@ -146,6 +135,11 @@
 					<xs:documentation>Deviation from average walk speed in percent. 100% percent is average speed. Less than 100 % slower, Greater than 150% faster.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AdditionalTransferTime" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripContentFilterGroup">
@@ -210,11 +204,6 @@
 	<xs:annotation>
 		<xs:documentation>====================================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="TripResponse" type="TripResponseStructure">
-		<xs:annotation>
-			<xs:documentation>Trip response element</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:group name="TripResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Trip response structure.</xs:documentation>
@@ -232,16 +221,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="TripResponseStructure">
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Error messages related to the trip request as a whole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="TripResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="TripResultStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for a single trip result and its accompanying error messages.</xs:documentation>
@@ -560,6 +539,11 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="DistributorInterchangeId" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Interchange identifier of the distributing line/service at its boarding. This is not a reference. This identifier is used to recognize in a distributed environment (e.g. EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scanario (aka "line ID"). See https://eu-spirit.eu/</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>This stop fulfils one of the via requirements stated in the request data.</xs:documentation>
@@ -593,6 +577,11 @@
 						<xs:group ref="ServiceTimeGroup"/>
 					</xs:sequence>
 				</xs:complexType>
+			</xs:element>
+			<xs:element name="FeederInterchangeId" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Interchange identifier of the feeding line/service at its alighting. This is not a reference. This identifier is used to recognize in a distributed environment (e.g. EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scanario (aka "line ID"). See https://eu-spirit.eu/</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
@@ -792,7 +781,6 @@
 	<xs:annotation>
 		<xs:documentation>===== Multi-point trip request ===============================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="MultiPointTripRequest" type="MultiPointTripRequestStructure"/>
 	<xs:group name="MultiPointTripRequestGroup">
 		<xs:annotation>
 			<xs:documentation>Multi-point trip request structure.</xs:documentation>
@@ -830,11 +818,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="MultiPointTripRequestStructure">
-		<xs:sequence>
-			<xs:group ref="MultiPointTripRequestGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="MultiPointTripParamStructure">
 		<xs:annotation>
 			<xs:documentation>Multi-point trip request parameter structure.</xs:documentation>
@@ -894,11 +877,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:element name="MultiPointTripResponse" type="MultiPointTripResponseStructure">
-		<xs:annotation>
-			<xs:documentation>Multi-point trip response element</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:group name="MultiPointTripResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Multi-point trip response structure.</xs:documentation>
@@ -916,19 +894,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="MultiPointTripResponseStructure">
-		<xs:annotation>
-			<xs:documentation>Multi-point trip response structure.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Error messages related to the trip request as a whole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="MultiPointTripResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="MultiPointTripResultStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for a single trip result and its accompanying error messages.</xs:documentation>
