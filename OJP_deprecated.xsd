@@ -1,162 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:include schemaLocation="OJP_Fares.xsd"/>
-	<xs:include schemaLocation="OJP_IndividualTrips.xsd"/>
-	<xs:include schemaLocation="OJP_Locations.xsd"/>
-	<xs:include schemaLocation="OJP_Maps.xsd"/>
-	<xs:include schemaLocation="OJP_RequestSupport.xsd"/>
-	<xs:include schemaLocation="OJP_StopEvents.xsd"/>
-	<xs:include schemaLocation="OJP_TripInfo.xsd"/>
-	<xs:include schemaLocation="OJP_Trips.xsd"/>
-	<xs:element name="OJP">
-		<xs:annotation>
-			<xs:documentation>Root element for OJP messages</xs:documentation>
-		</xs:annotation>
-		<xs:complexType>
-			<xs:choice>
-				<xs:group ref="RequestGroup"/>
-				<xs:group ref="ResponseGroup"/>
-				<xs:element name="Extension" type="xs:anyType"/>
-			</xs:choice>
-			<xs:attribute name="version" type="xs:NMTOKEN" use="required" fixed="1.0"/>
-		</xs:complexType>
-	</xs:element>
-	<xs:annotation>
-		<xs:documentation>================ Requests =============================================</xs:documentation>
-	</xs:annotation>
-	<xs:element name="ServiceRequest" type="ServiceRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Service request element</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="ServiceRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Request structure - wrapping generic SIRI request elements.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="AbstractOJPServiceRequestStructure">
-				<xs:sequence>
-					<xs:element name="RequestPayload" type="RequestPayloadStructure">
-						<xs:annotation>
-							<xs:documentation>Service specific request contents.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="SubscriptionRequest" type="SubscriptionRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Subscription request element</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="SubscriptionRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Subscription request structure - wrapping generic SIRI request element.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="AbstractOJPSubscriptionRequestStructure"/>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:group name="RequestGroup">
-		<xs:annotation>
-			<xs:documentation>Group of all requests, including Heartbeat, Status, Termination etc.</xs:documentation>
-		</xs:annotation>
-		<xs:choice>
-			<xs:group ref="ServiceRequestGroup"/>
-			<xs:group ref="DeliveryRequestGroup"/>
-			<xs:group ref="StatusRequestGroup"/>
-		</xs:choice>
-	</xs:group>
-	<xs:group name="ServiceRequestGroup">
-		<xs:annotation>
-			<xs:documentation>Group of all service-related requests</xs:documentation>
-		</xs:annotation>
-		<xs:choice>
-			<xs:element ref="ServiceRequest"/>
-			<xs:element ref="SubscriptionRequest"/>
-			<xs:element ref="TerminateSubscriptionRequest"/>
-		</xs:choice>
-	</xs:group>
-	<xs:complexType name="RequestPayloadStructure">
-		<xs:annotation>
-			<xs:documentation>Choice of payload requests</xs:documentation>
-		</xs:annotation>
-		<xs:choice>
-			<xs:element ref="ExchangePointsRequest"/>
-			<xs:element ref="FaresRequest"/>
-			<xs:element ref="GeoCoordinatesRequest"/>
-			<xs:element ref="ImageCoordinatesRequest"/>
-			<xs:element ref="IndividualRouteRequest"/>
-			<xs:element ref="LocationInformationRequest"/>
-			<xs:element ref="MapServiceRequest"/>
-			<xs:element ref="MultiPointTripRequest"/>
-			<xs:element ref="StopEventRequest"/>
-			<xs:element ref="TripInfoRequest"/>
-			<xs:element ref="TripRequest"/>
-		</xs:choice>
-	</xs:complexType>
-	<xs:annotation>
-		<xs:documentation>================ Responses =============================================</xs:documentation>
-	</xs:annotation>
-	<xs:group name="ResponseGroup">
-		<xs:annotation>
-			<xs:documentation>Group of all response messages, including Heartbeat, Status, Termination etc.</xs:documentation>
-		</xs:annotation>
-		<xs:choice>
-			<xs:group ref="ServiceResponseGroup"/>
-			<xs:group ref="DeliveryResponseGroup"/>
-			<xs:group ref="StatusResponseGroup"/>
-		</xs:choice>
-	</xs:group>
-	<xs:group name="DeliveryResponseGroup">
-		<xs:annotation>
-			<xs:documentation>Group of all topical response messages</xs:documentation>
-		</xs:annotation>
-		<xs:choice>
-			<xs:element ref="ServiceDelivery"/>
-			<xs:element ref="DataReadyAcknowledgement"/>
-			<xs:element ref="DataReceivedAcknowledgement"/>
-		</xs:choice>
-	</xs:group>
-	<xs:element name="ServiceDelivery" type="ServiceDeliveryStructure">
-		<xs:annotation>
-			<xs:documentation>Service delivery element</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="ServiceDeliveryStructure">
-		<xs:annotation>
-			<xs:documentation>Delivery structure - wrapping generic SIRI response elements.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="AbstractOJPResponseStructure">
-				<xs:sequence>
-					<xs:element name="DeliveryPayload" type="DeliveryPayloadStructure">
-						<xs:annotation>
-							<xs:documentation>Service specific delivery contents.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="DeliveryPayloadStructure">
-		<xs:annotation>
-			<xs:documentation>Choice of delivery payload elements.</xs:documentation>
-		</xs:annotation>
-		<xs:choice>
-			<xs:element ref="ExchangePointsResponse"/>
-			<xs:element ref="FaresResponse"/>
-			<xs:element ref="GeoCoordinatesResponse"/>
-			<xs:element ref="ImageCoordinatesResponse"/>
-			<xs:element ref="IndividualRouteResponse"/>
-			<xs:element ref="LocationInformationResponse"/>
-			<xs:element ref="MapServiceResponse"/>
-			<xs:element ref="MultiPointTripResponse"/>
-			<xs:element ref="StopEventResponse"/>
-			<xs:element ref="TripInfoResponse"/>
-			<xs:element ref="TripResponse"/>
-		</xs:choice>
-	</xs:complexType>
+ <xs:include schemaLocation="OJP_Fares.xsd"/>
+ <xs:include schemaLocation="OJP_IndividualTrips.xsd"/>
+ <xs:include schemaLocation="OJP_Locations.xsd"/>
+ <xs:include schemaLocation="OJP_Maps.xsd"/>
+ <xs:include schemaLocation="OJP_RequestSupport.xsd"/>
+ <xs:include schemaLocation="OJP_StopEvents.xsd"/>
+ <xs:include schemaLocation="OJP_TripInfo.xsd"/>
+ <xs:include schemaLocation="OJP_Trips.xsd"/>
+ <xs:element name="OJP">
+  <xs:annotation>
+   <xs:documentation>Root element for OJP messages</xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+   <xs:choice>
+    <xs:group ref="RequestGroup"/>
+    <xs:group ref="ResponseGroup"/>
+    <xs:element name="Extension" type="xs:anyType"/>
+   </xs:choice>
+   <xs:attribute name="version" type="xs:NMTOKEN" use="required" fixed="1.0"/>
+  </xs:complexType>
+ </xs:element>
+ <xs:annotation>
+  <xs:documentation>================ Requests =============================================</xs:documentation>
+ </xs:annotation>
+ <xs:element name="ServiceRequest" type="ServiceRequestStructure">
+  <xs:annotation>
+   <xs:documentation>Service request element</xs:documentation>
+  </xs:annotation>
+ </xs:element>
+ <xs:complexType name="ServiceRequestStructure">
+  <xs:annotation>
+   <xs:documentation>Request structure - wrapping generic SIRI request elements.</xs:documentation>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="AbstractOJPServiceRequestStructure">
+    <xs:sequence>
+     <xs:element name="RequestPayload" type="RequestPayloadStructure">
+      <xs:annotation>
+       <xs:documentation>Service specific request contents.</xs:documentation>
+      </xs:annotation>
+     </xs:element>
+    </xs:sequence>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="SubscriptionRequest" type="SubscriptionRequestStructure">
+  <xs:annotation>
+   <xs:documentation>Subscription request element</xs:documentation>
+  </xs:annotation>
+ </xs:element>
+ <xs:complexType name="SubscriptionRequestStructure">
+  <xs:annotation>
+   <xs:documentation>Subscription request structure - wrapping generic SIRI request element.</xs:documentation>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="AbstractOJPSubscriptionRequestStructure"/>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:group name="RequestGroup">
+  <xs:annotation>
+   <xs:documentation>Group of all requests, including Heartbeat, Status, Termination etc.</xs:documentation>
+  </xs:annotation>
+  <xs:choice>
+   <xs:group ref="ServiceRequestGroup"/>
+   <xs:group ref="DeliveryRequestGroup"/>
+   <xs:group ref="StatusRequestGroup"/>
+  </xs:choice>
+ </xs:group>
+ <xs:group name="ServiceRequestGroup">
+  <xs:annotation>
+   <xs:documentation>Group of all service-related requests</xs:documentation>
+  </xs:annotation>
+  <xs:choice>
+   <xs:element ref="ServiceRequest"/>
+   <xs:element ref="SubscriptionRequest"/>
+   <xs:element ref="TerminateSubscriptionRequest"/>
+  </xs:choice>
+ </xs:group>
+ <xs:complexType name="RequestPayloadStructure">
+  <xs:annotation>
+   <xs:documentation>Choice of payload requests</xs:documentation>
+  </xs:annotation>
+  <xs:choice>
+   <xs:element ref="ExchangePointsRequest"/>
+   <xs:element ref="FaresRequest"/>
+   <xs:element ref="GeoCoordinatesRequest"/>
+   <xs:element ref="ImageCoordinatesRequest"/>
+   <xs:element ref="IndividualRouteRequest"/>
+   <xs:element ref="LocationInformationRequest"/>
+   <xs:element ref="MapServiceRequest"/>
+   <xs:element ref="MultiPointTripRequest"/>
+   <xs:element ref="StopEventRequest"/>
+   <xs:element ref="TripInfoRequest"/>
+   <xs:element ref="TripRequest"/>
+  </xs:choice>
+ </xs:complexType>
+ <xs:annotation>
+  <xs:documentation>================ Responses =============================================</xs:documentation>
+ </xs:annotation>
+ <xs:group name="ResponseGroup">
+  <xs:annotation>
+   <xs:documentation>Group of all response messages, including Heartbeat, Status, Termination etc.</xs:documentation>
+  </xs:annotation>
+  <xs:choice>
+   <xs:group ref="ServiceResponseGroup"/>
+   <xs:group ref="DeliveryResponseGroup"/>
+   <xs:group ref="StatusResponseGroup"/>
+  </xs:choice>
+ </xs:group>
+ <xs:group name="DeliveryResponseGroup">
+  <xs:annotation>
+   <xs:documentation>Group of all topical response messages</xs:documentation>
+  </xs:annotation>
+  <xs:choice>
+   <xs:element ref="ServiceDelivery"/>
+   <xs:element ref="DataReadyAcknowledgement"/>
+   <xs:element ref="DataReceivedAcknowledgement"/>
+  </xs:choice>
+ </xs:group>
+ <xs:element name="ServiceDelivery" type="ServiceDeliveryStructure">
+  <xs:annotation>
+   <xs:documentation>Service delivery element</xs:documentation>
+  </xs:annotation>
+ </xs:element>
+ <xs:complexType name="ServiceDeliveryStructure">
+  <xs:annotation>
+   <xs:documentation>Delivery structure - wrapping generic SIRI response elements.</xs:documentation>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="AbstractOJPResponseStructure">
+    <xs:sequence>
+     <xs:element name="DeliveryPayload" type="DeliveryPayloadStructure">
+      <xs:annotation>
+       <xs:documentation>Service specific delivery contents.</xs:documentation>
+      </xs:annotation>
+     </xs:element>
+    </xs:sequence>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:complexType name="DeliveryPayloadStructure">
+  <xs:annotation>
+   <xs:documentation>Choice of delivery payload elements.</xs:documentation>
+  </xs:annotation>
+  <xs:choice>
+   <xs:element ref="ExchangePointsResponse"/>
+   <xs:element ref="FaresResponse"/>
+   <xs:element ref="GeoCoordinatesResponse"/>
+   <xs:element ref="ImageCoordinatesResponse"/>
+   <xs:element ref="IndividualRouteResponse"/>
+   <xs:element ref="LocationInformationResponse"/>
+   <xs:element ref="MapServiceResponse"/>
+   <xs:element ref="MultiPointTripResponse"/>
+   <xs:element ref="StopEventResponse"/>
+   <xs:element ref="TripInfoResponse"/>
+   <xs:element ref="TripResponse"/>
+  </xs:choice>
+ </xs:complexType>
 </xs:schema>

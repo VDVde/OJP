@@ -1,152 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri/siri_all_framework-v2.0.xsd"/>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_journey_support-v2.0.xsd"/>
-	<xs:include schemaLocation="OJP_Common.xsd"/>
-	<xs:annotation>
-		<xs:documentation>====================================================Simple Types ====================================================</xs:documentation>
-	</xs:annotation>
-	<xs:simpleType name="CalcTimeType">
-		<xs:annotation>
-			<xs:documentation>Type definition for calculation time in milliseconds.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:integer"/>
-	</xs:simpleType>
-	<xs:simpleType name="SignatureType">
-		<xs:annotation>
-			<xs:documentation>data for transmission of message signatures (public key cryptography), used to prove Message Integrity</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string"/>
-	</xs:simpleType>
-	<xs:simpleType name="CertificateIdType">
-		<xs:annotation>
-			<xs:documentation>Type definition for the form of identification that can be used as a Message Integrity Property (public key cryptography)</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:NMTOKEN"/>
-	</xs:simpleType>
-	<xs:group name="MessageIntegrityPropertiesGroup">
-		<xs:annotation>
-			<xs:documentation>Properties that allow checks for message integrity.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Signature" type="SignatureType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Authorisation signature (data for transmission of message signatures (public key cryptography), used to prove Message Integrity).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CertificateId" type="CertificateIdType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>form of identification that can be used as a Message Integrity Property (public key cryptography)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:annotation>
-		<xs:documentation>====================================================Contexts ====================================================</xs:documentation>
-	</xs:annotation>
-	<xs:group name="ServiceRequestContextGroup">
-		<xs:annotation>
-			<xs:documentation>Generic context for all request messages.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="DataFrameRef" type="siri:DataFrameRefStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:group>
-	<xs:group name="ServiceResponseContextGroup">
-		<xs:annotation>
-			<xs:documentation>Generic context for all response messages.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="DataFrameRef" type="siri:DataFrameRefStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CalcTime" type="CalcTimeType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Calculation time.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:group name="SubscriptionRequestContextGroup">
-		<xs:annotation>
-			<xs:documentation>Generic context for all subscription requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="DataFrameRef" type="siri:DataFrameRefStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Language" type="xs:language" default="en" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Preferred language in which to return  text  values.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="MessageIntegrityPropertiesGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:group>
-	<xs:annotation>
-		<xs:documentation>====================================================Request definitions====================================================</xs:documentation>
-	</xs:annotation>
-	<xs:complexType name="AbstractOJPServiceRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Basic request structure common for all OJP service requests.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="siri:AbstractFunctionalServiceRequestStructure">
-				<xs:group ref="ServiceRequestContextGroup"/>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="AbstractOJPSubscriptionRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Basic structure common for all OJP subscription requests.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="siri:AbstractSubscriptionRequestStructure">
-				<xs:group ref="SubscriptionRequestContextGroup"/>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:group name="DeliveryRequestGroup">
-		<xs:annotation>
-			<xs:documentation>Wrapper for SIRI delivery request group.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:group ref="siri:DeliveryRequestGroup"/>
-		</xs:sequence>
-	</xs:group>
-	<xs:group name="StatusRequestGroup">
-		<xs:annotation>
-			<xs:documentation>Wrapper for SIRI status request group.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:group ref="siri:StatusRequestGroup"/>
-		</xs:sequence>
-	</xs:group>
-	<xs:element name="TerminateSubscriptionRequest" type="siri:TerminateSubscriptionRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Request element for terminating subscriptions (from SIRI).</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:annotation>
-		<xs:documentation>====================================================Response definitions====================================================</xs:documentation>
-	</xs:annotation>
-	<xs:group name="ServiceResponseGroup">
-		<xs:annotation>
-			<xs:documentation>Wrapper for SIRI service response group.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:group ref="siri:ServiceResponseGroup"/>
-		</xs:sequence>
-	</xs:group>
+ <xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri/siri_all_framework-v2.0.xsd"/>
+ <xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_journey_support-v2.0.xsd"/>
+ <xs:include schemaLocation="OJP_Common.xsd"/>
+ <xs:annotation>
+  <xs:documentation>====================================================Simple Types ====================================================</xs:documentation>
+ </xs:annotation>
+ <xs:simpleType name="CalcTimeType">
+  <xs:annotation>
+   <xs:documentation>Type definition for calculation time in milliseconds.</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:integer"/>
+ </xs:simpleType>
+ <xs:simpleType name="SignatureType">
+  <xs:annotation>
+   <xs:documentation>data for transmission of message signatures (public key cryptography), used to prove Message Integrity</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string"/>
+ </xs:simpleType>
+ <xs:simpleType name="CertificateIdType">
+  <xs:annotation>
+   <xs:documentation>Type definition for the form of identification that can be used as a Message Integrity Property (public key cryptography)</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:NMTOKEN"/>
+ </xs:simpleType>
+ <xs:group name="MessageIntegrityPropertiesGroup">
+  <xs:annotation>
+   <xs:documentation>Properties that allow checks for message integrity.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="Signature" type="SignatureType" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Authorisation signature (data for transmission of message signatures (public key cryptography), used to prove Message Integrity).</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="CertificateId" type="CertificateIdType" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>form of identification that can be used as a Message Integrity Property (public key cryptography)</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:annotation>
+  <xs:documentation>====================================================Contexts ====================================================</xs:documentation>
+ </xs:annotation>
+ <xs:group name="ServiceRequestContextGroup">
+  <xs:annotation>
+   <xs:documentation>Generic context for all request messages.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="DataFrameRef" type="siri:DataFrameRefStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+  </xs:sequence>
+ </xs:group>
+ <xs:group name="ServiceResponseContextGroup">
+  <xs:annotation>
+   <xs:documentation>Generic context for all response messages.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="DataFrameRef" type="siri:DataFrameRefStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="CalcTime" type="CalcTimeType" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Calculation time.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:group name="SubscriptionRequestContextGroup">
+  <xs:annotation>
+   <xs:documentation>Generic context for all subscription requests.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="DataFrameRef" type="siri:DataFrameRefStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="Language" type="xs:language" default="en" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Preferred language in which to return  text  values.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:group ref="MessageIntegrityPropertiesGroup"/>
+   <xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+  </xs:sequence>
+ </xs:group>
+ <xs:annotation>
+  <xs:documentation>====================================================Request definitions====================================================</xs:documentation>
+ </xs:annotation>
+ <xs:complexType name="AbstractOJPServiceRequestStructure">
+  <xs:annotation>
+   <xs:documentation>Basic request structure common for all OJP service requests.</xs:documentation>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="siri:AbstractFunctionalServiceRequestStructure">
+    <xs:group ref="ServiceRequestContextGroup"/>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:complexType name="AbstractOJPSubscriptionRequestStructure">
+  <xs:annotation>
+   <xs:documentation>Basic structure common for all OJP subscription requests.</xs:documentation>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="siri:AbstractSubscriptionRequestStructure">
+    <xs:group ref="SubscriptionRequestContextGroup"/>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:group name="DeliveryRequestGroup">
+  <xs:annotation>
+   <xs:documentation>Wrapper for SIRI delivery request group.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:group ref="siri:DeliveryRequestGroup"/>
+  </xs:sequence>
+ </xs:group>
+ <xs:group name="StatusRequestGroup">
+  <xs:annotation>
+   <xs:documentation>Wrapper for SIRI status request group.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:group ref="siri:StatusRequestGroup"/>
+  </xs:sequence>
+ </xs:group>
+ <xs:element name="TerminateSubscriptionRequest" type="siri:TerminateSubscriptionRequestStructure">
+  <xs:annotation>
+   <xs:documentation>Request element for terminating subscriptions (from SIRI).</xs:documentation>
+  </xs:annotation>
+ </xs:element>
+ <xs:annotation>
+  <xs:documentation>====================================================Response definitions====================================================</xs:documentation>
+ </xs:annotation>
+ <xs:group name="ServiceResponseGroup">
+  <xs:annotation>
+   <xs:documentation>Wrapper for SIRI service response group.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:group ref="siri:ServiceResponseGroup"/>
+  </xs:sequence>
+ </xs:group>
 </xs:schema>

@@ -1,243 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<!-- ===Dependencies ======================================= -->
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
-	<!-- ===========================================================================================================-->
-	<xs:include schemaLocation="OJP_Common.xsd"/>
-	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
-	<xs:element name="StopEventRequest" type="StopEventRequestStructure">
-		<xs:annotation>
-			<xs:documentation>Request element for departure and arrival events at stops</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:group name="StopEventRequestGroup">
-		<xs:annotation>
-			<xs:documentation>Request structure for departure and arrival events at stops</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Location" type="PlaceContextStructure">
-				<xs:annotation>
-					<xs:documentation>Location for which to obtain stop event information.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Params" type="StopEventParamStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Request parameter</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:complexType name="StopEventRequestStructure">
-		<xs:sequence>
-			<xs:group ref="StopEventRequestGroup"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="StopEventParamStructure">
-		<xs:annotation>
-			<xs:documentation>Request specific parameters (parameters which define what is to be included in a Stop  Event result)</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:group ref="StopEventDataFilterGroup"/>
-			<xs:group ref="StopEventPolicyGroup"/>
-			<xs:group ref="StopEventContentFilterGroup"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:group name="StopEventDataFilterGroup">
-		<xs:annotation>
-			<xs:documentation>Request data filters</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="PtModeFilter" type="PtModeFilterStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Modes to be considered in stop events.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LineFilter" type="LineDirectionFilterStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Lines/Directions to include/exclude.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:group name="StopEventPolicyGroup">
-		<xs:annotation>
-			<xs:documentation>Request policies</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>parameter to control the number of TRIP results before/after a point in time. May NOT be used when departure time at origin AND arrival time at destination are set</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TimeWindow" type="xs:duration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Time window events should lie within. Starting from time  given in LocationContext.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="StopEventType" type="StopEventTypeEnumeration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Only departures or arrivals or both.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:group name="StopEventContentFilterGroup">
-		<xs:annotation>
-			<xs:documentation>Content filters which data is expected in the response</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="IncludePreviousCalls" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the previous calls of each vehicle journey should be included in the response.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeOnwardCalls" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the onward calls of each vehicle journey should be included in the response.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeOperatingDays" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether operating day information of this stop event should be included in the response.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeRealtimeData" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether realtime information of this stop event should be included in the response.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:simpleType name="StopEventTypeEnumeration">
-		<xs:annotation>
-			<xs:documentation> Departure or arrival events or both</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="departure"/>
-			<xs:enumeration value="arrival"/>
-			<xs:enumeration value="both"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:annotation>
-		<xs:documentation>====================================================</xs:documentation>
-	</xs:annotation>
-	<xs:element name="StopEventResponse" type="StopEventResponseStructure">
-		<xs:annotation>
-			<xs:documentation>Response element for departure and arrival events at stops</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:group name="StopEventResponseGroup">
-		<xs:annotation>
-			<xs:documentation>Response structure for departure and arrival events at stops</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="StopEventResponseContext" type="StopEventResponseContextStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Container for data that is referenced multiple times.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="StopEventResult" type="StopEventResultStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Enclosing element for stop event data.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:complexType name="StopEventResponseStructure">
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Error messages that refer to the stop event response as a whole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="StopEventResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="StopEventResultStructure">
-		<xs:annotation>
-			<xs:documentation>Wrapper element for a single stop event result.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="ResultId" type="xs:NMTOKEN">
-				<xs:annotation>
-					<xs:documentation>ID of this result.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Error messages that refer to this stop event.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="StopEvent" type="StopEventStructure">
-				<xs:annotation>
-					<xs:documentation>Stop event data element.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="StopEventStructure">
-		<xs:annotation>
-			<xs:documentation>Stop event structure.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="PreviousCall" type="CallAtNearStopStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Calls at stops that happen before this stop event (service pattern of this vehicle journey before this stop event).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ThisCall" type="CallAtNearStopStructure">
-				<xs:annotation>
-					<xs:documentation>The call of this vehicle journey at this stop.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OnwardCall" type="CallAtNearStopStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Calls at stops that happen after this stop event (rest of the service pattern of the vehicle journey).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Service" type="DatedJourneyStructure">
-				<xs:annotation>
-					<xs:documentation>Service that calls at this stop.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="StopEventResponseContextStructure">
-		<xs:annotation>
-			<xs:documentation>Stop event response context. May hold objects that are referenced several times.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="AbstractResponseContextStructure"/>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="CallAtNearStopStructure">
-		<xs:annotation>
-			<xs:documentation>indication of the walk distance and time to a nearby stop where relevant.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="CallAtStop" type="CallAtStopStructure">
-				<xs:annotation>
-					<xs:documentation>[same as CALL in SIRI] the meeting of a VEHICLE JOURNEY with a specific SCHEDULED STOP POINT .</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="WalkDistance" type="siri:DistanceType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Distance from request location (f.e. address) to this stop in metres.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="WalkDuration" type="xs:duration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Distance from request location (f.e. address) to this stop in seconds. All user options taken into account (f.e. walk speed).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
+ <!-- ===Dependencies ======================================= -->
+ <xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
+ <!-- ===========================================================================================================-->
+ <xs:include schemaLocation="OJP_Common.xsd"/>
+ <xs:include schemaLocation="OJP_JourneySupport.xsd"/>
+ <xs:element name="StopEventRequest" type="StopEventRequestStructure">
+  <xs:annotation>
+   <xs:documentation>Request element for departure and arrival events at stops</xs:documentation>
+  </xs:annotation>
+ </xs:element>
+ <xs:group name="StopEventRequestGroup">
+  <xs:annotation>
+   <xs:documentation>Request structure for departure and arrival events at stops</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="Location" type="PlaceContextStructure">
+    <xs:annotation>
+     <xs:documentation>Location for which to obtain stop event information.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="Params" type="StopEventParamStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Request parameter</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:complexType name="StopEventRequestStructure">
+  <xs:sequence>
+   <xs:group ref="StopEventRequestGroup"/>
+  </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="StopEventParamStructure">
+  <xs:annotation>
+   <xs:documentation>Request specific parameters (parameters which define what is to be included in a Stop  Event result)</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:group ref="StopEventDataFilterGroup"/>
+   <xs:group ref="StopEventPolicyGroup"/>
+   <xs:group ref="StopEventContentFilterGroup"/>
+  </xs:sequence>
+ </xs:complexType>
+ <xs:group name="StopEventDataFilterGroup">
+  <xs:annotation>
+   <xs:documentation>Request data filters</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="PtModeFilter" type="PtModeFilterStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Modes to be considered in stop events.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="LineFilter" type="LineDirectionFilterStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Lines/Directions to include/exclude.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Transport operators to include/exclude.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:group name="StopEventPolicyGroup">
+  <xs:annotation>
+   <xs:documentation>Request policies</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>parameter to control the number of TRIP results before/after a point in time. May NOT be used when departure time at origin AND arrival time at destination are set</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="TimeWindow" type="xs:duration" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Time window events should lie within. Starting from time  given in LocationContext.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="StopEventType" type="StopEventTypeEnumeration" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Only departures or arrivals or both.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:group name="StopEventContentFilterGroup">
+  <xs:annotation>
+   <xs:documentation>Content filters which data is expected in the response</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="IncludePreviousCalls" type="xs:boolean" default="false" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Whether the previous calls of each vehicle journey should be included in the response.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="IncludeOnwardCalls" type="xs:boolean" default="false" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Whether the onward calls of each vehicle journey should be included in the response.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="IncludeOperatingDays" type="xs:boolean" default="false" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Whether operating day information of this stop event should be included in the response.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="IncludeRealtimeData" type="xs:boolean" default="false" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Whether realtime information of this stop event should be included in the response.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:simpleType name="StopEventTypeEnumeration">
+  <xs:annotation>
+   <xs:documentation> Departure or arrival events or both</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="departure"/>
+   <xs:enumeration value="arrival"/>
+   <xs:enumeration value="both"/>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:annotation>
+  <xs:documentation>====================================================</xs:documentation>
+ </xs:annotation>
+ <xs:element name="StopEventResponse" type="StopEventResponseStructure">
+  <xs:annotation>
+   <xs:documentation>Response element for departure and arrival events at stops</xs:documentation>
+  </xs:annotation>
+ </xs:element>
+ <xs:group name="StopEventResponseGroup">
+  <xs:annotation>
+   <xs:documentation>Response structure for departure and arrival events at stops</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="StopEventResponseContext" type="StopEventResponseContextStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Container for data that is referenced multiple times.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="StopEventResult" type="StopEventResultStructure" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation>Enclosing element for stop event data.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:complexType name="StopEventResponseStructure">
+  <xs:sequence>
+   <xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation>Error messages that refer to the stop event response as a whole.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:group ref="StopEventResponseGroup"/>
+  </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="StopEventResultStructure">
+  <xs:annotation>
+   <xs:documentation>Wrapper element for a single stop event result.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="ResultId" type="xs:NMTOKEN">
+    <xs:annotation>
+     <xs:documentation>ID of this result.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation>Error messages that refer to this stop event.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="StopEvent" type="StopEventStructure">
+    <xs:annotation>
+     <xs:documentation>Stop event data element.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="StopEventStructure">
+  <xs:annotation>
+   <xs:documentation>Stop event structure.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="PreviousCall" type="CallAtNearStopStructure" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation>Calls at stops that happen before this stop event (service pattern of this vehicle journey before this stop event).</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="ThisCall" type="CallAtNearStopStructure">
+    <xs:annotation>
+     <xs:documentation>The call of this vehicle journey at this stop.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="OnwardCall" type="CallAtNearStopStructure" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation>Calls at stops that happen after this stop event (rest of the service pattern of the vehicle journey).</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="Service" type="DatedJourneyStructure">
+    <xs:annotation>
+     <xs:documentation>Service that calls at this stop.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:group ref="OperatingDaysGroup" minOccurs="0"/>
+   <xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+  </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="StopEventResponseContextStructure">
+  <xs:annotation>
+   <xs:documentation>Stop event response context. May hold objects that are referenced several times.</xs:documentation>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="AbstractResponseContextStructure"/>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:complexType name="CallAtNearStopStructure">
+  <xs:annotation>
+   <xs:documentation>indication of the walk distance and time to a nearby stop where relevant.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="CallAtStop" type="CallAtStopStructure">
+    <xs:annotation>
+     <xs:documentation>[same as CALL in SIRI] the meeting of a VEHICLE JOURNEY with a specific SCHEDULED STOP POINT .</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="WalkDistance" type="siri:DistanceType" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Distance from request location (f.e. address) to this stop in metres.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="WalkDuration" type="xs:duration" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Distance from request location (f.e. address) to this stop in seconds. All user options taken into account (f.e. walk speed).</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
 </xs:schema>

@@ -1,167 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Jutta Schmedding (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:include schemaLocation="OJP_Common.xsd"/>
-	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
-	<xs:annotation>
-		<xs:documentation>===================== Request structures ============================================================</xs:documentation>
-	</xs:annotation>
-	<xs:element name="TripInfoRequest" type="TripInfoRequestStructure">
-		<xs:annotation>
-			<xs:documentation>TripInfo request element.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:group name="TripInfoRequestGroup">
-		<xs:annotation>
-			<xs:documentation>TripInfo request structure.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:choice>
-				<xs:group ref="DatedJourneyRefGroup"/>
-				<xs:group ref="TimedVehicleRefGroup"/>
-			</xs:choice>
-			<xs:element name="Params" type="TripInfoParamStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Request parameter.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:complexType name="TripInfoRequestStructure">
-		<xs:sequence>
-			<xs:group ref="TripInfoRequestGroup"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="TripInfoParamStructure">
-		<xs:annotation>
-			<xs:documentation>TripInfo request parameter structure.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:group ref="TripInfoPolicyGroup"/>
-			<xs:group ref="TripInfoContentFilterGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:group name="TripInfoPolicyGroup">
-		<xs:annotation>
-			<xs:documentation>Parameters that control the response behaviour.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="UseTimetabledDataOnly" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Do not show any realtime or incident data. Default is false.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:group name="TripInfoContentFilterGroup">
-		<xs:annotation>
-			<xs:documentation>Parameters that control the level of detail to be returned in the results.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="IncludeCalls" type="xs:boolean" default="true" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether service pattern is to be included. Default is true.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludePosition" type="xs:boolean" default="true" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether current position is to be included. Default is true.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeService" type="xs:boolean" default="true" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether service information is to be included. Default is true.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeTrackSections" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the result should include TrackSection elements to describe the geographic route of this vehicle journey.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeTrackProjection" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the result should include the geographic projection (coordinates) of this vehicle journey.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:annotation>
-		<xs:documentation>===================== Response structures ============================================================</xs:documentation>
-	</xs:annotation>
-	<xs:element name="TripInfoResponse" type="TripInfoResponseStructure">
-		<xs:annotation>
-			<xs:documentation>TripInfo response element.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:group name="TripInfoResponseGroup">
-		<xs:annotation>
-			<xs:documentation>TripInfo response structure.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="TripInfoResponseContext" type="TripInfoResponseContextStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Response context.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TripInfoResult" type="TripInfoResultStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Result structure.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:complexType name="TripInfoResponseStructure">
-		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Error messages related to the response as a whole.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="TripInfoResponseGroup"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="TripInfoResponseContextStructure">
-		<xs:annotation>
-			<xs:documentation>Context for a TripInfo response.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="AbstractResponseContextStructure"/>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="TripInfoResultStructure">
-		<xs:annotation>
-			<xs:documentation>TripInfo result structure containing the current status of a trip.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="PreviousCall" type="CallAtStopStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>The stops this service already has called at. Including the current stop if service is currently at stop.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CurrentPosition" type="VehiclePositionStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Current position of this service.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OnwardCall" type="CallAtStopStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>The stops this service still has to call at.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Service" type="DatedJourneyStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Description of the service.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
-			<xs:group ref="ServiceFacilityGroup" minOccurs="0"/>
-			<xs:element name="JourneyTrack" type="LegTrackStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Geographic embedding of this journey. The entire journey is regarded as one leg.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
+ <xs:include schemaLocation="OJP_Common.xsd"/>
+ <xs:include schemaLocation="OJP_JourneySupport.xsd"/>
+ <xs:annotation>
+  <xs:documentation>===================== Request structures ============================================================</xs:documentation>
+ </xs:annotation>
+ <xs:element name="TripInfoRequest" type="TripInfoRequestStructure">
+  <xs:annotation>
+   <xs:documentation>TripInfo request element.</xs:documentation>
+  </xs:annotation>
+ </xs:element>
+ <xs:group name="TripInfoRequestGroup">
+  <xs:annotation>
+   <xs:documentation>TripInfo request structure.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:choice>
+    <xs:group ref="DatedJourneyRefGroup"/>
+    <xs:group ref="TimedVehicleRefGroup"/>
+   </xs:choice>
+   <xs:element name="Params" type="TripInfoParamStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Request parameter.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:complexType name="TripInfoRequestStructure">
+  <xs:sequence>
+   <xs:group ref="TripInfoRequestGroup"/>
+  </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="TripInfoParamStructure">
+  <xs:annotation>
+   <xs:documentation>TripInfo request parameter structure.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:group ref="TripInfoPolicyGroup"/>
+   <xs:group ref="TripInfoContentFilterGroup"/>
+   <xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+  </xs:sequence>
+ </xs:complexType>
+ <xs:group name="TripInfoPolicyGroup">
+  <xs:annotation>
+   <xs:documentation>Parameters that control the response behaviour.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="UseTimetabledDataOnly" type="xs:boolean" default="false" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Do not show any realtime or incident data. Default is false.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:group name="TripInfoContentFilterGroup">
+  <xs:annotation>
+   <xs:documentation>Parameters that control the level of detail to be returned in the results.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="IncludeCalls" type="xs:boolean" default="true" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Whether service pattern is to be included. Default is true.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="IncludePosition" type="xs:boolean" default="true" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Whether current position is to be included. Default is true.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="IncludeService" type="xs:boolean" default="true" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Whether service information is to be included. Default is true.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="IncludeTrackSections" type="xs:boolean" default="false" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Whether the result should include TrackSection elements to describe the geographic route of this vehicle journey.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="IncludeTrackProjection" type="xs:boolean" default="false" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Whether the result should include the geographic projection (coordinates) of this vehicle journey.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:annotation>
+  <xs:documentation>===================== Response structures ============================================================</xs:documentation>
+ </xs:annotation>
+ <xs:element name="TripInfoResponse" type="TripInfoResponseStructure">
+  <xs:annotation>
+   <xs:documentation>TripInfo response element.</xs:documentation>
+  </xs:annotation>
+ </xs:element>
+ <xs:group name="TripInfoResponseGroup">
+  <xs:annotation>
+   <xs:documentation>TripInfo response structure.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="TripInfoResponseContext" type="TripInfoResponseContextStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Response context.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="TripInfoResult" type="TripInfoResultStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Result structure.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:group>
+ <xs:complexType name="TripInfoResponseStructure">
+  <xs:sequence>
+   <xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation>Error messages related to the response as a whole.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:group ref="TripInfoResponseGroup"/>
+  </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="TripInfoResponseContextStructure">
+  <xs:annotation>
+   <xs:documentation>Context for a TripInfo response.</xs:documentation>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="AbstractResponseContextStructure"/>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:complexType name="TripInfoResultStructure">
+  <xs:annotation>
+   <xs:documentation>TripInfo result structure containing the current status of a trip.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="PreviousCall" type="CallAtStopStructure" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation>The stops this service already has called at. Including the current stop if service is currently at stop.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="CurrentPosition" type="VehiclePositionStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Current position of this service.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="OnwardCall" type="CallAtStopStructure" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation>The stops this service still has to call at.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="Service" type="DatedJourneyStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Description of the service.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:group ref="OperatingDaysGroup" minOccurs="0"/>
+   <xs:group ref="ServiceFacilityGroup" minOccurs="0"/>
+   <xs:element name="JourneyTrack" type="LegTrackStructure" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Geographic embedding of this journey. The entire journey is regarded as one leg.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+  </xs:sequence>
+ </xs:complexType>
 </xs:schema>

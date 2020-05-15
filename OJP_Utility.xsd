@@ -1,93 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Werner Kohl (Mentz Datenverarbeitung GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<!-- ===Dependencies ======================================= -->
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_types-v2.0.xsd"/>
-	<xs:annotation>
-		<xs:documentation>========================================= General ================================================</xs:documentation>
-	</xs:annotation>
-	<xs:simpleType name="PercentType">
-		<xs:annotation>
-			<xs:documentation>Percent value as integer, limited to max value 100.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:nonNegativeInteger">
-			<xs:maxInclusive value="100"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="OpenPercentType">
-		<xs:annotation>
-			<xs:documentation>Percent value as integer, no upper limit.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:nonNegativeInteger"/>
-	</xs:simpleType>
-	<xs:simpleType name="PriorityType">
-		<xs:annotation>
-			<xs:documentation>Data type for priority values, from 1 (highest) to 5 (lowest).</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:nonNegativeInteger">
-			<xs:minInclusive value="1"/>
-			<xs:maxInclusive value="5"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="ValidDayBitType">
-		<xs:annotation>
-			<xs:documentation>sequence of bits (values 0 or 1) coded as a text string and representing days</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:pattern value="[01]*"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="LengthType">
-		<xs:annotation>
-			<xs:documentation>Data type for lengths, in meters.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:nonNegativeInteger"/>
-	</xs:simpleType>
-	<xs:simpleType name="SpeedType">
-		<xs:annotation>
-			<xs:documentation>Data type for speed, in meter per second.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:nonNegativeInteger"/>
-	</xs:simpleType>
-	<xs:simpleType name="PhoneNumberType">
-		<xs:annotation>
-			<xs:documentation>Type definition for phone numbers</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:normalizedString"/>
-	</xs:simpleType>
-	<xs:complexType name="InternationalTextStructure">
-		<xs:annotation>
-			<xs:documentation>[a restricted view of ALTERNATIVE NAME in TMv6] alternative identified text to be used in specified languages.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Text" type="siri:NaturalLanguageStringStructure">
-				<xs:annotation>
-					<xs:documentation>Text content.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TextId" type="xs:NMTOKEN" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Id of this text. May be used for matching to pre-recorded audio files.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="WebLinkStructure">
-		<xs:annotation>
-			<xs:documentation>URL of a web resource with label.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Label" type="InternationalTextStructure">
-				<xs:annotation>
-					<xs:documentation>Label for link description.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Url" type="xs:anyURI">
-				<xs:annotation>
-					<xs:documentation>URL to resource on web.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
+ <!-- ===Dependencies ======================================= -->
+ <xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
+ <xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_types-v2.0.xsd"/>
+ <xs:annotation>
+  <xs:documentation>========================================= General ================================================</xs:documentation>
+ </xs:annotation>
+ <xs:simpleType name="PercentType">
+  <xs:annotation>
+   <xs:documentation>Percent value as integer, limited to max value 100.</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:nonNegativeInteger">
+   <xs:maxInclusive value="100"/>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="OpenPercentType">
+  <xs:annotation>
+   <xs:documentation>Percent value as integer, no upper limit.</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:nonNegativeInteger"/>
+ </xs:simpleType>
+ <xs:simpleType name="PriorityType">
+  <xs:annotation>
+   <xs:documentation>Data type for priority values, from 1 (highest) to 5 (lowest).</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:nonNegativeInteger">
+   <xs:minInclusive value="1"/>
+   <xs:maxInclusive value="5"/>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="ValidDayBitType">
+  <xs:annotation>
+   <xs:documentation>sequence of bits (values 0 or 1) coded as a text string and representing days</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:pattern value="[01]*"/>
+  </xs:restriction>
+ </xs:simpleType>
+ <xs:simpleType name="LengthType">
+  <xs:annotation>
+   <xs:documentation>Data type for lengths, in meters.</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:nonNegativeInteger"/>
+ </xs:simpleType>
+ <xs:simpleType name="SpeedType">
+  <xs:annotation>
+   <xs:documentation>Data type for speed, in meter per second.</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:nonNegativeInteger"/>
+ </xs:simpleType>
+ <xs:simpleType name="PhoneNumberType">
+  <xs:annotation>
+   <xs:documentation>Type definition for phone numbers</xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:normalizedString"/>
+ </xs:simpleType>
+ <xs:complexType name="InternationalTextStructure">
+  <xs:annotation>
+   <xs:documentation>[a restricted view of ALTERNATIVE NAME in TMv6] alternative identified text to be used in specified languages.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="Text" type="siri:NaturalLanguageStringStructure">
+    <xs:annotation>
+     <xs:documentation>Text content.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="TextId" type="xs:NMTOKEN" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation>Id of this text. May be used for matching to pre-recorded audio files.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="WebLinkStructure">
+  <xs:annotation>
+   <xs:documentation>URL of a web resource with label.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="Label" type="InternationalTextStructure">
+    <xs:annotation>
+     <xs:documentation>Label for link description.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="Url" type="xs:anyURI">
+    <xs:annotation>
+     <xs:documentation>URL to resource on web.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
 </xs:schema>
