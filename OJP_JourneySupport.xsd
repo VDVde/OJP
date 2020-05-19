@@ -28,12 +28,12 @@
 		<xs:sequence>
 			<xs:element name="ViaPoint" type="PlaceRefStructure">
 				<xs:annotation>
-					<xs:documentation>Reference to specify the via location.</xs:documentation>
+					<xs:documentation>Reference to specify the via place.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DwellTime" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Duration the passenger wants to stay at the via location. Default is 0.</xs:documentation>
+					<xs:documentation>Duration the passenger wants to stay at the via place. Default is 0.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -172,9 +172,9 @@
 			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="TripLocationStructure">
+	<xs:complexType name="TripPlaceStructure">
 		<xs:annotation>
-			<xs:documentation>Location of a passenger currently travelling in a VEHICLE</xs:documentation>
+			<xs:documentation>Place of a passenger currently travelling in a VEHICLE</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="OperatingDayRef"/>
@@ -403,30 +403,30 @@
 			<xs:choice>
 				<xs:element name="PlaceRef" type="PlaceRefStructure">
 					<xs:annotation>
-						<xs:documentation>Spatial location.</xs:documentation>
+						<xs:documentation>Static place.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="TripLocation" type="TripLocationStructure">
+				<xs:element name="TripPlace" type="TripPlaceStructure">
 					<xs:annotation>
-						<xs:documentation>Location within a (moving) vehicle.</xs:documentation>
+						<xs:documentation>Place within a (moving) vehicle.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
 			<xs:choice minOccurs="0">
 				<xs:element name="DepArrTime" type="xs:dateTime" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Time when departure/arrival from/to location is required.</xs:documentation>
+						<xs:documentation>Time when departure/arrival from/to place is required.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="TimeAllowance" type="xs:duration" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Extra time needed before reaching/after leaving this location.</xs:documentation>
+						<xs:documentation>Extra time needed before reaching/after leaving this place.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
 			<xs:element name="IndividualTransportOptions" type="IndividualTransportOptionsStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Options how to access/leave the location by individual transport.</xs:documentation>
+					<xs:documentation>Options how to access/leave the place by individual transport.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -438,11 +438,11 @@
 		<xs:sequence>
 			<xs:element name="Places" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Container for location objects.</xs:documentation>
+					<xs:documentation>Container for place objects.</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="Location" type="PlaceStructure" maxOccurs="unbounded"/>
+						<xs:element name="Place" type="PlaceStructure" maxOccurs="unbounded"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -608,12 +608,12 @@
 		<xs:sequence>
 			<xs:element name="TrackStart" type="PlaceRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Start location of this track.</xs:documentation>
+					<xs:documentation>Start place of this track.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TrackEnd" type="PlaceRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>End location of this track.</xs:documentation>
+					<xs:documentation>End place of this track.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LinkProjection" minOccurs="0">

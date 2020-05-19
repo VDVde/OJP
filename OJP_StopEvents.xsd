@@ -10,9 +10,9 @@
 			<xs:documentation>Request structure for departure and arrival events at stops</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Location" type="PlaceContextStructure">
+			<xs:element name="Place" type="PlaceContextStructure">
 				<xs:annotation>
-					<xs:documentation>Location for which to obtain stop event information.</xs:documentation>
+					<xs:documentation>Place for which to obtain stop event information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Params" type="StopEventParamStructure" minOccurs="0">
@@ -66,7 +66,7 @@
 			</xs:element>
 			<xs:element name="TimeWindow" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Time window events should lie within. Starting from time  given in LocationContext.</xs:documentation>
+					<xs:documentation>Time window events should lie within. Starting from time given in PlaceContext.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StopEventType" type="StopEventTypeEnumeration" minOccurs="0">
@@ -196,12 +196,12 @@
 			</xs:element>
 			<xs:element name="WalkDistance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Distance from request location (f.e. address) to this stop in metres.</xs:documentation>
+					<xs:documentation>Distance from request place (f.e. address) to this stop in metres.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WalkDuration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Distance from request location (f.e. address) to this stop in seconds. All user options taken into account (f.e. walk speed).</xs:documentation>
+					<xs:documentation>Walking duration from request place (f.e. address) to this stop. All user options taken into account (f.e. walk speed).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
