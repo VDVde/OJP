@@ -496,6 +496,16 @@
 					<xs:documentation>Whether the trip calculation should find a solution that starts immediately (f.e. because the user is already on the way) instead of finding the latest possible start opportunity.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ExcludePlacesContext" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the place context is needed. If a requestor has that information already, the response can be made slimmer. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExcludeSituationsContext" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="BaseTripMobilityFilterGroup">
