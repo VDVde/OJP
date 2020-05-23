@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
 	<siri:OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-01-13T10:01:08Z</siri:ResponseTimestamp>
@@ -4235,7 +4235,7 @@
 													<siri:Latitude>47.38130</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M0S</ojp:Duration>
 											<ojp:Length>0</ojp:Length>
 										</ojp:TrackSection>
@@ -4254,7 +4254,7 @@
 													<siri:Latitude>47.38119</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M1S</ojp:Duration>
 											<ojp:Length>14</ojp:Length>
 										</ojp:TrackSection>
@@ -4273,7 +4273,7 @@
 													<siri:Latitude>47.38120</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M0S</ojp:Duration>
 											<ojp:Length>3</ojp:Length>
 										</ojp:TrackSection>
@@ -4349,7 +4349,7 @@
 													<siri:Latitude>47.36976</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M0S</ojp:Duration>
 											<ojp:Length>7</ojp:Length>
 										</ojp:TrackSection>
@@ -4368,7 +4368,7 @@
 													<siri:Latitude>47.36985</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M1S</ojp:Duration>
 											<ojp:Length>11</ojp:Length>
 										</ojp:TrackSection>
@@ -4387,7 +4387,7 @@
 													<siri:Latitude>47.36984</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M7S</ojp:Duration>
 											<ojp:Length>81</ojp:Length>
 										</ojp:TrackSection>
@@ -4406,7 +4406,7 @@
 													<siri:Latitude>47.36999</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M11S</ojp:Duration>
 											<ojp:Length>137</ojp:Length>
 										</ojp:TrackSection>
@@ -4444,7 +4444,7 @@
 													<siri:Latitude>47.37000</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M0S</ojp:Duration>
 											<ojp:Length>6</ojp:Length>
 										</ojp:TrackSection>
@@ -4520,7 +4520,7 @@
 													<siri:Latitude>47.36555</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M0S</ojp:Duration>
 											<ojp:Length>4</ojp:Length>
 										</ojp:TrackSection>
@@ -4615,7 +4615,7 @@
 													<siri:Latitude>47.35457</siri:Latitude>
 												</ojp:Position>
 											</ojp:LinkProjection>
-											<ojp:RoadName></ojp:RoadName>
+											<ojp:RoadName/>
 											<ojp:Duration>PT0M2S</ojp:Duration>
 											<ojp:Length>26</ojp:Length>
 										</ojp:TrackSection>
@@ -4631,5 +4631,3 @@
 		</siri:ServiceDelivery>
 	</siri:OJPResponse>
 </siri:OJP>
-
-    

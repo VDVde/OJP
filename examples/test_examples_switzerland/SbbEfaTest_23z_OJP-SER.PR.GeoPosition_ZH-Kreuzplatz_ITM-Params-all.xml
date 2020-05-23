@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
 	<OJPRequest>
 		<ServiceRequest>
 			<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
@@ -17,7 +17,7 @@
 							<ojp:Text>Zürich Kreuzplatz</ojp:Text>
 						</ojp:LocationName>
 					</ojp:PlaceRef>
-<!--					<ojp:DepArrTime>2020-01-20T12:00:00Z</ojp:DepArrTime>-->
+					<!--					<ojp:DepArrTime>2020-01-20T12:00:00Z</ojp:DepArrTime>-->
 					<ojp:TimeAllowance>PT20M</ojp:TimeAllowance>
 					<ojp:IndividualTransportOptions>
 						<ojp:Mode>walk</ojp:Mode>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
 	<OJPRequest>
 		<ServiceRequest>
 			<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
@@ -79,14 +79,14 @@
 					<ojp:LevelEntrance>true</ojp:LevelEntrance>
 					<ojp:BikeTransport>true</ojp:BikeTransport>
 					<ojp:WalkSpeed>1000</ojp:WalkSpeed>
-<!--					<ojp:NumberOfResults>20</ojp:NumberOfResults>-->
+					<!--					<ojp:NumberOfResults>20</ojp:NumberOfResults>-->
 					<ojp:NumberOfResultsBefore>10</ojp:NumberOfResultsBefore>
 					<ojp:NumberOfResultsAfter>10</ojp:NumberOfResultsAfter>
 					<ojp:IgnoreRealtimeData>true</ojp:IgnoreRealtimeData>
 					<ojp:ImmediateTripStart>true</ojp:ImmediateTripStart>
 					<ojp:TransferLimit>1</ojp:TransferLimit>
 					<ojp:OptimisationMethod>earliestArrival</ojp:OptimisationMethod>
-<!--					<ojp:OptimisationMethod>earliestArrival</ojp:OptimisationMethod>
+					<!--					<ojp:OptimisationMethod>earliestArrival</ojp:OptimisationMethod>
 					<ojp:OptimisationMethod>earliestArrivalAndLatestDeparture</ojp:OptimisationMethod>
 					<ojp:OptimisationMethod>fastest</ojp:OptimisationMethod>
 					<ojp:OptimisationMethod>latestDeparture</ojp:OptimisationMethod>

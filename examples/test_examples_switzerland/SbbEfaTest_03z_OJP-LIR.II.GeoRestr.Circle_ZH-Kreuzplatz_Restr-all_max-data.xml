@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
 	<OJPRequest>
 		<ServiceRequest>
 			<RequestTimestamp>2020-01-05T15:00:00Z</RequestTimestamp>
@@ -25,8 +25,8 @@
 					<ojp:Type>coord</ojp:Type>
 					<ojp:Type>topographicPlace</ojp:Type>
 					<ojp:Usage>origin</ojp:Usage>
-<!--					<ojp:Usage>via</ojp:Usage>-->
-<!--					<ojp:Usage>destination</ojp:Usage>-->
+					<!--					<ojp:Usage>via</ojp:Usage>-->
+					<!--					<ojp:Usage>destination</ojp:Usage>-->
 					<ojp:PtModes>
 						<ojp:Exclude>false</ojp:Exclude>
 						<ojp:PtMode>bus</ojp:PtMode>
@@ -41,7 +41,7 @@
 						<ojp:OperatorRef>sbb:3849:VerkehrsbetriebeZrichINFO</ojp:OperatorRef>
 					</ojp:OperatorFilter>
 					<ojp:TopographicPlaceRef>23011784:3</ojp:TopographicPlaceRef>
-					<ojp:PointOfInterestFilter></ojp:PointOfInterestFilter>
+					<ojp:PointOfInterestFilter/>
 					<ojp:Language>it</ojp:Language>
 					<ojp:NumberOfResults>100</ojp:NumberOfResults>
 					<ojp:ContinueAt>10</ojp:ContinueAt>

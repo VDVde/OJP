@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
 	<siri:OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-01-28T10:25:29Z</siri:ResponseTimestamp>
@@ -17523,7 +17523,7 @@
 							</ojp:CallAtStop>
 						</ojp:OnwardCall>
 						<ojp:Service>
-							<ojp:OperatingDayRef></ojp:OperatingDayRef>
+							<ojp:OperatingDayRef/>
 							<ojp:JourneyRef>qv1:91018:A:H:j20:206</ojp:JourneyRef>
 							<siri:LineRef>qv1:91018:A:H</siri:LineRef>
 							<siri:DirectionRef>outward</siri:DirectionRef>
@@ -19009,7 +19009,7 @@
 							</ojp:CallAtStop>
 						</ojp:OnwardCall>
 						<ojp:Service>
-							<ojp:OperatingDayRef></ojp:OperatingDayRef>
+							<ojp:OperatingDayRef/>
 							<ojp:JourneyRef>qv1:91012:B:H:j20:19248</ojp:JourneyRef>
 							<siri:LineRef>qv1:91012:B:H</siri:LineRef>
 							<siri:DirectionRef>outward</siri:DirectionRef>
@@ -20894,7 +20894,7 @@
 							</ojp:CallAtStop>
 						</ojp:OnwardCall>
 						<ojp:Service>
-							<ojp:OperatingDayRef></ojp:OperatingDayRef>
+							<ojp:OperatingDayRef/>
 							<ojp:JourneyRef>qv1:91011::R:j20:4446</ojp:JourneyRef>
 							<siri:LineRef>qv1:91011::R</siri:LineRef>
 							<siri:DirectionRef>inward</siri:DirectionRef>
