@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+	<OJPRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-02-15T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPTripRequest>
+				<RequestTimestamp>2020-02-15T12:00:00Z</RequestTimestamp>
+				<ojp:Origin>
+					<ojp:PlaceRef>
+						<ojp:GeoPosition>
+							<Longitude>8.9527780</Longitude>
+							<Latitude>46.0045106</Latitude>
+						</ojp:GeoPosition>
+						<ojp:LocationName>
+							<ojp:Text>Lugano Via della Posta 5</ojp:Text>
+						</ojp:LocationName>
+					</ojp:PlaceRef>
+					<ojp:DepArrTime>2020-02-15T12:00:00Z</ojp:DepArrTime>
+				</ojp:Origin>
+				<ojp:Destination>
+					<ojp:PlaceRef>
+						<ojp:GeoPosition>
+							<Longitude>8.5003684</Longitude>
+							<Latitude>47.3830484</Latitude>
+						</ojp:GeoPosition>
+						<ojp:LocationName>
+							<ojp:Text>Zuerich Badenerstraße 530</ojp:Text>
+						</ojp:LocationName>
+					</ojp:PlaceRef>
+				</ojp:Destination>
+				<ojp:Params>
+					<ojp:NumberOfResults>4</ojp:NumberOfResults>
+					<ojp:IgnoreRealtimeData>false</ojp:IgnoreRealtimeData>
+					<ojp:OptimisationMethod>fastest</ojp:OptimisationMethod>
+					<ojp:IncludeTrackSections>true</ojp:IncludeTrackSections>
+					<ojp:IncludeLegProjection>true</ojp:IncludeLegProjection>
+					<ojp:IncludeTurnDescription>true</ojp:IncludeTurnDescription>
+					<ojp:IncludeIntermediateStops>true</ojp:IncludeIntermediateStops>
+					<ojp:IncludeFare>true</ojp:IncludeFare>
+				</ojp:Params>
+			</ojp:OJPTripRequest>
+		</ServiceRequest>
+	</OJPRequest>
+</OJP>
