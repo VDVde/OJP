@@ -20,7 +20,8 @@
 				<Date>
 					<Modified>2007-04-17</Modified>
 				</Date>
-				<Date><Modified>2012-03-23</Modified>
+				<Date>
+					<Modified>2012-03-23</Modified>
 					 +SIRI v2.0
 					  ADrop unused IP address type 
 				</Date>
@@ -109,7 +110,7 @@ A string containing a phrase in a natural language name that requires at least o
 		<xsd:annotation>
 			<xsd:documentation>Id type for document references.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="xsd:normalizedString"/>
 	</xsd:simpleType>
 	<xsd:simpleType name="DurationType">
 		<xsd:annotation>
