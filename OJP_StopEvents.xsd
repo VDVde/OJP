@@ -110,7 +110,7 @@
 				<xs:annotation>
 					<xs:documentation>Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
 				</xs:annotation>
-			</xs:element>				
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:simpleType name="StopEventTypeEnumeration">
