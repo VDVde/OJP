@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2020 (x64) (http://www.altova.com) by  (Schweizerische Bundesbahnen SBB) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.siri.org.uk/siri" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
@@ -496,16 +497,6 @@
 					<xs:documentation>Whether the trip calculation should find a solution that starts immediately (f.e. because the user is already on the way) instead of finding the latest possible start opportunity.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExcludePlacesContext" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the place context is needed. If a requestor has that information already, the response can be made slimmer. </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ExcludeSituationsContext" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="BaseTripMobilityFilterGroup">
@@ -568,6 +559,16 @@
 			<xs:element name="IncludeAccessibility" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the result should include accessibility information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the place context is needed. If a requestor has that information already, the response can be made slimmer, when set to false. Default is true. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeSituationsContext" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
