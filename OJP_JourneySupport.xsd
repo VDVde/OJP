@@ -58,14 +58,14 @@
 					<xs:documentation>[a specialisation of MODE in TMv6] an extended range of VEHICLE MODEs, aggregating them with some SUBMODEs</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PublishedLineName" type="InternationalTextStructure">
+			<xs:element name="PublishedServiceName" type="InternationalTextStructure">
 				<xs:annotation>
-					<xs:documentation>Line name or service description as known to the public, f.e. "512", "S8" or "Circle Line".</xs:documentation>
+					<xs:documentation>Line name or service description as known to the public, f.e. "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PublishedServiceNumber" type="InternationalTextStructure" minOccurs="0">
+			<xs:element name="TrainNumber" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Contains the TrainNumber description from NeTEx. As not only trains have these, a generalised name ServiceNumber was used. Also it is only the commercial "number".</xs:documentation>
+					<xs:documentation>Contains the TrainNumber description from NeTEx. If several TrainNumber types exist, use the commercial number.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="OperatorRef" minOccurs="0"/>
