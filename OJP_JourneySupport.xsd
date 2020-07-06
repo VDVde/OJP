@@ -21,9 +21,9 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:group name="ProductCategoryGroup">
+	<xs:complexType name="ProductCategoryStructure">
 		<xs:annotation>
-			<xs:documentation>A simple form of ProductCategory from NeTExt</xs:documentation>
+			<xs:documentation>ProdcutCategory based on NeTEx</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="InternationalTextStructure" minOccurs="0">
@@ -36,8 +36,13 @@
 					<xs:documentation>Short name or acronym of ProductCategory.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element ref="ProductCategoryRef" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A reference to the ProductCategory.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 		</xs:sequence>
-	</xs:group>
+	</xs:complexType>
 	<xs:complexType name="TripViaStructure">
 		<xs:annotation>
 			<xs:documentation>VIA restrictions for a TRIP.</xs:documentation>
@@ -75,7 +80,7 @@
 					<xs:documentation>[a specialisation of MODE in TMv6] an extended range of VEHICLE MODEs, aggregating them with some SUBMODEs</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="ProductCategoryGroup"/>
+			<xs:element name="ProductCategory" type="ProductCategoryStructure"/>
 			<xs:element name="PublishedLineName" type="InternationalTextStructure">
 				<xs:annotation>
 					<xs:documentation>Line name or service description as known to the public, f.e. "512", "S8" or "Circle Line".</xs:documentation>
