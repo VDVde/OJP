@@ -79,7 +79,6 @@
 					<xs:documentation>Note or service attribute.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="ServiceOriginGroup">
@@ -132,6 +131,7 @@
 			<xs:element ref="OperatingDayRef"/>
 			<xs:element ref="siri:VehicleRef" minOccurs="0"/>
 			<xs:group ref="ScheduledJourneyGroup"/>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="PrivateServiceGroup">
