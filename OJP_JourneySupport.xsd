@@ -296,7 +296,7 @@
 				<xs:annotation>
 					<xs:documentation>The vehicle will not call at this stop despite earlier planning.</xs:documentation>
 				</xs:annotation>
-			</xs:element>				
+			</xs:element>
 			<xs:element name="NoBoardingAtStop" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Boarding will not be allowed at this stop of this journey.</xs:documentation>
@@ -306,7 +306,7 @@
 				<xs:annotation>
 					<xs:documentation>Alighting will not be allowed at this stop of this journey.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="ServiceStatusGroup">
