@@ -174,7 +174,7 @@
 	</xs:complexType>
 	<xs:complexType name="TripPlaceStructure">
 		<xs:annotation>
-			<xs:documentation>Place of a passenger currently travelling in a VEHICLE</xs:documentation>
+			<xs:documentation>A trip place represents the logical position of a passenger who is currently travelling in a journey service. It can be used similarly to a place (e.g. for trip requests), but it refers always to the current position of the referenced journey service. A trip place does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="OperatingDayRef"/>
