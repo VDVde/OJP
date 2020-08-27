@@ -41,7 +41,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="StopPointGroup"/>
-			<xs:element name="PrivateCode" type="PrivateCodeStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DomainCode" type="DomainCodeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Code of this stop point in private/foreign/proprietary coding schemes.</xs:documentation>
 				</xs:annotation>
@@ -101,7 +101,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="StopPlaceGroup"/>
-			<xs:element name="PrivateCode" type="PrivateCodeStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DomainCode" type="DomainCodeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Code of this stop place in private/foreign/proprietary coding schemes.</xs:documentation>
 				</xs:annotation>
@@ -172,7 +172,7 @@
 					<xs:documentation>Name or description of TopographicPlace for use in passenger information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateCode" type="PrivateCodeStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DomainCode" type="DomainCodeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Code of this TopographicPlace in private/foreign/proprietary coding schemes.</xs:documentation>
 				</xs:annotation>
@@ -246,7 +246,7 @@
 					<xs:documentation>Categories this POI is associated with. Order indicates descending relevance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateCode" type="PrivateCodeStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DomainCode" type="DomainCodeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Code of this point of interest in private/foreign/proprietary coding schemes.</xs:documentation>
 				</xs:annotation>
@@ -372,7 +372,7 @@
 					<xs:documentation>ID of this address.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateCode" type="PrivateCodeStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DomainCode" type="DomainCodeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Code of this address in private/foreign/proprietary coding schemes.</xs:documentation>
 				</xs:annotation>

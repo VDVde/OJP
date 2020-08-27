@@ -26,9 +26,9 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="PrivateCodeStructure">
+	<xs:complexType name="DomainCodeStructure">
 		<xs:annotation>
-			<xs:documentation>Code within scope of a private referential system</xs:documentation>
+			<xs:documentation>Code within scope of a referential system</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="System" type="xs:NMTOKEN">
@@ -38,7 +38,7 @@
 			</xs:element>
 			<xs:element name="Value" type="xs:NMTOKEN">
 				<xs:annotation>
-					<xs:documentation>Object code within this private/foreign system.</xs:documentation>
+					<xs:documentation>Object code within this referential system.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
