@@ -36,27 +36,27 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ==== LocationInformation Service=============================================== -->
-	<xs:element name="OJPLocationInformationRequest" type="OJPLocationInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
-	<xs:complexType name="OJPLocationInformationRequestStructure">
+	<!-- ==== PlaceInformation Service=============================================== -->
+	<xs:element name="OJPPlaceInformationRequest" type="OJPPlaceInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:complexType name="OJPPlaceInformationRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
 				<xs:sequence>
-					<xs:group ref="LocationInformationRequestGroup"/>
+					<xs:group ref="PlaceInformationRequestGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ======================================================================= -->
-	<xs:element name="OJPLocationInformationDelivery" type="OJPLocationInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
-	<xs:complexType name="OJPLocationInformationDeliveryStructure">
+	<xs:element name="OJPPlaceInformationDelivery" type="OJPPlaceInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPPlaceInformationDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
 				<xs:sequence>
-					<xs:element ref="OJPLocationInformationRequest" minOccurs="0"/>
+					<xs:element ref="OJPPlaceInformationRequest" minOccurs="0"/>
 					<xs:group ref="ServiceResponseContextGroup"/>
-					<xs:group ref="LocationInformationResponseGroup"/>
+					<xs:group ref="PlaceInformationResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>

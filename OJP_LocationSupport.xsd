@@ -184,7 +184,7 @@
 			</xs:element>
 			<xs:element name="ReferredSystemId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Used in distributed environments (e.g. EU-Spirit). If set, this topographic place resides within the given system (in EU-Spirit "passive server"). This system can be queried for actual locations within this topographic place. This is used in an distributed environment for a two-steps place identification. In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Used in distributed environments (e.g. EU-Spirit). If set, this topographic place resides within the given system (in EU-Spirit "passive server"). This system can be queried for actual places within this topographic place. This is used in an distributed environment for a two-steps place identification. In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Area" minOccurs="0">
@@ -289,6 +289,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PointOfInterestFilterStructure">
+		<xs:annotation>
+			<xs:documentation>Filter POIs by category.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
@@ -297,7 +300,7 @@
 			</xs:element>
 			<xs:element name="PointOfInterestCategory" type="PointOfInterestCategoryStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>These can be used to filter POI types of locations even more by additional category filters. If more than one is given the filtering is by logical "OR" (when Exclude=FALSE) and logical "AND" (when Exclude=TRUE).</xs:documentation>
+					<xs:documentation>These POI categories can be used to filter POIs. If more than one is given the filtering is by logical "OR" (when Exclude=FALSE) and logical "AND" (when Exclude=TRUE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -391,11 +394,11 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= Locations ==============================================</xs:documentation>
+		<xs:documentation>========================================= Places ==============================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="PlaceStructure">
 		<xs:annotation>
-			<xs:documentation> geographic PLACE of any type which may be specified as the origin or destination of a trip</xs:documentation>
+			<xs:documentation>geographic PLACE of any type which may be specified as the origin or destination of a trip</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice minOccurs="0">
@@ -411,7 +414,7 @@
 				</xs:element>
 				<xs:element name="TopographicPlace" type="TopographicPlaceStructure">
 					<xs:annotation>
-						<xs:documentation>TopographicPlace, village or city.</xs:documentation>
+						<xs:documentation>TopographicPlace. Region, village, or city.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="PointOfInterest" type="PointOfInterestStructure">
@@ -425,15 +428,15 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
-			<xs:element name="LocationName" type="InternationalTextStructure">
+			<xs:element name="Name" type="InternationalTextStructure">
 				<xs:annotation>
-					<xs:documentation>Public name of the location.</xs:documentation>
+					<xs:documentation>Public name of the place.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeoPosition" type="siri:LocationStructure"/>
 			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Attribute associated with this location.</xs:documentation>
+					<xs:documentation>Attribute associated with this place.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
@@ -456,9 +459,9 @@
 				<xs:element ref="PointOfInterestRef"/>
 				<xs:element ref="AddressRef"/>
 			</xs:choice>
-			<xs:element name="LocationName" type="InternationalTextStructure">
+			<xs:element name="Name" type="InternationalTextStructure">
 				<xs:annotation>
-					<xs:documentation>Public name of the location.</xs:documentation>
+					<xs:documentation>Public name of the place.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
