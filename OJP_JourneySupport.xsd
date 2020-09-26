@@ -42,7 +42,11 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+<<<<<<< Updated upstream
 	</xs:complexType>
+=======
+	</xs:complexType>	
+>>>>>>> Stashed changes
 	<xs:complexType name="TripViaStructure">
 		<xs:annotation>
 			<xs:documentation>VIA restrictions for a TRIP.</xs:documentation>
@@ -80,8 +84,13 @@
 					<xs:documentation>[a specialisation of MODE in TMv6] an extended range of VEHICLE MODEs, aggregating them with some SUBMODEs</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+<<<<<<< Updated upstream
 			<xs:element name="ProductCategory" type="ProductCategoryStructure"/>
 			<xs:element name="PublishedLineName" type="InternationalTextStructure">
+=======
+			<xs:element name="ProductCategory" type="ProductCategoryStructure"/>			
+			<xs:element name="PublishedServiceName" type="InternationalTextStructure">
+>>>>>>> Stashed changes
 				<xs:annotation>
 					<xs:documentation>Line name or service description as known to the public, f.e. "512", "S8" or "Circle Line".</xs:documentation>
 				</xs:annotation>

@@ -81,7 +81,11 @@
 	</xs:annotation>
 	<xs:complexType name="ProductCategoryRefStructure">
 		<xs:annotation>
+<<<<<<< Updated upstream
 			<xs:documentation>Reference to a PRODUCT CATEGORY.</xs:documentation>
+=======
+			<xs:documentation>Reference to a product category.</xs:documentation>
+>>>>>>> Stashed changes
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="ProductCategoryCodeType"/>
@@ -89,15 +93,25 @@
 	</xs:complexType>
 	<xs:simpleType name="ProductCategoryCodeType">
 		<xs:annotation>
+<<<<<<< Updated upstream
 			<xs:documentation>Type for identifier of an PRODUCT CATEGORY Code.</xs:documentation>
+=======
+			<xs:documentation>Type for identifier of an product category Code.</xs:documentation>
+>>>>>>> Stashed changes
 		</xs:annotation>
 		<xs:restriction base="xs:NMTOKEN"/>
 	</xs:simpleType>
 	<xs:element name="ProductCategoryRef" type="siri:ProductCategoryRefStructure">
 		<xs:annotation>
+<<<<<<< Updated upstream
 			<xs:documentation>Reference to a ProductCategory.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+=======
+			<xs:documentation>Reference to a product category.</xs:documentation>
+		</xs:annotation>
+	</xs:element>	
+>>>>>>> Stashed changes
 	<xs:annotation>
 		<xs:documentation>========================================= Lines ======================================</xs:documentation>
 	</xs:annotation>
