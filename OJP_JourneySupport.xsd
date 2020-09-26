@@ -131,7 +131,6 @@
 			<xs:element ref="OperatingDayRef"/>
 			<xs:element ref="siri:VehicleRef" minOccurs="0"/>
 			<xs:group ref="ScheduledJourneyGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="PrivateServiceGroup">
@@ -171,6 +170,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TripLocationStructure">
