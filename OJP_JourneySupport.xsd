@@ -356,6 +356,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="VehicleProgressEnumeration">
