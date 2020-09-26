@@ -23,22 +23,22 @@
 	</xs:complexType>
 	<xs:complexType name="ProductCategoryStructure">
 		<xs:annotation>
-			<xs:documentation>ProdcutCategory based on NeTEx</xs:documentation>
+			<xs:documentation>Product category based on NeTEx</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Name of the ProductCategory.</xs:documentation>
+					<xs:documentation>Name of the product category.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ShortName" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Short name or acronym of ProductCategory.</xs:documentation>
+					<xs:documentation>Short name or acronym of product category.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="ProductCategoryRef" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>A reference to the ProductCategory.</xs:documentation>
+					<xs:documentation>A reference to the product category.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
