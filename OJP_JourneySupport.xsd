@@ -42,7 +42,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:complexType name="TripViaStructure">
 		<xs:annotation>
 			<xs:documentation>VIA restrictions for a TRIP.</xs:documentation>
