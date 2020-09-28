@@ -4,7 +4,7 @@
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
 	<!-- ===========================================================================================================-->
 	<xs:include schemaLocation="OJP_Common.xsd"/>
-	<xs:include schemaLocation="OJP_LocationSupport.xsd"/>
+	<xs:include schemaLocation="OJP_PlaceSupport.xsd"/>
 	<xs:annotation>
 		<xs:documentation>FUNCTION 1: Place Identification</xs:documentation>
 	</xs:annotation>

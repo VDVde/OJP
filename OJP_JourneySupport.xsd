@@ -4,7 +4,7 @@
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
 	<!-- ===========================================================================================================-->
 	<xs:include schemaLocation="OJP_Common.xsd"/>
-	<xs:include schemaLocation="OJP_LocationSupport.xsd"/>
+	<xs:include schemaLocation="OJP_PlaceSupport.xsd"/>
 	<xs:include schemaLocation="OJP_FareSupport.xsd"/>
 	<xs:include schemaLocation="OJP_SituationSupport.xsd"/>
 	<!-- ===========================================================================================================-->
