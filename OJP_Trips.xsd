@@ -847,7 +847,7 @@
 					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" minOccurs="0">
+			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" default="anyPoint" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found.</xs:documentation>
 				</xs:annotation>
