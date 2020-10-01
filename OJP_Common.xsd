@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ===Dependencies ======================================= -->
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_reference-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_operator_support-v2.0.xsd"/>
+	<!-- ===========================================================================================================-->
+	<xs:include schemaLocation="OJP_ModesSupport.xsd"/>
+	<xs:include schemaLocation="OJP_FacilitySupport.xsd"/>
+	<xs:annotation>
+		<xs:documentation>========================================= General ================================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="ErrorMessageStructure">
+		<xs:annotation>
+			<xs:documentation>Structured error messages</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Code" type="xs:normalizedString">
+				<xs:annotation>
+					<xs:documentation>Code of the error situation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Text" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Description of the error situation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PrivateCodeStructure">
+		<xs:annotation>
+			<xs:documentation>Code within scope of a private referential system</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="System" type="xs:NMTOKEN">
+				<xs:annotation>
+					<xs:documentation>Code of the foreign referential system.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="xs:NMTOKEN">
+				<xs:annotation>
+					<xs:documentation>Object code within this private/foreign system.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================= Participants =============================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="ParticipantRef" type="siri:ParticipantRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a Participant ([equivalent of PARTICIPANT in SIRI] IT system that is participating in a communication with other participant(s))</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:annotation>
+		<xs:documentation>========================================= Operators =============================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to an Operator ([TMv6] company  providing public transport services.) </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="OperatorFilterStructure">
+		<xs:annotation>
+			<xs:documentation>Filter for in/exclusion of transport operators.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether operators in list are to include or exclude from search. Default is exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OperatorRef" type="siri:OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to transport operator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================= ProductCategories =============================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="ProductCategoryRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a product category.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="ProductCategoryCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ProductCategoryCodeType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of an product category Code.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:element name="ProductCategoryRef" type="siri:ProductCategoryRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a product category.</xs:documentation>
+		</xs:annotation>	
+	<xs:annotation>
+		<xs:documentation>========================================= Lines ======================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="LineDirectionFilterStructure">
+		<xs:annotation>
+			<xs:documentation>Filter for in/exclusion of lines (and directions).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Line" type="siri:LineDirectionStructure" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference a GROUP of DIRECTIONs  of the ROUTEs belonging to the same LINE created  for the purpose of filtering and organising timetables..</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether lines in list are to include or exclude from search. Default is exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================= Journeys ============================== -->
+	<xs:simpleType name="JourneyCodeType">
+		<xs:annotation>
+			<xs:documentation>Identifier of a Journey</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:complexType name="JourneyRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a Journey</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="JourneyCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="JourneyRef" type="JourneyRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a Journey</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:group name="DatedJourneyRefGroup">
+		<xs:annotation>
+			<xs:documentation>Reference to a DATED VEHICLE JOURNEY (Reference to a journey on a specific operating day)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="JourneyRef"/>
+			<xs:element ref="OperatingDayRef"/>
+		</xs:sequence>
+	</xs:group>
+	<!-- ========================================== Vehicles ============================= -->
+	<xs:group name="TimedVehicleRefGroup">
+		<xs:annotation>
+			<xs:documentation>Reference to a vehicle for a specific point in time.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="siri:VehicleRef"/>
+			<xs:element name="TimeOfOperation" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Time stamp when the vehicle is operating. In most use cases equal to "now".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<!-- ========================================== Sharing Services ========================== -->
+	<xs:simpleType name="SharingModelEnumeration">
+		<xs:annotation>
+			<xs:documentation>Sharing service loan and return scheme.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="singleStationBased"/>
+			<xs:enumeration value="multipleStationBased"/>
+			<xs:enumeration value="nonStationBased"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:group name="SharingServiceUsageGroup">
+		<xs:annotation>
+			<xs:documentation>Usage parameters of a sharing service.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TimeBufferBefore" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Typical time a user will need  to check in and unlock the vehicle.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TimeBufferAfter" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Typical time a user will need  to lock the vehicle and check out.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="SharingServiceStructure">
+		<xs:annotation>
+			<xs:documentation>Service that provides shared vehicles.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
+				<xs:annotation>
+					<xs:documentation>Identifier of the operator of the sharing service </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Public name of the service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SharingModel" type="SharingModelEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Type of the sharing scheme.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="SharingServiceUsageGroup" minOccurs="0"/>
+			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Link to web page providing more details on service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========================================== Owners ============================= -->
+	<xs:simpleType name="OwnerCodeType">
+		<xs:annotation>
+			<xs:documentation>identifier of ORGANISATION with ownership as the RESPONSIBILITY ROLE</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:complexType name="OwnerRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to an ORGANISATION with ownership as the RESPONSIBILITY ROLE</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="OwnerCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="OwnerRef" type="OwnerRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to an  ORGANISATION with ownership as the RESPONSIBILITY ROLE</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- ========================================= Operating Days ============================== -->
+	<xs:simpleType name="OperatingDayCodeType">
+		<xs:annotation>
+			<xs:documentation>Identifier of an Operating Day</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:complexType name="OperatingDayRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to an Operating Day</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="OperatingDayCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="OperatingDayRef" type="OperatingDayRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to an Operating Day</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="OperatingDaysStructure">
+		<xs:annotation>
+			<xs:documentation> [TMv6] day of public transport operation of which the characteristics are defined in a specific SERVICE CALENDAR and which may last more than 24 hours.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="From" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Start date of period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="To" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>End date of period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Pattern" type="ValidDayBitType">
+				<xs:annotation>
+					<xs:documentation>Bit pattern for operating days between start date and end date. The length of the pattern is equal to the number of days from start date to end date. A bit value of "1" indicates that an event actually happens on the day that is represented by the bit position.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="OperatingDaysGroup">
+		<xs:annotation>
+			<xs:documentation>Coded as bit pattern</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OperatingDays" type="OperatingDaysStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Bit string definition of operating days.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OperatingDaysDescription" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Textual description of the operation days, e.g. "monday to friday" or "not on holidays".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="WeekdayTimePeriodStructure">
+		<xs:annotation>
+			<xs:documentation>[a specialisation of TIME BAND in TMv6] aggregation of TIME BAND and DAY OF WEEK (Time period on a weekday).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Weekday" type="WeekdayTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>[a specialisation of DAY OF WEEK in TMv6] enumeration of individual the seven DAYs OF WEEK, along with public holidays</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartTime" type="xs:time">
+				<xs:annotation>
+					<xs:documentation>Start time of period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Duration" type="xs:duration">
+				<xs:annotation>
+					<xs:documentation>Time duration of period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="WeekdayTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>[a specialisation of DAY OF WEEK in TMv6] enumeration of individual the seven DAYs OF WEEK, along with public holidays </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Sunday"/>
+			<xs:enumeration value="Monday"/>
+			<xs:enumeration value="Tuesday"/>
+			<xs:enumeration value="Wednesday"/>
+			<xs:enumeration value="Thursday"/>
+			<xs:enumeration value="Friday"/>
+			<xs:enumeration value="Saturday"/>
+			<xs:enumeration value="PublicHoliday"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:annotation>
+		<xs:documentation>==================================== General Attributes =============================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="GeneralAttributeStructure">
+		<xs:annotation>
+			<xs:documentation>Structured attribute classification with associated text.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Text" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Text of the attribute to be shown to the user.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Code" type="xs:NMTOKEN">
+				<xs:annotation>
+					<xs:documentation>Internal code of the attribute. Can be used for detection of double occurrences.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="AllFacilitiesGroup"/>
+			<xs:element name="Mandatory" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Defines whether the attribute has to be shown to the user.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Importance" type="PercentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Importance of the attribute.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InfoUrl" type="xs:anyURI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>URL to additional information on this general attribute. If available, the whole attribute text has to be used as the marked link.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
+
