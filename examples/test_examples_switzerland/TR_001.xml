@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri file:///C:/Users/ue71603/MG_Daten/OJP/github/OJP1/ojp.xsd">
+<<<<<<< HEAD
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" version="1.0" xmlns:ojp="http://www.vdv.de/ojp" xsi:schemaLocation="http://www.siri.org.uk/siri">
+=======
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.0" xsi:schemaLocation="http://www.siri.org.uk/siri file:///C:/Users/ue71603/MG_Daten/OJP/github/OJP1/ojp.xsd">
+>>>>>>> 656c12abf1b6f3e48c40b17043b360da9f2e64ed
 	<OJPRequest>
 		<ServiceRequest>
 			<RequestTimestamp>2020-09-01T19:33:23Z</RequestTimestamp>
 			<RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7_test</RequestorRef>
 			<ojp:OJPTripRequest>
-       			<RequestTimestamp>2020-09-01T19:33:23Z</RequestTimestamp> 
+				<RequestTimestamp>2020-09-01T19:33:23Z</RequestTimestamp>
 				<ojp:Origin>
 					<ojp:PlaceRef>
 						<ojp:StopPlaceRef>8506302</ojp:StopPlaceRef>
@@ -13,14 +17,15 @@
 							<ojp:Text>Name, but can be ignored as the id usually is the only thing interpreted by the router</ojp:Text>
 						</ojp:LocationName>
 					</ojp:PlaceRef>
-					<ojp:DepArrTime>2020-09-30T11:00:00Z</ojp:DepArrTime>  <!-- with seconds --> 
+					<ojp:DepArrTime>2020-09-30T11:00:00Z</ojp:DepArrTime>
+					<!-- with seconds -->
 				</ojp:Origin>
 				<ojp:Destination>
 					<ojp:PlaceRef>
 						<ojp:StopPlaceRef>8505000</ojp:StopPlaceRef>
 						<ojp:LocationName>
 							<ojp:Text>Luzern</ojp:Text>
-						</ojp:LocationName>						
+						</ojp:LocationName>
 					</ojp:PlaceRef>
 				</ojp:Destination>
 				<ojp:Params>
