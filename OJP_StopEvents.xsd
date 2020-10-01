@@ -121,7 +121,7 @@
 					<xs:documentation>Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncludeStopHierarcy" type="HierarchyEnumeration" default="no" minOccurs="0">
+			<xs:element name="IncludeStopHierarchy" type="HierarchyEnumeration" default="no" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Indicates which part of the hierarchy should be provided (if known by the server). "no" (default) will include no hierarchy and only provide the given StopPlace / StopPoint. "down" will include all lower StopPoints/StopPlaces in the hierarchy, if it exists. "all" does include all StopPoints/StopPlaces for the meta station, if it is known. How to use this: if you indicate the reference to a train station and the parameter is set to "down", the departures/arrivals at the associated bus stations will show as well. If you have the ScheduledStopPoint of platform B of the local bus and it is associated with 3 other stations, you will get all these arrivals/departures as well, if the parameter is set to "all".</xs:documentation>
 				</xs:annotation>
