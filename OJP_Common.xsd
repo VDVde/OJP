@@ -77,6 +77,27 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
+		<xs:documentation>========================================= ProductCategories =============================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="ProductCategoryRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a product category.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="ProductCategoryCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ProductCategoryCodeType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of an product category Code.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:element name="ProductCategoryRef" type="siri:ProductCategoryRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a product category.</xs:documentation>
+		</xs:annotation>
+	<xs:annotation>	
 		<xs:documentation>========================================= Lines ======================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="LineDirectionFilterStructure">

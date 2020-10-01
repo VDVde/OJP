@@ -80,6 +80,7 @@
 					<xs:documentation>[a specialisation of MODE in TMv6] an extended range of VEHICLE MODEs, aggregating them with some SUBMODEs</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:group ref="ProductCategoryGroup"/>
 			<xs:element name="PublishedServiceName" type="InternationalTextStructure">
 				<xs:annotation>
 					<xs:documentation>Line name or service description as known to the public, f.e. "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
