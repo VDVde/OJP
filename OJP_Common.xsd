@@ -96,7 +96,8 @@
 	<xs:element name="ProductCategoryRef" type="siri:ProductCategoryRefStructure">
 		<xs:annotation>
 			<xs:documentation>Reference to a product category.</xs:documentation>
-		</xs:annotation>	
+		</xs:annotation>
+	</xs:element>		
 	<xs:annotation>
 		<xs:documentation>========================================= Lines ======================================</xs:documentation>
 	</xs:annotation>
