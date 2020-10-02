@@ -4,7 +4,7 @@
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri/siri_requests-v2.0.xsd"/>
 	<!-- ===OJP Services ======================================= -->
 	<xs:include schemaLocation="OJP_Fare.xsd"/>
-	<xs:include schemaLocation="OJP_Locations.xsd"/>
+	<xs:include schemaLocation="OJP_Places.xsd"/>
 	<xs:include schemaLocation="OJP_RequestSupport.xsd"/>
 	<xs:include schemaLocation="OJP_StopEvents.xsd"/>
 	<xs:include schemaLocation="OJP_TripInfo.xsd"/>
