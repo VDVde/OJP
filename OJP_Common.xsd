@@ -81,7 +81,7 @@
 	</xs:annotation>
 	<xs:complexType name="ProductCategoryRefStructure">
 		<xs:annotation>
-			<xs:documentation>Reference to a product category.</xs:documentation>
+			<xs:documentation>Reference to a product category.ProductCateogry is defined in NeTEx (and also in Siri) as a classification for VEHICLE JOURNEYs to express some common properties of journeys fo rmarketing and fare products. E.g. to identify boats that run with steam in Switzerland ("BAV")</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="ProductCategoryCodeType"/>
@@ -95,7 +95,7 @@
 	</xs:simpleType>
 	<xs:element name="ProductCategoryRef" type="siri:ProductCategoryRefStructure">
 		<xs:annotation>
-			<xs:documentation>Reference to a product category.</xs:documentation>
+			<xs:documentation>Reference to a product category. It is useful to use the same types that are also used in time tables and real time data.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:annotation>
