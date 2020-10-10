@@ -23,22 +23,22 @@
 	</xs:complexType>
 	<xs:complexType name="ProductCategoryStructure">
 		<xs:annotation>
-			<xs:documentation>Product category based on NeTEx. A product category is a classification to particular VEHICLE JOURNEYs to express some common properties of journeys form marketing and fare products. </xs:documentation>
+			<xs:documentation>Product category based on NeTEx. A product category is a classification to particular VEHICLE JOURNEYs to express some common properties of journeys for marketing and fare products. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Name of the product category. This is the full name for this product category. E.g. "Autoreisezug" in Switzerland or "Dampfschiff"</xs:documentation>
+					<xs:documentation>Full name of this product category, e.g. "Autoreisezug" in Switzerland or "Dampfschiff"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ShortName" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Short name or acronym of product category. If you intend to publish the product category, this is were you would put, the information that you want to associate with the journey. E.g. "ARZ" in Switzerland or "BAV".</xs:documentation>
+					<xs:documentation>Short name or acronym of product category. The short name  will likely be published. E.g. the product category is more important for publication in Switzerland than Mode / Submode. Examples "BAV", "ARZ", "TGV" </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="ProductCategoryRef" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>A reference to the product category. This is the internal code that is used within the reference frameworks (NeTEx, Siri). It is usually not displayed, but interpreted by the technical system. E.g. ch:1:TypeOfProductCategory:ARZ (Autoreisezug in Switzerland) or ch:1:TypeOfProductCategory:BAV. </xs:documentation>
+					<xs:documentation>A reference to the product category. This is the internal code used within the reference frameworks (NeTEx, SIRI). It is usually not displayed, but interpreted by the technical system. E.g. ch:1:TypeOfProductCategory:ARZ (Autoreisezug in Switzerland) or ch:1:TypeOfProductCategory:BAV. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -82,7 +82,7 @@
 			</xs:element>
 			<xs:element name="ProductCategory" type="ProductCategoryStructure">
 				<xs:annotation>
-					<xs:documentation>A product category for the service. This is a classification that exists in NeTEx/Siri that can be used to identify groups of journeys with some special properties for marketing and fare products. E.g. "TE2" for SNCF or a special panorama train "PE" in Switzerland. </xs:documentation>
+					<xs:documentation>A product category for the service. This is a classification defined in NeTEx/SIRI used to identify groups of journeys with some special properties for marketing and fare products, e.g. "TE2" for SNCF or a special panorama train "PE" in Switzerland.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PublishedServiceName" type="InternationalTextStructure">
