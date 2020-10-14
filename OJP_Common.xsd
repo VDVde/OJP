@@ -77,6 +77,28 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
+		<xs:documentation>========================================= ProductCategories =============================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="ProductCategoryRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a product category. As defined in NeTEx and SIRI, a product category is a classification for VEHICLE JOURNEYs to express some common properties of journeys for marketing and fare products, e.g. to identify boats that run with steam in Switzerland ("BAV")</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="ProductCategoryCodeType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ProductCategoryCodeType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of an product category code.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:element name="ProductCategoryRef" type="siri:ProductCategoryRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a product category. Product categories should be defined once and used uniformly in all channels (e.g. NeTEx, SIRI, OJP)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:annotation>
 		<xs:documentation>========================================= Lines ======================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="LineDirectionFilterStructure">
