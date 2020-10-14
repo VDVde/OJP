@@ -482,7 +482,7 @@
 		<xs:sequence>
 			<xs:element name="Places" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Container for place objects.</xs:documentation>
+					<xs:documentation>Container for place objects. Only place objects that are referenced in the response should be put into the container.</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -492,7 +492,7 @@
 			</xs:element>
 			<xs:element name="Situations" type="SituationsStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Container for SIRI SX situation objects.</xs:documentation>
+					<xs:documentation>Container for SIRI SX situation objects. Only situations that are referenced in the response should be put into the container.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
