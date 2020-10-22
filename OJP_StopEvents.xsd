@@ -5,6 +5,7 @@
 	<!-- ===========================================================================================================-->
 	<xs:include schemaLocation="OJP_Common.xsd"/>
 	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
+	<xs:include schemaLocation="OJP_RequestSupport.xsd"/>
 	<xs:group name="StopEventRequestGroup">
 		<xs:annotation>
 			<xs:documentation>Request structure for departure and arrival events at stops</xs:documentation>
