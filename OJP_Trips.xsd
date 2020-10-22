@@ -107,11 +107,6 @@
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AcceptDeferredDelivery" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>If yes, then with the first response a summary of the trip solution(s) is enough. Full trip information is sent actively by the server to the Address stated in RequestorEndpointGroup. Default is false.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripMobilityFilterGroup">
@@ -161,6 +156,11 @@
 			<xs:element name="IncludeOperatingDays" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the result should include operating day information - as encoded bit string and in natural language.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripSummaryOnly" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If true, then the response will contain only summaries of the found trips. Default is false.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -826,7 +826,7 @@
 			<xs:group ref="TripDataFilterGroup"/>
 			<xs:group ref="TripMobilityFilterGroup"/>
 			<xs:group ref="MultiPointTripPolicyGroup"/>
-			<xs:group ref="MultiPointTripContentFilterGroup"/>
+			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
@@ -864,19 +864,6 @@
 			<xs:enumeration value="eachDestination"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:group name="MultiPointTripContentFilterGroup">
-		<xs:annotation>
-			<xs:documentation>Parameters that control the level of detail of the trip results.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:group ref="TripContentFilterGroup"/>
-			<xs:element name="IncludeLegs" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the result should include leg information. Default is false.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
 	<xs:group name="MultiPointTripResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Multi-point trip response structure.</xs:documentation>
