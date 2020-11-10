@@ -20,4 +20,9 @@ if [ ${PARSING_ERROR} -ne 0 ]; then
 fi
 echo -e '\033[0;32mFinished formatting XSD and XML files\033[0m'
 
-# xmllint --noout --schema OJP.xsd examples/subdirectory1/*xml examples/subdirectory2/*xml
+if xmllint --noout --schema OJP.xsd examples/*/*.xml; then
+  echo -e '\033[0;32mValidating examples succeeded\033[0m'
+else
+  echo -e '\033[0;31mValidating examples failed\033[0m'
+  exit 1
+fi

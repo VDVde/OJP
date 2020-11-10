@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<!-- ===Dependencies ======================================= -->
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
-	<!-- ===========================================================================================================-->
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_Common.xsd"/>
 	<xs:include schemaLocation="OJP_FareSupport.xsd"/>
 	<xs:include schemaLocation="OJP_Trips.xsd"/>
