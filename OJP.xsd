@@ -17,7 +17,7 @@
 				</xs:choice>
 				<xs:element ref="Extensions" minOccurs="0"/>
 			</xs:sequence>
-			<xs:attribute name="version" type="xs:NMTOKEN" use="required" fixed="1.0"/>
+			<xs:attribute name="version" type="xs:NMTOKEN" use="required" fixed="1.1-dev"/>
 		</xs:complexType>
 	</xs:element>
 	<!-- ======================================================================= -->
