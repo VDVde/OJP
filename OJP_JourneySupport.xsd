@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.siri.org.uk/siri" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
 	<!-- ===========================================================================================================-->
@@ -80,7 +80,7 @@
 					<xs:documentation>[a specialisation of MODE in TMv6] an extended range of VEHICLE MODEs, aggregating them with some SUBMODEs</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProductCategory" type="ProductCategoryStructure">
+			<xs:element name="ProductCategory" type="ProductCategoryStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>A product category for the service. This is a classification defined in NeTEx/SIRI used to identify groups of journeys with some special properties for marketing and fare products, e.g. "TE2" for SNCF or a special panorama train "PE" in Switzerland.</xs:documentation>
 				</xs:annotation>
