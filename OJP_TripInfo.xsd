@@ -2,6 +2,7 @@
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="OJP_Common.xsd"/>
 	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
+	<xs:include schemaLocation="OJP_RequestSupport.xsd"/>
 	<xs:annotation>
 		<xs:documentation>===================== Request structures ============================================================</xs:documentation>
 	</xs:annotation>

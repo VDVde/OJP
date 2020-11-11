@@ -5,6 +5,7 @@
 	<!-- ===========================================================================================================-->
 	<xs:include schemaLocation="OJP_Common.xsd"/>
 	<xs:include schemaLocation="OJP_PlaceSupport.xsd"/>
+	<xs:include schemaLocation="OJP_RequestSupport.xsd"/>
 	<xs:annotation>
 		<xs:documentation>FUNCTION 1: Place Identification</xs:documentation>
 	</xs:annotation>
