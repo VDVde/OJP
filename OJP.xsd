@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.siri.org.uk/siri" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="OJP_siri">
-	<xs:import namespace="http://www.vdv.de/ojp" schemaLocation="OJP_Requests.xsd"/>
+	<xs:import namespace="http://www.vdv.de/ojp" schemaLocation="./OJP/OJP_All.xsd"/>
 	<!-- ifopt must be imported before siri, otherwise xmllint fails -->
-	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="./ifopt/ifopt_allStopPlace-v0.3.xsd"/>
-	<xs:include schemaLocation="./siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="./siri/ifopt/ifopt_allStopPlace-v0.3.xsd"/>
+	<xs:include schemaLocation="./siri/siri_model/siri_all-v2.0.xsd"/>
 	<!--== SIRI Request include OJP Requests ===================================================================== -->
 	<xs:element name="OJP">
 		<xs:annotation>

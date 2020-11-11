@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified" id="OJP_siri_service">
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_all-v2.0.xsd"/>
-	<xs:include schemaLocation="OJP_Fare.xsd"/>
-	<xs:include schemaLocation="OJP_Places.xsd"/>
-	<xs:include schemaLocation="OJP_RequestSupport.xsd"/>
-	<xs:include schemaLocation="OJP_StopEvents.xsd"/>
-	<xs:include schemaLocation="OJP_TripInfo.xsd"/>
-	<xs:include schemaLocation="OJP_Trips.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
 	<!-- ==== Fare Service=============================================== -->
 	<xs:element name="OJPFareRequest" type="OJPFareRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPFareRequestStructure">
