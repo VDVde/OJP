@@ -244,7 +244,7 @@
 				</xs:element>
 				<xs:element name="TripSummary" type="TripSummaryStructure">
 					<xs:annotation>
-						<xs:documentation>Summary on trip. Only if requestor accepts deferrred delivery of trip details.</xs:documentation>
+						<xs:documentation>Summary on trip. Only if requestor set TripSummaryOnly in request.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
