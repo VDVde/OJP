@@ -198,7 +198,7 @@ Rail transport, Roads and road transport.
 		</xsd:choice>
 	</xsd:group>
 	<!--===GS: Service Delviery -->
-	<xsd:element name="ServiceDelivery" substitutionGroup="ProducerResponse">
+	<xsd:element name="ServiceDelivery">
 		<xsd:annotation>
 			<xsd:documentation>Response from Producer to Consumer to deliver payload data. Either answers a direct ServiceRequest, or asynchronously satisfies a subscription. May be sent directly in one step, or fetched in response to a DataSupply Request.</xsd:documentation>
 		</xsd:annotation>
@@ -294,7 +294,7 @@ Rail transport, Roads and road transport.
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="CapabilitiesResponse" type="CapabilitiesResponseStructure" substitutionGroup="ProducerResponse">
+	<xsd:element name="CapabilitiesResponse" type="CapabilitiesResponseStructure">
 		<xsd:annotation>
 			<xsd:documentation>Responses with the capabilities of an implementation.</xsd:documentation>
 		</xsd:annotation>

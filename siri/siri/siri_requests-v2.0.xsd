@@ -65,14 +65,10 @@
 				</Date>
 				<Date><Modified>2012-06-17</Modified>
 					 +SIRI v2.0 x
-					  Add delegator endpoint group to ServceRequest and FunctionalServcieResponse
+					  Add delegator endpoint group to ServiceRequest and FunctionalServcieResponse
 				</Date>
 				<Date><Modified>2013-02-11</Modified>
 					Added AbstractRequiredIdentifiedItemStructure
-					Added AbstractRequiredReferencingItemStructure
-				</Date>
-				<Date><Modified>2014-07-12</Modified>
-					Structure
 					Added AbstractRequiredReferencingItemStructure
 				</Date>
 				<Description>
@@ -275,6 +271,11 @@ Rail transport, Roads and road transport
 		</xsd:complexContent>
 	</xsd:complexType>
 	<!-- ===Request Context================================================================== -->
+	<xsd:element name="AbstractFunctionalServiceSubscriptionRequest" type="AbstractSubscriptionStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Subsititutable type for a SIRI Functional Service subscription request.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
 	<xsd:complexType name="AbstractSubscriptionStructure" abstract="true">
 		<xsd:annotation>
 			<xsd:documentation>Type for SIRI Service subscriptions.</xsd:documentation>
@@ -288,11 +289,6 @@ Rail transport, Roads and road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:element name="AbstractFunctionalServiceSubscriptionRequest" type="AbstractSubscriptionStructure" abstract="true">
-		<xsd:annotation>
-			<xsd:documentation>Subsititutable type for a SIRI Functional Service subscription request.</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
 	<xsd:group name="SubscriptionIdentityGroup">
 		<xsd:annotation>
 			<xsd:documentation>Type for unique identifier of a subscription.</xsd:documentation>
@@ -383,11 +379,6 @@ Rail transport, Roads and road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<xsd:element name="ProducerResponse" type="ProducerResponseStructure" abstract="true" substitutionGroup="AbstractResponse">
-		<xsd:annotation>
-			<xsd:documentation>Subsititutable type for a SIRI r Producer esponse.</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
 	<xsd:complexType name="ProducerResponseStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for General SIRI Producer Response.</xsd:documentation>
@@ -430,7 +421,7 @@ Rail transport, Roads and road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="AbstractFunctionalServiceDelivery" type="AbstractServiceDeliveryStructure" abstract="true" substitutionGroup="AbstractResponse">
 		<xsd:annotation>
-			<xsd:documentation>Subsititutable type for a SIRI Functional Service Deivery.</xsd:documentation>
+			<xsd:documentation>Subsititutable type for a SIRI Functional Service request.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="AbstractServiceDeliveryStructure" abstract="true">
@@ -541,23 +532,6 @@ Rail transport, Roads and road transport
 		</xsd:annotation>
 	</xsd:element>
 	<!-- ============WSDL========================================================= -->
-	<xsd:complexType name="ConsumerRequestEndpointStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for Unique reference to this request, created by Consumer. May be used to reference the request in subsequent interactions. Used by WSDL.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="AuthenticatedRequestStructure">
-				<xsd:sequence>
-					<xsd:group ref="ConsumerRequestEndpointGroup"/>
-					<xsd:group ref="DelegatorEndpointGroup">
-						<xsd:annotation>
-							<xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
-						</xsd:annotation>
-					</xsd:group>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
 	<xsd:group name="ConsumerRequestEndpointGroup">
 		<xsd:annotation>
 			<xsd:documentation>Unique reference to this request, created by Consumer. May be used to reference the request in subsequent interactions.</xsd:documentation>
@@ -580,6 +554,23 @@ Rail transport, Roads and road transport
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
+	<xsd:complexType name="ConsumerRequestEndpointStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Unique reference to this request, created by Consumer. May be used to reference the request in subsequent interactions. Used by WSDL.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AuthenticatedRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="ConsumerRequestEndpointGroup"/>
+					<xsd:group ref="DelegatorEndpointGroup">
+						<xsd:annotation>
+							<xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 	<xsd:group name="ConsumerResponseEndpointGroup">
 		<xsd:annotation>
 			<xsd:documentation>Unique reference to this response message from Consumer. May be used to reference the response in subsequent interactions.</xsd:documentation>
@@ -816,7 +807,7 @@ Rail transport, Roads and road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="AbstractFunctionalServiceCapabilitiesRequest" type="AbstractServiceRequestStructure" abstract="true" substitutionGroup="AbstractServiceRequest">
 		<xsd:annotation>
-			<xsd:documentation>Subsititutable type for a SIRI Functional Service Capabiloities equest.</xsd:documentation>
+			<xsd:documentation>Subsititutable type for a SIRI Functional Service Capabiloitiesequest.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="ServiceCapabilitiesRequestStructure">
@@ -857,7 +848,7 @@ Rail transport, Roads and road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="AbstractFunctionalServiceCapabilitiesResponse" type="AbstractServiceCapabilitiesResponseStructure" abstract="true" substitutionGroup="AbstractResponse">
 		<xsd:annotation>
-			<xsd:documentation>Subsititutable type for a SIRI Functional Service Capabilities Response.</xsd:documentation>
+			<xsd:documentation>Subsititutable type for a SIRI Functional Service Capabiloitiesequest.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="AbstractServiceCapabilitiesResponseStructure">
@@ -1045,7 +1036,7 @@ Rail transport, Roads and road transport
 			<xsd:documentation>Requests for stop reference data for use in service requests.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
-			<xsd:extension base="RequestStructure">
+			<xsd:extension base="AuthenticatedRequestStructure">
 				<xsd:sequence>
 					<xsd:group ref="RequestorEndpointGroup"/>
 				</xsd:sequence>

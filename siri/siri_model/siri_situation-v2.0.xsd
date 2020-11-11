@@ -202,6 +202,7 @@ Rail transport, Roads and road transport
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="cause"/>
 			<xsd:enumeration value="effect"/>
+			<xsd:enumeration value="correctionTo"/>
 			<xsd:enumeration value="update"/>
 			<xsd:enumeration value="supercedes"/>
 			<xsd:enumeration value="supercededBy"/>
@@ -602,6 +603,7 @@ Rail transport, Roads and road transport
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="draft"/>
+			<xsd:enumeration value="pendingApproval"/>
 			<xsd:enumeration value="approvedDraft"/>
 			<xsd:enumeration value="open"/>
 			<xsd:enumeration value="published"/>
@@ -759,7 +761,9 @@ Rail transport, Roads and road transport
 			<xsd:enumeration value="staff"/>
 			<xsd:enumeration value="stationStaff"/>
 			<xsd:enumeration value="management"/>
+			<xsd:enumeration value="authorities"/>
 			<xsd:enumeration value="infoServices"/>
+			<xsd:enumeration value="transportOperators"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="NatureEnumeration">
@@ -1120,7 +1124,7 @@ Rail transport, Roads and road transport
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="Condition" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="Severity" type="SeverityEnumeration">
+			<xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Severity of disruption if different from that of SITUATION. TPEG pti26</xsd:documentation>
 				</xsd:annotation>
@@ -1249,7 +1253,7 @@ Rail transport, Roads and road transport
 	<!--==Delay =========================================== -->
 	<xsd:simpleType name="DelayBandEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Type for allwoed values of Dela band. Based on Datex2</xsd:documentation>
+			<xsd:documentation>Type for allwoed values of DelayBand. Based on Datex2</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="delayTwoMinutes"/>
