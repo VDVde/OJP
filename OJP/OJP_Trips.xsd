@@ -924,7 +924,7 @@
 	</xs:group>
 	<xs:group name="TripStatusGroup">
 		<xs:annotation>
-			<xs:documentation>parameters which describe the current status of a TRIP</xs:documentation>
+			<xs:documentation>Parameters which describe the current status of a TRIP</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Unplanned" type="xs:boolean" default="false" minOccurs="0">
@@ -947,7 +947,7 @@
 					<xs:documentation>Whether this trip is delayed. Default is false.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Unable" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="Infeasible" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether this trip cannot be used, due to operational delays and impossible transfers. Default is false.</xs:documentation>
 				</xs:annotation>
