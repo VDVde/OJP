@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="OJP_Common.xsd"/>
+	<xs:include schemaLocation="OJP_FacilitySupport.xsd"/>
+	<xs:include schemaLocation="OJP_Fare.xsd"/>
+	<xs:include schemaLocation="OJP_FareSupport.xsd"/>
+	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
+	<xs:include schemaLocation="OJP_ModesSupport.xsd"/>
+	<xs:include schemaLocation="OJP_Places.xsd"/>
+	<xs:include schemaLocation="OJP_PlaceSupport.xsd"/>
+	<xs:include schemaLocation="OJP_Requests.xsd"/>
+	<xs:include schemaLocation="OJP_RequestSupport.xsd"/>
+	<xs:include schemaLocation="OJP_SituationSupport.xsd"/>
+	<xs:include schemaLocation="OJP_StopEvents.xsd"/>
+	<xs:include schemaLocation="OJP_TripInfo.xsd"/>
+	<xs:include schemaLocation="OJP_Trips.xsd"/>
+	<xs:include schemaLocation="OJP_Utility.xsd"/>
+</xs:schema>
