@@ -1,26 +1,22 @@
-<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-     xmlns="http://www.siri.org.uk/siri"
-     xmlns:ojp="http://www.vdv.de/ojp"
-     version="1.1-dev"
-     xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
-   <OJPRequest>
-      <ServiceRequest>
-         <RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
-         <RequestorRef>IRMA</RequestorRef>
-         <ojp:OJPTripInfoRequest>
-            <RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
-            <MessageIdentifier>756</MessageIdentifier>
-            <ojp:JourneyRef>ojp:91011:A:R:j20:719</ojp:JourneyRef>
-            <ojp:OperatingDayRef xmlns:siri="http://www.siri.org.uk/siri">Unknown</ojp:OperatingDayRef>
-            <ojp:Params>
-               <ojp:IncludeCalls>true</ojp:IncludeCalls>
-               <ojp:IncludePosition>true</ojp:IncludePosition>
-               <ojp:IncludeService>true</ojp:IncludeService>
-               <ojp:IncludeTrackSections>true</ojp:IncludeTrackSections>
-               <ojp:IncludeTrackProjection>true</ojp:IncludeTrackProjection>
-            </ojp:Params>
-         </ojp:OJPTripInfoRequest>
-      </ServiceRequest>
-   </OJPRequest>
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+	<OJPRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPTripInfoRequest>
+				<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
+				<MessageIdentifier>756</MessageIdentifier>
+				<ojp:JourneyRef>ojp:91011:A:R:j20:719</ojp:JourneyRef>
+				<ojp:OperatingDayRef xmlns:siri="http://www.siri.org.uk/siri">Unknown</ojp:OperatingDayRef>
+				<ojp:Params>
+					<ojp:IncludeCalls>true</ojp:IncludeCalls>
+					<ojp:IncludePosition>true</ojp:IncludePosition>
+					<ojp:IncludeService>true</ojp:IncludeService>
+					<ojp:IncludeTrackSections>true</ojp:IncludeTrackSections>
+					<ojp:IncludeTrackProjection>true</ojp:IncludeTrackProjection>
+				</ojp:Params>
+			</ojp:OJPTripInfoRequest>
+		</ServiceRequest>
+	</OJPRequest>
 </OJP>

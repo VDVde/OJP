@@ -2483,7 +2483,14 @@
 								<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">3953</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">3953</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -2877,7 +2884,14 @@
 								<ojp:Text xml:lang="de">Zürich, Hardturm</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">7371</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7371</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -3317,7 +3331,14 @@
 								<ojp:Text xml:lang="de">Zürich, Klusplatz</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">1812</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">1812</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -3861,7 +3882,14 @@
 								<ojp:Text xml:lang="de">Zürich, Auzelg</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">8490</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">8490</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -4366,7 +4394,14 @@
 								<ojp:Text xml:lang="de">Zürich Altstetten, Bahnhof</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">8194</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">8194</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -4634,7 +4669,14 @@
 								<ojp:Text xml:lang="de">Forch</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">S-Bahn</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">413</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">413</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -5139,7 +5181,14 @@
 								<ojp:Text xml:lang="de">Zürich, Kienastenwies</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">2115</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">2115</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -5526,7 +5575,14 @@
 								<ojp:Text xml:lang="de">Zürich Stadelhofen FB</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">S-Bahn</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">210</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">210</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -6142,7 +6198,14 @@
 								<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">15920</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">15920</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -6542,7 +6605,14 @@
 								<ojp:Text xml:lang="de">Zürich, Hardturm</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">7321</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7321</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -7092,7 +7162,14 @@
 								<ojp:Text xml:lang="de">Zürich, Auzelg</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">8456</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">8456</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -7492,7 +7569,14 @@
 								<ojp:Text xml:lang="de">Zürich, Klusplatz</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">1788</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">1788</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -7997,7 +8081,14 @@
 								<ojp:Text xml:lang="de">Zürich Altstetten, Bahnhof</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">8125</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">8125</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -8502,7 +8593,14 @@
 								<ojp:Text xml:lang="de">Zürich, Kienastenwies</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">2090</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">2090</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -9112,7 +9210,14 @@
 								<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">15914</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">15914</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -9506,7 +9611,14 @@
 								<ojp:Text xml:lang="de">Zürich, Hardturm</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">7273</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7273</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -9900,7 +10012,14 @@
 								<ojp:Text xml:lang="de">Zürich, Klusplatz</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">1763</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">1763</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -10444,7 +10563,14 @@
 								<ojp:Text xml:lang="de">Zürich, Auzelg</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">8417</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">8417</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -10949,7 +11075,14 @@
 								<ojp:Text xml:lang="de">Zürich Altstetten, Bahnhof</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">8061</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">8061</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -11330,7 +11463,14 @@
 								<ojp:Text xml:lang="de">Zürich Stadelhofen FB</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">S-Bahn</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">212</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">212</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -11717,7 +11857,14 @@
 								<ojp:Text xml:lang="de">Esslingen</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">S-Bahn</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">215</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">215</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -12222,7 +12369,14 @@
 								<ojp:Text xml:lang="de">Zürich, Kienastenwies</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">2066</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">2066</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -12772,7 +12926,14 @@
 								<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">15907</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">15907</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -13172,7 +13333,14 @@
 								<ojp:Text xml:lang="de">Zürich, Hardturm</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">7226</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7226</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -13572,7 +13740,14 @@
 								<ojp:Text xml:lang="de">Zürich, Klusplatz</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">1737</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">1737</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -14122,7 +14297,14 @@
 								<ojp:Text xml:lang="de">Zürich, Auzelg</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">8383</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">8383</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -14627,7 +14809,14 @@
 								<ojp:Text xml:lang="de">Zürich Altstetten, Bahnhof</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">7999</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7999</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -15132,7 +15321,14 @@
 								<ojp:Text xml:lang="de">Zürich, Kienastenwies</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">2043</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">2043</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -15676,7 +15872,14 @@
 								<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">15903</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">15903</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -16070,7 +16273,14 @@
 								<ojp:Text xml:lang="de">Zürich, Hardturm</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">7174</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7174</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -16464,7 +16674,14 @@
 								<ojp:Text xml:lang="de">Zürich, Klusplatz</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">1710</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">1710</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -17014,7 +17231,14 @@
 								<ojp:Text xml:lang="de">Zürich, Auzelg</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">16547</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">16547</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -17519,7 +17743,14 @@
 								<ojp:Text xml:lang="de">Zürich Altstetten, Bahnhof</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">7940</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7940</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -17787,7 +18018,14 @@
 								<ojp:Text xml:lang="de">Forch</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">S-Bahn</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">417</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">417</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -18292,7 +18530,14 @@
 								<ojp:Text xml:lang="de">Zürich, Kienastenwies</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Bus</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">2017</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">2017</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -18679,7 +18924,14 @@
 								<ojp:Text xml:lang="de">Zürich Stadelhofen FB</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">S-Bahn</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">214</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">214</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -19229,7 +19481,14 @@
 								<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">3837</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">3837</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -19629,7 +19888,14 @@
 								<ojp:Text xml:lang="de">Zürich, Hardturm</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">7127</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7127</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -20029,7 +20295,14 @@
 								<ojp:Text xml:lang="de">Zürich, Klusplatz</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">1685</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">1685</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
@@ -20573,7 +20846,14 @@
 								<ojp:Text xml:lang="de">Zürich, Auzelg</ojp:Text>
 							</ojp:DestinationText>
 						</ojp:Service>
-						<ojp:Extension><ojp:TransportTypeName><ojp:Text xml:lang="de">Tram</ojp:Text></ojp:TransportTypeName><ojp:PublishedJourneyNumber><ojp:Text xml:lang="de">16542</ojp:Text></ojp:PublishedJourneyNumber></ojp:Extension>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">16542</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 			</ojp:OJPStopEventDelivery>
