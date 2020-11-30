@@ -144,12 +144,12 @@
 					<xs:documentation>Name of the booking agency (contractual partner).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BookingUrl" type="xs:anyURI" minOccurs="0">
+			<xs:element name="BookingUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>URL to online booking service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InfoUrl" type="xs:anyURI" minOccurs="0">
+			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>URL to information page.</xs:documentation>
 				</xs:annotation>

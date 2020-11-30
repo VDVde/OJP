@@ -224,7 +224,7 @@
 					<xs:documentation>The set of passed zones.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="StaticInfoUrl" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="StaticInfoUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>URL to Fare information pages on the web.</xs:documentation>
 				</xs:annotation>
