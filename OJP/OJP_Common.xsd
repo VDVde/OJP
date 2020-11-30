@@ -334,7 +334,7 @@
 	</xs:annotation>
 	<xs:complexType name="GeneralAttributeStructure">
 		<xs:annotation>
-			<xs:documentation>Structured attribute classification with associated text.</xs:documentation>
+			<xs:documentation>Structured attribute classification with associated text. If URL is given, it refers to the whole attribute text.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Text" type="InternationalTextStructure">
@@ -358,11 +358,7 @@
 					<xs:documentation>Importance of the attribute.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InfoUrl" type="xs:anyURI" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>URL to additional information on this general attribute. If available, the whole attribute text has to be used as the marked link.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:group ref="WebLinkGroup" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
