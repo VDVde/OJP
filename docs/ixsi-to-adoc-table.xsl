@@ -268,9 +268,8 @@ from top to bottom. Note, however, that for the actual operation,
 		</xsl:if>
 
 		<!-- Then, everything but the simpleTypes are evaluated in order of appearance. -->
-		<xsl:apply-templates select="*[not(self::xs:simpleType)]">
-			<xsl:sort select="@name"/>
-		</xsl:apply-templates>
+		<xsl:apply-templates select="*[not(self::xs:simpleType)]"/>
+
 	</xsl:template>
 
 </xsl:stylesheet>
