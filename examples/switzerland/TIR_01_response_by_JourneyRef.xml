@@ -1,137 +1,136 @@
-<siri:OJP xmlns:siri="http://www.siri.org.uk/siri"
-          xmlns:ojp="http://www.vdv.de/ojp"
-          version="1.1-dev">
-   <siri:OJPResponse>
-      <siri:ServiceDelivery>
-         <siri:ResponseTimestamp>2020-11-30T10:07:19Z</siri:ResponseTimestamp>
-         <siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
-         <siri:Status>true</siri:Status>
-         <ojp:OJPTripInfoDelivery>
-            <siri:ResponseTimestamp>2020-11-30T10:07:19Z</siri:ResponseTimestamp>
-            <siri:RequestMessageRef>756</siri:RequestMessageRef>
-            <siri:Status>true</siri:Status>
-            <ojp:CalcTime>60</ojp:CalcTime>
-            <ojp:TripInfoResponseContext>
-               <ojp:Places>
-                  <ojp:Place>
-                     <ojp:StopPlace>
-                        <ojp:StopPlaceRef>8591315</ojp:StopPlaceRef>
-                        <ojp:StopPlaceName>
-                           <ojp:Text>Zürich, Rehalp</ojp:Text>
-                        </ojp:StopPlaceName>
-                        <ojp:PrivateCode>
-                           <ojp:System>EFA</ojp:System>
-                           <ojp:Value>126356:0:</ojp:Value>
-                        </ojp:PrivateCode>
-                        <ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
-                     </ojp:StopPlace>
-                     <ojp:Name>
-                        <ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
-                     </ojp:Name>
-                     <ojp:GeoPosition>
-                        <siri:Longitude>8.58298</siri:Longitude>
-                        <siri:Latitude>47.35103</siri:Latitude>
-                     </ojp:GeoPosition>
-                  </ojp:Place>
-                  <ojp:Place>
-                     <ojp:StopPlace>
-                        <ojp:StopPlaceRef>8591142</ojp:StopPlaceRef>
-                        <ojp:StopPlaceName>
-                           <ojp:Text>Zürich, Friedhof Enzenbühl</ojp:Text>
-                        </ojp:StopPlaceName>
-                        <ojp:PrivateCode>
-                           <ojp:System>EFA</ojp:System>
-                           <ojp:Value>126192:0:</ojp:Value>
-                        </ojp:PrivateCode>
-                        <ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
-                     </ojp:StopPlace>
-                     <ojp:Name>
-                        <ojp:Text xml:lang="de">Zürich, Friedhof Enzenbühl</ojp:Text>
-                     </ojp:Name>
-                     <ojp:GeoPosition>
-                        <siri:Longitude>8.58028</siri:Longitude>
-                        <siri:Latitude>47.35097</siri:Latitude>
-                     </ojp:GeoPosition>
-                  </ojp:Place>
-               </ojp:Places>
-            </ojp:TripInfoResponseContext>
-            <ojp:TripInfoResult>
-               <ojp:OnwardCall>
-                  <siri:StopPointRef>8591315</siri:StopPointRef>
-                  <ojp:StopPointName>
-                     <ojp:Text>Zürich, Rehalp</ojp:Text>
-                  </ojp:StopPointName>
-                  <ojp:ServiceDeparture>
-                     <ojp:TimetabledTime>2020-12-01T12:15:00Z</ojp:TimetabledTime>
-                  </ojp:ServiceDeparture>
-                  <ojp:Order>1</ojp:Order>
-               </ojp:OnwardCall>
-			   <!--- lots of other OnwardCall -->
-               <ojp:OnwardCall>
-                  <siri:StopPointRef>8591049</siri:StopPointRef>
-                  <ojp:StopPointName>
-                     <ojp:Text>Zürich, Auzelg</ojp:Text>
-                  </ojp:StopPointName>
-                  <ojp:ServiceArrival>
-                     <ojp:TimetabledTime>2020-12-01T13:01:00Z</ojp:TimetabledTime>
-                  </ojp:ServiceArrival>
-                  <ojp:Order>34</ojp:Order>
-               </ojp:OnwardCall>
-               <ojp:Service>
-                  <ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-                  <ojp:JourneyRef>ojp:91011:A:R:j20:719</ojp:JourneyRef>
-                  <siri:LineRef>ojp:91011:A</siri:LineRef>
-                  <siri:DirectionRef>R</siri:DirectionRef>
-                  <ojp:Mode>
-                     <ojp:PtMode>tram</ojp:PtMode>
-                     <siri:TramSubmode>cityTram</siri:TramSubmode>
-                     <ojp:Name>
-                        <ojp:Text xml:lang="de">Tram</ojp:Text>
-                     </ojp:Name>
-                     <ojp:ShortName>
-                        <ojp:Text xml:lang="de">T</ojp:Text>
-                     </ojp:ShortName>
-                  </ojp:Mode>
-                  <ojp:PublishedServiceName>
-                     <ojp:Text>11</ojp:Text>
-                  </ojp:PublishedServiceName>
-                  <ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-                  <ojp:OriginStopPointRef>8591315</ojp:OriginStopPointRef>
-                  <ojp:OriginText>
-                     <ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
-                  </ojp:OriginText>
-                  <ojp:DestinationStopPointRef>8591049</ojp:DestinationStopPointRef>
-                  <ojp:DestinationText>
-                     <ojp:Text xml:lang="de">Basel, St-Louis Grenze</ojp:Text>
-                  </ojp:DestinationText>
-               </ojp:Service>
-               <ojp:JourneyTrack>
-                  <ojp:TrackSection>
-                     <ojp:TrackStart>
-                        <siri:StopPointRef>8591315</siri:StopPointRef>
-                        <ojp:Name>
-                           <ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
-                        </ojp:Name>
-                     </ojp:TrackStart>
-                     <ojp:TrackEnd>
-                        <siri:StopPointRef>8591049</siri:StopPointRef>
-                        <ojp:Name>
-                           <ojp:Text xml:lang="de">Zürich, Auzelg</ojp:Text>
-                        </ojp:Name>
-                     </ojp:TrackEnd>
-                     <ojp:Length>55032</ojp:Length>
-                  </ojp:TrackSection>
-               </ojp:JourneyTrack>
-               <ojp:Extension>
-                  <ojp:TransportTypeName>
-                     <ojp:Text xml:lang="de"/>
-                  </ojp:TransportTypeName>
-                  <ojp:PublishedJourneyNumber>
-                     <ojp:Text xml:lang="de">8527</ojp:Text>
-                  </ojp:PublishedJourneyNumber>
-               </ojp:Extension>
-            </ojp:TripInfoResult>
-         </ojp:OJPTripInfoDelivery>
-      </siri:ServiceDelivery>
-   </siri:OJPResponse>
+<?xml version="1.0" encoding="UTF-8"?>
+<siri:OJP xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev">
+	<siri:OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2020-11-30T10:07:19Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<ojp:OJPTripInfoDelivery>
+				<siri:ResponseTimestamp>2020-11-30T10:07:19Z</siri:ResponseTimestamp>
+				<siri:RequestMessageRef>756</siri:RequestMessageRef>
+				<siri:Status>true</siri:Status>
+				<ojp:CalcTime>60</ojp:CalcTime>
+				<ojp:TripInfoResponseContext>
+					<ojp:Places>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8591315</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Zürich, Rehalp</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>126356:0:</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>8.58298</siri:Longitude>
+								<siri:Latitude>47.35103</siri:Latitude>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8591142</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Zürich, Friedhof Enzenbühl</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>126192:0:</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Zürich, Friedhof Enzenbühl</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>8.58028</siri:Longitude>
+								<siri:Latitude>47.35097</siri:Latitude>
+							</ojp:GeoPosition>
+						</ojp:Place>
+					</ojp:Places>
+				</ojp:TripInfoResponseContext>
+				<ojp:TripInfoResult>
+					<ojp:OnwardCall>
+						<siri:StopPointRef>8591315</siri:StopPointRef>
+						<ojp:StopPointName>
+							<ojp:Text>Zürich, Rehalp</ojp:Text>
+						</ojp:StopPointName>
+						<ojp:ServiceDeparture>
+							<ojp:TimetabledTime>2020-12-01T12:15:00Z</ojp:TimetabledTime>
+						</ojp:ServiceDeparture>
+						<ojp:Order>1</ojp:Order>
+					</ojp:OnwardCall>
+					<!--- lots of other OnwardCall -->
+					<ojp:OnwardCall>
+						<siri:StopPointRef>8591049</siri:StopPointRef>
+						<ojp:StopPointName>
+							<ojp:Text>Zürich, Auzelg</ojp:Text>
+						</ojp:StopPointName>
+						<ojp:ServiceArrival>
+							<ojp:TimetabledTime>2020-12-01T13:01:00Z</ojp:TimetabledTime>
+						</ojp:ServiceArrival>
+						<ojp:Order>34</ojp:Order>
+					</ojp:OnwardCall>
+					<ojp:Service>
+						<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
+						<ojp:JourneyRef>ojp:91011:A:R:j20:719</ojp:JourneyRef>
+						<siri:LineRef>ojp:91011:A</siri:LineRef>
+						<siri:DirectionRef>R</siri:DirectionRef>
+						<ojp:Mode>
+							<ojp:PtMode>tram</ojp:PtMode>
+							<siri:TramSubmode>cityTram</siri:TramSubmode>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Tram</ojp:Text>
+							</ojp:Name>
+							<ojp:ShortName>
+								<ojp:Text xml:lang="de">T</ojp:Text>
+							</ojp:ShortName>
+						</ojp:Mode>
+						<ojp:PublishedServiceName>
+							<ojp:Text>11</ojp:Text>
+						</ojp:PublishedServiceName>
+						<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
+						<ojp:OriginStopPointRef>8591315</ojp:OriginStopPointRef>
+						<ojp:OriginText>
+							<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
+						</ojp:OriginText>
+						<ojp:DestinationStopPointRef>8591049</ojp:DestinationStopPointRef>
+						<ojp:DestinationText>
+							<ojp:Text xml:lang="de">Basel, St-Louis Grenze</ojp:Text>
+						</ojp:DestinationText>
+					</ojp:Service>
+					<ojp:JourneyTrack>
+						<ojp:TrackSection>
+							<ojp:TrackStart>
+								<siri:StopPointRef>8591315</siri:StopPointRef>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
+								</ojp:Name>
+							</ojp:TrackStart>
+							<ojp:TrackEnd>
+								<siri:StopPointRef>8591049</siri:StopPointRef>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zürich, Auzelg</ojp:Text>
+								</ojp:Name>
+							</ojp:TrackEnd>
+							<ojp:Length>55032</ojp:Length>
+						</ojp:TrackSection>
+					</ojp:JourneyTrack>
+					<ojp:Extension>
+						<ojp:TransportTypeName>
+							<ojp:Text xml:lang="de"/>
+						</ojp:TransportTypeName>
+						<ojp:PublishedJourneyNumber>
+							<ojp:Text xml:lang="de">8527</ojp:Text>
+						</ojp:PublishedJourneyNumber>
+					</ojp:Extension>
+				</ojp:TripInfoResult>
+			</ojp:OJPTripInfoDelivery>
+		</siri:ServiceDelivery>
+	</siri:OJPResponse>
 </siri:OJP>
