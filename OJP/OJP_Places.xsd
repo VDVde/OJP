@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Places.xsd - Request and response definitions for place information</xs:documentation>
+	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>FUNCTION 1: Place Identification</xs:documentation>
-	</xs:annotation>
-	<xs:annotation>
 		<xs:documentation>FUNCTION 2: Object Information</xs:documentation>
-	</xs:annotation>
-	<xs:annotation>
 		<xs:documentation>FUNCTION 3: Geographical Context</xs:documentation>
-	</xs:annotation>
-	<xs:annotation>
 		<xs:documentation>FUNCTION 4: Coordinate to Address</xs:documentation>
-	</xs:annotation>
-	<xs:annotation>
 		<xs:documentation>All functions integrated into one request / response</xs:documentation>
 	</xs:annotation>
 	<xs:group name="PlaceInformationRequestGroup">
@@ -57,7 +52,7 @@
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
-		<xs:documentation>Additional declarations</xs:documentation>
+		<xs:documentation>========================================== Additional declarations ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="InitialPlaceInputStructure">
 		<xs:sequence>
@@ -226,7 +221,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
-		<xs:documentation>===== Exchange point request ===============================================</xs:documentation>
+		<xs:documentation>========================================== Exchange point request ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="ExchangePointsRequestGroup">
 		<xs:sequence>

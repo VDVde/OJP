@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_JourneySupport.xsd - Supporting definitions for journeys on public transport vehicles</xs:documentation>
+	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:complexType name="ServiceViaPointStructure">
@@ -210,7 +213,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= Times, Calls, Time context =================================================</xs:documentation>
+		<xs:documentation>========================================== Times, Calls, Time context ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TimeWindowGroup">
 		<xs:annotation>
@@ -470,7 +473,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>=========================================== Filter Groups ===========================================================</xs:documentation>
+		<xs:documentation>========================================== Filter Groups ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="NumberOfResultsGroup">
 		<xs:annotation>
@@ -589,7 +592,7 @@
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
-		<xs:documentation>=========================================== Leg Attributes =============================================</xs:documentation>
+		<xs:documentation>========================================== Leg Attributes ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="LegAttributeStructure">
 		<xs:annotation>
@@ -613,7 +616,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>=========================================== Leg Projection =============================================</xs:documentation>
+		<xs:documentation>========================================== Leg Projection ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="LegTrackStructure">
 		<xs:annotation>

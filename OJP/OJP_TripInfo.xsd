@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_TripInfo.xsd - Request and response definitions for information on a single trip</xs:documentation>
+	</xs:annotation>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
-		<xs:documentation>===================== Request structures ============================================================</xs:documentation>
+		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripInfoRequestGroup">
 		<xs:annotation>
@@ -85,7 +88,7 @@
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
-		<xs:documentation>===================== Response structures ============================================================</xs:documentation>
+		<xs:documentation>========================================== Response definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripInfoResponseGroup">
 		<xs:annotation>

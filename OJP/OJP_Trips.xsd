@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning</xs:documentation>
+	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
-		<xs:documentation>===== Request Structures ===============================================</xs:documentation>
+		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripRequestGroup">
 		<xs:annotation>
@@ -198,7 +201,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>====================================================</xs:documentation>
+		<xs:documentation>========================================== Response definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripResponseGroup">
 		<xs:annotation>
@@ -775,7 +778,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>===== Multi-point trip request ===============================================</xs:documentation>
+		<xs:documentation>========================================== Multi-point trip request ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="MultiPointTripRequestGroup">
 		<xs:annotation>
@@ -860,6 +863,9 @@
 			<xs:enumeration value="eachDestination"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:annotation>
+		<xs:documentation>========================================== Multi-point trip response ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:group name="MultiPointTripResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Multi-point trip response structure.</xs:documentation>
