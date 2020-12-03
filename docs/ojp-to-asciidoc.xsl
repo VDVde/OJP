@@ -83,9 +83,11 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:value-of select="@name"/>
 		<xsl:text>`&#xa;`</xsl:text>
 		<xsl:value-of select="@name"/>
-		<xsl:text>` | _</xsl:text>
-		<xsl:value-of select="@type"/>
-		<xsl:text>_ | &#xa;</xsl:text>
+		<xsl:text>` </xsl:text>
+		<xsl:if test="@type">
+			<xsl:text>| _</xsl:text><xsl:value-of select="@type"/><xsl:text>_ </xsl:text>
+		</xsl:if>
+		<xsl:text>| &#xa;</xsl:text>
 		<xsl:apply-templates/>
 		<xsl:text>&#xa;</xsl:text>
 	</xsl:template>
