@@ -14,9 +14,9 @@ The element contains a _sequence_ of the following elements:
 |===
 | Then, the element contains _one of_ the following elements:
 
-|| `OJPRequest` | 
-|| `OJPResponse` | 
-| `Extensions` | 
+|| `OJPRequest` 
+|| `OJPResponse` 
+| `Extensions` 
 |===
 === The toplevel element `OJPRequest`
 `OJPRequest` | _OJPRequestStructure_ | 
@@ -57,7 +57,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `FareRequestGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPFareDelivery`
@@ -72,7 +72,7 @@ The element contains a _sequence_ of the following elements:
 |===
 | `ServiceResponseContextGroup`
 | `FareResponseGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPPlaceInformationRequest`
@@ -86,7 +86,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `PlaceInformationRequestGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPPlaceInformationDelivery`
@@ -99,10 +99,10 @@ The element contains a _sequence_ of the following elements:
 The element contains a _sequence_ of the following elements:
 
 |===
-| `OJPPlaceInformationRequest` | 
+| `OJPPlaceInformationRequest` 
 | `ServiceResponseContextGroup`
 | `PlaceInformationResponseGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPExchangePointsRequest`
@@ -116,7 +116,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `ExchangePointsRequestGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPExchangePointsDelivery`
@@ -129,10 +129,10 @@ The element contains a _sequence_ of the following elements:
 The element contains a _sequence_ of the following elements:
 
 |===
-| `OJPExchangePointsRequest` | 
+| `OJPExchangePointsRequest` 
 | `ServiceResponseContextGroup`
 | `ExchangePointsResponseGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPStopEventRequest`
@@ -146,7 +146,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `StopEventRequestGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPStopEventDelivery`
@@ -159,10 +159,10 @@ The element contains a _sequence_ of the following elements:
 The element contains a _sequence_ of the following elements:
 
 |===
-| `OJPStopEventRequest` | 
+| `OJPStopEventRequest` 
 | `ServiceResponseContextGroup`
 | `StopEventResponseGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPTripInfoRequest`
@@ -176,7 +176,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `TripInfoRequestGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPTripInfoDelivery`
@@ -189,10 +189,10 @@ The element contains a _sequence_ of the following elements:
 The element contains a _sequence_ of the following elements:
 
 |===
-| `OJPTripInfoRequest` | 
+| `OJPTripInfoRequest` 
 | `ServiceResponseContextGroup`
 | `TripInfoResponseGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPTripRequest`
@@ -206,7 +206,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `TripRequestGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPTripDelivery`
@@ -219,10 +219,10 @@ The element contains a _sequence_ of the following elements:
 The element contains a _sequence_ of the following elements:
 
 |===
-| `OJPTripRequest` | 
+| `OJPTripRequest` 
 | `ServiceResponseContextGroup`
 | `TripResponseGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPMultiPointTripRequest`
@@ -236,7 +236,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `MultiPointTripRequestGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 === The toplevel element `OJPMultiPointTripDelivery`
@@ -249,10 +249,10 @@ The element contains a _sequence_ of the following elements:
 The element contains a _sequence_ of the following elements:
 
 |===
-| `OJPMultiPointTripRequest` | 
+| `OJPMultiPointTripRequest` 
 | `ServiceResponseContextGroup`
 | `MultiPointTripResponseGroup`
-| `siri:Extensions` | 
+| `siri:Extensions` 
 |===
 
 == OJP/OJP_RequestSupport.xsd - Supporting definitions for OJP service requests and their responses
@@ -281,7 +281,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `DataFrameRef` | _siri:DataFrameRefStructure_ | identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. 
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 === The `ServiceResponseContextGroup` group
@@ -303,7 +303,7 @@ The element contains a _sequence_ of the following elements:
 | `DataFrameRef` | _siri:DataFrameRefStructure_ | identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. 
 | `Language` | _xs:language_ | Preferred language in which to return  text  values. 0:n_
 | `MessageIntegrityPropertiesGroup`
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -359,7 +359,7 @@ The element contains a _sequence_ of the following elements:
 
 The element contains only one element:
 
-| `Place` | _PlaceStructure_ |  0:n_
+| `Place` | _PlaceStructure_  0:n_
 
 | `Situations` | _SituationsStructure_ | Container for SIRI SX situation objects. Only situations that are referenced in the response should be put into the container.
 |===
@@ -393,7 +393,7 @@ The element contains a _sequence_ of the following elements:
 |===
 | `PlaceInformationResponseContext` | _ResponseContextStructure_ | Context to hold response objects that occur frequently.
 | `ContinueAt` | _xs:nonNegativeInteger_ | If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.
-| `PlaceResult` | _PlaceResultStructure_ |  0:n_
+| `PlaceResult` | _PlaceResultStructure_  0:n_
 |===
 
 
@@ -428,8 +428,8 @@ The element contains a _sequence_ of the following elements:
 The element contains _one of_ the following elements:
 
 | `Area` | _GeoAreaStructure_ | Area is defined by a polyline
-| `Circle` | _GeoCircleStructure_ | 
-| `Rectangle` | _GeoRectangleStructure_ | 
+| `Circle` | _GeoCircleStructure_ 
+| `Rectangle` | _GeoRectangleStructure_ 
 
 
 
@@ -439,7 +439,7 @@ The element contains _one of_ the following elements:
 The element contains a _sequence_ of the following elements:
 
 |===
-| `Center` | _siri:LocationStructure_ | 
+| `Center` | _siri:LocationStructure_ 
 | `Radius` | _siri:DistanceType_ | Radius in metres.
 |===
 
@@ -450,8 +450,8 @@ The element contains a _sequence_ of the following elements:
 The element contains a _sequence_ of the following elements:
 
 |===
-| `UpperLeft` | _siri:LocationStructure_ | 
-| `LowerRight` | _siri:LocationStructure_ | 
+| `UpperLeft` | _siri:LocationStructure_ 
+| `LowerRight` | _siri:LocationStructure_ 
 |===
 
 
@@ -462,7 +462,7 @@ The element contains a _sequence_ of the following elements:
 
 The element contains only one element:
 
-| `PolylinePoint` | _siri:LocationStructure_ |  0:n_
+| `PolylinePoint` | _siri:LocationStructure_  0:n_
 
 
 
@@ -472,7 +472,7 @@ The element contains only one element:
 The element contains a _sequence_ of the following elements:
 
 |===
-| `Place` | _PlaceStructure_ | 
+| `Place` | _PlaceStructure_ 
 | `Complete` | _xs:boolean_ | States whether the included place is complete or needs further refinement. Only complete places are fully resolved and can be used in e.g. trip requests. Incomplete places have to be refined entering them once again into a PlaceInformationRequest.
 | `Probability` | _xs:float_ | Probability, that this result is the one meant by the user's input. Value should be between 0 and 1.
 | `Mode` | _ModeStructure_ | List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested. 0:n_
@@ -547,7 +547,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `Language` | _xs:language_ | Preferred language in which to return text values. 0:n_
-| `NumberOfResults` | _xs:positiveInteger_ | 
+| `NumberOfResults` | _xs:positiveInteger_ 
 | `ContinueAt` | _xs:nonNegativeInteger_ | Tells the server to skip the mentioned number of results in its response. Can be used in a follow-up request to get further results. The value is usually taken from the previous response.
 |===
 
@@ -559,7 +559,7 @@ The element contains a _sequence_ of the following elements:
 |===
 | `ExchangePointResponseContext` | _ResponseContextStructure_ | Context to hold trip response objects that occur frequently.
 | `ContinueAt` | _xs:nonNegativeInteger_ | If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.
-| `Place` | _ExchangePointsResultStructure_ |  0:n_
+| `Place` | _ExchangePointsResultStructure_  0:n_
 |===
 
 
@@ -592,7 +592,7 @@ A stop point with id and name
 The element contains a _sequence_ of the following elements:
 
 |===
-| `siri:StopPointRef` | 
+| `siri:StopPointRef` 
 | `StopPointName` | _InternationalTextStructure_ | Name or description of stop point for use in passenger information.
 | `NameSuffix` | _InternationalTextStructure_ | Additional description of the stop point that may be appended to the name if enough space is available. F.e. "opposite main entrance".
 | `PlannedQuay` | _InternationalTextStructure_ | Name of the bay where to board/alight from the vehicle. According to planned timetable.
@@ -609,7 +609,7 @@ The element contains a _sequence_ of the following elements:
 | `StopPointGroup`
 | `PrivateCode` | _PrivateCodeStructure_ | Code of this stop point in private/foreign/proprietary coding schemes. 0:n_
 | `ParentRef` | _StopPlaceRefStructure_ | Reference to the stop place to which this stop point belongs.
-| `TopographicPlaceRef` | 
+| `TopographicPlaceRef` 
 | `StopAttributesGroup`
 |===
 
@@ -627,7 +627,7 @@ A stop place with id and name
 The element contains a _sequence_ of the following elements:
 
 |===
-| `StopPlaceRef` | 
+| `StopPlaceRef` 
 | `StopPlaceName` | _InternationalTextStructure_ | Name of this stop place for use in passenger information.
 | `NameSuffix` | _InternationalTextStructure_ | Additional description of the stop place that may be appended to the name if enough space is available. F.e. "Exhibition Center".
 |===
@@ -641,7 +641,7 @@ The element contains a _sequence_ of the following elements:
 |===
 | `StopPlaceGroup`
 | `PrivateCode` | _PrivateCodeStructure_ | Code of this stop place in private/foreign/proprietary coding schemes. 0:n_
-| `TopographicPlaceRef` | 
+| `TopographicPlaceRef` 
 | `StopAttributesGroup`
 |===
 
@@ -680,7 +680,7 @@ The element contains a _sequence_ of the following elements:
 
 The element contains only one element:
 
-| `Points` | _siri:LocationStructure_ |  0:n_
+| `Points` | _siri:LocationStructure_  0:n_
 
 |===
 
@@ -704,7 +704,7 @@ The element contains a _sequence_ of the following elements:
 | `NameSuffix` | _InternationalTextStructure_ | Additional description of the point of interest that may be appended to the name if enough space is available. F.e. "Exhibition Center".
 | `PointOfInterestCategory` | _PointOfInterestCategoryStructure_ | Categories this POI is associated with. Order indicates descending relevance. 0:n_
 | `PrivateCode` | _PrivateCodeStructure_ | Code of this point of interest in private/foreign/proprietary coding schemes. 0:n_
-| `TopographicPlaceRef` | 
+| `TopographicPlaceRef` 
 |===
 
 
@@ -757,7 +757,7 @@ The element contains a _sequence_ of the following elements:
 | `CountryName` | _xs:string_ | Country of the address.
 | `PostCode` | _xs:string_ | Postal code of the address.
 | `TopographicPlaceName` | _xs:string_ | TopographicPlace name of the address. If set it should at least contain the city name.
-| `TopographicPlaceRef` | 
+| `TopographicPlaceRef` 
 | `Street` | _xs:string_ | Street name of the address.
 | `HouseNumber` | _xs:string_ | House number of the address. If none is given, either a crossing street can be given, or the whole street is meant.
 | `CrossRoad` | _xs:string_ | Crossing. This can be used to be more specific without using house numbers.
@@ -792,9 +792,9 @@ The element contains a _sequence_ of the following elements:
 || `StopPoint` | _StopPointStructure_ | Model of a stop point 
 || `TopographicPlace` | _TopographicPlaceStructure_ | TopographicPlace. Region, village, or city.
 | `Name` | _InternationalTextStructure_ | Public name of the place.
-| `GeoPosition` | _siri:LocationStructure_ | 
+| `GeoPosition` | _siri:LocationStructure_ 
 | `Attribute` | _GeneralAttributeStructure_ | Attribute associated with this place. 0:n_
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -806,11 +806,11 @@ The element contains a _sequence_ of the following elements:
 |===
 | Then, the element contains _one of_ the following elements:
 
-|| `siri:StopPointRef` | 
-|| `StopPlaceRef` | 
-|| `TopographicPlaceRef` | 
-|| `PointOfInterestRef` | 
-|| `AddressRef` | 
+|| `siri:StopPointRef` 
+|| `StopPlaceRef` 
+|| `TopographicPlaceRef` 
+|| `PointOfInterestRef` 
+|| `AddressRef` 
 || `GeoPosition` | _siri:LocationStructure_ | WGS84 coordinates position.
 | `Name` | _InternationalTextStructure_ | Public name of the place.
 |===
@@ -933,7 +933,7 @@ The element contains a _sequence_ of the following elements:
 | `OnwardCall` | _CallAtNearStopStructure_ | Calls at stops that happen after this stop event (rest of the service pattern of the vehicle journey). 0:n_
 | `Service` | _DatedJourneyStructure_ | Service that calls at this stop.
 | `OperatingDaysGroup`
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -985,8 +985,8 @@ The element contains a _sequence_ of the following elements:
 | `TripMobilityFilterGroup`
 | `TripPolicyGroup`
 | `TripContentFilterGroup`
-| `FareParam` | _FareParamStructure_ | 
-| `Extension` | _xs:anyType_ | 
+| `FareParam` | _FareParamStructure_ 
+| `Extension` | _xs:anyType_ 
 |===
 
 === The `TripDataFilterGroup` group
@@ -1046,8 +1046,8 @@ NNot-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that
 
 The element contains _one of_ the following elements:
 
-| `siri:StopPointRef` | 
-| `StopPlaceRef` | 
+| `siri:StopPointRef` 
+| `StopPlaceRef` 
 
 
 
@@ -1057,8 +1057,8 @@ no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs 
 
 The element contains _one of_ the following elements:
 
-| `siri:StopPointRef` | 
-| `StopPlaceRef` | 
+| `siri:StopPointRef` 
+| `StopPlaceRef` 
 
 
 === The `TripResponseGroup` group
@@ -1084,7 +1084,7 @@ The element contains a _sequence_ of the following elements:
 
 || `Trip` | _TripStructure_ | Detailed information on trip.
 || `TripSummary` | _TripSummaryStructure_ | Summary on trip. Only if requestor set TripSummaryOnly in request.
-| `TripFare` | _TripFareResultStructure_ |  0:n_
+| `TripFare` | _TripFareResultStructure_  0:n_
 |===
 
 
@@ -1103,8 +1103,8 @@ The element contains a _sequence_ of the following elements:
 | `PTTripLegs` | _xs:nonNegativeInteger_ | Number of public transport trip legs.
 | `Distance` | _siri:DistanceType_ | Trip distance.
 | `OperatingDaysGroup`
-| `SituationFullRef` |  0:n_
-| `Extension` | _xs:anyType_ | 
+| `SituationFullRef`  0:n_
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -1122,8 +1122,8 @@ The element contains a _sequence_ of the following elements:
 | `Distance` | _siri:DistanceType_ | Trip distance.
 | `TripLeg` | _TripLegStructure_ | Legs of the trip 0:n_
 | `OperatingDaysGroup`
-| `SituationFullRef` |  0:n_
-| `Extension` | _xs:anyType_ | 
+| `SituationFullRef`  0:n_
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -1137,9 +1137,9 @@ The element contains a _sequence_ of the following elements:
 | `ParticipantRef` | _siri:ParticipantRefStructure_ | [equivalent of PARTICIPANT in SIRI] IT system that is participating in a communication with other participant(s)
 | Then, the element contains _one of_ the following elements:
 
-Choice for the type of the trip leg.|| `ContinuousLeg` | _ContinuousLegStructure_ | 
-|| `TimedLeg` | _TimedLegStructure_ | 
-|| `TransferLeg` | _TransferLegStructure_ | 
+Choice for the type of the trip leg.|| `ContinuousLeg` | _ContinuousLegStructure_ 
+|| `TimedLeg` | _TimedLegStructure_ 
+|| `TransferLeg` | _TransferLegStructure_ 
 |===
 
 
@@ -1156,7 +1156,7 @@ The element contains a _sequence_ of the following elements:
 | `LegAttribute` | _LegAttributeStructure_ | Attributes that are not valid on the whole service, but only on parts of the journey leg. 0:n_
 | `OperatingDaysGroup`
 | `LegTrack` | _LegTrackStructure_ | Geographic embedding of this leg.
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -1178,8 +1178,8 @@ The element contains a _sequence_ of the following elements:
 | `Length` | _LengthType_ | Length of this interchange path.
 | `Attribute` | _GeneralAttributeStructure_ | Note or service attribute. 0:n_
 | `PathGuidance` | _PathGuidanceStructure_ | Structured model further describing this interchange, its geographic embedding and accessibility.
-| `SituationFullRef` |  0:n_
-| `Extension` | _xs:anyType_ | 
+| `SituationFullRef`  0:n_
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -1198,8 +1198,8 @@ The element contains a _sequence_ of the following elements:
 | `Length` | _LengthType_ | Length of the leg.
 | `LegTrack` | _LegTrackStructure_ | Detailed description of each element of this leg including geometric projection.
 | `PathGuidance` | _PathGuidanceStructure_ | Structured model further describing this interchange, its geographic embedding and accessibility.
-| `SituationFullRef` |  0:n_
-| `Extension` | _xs:anyType_ | 
+| `SituationFullRef`  0:n_
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -1300,7 +1300,7 @@ The element contains a _sequence_ of the following elements:
 | `DirectionHint` | _InternationalTextStructure_ | Textual direction hint for better understanding, e.g. "follow signs to Hamburg".
 | `Bearing` | _siri:AbsoluteBearingType_ | Absolute bearing after the described manoeuvre.
 | `PathLink` | _PathLinkStructure_ | Description of the type of accessibility on this navigation section.
-| `SituationFullRef` | _SituationFullRefStructure_ |  0:n_
+| `SituationFullRef` | _SituationFullRefStructure_  0:n_
 |===
 
 === The `TransferDurationGroup` group
@@ -1351,8 +1351,8 @@ The element contains a _sequence_ of the following elements:
 | `TripMobilityFilterGroup`
 | `MultiPointTripPolicyGroup`
 | `TripContentFilterGroup`
-| `FareParam` | _FareParamStructure_ | 
-| `Extension` | _xs:anyType_ | 
+| `FareParam` | _FareParamStructure_ 
+| `Extension` | _xs:anyType_ 
 |===
 
 === The `MultiPointTripPolicyGroup` group
@@ -1389,9 +1389,9 @@ The element contains a _sequence_ of the following elements:
 | Then, the element contains _one of_ the following elements:
 
 || `Trip` | _TripStructure_ | Information on the trip.
-|| `TripSummary` | _TripSummaryStructure_ | 
+|| `TripSummary` | _TripSummaryStructure_ 
 | `MultiPointWaitTimeGroup`
-| `TripFare` | _TripFareResultStructure_ |  0:n_
+| `TripFare` | _TripFareResultStructure_  0:n_
 |===
 
 === The `MultiPointWaitTimeGroup` group
@@ -1451,7 +1451,7 @@ Vehicle journey (not dated).
 The element contains a _sequence_ of the following elements:
 
 |===
-| `JourneyRef` | 
+| `JourneyRef` 
 | `ServiceGroup`
 |===
 
@@ -1466,7 +1466,7 @@ The element contains a _sequence_ of the following elements:
 | `ProductCategory` | _ProductCategoryStructure_ | A product category for the service. This is a classification defined in NeTEx/SIRI used to identify groups of journeys with some special properties for marketing and fare products, e.g. "TE2" for SNCF or a special panorama train "PE" in Switzerland.
 | `PublishedServiceName` | _InternationalTextStructure_ | Line name or service description as known to the public, f.e. "512", "S8" or "Circle Line" or "ICE 488".
 | `TrainNumber` | _xs:normalizedString_ | Contains the TrainNumber description from NeTEx. If several TrainNumber types exist, use the commercial number.
-| `OperatorRef` | 
+| `OperatorRef` 
 | `RouteDescription` | _InternationalTextStructure_ | Descriptive text for a route, f.e. "Airport via City Centre"
 | `Via` | _ServiceViaPointStructure_ | Via points of the service that may help identify the vehicle to the public. 0:n_
 | `Attribute` | _GeneralAttributeStructure_ | Note or service attribute. 0:n_
@@ -1498,7 +1498,7 @@ Descriptive text for a route, f.e. "Airport via City Centre"
 
 The element contains only one element:
 
-| `RouteDescriptionText` | _InternationalTextStructure_ | 
+| `RouteDescriptionText` | _InternationalTextStructure_ 
 
 
 === The `DatedJourneyGroup` group
@@ -1507,8 +1507,8 @@ Vehicle journey that runs at a specific date.
 The element contains a _sequence_ of the following elements:
 
 |===
-| `OperatingDayRef` | 
-| `siri:VehicleRef` | 
+| `OperatingDayRef` 
+| `siri:VehicleRef` 
 | `ScheduledJourneyGroup`
 |===
 
@@ -1518,9 +1518,9 @@ specific service operated by a Private Mode
 The element contains a _sequence_ of the following elements:
 
 |===
-| `JourneyRef` | 
+| `JourneyRef` 
 | `PrivateMode` | _PrivateModesEnumeration_ | [a category of MODE in TMv6] MODEs offered by private individuals 
-| `OrganisationRef` | _siri:OperatorRefStructure_ | 
+| `OrganisationRef` | _siri:OperatorRefStructure_ 
 | `InfoUrl` | _WebLinkStructure_ | Link to web page providing more details on service.
 |===
 
@@ -1539,8 +1539,8 @@ The element contains a _sequence_ of the following elements:
 | `ServiceDestinationGroup`
 | `ServiceStatusGroup`
 | `BookingArrangements` | _BookingArrangementsContainerStructure_ | Container with information on booking possibilities for this service.
-| `SituationFullRef` |  0:n_
-| `Extension` | _xs:anyType_ | 
+| `SituationFullRef`  0:n_
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -1550,8 +1550,8 @@ A trip place represents the current logical position of a  journey service. It c
 The element contains a _sequence_ of the following elements:
 
 |===
-| `OperatingDayRef` | 
-| `JourneyRef` | 
+| `OperatingDayRef` 
+| `JourneyRef` 
 | `siri:LineIdentityGroup`
 |===
 
@@ -1608,7 +1608,7 @@ The element contains only one element:
 | `ServiceTimeGroup`
 
 | `StopCallStatusGroup`
-| `SituationFullRef` |  0:n_
+| `SituationFullRef`  0:n_
 |===
 
 === The `StopCallStatusGroup` group
@@ -1651,12 +1651,12 @@ The element contains a _sequence_ of the following elements:
 | Then, the element contains _one of_ the following elements:
 
 || `DatedJourneyGroup`
-|| `SharingService` | _SharingServiceStructure_ | 
+|| `SharingService` | _SharingServiceStructure_ 
 | `ServiceOriginGroup`
 | `ServiceDestinationGroup`
 | `BookingArrangements` | _BookingArrangementsContainerStructure_ | Container with information on booking possibilities for this service.
-| `SituationFullRef` |  0:n_
-| `Extension` | _xs:anyType_ | 
+| `SituationFullRef`  0:n_
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -1776,12 +1776,12 @@ The element contains a _sequence_ of the following elements:
 
 The element contains only one element:
 
-| `Position` | _siri:LocationStructure_ |  0:n_
+| `Position` | _siri:LocationStructure_  0:n_
 
 | `RoadName` | _xs:string_ | Name of the road this track section is attached to.
 | `Duration` | _xs:duration_ | Duration the passenger needs to travel through this track section.
 | `Length` | _siri:DistanceType_ | Length of this track section.
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 == OJP/OJP_SituationSupport.xsd - Supporting definitions for situations containing wrappers for SIRI Situation Exchange service (SIRI SX)
@@ -1794,7 +1794,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `PtSituation` | _siri:PtSituationElementStructure_ | SIRI situation details. 0:n_
-| `RoadSituation` | _siri:RoadSituationElementStructure_ |  0:n_
+| `RoadSituation` | _siri:RoadSituationElementStructure_  0:n_
 |===
 
 === The toplevel element `SituationFullRef`
@@ -1829,7 +1829,7 @@ The element contains a _sequence_ of the following elements:
 |===
 | `TripInfoPolicyGroup`
 | `TripInfoContentFilterGroup`
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 === The `TripInfoPolicyGroup` group
@@ -1880,7 +1880,7 @@ The element contains a _sequence_ of the following elements:
 | `OperatingDaysGroup`
 | `ServiceFacilityGroup`
 | `JourneyTrack` | _LegTrackStructure_ | Geographic embedding of this journey. The entire journey is regarded as one leg.
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 == OJP/OJP_Fare.xsd - Request and response definitions for general, stop-specific and trip-specific fare information
@@ -1907,7 +1907,7 @@ Sub-request: stop-related fare information.
 The element contains a _sequence_ of the following elements:
 
 |===
-| `siri:StopPointRef` | 
+| `siri:StopPointRef` 
 | `Date` | _xs:date_ | Date for which to retrieve Fare information.
 |===
 
@@ -1919,7 +1919,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `Date` | _xs:date_ | Date for which to retrieve Fare information.
-| `FareProductRef` |  0:n_
+| `FareProductRef`  0:n_
 |===
 
 
@@ -1976,7 +1976,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `TariffZoneListInArea` | _TariffZoneListInAreaStructure_ | One or more lists of Fare zones that belong to a Fare authority/area. 0:n_
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -1988,7 +1988,7 @@ The element contains a _sequence_ of the following elements:
 |===
 | `FareProduct` | _FareProductStructure_ | [related to FARE PRODUCT in TM and NeTEx] different FARE PRODUCTs that may be available with related information. 0:n_
 | `StaticInfoUrl` | _WebLinkStructure_ | URL to information page on the web. 0:n_
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -1998,7 +1998,7 @@ Element that connects FareProducts to trips. A TripFareProduct is a FAREPRODUCT 
 The element contains a _sequence_ of the following elements:
 
 |===
-| `FareProductRef` | 
+| `FareProductRef` 
 | `FromTripIdRef` | _xs:NMTOKEN_ | Identifies the "valid from" trip.
 | `FromTripLegIdRef` | _xs:NMTOKEN_ | Identifies the "valid from" tripLeg. If missing, then valid from the first leg.
 | `ToTripIdRef` | _xs:NMTOKEN_ | Identifies the "valid to" trip.
@@ -2046,7 +2046,7 @@ Group of attributes for an ORGANISATION which has the RESPONSIBILITY ROLE for th
 The element contains a _sequence_ of the following elements:
 
 |===
-| `FareAuthorityRef` | 
+| `FareAuthorityRef` 
 | `FareAuthorityText` | _xs:string_ | Textual description or name of Fare authority.
 |===
 
@@ -2065,7 +2065,7 @@ Reference to a fare zone.
 The element contains a _sequence_ of the following elements:
 
 |===
-| `TariffZoneRef` | 
+| `TariffZoneRef` 
 | `TariffZoneText` | _xs:string_ | Text describing the fare zone. Passengers will recognize the fare zone by this text. Often published on Fare Zone Maps.
 |===
 
@@ -2087,8 +2087,8 @@ List of fare zones references within the area of a Fare Authority.
 The element contains a _sequence_ of the following elements:
 
 |===
-| `FareAuthorityRef` | 
-| `TariffZoneRef` |  0:n_
+| `FareAuthorityRef` 
+| `TariffZoneRef`  0:n_
 |===
 
 
@@ -2103,7 +2103,7 @@ The element contains a _sequence_ of the following elements:
 | `InfoUrl` | _WebLinkStructure_ | URL to information page.
 | `PhoneNumber` | _PhoneNumberType_ | Phone number for booking.
 | `MinimumBookingPeriod.` | _xs:duration_ | Minimum duration bookings must be completed before trip starts.
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -2114,7 +2114,7 @@ The element contains a _sequence_ of the following elements:
 
 |===
 | `BookingArrangement` | _BookingArrangementStructure_ | [a more generalised form of BOOKING ARRANGEMENTS in TMv6] arrangement for booking any leg or legs of a journey. 0:n_
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 
@@ -2147,7 +2147,7 @@ The element contains a _sequence_ of the following elements:
 | `FareProductPriceGroup`
 | `FareProductValidityGroup`
 | `FareProductBookingGroup`
-| `Extension` | _xs:anyType_ | 
+| `Extension` | _xs:anyType_ 
 |===
 
 === The `FareProductPriceGroup` group
@@ -2185,7 +2185,7 @@ The element contains a _sequence_ of the following elements:
 |===
 | `InfoUrl` | _WebLinkStructure_ | URL to information for this FareProduct 0:n_
 | `SaleUrl` | _WebLinkStructure_ | URL to buy the FareProduct online 0:n_
-| `BookingArrangements` | _BookingArrangementsContainerStructure_ |  0:n_
+| `BookingArrangements` | _BookingArrangementsContainerStructure_  0:n_
 |===
 
 === The `TripLegRangeGroup` group
@@ -2336,8 +2336,8 @@ Reference to a DATED VEHICLE JOURNEY (Reference to a journey on a specific opera
 The element contains a _sequence_ of the following elements:
 
 |===
-| `JourneyRef` | 
-| `OperatingDayRef` | 
+| `JourneyRef` 
+| `OperatingDayRef` 
 |===
 
 === The `TimedVehicleRefGroup` group
@@ -2346,7 +2346,7 @@ Reference to a vehicle for a specific point in time.
 The element contains a _sequence_ of the following elements:
 
 |===
-| `siri:VehicleRef` | 
+| `siri:VehicleRef` 
 | `TimeOfOperation` | _xs:dateTime_ | Time stamp when the vehicle is operating. In most use cases equal to "now".
 |===
 

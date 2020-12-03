@@ -122,8 +122,11 @@ from top to bottom. Note, however, that for the actual operation,
 				<xsl:text>_</xsl:text>
 			</xsl:when>
 		</xsl:choose>
-		<xsl:text> | </xsl:text>
-		<xsl:apply-templates/>
+		<xsl:text> </xsl:text>
+		<xsl:if test="*">
+			<xsl:text>| </xsl:text>
+			<xsl:apply-templates/>
+		</xsl:if>
 		<xsl:if test="@maxOccurs='unbounded'">
 			<xsl:text> 0:n_</xsl:text>
 		</xsl:if>
