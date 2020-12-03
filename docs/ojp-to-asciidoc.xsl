@@ -100,9 +100,18 @@ from top to bottom. Note, however, that for the actual operation,
 			<xsl:with-param name="char" select="$asterisk"/>
 			<xsl:with-param name="n" select="$depth"/>
 		</xsl:call-template>
-		<xsl:text> `</xsl:text>
-		<xsl:value-of select="@name"/>
-		<xsl:text>`</xsl:text>
+		<xsl:choose>
+			<xsl:when test="@name">
+				<xsl:text> `</xsl:text>
+				<xsl:value-of select="@name"/>
+				<xsl:text>`</xsl:text>
+			</xsl:when>
+			<xsl:when test="@ref">
+				<xsl:text> `</xsl:text>
+				<xsl:value-of select="@ref"/>
+				<xsl:text>`</xsl:text>
+			</xsl:when>
+		</xsl:choose>
 		<xsl:choose>
 			<xsl:when test="@type">
 				<xsl:text> | _</xsl:text><xsl:value-of select="@type"/>
