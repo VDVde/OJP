@@ -113,6 +113,31 @@ from top to bottom. Note, however, that for the actual operation,
 			</xsl:when>
 		</xsl:choose>
 		<xsl:choose>
+			<xsl:when test="(@minOccurs and @maxOccurs='unbounded')">
+				<xsl:text> | </xsl:text>
+				<xsl:value-of select="@minOccurs"/>
+				<xsl:text>:* </xsl:text>
+			</xsl:when>
+			<xsl:when test="(@minOccurs and @maxOccurs)">
+				<xsl:text> | </xsl:text>
+				<xsl:value-of select="@minOccurs"/>
+				<xsl:text>:</xsl:text>
+				<xsl:value-of select="@maxOccurs"/>
+				<xsl:text> </xsl:text>
+			</xsl:when>
+			<xsl:when test="(@maxOccurs='unbounded')">
+				<xsl:text> | 1:* </xsl:text>
+			</xsl:when>
+			<xsl:when test="(@minOccurs)">
+				<xsl:text> | </xsl:text>
+				<xsl:value-of select="@minOccurs"/>
+				<xsl:text>:1 </xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text> | 1:1 </xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+		<xsl:choose>
 			<xsl:when test="@type">
 				<xsl:text> | _</xsl:text><xsl:value-of select="@type"/>
 				<xsl:text>_</xsl:text>
@@ -126,9 +151,6 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:if test="*">
 			<xsl:text>| </xsl:text>
 			<xsl:apply-templates/>
-		</xsl:if>
-		<xsl:if test="@maxOccurs='unbounded'">
-			<xsl:text> 0:n_</xsl:text>
 		</xsl:if>
 		<xsl:text>&#xa;</xsl:text>
 	</xsl:template>
@@ -234,7 +256,33 @@ from top to bottom. Note, however, that for the actual operation,
 		</xsl:call-template>
 		<xsl:text> `</xsl:text>
 		<xsl:value-of select="@ref"/>
-		<xsl:text>`&#xa;</xsl:text>
+		<xsl:text>`</xsl:text>
+		<xsl:choose>
+			<xsl:when test="(@minOccurs and @maxOccurs='unbounded')">
+				<xsl:text> | </xsl:text>
+				<xsl:value-of select="@minOccurs"/>
+				<xsl:text>:* </xsl:text>
+			</xsl:when>
+			<xsl:when test="(@minOccurs and @maxOccurs)">
+				<xsl:text> | </xsl:text>
+				<xsl:value-of select="@minOccurs"/>
+				<xsl:text>:</xsl:text>
+				<xsl:value-of select="@maxOccurs"/>
+				<xsl:text> </xsl:text>
+			</xsl:when>
+			<xsl:when test="(@maxOccurs='unbounded')">
+				<xsl:text> | 1:* </xsl:text>
+			</xsl:when>
+			<xsl:when test="(@minOccurs)">
+				<xsl:text> | </xsl:text>
+				<xsl:value-of select="@minOccurs"/>
+				<xsl:text>:1 </xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text> | 1:1 </xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+		<xsl:text>&#xa;</xsl:text>
 	</xsl:template>
 
 	<!-- ComplexTypes are subsections. Their content is printed by some of the templates above. -->
