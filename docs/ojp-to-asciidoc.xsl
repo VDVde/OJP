@@ -227,9 +227,10 @@ from top to bottom. Note, however, that for the actual operation,
 
 	<!-- ComplexTypes are subsections. Their content is printed by some of the templates above. -->
 	<xsl:template match="/xs:schema/xs:complexType">
-		<xsl:text>=== The `</xsl:text>
+		<xsl:text>&#xa;</xsl:text>
+		<xsl:text>=== The complex type `</xsl:text>
 		<xsl:value-of select="@name"/>
-		<xsl:text>` type&#xa;&#xa;</xsl:text>
+		<xsl:text>`&#xa;&#xa;</xsl:text>
 		<xsl:apply-templates/>
 		<xsl:text>&#xa;&#xa;</xsl:text>
 	</xsl:template>
