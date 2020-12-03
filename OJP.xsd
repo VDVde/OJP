@@ -4,7 +4,9 @@
 	<!-- ifopt must be imported before siri, otherwise xmllint fails -->
 	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="./siri/ifopt/ifopt_allStopPlace-v0.3.xsd"/>
 	<xs:include schemaLocation="./siri/siri_model/siri_all-v2.0.xsd"/>
-	<!--== SIRI Request include OJP Requests ===================================================================== -->
+	<xs:annotation>
+		<xs:documentation>OJP - **O**pen API for distributed **J**ourney **P**lanning</xs:documentation>
+	</xs:annotation>
 	<xs:element name="OJP">
 		<xs:annotation>
 			<xs:documentation>Root element for OJP messages based on SIRI message exchange protocol.</xs:documentation>

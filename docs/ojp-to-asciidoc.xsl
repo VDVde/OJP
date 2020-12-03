@@ -1,11 +1,10 @@
 <!--
 
-Style sheet to convert the Ixsi describing XSDs to some Asciidoc
-for the documentation.
+Style sheet to convert the XSDs describing OJP to Asciidoc for the documentation.
 
 The XSL process is orchestrated by a script which calls this XSLT stylesheet
-on the different schema files of the Ixsi specification and generates
-an Asciidoc document for each.
+on the different schema files of the OJP specification and generates
+a single Asciidoc document from them.
 
 Note that XSLT is a functionally driven process: This stylesheet defines a number
 of transforming templates which match specific portions of the input document.
@@ -30,9 +29,6 @@ from top to bottom. Note, however, that for the actual operation,
 
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-	<!-- Section title is given from the outside. -->
-	<xsl:param name="sectiontitle" select="TITLE"/>
 
 	<!-- We're not producing XML output -->
 	<xsl:output omit-xml-declaration="yes" method="text" indent="no"/>
@@ -73,10 +69,7 @@ from top to bottom. Note, however, that for the actual operation,
 
 	<!-- *** conversion templates *** -->
 
-	<!-- suppress nodes that are not matched
-	<xsl:template match="*"/> -->
-
-	<!-- All documentation on the schema itself is suppressed. -->
+	<!-- All documentation on the schema itself is suppressed, as it is used as the section title -->
 	<xsl:template match="/xs:schema/xs:annotation"/>
 
 	<!-- All (other) documentation is printed verbatim -->
@@ -187,7 +180,7 @@ from top to bottom. Note, however, that for the actual operation,
 	</xsl:template>
 
 	<!-- Choice with more than one element: Print subelements as list.
-	Also here, we handle the toplevel case seperately. -->
+	Also here, we handle the toplevel case separately. -->
 	<xsl:template match="xs:choice">
 		<xsl:param name="depth" select="0"/>
 		<xsl:choose>
@@ -255,7 +248,7 @@ from top to bottom. Note, however, that for the actual operation,
 	<xsl:template match="/xs:schema">
 		<!-- An XSD file is transferred to an Asciidoc subsection -->
 		<xsl:text>== </xsl:text>
-		<xsl:value-of select="$sectiontitle"/>
+		<xsl:value-of select="xs:annotation/xs:documentation"/>
 		<xsl:text>&#xa;&#xa;</xsl:text>
 
 		<!-- First subsection are all simpleTypes, if they exist. -->
@@ -274,4 +267,4 @@ from top to bottom. Note, however, that for the actual operation,
 
 </xsl:stylesheet>
 
-		<!-- end of file -->
+<!-- end of file -->
