@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Common.xsd - Supporting definitions of common structures</xs:documentation>
+	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
-		<xs:documentation>========================================= General ================================================</xs:documentation>
+		<xs:documentation>========================================== General ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="ErrorMessageStructure">
 		<xs:annotation>
@@ -40,7 +43,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= Participants =============================================</xs:documentation>
+		<xs:documentation>========================================== Participants ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:element name="ParticipantRef" type="siri:ParticipantRefStructure">
 		<xs:annotation>
@@ -48,7 +51,7 @@
 		</xs:annotation>
 	</xs:element>
 	<xs:annotation>
-		<xs:documentation>========================================= Operators =============================================</xs:documentation>
+		<xs:documentation>========================================== Operators ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
 		<xs:annotation>
@@ -73,7 +76,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= ProductCategories =============================================</xs:documentation>
+		<xs:documentation>========================================== ProductCategories ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="ProductCategoryRefStructure">
 		<xs:annotation>
@@ -114,7 +117,9 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- ========================================= Journeys ============================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== Journeys ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:simpleType name="JourneyCodeType">
 		<xs:annotation>
 			<xs:documentation>Identifier of a Journey</xs:documentation>
@@ -143,7 +148,9 @@
 			<xs:element ref="OperatingDayRef"/>
 		</xs:sequence>
 	</xs:group>
-	<!-- ========================================== Vehicles ============================= -->
+	<xs:annotation>
+		<xs:documentation>========================================== Vehicles ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:group name="TimedVehicleRefGroup">
 		<xs:annotation>
 			<xs:documentation>Reference to a vehicle for a specific point in time.</xs:documentation>
@@ -157,7 +164,9 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<!-- ========================================== Sharing Services ========================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== Sharing Services ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:simpleType name="SharingModelEnumeration">
 		<xs:annotation>
 			<xs:documentation>Sharing service loan and return scheme.</xs:documentation>
@@ -213,7 +222,9 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- ========================================== Owners ============================= -->
+	<xs:annotation>
+		<xs:documentation>========================================== Owners ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:simpleType name="OwnerCodeType">
 		<xs:annotation>
 			<xs:documentation>identifier of ORGANISATION with ownership as the RESPONSIBILITY ROLE</xs:documentation>
@@ -233,7 +244,9 @@
 			<xs:documentation>Reference to an  ORGANISATION with ownership as the RESPONSIBILITY ROLE</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<!-- ========================================= Operating Days ============================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== Operating Days ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:simpleType name="OperatingDayCodeType">
 		<xs:annotation>
 			<xs:documentation>Identifier of an Operating Day</xs:documentation>
@@ -330,7 +343,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
-		<xs:documentation>==================================== General Attributes =============================================</xs:documentation>
+		<xs:documentation>========================================== General Attributes ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="GeneralAttributeStructure">
 		<xs:annotation>
