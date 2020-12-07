@@ -1,21 +1,21 @@
-# OJP - *O*pen API for distributed *J*ourney *P*lanning  XSD
+# OJP - *O*pen API for distributed *J*ourney *P*lanning
 
-## Content ##
-This repository contains the XSD and examples for the Standard "CEN/TS 17118:2017: "Intelligent transport systems - Public transport - Open API for distributed journey planning".
+## Content
+This repository contains the XSD, examples and documentation tables for the 
+"**O**pen API for distributed **J**ourney **P**lanning" published as 
+*"CEN/TS 17118:2017: "Intelligent transport systems - Public transport - Open API for distributed journey planning"*.
 
-OJP consists of a set of services that can be addressed by Request / Response or by subscription.
+OJP consists of a set of services that can be addressed using HTTP requests.
 
-The main services are:
-* Location Information
+The main services to request information are:
+* Place Information
 * Stop Events (arrival and departure boards)
 * Searching for Trips
-* Information about a given Trips
+* Information about a given Trip
 * Information about Fares for Trips
 
-For the interaction between different OJP additionally there are:
+OJP systems interacting with each other additionally use:
 * Getting information about Exchange Points (places when a Trip switches from one OJP system to another)
-* MultiPointTripRequest: Allows for searching of n x m Trips
-
 
 
 ## Standard document
@@ -26,9 +26,10 @@ at [CEN](https://www.cen.eu).
 
 ## Repository
 
-Download the XSD schema files and examples in the git repository found at https://github.com/VDVde/OJP 
+Download the XSD schema files and examples in the git repository found at https://github.com/VDVde/OJP and take a look at the [documentation tables](https://vdvde.github.io/OJP/generated/OJP.html).
 
-## Regulatory environment of OJP ##
+
+## Regulatory environment of OJP
 The ITS Directive Delegated Regulation for provision of EU-wide multimodal travel information services is the legal framework for travel
 data access and distributed journey planning in Europe. This initiative will provide the necessary requirements to make EU-wide multimodal
 travel information services accurate and available across borders. One of the key requirements concerns linking travel information services
