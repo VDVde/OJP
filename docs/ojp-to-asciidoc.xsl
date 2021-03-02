@@ -67,6 +67,34 @@ from top to bottom. Note, however, that for the actual operation,
 		</xsl:call-template>
 	</xsl:template>
 
+	<!-- Output cardinality as 0:1, 1:1, 1:* etc.-->
+	<xsl:template name="output-cardinality">
+		<xsl:variable name="min">
+			<xsl:choose>
+				<xsl:when test="@minOccurs"><xsl:value-of select="@minOccurs"/></xsl:when>
+				<xsl:otherwise>1</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:variable name="max">
+			<xsl:choose>
+				<xsl:when test="@maxOccurs = 'unbounded'">*</xsl:when>
+				<xsl:when test="@maxOccurs"><xsl:value-of select="@maxOccurs"/></xsl:when>
+				<xsl:otherwise>1</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:if test="$min = 1">
+			<!-- If mandatory, make it bold. -->
+			<xsl:text>*</xsl:text>
+	    </xsl:if>
+		<xsl:value-of select="$min"/>
+		<xsl:text>:</xsl:text>
+		<xsl:value-of select="$max"/>
+		<xsl:if test="$min = 1">
+			<xsl:text>*</xsl:text>
+	    </xsl:if>
+	</xsl:template>
+
+
 	<!-- *** conversion templates *** -->
 
 	<!-- All documentation on the schema itself is suppressed, as it is used as the section title -->
@@ -112,31 +140,8 @@ from top to bottom. Note, however, that for the actual operation,
 				<xsl:text>`</xsl:text>
 			</xsl:when>
 		</xsl:choose>
-		<xsl:choose>
-			<xsl:when test="(@minOccurs and @maxOccurs='unbounded')">
-				<xsl:text> | </xsl:text>
-				<xsl:value-of select="@minOccurs"/>
-				<xsl:text>:* </xsl:text>
-			</xsl:when>
-			<xsl:when test="(@minOccurs and @maxOccurs)">
-				<xsl:text> | </xsl:text>
-				<xsl:value-of select="@minOccurs"/>
-				<xsl:text>:</xsl:text>
-				<xsl:value-of select="@maxOccurs"/>
-				<xsl:text> </xsl:text>
-			</xsl:when>
-			<xsl:when test="(@maxOccurs='unbounded')">
-				<xsl:text> | 1:* </xsl:text>
-			</xsl:when>
-			<xsl:when test="(@minOccurs)">
-				<xsl:text> | </xsl:text>
-				<xsl:value-of select="@minOccurs"/>
-				<xsl:text>:1 </xsl:text>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:text> | 1:1 </xsl:text>
-			</xsl:otherwise>
-		</xsl:choose>
+		<xsl:text> | </xsl:text>
+		<xsl:call-template name="output-cardinality"/>
 		<xsl:choose>
 			<xsl:when test="@type">
 				<xsl:text> | _</xsl:text><xsl:value-of select="@type"/>
@@ -257,31 +262,8 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:text> `</xsl:text>
 		<xsl:value-of select="@ref"/>
 		<xsl:text>`</xsl:text>
-		<xsl:choose>
-			<xsl:when test="(@minOccurs and @maxOccurs='unbounded')">
-				<xsl:text> | </xsl:text>
-				<xsl:value-of select="@minOccurs"/>
-				<xsl:text>:* </xsl:text>
-			</xsl:when>
-			<xsl:when test="(@minOccurs and @maxOccurs)">
-				<xsl:text> | </xsl:text>
-				<xsl:value-of select="@minOccurs"/>
-				<xsl:text>:</xsl:text>
-				<xsl:value-of select="@maxOccurs"/>
-				<xsl:text> </xsl:text>
-			</xsl:when>
-			<xsl:when test="(@maxOccurs='unbounded')">
-				<xsl:text> | 1:* </xsl:text>
-			</xsl:when>
-			<xsl:when test="(@minOccurs)">
-				<xsl:text> | </xsl:text>
-				<xsl:value-of select="@minOccurs"/>
-				<xsl:text>:1 </xsl:text>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:text> | 1:1 </xsl:text>
-			</xsl:otherwise>
-		</xsl:choose>
+		<xsl:text> | </xsl:text>
+		<xsl:call-template name="output-cardinality"/>
 		<xsl:text>&#xa;</xsl:text>
 	</xsl:template>
 
