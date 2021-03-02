@@ -172,10 +172,11 @@ from top to bottom. Note, however, that for the actual operation,
 			</xsl:when>
 			<xsl:otherwise>
 				<!-- Otherwise: Make it a "one element list". -->
-				<xsl:text>&#xa;&#xa;The element contains only one element:&#xa;&#xa;</xsl:text>
+				<xsl:text>&#xa;&#xa;The element contains only one element:&#xa;&#xa;|===&#xa;</xsl:text>
 				<xsl:apply-templates>
 					<xsl:with-param name="depth" select="$depth + 1"/>
 				</xsl:apply-templates>
+				<xsl:text>|===</xsl:text>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
