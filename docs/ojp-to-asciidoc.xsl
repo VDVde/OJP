@@ -94,6 +94,20 @@ from top to bottom. Note, however, that for the actual operation,
 	    </xsl:if>
 	</xsl:template>
 
+	<xsl:template name="output-name-or-ref">
+		<xsl:choose>
+			<xsl:when test="@name">
+				<xsl:text>`</xsl:text>
+				<xsl:value-of select="@name"/>
+				<xsl:text>`</xsl:text>
+			</xsl:when>
+			<xsl:when test="@ref">
+				<xsl:text>→`</xsl:text>
+				<xsl:value-of select="@ref"/>
+				<xsl:text>`</xsl:text>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
 
 	<!-- *** conversion templates *** -->
 
@@ -109,15 +123,29 @@ from top to bottom. Note, however, that for the actual operation,
 	<xsl:template match="/xs:schema/xs:element">
 		<xsl:text>=== The toplevel element `</xsl:text>
 		<xsl:value-of select="@name"/>
-		<xsl:text>`&#xa;`</xsl:text>
-		<xsl:value-of select="@name"/>
-		<xsl:text>` </xsl:text>
-		<xsl:if test="@type">
-			<xsl:text>| _</xsl:text><xsl:value-of select="@type"/><xsl:text>_ </xsl:text>
-		</xsl:if>
-		<xsl:text>| &#xa;</xsl:text>
-		<xsl:apply-templates/>
+		<xsl:text>`&#xa;&#xa;</xsl:text>
+
+		<xsl:apply-templates select="xs:attribute"/>
 		<xsl:text>&#xa;</xsl:text>
+
+		<xsl:text>[cols="1,1,1,20,20,30"]&#xa;</xsl:text>
+		<xsl:text>|===&#xa;</xsl:text>
+		<xsl:text>4+|`</xsl:text>
+		<xsl:value-of select="@name"/>
+		<xsl:text>`&#xa;</xsl:text>
+		<xsl:choose>
+			<xsl:when test="@type">
+				<xsl:text>|</xsl:text>
+				<xsl:text> _→</xsl:text><xsl:value-of select="@type"/><xsl:text>_ </xsl:text>
+			</xsl:when>
+			<xsl:otherwise>2+</xsl:otherwise>
+		</xsl:choose>
+		<xsl:text>|</xsl:text>
+		<xsl:apply-templates select="xs:annotation"/>
+		<xsl:text>&#xa;&#xa;</xsl:text>
+		<xsl:apply-templates select="xs:complexType|xs:simpleType"/>
+		<xsl:text>&#xa;</xsl:text>
+		<xsl:text>|===&#xa;&#xa;</xsl:text>
 	</xsl:template>
 
 	<!-- Every other "element" node: Will be printed on one line,
@@ -128,41 +156,42 @@ from top to bottom. Note, however, that for the actual operation,
 			<xsl:with-param name="char" select="$asterisk"/>
 			<xsl:with-param name="n" select="$depth"/>
 		</xsl:call-template>
-		<xsl:choose>
-			<xsl:when test="@name">
-				<xsl:text> `</xsl:text>
-				<xsl:value-of select="@name"/>
-				<xsl:text>`</xsl:text>
-			</xsl:when>
-			<xsl:when test="@ref">
-				<xsl:text> `</xsl:text>
-				<xsl:value-of select="@ref"/>
-				<xsl:text>`</xsl:text>
-			</xsl:when>
-		</xsl:choose>
-		<xsl:text> | </xsl:text>
+		<xsl:text>&#xa;</xsl:text>
+
+		<xsl:value-of select="3 - $depth"/>
+		<xsl:text>+| </xsl:text>
+		<xsl:call-template name="output-name-or-ref"/>
+		<xsl:text>&#xa;| </xsl:text>
 		<xsl:call-template name="output-cardinality"/>
+		<xsl:text> | </xsl:text>
 		<xsl:choose>
 			<xsl:when test="@type">
-				<xsl:text> | _</xsl:text><xsl:value-of select="@type"/>
+				<xsl:text>_</xsl:text><xsl:value-of select="@type"/>
 				<xsl:text>_</xsl:text>
 			</xsl:when>
 			<xsl:when test="xs:simpleType/xs:restriction/@base">
-				<xsl:text> | _</xsl:text><xsl:value-of select="xs:simpleType/xs:restriction/@base"/>
+				<xsl:text>_</xsl:text><xsl:value-of select="xs:simpleType/xs:restriction/@base"/>
 				<xsl:text>_</xsl:text>
 			</xsl:when>
 		</xsl:choose>
-		<xsl:text> </xsl:text>
+		<xsl:text> | </xsl:text>
 		<xsl:if test="*">
-			<xsl:text>| </xsl:text>
-			<xsl:apply-templates/>
+			<xsl:apply-templates>
+				<xsl:with-param name="depth" select="$depth + 1"/>
+			</xsl:apply-templates>
 		</xsl:if>
-		<xsl:text>&#xa;</xsl:text>
+		<xsl:text>&#xa;&#xa;</xsl:text>
 	</xsl:template>
 
 	<!-- Sequence with one element: Print the element at the same depth. -->
 	<xsl:template match="xs:sequence[count(*)=1]">
 		<xsl:param name="depth" select="0"/>
+		<!--
+		<xsl:text>&#xa;// sequence[count(*)=1] - depth=</xsl:text>
+		<xsl:value-of select="$depth"/>
+		<xsl:text>&#xa;</xsl:text>
+		-->
+
 		<xsl:choose>
 			<xsl:when test="xs:choice">
 				<!-- Special case: If the one element is a choice, just print that one. -->
@@ -172,11 +201,12 @@ from top to bottom. Note, however, that for the actual operation,
 			</xsl:when>
 			<xsl:otherwise>
 				<!-- Otherwise: Make it a "one element list". -->
-				<xsl:text>&#xa;&#xa;The element contains only one element:&#xa;&#xa;|===&#xa;</xsl:text>
+				<xsl:if test="(ancestor::xs:group|ancestor::xs:element)[1][@name]">
+					<xsl:text>&#xa;&#xa;The element contains only one element:&#xa;&#xa;</xsl:text>
+				</xsl:if>
 				<xsl:apply-templates>
 					<xsl:with-param name="depth" select="$depth + 1"/>
 				</xsl:apply-templates>
-				<xsl:text>|===</xsl:text>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
@@ -185,6 +215,13 @@ from top to bottom. Note, however, that for the actual operation,
 	Elements are printed as list one level deeper. -->
 	<xsl:template match="xs:sequence">
 		<xsl:param name="depth" select="0"/>
+		<!--
+		<xsl:text>&#xa;// xs:sequence - depth=</xsl:text>
+		<xsl:value-of select="$depth"/>
+		<xsl:text>&#xa;</xsl:text>
+		-->
+
+		<!--
 		<xsl:if test="$depth > 0">
 			<xsl:call-template name="chars">
 				<xsl:with-param name="char" select="$asterisk"/>
@@ -192,20 +229,33 @@ from top to bottom. Note, however, that for the actual operation,
 			</xsl:call-template>
 			<xsl:text> </xsl:text>
 		</xsl:if>
-		<xsl:if test="$depth = 0">
+		-->
+		<xsl:call-template name="chars">
+			<xsl:with-param name="char" select="$asterisk"/>
+			<xsl:with-param name="n" select="$depth"/>
+		</xsl:call-template>
+		<xsl:if test="$depth &gt; 0">
 			<xsl:text>&#xa;</xsl:text>
 		</xsl:if>
-		<xsl:text>The element contains a _sequence_ of the following elements:&#xa;&#xa;|===&#xa;</xsl:text>
+		<xsl:value-of select="6 - $depth"/>
+		<xsl:text>+| The element contains a _sequence_ of the following elements:&#xa;&#xa;</xsl:text>
+		<!--xsl:text>The element contains a _sequence_ of the following elements:&#xa;&#xa;</xsl:text-->
+		<!--xsl:text>|===&#xa;</xsl:text-->
 		<xsl:apply-templates>
 			<xsl:with-param name="depth" select="$depth + 1"/>
 		</xsl:apply-templates>
-		<xsl:text>|===</xsl:text>
 	</xsl:template>
 
 	<!-- Choice with one element: Print that element directly.
 	Note that we have to handle the case if we are at top level. -->
 	<xsl:template match="xs:choice[count(*)=1]">
 		<xsl:param name="depth" select="0"/>
+		<!--
+		<xsl:text>&#xa;// xs:choice[count(*)=1] - depth=</xsl:text>
+		<xsl:value-of select="$depth"/>
+		<xsl:text>&#xa;</xsl:text>
+		-->
+
 		<xsl:choose>
 			<xsl:when test="$depth > 0">
 				<xsl:apply-templates>
@@ -225,6 +275,38 @@ from top to bottom. Note, however, that for the actual operation,
 	Also here, we handle the toplevel case separately. -->
 	<xsl:template match="xs:choice">
 		<xsl:param name="depth" select="0"/>
+		<!--
+		<xsl:text>&#xa;// xs:choice - depth=</xsl:text>
+		<xsl:value-of select="$depth"/>
+		<xsl:text>&#xa;</xsl:text>
+		-->
+
+		<xsl:call-template name="chars">
+			<xsl:with-param name="char" select="$asterisk"/>
+			<xsl:with-param name="n" select="$depth"/>
+		</xsl:call-template>
+		<xsl:text>&#xa;</xsl:text>
+		<xsl:value-of select="6 - $depth"/>
+		<xsl:text>+|</xsl:text>
+		<xsl:apply-templates select="xs:annotation">
+			<xsl:with-param name="depth" select="$depth + 1"/>
+		</xsl:apply-templates>
+		<xsl:text>&#xa;</xsl:text>
+
+		<xsl:call-template name="chars">
+			<xsl:with-param name="char" select="$asterisk"/>
+			<xsl:with-param name="n" select="$depth"/>
+		</xsl:call-template>
+		<xsl:text>&#xa;</xsl:text>
+		<xsl:value-of select="6 - $depth"/>
+		<xsl:text>+|</xsl:text>
+		<xsl:choose>
+			<xsl:when test="$depth = 0">The element contains _one of_ the following elements:</xsl:when>
+			<xsl:otherwise>Then, the element contains _one of_ the following elements:</xsl:otherwise>
+		</xsl:choose>
+		<xsl:text>&#xa;&#xa;</xsl:text>
+
+		<!--
 		<xsl:choose>
 			<xsl:when test="$depth = 0">
 				<xsl:text>&#xa;&#xa;The element contains _one of_ the following elements:&#xa;&#xa;</xsl:text>
@@ -237,7 +319,8 @@ from top to bottom. Note, however, that for the actual operation,
 				<xsl:text> Then, the element contains _one of_ the following elements:&#xa;&#xa;</xsl:text>
 			</xsl:otherwise>
 		</xsl:choose>
-		<xsl:apply-templates>
+	-->
+		<xsl:apply-templates select="*[not(self::xs:annotation)]">
 			<xsl:with-param name="depth" select="$depth + 1"/>
 			<xsl:sort select="@name"/>
 		</xsl:apply-templates>
@@ -249,33 +332,67 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:text>=== The `</xsl:text>
 		<xsl:value-of select="@name"/>
 		<xsl:text>` group&#xa;&#xa;</xsl:text>
-		<xsl:apply-templates/>
+
+		<xsl:text>[cols="1,1,1,20,20,30"]&#xa;</xsl:text>
+		<xsl:text>|===&#xa;</xsl:text>
+		<xsl:text>4+| `</xsl:text>
+		<xsl:value-of select="@name"/>
+		<xsl:text>`&#xa;2+| </xsl:text>
+		<!--xsl:text> | </xsl:text-->
+		<xsl:apply-templates select="xs:annotation"/>
 		<xsl:text>&#xa;&#xa;</xsl:text>
+		<xsl:apply-templates select="xs:sequence|xs:choice"/>
+		<xsl:text>|===&#xa;&#xa;</xsl:text>
 	</xsl:template>
 
 	<!-- Any other groups: They are handled as references and only their reference is printed. -->
 	<xsl:template match="xs:group">
 		<xsl:param name="depth" select="0"/>
+
 		<xsl:call-template name="chars">
 			<xsl:with-param name="char" select="$asterisk"/>
 			<xsl:with-param name="n" select="$depth"/>
 		</xsl:call-template>
-		<xsl:text> `</xsl:text>
-		<xsl:value-of select="@ref"/>
-		<xsl:text>`</xsl:text>
-		<xsl:text> | </xsl:text>
-		<xsl:call-template name="output-cardinality"/>
 		<xsl:text>&#xa;</xsl:text>
+
+		<xsl:value-of select="3 - $depth"/>
+		<xsl:text>+| </xsl:text>
+		<xsl:call-template name="output-name-or-ref"/>
+		<xsl:text>&#xa;| </xsl:text>
+		<xsl:call-template name="output-cardinality"/>
+		<xsl:text> | </xsl:text>
+		<xsl:text> | </xsl:text>
+		<xsl:apply-templates select="xs:annotation"/>
+		<xsl:text>&#xa;&#xa;</xsl:text>
+
 	</xsl:template>
 
 	<!-- ComplexTypes are subsections. Their content is printed by some of the templates above. -->
-	<xsl:template match="/xs:schema/xs:complexType">
+	<xsl:template match="/xs:schema/xs:complexType[@name]">
 		<xsl:text>&#xa;</xsl:text>
 		<xsl:text>=== The complex type `</xsl:text>
 		<xsl:value-of select="@name"/>
 		<xsl:text>`&#xa;&#xa;</xsl:text>
-		<xsl:apply-templates/>
+
+		<xsl:text>[cols="1,1,1,20,20,30"]&#xa;</xsl:text>
+		<xsl:text>|===&#xa;</xsl:text>
+		<xsl:text>4+| `</xsl:text>
+		<xsl:value-of select="@name"/>
+		<xsl:text>`&#xa;</xsl:text>
+		<xsl:choose>
+			<xsl:when test="xs:complexContent/xs:extension">
+				<xsl:text>| _←</xsl:text>
+				<xsl:value-of select="xs:complexContent/xs:extension/@base"/>
+				<xsl:text>_ | </xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>2+| </xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+		<xsl:apply-templates select="xs:annotation"/>
 		<xsl:text>&#xa;&#xa;</xsl:text>
+		<xsl:apply-templates select="xs:sequence|xs:choice|xs:complexContent"/>
+		<xsl:text>|===&#xa;&#xa;</xsl:text>
 	</xsl:template>
 
 	<!-- SimpleTypes are printed in a list. Each simpleType is one element of this list.
