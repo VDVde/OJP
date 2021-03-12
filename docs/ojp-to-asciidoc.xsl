@@ -36,13 +36,13 @@ from top to bottom. Note, however, that for the actual operation,
 
 	<!-- *** Helper stuff *** -->
 
-	<xsl:variable name='nl'>
+	<xsl:variable name="nl">
 		<xsl:text>&#xa;</xsl:text>
 	</xsl:variable>
-	<xsl:variable name='colon'>
+	<xsl:variable name="colon">
 		<xsl:text>:</xsl:text>
 	</xsl:variable>
-	<xsl:variable name='asterisk'>
+	<xsl:variable name="asterisk">
 		<xsl:text>|</xsl:text>
 	</xsl:variable>
 
@@ -85,13 +85,30 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:if test="$min = 1">
 			<!-- If mandatory, make it bold. -->
 			<xsl:text>*</xsl:text>
-	    </xsl:if>
+		</xsl:if>
 		<xsl:value-of select="$min"/>
 		<xsl:text>:</xsl:text>
 		<xsl:value-of select="$max"/>
 		<xsl:if test="$min = 1">
 			<xsl:text>*</xsl:text>
-	    </xsl:if>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template name="output-name-ref">
+		<xsl:param name="name" select="'[MISSING]'"/>
+		<xsl:choose>
+			<xsl:when test="starts-with($name, 'siri:')">
+				<xsl:value-of select="$name"/>
+			</xsl:when>
+			<xsl:when test="starts-with($name, 'xs:')">
+				<xsl:value-of select="$name"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>&lt;&lt;</xsl:text>
+				<xsl:value-of select="$name"/>
+				<xsl:text>&gt;&gt;</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template name="output-name-or-ref">
@@ -99,16 +116,65 @@ from top to bottom. Note, however, that for the actual operation,
 			<xsl:when test="@name">
 				<xsl:text>`</xsl:text>
 				<xsl:value-of select="@name"/>
+				<!--
+				<xsl:call-template name="output-name-ref">
+					<xsl:with-param name="name" select="@name"/>
+				</xsl:call-template>
+				-->
 				<xsl:text>`</xsl:text>
 			</xsl:when>
 			<xsl:when test="@ref">
 				<xsl:text>→`</xsl:text>
-				<xsl:value-of select="@ref"/>
+				<xsl:call-template name="output-name-ref">
+					<xsl:with-param name="name" select="@ref"/>
+				</xsl:call-template>
 				<xsl:text>`</xsl:text>
 			</xsl:when>
 		</xsl:choose>
 	</xsl:template>
 
+	<xsl:template name="output-id-and-ref-text">
+		<xsl:variable name="reference-text">
+			<xsl:apply-templates select="." mode="reference-text"/>
+		</xsl:variable>
+		<xsl:choose>
+			<xsl:when test="string-length($reference-text) &gt; 0">
+				<xsl:text>[#</xsl:text>
+				<xsl:apply-templates select="." mode="id"/>
+				<xsl:text>,reftext=</xsl:text>
+				<xsl:apply-templates select="." mode="reference-text"/>
+				<xsl:text>]&#xa;</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>[[</xsl:text>
+				<xsl:apply-templates select="." mode="id"/>
+				<xsl:text>]]&#xa;</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template match="*" mode="id">
+		<xsl:if test="not(@name)">
+			<xsl:message terminate="yes">Element <xsl:value-of select="name()"/> has no 'name' attribute!</xsl:message>
+		</xsl:if>
+		<xsl:value-of select="@name"/>
+	</xsl:template>
+
+	<xsl:template match="xs:schema" mode="id">
+		<xsl:value-of select="substring-after(substring-before(xs:annotation/xs:documentation, '.xsd'), '/')"/>
+	</xsl:template>
+	
+	<xsl:template match="*" mode="reference-text">
+		<xsl:if test="not(@name)">
+			<xsl:message terminate="yes">Element <xsl:value-of select="name()"/> has no 'name' attribute!</xsl:message>
+		</xsl:if>
+		<xsl:value-of select="@name"/>
+	</xsl:template>
+
+	<xsl:template match="xs:schema" mode="reference-text">
+		<!-- no content -->
+	</xsl:template>
+		
 	<!-- *** conversion templates *** -->
 
 	<!-- All documentation on the schema itself is suppressed, as it is used as the section title -->
@@ -121,6 +187,7 @@ from top to bottom. Note, however, that for the actual operation,
 
 	<!-- Top level element: Print as own subsection in Asciidoc. -->
 	<xsl:template match="/xs:schema/xs:element">
+		<xsl:call-template name="output-id-and-ref-text"/>
 		<xsl:text>=== The toplevel element `</xsl:text>
 		<xsl:value-of select="@name"/>
 		<xsl:text>`&#xa;&#xa;</xsl:text>
@@ -136,7 +203,9 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:choose>
 			<xsl:when test="@type">
 				<xsl:text>|</xsl:text>
-				<xsl:text> _→</xsl:text><xsl:value-of select="@type"/><xsl:text>_ </xsl:text>
+				<xsl:text> _→</xsl:text>
+				<xsl:value-of select="@type"/>
+				<xsl:text>_ </xsl:text>
 			</xsl:when>
 			<xsl:otherwise>2+</xsl:otherwise>
 		</xsl:choose>
@@ -166,11 +235,17 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:text> | </xsl:text>
 		<xsl:choose>
 			<xsl:when test="@type">
-				<xsl:text>_</xsl:text><xsl:value-of select="@type"/>
+				<xsl:text>_</xsl:text>
+				<xsl:call-template name="output-name-ref">
+					<xsl:with-param name="name" select="@type"/>
+				</xsl:call-template>
 				<xsl:text>_</xsl:text>
 			</xsl:when>
 			<xsl:when test="xs:simpleType/xs:restriction/@base">
-				<xsl:text>_</xsl:text><xsl:value-of select="xs:simpleType/xs:restriction/@base"/>
+				<xsl:text>_</xsl:text>
+				<xsl:call-template name="output-name-ref">
+					<xsl:with-param name="name" select="xs:simpleType/xs:restriction/@base"/>
+				</xsl:call-template>
 				<xsl:text>_</xsl:text>
 			</xsl:when>
 		</xsl:choose>
@@ -238,11 +313,11 @@ from top to bottom. Note, however, that for the actual operation,
 	Also here, we handle the toplevel case separately. -->
 	<xsl:template match="xs:choice">
 		<xsl:param name="depth" select="0"/>
-		<!--
-		<xsl:text>&#xa;// xs:choice - depth=</xsl:text>
-		<xsl:value-of select="$depth"/>
-		<xsl:text>&#xa;</xsl:text>
-		-->
+
+		<xsl:if test="xs:annotation/xs:documentation">
+			<xsl:message terminate="no">Documentation is not allowed on xs:choice! Context: <xsl:value-of
+					select="ancestor-or-self::*[@name][1]/@name"/></xsl:message>
+		</xsl:if>
 
 		<xsl:call-template name="chars">
 			<xsl:with-param name="char" select="$asterisk"/>
@@ -251,9 +326,11 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:text>&#xa;</xsl:text>
 		<xsl:value-of select="6 - $depth"/>
 		<xsl:text>+| </xsl:text>
+		<!--
 		<xsl:apply-templates select="xs:annotation">
 			<xsl:with-param name="depth" select="$depth + 1"/>
 		</xsl:apply-templates>
+		-->
 		<xsl:text>&#xa;</xsl:text>
 
 		<xsl:call-template name="chars">
@@ -292,6 +369,7 @@ from top to bottom. Note, however, that for the actual operation,
 	<!-- Top level groups: They are own subsections.
 	Sequences or choices below are handled by the templates above. -->
 	<xsl:template match="/xs:schema/xs:group">
+		<xsl:call-template name="output-id-and-ref-text"/>
 		<xsl:text>=== The `</xsl:text>
 		<xsl:value-of select="@name"/>
 		<xsl:text>` group&#xa;&#xa;</xsl:text>
@@ -330,9 +408,16 @@ from top to bottom. Note, however, that for the actual operation,
 
 	</xsl:template>
 
+	<xsl:template match="xs:complexType[not(@name)]">
+		<xsl:message terminate="no">Unnamed complexTypes are not allowed inside complexTypes! Context: <xsl:value-of
+				select="ancestor-or-self::*[@name][1]/@name"/></xsl:message>
+		<xsl:apply-templates/>
+	</xsl:template>
+
 	<!-- ComplexTypes are subsections. Their content is printed by some of the templates above. -->
 	<xsl:template match="/xs:schema/xs:complexType[@name]">
 		<xsl:text>&#xa;</xsl:text>
+		<xsl:call-template name="output-id-and-ref-text"/>
 		<xsl:text>=== The complex type `</xsl:text>
 		<xsl:value-of select="@name"/>
 		<xsl:text>`&#xa;&#xa;</xsl:text>
@@ -344,9 +429,9 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:text>`&#xa;</xsl:text>
 		<xsl:choose>
 			<xsl:when test="xs:complexContent/xs:extension">
-				<xsl:text>| _←</xsl:text>
+				<xsl:text>| _←&lt;&lt;</xsl:text>
 				<xsl:value-of select="xs:complexContent/xs:extension/@base"/>
-				<xsl:text>_ | </xsl:text>
+				<xsl:text>&gt;&gt;_ | </xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>2+| </xsl:text>
@@ -361,7 +446,11 @@ from top to bottom. Note, however, that for the actual operation,
 	<!-- SimpleTypes are printed in a list. Each simpleType is one element of this list.
 	The call structure below guarantees that they are evaluated in the moment. -->
 	<xsl:template match="xs:schema/xs:simpleType[xs:restriction]">
-		<xsl:text>| `</xsl:text>
+		<xsl:text>| </xsl:text>
+		<xsl:text>[[</xsl:text>
+		<xsl:value-of select="@name"/>
+		<xsl:text>]] </xsl:text>
+		<xsl:text>`</xsl:text>
 		<xsl:value-of select="@name"/>
 		<xsl:text>` | _</xsl:text>
 		<xsl:choose>
@@ -370,7 +459,7 @@ from top to bottom. Note, however, that for the actual operation,
 					<xsl:if test="position() &gt; 1">
 						<xsl:text> \| </xsl:text>
 					</xsl:if>
-					<xsl:value-of select="@value"></xsl:value-of>
+					<xsl:value-of select="@value"/>
 				</xsl:for-each>
 			</xsl:when>
 			<xsl:otherwise>
@@ -384,7 +473,7 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:apply-templates select="xs:restriction/xs:enumeration[boolean(xs:annotation/xs:documentation)]"/>
 	</xsl:template>
 	<xsl:template match="xs:simpleType[@name]" priority="-1">
-		<xsl:message terminate="yes">Proper documentation rules for simpleType <xsl:value-of select="@name"></xsl:value-of> not in place, yet!</xsl:message>
+		<xsl:message terminate="yes">Proper documentation rules for simpleType <xsl:value-of select="@name"/> not in place, yet!</xsl:message>
 	</xsl:template>
 
 	<xsl:template match="xs:enumeration">
@@ -399,6 +488,7 @@ from top to bottom. Note, however, that for the actual operation,
 	<!-- Toplevel evaluation method. This will match as first template and will finally convert the whole document. -->
 	<xsl:template match="/xs:schema">
 		<!-- An XSD file is transferred to an Asciidoc subsection -->
+		<xsl:call-template name="output-id-and-ref-text"/>
 		<xsl:text>== </xsl:text>
 		<xsl:value-of select="xs:annotation/xs:documentation"/>
 		<xsl:text>&#xa;&#xa;</xsl:text>
