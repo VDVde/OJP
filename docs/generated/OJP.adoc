@@ -24,12 +24,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| →`<<OJPRequest>>`
+2+| →`*<<OJPRequest>>*`
 | *1:1* | 
 | 
 
 |
-2+| →`<<OJPResponse>>`
+2+| →`*<<OJPResponse>>*`
 | *1:1* | 
 | 
 
@@ -65,7 +65,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<RequestGroup>>`
+3+| →`*<<RequestGroup>>*`
 | *1:1* | 
 | 
 
@@ -95,7 +95,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<ResponseGroup>>`
+3+| →`*<<ResponseGroup>>*`
 | *1:1* | 
 | 
 
@@ -128,7 +128,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<FareRequestGroup>>`
+3+| →`*<<FareRequestGroup>>*`
 | *1:1* | 
 | 
 
@@ -163,12 +163,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<ServiceResponseContextGroup>>`
+3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<FareResponseGroup>>`
+3+| →`*<<FareResponseGroup>>*`
 | *1:1* | 
 | 
 
@@ -203,7 +203,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<PlaceInformationRequestGroup>>`
+3+| →`*<<PlaceInformationRequestGroup>>*`
 | *1:1* | 
 | 
 
@@ -243,12 +243,12 @@
 | 
 
 
-3+| →`<<ServiceResponseContextGroup>>`
+3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<PlaceInformationResponseGroup>>`
+3+| →`*<<PlaceInformationResponseGroup>>*`
 | *1:1* | 
 | 
 
@@ -283,7 +283,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<ExchangePointsRequestGroup>>`
+3+| →`*<<ExchangePointsRequestGroup>>*`
 | *1:1* | 
 | 
 
@@ -323,12 +323,12 @@
 | 
 
 
-3+| →`<<ServiceResponseContextGroup>>`
+3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<ExchangePointsResponseGroup>>`
+3+| →`*<<ExchangePointsResponseGroup>>*`
 | *1:1* | 
 | 
 
@@ -363,7 +363,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<StopEventRequestGroup>>`
+3+| →`*<<StopEventRequestGroup>>*`
 | *1:1* | 
 | 
 
@@ -403,12 +403,12 @@
 | 
 
 
-3+| →`<<ServiceResponseContextGroup>>`
+3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<StopEventResponseGroup>>`
+3+| →`*<<StopEventResponseGroup>>*`
 | *1:1* | 
 | 
 
@@ -443,7 +443,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<TripInfoRequestGroup>>`
+3+| →`*<<TripInfoRequestGroup>>*`
 | *1:1* | 
 | 
 
@@ -483,12 +483,12 @@
 | 
 
 
-3+| →`<<ServiceResponseContextGroup>>`
+3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TripInfoResponseGroup>>`
+3+| →`*<<TripInfoResponseGroup>>*`
 | *1:1* | 
 | 
 
@@ -523,7 +523,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<TripRequestGroup>>`
+3+| →`*<<TripRequestGroup>>*`
 | *1:1* | 
 | 
 
@@ -563,12 +563,12 @@
 | 
 
 
-3+| →`<<ServiceResponseContextGroup>>`
+3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TripResponseGroup>>`
+3+| →`*<<TripResponseGroup>>*`
 | *1:1* | 
 | 
 
@@ -603,7 +603,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<MultiPointTripRequestGroup>>`
+3+| →`*<<MultiPointTripRequestGroup>>*`
 | *1:1* | 
 | 
 
@@ -643,12 +643,12 @@
 | 
 
 
-3+| →`<<ServiceResponseContextGroup>>`
+3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<MultiPointTripResponseGroup>>`
+3+| →`*<<MultiPointTripResponseGroup>>*`
 | *1:1* | 
 | 
 
@@ -760,7 +760,7 @@
 | Preferred language in which to return  text  values.
 
 
-3+| →`<<MessageIntegrityPropertiesGroup>>`
+3+| →`*<<MessageIntegrityPropertiesGroup>>*`
 | *1:1* | 
 | 
 
@@ -781,7 +781,7 @@
 | _←<<siri:AbstractFunctionalServiceRequestStructure>>_ | Basic request structure common for all OJP service requests.
 
 
-3+| →`<<ServiceRequestContextGroup>>`
+3+| →`*<<ServiceRequestContextGroup>>*`
 | *1:1* | 
 | 
 
@@ -797,7 +797,7 @@
 | _←<<siri:AbstractSubscriptionRequestStructure>>_ | Basic structure common for all OJP subscription requests.
 
 
-3+| →`<<SubscriptionRequestContextGroup>>`
+3+| →`*<<SubscriptionRequestContextGroup>>*`
 | *1:1* | 
 | 
 
@@ -814,7 +814,7 @@
 6+| The element contains only one element:
 
 
-3+| →`siri:DeliveryRequestGroup`
+3+| →`*siri:DeliveryRequestGroup*`
 | *1:1* | 
 | 
 
@@ -831,7 +831,7 @@
 6+| The element contains only one element:
 
 
-3+| →`siri:StatusRequestGroup`
+3+| →`*siri:StatusRequestGroup*`
 | *1:1* | 
 | 
 
@@ -860,7 +860,7 @@
 6+| The element contains only one element:
 
 
-3+| →`siri:ServiceResponseGroup`
+3+| →`*siri:ServiceResponseGroup*`
 | *1:1* | 
 | 
 
@@ -885,7 +885,7 @@
 6+| The element contains only one element:
 
 
-3+| `Place`
+3+| `*Place*`
 | *1:** | _<<PlaceStructure>>_
 | 
 
@@ -930,12 +930,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `InitialInput`
+2+| `*InitialInput*`
 | *1:1* | _<<InitialPlaceInputStructure>>_
 | Initial input for the place information request. This input defines what is originally looked for.
 
 |
-2+| `PlaceRef`
+2+| `*PlaceRef*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Place for further refinement. If a place in a previous response was marked as not "complete" it can be refined by putting it here.
 
@@ -1018,12 +1018,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<PlaceDataFilterGroup>>`
+3+| →`*<<PlaceDataFilterGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<PlacePolicyGroup>>`
+3+| →`*<<PlacePolicyGroup>>*`
 | *1:1* | 
 | 
 
@@ -1044,17 +1044,17 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `Area`
+2+| `*Area*`
 | *1:1* | _<<GeoAreaStructure>>_
 | Area is defined by a polyline
 
 |
-2+| `Circle`
+2+| `*Circle*`
 | *1:1* | _<<GeoCircleStructure>>_
 | 
 
 |
-2+| `Rectangle`
+2+| `*Rectangle*`
 | *1:1* | _<<GeoRectangleStructure>>_
 | 
 
@@ -1072,12 +1072,12 @@
 6+| The element contains only one element:
 
 
-3+| `Center`
+3+| `*Center*`
 | *1:1* | _siri:LocationStructure_
 | 
 
 
-3+| `Radius`
+3+| `*Radius*`
 | *1:1* | _siri:DistanceType_
 | Radius in metres.
 
@@ -1095,12 +1095,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `UpperLeft`
+3+| `*UpperLeft*`
 | *1:1* | _siri:LocationStructure_
 | 
 
 
-3+| `LowerRight`
+3+| `*LowerRight*`
 | *1:1* | _siri:LocationStructure_
 | 
 
@@ -1119,7 +1119,7 @@
 6+| The element contains only one element:
 
 
-3+| `PolylinePoint`
+3+| `*PolylinePoint*`
 | 3:* | _siri:LocationStructure_
 | 
 
@@ -1137,12 +1137,12 @@
 6+| The element contains only one element:
 
 
-3+| `Place`
+3+| `*Place*`
 | *1:1* | _<<PlaceStructure>>_
 | 
 
 
-3+| `Complete`
+3+| `*Complete*`
 | *1:1* | _xs:boolean_
 | States whether the included place is complete or needs further refinement. Only complete places are fully resolved and can be used in e.g. trip requests. Incomplete places have to be refined entering them once again into a PlaceInformationRequest.
 
@@ -1266,12 +1266,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<ExchangePointsDataFilterGroup>>`
+3+| →`*<<ExchangePointsDataFilterGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<ExchangePointsPolicyGroup>>`
+3+| →`*<<ExchangePointsPolicyGroup>>*`
 | *1:1* | 
 | 
 
@@ -1390,7 +1390,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Place`
+3+| `*Place*`
 | *1:1* | _<<PlaceStructure>>_
 | Place object that describes this exchange point.
 
@@ -1443,12 +1443,12 @@
 6+| The element contains only one element:
 
 
-3+| →`siri:StopPointRef`
+3+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
 
-3+| `StopPointName`
+3+| `*StopPointName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name or description of stop point for use in passenger information.
 
@@ -1481,7 +1481,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<StopPointGroup>>`
+3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
@@ -1501,7 +1501,7 @@
 | 
 
 
-3+| →`<<StopAttributesGroup>>`
+3+| →`*<<StopAttributesGroup>>*`
 | *1:1* | 
 | 
 
@@ -1541,12 +1541,12 @@
 6+| The element contains only one element:
 
 
-3+| →`<<StopPlaceRef>>`
+3+| →`*<<StopPlaceRef>>*`
 | *1:1* | 
 | 
 
 
-3+| `StopPlaceName`
+3+| `*StopPlaceName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name of this stop place for use in passenger information.
 
@@ -1569,7 +1569,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<StopPlaceGroup>>`
+3+| →`*<<StopPlaceGroup>>*`
 | *1:1* | 
 | 
 
@@ -1584,7 +1584,7 @@
 | 
 
 
-3+| →`<<StopAttributesGroup>>`
+3+| →`*<<StopAttributesGroup>>*`
 | *1:1* | 
 | 
 
@@ -1652,12 +1652,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `TopographicPlaceCode`
+3+| `*TopographicPlaceCode*`
 | *1:1* | _<<TopographicPlaceCodeType>>_
 | TopographicPlace ID.
 
 
-3+| `TopographicPlaceName`
+3+| `*TopographicPlaceName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name or description of TopographicPlace for use in passenger information.
 
@@ -1684,7 +1684,7 @@
 6+| The element contains only one element:
 
 
-3+| `Points`
+3+| `*Points*`
 | 3:* | _siri:LocationStructure_
 | 
 
@@ -1725,12 +1725,12 @@
 6+| The element contains only one element:
 
 
-3+| `PointOfInterestCode`
+3+| `*PointOfInterestCode*`
 | *1:1* | _<<PointOfInterestCodeType>>_
 | ID of this Point of Interest.
 
 
-3+| `PointOfInterestName`
+3+| `*PointOfInterestName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name or description of point of interest for use in passenger information.
 
@@ -1771,12 +1771,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `OsmTag`
+2+| `*OsmTag*`
 | *1:** | _<<OsmTagStructure>>_
 | Open Street Map tag structure (key-value)
 
 |
-2+| `PointOfInterestClassification`
+2+| `*PointOfInterestClassification*`
 | *1:** | _xs:string_
 | Classification of the POI (when it is not from OSM). The codification of the classification Id may include de codification source (for example "IGN:[classificationCode]")
 
@@ -1794,12 +1794,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Tag`
+3+| `*Tag*`
 | *1:1* | _xs:NMTOKEN_
 | Name of Open Street Map tag (amenity, leisure, tourism, bike, ...)
 
 
-3+| `Value`
+3+| `*Value*`
 | *1:1* | _xs:NMTOKEN_
 | Value for Open Street Map tag (charging_station, hostel, yes, ...)
 
@@ -1910,7 +1910,7 @@
 6+| The element contains only one element:
 
 
-3+| `AddressCode`
+3+| `*AddressCode*`
 | *1:1* | _<<AddressCodeType>>_
 | ID of this address.
 
@@ -1920,7 +1920,7 @@
 | Code of this address in private/foreign/proprietary coding schemes.
 
 
-3+| `AddressName`
+3+| `*AddressName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name or description of address for use in passenger information.
 
@@ -1930,7 +1930,7 @@
 | Additional description of the address that may be appended to the name if enough space is available. F.e. "Crossing with Peterstraße".
 
 
-3+| →`<<AddressDetailGroup>>`
+3+| →`*<<AddressDetailGroup>>*`
 | *1:1* | 
 | 
 
@@ -1953,37 +1953,37 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `Address`
+2+| `*Address*`
 | *1:1* | _<<AddressStructure>>_
 | Model of an address 
 
 |
-2+| `PointOfInterest`
+2+| `*PointOfInterest*`
 | *1:1* | _<<PointOfInterestStructure>>_
 | Model of a POI 
 
 |
-2+| `StopPlace`
+2+| `*StopPlace*`
 | *1:1* | _<<StopPlaceStructure>>_
 | Model of a stop place
 
 |
-2+| `StopPoint`
+2+| `*StopPoint*`
 | *1:1* | _<<StopPointStructure>>_
 | Model of a stop point 
 
 |
-2+| `TopographicPlace`
+2+| `*TopographicPlace*`
 | *1:1* | _<<TopographicPlaceStructure>>_
 | TopographicPlace. Region, village, or city.
 
 
-3+| `Name`
+3+| `*Name*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Public name of the place.
 
 
-3+| `GeoPosition`
+3+| `*GeoPosition*`
 | *1:1* | _siri:LocationStructure_
 | 
 
@@ -2016,37 +2016,37 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| →`siri:StopPointRef`
+2+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
 |
-2+| →`<<StopPlaceRef>>`
+2+| →`*<<StopPlaceRef>>*`
 | *1:1* | 
 | 
 
 |
-2+| →`<<TopographicPlaceRef>>`
+2+| →`*<<TopographicPlaceRef>>*`
 | *1:1* | 
 | 
 
 |
-2+| →`<<PointOfInterestRef>>`
+2+| →`*<<PointOfInterestRef>>*`
 | *1:1* | 
 | 
 
 |
-2+| →`<<AddressRef>>`
+2+| →`*<<AddressRef>>*`
 | *1:1* | 
 | 
 
 |
-2+| `GeoPosition`
+2+| `*GeoPosition*`
 | *1:1* | _siri:LocationStructure_
 | WGS84 coordinates position.
 
 
-3+| `Name`
+3+| `*Name*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Public name of the place.
 
@@ -2084,7 +2084,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Place`
+3+| `*Place*`
 | *1:1* | _<<PlaceContextStructure>>_
 | Place for which to obtain stop event information.
 
@@ -2107,17 +2107,17 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<StopEventDataFilterGroup>>`
+3+| →`*<<StopEventDataFilterGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<StopEventPolicyGroup>>`
+3+| →`*<<StopEventPolicyGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<StopEventContentFilterGroup>>`
+3+| →`*<<StopEventContentFilterGroup>>*`
 | *1:1* | 
 | 
 
@@ -2266,7 +2266,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `ResultId`
+3+| `*ResultId*`
 | *1:1* | _xs:NMTOKEN_
 | ID of this result.
 
@@ -2276,7 +2276,7 @@
 | Error messages that refer to this stop event.
 
 
-3+| `StopEvent`
+3+| `*StopEvent*`
 | *1:1* | _<<StopEventStructure>>_
 | Stop event data element.
 
@@ -2299,7 +2299,7 @@
 | Calls at stops that happen before this stop event (service pattern of this vehicle journey before this stop event).
 
 
-3+| `ThisCall`
+3+| `*ThisCall*`
 | *1:1* | _<<CallAtNearStopStructure>>_
 | The call of this vehicle journey at this stop.
 
@@ -2309,7 +2309,7 @@
 | Calls at stops that happen after this stop event (rest of the service pattern of the vehicle journey).
 
 
-3+| `Service`
+3+| `*Service*`
 | *1:1* | _<<DatedJourneyStructure>>_
 | Service that calls at this stop.
 
@@ -2337,7 +2337,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `CallAtStop`
+3+| `*CallAtStop*`
 | *1:1* | _<<CallAtStopStructure>>_
 | [same as CALL in SIRI] the meeting of a VEHICLE JOURNEY with a specific SCHEDULED STOP POINT .
 
@@ -2384,12 +2384,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Origin`
+3+| `*Origin*`
 | *1:** | _<<PlaceContextStructure>>_
 | Specifies the origin situation from where the user wants to start.
 
 
-3+| `Destination`
+3+| `*Destination*`
 | *1:** | _<<PlaceContextStructure>>_
 | Specifies the destination situation where the user is heading to.
 
@@ -2427,22 +2427,22 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<TripDataFilterGroup>>`
+3+| →`*<<TripDataFilterGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TripMobilityFilterGroup>>`
+3+| →`*<<TripMobilityFilterGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TripPolicyGroup>>`
+3+| →`*<<TripPolicyGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TripContentFilterGroup>>`
+3+| →`*<<TripContentFilterGroup>>*`
 | *1:1* | 
 | 
 
@@ -2501,7 +2501,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<BaseTripPolicyGroup>>`
+3+| →`*<<BaseTripPolicyGroup>>*`
 | *1:1* | 
 | 
 
@@ -2533,7 +2533,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<BaseTripMobilityFilterGroup>>`
+3+| →`*<<BaseTripMobilityFilterGroup>>*`
 | *1:1* | 
 | 
 
@@ -2570,7 +2570,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<BaseTripContentFilterGroup>>`
+3+| →`*<<BaseTripContentFilterGroup>>*`
 | *1:1* | 
 | 
 
@@ -2613,12 +2613,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| →`siri:StopPointRef`
+2+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
 |
-2+| →`<<StopPlaceRef>>`
+2+| →`*<<StopPlaceRef>>*`
 | *1:1* | 
 | 
 
@@ -2641,12 +2641,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| →`siri:StopPointRef`
+2+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
 |
-2+| →`<<StopPlaceRef>>`
+2+| →`*<<StopPlaceRef>>*`
 | *1:1* | 
 | 
 
@@ -2686,7 +2686,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `ResultId`
+3+| `*ResultId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip result for referencing purposes. Unique within trip response.
 
@@ -2701,12 +2701,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `Trip`
+2+| `*Trip*`
 | *1:1* | _<<TripStructure>>_
 | Detailed information on trip.
 
 |
-2+| `TripSummary`
+2+| `*TripSummary*`
 | *1:1* | _<<TripSummaryStructure>>_
 | Summary on trip. Only if requestor set TripSummaryOnly in request.
 
@@ -2729,7 +2729,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `TripId`
+3+| `*TripId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip for referencing purposes. Unique within trip response.
 
@@ -2797,27 +2797,27 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `TripId`
+3+| `*TripId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip for referencing purposes. Unique within trip response.
 
 
-3+| `Duration`
+3+| `*Duration*`
 | *1:1* | _xs:duration_
 | Overall duration of the trip.
 
 
-3+| `StartTime`
+3+| `*StartTime*`
 | *1:1* | _xs:dateTime_
 | Departure time at origin.
 
 
-3+| `EndTime`
+3+| `*EndTime*`
 | *1:1* | _xs:dateTime_
 | Arrival time at destination.
 
 
-3+| `Transfers`
+3+| `*Transfers*`
 | *1:1* | _xs:nonNegativeInteger_
 | Number of interchanges.
 
@@ -2827,7 +2827,7 @@
 | Trip distance.
 
 
-3+| `TripLeg`
+3+| `*TripLeg*`
 | *1:** | _<<TripLegStructure>>_
 | Legs of the trip
 
@@ -2865,7 +2865,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `LegId`
+3+| `*LegId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip leg. Unique within trip result.
 
@@ -2880,17 +2880,17 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `ContinuousLeg`
+2+| `*ContinuousLeg*`
 | *1:1* | _<<ContinuousLegStructure>>_
 | 
 
 |
-2+| `TimedLeg`
+2+| `*TimedLeg*`
 | *1:1* | _<<TimedLegStructure>>_
 | 
 
 |
-2+| `TransferLeg`
+2+| `*TransferLeg*`
 | *1:1* | _<<TransferLegStructure>>_
 | 
 
@@ -2908,7 +2908,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `LegBoard`
+3+| `*LegBoard*`
 | *1:1* | _<<LegBoardStructure>>_
 | Stop/Station where boarding is done
 
@@ -2918,12 +2918,12 @@
 | information about the intermediate passed stop points.
 
 
-3+| `LegAlight`
+3+| `*LegAlight*`
 | *1:1* | _<<LegAlightStructure>>_
 | Stop/Station to alight
 
 
-3+| `Service`
+3+| `*Service*`
 | *1:1* | _<<DatedJourneyStructure>>_
 | Service that is used for this trip leg.
 
@@ -2966,32 +2966,32 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `ContinuousMode`
+2+| `*ContinuousMode*`
 | *1:1* | _<<ContinuousModesEnumeration>>_
 | Mode that is used for this interchange between public services.
 
 |
-2+| `TransferMode`
+2+| `*TransferMode*`
 | *1:1* | _<<TransferModesEnumeration>>_
 | Mode that is used for this interchange between public services.
 
 
-3+| `LegStart`
+3+| `*LegStart*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Stop/Station where boarding is done
 
 
-3+| `LegEnd`
+3+| `*LegEnd*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Stop/Station to alight
 
 
-3+| →`<<TimeWindowGroup>>`
+3+| →`*<<TimeWindowGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TransferDurationGroup>>`
+3+| →`*<<TransferDurationGroup>>*`
 | *1:1* | 
 | 
 
@@ -3039,27 +3039,27 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `LegStart`
+3+| `*LegStart*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Stop/Station where boarding is done
 
 
-3+| `LegEnd`
+3+| `*LegEnd*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Stop/Station to alight
 
 
-3+| `Service`
+3+| `*Service*`
 | *1:1* | _<<ContinuousServiceStructure>>_
 | Service of this leg. May be "walk" in most cases, but also cycling or taxi etc.
 
 
-3+| →`<<TimeWindowGroup>>`
+3+| →`*<<TimeWindowGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| `Duration`
+3+| `*Duration*`
 | *1:1* | _xs:duration_
 | Duration of this leg according to user preferences like walk speed.
 
@@ -3107,7 +3107,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<StopPointGroup>>`
+3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
@@ -3119,19 +3119,19 @@
 6+| The element contains only one element:
 
 
-3+| →`<<ServiceTimeGroup>>`
+3+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| `ServiceDeparture`
+3+| `*ServiceDeparture*`
 | *1:1* | 
 | describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
 6+| The element contains only one element:
 
 
-3+| →`<<ServiceTimeGroup>>`
+3+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
@@ -3146,7 +3146,7 @@
 | This stop fulfils one of the via requirements stated in the request data.
 
 
-3+| →`<<StopCallStatusGroup>>`
+3+| →`*<<StopCallStatusGroup>>*`
 | *1:1* | 
 | 
 
@@ -3164,19 +3164,19 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<StopPointGroup>>`
+3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| `ServiceArrival`
+3+| `*ServiceArrival*`
 | *1:1* | 
 | describes the arrival situation at the leg alight stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
 6+| The element contains only one element:
 
 
-3+| →`<<ServiceTimeGroup>>`
+3+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
@@ -3188,7 +3188,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<ServiceTimeGroup>>`
+3+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
@@ -3203,7 +3203,7 @@
 | This stop fulfils one of the via requirements stated in the request data.
 
 
-3+| →`<<StopCallStatusGroup>>`
+3+| →`*<<StopCallStatusGroup>>*`
 | *1:1* | 
 | 
 
@@ -3221,31 +3221,31 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<StopPointGroup>>`
+3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| `ServiceArrival`
+3+| `*ServiceArrival*`
 | *1:1* | 
 | describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
 6+| The element contains only one element:
 
 
-3+| →`<<ServiceTimeGroup>>`
+3+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| `ServiceDeparture`
+3+| `*ServiceDeparture*`
 | *1:1* | 
 | describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
 6+| The element contains only one element:
 
 
-3+| →`<<ServiceTimeGroup>>`
+3+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
@@ -3255,7 +3255,7 @@
 | This stop fulfils one of the via requirements stated in the request data.
 
 
-3+| →`<<StopCallStatusGroup>>`
+3+| →`*<<StopCallStatusGroup>>*`
 | *1:1* | 
 | 
 
@@ -3273,7 +3273,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `PathGuidanceSection`
+3+| `*PathGuidanceSection*`
 | *1:** | _<<PathGuidanceSectionStructure>>_
 | one or more path guidance sections that build the trip Leg
 
@@ -3343,7 +3343,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Duration`
+3+| `*Duration*`
 | *1:1* | _xs:duration_
 | Overall duration of this interchange.
 
@@ -3398,12 +3398,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Origin`
+3+| `*Origin*`
 | *1:** | _<<PlaceContextStructure>>_
 | Specifies the origin situation from where the user wants to start.
 
 
-3+| `Destination`
+3+| `*Destination*`
 | *1:** | _<<PlaceContextStructure>>_
 | Specifies the destination situation where the user is heading to.
 
@@ -3441,22 +3441,22 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<TripDataFilterGroup>>`
+3+| →`*<<TripDataFilterGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TripMobilityFilterGroup>>`
+3+| →`*<<TripMobilityFilterGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<MultiPointTripPolicyGroup>>`
+3+| →`*<<MultiPointTripPolicyGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TripContentFilterGroup>>`
+3+| →`*<<TripContentFilterGroup>>*`
 | *1:1* | 
 | 
 
@@ -3483,7 +3483,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<BaseTripPolicyGroup>>`
+3+| →`*<<BaseTripPolicyGroup>>*`
 | *1:1* | 
 | 
 
@@ -3538,7 +3538,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `ResultId`
+3+| `*ResultId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip result for referencing purposes. Unique within multipoint-trip response.
 
@@ -3553,12 +3553,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `Trip`
+2+| `*Trip*`
 | *1:1* | _<<TripStructure>>_
 | Information on the trip.
 
 |
-2+| `TripSummary`
+2+| `*TripSummary*`
 | *1:1* | _<<TripSummaryStructure>>_
 | 
 
@@ -3655,7 +3655,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<StopPointGroup>>`
+3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
@@ -3706,7 +3706,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `ViaPoint`
+3+| `*ViaPoint*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Reference to specify the via place.
 
@@ -3728,12 +3728,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<JourneyRef>>`
+3+| →`*<<JourneyRef>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<ServiceGroup>>`
+3+| →`*<<ServiceGroup>>*`
 | *1:1* | 
 | 
 
@@ -3750,12 +3750,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`siri:LineDirectionGroup`
+3+| →`*siri:LineDirectionGroup*`
 | *1:1* | 
 | 
 
 
-3+| `Mode`
+3+| `*Mode*`
 | *1:1* | _<<ModeStructure>>_
 | [a specialisation of MODE in TMv6] an extended range of VEHICLE MODEs, aggregating them with some SUBMODEs
 
@@ -3765,7 +3765,7 @@
 | A product category for the service. This is a classification defined in NeTEx/SIRI used to identify groups of journeys with some special properties for marketing and fare products, e.g. "TE2" for SNCF or a special panorama train "PE" in Switzerland.
 
 
-3+| `PublishedServiceName`
+3+| `*PublishedServiceName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Line name or service description as known to the public, f.e. "512", "S8" or "Circle Line" or "ICE 488".
 
@@ -3812,7 +3812,7 @@
 | First stop of the vehicle journey; origin stop point.
 
 
-3+| `OriginText`
+3+| `*OriginText*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Label for first stop.
 
@@ -3834,7 +3834,7 @@
 | Last stop of vehicle journey; destination stop point.
 
 
-3+| `DestinationText`
+3+| `*DestinationText*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Label for last stop.
 
@@ -3851,7 +3851,7 @@
 6+| The element contains only one element:
 
 
-3+| `RouteDescriptionText`
+3+| `*RouteDescriptionText*`
 | *1:1* | _<<InternationalTextStructure>>_
 | 
 
@@ -3868,7 +3868,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<OperatingDayRef>>`
+3+| →`*<<OperatingDayRef>>*`
 | *1:1* | 
 | 
 
@@ -3878,7 +3878,7 @@
 | 
 
 
-3+| →`<<ScheduledJourneyGroup>>`
+3+| →`*<<ScheduledJourneyGroup>>*`
 | *1:1* | 
 | 
 
@@ -3900,7 +3900,7 @@
 | 
 
 
-3+| `PrivateMode`
+3+| `*PrivateMode*`
 | *1:1* | _<<PrivateModesEnumeration>>_
 | [a category of MODE in TMv6] MODEs offered by private individuals 
 
@@ -3933,12 +3933,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| →`<<DatedJourneyGroup>>`
+2+| →`*<<DatedJourneyGroup>>*`
 | *1:1* | 
 | 
 
 |
-2+| →`<<PrivateServiceGroup>>`
+2+| →`*<<PrivateServiceGroup>>*`
 | *1:1* | 
 | 
 
@@ -3948,12 +3948,12 @@
 | 
 
 
-3+| →`<<ServiceDestinationGroup>>`
+3+| →`*<<ServiceDestinationGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<ServiceStatusGroup>>`
+3+| →`*<<ServiceStatusGroup>>*`
 | *1:1* | 
 | 
 
@@ -3986,17 +3986,17 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<OperatingDayRef>>`
+3+| →`*<<OperatingDayRef>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<JourneyRef>>`
+3+| →`*<<JourneyRef>>*`
 | *1:1* | 
 | 
 
 
-3+| →`siri:LineIdentityGroup`
+3+| →`*siri:LineIdentityGroup*`
 | *1:1* | 
 | 
 
@@ -4035,7 +4035,7 @@
 6+| The element contains only one element:
 
 
-3+| `TimetabledTime`
+3+| `*TimetabledTime*`
 | *1:1* | _xs:dateTime_
 | time at point as it is published
 
@@ -4090,7 +4090,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<StopPointGroup>>`
+3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
@@ -4102,7 +4102,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<ServiceTimeGroup>>`
+3+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
@@ -4114,12 +4114,12 @@
 6+| The element contains only one element:
 
 
-3+| →`<<ServiceTimeGroup>>`
+3+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<StopCallStatusGroup>>`
+3+| →`*<<StopCallStatusGroup>>*`
 | *1:1* | 
 | 
 
@@ -4221,12 +4221,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `ContinuousMode`
+2+| `*ContinuousMode*`
 | *1:1* | _<<ContinuousModesEnumeration>>_
 | Continuous transport options.
 
 |
-2+| `IndividualMode`
+2+| `*IndividualMode*`
 | *1:1* | _<<IndividualModesEnumeration>>_
 | Individual transport options.
 
@@ -4322,12 +4322,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `PlaceRef`
+2+| `*PlaceRef*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Static place.
 
 |
-2+| `TripPlace`
+2+| `*TripPlace*`
 | *1:1* | _<<TripPlaceStructure>>_
 | Place within a (moving) vehicle.
 
@@ -4364,12 +4364,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `NumberOfResultsBefore`
+3+| `*NumberOfResultsBefore*`
 | *1:1* | _xs:nonNegativeInteger_
 | The desired number of trip results before the given time (at origin or destination).
 
 
-3+| `NumberOfResultsAfter`
+3+| `*NumberOfResultsAfter*`
 | *1:1* | _xs:nonNegativeInteger_
 | The desired number of trip results after the given time (at origin or destination).
 
@@ -4531,7 +4531,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `TrackSection`
+3+| `*TrackSection*`
 | *1:** | _<<TrackSectionStructure>>_
 | LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information
 
@@ -4566,7 +4566,7 @@
 6+| The element contains only one element:
 
 
-3+| `Position`
+3+| `*Position*`
 | 2:* | _siri:LocationStructure_
 | 
 
@@ -4660,12 +4660,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| →`<<DatedJourneyRefGroup>>`
+2+| →`*<<DatedJourneyRefGroup>>*`
 | *1:1* | 
 | 
 
 |
-2+| →`<<TimedVehicleRefGroup>>`
+2+| →`*<<TimedVehicleRefGroup>>*`
 | *1:1* | 
 | 
 
@@ -4688,12 +4688,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<TripInfoPolicyGroup>>`
+3+| →`*<<TripInfoPolicyGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TripInfoContentFilterGroup>>`
+3+| →`*<<TripInfoContentFilterGroup>>*`
 | *1:1* | 
 | 
 
@@ -4862,22 +4862,22 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `MultiTripFareRequest`
+2+| `*MultiTripFareRequest*`
 | *1:1* | _<<MultiTripFareRequestStructure>>_
 | A request to calculate aggregated Fare information of multiple single trips
 
 |
-2+| `StaticFareRequest`
+2+| `*StaticFareRequest*`
 | *1:1* | _<<StaticFareRequestStructure>>_
 | A request for general/static Fare information.
 
 |
-2+| `StopFareRequest`
+2+| `*StopFareRequest*`
 | *1:1* | _<<StopFareRequestStructure>>_
 | A request for stop-related Fare information.
 
 |
-2+| `TripFareRequest`
+2+| `*TripFareRequest*`
 | *1:1* | _<<TripFareRequestStructure>>_
 | A request to calculate the Fare information of a single trip
 
@@ -4900,7 +4900,7 @@
 6+| The element contains only one element:
 
 
-3+| →`siri:StopPointRef`
+3+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
@@ -4946,7 +4946,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Trip`
+3+| `*Trip*`
 | *1:1* | _<<TripStructure>>_
 | A complete trip from origin to destination
 
@@ -4964,7 +4964,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Trip`
+3+| `*Trip*`
 | *1:** | _<<TripStructure>>_
 | Multiple complete trips from multiple origins and multiple destination
 
@@ -5004,7 +5004,7 @@
 6+| The element contains only one element:
 
 
-3+| `ResultId`
+3+| `*ResultId*`
 | *1:1* | _xs:NMTOKEN_
 | ID of this result.
 
@@ -5014,22 +5014,22 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `MultiTripFareResult`
+2+| `*MultiTripFareResult*`
 | *1:** | _<<MultiTripFareResultStructure>>_
 | Fare and FareProducts for multiple trips.
 
 |
-2+| `StaticFareResult`
+2+| `*StaticFareResult*`
 | *1:1* | _<<StaticFareResultStructure>>_
 | Static Fare information.
 
 |
-2+| `StopFareResult`
+2+| `*StopFareResult*`
 | *1:1* | _<<StopFareResultStructure>>_
 | Stop-related Fare information.
 
 |
-2+| `TripFareResult`
+2+| `*TripFareResult*`
 | *1:** | _<<TripFareResultStructure>>_
 | Fare and FareProducts for a given trip.
 
@@ -5047,7 +5047,7 @@
 6+| The element contains only one element:
 
 
-3+| `TariffZoneListInArea`
+3+| `*TariffZoneListInArea*`
 | *1:** | _<<TariffZoneListInAreaStructure>>_
 | One or more lists of Fare zones that belong to a Fare authority/area.
 
@@ -5098,12 +5098,12 @@
 6+| The element contains only one element:
 
 
-3+| →`<<FareProductRef>>`
+3+| →`*<<FareProductRef>>*`
 | *1:1* | 
 | 
 
 
-3+| `FromTripIdRef`
+3+| `*FromTripIdRef*`
 | *1:1* | _xs:NMTOKEN_
 | Identifies the "valid from" trip.
 
@@ -5113,7 +5113,7 @@
 | Identifies the "valid from" tripLeg. If missing, then valid from the first leg.
 
 
-3+| `ToTripIdRef`
+3+| `*ToTripIdRef*`
 | *1:1* | _xs:NMTOKEN_
 | Identifies the "valid to" trip.
 
@@ -5141,7 +5141,7 @@
 | Result-specific error messages.
 
 
-3+| `TripFareProductReference`
+3+| `*TripFareProductReference*`
 | *1:** | _<<TripFareProductReferenceStructure>>_
 | Non-empty list of trip references in the corresponding MultiTripFareRequestStructure
 
@@ -5218,12 +5218,12 @@
 6+| The element contains only one element:
 
 
-3+| →`<<FareAuthorityRef>>`
+3+| →`*<<FareAuthorityRef>>*`
 | *1:1* | 
 | 
 
 
-3+| `FareAuthorityText`
+3+| `*FareAuthorityText*`
 | *1:1* | _xs:string_
 | Textual description or name of Fare authority.
 
@@ -5264,12 +5264,12 @@
 6+| The element contains only one element:
 
 
-3+| →`<<TariffZoneRef>>`
+3+| →`*<<TariffZoneRef>>*`
 | *1:1* | 
 | 
 
 
-3+| `TariffZoneText`
+3+| `*TariffZoneText*`
 | *1:1* | _xs:string_
 | Text describing the fare zone. Passengers will recognize the fare zone by this text. Often published on Fare Zone Maps.
 
@@ -5287,12 +5287,12 @@
 6+| The element contains only one element:
 
 
-3+| →`<<FareAuthorityGroup>>`
+3+| →`*<<FareAuthorityGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| `TariffZone`
+3+| `*TariffZone*`
 | *1:** | _<<TariffZoneStructure>>_
 | Fare zone in area.
 
@@ -5310,12 +5310,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<FareAuthorityRef>>`
+3+| →`*<<FareAuthorityRef>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<TariffZoneRef>>`
+3+| →`*<<TariffZoneRef>>*`
 | *1:** | 
 | 
 
@@ -5376,7 +5376,7 @@
 6+| The element contains only one element:
 
 
-3+| `BookingArrangement`
+3+| `*BookingArrangement*`
 | *1:** | _<<BookingArrangementStructure>>_
 | [a more generalised form of BOOKING ARRANGEMENTS in TMv6] arrangement for booking any leg or legs of a journey.
 
@@ -5445,17 +5445,17 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `FareProductId`
+3+| `*FareProductId*`
 | *1:1* | _<<FareProductCodeType>>_
 | Unique Id of the FareProduct.
 
 
-3+| `FareProductName`
+3+| `*FareProductName*`
 | *1:1* | _xs:string_
 | printable FareProduct name
 
 
-3+| →`<<FareAuthorityGroup>>`
+3+| →`*<<FareAuthorityGroup>>*`
 | *1:1* | 
 | 
 
@@ -5465,17 +5465,17 @@
 | Is this product a proto product? Default is false. If true, it should not be shown to the user. In a distributed environment (e.g. EU-Spirit) partial systems may generate incomplete product information (proto product), which has to be be processed further and combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/
 
 
-3+| →`<<FareProductPriceGroup>>`
+3+| →`*<<FareProductPriceGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<FareProductValidityGroup>>`
+3+| →`*<<FareProductValidityGroup>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<FareProductBookingGroup>>`
+3+| →`*<<FareProductBookingGroup>>*`
 | *1:1* | 
 | 
 
@@ -5603,12 +5603,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `FromTripLegIdRef`
+3+| `*FromTripLegIdRef*`
 | *1:1* | _xs:NMTOKEN_
 | Identifies the "valid from" trip leg.
 
 
-3+| `ToTripLegIdRef`
+3+| `*ToTripLegIdRef*`
 | *1:1* | _xs:NMTOKEN_
 | Identifies the "valid to" trip leg.
 
@@ -5669,12 +5669,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `Age`
+2+| `*Age*`
 | *1:1* | _xs:nonNegativeInteger_
 | Age of the passenger on the day of travel.
 
 |
-2+| `PassengerCategory`
+2+| `*PassengerCategory*`
 | *1:1* | _<<PassengerCategoryEnumeration>>_
 | sequence of all passenger categories, for which this FareProduct is valid
 
@@ -5689,12 +5689,12 @@
 6+| The element contains _one of_ the following elements:
 
 |
-2+| `SalesPackageElementRef`
+2+| `*SalesPackageElementRef*`
 | *1:** | _<<FareProductRefStructure>>_
 | Id of a FareProduct that the passenger already holds and that may be used for the travel or parts of it.
 
 |
-2+| `ZonesAlreadyPaid`
+2+| `*ZonesAlreadyPaid*`
 | *1:1* | _<<TariffZoneRefListStructure>>_
 | Fare zones for which the passenger already has a valid FareProduct.
 
@@ -5739,7 +5739,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<FareDataFilterGroup>>`
+3+| →`*<<FareDataFilterGroup>>*`
 | *1:1* | 
 | 
 
@@ -5782,7 +5782,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Code`
+3+| `*Code*`
 | *1:1* | _xs:normalizedString_
 | Code of the error situation.
 
@@ -5805,12 +5805,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `System`
+3+| `*System*`
 | *1:1* | _xs:NMTOKEN_
 | Code of the foreign referential system.
 
 
-3+| `Value`
+3+| `*Value*`
 | *1:1* | _xs:NMTOKEN_
 | Object code within this private/foreign system.
 
@@ -5898,7 +5898,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Line`
+3+| `*Line*`
 | *1:** | _siri:LineDirectionStructure_
 | Reference a GROUP of DIRECTIONs  of the ROUTEs belonging to the same LINE created  for the purpose of filtering and organising timetables..
 
@@ -5943,12 +5943,12 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| →`<<JourneyRef>>`
+3+| →`*<<JourneyRef>>*`
 | *1:1* | 
 | 
 
 
-3+| →`<<OperatingDayRef>>`
+3+| →`*<<OperatingDayRef>>*`
 | *1:1* | 
 | 
 
@@ -5965,12 +5965,12 @@
 6+| The element contains only one element:
 
 
-3+| →`siri:VehicleRef`
+3+| →`*siri:VehicleRef*`
 | *1:1* | 
 | 
 
 
-3+| `TimeOfOperation`
+3+| `*TimeOfOperation*`
 | *1:1* | _xs:dateTime_
 | Time stamp when the vehicle is operating. In most use cases equal to "now".
 
@@ -6010,7 +6010,7 @@
 6+| The element contains only one element:
 
 
-3+| `OperatorRef`
+3+| `*OperatorRef*`
 | *1:1* | _siri:OperatorRefStructure_
 | Identifier of the operator of the sharing service 
 
@@ -6094,17 +6094,17 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `From`
+3+| `*From*`
 | *1:1* | _xs:date_
 | Start date of period.
 
 
-3+| `To`
+3+| `*To*`
 | *1:1* | _xs:date_
 | End date of period.
 
 
-3+| `Pattern`
+3+| `*Pattern*`
 | *1:1* | _<<ValidDayBitType>>_
 | Bit pattern for operating days between start date and end date. The length of the pattern is equal to the number of days from start date to end date. A bit value of "1" indicates that an event actually happens on the day that is represented by the bit position.
 
@@ -6149,12 +6149,12 @@
 | [a specialisation of DAY OF WEEK in TMv6] enumeration of individual the seven DAYs OF WEEK, along with public holidays
 
 
-3+| `StartTime`
+3+| `*StartTime*`
 | *1:1* | _xs:time_
 | Start time of period.
 
 
-3+| `Duration`
+3+| `*Duration*`
 | *1:1* | _xs:duration_
 | Time duration of period.
 
@@ -6172,17 +6172,17 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Text`
+3+| `*Text*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Text of the attribute to be shown to the user.
 
 
-3+| `Code`
+3+| `*Code*`
 | *1:1* | _xs:NMTOKEN_
 | Internal code of the attribute. Can be used for detection of double occurrences.
 
 
-3+| →`<<AllFacilitiesGroup>>`
+3+| →`*<<AllFacilitiesGroup>>*`
 | *1:1* | 
 | 
 
@@ -6217,7 +6217,7 @@
 6+| The element contains only one element:
 
 
-3+| →`siri:AllFacilitiesGroup`
+3+| →`*siri:AllFacilitiesGroup*`
 | *1:1* | 
 | 
 
@@ -6234,7 +6234,7 @@
 6+| The element contains only one element:
 
 
-3+| →`siri:StopFacilityGroup`
+3+| →`*siri:StopFacilityGroup*`
 | *1:1* | 
 | 
 
@@ -6251,7 +6251,7 @@
 6+| The element contains only one element:
 
 
-3+| →`siri:ServiceFacilityGroup`
+3+| →`*siri:ServiceFacilityGroup*`
 | *1:1* | 
 | 
 
@@ -6285,7 +6285,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Mode`
+3+| `*Mode*`
 | *1:1* | _<<IndividualModesEnumeration>>_
 | Mode of individual transport.	When mode self-drive-car is used the connection to another mode will need a parking space for the car. Thus, this mode is a generalisation of all park and ride use cases. The mode others-drive-car, however, only needs a place to let a person be set down from a car.
 
@@ -6333,7 +6333,7 @@
 6+| The element contains only one element:
 
 
-3+| →`<<ModeGroup>>`
+3+| →`*<<ModeGroup>>*`
 | *1:1* | 
 | 
 
@@ -6365,7 +6365,7 @@
 6+| The element contains only one element:
 
 
-3+| `PtMode`
+3+| `*PtMode*`
 | *1:1* | _siri:VehicleModesOfTransportEnumeration_
 | Categorisation of mode 
 
@@ -6459,7 +6459,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Text`
+3+| `*Text*`
 | *1:** | _siri:NaturalLanguageStringStructure_
 | Text content.
 
@@ -6481,7 +6481,7 @@
 6+| The element contains a _sequence_ of the following elements:
 
 
-3+| `Url`
+3+| `*Url*`
 | *1:1* | _xs:anyURI_
 | URL to resource on web.
 
@@ -6509,12 +6509,12 @@
 6+| The element contains only one element:
 
 
-3+| `Label`
+3+| `*Label*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Label for link description.
 
 
-3+| →`<<WebLinkGroup>>`
+3+| →`*<<WebLinkGroup>>*`
 | *1:1* | 
 | 
 

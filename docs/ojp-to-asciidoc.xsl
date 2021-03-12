@@ -112,22 +112,30 @@ from top to bottom. Note, however, that for the actual operation,
 	</xsl:template>
 
 	<xsl:template name="output-name-or-ref">
+		<xsl:param name="bold" select="'false'"/>
 		<xsl:choose>
 			<xsl:when test="@name">
 				<xsl:text>`</xsl:text>
+				<xsl:if test="$bold = 'true'">
+					<xsl:text>*</xsl:text>
+				</xsl:if>
 				<xsl:value-of select="@name"/>
-				<!--
-				<xsl:call-template name="output-name-ref">
-					<xsl:with-param name="name" select="@name"/>
-				</xsl:call-template>
-				-->
+				<xsl:if test="$bold = 'true'">
+					<xsl:text>*</xsl:text>
+				</xsl:if>
 				<xsl:text>`</xsl:text>
 			</xsl:when>
 			<xsl:when test="@ref">
 				<xsl:text>→`</xsl:text>
+				<xsl:if test="$bold = 'true'">
+					<xsl:text>*</xsl:text>
+				</xsl:if>
 				<xsl:call-template name="output-name-ref">
 					<xsl:with-param name="name" select="@ref"/>
 				</xsl:call-template>
+				<xsl:if test="$bold = 'true'">
+					<xsl:text>*</xsl:text>
+				</xsl:if>
 				<xsl:text>`</xsl:text>
 			</xsl:when>
 		</xsl:choose>
@@ -227,9 +235,18 @@ from top to bottom. Note, however, that for the actual operation,
 		</xsl:call-template>
 		<xsl:text>&#xa;</xsl:text>
 
+		<xsl:variable name="min">
+			<xsl:choose>
+				<xsl:when test="@minOccurs"><xsl:value-of select="@minOccurs"/></xsl:when>
+				<xsl:otherwise>1</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		
 		<xsl:value-of select="3 - $depth"/>
 		<xsl:text>+| </xsl:text>
-		<xsl:call-template name="output-name-or-ref"/>
+		<xsl:call-template name="output-name-or-ref">
+			<xsl:with-param name="bold" select="number($min) &gt; 0"/>
+		</xsl:call-template>
 		<xsl:text>&#xa;| </xsl:text>
 		<xsl:call-template name="output-cardinality"/>
 		<xsl:text> | </xsl:text>
@@ -396,9 +413,18 @@ from top to bottom. Note, however, that for the actual operation,
 		</xsl:call-template>
 		<xsl:text>&#xa;</xsl:text>
 
+		<xsl:variable name="min">
+			<xsl:choose>
+				<xsl:when test="@minOccurs"><xsl:value-of select="@minOccurs"/></xsl:when>
+				<xsl:otherwise>1</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		
 		<xsl:value-of select="3 - $depth"/>
 		<xsl:text>+| </xsl:text>
-		<xsl:call-template name="output-name-or-ref"/>
+		<xsl:call-template name="output-name-or-ref">
+			<xsl:with-param name="bold" select="number($min) &gt; 0"/>
+		</xsl:call-template>
 		<xsl:text>&#xa;| </xsl:text>
 		<xsl:call-template name="output-cardinality"/>
 		<xsl:text> | </xsl:text>
