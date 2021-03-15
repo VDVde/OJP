@@ -153,20 +153,23 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Collection contexts ==========================================</xs:documentation>
 	</xs:annotation>
+	<xs:complexType name="PlacesStructure">
+		<xs:annotation>
+			<xs:documentation>Structure providing a collection of places.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Place" type="PlaceStructure" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="ResponseContextStructure">
 		<xs:annotation>
 			<xs:documentation>Structure providing response contexts related to journeys, containing collections of places and situations.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Places" minOccurs="0">
+			<xs:element name="Places" type="PlacesStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Container for place objects. Only place objects that are referenced in the response should be put into the container.</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="Place" type="PlaceStructure" maxOccurs="unbounded"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
 			<xs:element name="Situations" type="SituationsStructure" minOccurs="0">
 				<xs:annotation>
