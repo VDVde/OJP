@@ -335,7 +335,7 @@ from top to bottom. Note, however, that for the actual operation,
 		</xsl:call-template>
 		<xsl:text>The element contains </xsl:text>
 		<xsl:choose>
-			<xsl:when test="count(*[not(xs:annotation)]) = 1">
+			<xsl:when test="count(*[not(self::xs:annotation)]) = 1">
 				<xsl:text>only one element:</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
