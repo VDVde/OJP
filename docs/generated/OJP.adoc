@@ -349,18 +349,23 @@ The element contains only one element:
 
 
 
+=== The complex type `PlacesStructure`
+
+Structure providing a collection of places.
+
+The element contains only one element:
+
+| `Place` | 1:*  | _PlaceStructure_ 
+
+
+
 === The complex type `ResponseContextStructure`
 
 Structure providing response contexts related to journeys, containing collections of places and situations.
 The element contains a _sequence_ of the following elements:
 
 |===
-| `Places` | 0:1  | Container for place objects. Only place objects that are referenced in the response should be put into the container.
-
-The element contains only one element:
-
-| `Place` | 1:*  | _PlaceStructure_ 
-
+| `Places` | 0:1  | _PlacesStructure_ | Container for place objects. Only place objects that are referenced in the response should be put into the container.
 | `Situations` | 0:1  | _SituationsStructure_ | Container for SIRI SX situation objects. Only situations that are referenced in the response should be put into the container.
 |===
 
