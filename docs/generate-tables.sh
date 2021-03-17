@@ -25,6 +25,7 @@ printf '%s\n' \
  ":homepage: https://github.com/VDVde/OJP" \
  "// Disable last updated text." \
  ":!last-update-label:" \
+ ":sectnums:" \
  "" >> "${generated_dir}"/OJP.adoc
 
 # create asciidoc file
