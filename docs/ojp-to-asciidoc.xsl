@@ -168,8 +168,23 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:value-of select="@name"/>
 	</xsl:template>
 
+	<xsl:template name="schema-filename">
+		<xsl:variable name="path" select="substring-before(xs:annotation/xs:documentation, '.xsd')"/>
+		<xsl:choose>
+			<xsl:when test="contains($path, '/')">
+				<xsl:value-of select="substring-after($path, '/')"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$path"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
 	<xsl:template match="xs:schema" mode="id">
-		<xsl:value-of select="substring-after(substring-before(xs:annotation/xs:documentation, '.xsd'), '/')"/>
+		<xsl:variable name="filename">
+			<xsl:call-template name="schema-filename"/>
+		</xsl:variable>
+		<xsl:value-of select="concat('schema_', $filename)"/>
 	</xsl:template>
 	
 	<xsl:template match="*" mode="reference-text">
@@ -180,7 +195,8 @@ from top to bottom. Note, however, that for the actual operation,
 	</xsl:template>
 
 	<xsl:template match="xs:schema" mode="reference-text">
-		<!-- no content -->
+		<xsl:call-template name="schema-filename"/>
+		<xsl:text>.xsd</xsl:text>
 	</xsl:template>
 		
 	<!-- *** conversion templates *** -->

@@ -3,8 +3,9 @@
 :homepage: https://github.com/VDVde/OJP
 // Disable last updated text.
 :!last-update-label:
+:sectnums:
 
-[[]]
+[#schema_OJP,reftext=OJP.xsd]
 == OJP.xsd - OJP messages as extension of SIRI
 
 [#OJP,reftext=OJP]
@@ -101,7 +102,7 @@
 
 |===
 
-[[OJP_Requests]]
+[#schema_OJP_Requests,reftext=OJP_Requests.xsd]
 == OJP/OJP_Requests.xsd - OJP service requests and responses
 
 [#OJPFareRequest,reftext=OJPFareRequest]
@@ -659,7 +660,7 @@
 
 |===
 
-[[OJP_RequestSupport]]
+[#schema_OJP_RequestSupport,reftext=OJP_RequestSupport.xsd]
 == OJP/OJP_RequestSupport.xsd - Supporting definitions for OJP service requests and their responses
 
 === Simple type definitions
@@ -896,7 +897,7 @@
 
 |===
 
-[[OJP_Places]]
+[#schema_OJP_Places,reftext=OJP_Places.xsd]
 == OJP/OJP_Places.xsd - Request and response definitions for place information
 
 === Simple type definitions
@@ -1416,7 +1417,7 @@
 
 |===
 
-[[OJP_PlacesSupport]]
+[#schema_OJP_PlacesSupport,reftext=OJP_PlacesSupport.xsd]
 == OJP/OJP_PlacesSupport.xsd - Supporting definitions for place information
 
 === Simple type definitions
@@ -2052,7 +2053,7 @@
 
 |===
 
-[[OJP_StopEvents]]
+[#schema_OJP_StopEvents,reftext=OJP_StopEvents.xsd]
 == OJP/OJP_StopEvents.xsd - Request and response definitions for arrivals and departures of public transport services at stops
 
 === Simple type definitions
@@ -2353,7 +2354,7 @@
 
 |===
 
-[[OJP_Trips]]
+[#schema_OJP_Trips,reftext=OJP_Trips.xsd]
 == OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning
 
 === Simple type definitions
@@ -3633,7 +3634,7 @@
 
 |===
 
-[[OJP_JourneySupport]]
+[#schema_OJP_JourneySupport,reftext=OJP_JourneySupport.xsd]
 == OJP/OJP_JourneySupport.xsd - Supporting definitions for journeys on public transport vehicles
 
 === Simple type definitions
@@ -4592,7 +4593,7 @@
 
 |===
 
-[[OJP_SituationSupport]]
+[#schema_OJP_SituationSupport,reftext=OJP_SituationSupport.xsd]
 == OJP/OJP_SituationSupport.xsd - Supporting definitions for situations containing wrappers for SIRI Situation Exchange service (SIRI SX)
 
 
@@ -4641,7 +4642,7 @@
 
 |===
 
-[[OJP_TripInfo]]
+[#schema_OJP_TripInfo,reftext=OJP_TripInfo.xsd]
 == OJP/OJP_TripInfo.xsd - Request and response definitions for information on a single trip
 
 [#TripInfoRequestGroup,reftext=TripInfoRequestGroup]
@@ -4843,7 +4844,7 @@
 
 |===
 
-[[OJP_Fare]]
+[#schema_OJP_Fare,reftext=OJP_Fare.xsd]
 == OJP/OJP_Fare.xsd - Request and response definitions for general, stop-specific and trip-specific fare information
 
 [#FareRequestGroup,reftext=FareRequestGroup]
@@ -5162,7 +5163,7 @@
 
 |===
 
-[[OJP_FareSupport]]
+[#schema_OJP_FareSupport,reftext=OJP_FareSupport.xsd]
 == OJP/OJP_FareSupport.xsd - Supporting definitions for fare information on passenger trips
 
 === Simple type definitions
@@ -5750,7 +5751,7 @@
 
 |===
 
-[[OJP_Common]]
+[#schema_OJP_Common,reftext=OJP_Common.xsd]
 == OJP/OJP_Common.xsd - Supporting definitions of common structures
 
 === Simple type definitions
@@ -6203,7 +6204,7 @@
 
 |===
 
-[[OJP_FacilitySupport]]
+[#schema_OJP_FacilitySupport,reftext=OJP_FacilitySupport.xsd]
 == OJP/OJP_FacilitySupport.xsd - Supporting definitions for facilities containing wrappers for SIRI
 
 [#AllFacilitiesGroup,reftext=AllFacilitiesGroup]
@@ -6257,7 +6258,7 @@
 
 |===
 
-[[OJP_ModesSupport]]
+[#schema_OJP_ModesSupport,reftext=OJP_ModesSupport.xsd]
 == OJP/OJP_ModesSupport.xsd - Supporting definitions for the classification of modes of transport
 
 === Simple type definitions
@@ -6427,7 +6428,7 @@
 
 |===
 
-[[OJP_Utility]]
+[#schema_OJP_Utility,reftext=OJP_Utility.xsd]
 == OJP/OJP_Utility.xsd - Support definitions not specifically related to the public transport domain
 
 === Simple type definitions
