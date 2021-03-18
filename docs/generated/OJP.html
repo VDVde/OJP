@@ -485,7 +485,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#StatusRequestGroup">3.9. The <code>StatusRequestGroup</code> group</a></li>
 <li><a href="#TerminateSubscriptionRequest">3.10. The toplevel element <code>TerminateSubscriptionRequest</code></a></li>
 <li><a href="#ServiceResponseGroup">3.11. The <code>ServiceResponseGroup</code> group</a></li>
-<li><a href="#ResponseContextStructure">3.12. The complex type <code>ResponseContextStructure</code></a></li>
+<li><a href="#PlacesStructure">3.12. The complex type <code>PlacesStructure</code></a></li>
+<li><a href="#ResponseContextStructure">3.13. The complex type <code>ResponseContextStructure</code></a></li>
 </ul>
 </li>
 <li><a href="#schema_OJP_Places">4. OJP/OJP_Places.xsd - Request and response definitions for place information</a>
@@ -2178,7 +2179,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect2">
-<h3 id="ResponseContextStructure">3.12. The complex type <code>ResponseContextStructure</code></h3>
+<h3 id="PlacesStructure">3.12. The complex type <code>PlacesStructure</code></h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 1.3513%;">
+<col style="width: 1.3513%;">
+<col style="width: 1.3513%;">
+<col style="width: 1.3513%;">
+<col style="width: 27.027%;">
+<col style="width: 27.027%;">
+<col style="width: 40.5408%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="5"><p class="tableblock"><code>PlacesStructure</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Structure providing a collection of places.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="7"><p class="tableblock">The element contains only one element:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><code><strong>Place</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1:</strong>*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="#PlaceStructure">PlaceStructure</a></em></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="ResponseContextStructure">3.13. The complex type <code>ResponseContextStructure</code></h3>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 1.3513%;">
@@ -2201,21 +2232,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><code>Places</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="#PlacesStructure">PlacesStructure</a></em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Container for place objects. Only place objects that are referenced in the response should be put into the container.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top" colspan="5"><p class="tableblock">The element contains only one element:</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code><strong>Place</strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1:</strong>*</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="#PlaceStructure">PlaceStructure</a></em></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"></td>

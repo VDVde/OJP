@@ -880,6 +880,25 @@
 |===
 
 
+[#PlacesStructure,reftext=PlacesStructure]
+=== The complex type `PlacesStructure`
+
+[%noheader,cols="1,1,1,1,20,20,30"]
+|===
+5+| `PlacesStructure`
+2+| Structure providing a collection of places.
+
+
+7+| The element contains only one element:
+
+|
+3+| `*Place*`
+| *1:** | _<<PlaceStructure>>_
+| 
+
+|===
+
+
 [#ResponseContextStructure,reftext=ResponseContextStructure]
 === The complex type `ResponseContextStructure`
 
@@ -893,18 +912,8 @@
 
 |
 3+| `Places`
-| 0:1 | 
+| 0:1 | _<<PlacesStructure>>_
 | Container for place objects. Only place objects that are referenced in the response should be put into the container.
-
-
-
-||
-5+| The element contains only one element:
-
-||
-2+| `*Place*`
-| *1:** | _<<PlaceStructure>>_
-| 
 
 |
 3+| `Situations`
