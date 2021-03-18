@@ -28,7 +28,10 @@ from top to bottom. Note, however, that for the actual operation,
 (C) cantamen/Dirk Hillbrecht 2017
 
 -->
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:data="my:data">
 
 	<!-- We're not producing XML output -->
 	<xsl:output omit-xml-declaration="yes" method="text" indent="no"/>
@@ -47,6 +50,37 @@ from top to bottom. Note, however, that for the actual operation,
 	</xsl:variable>
 
 	<xsl:variable name="max-depth" select="2"/>
+
+	<data:letters>
+		<letter>a</letter>
+		<letter>b</letter>
+		<letter>c</letter>
+		<letter>d</letter>
+		<letter>e</letter>
+		<letter>f</letter>
+		<letter>g</letter>
+		<letter>h</letter>
+		<letter>i</letter>
+		<letter>j</letter>
+		<letter>k</letter>
+		<letter>l</letter>
+		<letter>m</letter>
+		<letter>n</letter>
+		<letter>o</letter>
+		<letter>p</letter>
+		<letter>q</letter>
+		<letter>r</letter>
+		<letter>s</letter>
+		<letter>t</letter>
+		<letter>u</letter>
+		<letter>v</letter>
+		<letter>w</letter>
+		<letter>x</letter>
+		<letter>y</letter>
+		<letter>z</letter>
+	</data:letters>
+	<xsl:variable name="abc" select="document('')/xsl:stylesheet/data:letters"/>
+	
 
 	<!-- Function "chars": Repeats the given "char" the given number of times. -->
 	<xsl:template name="chars">
@@ -69,13 +103,19 @@ from top to bottom. Note, however, that for the actual operation,
 		</xsl:call-template>
 	</xsl:template>
 
+	<xsl:template name="output-context">
+		<xsl:for-each select="ancestor-or-self::*[@name]">/<xsl:value-of select="@name"/></xsl:for-each>
+	</xsl:template>
+
 	<!-- Handles the indentation based on the depth on the detail table. -->
 	<xsl:template name="indent">
 		<xsl:param name="depth" select="0"/>
 		<xsl:param name="span" select="1"/>
+		<xsl:param name="option"/>
 		<xsl:if test="$depth &gt; $max-depth">
-			<xsl:message>Depth too high: <xsl:value-of select="$depth"/> on <xsl:value-of select="name()"/> (<xsl:value-of select="ancestor-or-self::*[@name][1]/@name"/>)</xsl:message>
+			<xsl:message>Depth too high: <xsl:value-of select="$depth"/> on <xsl:value-of select="name()"/> (<xsl:call-template name="output-context"/>)</xsl:message>
 		</xsl:if>
+		
 		<xsl:variable name="cap-depth">
 			<xsl:choose>
 				<xsl:when test="$depth &gt; $max-depth">
@@ -86,11 +126,23 @@ from top to bottom. Note, however, that for the actual operation,
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
+		<xsl:variable name="option-adjust">
+			<xsl:choose>
+				<xsl:when test="number($option) &gt; 0">0</xsl:when>
+				<xsl:otherwise>1</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		
 		<xsl:call-template name="chars">
 			<xsl:with-param name="char" select="$asterisk"/>
 			<xsl:with-param name="n" select="$cap-depth"/>
 		</xsl:call-template>
-		<xsl:variable name="eff-span" select="$max-depth + $span - $cap-depth"/>
+		<xsl:if test="number($option) &gt; 0">
+			<xsl:text> | _</xsl:text>
+			<xsl:value-of select="$abc/letter[number($option)]"/>
+			<xsl:text>_ </xsl:text>
+		</xsl:if>
+		<xsl:variable name="eff-span" select="$max-depth + $option-adjust + $span - $cap-depth"/>
 		<xsl:if test="$eff-span &gt; 1">
 			<xsl:text>&#xa;</xsl:text>
 			<xsl:value-of select="$eff-span"/>
@@ -99,7 +151,11 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:text>| </xsl:text>
 	</xsl:template>
 
-
+	<xsl:template name="output-base-table">
+		<xsl:text>[%noheader,cols="1,1,1,1,20,20,30"]&#xa;</xsl:text>
+		<xsl:text>|===&#xa;</xsl:text>
+	</xsl:template>
+	
 	<!-- Output cardinality as 0:1, 1:1, 1:* etc.-->
 	<xsl:template name="output-cardinality">
 		<xsl:variable name="min">
@@ -268,9 +324,8 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:value-of select="@name"/>
 		<xsl:text>`&#xa;&#xa;</xsl:text>
 
-		<xsl:text>[%noheader,cols="1,1,1,20,20,30"]&#xa;</xsl:text>
-		<xsl:text>|===&#xa;</xsl:text>
-		<xsl:text>4+| `</xsl:text>
+		<xsl:call-template name="output-base-table"/>
+		<xsl:text>5+| `</xsl:text>
 		<xsl:value-of select="@name"/>
 		<xsl:text>`&#xa;</xsl:text>
 		<xsl:choose>
@@ -303,8 +358,15 @@ from top to bottom. Note, however, that for the actual operation,
 			</xsl:choose>
 		</xsl:variable>
 		
+		<xsl:variable name="option">
+			<xsl:if test="parent::xs:choice">
+				<xsl:value-of select="position()"/>
+			</xsl:if>
+		</xsl:variable>
+		
 		<xsl:call-template name="indent">
 			<xsl:with-param name="depth" select="$depth"/>
+			<xsl:with-param name="option" select="$option"/>
 		</xsl:call-template>
 		<xsl:call-template name="output-name-or-ref">
 			<xsl:with-param name="bold" select="number($min) &gt; 0"/>
@@ -354,7 +416,7 @@ from top to bottom. Note, however, that for the actual operation,
 	<xsl:template match="xs:choice[count(*)=1]">
 		<xsl:param name="depth" select="0"/>
 
-		<xsl:message>xs:choice with just one child! <xsl:value-of select="ancestor-or-self::*[@name][1]/@name"/></xsl:message>
+		<xsl:message>xs:choice with just one child! Context: <xsl:call-template name="output-context"/></xsl:message>
 
 		<xsl:choose>
 			<xsl:when test="$depth > 0">
@@ -377,8 +439,7 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:param name="depth" select="0"/>
 
 		<xsl:if test="xs:annotation/xs:documentation">
-			<xsl:message terminate="no">Documentation is not allowed on xs:choice! Context: <xsl:value-of
-					select="ancestor-or-self::*[@name][1]/@name"/></xsl:message>
+			<xsl:message terminate="no">Documentation is not allowed on xs:choice! Context: <xsl:call-template name="output-context"/></xsl:message>
 		</xsl:if>
 
 		<xsl:call-template name="indent">
@@ -391,22 +452,8 @@ from top to bottom. Note, however, that for the actual operation,
 		</xsl:choose>
 		<xsl:text>&#xa;&#xa;</xsl:text>
 
-		<!--
-		<xsl:choose>
-			<xsl:when test="$depth = 0">
-				<xsl:text>&#xa;&#xa;The element contains _one of_ the following elements:&#xa;&#xa;</xsl:text>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:call-template name="chars">
-					<xsl:with-param name="char" select="$asterisk"/>
-					<xsl:with-param name="n" select="$depth"/>
-				</xsl:call-template>
-				<xsl:text> Then, the element contains _one of_ the following elements:&#xa;&#xa;</xsl:text>
-			</xsl:otherwise>
-		</xsl:choose>
-	-->
 		<xsl:apply-templates select="*[not(self::xs:annotation)]">
-			<xsl:with-param name="depth" select="$depth + 1"/>
+			<xsl:with-param name="depth" select="$depth"/>
 			<xsl:sort select="@name"/>
 		</xsl:apply-templates>
 	</xsl:template>
@@ -419,9 +466,8 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:value-of select="@name"/>
 		<xsl:text>` group&#xa;&#xa;</xsl:text>
 
-		<xsl:text>[%noheader,cols="1,1,1,20,20,30"]&#xa;</xsl:text>
-		<xsl:text>|===&#xa;</xsl:text>
-		<xsl:text>4+| `</xsl:text>
+		<xsl:call-template name="output-base-table"/>
+		<xsl:text>5+| `</xsl:text>
 		<xsl:value-of select="@name"/>
 		<xsl:text>`&#xa;2+| </xsl:text>
 		<!--xsl:text> | </xsl:text-->
@@ -442,9 +488,15 @@ from top to bottom. Note, however, that for the actual operation,
 				<xsl:otherwise>1</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
+		<xsl:variable name="option">
+			<xsl:if test="parent::xs:choice">
+				<xsl:value-of select="position()"/>
+			</xsl:if>
+		</xsl:variable>
 		
 		<xsl:call-template name="indent">
 			<xsl:with-param name="depth" select="$depth"/>
+			<xsl:with-param name="option" select="$option"/>
 		</xsl:call-template>
 		<xsl:call-template name="output-name-or-ref">
 			<xsl:with-param name="bold" select="number($min) &gt; 0"/>
@@ -460,8 +512,7 @@ from top to bottom. Note, however, that for the actual operation,
 
 	<xsl:template match="xs:complexType[not(@name)]">
 		<xsl:param name="depth" select="0"/>
-		<xsl:message terminate="no">Unnamed complexTypes are not allowed inside complexTypes! Context: <xsl:value-of
-				select="ancestor-or-self::*[@name][1]/@name"/></xsl:message>
+		<xsl:message terminate="no">Unnamed complexTypes are not allowed inside complexTypes! Context: <xsl:call-template name="output-context"/></xsl:message>
 		
 		<xsl:apply-templates select="xs:annotation"/>
 		<xsl:text>&#xa;&#xa;</xsl:text>
@@ -481,9 +532,8 @@ from top to bottom. Note, however, that for the actual operation,
 		<xsl:value-of select="@name"/>
 		<xsl:text>`&#xa;&#xa;</xsl:text>
 
-		<xsl:text>[%noheader,cols="1,1,1,20,20,30"]&#xa;</xsl:text>
-		<xsl:text>|===&#xa;</xsl:text>
-		<xsl:text>4+| `</xsl:text>
+		<xsl:call-template name="output-base-table"/>
+		<xsl:text>5+| `</xsl:text>
 		<xsl:value-of select="@name"/>
 		<xsl:text>`&#xa;</xsl:text>
 		<xsl:choose>

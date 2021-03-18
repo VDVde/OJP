@@ -11,30 +11,36 @@
 [#OJP,reftext=OJP]
 === The toplevel element `OJP`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJP`
+5+| `OJP`
 2+| Root element for OJP messages based on SIRI message exchange protocol.
 
-6+| The element contains a _sequence_ of the following elements:
 
 
-6+| 
 
-6+| The element contains _one of_ the following elements:
+4+| @`*version*`
+| *1:1* | _xs:NMTOKEN_
+| Fixed value: "1.1-dev"
+
+
+
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| →`*<<OJPRequest>>*`
 | *1:1* | 
 | 
 
-|
+| | _b_ 
 2+| →`*<<OJPResponse>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`<<Extensions>>`
 | 0:1 | 
 | 
@@ -45,10 +51,9 @@
 [#OJPRequest,reftext=OJPRequest]
 === The toplevel element `OJPRequest`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPRequest`
+5+| `OJPRequest`
 | _→OJPRequestStructure_ | OJP Request - Groups individual functional requests.
 
 
@@ -58,14 +63,15 @@
 [#OJPRequestStructure,reftext=OJPRequestStructure]
 === The complex type `OJPRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPRequestStructure`
+5+| `OJPRequestStructure`
 2+| Type for OJP Request - Groups individual functional requests.
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| →`*<<RequestGroup>>*`
 | *1:1* | 
 | 
@@ -75,10 +81,9 @@
 [#OJPResponse,reftext=OJPResponse]
 === The toplevel element `OJPResponse`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPResponse`
+5+| `OJPResponse`
 | _→OJPResponseStructure_ | OJP Request - Groups individual functional responses.
 
 
@@ -88,14 +93,15 @@
 [#OJPResponseStructure,reftext=OJPResponseStructure]
 === The complex type `OJPResponseStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPResponseStructure`
+5+| `OJPResponseStructure`
 2+| Type for OJP Response - Groups individual functional responses.
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| →`*<<ResponseGroup>>*`
 | *1:1* | 
 | 
@@ -108,10 +114,9 @@
 [#OJPFareRequest,reftext=OJPFareRequest]
 === The toplevel element `OJPFareRequest`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPFareRequest`
+5+| `OJPFareRequest`
 | _→OJPFareRequestStructure_ | 
 
 
@@ -121,19 +126,20 @@
 [#OJPFareRequestStructure,reftext=OJPFareRequestStructure]
 === The complex type `OJPFareRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPFareRequestStructure`
+5+| `OJPFareRequestStructure`
 | _←<<AbstractOJPServiceRequestStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<FareRequestGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -143,10 +149,9 @@
 [#OJPFareDelivery,reftext=OJPFareDelivery]
 === The toplevel element `OJPFareDelivery`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPFareDelivery`
+5+| `OJPFareDelivery`
 | _→OJPFareDeliveryStructure_ | 
 
 
@@ -156,24 +161,25 @@
 [#OJPFareDeliveryStructure,reftext=OJPFareDeliveryStructure]
 === The complex type `OJPFareDeliveryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPFareDeliveryStructure`
+5+| `OJPFareDeliveryStructure`
 | _←<<siri:AbstractServiceDeliveryStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<FareResponseGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -183,10 +189,9 @@
 [#OJPPlaceInformationRequest,reftext=OJPPlaceInformationRequest]
 === The toplevel element `OJPPlaceInformationRequest`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPPlaceInformationRequest`
+5+| `OJPPlaceInformationRequest`
 | _→OJPPlaceInformationRequestStructure_ | 
 
 
@@ -196,19 +201,20 @@
 [#OJPPlaceInformationRequestStructure,reftext=OJPPlaceInformationRequestStructure]
 === The complex type `OJPPlaceInformationRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPPlaceInformationRequestStructure`
+5+| `OJPPlaceInformationRequestStructure`
 | _←<<AbstractOJPServiceRequestStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<PlaceInformationRequestGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -218,10 +224,9 @@
 [#OJPPlaceInformationDelivery,reftext=OJPPlaceInformationDelivery]
 === The toplevel element `OJPPlaceInformationDelivery`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPPlaceInformationDelivery`
+5+| `OJPPlaceInformationDelivery`
 | _→OJPPlaceInformationDeliveryStructure_ | 
 
 
@@ -231,29 +236,30 @@
 [#OJPPlaceInformationDeliveryStructure,reftext=OJPPlaceInformationDeliveryStructure]
 === The complex type `OJPPlaceInformationDeliveryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPPlaceInformationDeliveryStructure`
+5+| `OJPPlaceInformationDeliveryStructure`
 | _←<<siri:AbstractServiceDeliveryStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`<<OJPPlaceInformationRequest>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<PlaceInformationResponseGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -263,10 +269,9 @@
 [#OJPExchangePointsRequest,reftext=OJPExchangePointsRequest]
 === The toplevel element `OJPExchangePointsRequest`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPExchangePointsRequest`
+5+| `OJPExchangePointsRequest`
 | _→OJPExchangePointsRequestStructure_ | 
 
 
@@ -276,19 +281,20 @@
 [#OJPExchangePointsRequestStructure,reftext=OJPExchangePointsRequestStructure]
 === The complex type `OJPExchangePointsRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPExchangePointsRequestStructure`
+5+| `OJPExchangePointsRequestStructure`
 | _←<<AbstractOJPServiceRequestStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<ExchangePointsRequestGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -298,10 +304,9 @@
 [#OJPExchangePointsDelivery,reftext=OJPExchangePointsDelivery]
 === The toplevel element `OJPExchangePointsDelivery`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPExchangePointsDelivery`
+5+| `OJPExchangePointsDelivery`
 | _→OJPExchangePointsDeliveryStructure_ | 
 
 
@@ -311,29 +316,30 @@
 [#OJPExchangePointsDeliveryStructure,reftext=OJPExchangePointsDeliveryStructure]
 === The complex type `OJPExchangePointsDeliveryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPExchangePointsDeliveryStructure`
+5+| `OJPExchangePointsDeliveryStructure`
 | _←<<siri:AbstractServiceDeliveryStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`<<OJPExchangePointsRequest>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<ExchangePointsResponseGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -343,10 +349,9 @@
 [#OJPStopEventRequest,reftext=OJPStopEventRequest]
 === The toplevel element `OJPStopEventRequest`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPStopEventRequest`
+5+| `OJPStopEventRequest`
 | _→OJPStopEventRequestStructure_ | 
 
 
@@ -356,19 +361,20 @@
 [#OJPStopEventRequestStructure,reftext=OJPStopEventRequestStructure]
 === The complex type `OJPStopEventRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPStopEventRequestStructure`
+5+| `OJPStopEventRequestStructure`
 | _←<<AbstractOJPServiceRequestStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopEventRequestGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -378,10 +384,9 @@
 [#OJPStopEventDelivery,reftext=OJPStopEventDelivery]
 === The toplevel element `OJPStopEventDelivery`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPStopEventDelivery`
+5+| `OJPStopEventDelivery`
 | _→OJPStopEventDeliveryStructure_ | 
 
 
@@ -391,29 +396,30 @@
 [#OJPStopEventDeliveryStructure,reftext=OJPStopEventDeliveryStructure]
 === The complex type `OJPStopEventDeliveryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPStopEventDeliveryStructure`
+5+| `OJPStopEventDeliveryStructure`
 | _←<<siri:AbstractServiceDeliveryStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`<<OJPStopEventRequest>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<StopEventResponseGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -423,10 +429,9 @@
 [#OJPTripInfoRequest,reftext=OJPTripInfoRequest]
 === The toplevel element `OJPTripInfoRequest`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPTripInfoRequest`
+5+| `OJPTripInfoRequest`
 | _→OJPTripInfoRequestStructure_ | 
 
 
@@ -436,19 +441,20 @@
 [#OJPTripInfoRequestStructure,reftext=OJPTripInfoRequestStructure]
 === The complex type `OJPTripInfoRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPTripInfoRequestStructure`
+5+| `OJPTripInfoRequestStructure`
 | _←<<AbstractOJPServiceRequestStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<TripInfoRequestGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -458,10 +464,9 @@
 [#OJPTripInfoDelivery,reftext=OJPTripInfoDelivery]
 === The toplevel element `OJPTripInfoDelivery`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPTripInfoDelivery`
+5+| `OJPTripInfoDelivery`
 | _→OJPTripInfoDeliveryStructure_ | 
 
 
@@ -471,29 +476,30 @@
 [#OJPTripInfoDeliveryStructure,reftext=OJPTripInfoDeliveryStructure]
 === The complex type `OJPTripInfoDeliveryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPTripInfoDeliveryStructure`
+5+| `OJPTripInfoDeliveryStructure`
 | _←<<siri:AbstractServiceDeliveryStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`<<OJPTripInfoRequest>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TripInfoResponseGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -503,10 +509,9 @@
 [#OJPTripRequest,reftext=OJPTripRequest]
 === The toplevel element `OJPTripRequest`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPTripRequest`
+5+| `OJPTripRequest`
 | _→OJPTripRequestStructure_ | 
 
 
@@ -516,19 +521,20 @@
 [#OJPTripRequestStructure,reftext=OJPTripRequestStructure]
 === The complex type `OJPTripRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPTripRequestStructure`
+5+| `OJPTripRequestStructure`
 | _←<<AbstractOJPServiceRequestStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<TripRequestGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -538,10 +544,9 @@
 [#OJPTripDelivery,reftext=OJPTripDelivery]
 === The toplevel element `OJPTripDelivery`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPTripDelivery`
+5+| `OJPTripDelivery`
 | _→OJPTripDeliveryStructure_ | 
 
 
@@ -551,29 +556,30 @@
 [#OJPTripDeliveryStructure,reftext=OJPTripDeliveryStructure]
 === The complex type `OJPTripDeliveryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPTripDeliveryStructure`
+5+| `OJPTripDeliveryStructure`
 | _←<<siri:AbstractServiceDeliveryStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`<<OJPTripRequest>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TripResponseGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -583,10 +589,9 @@
 [#OJPMultiPointTripRequest,reftext=OJPMultiPointTripRequest]
 === The toplevel element `OJPMultiPointTripRequest`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPMultiPointTripRequest`
+5+| `OJPMultiPointTripRequest`
 | _→OJPMultiPointTripRequestStructure_ | 
 
 
@@ -596,19 +601,20 @@
 [#OJPMultiPointTripRequestStructure,reftext=OJPMultiPointTripRequestStructure]
 === The complex type `OJPMultiPointTripRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPMultiPointTripRequestStructure`
+5+| `OJPMultiPointTripRequestStructure`
 | _←<<AbstractOJPServiceRequestStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<MultiPointTripRequestGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -618,10 +624,9 @@
 [#OJPMultiPointTripDelivery,reftext=OJPMultiPointTripDelivery]
 === The toplevel element `OJPMultiPointTripDelivery`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPMultiPointTripDelivery`
+5+| `OJPMultiPointTripDelivery`
 | _→OJPMultiPointTripDeliveryStructure_ | 
 
 
@@ -631,29 +636,30 @@
 [#OJPMultiPointTripDeliveryStructure,reftext=OJPMultiPointTripDeliveryStructure]
 === The complex type `OJPMultiPointTripDeliveryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OJPMultiPointTripDeliveryStructure`
+5+| `OJPMultiPointTripDeliveryStructure`
 | _←<<siri:AbstractServiceDeliveryStructure>>_ | 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`<<OJPMultiPointTripRequest>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<ServiceResponseContextGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<MultiPointTripResponseGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:Extensions`
 | 0:1 | 
 | 
@@ -677,19 +683,20 @@
 [#MessageIntegrityPropertiesGroup,reftext=MessageIntegrityPropertiesGroup]
 === The `MessageIntegrityPropertiesGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `MessageIntegrityPropertiesGroup`
+5+| `MessageIntegrityPropertiesGroup`
 2+| Properties that allow checks for message integrity.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Signature`
 | 0:1 | _<<SignatureType>>_
 | Authorisation signature (data for transmission of message signatures (public key cryptography), used to prove Message Integrity).
 
-
+|
 3+| `CertificateId`
 | 0:1 | _<<CertificateIdType>>_
 | form of identification that can be used as a Message Integrity Property (public key cryptography)
@@ -699,19 +706,20 @@
 [#ServiceRequestContextGroup,reftext=ServiceRequestContextGroup]
 === The `ServiceRequestContextGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceRequestContextGroup`
+5+| `ServiceRequestContextGroup`
 2+| Generic context for all request messages.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `DataFrameRef`
 | 0:1 | _siri:DataFrameRefStructure_
 | identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -721,19 +729,20 @@
 [#ServiceResponseContextGroup,reftext=ServiceResponseContextGroup]
 === The `ServiceResponseContextGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceResponseContextGroup`
+5+| `ServiceResponseContextGroup`
 2+| Generic context for all response messages.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `DataFrameRef`
 | 0:1 | _siri:DataFrameRefStructure_
 | identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. 
 
-
+|
 3+| `CalcTime`
 | 0:1 | _<<CalcTimeType>>_
 | Calculation time.
@@ -743,29 +752,30 @@
 [#SubscriptionRequestContextGroup,reftext=SubscriptionRequestContextGroup]
 === The `SubscriptionRequestContextGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `SubscriptionRequestContextGroup`
+5+| `SubscriptionRequestContextGroup`
 2+| Generic context for all subscription requests.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `DataFrameRef`
 | 0:1 | _siri:DataFrameRefStructure_
 | identifier of the set of data being used by an information system, which allows a comparison to be made with the versions of data being used by overlapping systems. 
 
-
+|
 3+| `Language`
 | 0:* | _xs:language_
 | Preferred language in which to return  text  values.
 
-
+|
 3+| →`*<<MessageIntegrityPropertiesGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -776,13 +786,13 @@
 [#AbstractOJPServiceRequestStructure,reftext=AbstractOJPServiceRequestStructure]
 === The complex type `AbstractOJPServiceRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `AbstractOJPServiceRequestStructure`
+5+| `AbstractOJPServiceRequestStructure`
 | _←<<siri:AbstractFunctionalServiceRequestStructure>>_ | Basic request structure common for all OJP service requests.
 
 
-3+| →`*<<ServiceRequestContextGroup>>*`
+4+| →`*<<ServiceRequestContextGroup>>*`
 | *1:1* | 
 | 
 
@@ -792,13 +802,13 @@
 [#AbstractOJPSubscriptionRequestStructure,reftext=AbstractOJPSubscriptionRequestStructure]
 === The complex type `AbstractOJPSubscriptionRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `AbstractOJPSubscriptionRequestStructure`
+5+| `AbstractOJPSubscriptionRequestStructure`
 | _←<<siri:AbstractSubscriptionRequestStructure>>_ | Basic structure common for all OJP subscription requests.
 
 
-3+| →`*<<SubscriptionRequestContextGroup>>*`
+4+| →`*<<SubscriptionRequestContextGroup>>*`
 | *1:1* | 
 | 
 
@@ -807,14 +817,15 @@
 [#DeliveryRequestGroup,reftext=DeliveryRequestGroup]
 === The `DeliveryRequestGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `DeliveryRequestGroup`
+5+| `DeliveryRequestGroup`
 2+| Wrapper for SIRI delivery request group.
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| →`*siri:DeliveryRequestGroup*`
 | *1:1* | 
 | 
@@ -824,14 +835,15 @@
 [#StatusRequestGroup,reftext=StatusRequestGroup]
 === The `StatusRequestGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StatusRequestGroup`
+5+| `StatusRequestGroup`
 2+| Wrapper for SIRI status request group.
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| →`*siri:StatusRequestGroup*`
 | *1:1* | 
 | 
@@ -841,10 +853,9 @@
 [#TerminateSubscriptionRequest,reftext=TerminateSubscriptionRequest]
 === The toplevel element `TerminateSubscriptionRequest`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TerminateSubscriptionRequest`
+5+| `TerminateSubscriptionRequest`
 | _→siri:TerminateSubscriptionRequestStructure_ | Request element for terminating subscriptions (from SIRI).
 
 
@@ -853,14 +864,15 @@
 [#ServiceResponseGroup,reftext=ServiceResponseGroup]
 === The `ServiceResponseGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceResponseGroup`
+5+| `ServiceResponseGroup`
 2+| Wrapper for SIRI service response group.
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| →`*siri:ServiceResponseGroup*`
 | *1:1* | 
 | 
@@ -871,26 +883,30 @@
 [#ResponseContextStructure,reftext=ResponseContextStructure]
 === The complex type `ResponseContextStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ResponseContextStructure`
+5+| `ResponseContextStructure`
 2+| Structure providing response contexts related to journeys, containing collections of places and situations.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Places`
 | 0:1 | 
 | Container for place objects. Only place objects that are referenced in the response should be put into the container.
 
-6+| The element contains only one element:
 
 
-3+| `*Place*`
+||
+5+| The element contains only one element:
+
+||
+2+| `*Place*`
 | *1:** | _<<PlaceStructure>>_
 | 
 
-
+|
 3+| `Situations`
 | 0:1 | _<<SituationsStructure>>_
 | Container for SIRI SX situation objects. Only situations that are referenced in the response should be put into the container.
@@ -918,29 +934,28 @@
 [#PlaceInformationRequestGroup,reftext=PlaceInformationRequestGroup]
 === The `PlaceInformationRequestGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PlaceInformationRequestGroup`
+5+| `PlaceInformationRequestGroup`
 2+| A place information request either consists of an initial request for places (by name and/or coordinates, with restrictions), or of an follow up request in which a place object is further refined.
 
-6+| The element contains only one element:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*InitialInput*`
 | *1:1* | _<<InitialPlaceInputStructure>>_
 | Initial input for the place information request. This input defines what is originally looked for.
 
-|
+| | _b_ 
 2+| `*PlaceRef*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Place for further refinement. If a place in a previous response was marked as not "complete" it can be refined by putting it here.
 
-
+|
 3+| `Restrictions`
 | 0:1 | _<<PlaceParamStructure>>_
 | E.g. place types (stops, addresses, POIs) or specific place attributes
@@ -950,24 +965,25 @@
 [#PlaceInformationResponseGroup,reftext=PlaceInformationResponseGroup]
 === The `PlaceInformationResponseGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PlaceInformationResponseGroup`
+5+| `PlaceInformationResponseGroup`
 2+| 
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `PlaceInformationResponseContext`
 | 0:1 | _<<ResponseContextStructure>>_
 | Context to hold response objects that occur frequently.
 
-
+|
 3+| `ContinueAt`
 | 0:1 | _xs:nonNegativeInteger_
 | If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.
 
-
+|
 3+| `PlaceResult`
 | 0:* | _<<PlaceResultStructure>>_
 | 
@@ -978,29 +994,30 @@
 [#InitialPlaceInputStructure,reftext=InitialPlaceInputStructure]
 === The complex type `InitialPlaceInputStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `InitialPlaceInputStructure`
+5+| `InitialPlaceInputStructure`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Name`
 | 0:1 | _xs:string_
 | Name of the place object which is looked after. This is usually the user's input. If not given, the name of the resulting place objects is not relevant.
 
-
+|
 3+| `GeoPosition`
 | 0:1 | _siri:LocationStructure_
 | Coordinate where to look for places. If given, the result should prefer place objects near to this GeoPosition.
 
-
+|
 3+| `GeoRestriction`
 | 0:1 | _<<GeoRestrictionsStructure>>_
 | Restricts the resulting place objects to the given geographical area.
 
-
+|
 3+| `AllowedSystemId`
 | 0:* | _xs:normalizedString_
 | Used in distributed environments. e.g. EU-Spirit. If none is given, the place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/
@@ -1011,19 +1028,20 @@
 [#PlaceParamStructure,reftext=PlaceParamStructure]
 === The complex type `PlaceParamStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PlaceParamStructure`
+5+| `PlaceParamStructure`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<PlaceDataFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<PlacePolicyGroup>>*`
 | *1:1* | 
 | 
@@ -1034,28 +1052,26 @@
 [#GeoRestrictionsStructure,reftext=GeoRestrictionsStructure]
 === The complex type `GeoRestrictionsStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `GeoRestrictionsStructure`
+5+| `GeoRestrictionsStructure`
 2+| 
 
 
-6+| 
+7+| The element contains _one of_ the following elements:
 
-6+| The element contains _one of_ the following elements:
-
-|
-2+| `*Area*`
+ | _a_ 
+3+| `*Area*`
 | *1:1* | _<<GeoAreaStructure>>_
 | Area is defined by a polyline
 
-|
-2+| `*Circle*`
+ | _b_ 
+3+| `*Circle*`
 | *1:1* | _<<GeoCircleStructure>>_
 | 
 
-|
-2+| `*Rectangle*`
+ | _c_ 
+3+| `*Rectangle*`
 | *1:1* | _<<GeoRectangleStructure>>_
 | 
 
@@ -1065,19 +1081,20 @@
 [#GeoCircleStructure,reftext=GeoCircleStructure]
 === The complex type `GeoCircleStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `GeoCircleStructure`
+5+| `GeoCircleStructure`
 2+| 
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Center*`
 | *1:1* | _siri:LocationStructure_
 | 
 
-
+|
 3+| `*Radius*`
 | *1:1* | _siri:DistanceType_
 | Radius in metres.
@@ -1088,19 +1105,20 @@
 [#GeoRectangleStructure,reftext=GeoRectangleStructure]
 === The complex type `GeoRectangleStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `GeoRectangleStructure`
+5+| `GeoRectangleStructure`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*UpperLeft*`
 | *1:1* | _siri:LocationStructure_
 | 
 
-
+|
 3+| `*LowerRight*`
 | *1:1* | _siri:LocationStructure_
 | 
@@ -1111,15 +1129,16 @@
 [#GeoAreaStructure,reftext=GeoAreaStructure]
 === The complex type `GeoAreaStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `GeoAreaStructure`
+5+| `GeoAreaStructure`
 2+|  [specialisation of ZONE in TMv6] a LINK SEQUENCE (one-dimensional) forming the boundary of a ZONE
 	
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| `*PolylinePoint*`
 | 3:* | _siri:LocationStructure_
 | 
@@ -1130,29 +1149,30 @@
 [#PlaceResultStructure,reftext=PlaceResultStructure]
 === The complex type `PlaceResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PlaceResultStructure`
+5+| `PlaceResultStructure`
 2+| 
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Place*`
 | *1:1* | _<<PlaceStructure>>_
 | 
 
-
+|
 3+| `*Complete*`
 | *1:1* | _xs:boolean_
 | States whether the included place is complete or needs further refinement. Only complete places are fully resolved and can be used in e.g. trip requests. Incomplete places have to be refined entering them once again into a PlaceInformationRequest.
 
-
+|
 3+| `Probability`
 | 0:1 | _xs:float_
 | Probability, that this result is the one meant by the user's input. Value should be between 0 and 1.
 
-
+|
 3+| `Mode`
 | 0:* | _<<ModeStructure>>_
 | List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.
@@ -1162,29 +1182,30 @@
 [#PlacePolicyGroup,reftext=PlacePolicyGroup]
 === The `PlacePolicyGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PlacePolicyGroup`
+5+| `PlacePolicyGroup`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Language`
 | 0:* | _xs:language_
 | Preferred language in which to return text values.
 
-
+|
 3+| `NumberOfResults`
 | 0:1 | _xs:positiveInteger_
 | Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (eg: in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The place information service is expected to support a response volume of at least 500 objects within one single response.
 
-
+|
 3+| `ContinueAt`
 | 0:1 | _xs:nonNegativeInteger_
 | Tells the server to skip the mentioned number of results in its response. Can be used in a follow-up request to get further results. The value is usually taken from the previous response.
 
-
+|
 3+| `IncludePtModes`
 | 0:1 | _xs:boolean_
 | Tells the service to include the available public transport modes at returned stops.
@@ -1194,39 +1215,40 @@
 [#PlaceDataFilterGroup,reftext=PlaceDataFilterGroup]
 === The `PlaceDataFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PlaceDataFilterGroup`
+5+| `PlaceDataFilterGroup`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Type`
 | 0:* | _<<PlaceTypeEnumeration>>_
 | Allowed place object types. If none is given, all types are allowed.
 
-
+|
 3+| `Usage`
 | 0:1 | _<<PlaceUsageEnumeration>>_
 | Defines, whether place objects for origin, via, or destination are searched.
 
-
+|
 3+| `PtModes`
 | 0:1 | _<<PtModeFilterStructure>>_
 | Allowed public transport modes. Defines, which public transport modes must be available at the returned place objects. Applies only to stops.
 
-
+|
 3+| `OperatorFilter`
 | 0:1 | _<<OperatorFilterStructure>>_
 | Filter for places that are operated by certain organisations.
 
-
+|
 3+| `TopographicPlaceRef`
 | 0:* | _<<TopographicPlaceRefStructure>>_
 | If at least one is set, only place objects within the given localities are allowed.
 
-
+|
 3+| `PointOfInterestFilter`
 | 0:1 | _<<PointOfInterestFilterStructure>>_
 | Filter to narrow down POI searches.
@@ -1236,19 +1258,20 @@
 [#ExchangePointsRequestGroup,reftext=ExchangePointsRequestGroup]
 === The `ExchangePointsRequestGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ExchangePointsRequestGroup`
+5+| `ExchangePointsRequestGroup`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `PlaceRef`
 | 0:1 | _<<PlaceRefStructure>>_
 | Place for which exchange points to other "neighbour" systems are to be searched. This place is usually the origin/destination of a passenger journey. May be omitted if all exchange points shall be returned.
 
-
+|
 3+| `Params`
 | 0:1 | _<<ExchangePointsParamStructure>>_
 | E.g. place types (stops, addresses, POIs) or specific place attributes
@@ -1259,19 +1282,20 @@
 [#ExchangePointsParamStructure,reftext=ExchangePointsParamStructure]
 === The complex type `ExchangePointsParamStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ExchangePointsParamStructure`
+5+| `ExchangePointsParamStructure`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<ExchangePointsDataFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<ExchangePointsPolicyGroup>>*`
 | *1:1* | 
 | 
@@ -1281,44 +1305,45 @@
 [#ExchangePointsDataFilterGroup,reftext=ExchangePointsDataFilterGroup]
 === The `ExchangePointsDataFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ExchangePointsDataFilterGroup`
+5+| `ExchangePointsDataFilterGroup`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Type`
 | 0:* | _<<PlaceTypeEnumeration>>_
 | Allowed place object types. If none is given, all types are allowed.
 
-
+|
 3+| `Usage`
 | 0:1 | _<<PlaceUsageEnumeration>>_
 | Defines, whether the place object of this request acts as origin, via or destination point of the passenger journey.
 
-
+|
 3+| `PtModes`
 | 0:1 | _<<PtModeFilterStructure>>_
 | Allowed public transport modes. Defines, which public transport modes must be available at the returned place objects. Applies only to stops.
 
-
+|
 3+| `OperatorFilter`
 | 0:1 | _<<OperatorFilterStructure>>_
 | Filter for places that are operated by certain organisations.
 
-
+|
 3+| `TopographicPlaceRef`
 | 0:* | _<<TopographicPlaceRefStructure>>_
 | If at least one is set, only place objects within the given localities are allowed.
 
-
+|
 3+| `DestinationSystem`
 | 0:1 | _siri:ParticipantRefStructure_
 | Reference to system in which the destination (or origin) of the passenger is located.
 
-
+|
 3+| `AdjacentSystem`
 | 0:* | _siri:ParticipantRefStructure_
 | One or more adjacent systems to which the exchange points should be retrieved.
@@ -1328,24 +1353,25 @@
 [#ExchangePointsPolicyGroup,reftext=ExchangePointsPolicyGroup]
 === The `ExchangePointsPolicyGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ExchangePointsPolicyGroup`
+5+| `ExchangePointsPolicyGroup`
 2+| 
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Language`
 | 0:* | _xs:language_
 | Preferred language in which to return text values.
 
-
+|
 3+| `NumberOfResults`
 | 0:1 | _xs:positiveInteger_
 | 
 
-
+|
 3+| `ContinueAt`
 | 0:1 | _xs:nonNegativeInteger_
 | Tells the server to skip the mentioned number of results in its response. Can be used in a follow-up request to get further results. The value is usually taken from the previous response.
@@ -1355,24 +1381,25 @@
 [#ExchangePointsResponseGroup,reftext=ExchangePointsResponseGroup]
 === The `ExchangePointsResponseGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ExchangePointsResponseGroup`
+5+| `ExchangePointsResponseGroup`
 2+| 
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `ExchangePointResponseContext`
 | 0:1 | _<<ResponseContextStructure>>_
 | Context to hold trip response objects that occur frequently.
 
-
+|
 3+| `ContinueAt`
 | 0:1 | _xs:nonNegativeInteger_
 | If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.
 
-
+|
 3+| `Place`
 | 0:* | _<<ExchangePointsResultStructure>>_
 | 
@@ -1383,34 +1410,35 @@
 [#ExchangePointsResultStructure,reftext=ExchangePointsResultStructure]
 === The complex type `ExchangePointsResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ExchangePointsResultStructure`
+5+| `ExchangePointsResultStructure`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Place*`
 | *1:1* | _<<PlaceStructure>>_
 | Place object that describes this exchange point.
 
-
+|
 3+| `TravelDurationEstimate`
 | 0:1 | _xs:duration_
 | Rough estimate of the travel duration from the specified refrence place to this exchange point.
 
-
+|
 3+| `WaitDuration`
 | 0:1 | _xs:duration_
 | Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it has to take care, that feeding arrival and fetching departure are at least this duration apart.
 
-
+|
 3+| `BorderPoint`
 | 0:1 | _xs:boolean_
 | Flag if this exchange point is an administrative border point where timetables are cut off while services still may run through and connect the regions. At this kind of points passengers may continue their journey within the same service. Default is FALSE.
 
-
+|
 3+| `Mode`
 | 0:* | _<<ModeStructure>>_
 | List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.
@@ -1436,34 +1464,35 @@
 [#StopPointGroup,reftext=StopPointGroup]
 === The `StopPointGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopPointGroup`
+5+| `StopPointGroup`
 2+| A stop point with id and name
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*StopPointName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name or description of stop point for use in passenger information.
 
-
+|
 3+| `NameSuffix`
 | 0:1 | _<<InternationalTextStructure>>_
 | Additional description of the stop point that may be appended to the name if enough space is available. F.e. "opposite main entrance".
 
-
+|
 3+| `PlannedQuay`
 | 0:1 | _<<InternationalTextStructure>>_
 | Name of the bay where to board/alight from the vehicle. According to planned timetable.
 
-
+|
 3+| `EstimatedQuay`
 | 0:1 | _<<InternationalTextStructure>>_
 | Name of the bay where to board/alight from the vehicle. As to the latest realtime status.
@@ -1474,34 +1503,35 @@
 [#StopPointStructure,reftext=StopPointStructure]
 === The complex type `StopPointStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopPointStructure`
+5+| `StopPointStructure`
 2+| [an extended view of SCHEDULED STOP POINT in TMv6] a SCHEDULED STOP POINT extended by ACCESSIBILITY LIMITATION attributes and with identifier and name where passengers can board or alight from vehicles 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `PrivateCode`
 | 0:* | _<<PrivateCodeStructure>>_
 | Code of this stop point in private/foreign/proprietary coding schemes.
 
-
+|
 3+| `ParentRef`
 | 0:1 | _<<StopPlaceRefStructure>>_
 | Reference to the stop place to which this stop point belongs.
 
-
+|
 3+| →`<<TopographicPlaceRef>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<StopAttributesGroup>>*`
 | *1:1* | 
 | 
@@ -1512,9 +1542,9 @@
 [#StopPlaceRefStructure,reftext=StopPlaceRefStructure]
 === The complex type `StopPlaceRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopPlaceRefStructure`
+5+| `StopPlaceRefStructure`
 2+| Reference to a Stop Place
 
 |===
@@ -1522,10 +1552,9 @@
 [#StopPlaceRef,reftext=StopPlaceRef]
 === The toplevel element `StopPlaceRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopPlaceRef`
+5+| `StopPlaceRef`
 | _→StopPlaceRefStructure_ | Reference to a Stop Place
 
 
@@ -1534,24 +1563,25 @@
 [#StopPlaceGroup,reftext=StopPlaceGroup]
 === The `StopPlaceGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopPlaceGroup`
+5+| `StopPlaceGroup`
 2+| A stop place with id and name
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopPlaceRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*StopPlaceName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name of this stop place for use in passenger information.
 
-
+|
 3+| `NameSuffix`
 | 0:1 | _<<InternationalTextStructure>>_
 | Additional description of the stop place that may be appended to the name if enough space is available. F.e. "Exhibition Center".
@@ -1562,29 +1592,30 @@
 [#StopPlaceStructure,reftext=StopPlaceStructure]
 === The complex type `StopPlaceStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopPlaceStructure`
+5+| `StopPlaceStructure`
 2+| [an extended view of STOP PLACE in TMv6] a PLACE extended by ACCESSIBILITY LIMITATION properties and some attributes of the associated equipment, comprising one or more locations where vehicles may stop and where passengers may board or leave vehicles or prepare their trip, and which will usually have one or more wellknown names 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopPlaceGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `PrivateCode`
 | 0:* | _<<PrivateCodeStructure>>_
 | Code of this stop place in private/foreign/proprietary coding schemes.
 
-
+|
 3+| →`<<TopographicPlaceRef>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<StopAttributesGroup>>*`
 | *1:1* | 
 | 
@@ -1594,24 +1625,25 @@
 [#StopAttributesGroup,reftext=StopAttributesGroup]
 === The `StopAttributesGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopAttributesGroup`
+5+| `StopAttributesGroup`
 2+| [properties of a SCHEDULED STOP POINT or STOP PLACE in TMv6] selection of attributes of ACCESSIBIITY LIMITATION related to a SCHEDULED STOP POINT extended by attributes referring to some equipment.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `WheelchairAccessible`
 | 0:1 | _xs:boolean_
 | Whether this stop is accessible for wheelchair users.
 
-
+|
 3+| `Lighting`
 | 0:1 | _xs:boolean_
 | Whether this stop is lit.
 
-
+|
 3+| `Covered`
 | 0:1 | _xs:boolean_
 | Whether this stop offers protection from weather conditions like rain, snow, storm etc.
@@ -1622,9 +1654,9 @@
 [#TopographicPlaceRefStructure,reftext=TopographicPlaceRefStructure]
 === The complex type `TopographicPlaceRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TopographicPlaceRefStructure`
+5+| `TopographicPlaceRefStructure`
 2+| Reference to a TopographicPlace
 
 |===
@@ -1632,10 +1664,9 @@
 [#TopographicPlaceRef,reftext=TopographicPlaceRef]
 === The toplevel element `TopographicPlaceRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TopographicPlaceRef`
+5+| `TopographicPlaceRef`
 | _→TopographicPlaceRefStructure_ | Reference to a TopographicPlace
 
 
@@ -1645,47 +1676,51 @@
 [#TopographicPlaceStructure,reftext=TopographicPlaceStructure]
 === The complex type `TopographicPlaceStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TopographicPlaceStructure`
+5+| `TopographicPlaceStructure`
 2+| [TMv6] A type of PLACE providing the topographical context when searching for or presenting travel information, for example as the origin or destination of a trip. It may be of any size (e.g. County,City, Town, Village) and of different specificity (e.g. Greater London, London, West End, Westminster, St James's).
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*TopographicPlaceCode*`
 | *1:1* | _<<TopographicPlaceCodeType>>_
 | TopographicPlace ID.
 
-
+|
 3+| `*TopographicPlaceName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name or description of TopographicPlace for use in passenger information.
 
-
+|
 3+| `PrivateCode`
 | 0:* | _<<PrivateCodeStructure>>_
 | Code of this TopographicPlace in private/foreign/proprietary coding schemes.
 
-
+|
 3+| `ParentRef`
 | 0:1 | _<<TopographicPlaceRefStructure>>_
 | Reference to a parent TopographicPlace.
 
-
+|
 3+| `ReferredSystemId`
 | 0:1 | _xs:normalizedString_
 | Used in distributed environments (e.g. EU-Spirit). If set, this topographic place resides within the given system (in EU-Spirit "passive server"). This system can be queried for actual places within this topographic place. This is used in an distributed environment for a two-steps place identification. In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/
 
-
+|
 3+| `Area`
 | 0:1 | 
 | Area covered by the locality described as a polygon.
 
-6+| The element contains only one element:
 
 
-3+| `*Points*`
+||
+5+| The element contains only one element:
+
+||
+2+| `*Points*`
 | 3:* | _siri:LocationStructure_
 | 
 
@@ -1695,9 +1730,9 @@
 [#PointOfInterestRefStructure,reftext=PointOfInterestRefStructure]
 === The complex type `PointOfInterestRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PointOfInterestRefStructure`
+5+| `PointOfInterestRefStructure`
 2+| Reference to a Point of Interest
 
 |===
@@ -1705,10 +1740,9 @@
 [#PointOfInterestRef,reftext=PointOfInterestRef]
 === The toplevel element `PointOfInterestRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PointOfInterestRef`
+5+| `PointOfInterestRef`
 | _→PointOfInterestRefStructure_ | Reference to a Point of Interest
 
 
@@ -1718,39 +1752,40 @@
 [#PointOfInterestStructure,reftext=PointOfInterestStructure]
 === The complex type `PointOfInterestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PointOfInterestStructure`
+5+| `PointOfInterestStructure`
 2+| [corresponds to POINT OF INTEREST in TMv6 with related information] type of PLACE to or through which passengers may wish to navigate as part of their journey and which is modelled in detail by journey planners. 
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*PointOfInterestCode*`
 | *1:1* | _<<PointOfInterestCodeType>>_
 | ID of this Point of Interest.
 
-
+|
 3+| `*PointOfInterestName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name or description of point of interest for use in passenger information.
 
-
+|
 3+| `NameSuffix`
 | 0:1 | _<<InternationalTextStructure>>_
 | Additional description of the point of interest that may be appended to the name if enough space is available. F.e. "Exhibition Center".
 
-
+|
 3+| `PointOfInterestCategory`
 | 0:* | _<<PointOfInterestCategoryStructure>>_
 | Categories this POI is associated with. Order indicates descending relevance.
 
-
+|
 3+| `PrivateCode`
 | 0:* | _<<PrivateCodeStructure>>_
 | Code of this point of interest in private/foreign/proprietary coding schemes.
 
-
+|
 3+| →`<<TopographicPlaceRef>>`
 | 0:1 | 
 | 
@@ -1761,23 +1796,21 @@
 [#PointOfInterestCategoryStructure,reftext=PointOfInterestCategoryStructure]
 === The complex type `PointOfInterestCategoryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PointOfInterestCategoryStructure`
+5+| `PointOfInterestCategoryStructure`
 2+| [a view of POINT OF INTEREST CLASSIFICATION in TMv6] categorisation of POINTs OF INTEREST in respect of the activities undertaken at them (defined by key-value-pairs).
 
 
-6+| 
+7+| The element contains _one of_ the following elements:
 
-6+| The element contains _one of_ the following elements:
-
-|
-2+| `*OsmTag*`
+ | _a_ 
+3+| `*OsmTag*`
 | *1:** | _<<OsmTagStructure>>_
 | Open Street Map tag structure (key-value)
 
-|
-2+| `*PointOfInterestClassification*`
+ | _b_ 
+3+| `*PointOfInterestClassification*`
 | *1:** | _xs:string_
 | Classification of the POI (when it is not from OSM). The codification of the classification Id may include de codification source (for example "IGN:[classificationCode]")
 
@@ -1787,19 +1820,20 @@
 [#OsmTagStructure,reftext=OsmTagStructure]
 === The complex type `OsmTagStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OsmTagStructure`
+5+| `OsmTagStructure`
 2+| Structure of an Open Street Map tag.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Tag*`
 | *1:1* | _xs:NMTOKEN_
 | Name of Open Street Map tag (amenity, leisure, tourism, bike, ...)
 
-
+|
 3+| `*Value*`
 | *1:1* | _xs:NMTOKEN_
 | Value for Open Street Map tag (charging_station, hostel, yes, ...)
@@ -1810,19 +1844,20 @@
 [#PointOfInterestFilterStructure,reftext=PointOfInterestFilterStructure]
 === The complex type `PointOfInterestFilterStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PointOfInterestFilterStructure`
+5+| `PointOfInterestFilterStructure`
 2+| Filter POIs by category.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Exclude`
 | 0:1 | _xs:boolean_
 | Whether categories in list are to include or exclude from search. Default is FALSE.
 
-
+|
 3+| `PointOfInterestCategory`
 | 0:* | _<<PointOfInterestCategoryStructure>>_
 | These POI categories can be used to filter POIs. If more than one is given the filtering is by logical "OR" (when Exclude=FALSE) and logical "AND" (when Exclude=TRUE).
@@ -1833,9 +1868,9 @@
 [#AddressRefStructure,reftext=AddressRefStructure]
 === The complex type `AddressRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `AddressRefStructure`
+5+| `AddressRefStructure`
 2+| Reference to an Address
 
 |===
@@ -1843,10 +1878,9 @@
 [#AddressRef,reftext=AddressRef]
 === The toplevel element `AddressRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `AddressRef`
+5+| `AddressRef`
 | _→AddressRefStructure_ | Reference to an Address
 
 
@@ -1855,44 +1889,45 @@
 [#AddressDetailGroup,reftext=AddressDetailGroup]
 === The `AddressDetailGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `AddressDetailGroup`
+5+| `AddressDetailGroup`
 2+| An address with its name entities
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `CountryName`
 | 0:1 | _xs:string_
 | Country of the address.
 
-
+|
 3+| `PostCode`
 | 0:1 | _xs:string_
 | Postal code of the address.
 
-
+|
 3+| `TopographicPlaceName`
 | 0:1 | _xs:string_
 | TopographicPlace name of the address. If set it should at least contain the city name.
 
-
+|
 3+| →`<<TopographicPlaceRef>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `Street`
 | 0:1 | _xs:string_
 | Street name of the address.
 
-
+|
 3+| `HouseNumber`
 | 0:1 | _xs:string_
 | House number of the address. If none is given, either a crossing street can be given, or the whole street is meant.
 
-
+|
 3+| `CrossRoad`
 | 0:1 | _xs:string_
 | Crossing. This can be used to be more specific without using house numbers.
@@ -1903,34 +1938,35 @@
 [#AddressStructure,reftext=AddressStructure]
 === The complex type `AddressStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `AddressStructure`
+5+| `AddressStructure`
 2+| descriptive data associated with a PLACE that can be used to describe the unique geographical context of a PLACE for the purposes of identifying it. May be refined as either a ROAD ADDRESS, a POSTAL ADDRESS or both
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*AddressCode*`
 | *1:1* | _<<AddressCodeType>>_
 | ID of this address.
 
-
+|
 3+| `PrivateCode`
 | 0:* | _<<PrivateCodeStructure>>_
 | Code of this address in private/foreign/proprietary coding schemes.
 
-
+|
 3+| `*AddressName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Name or description of address for use in passenger information.
 
-
+|
 3+| `NameSuffix`
 | 0:1 | _<<InternationalTextStructure>>_
 | Additional description of the address that may be appended to the name if enough space is available. F.e. "Crossing with Peterstraße".
 
-
+|
 3+| →`*<<AddressDetailGroup>>*`
 | *1:1* | 
 | 
@@ -1941,59 +1977,58 @@
 [#PlaceStructure,reftext=PlaceStructure]
 === The complex type `PlaceStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PlaceStructure`
+5+| `PlaceStructure`
 2+| geographic PLACE of any type which may be specified as the origin or destination of a trip
 
-6+| The element contains a _sequence_ of the following elements:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*Address*`
 | *1:1* | _<<AddressStructure>>_
 | Model of an address 
 
-|
+| | _b_ 
 2+| `*PointOfInterest*`
 | *1:1* | _<<PointOfInterestStructure>>_
 | Model of a POI 
 
-|
+| | _c_ 
 2+| `*StopPlace*`
 | *1:1* | _<<StopPlaceStructure>>_
 | Model of a stop place
 
-|
+| | _d_ 
 2+| `*StopPoint*`
 | *1:1* | _<<StopPointStructure>>_
 | Model of a stop point 
 
-|
+| | _e_ 
 2+| `*TopographicPlace*`
 | *1:1* | _<<TopographicPlaceStructure>>_
 | TopographicPlace. Region, village, or city.
 
-
+|
 3+| `*Name*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Public name of the place.
 
-
+|
 3+| `*GeoPosition*`
 | *1:1* | _siri:LocationStructure_
 | 
 
-
+|
 3+| `Attribute`
 | 0:* | _<<GeneralAttributeStructure>>_
 | Attribute associated with this place.
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -2004,49 +2039,48 @@
 [#PlaceRefStructure,reftext=PlaceRefStructure]
 === The complex type `PlaceRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PlaceRefStructure`
+5+| `PlaceRefStructure`
 2+| Reference to a geographic PLACE of any type which may be specified as the origin or destination of a trip
 
-6+| The element contains only one element:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
-|
+| | _b_ 
 2+| →`*<<StopPlaceRef>>*`
 | *1:1* | 
 | 
 
-|
+| | _c_ 
 2+| →`*<<TopographicPlaceRef>>*`
 | *1:1* | 
 | 
 
-|
+| | _d_ 
 2+| →`*<<PointOfInterestRef>>*`
 | *1:1* | 
 | 
 
-|
+| | _e_ 
 2+| →`*<<AddressRef>>*`
 | *1:1* | 
 | 
 
-|
+| | _f_ 
 2+| `*GeoPosition*`
 | *1:1* | _siri:LocationStructure_
 | WGS84 coordinates position.
 
-
+|
 3+| `*Name*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Public name of the place.
@@ -2077,19 +2111,20 @@
 [#StopEventRequestGroup,reftext=StopEventRequestGroup]
 === The `StopEventRequestGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopEventRequestGroup`
+5+| `StopEventRequestGroup`
 2+| Request structure for departure and arrival events at stops
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Place*`
 | *1:1* | _<<PlaceContextStructure>>_
 | Place for which to obtain stop event information.
 
-
+|
 3+| `Params`
 | 0:1 | _<<StopEventParamStructure>>_
 | Request parameter
@@ -2100,24 +2135,25 @@
 [#StopEventParamStructure,reftext=StopEventParamStructure]
 === The complex type `StopEventParamStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopEventParamStructure`
+5+| `StopEventParamStructure`
 2+| Request specific parameters (parameters which define what is to be included in a Stop  Event result)
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopEventDataFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<StopEventPolicyGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<StopEventContentFilterGroup>>*`
 | *1:1* | 
 | 
@@ -2127,24 +2163,25 @@
 [#StopEventDataFilterGroup,reftext=StopEventDataFilterGroup]
 === The `StopEventDataFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopEventDataFilterGroup`
+5+| `StopEventDataFilterGroup`
 2+| Request data filters
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `PtModeFilter`
 | 0:1 | _<<PtModeFilterStructure>>_
 | Modes to be considered in stop events.
 
-
+|
 3+| `LineFilter`
 | 0:1 | _<<LineDirectionFilterStructure>>_
 | Lines/Directions to include/exclude.
 
-
+|
 3+| `OperatorFilter`
 | 0:1 | _<<OperatorFilterStructure>>_
 | Transport operators to include/exclude.
@@ -2154,24 +2191,25 @@
 [#StopEventPolicyGroup,reftext=StopEventPolicyGroup]
 === The `StopEventPolicyGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopEventPolicyGroup`
+5+| `StopEventPolicyGroup`
 2+| Request policies
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `NumberOfResults`
 | 0:1 | _xs:positiveInteger_
 | parameter to control the number of TRIP results before/after a point in time. May NOT be used when departure time at origin AND arrival time at destination are set
 
-
+|
 3+| `TimeWindow`
 | 0:1 | _xs:duration_
 | Time window events should lie within. Starting from time given in PlaceContext.
 
-
+|
 3+| `StopEventType`
 | 0:1 | _<<StopEventTypeEnumeration>>_
 | Only departures or arrivals or both.
@@ -2181,44 +2219,45 @@
 [#StopEventContentFilterGroup,reftext=StopEventContentFilterGroup]
 === The `StopEventContentFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopEventContentFilterGroup`
+5+| `StopEventContentFilterGroup`
 2+| Content filters which data is expected in the response
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `IncludePreviousCalls`
 | 0:1 | _xs:boolean_
 | Whether the previous calls of each vehicle journey should be included in the response.
 
-
+|
 3+| `IncludeOnwardCalls`
 | 0:1 | _xs:boolean_
 | Whether the onward calls of each vehicle journey should be included in the response.
 
-
+|
 3+| `IncludeOperatingDays`
 | 0:1 | _xs:boolean_
 | Whether operating day information of this stop event should be included in the response.
 
-
+|
 3+| `IncludeRealtimeData`
 | 0:1 | _xs:boolean_
 | Whether realtime information of this stop event should be included in the response.
 
-
+|
 3+| `IncludePlacesContext`
 | 0:1 | _xs:boolean_
 | Whether the place context is needed. If a requestor has that information already, the response can be made slimmer, when set to false. Default is true. 
 
-
+|
 3+| `IncludeSituationsContext`
 | 0:1 | _xs:boolean_
 | Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true
 
-
+|
 3+| `IncludeStopHierarchy`
 | 0:1 | _<<HierarchyEnumeration>>_
 | Indicates for which parts of the hierarchy of the StopPlace(s) stop events should 
@@ -2236,19 +2275,20 @@
 [#StopEventResponseGroup,reftext=StopEventResponseGroup]
 === The `StopEventResponseGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopEventResponseGroup`
+5+| `StopEventResponseGroup`
 2+| Response structure for departure and arrival events at stops
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `StopEventResponseContext`
 | 0:1 | _<<ResponseContextStructure>>_
 | Container for data that is referenced multiple times.
 
-
+|
 3+| `StopEventResult`
 | 0:* | _<<StopEventResultStructure>>_
 | Enclosing element for stop event data.
@@ -2259,24 +2299,25 @@
 [#StopEventResultStructure,reftext=StopEventResultStructure]
 === The complex type `StopEventResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopEventResultStructure`
+5+| `StopEventResultStructure`
 2+| Wrapper element for a single stop event result.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*ResultId*`
 | *1:1* | _xs:NMTOKEN_
 | ID of this result.
 
-
+|
 3+| `ErrorMessage`
 | 0:* | _<<ErrorMessageStructure>>_
 | Error messages that refer to this stop event.
 
-
+|
 3+| `*StopEvent*`
 | *1:1* | _<<StopEventStructure>>_
 | Stop event data element.
@@ -2287,39 +2328,40 @@
 [#StopEventStructure,reftext=StopEventStructure]
 === The complex type `StopEventStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopEventStructure`
+5+| `StopEventStructure`
 2+| Stop event structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `PreviousCall`
 | 0:* | _<<CallAtNearStopStructure>>_
 | Calls at stops that happen before this stop event (service pattern of this vehicle journey before this stop event).
 
-
+|
 3+| `*ThisCall*`
 | *1:1* | _<<CallAtNearStopStructure>>_
 | The call of this vehicle journey at this stop.
 
-
+|
 3+| `OnwardCall`
 | 0:* | _<<CallAtNearStopStructure>>_
 | Calls at stops that happen after this stop event (rest of the service pattern of the vehicle journey).
 
-
+|
 3+| `*Service*`
 | *1:1* | _<<DatedJourneyStructure>>_
 | Service that calls at this stop.
 
-
+|
 3+| →`<<OperatingDaysGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -2330,24 +2372,25 @@
 [#CallAtNearStopStructure,reftext=CallAtNearStopStructure]
 === The complex type `CallAtNearStopStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `CallAtNearStopStructure`
+5+| `CallAtNearStopStructure`
 2+| indication of the walk distance and time to a nearby stop where relevant.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*CallAtStop*`
 | *1:1* | _<<CallAtStopStructure>>_
 | [same as CALL in SIRI] the meeting of a VEHICLE JOURNEY with a specific SCHEDULED STOP POINT .
 
-
+|
 3+| `WalkDistance`
 | 0:1 | _siri:DistanceType_
 | Distance from request place (f.e. address) to this stop in metres.
 
-
+|
 3+| `WalkDuration`
 | 0:1 | _xs:duration_
 | Walking duration from request place (f.e. address) to this stop. All user options taken into account (f.e. walk speed).
@@ -2377,39 +2420,40 @@
 [#TripRequestGroup,reftext=TripRequestGroup]
 === The `TripRequestGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripRequestGroup`
+5+| `TripRequestGroup`
 2+| Trip request structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Origin*`
 | *1:** | _<<PlaceContextStructure>>_
 | Specifies the origin situation from where the user wants to start.
 
-
+|
 3+| `*Destination*`
 | *1:** | _<<PlaceContextStructure>>_
 | Specifies the destination situation where the user is heading to.
 
-
+|
 3+| `Via`
 | 0:* | _<<TripViaStructure>>_
 | Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops.
 
-
+|
 3+| `NotVia`
 | 0:* | _<<NotViaStructure>>_
 | Not-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through. If more than one not via point is given all of them must be obeyed.
 
-
+|
 3+| `NoChangeAt`
 | 0:* | _<<NoChangeAtStructure>>_
 | no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.
 
-
+|
 3+| `Params`
 | 0:1 | _<<TripParamStructure>>_
 | Options to control the search behaviour and response contents.
@@ -2420,39 +2464,40 @@
 [#TripParamStructure,reftext=TripParamStructure]
 === The complex type `TripParamStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripParamStructure`
+5+| `TripParamStructure`
 2+| Trip request parameter structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<TripDataFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TripMobilityFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TripPolicyGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TripContentFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `FareParam`
 | 0:1 | _<<FareParamStructure>>_
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -2462,29 +2507,30 @@
 [#TripDataFilterGroup,reftext=TripDataFilterGroup]
 === The `TripDataFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripDataFilterGroup`
+5+| `TripDataFilterGroup`
 2+| Data to be included/excluded from search, f.e. modes, operators.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `PtModeFilter`
 | 0:1 | _<<PtModeFilterStructure>>_
 | Modes to be considered in trip calculation.
 
-
+|
 3+| `LineFilter`
 | 0:1 | _<<LineDirectionFilterStructure>>_
 | Lines/Directions to include/exclude.
 
-
+|
 3+| `OperatorFilter`
 | 0:1 | _<<OperatorFilterStructure>>_
 | Transport operators to include/exclude.
 
-
+|
 3+| `PrivateModeFilter`
 | 0:1 | _<<PrivateModeFilterStructure>>_
 | Private mobility options to include/exclude.
@@ -2494,29 +2540,30 @@
 [#TripPolicyGroup,reftext=TripPolicyGroup]
 === The `TripPolicyGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripPolicyGroup`
+5+| `TripPolicyGroup`
 2+| Policies that control the trip search behaviour.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<BaseTripPolicyGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `TransferLimit`
 | 0:1 | _xs:nonNegativeInteger_
 | The maximum number of interchanges the user will accept per trip.
 
-
+|
 3+| `OptimisationMethod`
 | 0:1 | _<<OptimisationMethodEnumeration>>_
 | the types of algorithm that can be used for planning a journey (fastest, least walking, etc)
 
-
+|
 3+| `ItModesToCover`
 | 0:* | _<<IndividualModesEnumeration>>_
 | For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.
@@ -2526,34 +2573,35 @@
 [#TripMobilityFilterGroup,reftext=TripMobilityFilterGroup]
 === The `TripMobilityFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripMobilityFilterGroup`
+5+| `TripMobilityFilterGroup`
 2+| Parameters the user can set to restrict the mobility options - particularly for interchanging.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<BaseTripMobilityFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `LevelEntrance`
 | 0:1 | _xs:boolean_
 | The user needs vehicles with level entrance between  platform and vehicle, f.e. for wheelchair access.
 
-
+|
 3+| `BikeTransport`
 | 0:1 | _xs:boolean_
 | The user wants to carry a bike on public transport.
 
-
+|
 3+| `WalkSpeed`
 | 0:1 | _<<OpenPercentType>>_
 | Deviation from average walk speed in percent. 100% percent is average speed. Less than 100 % slower, Greater than 150% faster.
 
-
+|
 3+| `AdditionalTransferTime`
 | 0:1 | _xs:duration_
 | Additional time added to all transfers (also to transfers between individual to public transport).
@@ -2563,34 +2611,35 @@
 [#TripContentFilterGroup,reftext=TripContentFilterGroup]
 === The `TripContentFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripContentFilterGroup`
+5+| `TripContentFilterGroup`
 2+| Parameters that control the level of detail of the trip results.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<BaseTripContentFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `IncludeIntermediateStops`
 | 0:1 | _xs:boolean_
 | Whether the result should include intermediate stops (between the passenger's board and alight stops).
 
-
+|
 3+| `IncludeFare`
 | 0:1 | _xs:boolean_
 | Whether the result should include fare information.
 
-
+|
 3+| `IncludeOperatingDays`
 | 0:1 | _xs:boolean_
 | Whether the result should include operating day information - as encoded bit string and in natural language.
 
-
+|
 3+| `TripSummaryOnly`
 | 0:1 | _xs:boolean_
 | If true, then the response will contain only summaries of the found trips. Default is false.
@@ -2601,24 +2650,23 @@
 [#NotViaStructure,reftext=NotViaStructure]
 === The complex type `NotViaStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `NotViaStructure`
+5+| `NotViaStructure`
 2+| NNot-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through
 
-6+| The element contains only one element:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains only one element:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
-|
+| | _b_ 
 2+| →`*<<StopPlaceRef>>*`
 | *1:1* | 
 | 
@@ -2629,24 +2677,23 @@
 [#NoChangeAtStructure,reftext=NoChangeAtStructure]
 === The complex type `NoChangeAtStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `NoChangeAtStructure`
+5+| `NoChangeAtStructure`
 2+| no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.
 
-6+| The element contains only one element:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains only one element:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
-|
+| | _b_ 
 2+| →`*<<StopPlaceRef>>*`
 | *1:1* | 
 | 
@@ -2656,19 +2703,20 @@
 [#TripResponseGroup,reftext=TripResponseGroup]
 === The `TripResponseGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripResponseGroup`
+5+| `TripResponseGroup`
 2+| Trip response structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `TripResponseContext`
 | 0:1 | _<<ResponseContextStructure>>_
 | Context to hold trip response objects that occur frequently.
 
-
+|
 3+| `TripResult`
 | 0:* | _<<TripResultStructure>>_
 | The trip results found by the server.
@@ -2679,39 +2727,38 @@
 [#TripResultStructure,reftext=TripResultStructure]
 === The complex type `TripResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripResultStructure`
+5+| `TripResultStructure`
 2+| Structure for a single trip result and its accompanying error messages.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*ResultId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip result for referencing purposes. Unique within trip response.
 
-
+|
 3+| `ErrorMessage`
 | 0:* | _<<ErrorMessageStructure>>_
 | Error messages related to this trip result.
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
-
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*Trip*`
 | *1:1* | _<<TripStructure>>_
 | Detailed information on trip.
 
-|
+| | _b_ 
 2+| `*TripSummary*`
 | *1:1* | _<<TripSummaryStructure>>_
 | Summary on trip. Only if requestor set TripSummaryOnly in request.
 
-
+|
 3+| `TripFare`
 | 0:* | _<<TripFareResultStructure>>_
 | 
@@ -2722,64 +2769,65 @@
 [#TripSummaryStructure,reftext=TripSummaryStructure]
 === The complex type `TripSummaryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripSummaryStructure`
+5+| `TripSummaryStructure`
 2+| Structure for trip overview information.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*TripId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip for referencing purposes. Unique within trip response.
 
-
+|
 3+| `Origin`
 | 0:1 | _<<PlaceRefStructure>>_
 | Describes the origin situation of this trip.
 
-
+|
 3+| `Destination`
 | 0:1 | _<<PlaceRefStructure>>_
 | Describes the arrival situation of this trip.
 
-
+|
 3+| `Duration`
 | 0:1 | _xs:duration_
 | Overall duration of the trip.
 
-
+|
 3+| `StartTime`
 | 0:1 | _xs:dateTime_
 | Departure time at origin.
 
-
+|
 3+| `EndTime`
 | 0:1 | _xs:dateTime_
 | Arrival time at destination.
 
-
+|
 3+| `PTTripLegs`
 | 0:1 | _xs:nonNegativeInteger_
 | Number of public transport trip legs.
 
-
+|
 3+| `Distance`
 | 0:1 | _siri:DistanceType_
 | Trip distance.
 
-
+|
 3+| →`<<OperatingDaysGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`<<SituationFullRef>>`
 | 0:* | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -2790,64 +2838,65 @@
 [#TripStructure,reftext=TripStructure]
 === The complex type `TripStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripStructure`
+5+| `TripStructure`
 2+| [an extended form of PT TRIP in TM and NeTEx as it also includes the initial and final access legs to and from public transport] whole journey from passenger origin to passenger destination in one or more trip LEGs 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*TripId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip for referencing purposes. Unique within trip response.
 
-
+|
 3+| `*Duration*`
 | *1:1* | _xs:duration_
 | Overall duration of the trip.
 
-
+|
 3+| `*StartTime*`
 | *1:1* | _xs:dateTime_
 | Departure time at origin.
 
-
+|
 3+| `*EndTime*`
 | *1:1* | _xs:dateTime_
 | Arrival time at destination.
 
-
+|
 3+| `*Transfers*`
 | *1:1* | _xs:nonNegativeInteger_
 | Number of interchanges.
 
-
+|
 3+| `Distance`
 | 0:1 | _siri:DistanceType_
 | Trip distance.
 
-
+|
 3+| `*TripLeg*`
 | *1:** | _<<TripLegStructure>>_
 | Legs of the trip
 
-
+|
 3+| →`<<OperatingDaysGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`<<SituationFullRef>>`
 | 0:* | 
 | 
 
-
+|
 3+| →`<<TripStatusGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -2858,39 +2907,38 @@
 [#TripLegStructure,reftext=TripLegStructure]
 === The complex type `TripLegStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripLegStructure`
+5+| `TripLegStructure`
 2+| a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*LegId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip leg. Unique within trip result.
 
-
+|
 3+| `ParticipantRef`
 | 0:1 | _siri:ParticipantRefStructure_
 | [equivalent of PARTICIPANT in SIRI] IT system that is participating in a communication with other participant(s)
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
-
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*ContinuousLeg*`
 | *1:1* | _<<ContinuousLegStructure>>_
 | 
 
-|
+| | _b_ 
 2+| `*TimedLeg*`
 | *1:1* | _<<TimedLegStructure>>_
 | 
 
-|
+| | _c_ 
 2+| `*TransferLeg*`
 | *1:1* | _<<TransferLegStructure>>_
 | 
@@ -2901,49 +2949,50 @@
 [#TimedLegStructure,reftext=TimedLegStructure]
 === The complex type `TimedLegStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TimedLegStructure`
+5+| `TimedLegStructure`
 2+| passenger TRIP LEG with timetabled schedule.  Corresponds to a RIDE.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*LegBoard*`
 | *1:1* | _<<LegBoardStructure>>_
 | Stop/Station where boarding is done
 
-
+|
 3+| `LegIntermediates`
 | 0:* | _<<LegIntermediateStructure>>_
 | information about the intermediate passed stop points.
 
-
+|
 3+| `*LegAlight*`
 | *1:1* | _<<LegAlightStructure>>_
 | Stop/Station to alight
 
-
+|
 3+| `*Service*`
 | *1:1* | _<<DatedJourneyStructure>>_
 | Service that is used for this trip leg.
 
-
+|
 3+| `LegAttribute`
 | 0:* | _<<LegAttributeStructure>>_
 | Attributes that are not valid on the whole service, but only on parts of the journey leg.
 
-
+|
 3+| →`<<OperatingDaysGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `LegTrack`
 | 0:1 | _<<LegTrackStructure>>_
 | Geographic embedding of this leg.
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -2954,74 +3003,73 @@
 [#TransferLegStructure,reftext=TransferLegStructure]
 === The complex type `TransferLegStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TransferLegStructure`
+5+| `TransferLegStructure`
 2+| [a specialised type of NAVIGATION PATH in TMv6] description of a LEG which links other LEGs of a TRIP where a TRANSFER between different LOCATIONs is required
 
-6+| The element contains a _sequence_ of the following elements:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*ContinuousMode*`
 | *1:1* | _<<ContinuousModesEnumeration>>_
 | Mode that is used for this interchange between public services.
 
-|
+| | _b_ 
 2+| `*TransferMode*`
 | *1:1* | _<<TransferModesEnumeration>>_
 | Mode that is used for this interchange between public services.
 
-
+|
 3+| `*LegStart*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Stop/Station where boarding is done
 
-
+|
 3+| `*LegEnd*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Stop/Station to alight
 
-
+|
 3+| →`*<<TimeWindowGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TransferDurationGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `LegDescription`
 | 0:1 | _<<InternationalTextStructure>>_
 | Text that describes this interchange.
 
-
+|
 3+| `Length`
 | 0:1 | _<<LengthType>>_
 | Length of this interchange path.
 
-
+|
 3+| `Attribute`
 | 0:* | _<<GeneralAttributeStructure>>_
 | Note or service attribute.
 
-
+|
 3+| `PathGuidance`
 | 0:1 | _<<PathGuidanceStructure>>_
 | Structured model further describing this interchange, its geographic embedding and accessibility.
 
-
+|
 3+| →`<<SituationFullRef>>`
 | 0:* | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -3032,64 +3080,65 @@
 [#ContinuousLegStructure,reftext=ContinuousLegStructure]
 === The complex type `ContinuousLegStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ContinuousLegStructure`
+5+| `ContinuousLegStructure`
 2+| [relates to a specific type of RIDE in TM and NeTEx] leg of a journey that is not bound to a timetable 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*LegStart*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Stop/Station where boarding is done
 
-
+|
 3+| `*LegEnd*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Stop/Station to alight
 
-
+|
 3+| `*Service*`
 | *1:1* | _<<ContinuousServiceStructure>>_
 | Service of this leg. May be "walk" in most cases, but also cycling or taxi etc.
 
-
+|
 3+| →`*<<TimeWindowGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*Duration*`
 | *1:1* | _xs:duration_
 | Duration of this leg according to user preferences like walk speed.
 
-
+|
 3+| `LegDescription`
 | 0:1 | _<<InternationalTextStructure>>_
 | Title or summary of this leg for overview.
 
-
+|
 3+| `Length`
 | 0:1 | _<<LengthType>>_
 | Length of the leg.
 
-
+|
 3+| `LegTrack`
 | 0:1 | _<<LegTrackStructure>>_
 | Detailed description of each element of this leg including geometric projection.
 
-
+|
 3+| `PathGuidance`
 | 0:1 | _<<PathGuidanceStructure>>_
 | Structured model further describing this interchange, its geographic embedding and accessibility.
 
-
+|
 3+| →`<<SituationFullRef>>`
 | 0:* | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -3100,53 +3149,60 @@
 [#LegBoardStructure,reftext=LegBoardStructure]
 === The complex type `LegBoardStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `LegBoardStructure`
+5+| `LegBoardStructure`
 2+| Describes the the situation at a stop or station at which the passenger boards a Leg of a trip including time-related information.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `ServiceArrival`
 | 0:1 | 
 | describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
-6+| The element contains only one element:
 
 
-3+| →`*<<ServiceTimeGroup>>*`
+||
+5+| The element contains only one element:
+
+||
+2+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*ServiceDeparture*`
 | *1:1* | 
 | describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
-6+| The element contains only one element:
 
 
-3+| →`*<<ServiceTimeGroup>>*`
+||
+5+| The element contains only one element:
+
+||
+2+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `DistributorInterchangeId`
 | 0:1 | _xs:normalizedString_
 | Interchange identifier of the distributing line/service at its boarding. This is not a reference. This identifier is used to recognize in a distributed environment (e.g. EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scanario (aka "line ID"). See https://eu-spirit.eu/
 
-
+|
 3+| `MeetsViaRequest`
 | 0:1 | _xs:boolean_
 | This stop fulfils one of the via requirements stated in the request data.
 
-
+|
 3+| →`*<<StopCallStatusGroup>>*`
 | *1:1* | 
 | 
@@ -3157,53 +3213,60 @@
 [#LegAlightStructure,reftext=LegAlightStructure]
 === The complex type `LegAlightStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `LegAlightStructure`
+5+| `LegAlightStructure`
 2+| Describes the situation at a stop or station at which the passenger alights from a Leg of a trip including time-related information
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*ServiceArrival*`
 | *1:1* | 
 | describes the arrival situation at the leg alight stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
-6+| The element contains only one element:
 
 
-3+| →`*<<ServiceTimeGroup>>*`
+||
+5+| The element contains only one element:
+
+||
+2+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `ServiceDeparture`
 | 0:1 | 
 | describes the departure situation at this leg alight stop point (empty for last leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
-6+| The element contains only one element:
 
 
-3+| →`*<<ServiceTimeGroup>>*`
+||
+5+| The element contains only one element:
+
+||
+2+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `FeederInterchangeId`
 | 0:1 | _xs:normalizedString_
 | Interchange identifier of the feeding line/service at its alighting. This is not a reference. This identifier is used to recognize in a distributed environment (e.g. EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scanario (aka "line ID"). See https://eu-spirit.eu/
 
-
+|
 3+| `MeetsViaRequest`
 | 0:1 | _xs:boolean_
 | This stop fulfils one of the via requirements stated in the request data.
 
-
+|
 3+| →`*<<StopCallStatusGroup>>*`
 | *1:1* | 
 | 
@@ -3214,48 +3277,55 @@
 [#LegIntermediateStructure,reftext=LegIntermediateStructure]
 === The complex type `LegIntermediateStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `LegIntermediateStructure`
+5+| `LegIntermediateStructure`
 2+| Describes the situation at a stop or station that lies between the LegBoard and LegAlight stop or station including time-related information.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*ServiceArrival*`
 | *1:1* | 
 | describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
-6+| The element contains only one element:
 
 
-3+| →`*<<ServiceTimeGroup>>*`
+||
+5+| The element contains only one element:
+
+||
+2+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*ServiceDeparture*`
 | *1:1* | 
 | describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
 
-6+| The element contains only one element:
 
 
-3+| →`*<<ServiceTimeGroup>>*`
+||
+5+| The element contains only one element:
+
+||
+2+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `MeetsViaRequest`
 | 0:1 | _xs:boolean_
 | This stop fulfils one of the via requirements stated in the request data.
 
-
+|
 3+| →`*<<StopCallStatusGroup>>*`
 | *1:1* | 
 | 
@@ -3266,14 +3336,15 @@
 [#PathGuidanceStructure,reftext=PathGuidanceStructure]
 === The complex type `PathGuidanceStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PathGuidanceStructure`
+5+| `PathGuidanceStructure`
 2+|  description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains only one element:
 
+|
 3+| `*PathGuidanceSection*`
 | *1:** | _<<PathGuidanceSectionStructure>>_
 | one or more path guidance sections that build the trip Leg
@@ -3284,49 +3355,50 @@
 [#PathGuidanceSectionStructure,reftext=PathGuidanceSectionStructure]
 === The complex type `PathGuidanceSectionStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PathGuidanceSectionStructure`
+5+| `PathGuidanceSectionStructure`
 2+| [an extended definition of a NAVIGATION PATH in TMv6 to include the textual navigation instructions] description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information 
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `TrackSection`
 | 0:1 | _<<TrackSectionStructure>>_
 | LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information
 
-
+|
 3+| `TurnDescription`
 | 0:1 | _<<InternationalTextStructure>>_
 | Textual description of a manoeuvre. This should imply the information from Manoeuvre, TurnAction, and TrackSection.RoadName.
 
-
+|
 3+| `GuidanceAdvice`
 | 0:1 | _<<GuidanceAdviceEnumeration>>_
 | various types of guidance advice given to travelle.
 
-
+|
 3+| `TurnAction`
 | 0:1 | _<<TurnActionEnumeration>>_
 | the range of alternative turns that can be described.
 
-
+|
 3+| `DirectionHint`
 | 0:1 | _<<InternationalTextStructure>>_
 | Textual direction hint for better understanding, e.g. "follow signs to Hamburg".
 
-
+|
 3+| `Bearing`
 | 0:1 | _siri:AbsoluteBearingType_
 | Absolute bearing after the described manoeuvre.
 
-
+|
 3+| `PathLink`
 | 0:1 | _<<PathLinkStructure>>_
 | Description of the type of accessibility on this navigation section.
 
-
+|
 3+| `SituationFullRef`
 | 0:* | _<<SituationFullRefStructure>>_
 | 
@@ -3336,24 +3408,25 @@
 [#TransferDurationGroup,reftext=TransferDurationGroup]
 === The `TransferDurationGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TransferDurationGroup`
+5+| `TransferDurationGroup`
 2+| [an attribute of a CONNECTION (not INTERCHANGE) in TMv6] calculated duration in a response taking into ccount the request parameters.; TransferDuration plus waiting time is the minimum interval between arrival and departure time..
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Duration*`
 | *1:1* | _xs:duration_
 | Overall duration of this interchange.
 
-
+|
 3+| `WalkDuration`
 | 0:1 | _xs:duration_
 | Walk time as part of the overall interchange duration.
 
-
+|
 3+| `BufferTime`
 | 0:1 | _xs:duration_
 | Buffer time as part of the overall interchange duration. Buffer times, f.e. check in/out times, sometimes are mandatory for using certain services as f.e. airplanes, ferries or highspeed trains.
@@ -3364,24 +3437,25 @@
 [#PathLinkStructure,reftext=PathLinkStructure]
 === The complex type `PathLinkStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PathLinkStructure`
+5+| `PathLinkStructure`
 2+| [TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs,BOARDING POSITIONs,, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Transition`
 | 0:1 | _<<TransitionEnumeration>>_
 | Whether path is up down or level .
 
-
+|
 3+| `AccessFeatureType`
 | 0:1 | _<<AccessFeatureTypeEnumeration>>_
 | Type of physical feature of PATH LINK.
 
-
+|
 3+| `Count`
 | 0:1 | _xs:positiveInteger_
 | Number how often the access feature occurs in this PathLink
@@ -3391,39 +3465,40 @@
 [#MultiPointTripRequestGroup,reftext=MultiPointTripRequestGroup]
 === The `MultiPointTripRequestGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `MultiPointTripRequestGroup`
+5+| `MultiPointTripRequestGroup`
 2+| Multi-point trip request structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Origin*`
 | *1:** | _<<PlaceContextStructure>>_
 | Specifies the origin situation from where the user wants to start.
 
-
+|
 3+| `*Destination*`
 | *1:** | _<<PlaceContextStructure>>_
 | Specifies the destination situation where the user is heading to.
 
-
+|
 3+| `Via`
 | 0:* | _<<TripViaStructure>>_
 | Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops.
 
-
+|
 3+| `NotVia`
 | 0:* | _<<NotViaStructure>>_
 | Not-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through. If more than one not via point is given all of them must be obeyed.
 
-
+|
 3+| `NoChangeAt`
 | 0:* | _<<NoChangeAtStructure>>_
 | no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP
 
-
+|
 3+| `Params`
 | 0:1 | _<<MultiPointTripParamStructure>>_
 | Options to control the search behaviour and response contents.
@@ -3434,39 +3509,40 @@
 [#MultiPointTripParamStructure,reftext=MultiPointTripParamStructure]
 === The complex type `MultiPointTripParamStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `MultiPointTripParamStructure`
+5+| `MultiPointTripParamStructure`
 2+| Multi-point trip request parameter structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<TripDataFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TripMobilityFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<MultiPointTripPolicyGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TripContentFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `FareParam`
 | 0:1 | _<<FareParamStructure>>_
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -3476,29 +3552,30 @@
 [#MultiPointTripPolicyGroup,reftext=MultiPointTripPolicyGroup]
 === The `MultiPointTripPolicyGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `MultiPointTripPolicyGroup`
+5+| `MultiPointTripPolicyGroup`
 2+| Policies that control the multi-point trip search behaviour.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<BaseTripPolicyGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `TransferLimit`
 | 0:1 | _xs:nonNegativeInteger_
 | The maximum number of interchanges the user will accept per trip.
 
-
+|
 3+| `OptimisationMethod`
 | 0:1 | _<<OptimisationMethodEnumeration>>_
 | the types of algorithm that can be used for planning a journey (fastest, least walking, etc)
 
-
+|
 3+| `MultiPointType`
 | 0:1 | _<<MultiPointTypeEnumeration>>_
 | If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found.
@@ -3508,19 +3585,20 @@
 [#MultiPointTripResponseGroup,reftext=MultiPointTripResponseGroup]
 === The `MultiPointTripResponseGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `MultiPointTripResponseGroup`
+5+| `MultiPointTripResponseGroup`
 2+| Multi-point trip response structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `MultiPointTripResponseContext`
 | 0:1 | _<<ResponseContextStructure>>_
 | Context to hold trip response objects that occur frequently.
 
-
+|
 3+| `MultiPointTripResult`
 | 0:* | _<<MultiPointTripResultStructure>>_
 | The trip results found by the server.
@@ -3531,44 +3609,43 @@
 [#MultiPointTripResultStructure,reftext=MultiPointTripResultStructure]
 === The complex type `MultiPointTripResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `MultiPointTripResultStructure`
+5+| `MultiPointTripResultStructure`
 2+| Structure for a single trip result and its accompanying error messages.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*ResultId*`
 | *1:1* | _xs:NMTOKEN_
 | Id of this trip result for referencing purposes. Unique within multipoint-trip response.
 
-
+|
 3+| `ErrorMessage`
 | 0:* | _<<ErrorMessageStructure>>_
 | Error messages related to trip result.
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
-
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*Trip*`
 | *1:1* | _<<TripStructure>>_
 | Information on the trip.
 
-|
+| | _b_ 
 2+| `*TripSummary*`
 | *1:1* | _<<TripSummaryStructure>>_
 | 
 
-
+|
 3+| →`<<MultiPointWaitTimeGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `TripFare`
 | 0:* | _<<TripFareResultStructure>>_
 | 
@@ -3578,19 +3655,20 @@
 [#MultiPointWaitTimeGroup,reftext=MultiPointWaitTimeGroup]
 === The `MultiPointWaitTimeGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `MultiPointWaitTimeGroup`
+5+| `MultiPointWaitTimeGroup`
 2+| Group for wait times at origin/destination.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `OriginWaitTime`
 | 0:1 | _xs:duration_
 | Additional wait time at origin of this trip.
 
-
+|
 3+| `DestinationWaitTime`
 | 0:1 | _xs:duration_
 | Additional wait time at destination of this trip.
@@ -3600,34 +3678,35 @@
 [#TripStatusGroup,reftext=TripStatusGroup]
 === The `TripStatusGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripStatusGroup`
+5+| `TripStatusGroup`
 2+| Parameters which describe the current status of a TRIP
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Unplanned`
 | 0:1 | _xs:boolean_
 | Whether this trip is an additional one that has not been planned. Default is false.
 
-
+|
 3+| `Cancelled`
 | 0:1 | _xs:boolean_
 | Whether this trip is cancelled and will not be run. Default is false.
 
-
+|
 3+| `Deviation`
 | 0:1 | _xs:boolean_
 | Whether this trip deviates from the planned service pattern. Default is false.
 
-
+|
 3+| `Delayed`
 | 0:1 | _xs:boolean_
 | Whether this trip is delayed. Default is false.
 
-
+|
 3+| `Infeasible`
 | 0:1 | _xs:boolean_
 | Whether this trip cannot be used, due to operational delays and impossible transfers. Default is false.
@@ -3648,19 +3727,20 @@
 [#ServiceViaPointStructure,reftext=ServiceViaPointStructure]
 === The complex type `ServiceViaPointStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceViaPointStructure`
+5+| `ServiceViaPointStructure`
 2+| [a specialisation of VIA in TMv6] STOP PLACE or SCHEDULED STOP POINT as a VIA for a particular SERVICE PATTERN. Specialisation of a VIA.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `DisplayPriority`
 | 0:1 | _<<PriorityType>>_
 | Priority of this via point to be displayed when space is limited.
@@ -3671,24 +3751,25 @@
 [#ProductCategoryStructure,reftext=ProductCategoryStructure]
 === The complex type `ProductCategoryStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ProductCategoryStructure`
+5+| `ProductCategoryStructure`
 2+| Product category based on NeTEx/SIRI. A product category is a classification for VEHICLE JOURNEYs to express some common properties of journeys for marketing and fare products.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Name`
 | 0:1 | _<<InternationalTextStructure>>_
 | Full name of this product category, e.g. "Autoreisezug" in Switzerland or "Dampfschiff"
 
-
+|
 3+| `ShortName`
 | 0:1 | _<<InternationalTextStructure>>_
 | Short name or acronym of the product category, likely to be published, e.g. "BAV", "ARZ", "TGV". The product category is more important for publication in Switzerland than Mode / Submode.
 
-
+|
 3+| →`<<ProductCategoryRef>>`
 | 0:1 | 
 | A reference to the product category. This is the internal code used within the reference frameworks (NeTEx, SIRI). It is usually not displayed, but interpreted by the technical system, e.g. "ch:1:TypeOfProductCategory:ARZ" (Autoreisezug in Switzerland) or "ch:1:TypeOfProductCategory:BAV".
@@ -3699,19 +3780,20 @@
 [#TripViaStructure,reftext=TripViaStructure]
 === The complex type `TripViaStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripViaStructure`
+5+| `TripViaStructure`
 2+| VIA restrictions for a TRIP.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*ViaPoint*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Reference to specify the via place.
 
-
+|
 3+| `DwellTime`
 | 0:1 | _xs:duration_
 | Duration the passenger wants to stay at the via place. Default is 0.
@@ -3721,19 +3803,20 @@
 [#ScheduledJourneyGroup,reftext=ScheduledJourneyGroup]
 === The `ScheduledJourneyGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ScheduledJourneyGroup`
+5+| `ScheduledJourneyGroup`
 2+| Vehicle journey (not dated).
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<JourneyRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<ServiceGroup>>*`
 | *1:1* | 
 | 
@@ -3743,54 +3826,55 @@
 [#ServiceGroup,reftext=ServiceGroup]
 === The `ServiceGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceGroup`
+5+| `ServiceGroup`
 2+| Properties of a service (line and direction): attributes of Continuous Journey Structure or Dated Journey Structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*siri:LineDirectionGroup*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*Mode*`
 | *1:1* | _<<ModeStructure>>_
 | [a specialisation of MODE in TMv6] an extended range of VEHICLE MODEs, aggregating them with some SUBMODEs
 
-
+|
 3+| `ProductCategory`
 | 0:1 | _<<ProductCategoryStructure>>_
 | A product category for the service. This is a classification defined in NeTEx/SIRI used to identify groups of journeys with some special properties for marketing and fare products, e.g. "TE2" for SNCF or a special panorama train "PE" in Switzerland.
 
-
+|
 3+| `*PublishedServiceName*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Line name or service description as known to the public, f.e. "512", "S8" or "Circle Line" or "ICE 488".
 
-
+|
 3+| `TrainNumber`
 | 0:1 | _xs:normalizedString_
 | Contains the TrainNumber description from NeTEx. If several TrainNumber types exist, use the commercial number.
 
-
+|
 3+| →`<<OperatorRef>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `RouteDescription`
 | 0:1 | _<<InternationalTextStructure>>_
 | Descriptive text for a route, f.e. "Airport via City Centre"
 
-
+|
 3+| `Via`
 | 0:* | _<<ServiceViaPointStructure>>_
 | Via points of the service that may help identify the vehicle to the public.
 
-
+|
 3+| `Attribute`
 | 0:* | _<<GeneralAttributeStructure>>_
 | Note or service attribute.
@@ -3800,19 +3884,20 @@
 [#ServiceOriginGroup,reftext=ServiceOriginGroup]
 === The `ServiceOriginGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceOriginGroup`
+5+| `ServiceOriginGroup`
 2+| First serviced stop of a vehicle journey.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `OriginStopPointRef`
 | 0:1 | _siri:StopPointRefStructure_
 | First stop of the vehicle journey; origin stop point.
 
-
+|
 3+| `*OriginText*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Label for first stop.
@@ -3822,19 +3907,20 @@
 [#ServiceDestinationGroup,reftext=ServiceDestinationGroup]
 === The `ServiceDestinationGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceDestinationGroup`
+5+| `ServiceDestinationGroup`
 2+| Last serviced stop of a vehicle journey.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `DestinationStopPointRef`
 | 0:1 | _siri:StopPointRefStructure_
 | Last stop of vehicle journey; destination stop point.
 
-
+|
 3+| `*DestinationText*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Label for last stop.
@@ -3844,14 +3930,15 @@
 [#RouteDescriptionGroup,reftext=RouteDescriptionGroup]
 === The `RouteDescriptionGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `RouteDescriptionGroup`
+5+| `RouteDescriptionGroup`
 2+| Descriptive text for a route, f.e. "Airport via City Centre"
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| `*RouteDescriptionText*`
 | *1:1* | _<<InternationalTextStructure>>_
 | 
@@ -3861,24 +3948,25 @@
 [#DatedJourneyGroup,reftext=DatedJourneyGroup]
 === The `DatedJourneyGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `DatedJourneyGroup`
+5+| `DatedJourneyGroup`
 2+| Vehicle journey that runs at a specific date.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<OperatingDayRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`siri:VehicleRef`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<ScheduledJourneyGroup>>*`
 | *1:1* | 
 | 
@@ -3888,29 +3976,30 @@
 [#PrivateServiceGroup,reftext=PrivateServiceGroup]
 === The `PrivateServiceGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PrivateServiceGroup`
+5+| `PrivateServiceGroup`
 2+| specific service operated by a Private Mode
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`<<JourneyRef>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `*PrivateMode*`
 | *1:1* | _<<PrivateModesEnumeration>>_
 | [a category of MODE in TMv6] MODEs offered by private individuals 
 
-
+|
 3+| `OrganisationRef`
 | 0:1 | _siri:OperatorRefStructure_
 | 
 
-
+|
 3+| `InfoUrl`
 | 0:1 | _<<WebLinkStructure>>_
 | Link to web page providing more details on service.
@@ -3921,54 +4010,53 @@
 [#DatedJourneyStructure,reftext=DatedJourneyStructure]
 === The complex type `DatedJourneyStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `DatedJourneyStructure`
+5+| `DatedJourneyStructure`
 2+| [equivalent to  DATED VEHICLE JOURNEY in TMv6]  passenger carrying VEHICLE JOURNEY for one specified DAY TYPE for which the pattern of working is in principle defined by a SERVICE JOURNEY PATTERN. DatedJourney details of a service include its operating days. 
 
-6+| The element contains a _sequence_ of the following elements:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| →`*<<DatedJourneyGroup>>*`
 | *1:1* | 
 | 
 
-|
+| | _b_ 
 2+| →`*<<PrivateServiceGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`<<ServiceOriginGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`*<<ServiceDestinationGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<ServiceStatusGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `BookingArrangements`
 | 0:1 | _<<BookingArrangementsContainerStructure>>_
 | Container with information on booking possibilities for this service.
 
-
+|
 3+| →`<<SituationFullRef>>`
 | 0:* | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -3979,24 +4067,25 @@
 [#TripPlaceStructure,reftext=TripPlaceStructure]
 === The complex type `TripPlaceStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripPlaceStructure`
+5+| `TripPlaceStructure`
 2+| A trip place represents the current logical position of a  journey service. It can be used similarly to a place e.g. for starting a new trip requests from within this service. A trip place does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<OperatingDayRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<JourneyRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*siri:LineIdentityGroup*`
 | *1:1* | 
 | 
@@ -4006,19 +4095,20 @@
 [#TimeWindowGroup,reftext=TimeWindowGroup]
 === The `TimeWindowGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TimeWindowGroup`
+5+| `TimeWindowGroup`
 2+| The window of opportunity that the traveller has to perform this leg of the journey.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `TimeWindowStart`
 | 0:1 | _xs:dateTime_
 | Time at which window begins.
 
-
+|
 3+| `TimeWindowEnd`
 | 0:1 | _xs:dateTime_
 | Time at which window ends.
@@ -4028,29 +4118,30 @@
 [#ServiceTimeGroup,reftext=ServiceTimeGroup]
 === The `ServiceTimeGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceTimeGroup`
+5+| `ServiceTimeGroup`
 2+| Contains at least scheduled time, but can contain real time and estimated times
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*TimetabledTime*`
 | *1:1* | _xs:dateTime_
 | time at point as it is published
 
-
+|
 3+| `RecordedAtTime`
 | 0:1 | _xs:dateTime_
 | time as it was recorded
 
-
+|
 3+| `EstimatedTime`
 | 0:1 | _xs:dateTime_
 | estimated time (for prognosis)
 
-
+|
 3+| →`<<EstimatedTimeBandGroup>>`
 | 0:1 | 
 | 
@@ -4060,19 +4151,20 @@
 [#EstimatedTimeBandGroup,reftext=EstimatedTimeBandGroup]
 === The `EstimatedTimeBandGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `EstimatedTimeBandGroup`
+5+| `EstimatedTimeBandGroup`
 2+| Range for estimated time.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `EstimatedTimeLow`
 | 0:1 | _xs:dateTime_
 | Estimated lower limit for time.
 
-
+|
 3+| `EstimatedTimeHigh`
 | 0:1 | _xs:dateTime_
 | Estimated upper limit for time.
@@ -4083,48 +4175,55 @@
 [#CallAtStopStructure,reftext=CallAtStopStructure]
 === The complex type `CallAtStopStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `CallAtStopStructure`
+5+| `CallAtStopStructure`
 2+| [same as CALL in SIRI] the meeting of a VEHICLE JOURNEY with a specific SCHEDULED STOP POINT 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<StopPointGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `ServiceArrival`
 | 0:1 | 
 | Arrival times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).
 
-6+| The element contains only one element:
 
 
-3+| →`*<<ServiceTimeGroup>>*`
+||
+5+| The element contains only one element:
+
+||
+2+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `ServiceDeparture`
 | 0:1 | 
 | Departure times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).
 
-6+| The element contains only one element:
 
 
-3+| →`*<<ServiceTimeGroup>>*`
+||
+5+| The element contains only one element:
+
+||
+2+| →`*<<ServiceTimeGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<StopCallStatusGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`<<SituationFullRef>>`
 | 0:* | 
 | 
@@ -4134,39 +4233,40 @@
 [#StopCallStatusGroup,reftext=StopCallStatusGroup]
 === The `StopCallStatusGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopCallStatusGroup`
+5+| `StopCallStatusGroup`
 2+| Status properties for the vehicle call at this stop.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Order`
 | 0:1 | _xs:positiveInteger_
 | Sequence number of this stop in the service pattern of the journey.
 
-
+|
 3+| `RequestStop`
 | 0:1 | _xs:boolean_
 | The vehicle journey calls at this stop only on demand.
 
-
+|
 3+| `UnplannedStop`
 | 0:1 | _xs:boolean_
 | This stop has not been planned by the planning department.
 
-
+|
 3+| `NotServicedStop`
 | 0:1 | _xs:boolean_
 | The vehicle will not call at this stop despite earlier planning.
 
-
+|
 3+| `NoBoardingAtStop`
 | 0:1 | _xs:boolean_
 | Boarding will not be allowed at this stop of this journey.
 
-
+|
 3+| `NoAlightingAtStop`
 | 0:1 | _xs:boolean_
 | Alighting will not be allowed at this stop of this journey.
@@ -4176,29 +4276,30 @@
 [#ServiceStatusGroup,reftext=ServiceStatusGroup]
 === The `ServiceStatusGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceStatusGroup`
+5+| `ServiceStatusGroup`
 2+| parameters which describe the current status of a DATED VEHICLE JOURNEY
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Unplanned`
 | 0:1 | _xs:boolean_
 | Whether this trip is an additional one that has not been planned. Default is false.
 
-
+|
 3+| `Cancelled`
 | 0:1 | _xs:boolean_
 | Whether this trip is cancelled and will not be run. Default is false.
 
-
+|
 3+| `Deviation`
 | 0:1 | _xs:boolean_
 | Whether this trip deviates from the planned service pattern. Default is false.
 
-
+|
 3+| `Occupancy`
 | 0:1 | _siri:OccupancyEnumeration_
 | [equivalent to OCCUPANCY in SIRI] passenger load status of a VEHICLE. If omitted, not known.
@@ -4209,64 +4310,61 @@
 [#ContinuousServiceStructure,reftext=ContinuousServiceStructure]
 === The complex type `ContinuousServiceStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ContinuousServiceStructure`
+5+| `ContinuousServiceStructure`
 2+| [a special form of SERVICE JOURNEY in TMv6] a vehicle movement on a continuous, non-timetabled service.
 
-6+| The element contains a _sequence_ of the following elements:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*ContinuousMode*`
 | *1:1* | _<<ContinuousModesEnumeration>>_
 | Continuous transport options.
 
-|
+| | _b_ 
 2+| `*IndividualMode*`
 | *1:1* | _<<IndividualModesEnumeration>>_
 | Individual transport options.
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
-
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| →`<<DatedJourneyGroup>>`
 | 0:1 | 
 | 
 
-|
+| | _b_ 
 2+| `SharingService`
 | 0:1 | _<<SharingServiceStructure>>_
 | 
 
-
+|
 3+| →`<<ServiceOriginGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`<<ServiceDestinationGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `BookingArrangements`
 | 0:1 | _<<BookingArrangementsContainerStructure>>_
 | Container with information on booking possibilities for this service.
 
-
+|
 3+| →`<<SituationFullRef>>`
 | 0:* | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -4277,29 +4375,30 @@
 [#VehiclePositionStructure,reftext=VehiclePositionStructure]
 === The complex type `VehiclePositionStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `VehiclePositionStructure`
+5+| `VehiclePositionStructure`
 2+| Geographical and logical position of a vehicle.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `GeoPosition`
 | 0:1 | _siri:LocationStructure_
 | Geographic position of vehicle.
 
-
+|
 3+| `Progress`
 | 0:1 | _<<VehicleProgressEnumeration>>_
 | Logical progress of vehicle relative to service pattern.
 
-
+|
 3+| `Bearing`
 | 0:1 | _siri:AbsoluteBearingType_
 | Bearing in compass degrees in which vehicle is heading.
 
-
+|
 3+| `ProgressBetweenStops`
 | 0:1 | _siri:ProgressBetweenStopsStructure_
 | Provides information about the progress of the vehicle along its current link, that is link from previous visited top to current position.
@@ -4310,44 +4409,41 @@
 [#PlaceContextStructure,reftext=PlaceContextStructure]
 === The complex type `PlaceContextStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PlaceContextStructure`
+5+| `PlaceContextStructure`
 2+| [a view of PLACE in TMv6] a PLACE and access to it by individual transport 
 
-6+| The element contains a _sequence_ of the following elements:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*PlaceRef*`
 | *1:1* | _<<PlaceRefStructure>>_
 | Static place.
 
-|
+| | _b_ 
 2+| `*TripPlace*`
 | *1:1* | _<<TripPlaceStructure>>_
 | Place within a (moving) vehicle.
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
-
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `DepArrTime`
 | 0:1 | _xs:dateTime_
 | Time when departure/arrival from/to place is required.
 
-|
+| | _b_ 
 2+| `TimeAllowance`
 | 0:1 | _xs:duration_
 | Extra time needed before reaching/after leaving this place.
 
-
+|
 3+| `IndividualTransportOptions`
 | 0:* | _<<IndividualTransportOptionsStructure>>_
 | Options how to access/leave the place by individual transport.
@@ -4357,19 +4453,20 @@
 [#NumberOfResultsGroup,reftext=NumberOfResultsGroup]
 === The `NumberOfResultsGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `NumberOfResultsGroup`
+5+| `NumberOfResultsGroup`
 2+| parameter to control the number of TRIP results before/after a point in time. May NOT be used when departure time at origin AND arrival time at destination are set
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*NumberOfResultsBefore*`
 | *1:1* | _xs:nonNegativeInteger_
 | The desired number of trip results before the given time (at origin or destination).
 
-
+|
 3+| `*NumberOfResultsAfter*`
 | *1:1* | _xs:nonNegativeInteger_
 | The desired number of trip results after the given time (at origin or destination).
@@ -4379,34 +4476,33 @@
 [#BaseTripPolicyGroup,reftext=BaseTripPolicyGroup]
 === The `BaseTripPolicyGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `BaseTripPolicyGroup`
+5+| `BaseTripPolicyGroup`
 2+| Policies that control the trip search behaviour for both public and individual transport.
 
-6+| The element contains only one element:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| →`<<NumberOfResultsGroup>>`
 | 0:1 | 
 | 
 
-|
+| | _b_ 
 2+| `NumberOfResults`
 | 0:1 | _xs:positiveInteger_
 | The number of trip results that the user wants to see at least.
 
-
+|
 3+| `IgnoreRealtimeData`
 | 0:1 | _xs:boolean_
 | The trip calculation should not use any realtime or incident data.
 
-
+|
 3+| `ImmediateTripStart`
 | 0:1 | _xs:boolean_
 | Whether the trip calculation should find a solution that starts immediately (f.e. because the user is already on the way) instead of finding the latest possible start opportunity.
@@ -4416,39 +4512,40 @@
 [#BaseTripMobilityFilterGroup,reftext=BaseTripMobilityFilterGroup]
 === The `BaseTripMobilityFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `BaseTripMobilityFilterGroup`
+5+| `BaseTripMobilityFilterGroup`
 2+| Base mobility options to be applied for both public and individual transport.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `NoSingleStep`
 | 0:1 | _xs:boolean_
 | The user is not able to climb one step.
 
-
+|
 3+| `NoStairs`
 | 0:1 | _xs:boolean_
 | The user is not able to walk up/down stairs.
 
-
+|
 3+| `NoEscalator`
 | 0:1 | _xs:boolean_
 | The user is not able to use an escalator.
 
-
+|
 3+| `NoElevator`
 | 0:1 | _xs:boolean_
 | The user is not able to use an elevator.
 
-
+|
 3+| `NoRamp`
 | 0:1 | _xs:boolean_
 | The user is not able to use an ramp.
 
-
+|
 3+| `NoSight`
 | 0:1 | _xs:boolean_
 | The user is not able to see.
@@ -4458,39 +4555,40 @@
 [#BaseTripContentFilterGroup,reftext=BaseTripContentFilterGroup]
 === The `BaseTripContentFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `BaseTripContentFilterGroup`
+5+| `BaseTripContentFilterGroup`
 2+| Parameters to control the level of detail of both public and individual transport journey results.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `IncludeTrackSections`
 | 0:1 | _xs:boolean_
 | Whether the result should include TrackSection elements to describe the geographic route of each journey leg.
 
-
+|
 3+| `IncludeLegProjection`
 | 0:1 | _xs:boolean_
 | Whether the result should include the geographic projection (coordinates) of each journey leg.
 
-
+|
 3+| `IncludeTurnDescription`
 | 0:1 | _xs:boolean_
 | Whether the result should include turn-by-turn instructions for each journey leg.
 
-
+|
 3+| `IncludeAccessibility`
 | 0:1 | _xs:boolean_
 | Whether the result should include accessibility information.
 
-
+|
 3+| `IncludePlacesContext`
 | 0:1 | _xs:boolean_
 | Whether the place context is needed. If a requestor has that information already, the response can be made slimmer, when set to false. Default is true. 
 
-
+|
 3+| `IncludeSituationsContext`
 | 0:1 | _xs:boolean_
 | Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true
@@ -4501,19 +4599,20 @@
 [#LegAttributeStructure,reftext=LegAttributeStructure]
 === The complex type `LegAttributeStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `LegAttributeStructure`
+5+| `LegAttributeStructure`
 | _←<<GeneralAttributeStructure>>_ | Attributes that are not valid on the whole service, but only on section of a TRIP made on a single MODE without interchange between boarding and alighting (facilities available on a specified (part of a) Leg of a VEHICLE JOURNEY)
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `FromStopSeqNumber`
 | 0:1 | _xs:positiveInteger_
 | The attribute is valid from the stop point with this sequence number within the leg. If missing it is valid from the beginning of the leg.
 
-
+|
 3+| `ToStopSeqNumber`
 | 0:1 | _xs:positiveInteger_
 | The attribute is valid to the stop point (inclusively) with this sequence number within the leg. If missing it is valid to the end of the leg.
@@ -4524,14 +4623,15 @@
 [#LegTrackStructure,reftext=LegTrackStructure]
 === The complex type `LegTrackStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `LegTrackStructure`
+5+| `LegTrackStructure`
 2+| The LINK PROJECTION of a Leg onto the topography of the route being followed.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains only one element:
 
+|
 3+| `*TrackSection*`
 | *1:** | _<<TrackSectionStructure>>_
 | LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information
@@ -4542,51 +4642,55 @@
 [#TrackSectionStructure,reftext=TrackSectionStructure]
 === The complex type `TrackSectionStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TrackSectionStructure`
+5+| `TrackSectionStructure`
 2+| LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `TrackStart`
 | 0:1 | _<<PlaceRefStructure>>_
 | Start place of this track.
 
-
+|
 3+| `TrackEnd`
 | 0:1 | _<<PlaceRefStructure>>_
 | End place of this track.
 
-
+|
 3+| `LinkProjection`
 | 0:1 | 
 | an oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE, COMPLEX FEATURE, within a defined TYPE OF PROJECTION
 
-6+| The element contains only one element:
 
 
-3+| `*Position*`
+||
+5+| The element contains only one element:
+
+||
+2+| `*Position*`
 | 2:* | _siri:LocationStructure_
 | 
 
-
+|
 3+| `RoadName`
 | 0:1 | _xs:string_
 | Name of the road this track section is attached to.
 
-
+|
 3+| `Duration`
 | 0:1 | _xs:duration_
 | Duration the passenger needs to travel through this track section.
 
-
+|
 3+| `Length`
 | 0:1 | _siri:DistanceType_
 | Length of this track section.
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -4600,19 +4704,20 @@
 [#SituationsStructure,reftext=SituationsStructure]
 === The complex type `SituationsStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `SituationsStructure`
+5+| `SituationsStructure`
 2+| Wrapper type for SIRI PtSituationsElementStructure
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `PtSituation`
 | 0:* | _siri:PtSituationElementStructure_
 | SIRI situation details.
 
-
+|
 3+| `RoadSituation`
 | 0:* | _siri:RoadSituationElementStructure_
 | 
@@ -4622,10 +4727,9 @@
 [#SituationFullRef,reftext=SituationFullRef]
 === The toplevel element `SituationFullRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `SituationFullRef`
+5+| `SituationFullRef`
 | _→SituationFullRefStructure_ | Reference to situation message. Message details might be found in response context or through other communication channels.
 
 
@@ -4635,9 +4739,9 @@
 [#SituationFullRefStructure,reftext=SituationFullRefStructure]
 === The complex type `SituationFullRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `SituationFullRefStructure`
+5+| `SituationFullRefStructure`
 | _←<<siri:SituationFullRefStructure>>_ | Reference structure for situation message. Situation details might be found in response context or through other communication channels.
 
 |===
@@ -4648,29 +4752,28 @@
 [#TripInfoRequestGroup,reftext=TripInfoRequestGroup]
 === The `TripInfoRequestGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripInfoRequestGroup`
+5+| `TripInfoRequestGroup`
 2+| TripInfo request structure.
 
-6+| The element contains only one element:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| →`*<<DatedJourneyRefGroup>>*`
 | *1:1* | 
 | 
 
-|
+| | _b_ 
 2+| →`*<<TimedVehicleRefGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `Params`
 | 0:1 | _<<TripInfoParamStructure>>_
 | Request parameter.
@@ -4681,24 +4784,25 @@
 [#TripInfoParamStructure,reftext=TripInfoParamStructure]
 === The complex type `TripInfoParamStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripInfoParamStructure`
+5+| `TripInfoParamStructure`
 2+| TripInfo request parameter structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<TripInfoPolicyGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TripInfoContentFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -4708,14 +4812,15 @@
 [#TripInfoPolicyGroup,reftext=TripInfoPolicyGroup]
 === The `TripInfoPolicyGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripInfoPolicyGroup`
+5+| `TripInfoPolicyGroup`
 2+| Parameters that control the response behaviour.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains only one element:
 
+|
 3+| `UseTimetabledDataOnly`
 | 0:1 | _xs:boolean_
 | Do not show any realtime or incident data. Default is false.
@@ -4725,44 +4830,45 @@
 [#TripInfoContentFilterGroup,reftext=TripInfoContentFilterGroup]
 === The `TripInfoContentFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripInfoContentFilterGroup`
+5+| `TripInfoContentFilterGroup`
 2+| Parameters that control the level of detail to be returned in the results.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `IncludeCalls`
 | 0:1 | _xs:boolean_
 | Whether call information is to be included. Default is true.
 
-
+|
 3+| `IncludePosition`
 | 0:1 | _xs:boolean_
 | Whether current position is to be included. Default is true.
 
-
+|
 3+| `IncludeService`
 | 0:1 | _xs:boolean_
 | Whether service information is to be included. Default is true.
 
-
+|
 3+| `IncludeTrackSections`
 | 0:1 | _xs:boolean_
 | Whether the result should include TrackSection elements to describe the geographic route of this vehicle journey.
 
-
+|
 3+| `IncludeTrackProjection`
 | 0:1 | _xs:boolean_
 | Whether the result should include the geographic projection (coordinates) of this vehicle journey.
 
-
+|
 3+| `IncludePlacesContext`
 | 0:1 | _xs:boolean_
 | Whether the place context is needed. If a requestor has that information already, the response can be made slimmer, when set to false. Default is true. 
 
-
+|
 3+| `IncludeSituationsContext`
 | 0:1 | _xs:boolean_
 | Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true
@@ -4772,19 +4878,20 @@
 [#TripInfoResponseGroup,reftext=TripInfoResponseGroup]
 === The `TripInfoResponseGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripInfoResponseGroup`
+5+| `TripInfoResponseGroup`
 2+| TripInfo response structure.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `TripInfoResponseContext`
 | 0:1 | _<<ResponseContextStructure>>_
 | Response context.
 
-
+|
 3+| `TripInfoResult`
 | 0:1 | _<<TripInfoResultStructure>>_
 | Result structure.
@@ -4795,49 +4902,50 @@
 [#TripInfoResultStructure,reftext=TripInfoResultStructure]
 === The complex type `TripInfoResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripInfoResultStructure`
+5+| `TripInfoResultStructure`
 2+| TripInfo result structure containing the current status of a trip.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `PreviousCall`
 | 0:* | _<<CallAtStopStructure>>_
 | The stops this service already has called at. Including the current stop if service is currently at stop.
 
-
+|
 3+| `CurrentPosition`
 | 0:1 | _<<VehiclePositionStructure>>_
 | Current position of this service.
 
-
+|
 3+| `OnwardCall`
 | 0:* | _<<CallAtStopStructure>>_
 | The stops this service still has to call at.
 
-
+|
 3+| `Service`
 | 0:1 | _<<DatedJourneyStructure>>_
 | Description of the service.
 
-
+|
 3+| →`<<OperatingDaysGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| →`<<ServiceFacilityGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `JourneyTrack`
 | 0:1 | _<<LegTrackStructure>>_
 | Geographic embedding of this journey. The entire journey is regarded as one leg.
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -4850,39 +4958,38 @@
 [#FareRequestGroup,reftext=FareRequestGroup]
 === The `FareRequestGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareRequestGroup`
+5+| `FareRequestGroup`
 2+| Fare request structure.
 
-6+| The element contains only one element:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*MultiTripFareRequest*`
 | *1:1* | _<<MultiTripFareRequestStructure>>_
 | A request to calculate aggregated Fare information of multiple single trips
 
-|
+| | _b_ 
 2+| `*StaticFareRequest*`
 | *1:1* | _<<StaticFareRequestStructure>>_
 | A request for general/static Fare information.
 
-|
+| | _c_ 
 2+| `*StopFareRequest*`
 | *1:1* | _<<StopFareRequestStructure>>_
 | A request for stop-related Fare information.
 
-|
+| | _d_ 
 2+| `*TripFareRequest*`
 | *1:1* | _<<TripFareRequestStructure>>_
 | A request to calculate the Fare information of a single trip
 
-
+|
 3+| `Params`
 | 0:1 | _<<FareParamStructure>>_
 | Parameter to filter the response contents.
@@ -4893,19 +5000,20 @@
 [#StopFareRequestStructure,reftext=StopFareRequestStructure]
 === The complex type `StopFareRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopFareRequestStructure`
+5+| `StopFareRequestStructure`
 2+| Sub-request: stop-related fare information.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*siri:StopPointRef*`
 | *1:1* | 
 | 
 
-
+|
 3+| `Date`
 | 0:1 | _xs:date_
 | Date for which to retrieve Fare information.
@@ -4916,19 +5024,20 @@
 [#StaticFareRequestStructure,reftext=StaticFareRequestStructure]
 === The complex type `StaticFareRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StaticFareRequestStructure`
+5+| `StaticFareRequestStructure`
 2+| General Fare information. May depend on date.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Date`
 | 0:1 | _xs:date_
 | Date for which to retrieve Fare information.
 
-
+|
 3+| →`<<FareProductRef>>`
 | 0:* | 
 | 
@@ -4939,14 +5048,15 @@
 [#TripFareRequestStructure,reftext=TripFareRequestStructure]
 === The complex type `TripFareRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripFareRequestStructure`
+5+| `TripFareRequestStructure`
 2+| Structure of a Single Trip Fare Request.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains only one element:
 
+|
 3+| `*Trip*`
 | *1:1* | _<<TripStructure>>_
 | A complete trip from origin to destination
@@ -4957,14 +5067,15 @@
 [#MultiTripFareRequestStructure,reftext=MultiTripFareRequestStructure]
 === The complex type `MultiTripFareRequestStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `MultiTripFareRequestStructure`
+5+| `MultiTripFareRequestStructure`
 2+| Structure of a Multi Trip Fare Request.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains only one element:
 
+|
 3+| `*Trip*`
 | *1:** | _<<TripStructure>>_
 | Multiple complete trips from multiple origins and multiple destination
@@ -4974,19 +5085,20 @@
 [#FareResponseGroup,reftext=FareResponseGroup]
 === The `FareResponseGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareResponseGroup`
+5+| `FareResponseGroup`
 2+| 
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `FareResponseContext`
 | 0:1 | _<<ResponseContextStructure>>_
 | Context to hold trip response objects that occur frequently.
 
-
+|
 3+| `FareResult`
 | 0:* | _<<FareResultStructure>>_
 | Fare result choice element.
@@ -4997,39 +5109,38 @@
 [#FareResultStructure,reftext=FareResultStructure]
 === The complex type `FareResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareResultStructure`
+5+| `FareResultStructure`
 2+| Wrapper element for Fare results.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*ResultId*`
 | *1:1* | _xs:NMTOKEN_
 | ID of this result.
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
-
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*MultiTripFareResult*`
 | *1:** | _<<MultiTripFareResultStructure>>_
 | Fare and FareProducts for multiple trips.
 
-|
+| | _b_ 
 2+| `*StaticFareResult*`
 | *1:1* | _<<StaticFareResultStructure>>_
 | Static Fare information.
 
-|
+| | _c_ 
 2+| `*StopFareResult*`
 | *1:1* | _<<StopFareResultStructure>>_
 | Stop-related Fare information.
 
-|
+| | _d_ 
 2+| `*TripFareResult*`
 | *1:** | _<<TripFareResultStructure>>_
 | Fare and FareProducts for a given trip.
@@ -5040,19 +5151,20 @@
 [#StopFareResultStructure,reftext=StopFareResultStructure]
 === The complex type `StopFareResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopFareResultStructure`
+5+| `StopFareResultStructure`
 2+| Stop-related Fare information.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*TariffZoneListInArea*`
 | *1:** | _<<TariffZoneListInAreaStructure>>_
 | One or more lists of Fare zones that belong to a Fare authority/area.
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -5063,24 +5175,25 @@
 [#StaticFareResultStructure,reftext=StaticFareResultStructure]
 === The complex type `StaticFareResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StaticFareResultStructure`
+5+| `StaticFareResultStructure`
 2+| General Fare information.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `FareProduct`
 | 0:* | _<<FareProductStructure>>_
 | [related to FARE PRODUCT in TM and NeTEx] different FARE PRODUCTs that may be available with related information.
 
-
+|
 3+| `StaticInfoUrl`
 | 0:* | _<<WebLinkStructure>>_
 | URL to information page on the web.
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -5091,34 +5204,35 @@
 [#TripFareProductReferenceStructure,reftext=TripFareProductReferenceStructure]
 === The complex type `TripFareProductReferenceStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripFareProductReferenceStructure`
+5+| `TripFareProductReferenceStructure`
 2+| Element that connects FareProducts to trips. A TripFareProduct is a FAREPRODUCT covering a part or the whole of a TRIP from boarding the first public transport vehicle to alighting from the last public transport vehicle (corresponds to a package of PREASSIGNED FARE PRODUCTs)
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<FareProductRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*FromTripIdRef*`
 | *1:1* | _xs:NMTOKEN_
 | Identifies the "valid from" trip.
 
-
+|
 3+| `FromTripLegIdRef`
 | 0:1 | _xs:NMTOKEN_
 | Identifies the "valid from" tripLeg. If missing, then valid from the first leg.
 
-
+|
 3+| `*ToTripIdRef*`
 | *1:1* | _xs:NMTOKEN_
 | Identifies the "valid to" trip.
 
-
+|
 3+| `ToTripLegIdRef`
 | 0:1 | _xs:NMTOKEN_
 | Identifies the "valid to" tripLeg. If missing, then valid to the last leg.
@@ -5129,34 +5243,35 @@
 [#MultiTripFareResultStructure,reftext=MultiTripFareResultStructure]
 === The complex type `MultiTripFareResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `MultiTripFareResultStructure`
+5+| `MultiTripFareResultStructure`
 2+| Structure of a Multi Trip Fare Request result
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `ErrorMessage`
 | 0:* | _<<ErrorMessageStructure>>_
 | Result-specific error messages.
 
-
+|
 3+| `*TripFareProductReference*`
 | *1:** | _<<TripFareProductReferenceStructure>>_
 | Non-empty list of trip references in the corresponding MultiTripFareRequestStructure
 
-
+|
 3+| `FareProduct`
 | 0:* | _<<FareProductStructure>>_
 | Zero, one or more FareProducts that are valid for the referenced trips / part of trips.
 
-
+|
 3+| `PassedZones`
 | 0:1 | _<<TariffZoneListInAreaStructure>>_
 | The set of passed zones.
 
-
+|
 3+| `StaticInfoUrl`
 | 0:* | _<<WebLinkStructure>>_
 | URL to Fare information pages on the web.
@@ -5189,9 +5304,9 @@
 [#FareAuthorityRefStructure,reftext=FareAuthorityRefStructure]
 === The complex type `FareAuthorityRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareAuthorityRefStructure`
+5+| `FareAuthorityRefStructure`
 2+| Reference to a Fare Authority ([a specialisation of an ORGANISATION in TMv6] ORGANISATION which has the RESPONSIBILITY ROLE for the definition of FARE PRODUCTs).
 
 |===
@@ -5199,10 +5314,9 @@
 [#FareAuthorityRef,reftext=FareAuthorityRef]
 === The toplevel element `FareAuthorityRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareAuthorityRef`
+5+| `FareAuthorityRef`
 | _→FareAuthorityRefStructure_ | Reference to a Fare Authority.
 
 
@@ -5211,19 +5325,20 @@
 [#FareAuthorityGroup,reftext=FareAuthorityGroup]
 === The `FareAuthorityGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareAuthorityGroup`
+5+| `FareAuthorityGroup`
 2+| Group of attributes for an ORGANISATION which has the RESPONSIBILITY ROLE for the definition of FARE PRODUCTs 
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<FareAuthorityRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*FareAuthorityText*`
 | *1:1* | _xs:string_
 | Textual description or name of Fare authority.
@@ -5234,9 +5349,9 @@
 [#TariffZoneRefStructure,reftext=TariffZoneRefStructure]
 === The complex type `TariffZoneRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TariffZoneRefStructure`
+5+| `TariffZoneRefStructure`
 2+| Reference to a fare zone.
 
 |===
@@ -5244,10 +5359,9 @@
 [#TariffZoneRef,reftext=TariffZoneRef]
 === The toplevel element `TariffZoneRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TariffZoneRef`
+5+| `TariffZoneRef`
 | _→TariffZoneRefStructure_ | Reference to a fare zone.
 
 
@@ -5257,19 +5371,20 @@
 [#TariffZoneStructure,reftext=TariffZoneStructure]
 === The complex type `TariffZoneStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TariffZoneStructure`
+5+| `TariffZoneStructure`
 2+| [a more clearly defined equivalent of TARIFF ZONE in TM and NeTEx] A ZONE used to define a zonal fare structure in a zone-counting or zone-matrix system.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<TariffZoneRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*TariffZoneText*`
 | *1:1* | _xs:string_
 | Text describing the fare zone. Passengers will recognize the fare zone by this text. Often published on Fare Zone Maps.
@@ -5280,19 +5395,20 @@
 [#TariffZoneListInAreaStructure,reftext=TariffZoneListInAreaStructure]
 === The complex type `TariffZoneListInAreaStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TariffZoneListInAreaStructure`
+5+| `TariffZoneListInAreaStructure`
 2+| List of fare zones within the area of a Fare Authority.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<FareAuthorityGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*TariffZone*`
 | *1:** | _<<TariffZoneStructure>>_
 | Fare zone in area.
@@ -5303,19 +5419,20 @@
 [#TariffZoneRefListStructure,reftext=TariffZoneRefListStructure]
 === The complex type `TariffZoneRefListStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TariffZoneRefListStructure`
+5+| `TariffZoneRefListStructure`
 2+| List of fare zones references within the area of a Fare Authority.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<FareAuthorityRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<TariffZoneRef>>*`
 | *1:** | 
 | 
@@ -5326,39 +5443,40 @@
 [#BookingArrangementStructure,reftext=BookingArrangementStructure]
 === The complex type `BookingArrangementStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `BookingArrangementStructure`
+5+| `BookingArrangementStructure`
 2+| [a more generalised form of BOOKING ARRANGEMENTS in TMv6] arrangement for booking any leg or legs of a journey 
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `BookingAgencyName`
 | 0:1 | _<<InternationalTextStructure>>_
 | Name of the booking agency (contractual partner).
 
-
+|
 3+| `BookingUrl`
 | 0:1 | _<<WebLinkStructure>>_
 | URL to online booking service.
 
-
+|
 3+| `InfoUrl`
 | 0:1 | _<<WebLinkStructure>>_
 | URL to information page.
 
-
+|
 3+| `PhoneNumber`
 | 0:1 | _<<PhoneNumberType>>_
 | Phone number for booking.
 
-
+|
 3+| `MinimumBookingPeriod`
 | 0:1 | _xs:duration_
 | Minimum duration bookings must be completed before trip starts.
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -5369,19 +5487,20 @@
 [#BookingArrangementsContainerStructure,reftext=BookingArrangementsContainerStructure]
 === The complex type `BookingArrangementsContainerStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `BookingArrangementsContainerStructure`
+5+| `BookingArrangementsContainerStructure`
 2+| Container for multiple booking arrangements.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*BookingArrangement*`
 | *1:** | _<<BookingArrangementStructure>>_
 | [a more generalised form of BOOKING ARRANGEMENTS in TMv6] arrangement for booking any leg or legs of a journey.
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -5392,9 +5511,9 @@
 [#FareProductRefStructure,reftext=FareProductRefStructure]
 === The complex type `FareProductRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareProductRefStructure`
+5+| `FareProductRefStructure`
 2+| Reference to a FareProduct.
 
 |===
@@ -5402,10 +5521,9 @@
 [#FareProductRef,reftext=FareProductRef]
 === The toplevel element `FareProductRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareProductRef`
+5+| `FareProductRef`
 | _→FareProductRefStructure_ | Reference to a FareProduct.
 
 
@@ -5415,9 +5533,9 @@
 [#EntitlementProductRefStructure,reftext=EntitlementProductRefStructure]
 === The complex type `EntitlementProductRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `EntitlementProductRefStructure`
+5+| `EntitlementProductRefStructure`
 2+| Reference to a a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc).
 
 |===
@@ -5425,10 +5543,9 @@
 [#EntitlementProductRef,reftext=EntitlementProductRef]
 === The toplevel element `EntitlementProductRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `EntitlementProductRef`
+5+| `EntitlementProductRef`
 | _→EntitlementProductRefStructure_ | Reference to a a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc).
 
 
@@ -5438,49 +5555,50 @@
 [#FareProductStructure,reftext=FareProductStructure]
 === The complex type `FareProductStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareProductStructure`
+5+| `FareProductStructure`
 2+| [related to FARE PRODUCT in TM and NeTEx] different FARE PRODUCTs that may be available with related information
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*FareProductId*`
 | *1:1* | _<<FareProductCodeType>>_
 | Unique Id of the FareProduct.
 
-
+|
 3+| `*FareProductName*`
 | *1:1* | _xs:string_
 | printable FareProduct name
 
-
+|
 3+| →`*<<FareAuthorityGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `ProtoProduct`
 | 0:1 | _xs:boolean_
 | Is this product a proto product? Default is false. If true, it should not be shown to the user. In a distributed environment (e.g. EU-Spirit) partial systems may generate incomplete product information (proto product), which has to be be processed further and combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/
 
-
+|
 3+| →`*<<FareProductPriceGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<FareProductValidityGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<FareProductBookingGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `Extension`
 | 0:1 | _xs:anyType_
 | 
@@ -5490,29 +5608,30 @@
 [#FareProductPriceGroup,reftext=FareProductPriceGroup]
 === The `FareProductPriceGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareProductPriceGroup`
+5+| `FareProductPriceGroup`
 2+| [related to FARE PRODUCT PRICE in TM and NeTEx] price at which a FARE PRODUCT can be purchased.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Price`
 | 0:1 | _xs:decimal_
 | FareProduct price as decimal number.
 
-
+|
 3+| `NetPrice`
 | 0:1 | _xs:decimal_
 | Net FareProduct price as decimal number for accounting purposes.
 
-
+|
 3+| `Currency`
 | 0:1 | _xs:NMTOKEN_
 | iso 4217 currency code, e.g. EUR for Euro or GBP for Pound Sterling 
 
-
+|
 3+| `VatRate`
 | 0:1 | _<<VatRateEnumeration>>_
 | Rate of value added tax. Default is unknown.
@@ -5522,44 +5641,45 @@
 [#FareProductValidityGroup,reftext=FareProductValidityGroup]
 === The `FareProductValidityGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareProductValidityGroup`
+5+| `FareProductValidityGroup`
 2+| conditions of use for a particular FARE PRODUCT.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `TravelClass`
 | 0:1 | _<<TypeOfFareClassEnumeration>>_
 | Travel class for which the FareProduct is valid.
 
-
+|
 3+| `RequiredCard`
 | 0:* | _<<EntitlementProductRefStructure>>_
 | One or more traveller cards that are needed for purchase of this FareProduct. In most cases traveller cards offer discounts, f.e. BahnCard50 of Deutsche Bahn.
 
-
+|
 3+| `ValidFor`
 | 0:* | _<<PassengerCategoryEnumeration>>_
 | Sequence of all passenger categories for which this FareProduct is valid.
 
-
+|
 3+| `ValidityDuration`
 | 0:1 | _xs:duration_
 | Maximum duration of FareProduct validity starting with purchase of ticket or begin of journey (ticket validation).
 
-
+|
 3+| `ValidityDurationText`
 | 0:1 | _<<InternationalTextStructure>>_
 | Textual description of maximum validity duration.
 
-
+|
 3+| `ValidityTariffZones`
 | 0:* | _<<TariffZoneListInAreaStructure>>_
 | Spatial validity of FareProduct defined as list of fare zones.
 
-
+|
 3+| `ValidityAreaText`
 | 0:1 | _<<InternationalTextStructure>>_
 | Textual description of spatial validity.
@@ -5569,24 +5689,25 @@
 [#FareProductBookingGroup,reftext=FareProductBookingGroup]
 === The `FareProductBookingGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareProductBookingGroup`
+5+| `FareProductBookingGroup`
 2+| [aggregation of DISTRIBUTION CHANNEL and BOOKING ARRANGEMENT in TM and NeTEx] Group of information elements related to information to support the process of booking a FARE PRODUCT.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `InfoUrl`
 | 0:* | _<<WebLinkStructure>>_
 | URL to information for this FareProduct
 
-
+|
 3+| `SaleUrl`
 | 0:* | _<<WebLinkStructure>>_
 | URL to buy the FareProduct online
 
-
+|
 3+| `BookingArrangements`
 | 0:* | _<<BookingArrangementsContainerStructure>>_
 | 
@@ -5596,19 +5717,20 @@
 [#TripLegRangeGroup,reftext=TripLegRangeGroup]
 === The `TripLegRangeGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripLegRangeGroup`
+5+| `TripLegRangeGroup`
 2+| Range of trip legs (from - to) for which a Fare result (ticket) is valid.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*FromTripLegIdRef*`
 | *1:1* | _xs:NMTOKEN_
 | Identifies the "valid from" trip leg.
 
-
+|
 3+| `*ToTripLegIdRef*`
 | *1:1* | _xs:NMTOKEN_
 | Identifies the "valid to" trip leg.
@@ -5619,34 +5741,35 @@
 [#TripFareResultStructure,reftext=TripFareResultStructure]
 === The complex type `TripFareResultStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TripFareResultStructure`
+5+| `TripFareResultStructure`
 2+| Structure of a Single Trip Fare Request result
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `ErrorMessage`
 | 0:* | _<<ErrorMessageStructure>>_
 | Result-specific error messages 
 
-
+|
 3+| →`<<TripLegRangeGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `PassedZones`
 | 0:1 | _<<TariffZoneListInAreaStructure>>_
 | The sequence of passed fare zones.
 
-
+|
 3+| `FareProduct`
 | 0:* | _<<FareProductStructure>>_
 | One ore more FareProducts that are valid for this part of the trip.
 
-
+|
 3+| `StaticInfoUrl`
 | 0:* | _<<WebLinkStructure>>_
 | URL to static information page on the web.
@@ -5657,44 +5780,41 @@
 [#FarePassengerStructure,reftext=FarePassengerStructure]
 === The complex type `FarePassengerStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FarePassengerStructure`
+5+| `FarePassengerStructure`
 2+| [a specialised form of USER PROFILE in TM and NeTEx] attributes of a passenger that influence the price to be paid by that passenger for a FARE PRODUCT.
 
-6+| The element contains a _sequence_ of the following elements:
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
+7+| The element contains a _sequence_ of the following elements:
 
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*Age*`
 | *1:1* | _xs:nonNegativeInteger_
 | Age of the passenger on the day of travel.
 
-|
+| | _b_ 
 2+| `*PassengerCategory*`
 | *1:1* | _<<PassengerCategoryEnumeration>>_
 | sequence of all passenger categories, for which this FareProduct is valid
 
-
+|
 3+| `EntitlementProduct`
 | 0:* | _<<EntitlementProductRefStructure>>_
 | [a specific form of TRAVEL DOCUMENT in TM and NeTEx] a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc) 
 
-
-6+| 
-
-6+| The element contains _one of_ the following elements:
-
 |
+6+| Then, the element contains _one of_ the following elements:
+
+| | _a_ 
 2+| `*SalesPackageElementRef*`
 | *1:** | _<<FareProductRefStructure>>_
 | Id of a FareProduct that the passenger already holds and that may be used for the travel or parts of it.
 
-|
+| | _b_ 
 2+| `*ZonesAlreadyPaid*`
 | *1:1* | _<<TariffZoneRefListStructure>>_
 | Fare zones for which the passenger already has a valid FareProduct.
@@ -5704,24 +5824,25 @@
 [#FareDataFilterGroup,reftext=FareDataFilterGroup]
 === The `FareDataFilterGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareDataFilterGroup`
+5+| `FareDataFilterGroup`
 2+| Data filter group for Fare request.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `FareAuthorityFilter`
 | 0:* | _<<FareAuthorityRefStructure>>_
 | Fare authority for which to retrieve Fare information.
 
-
+|
 3+| `PassengerCategory`
 | 0:* | _<<PassengerCategoryEnumeration>>_
 | sequence of all passenger categories, for which this FareProduct is valid
 
-
+|
 3+| `TravelClass`
 | 0:1 | _<<TypeOfFareClassEnumeration>>_
 | Travel class for which to retrieve FareProducts. Refers to TYPE OF FARE CLASS
@@ -5732,19 +5853,20 @@
 [#FareParamStructure,reftext=FareParamStructure]
 === The complex type `FareParamStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `FareParamStructure`
+5+| `FareParamStructure`
 2+| [related to the FARE parameter model in TM and NeTEx] parameters which are used to determine the price to be paid for a FARE PRODUCT by a specific passenger.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<FareDataFilterGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `Traveller`
 | 0:* | _<<FarePassengerStructure>>_
 | Number of travellers that will make the journey and for which Fare information needs to be gathered.
@@ -5775,19 +5897,20 @@
 [#ErrorMessageStructure,reftext=ErrorMessageStructure]
 === The complex type `ErrorMessageStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ErrorMessageStructure`
+5+| `ErrorMessageStructure`
 2+| Structured error messages
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Code*`
 | *1:1* | _xs:normalizedString_
 | Code of the error situation.
 
-
+|
 3+| `Text`
 | 0:1 | _<<InternationalTextStructure>>_
 | Description of the error situation.
@@ -5798,19 +5921,20 @@
 [#PrivateCodeStructure,reftext=PrivateCodeStructure]
 === The complex type `PrivateCodeStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PrivateCodeStructure`
+5+| `PrivateCodeStructure`
 2+| Code within scope of a private referential system
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*System*`
 | *1:1* | _xs:NMTOKEN_
 | Code of the foreign referential system.
 
-
+|
 3+| `*Value*`
 | *1:1* | _xs:NMTOKEN_
 | Object code within this private/foreign system.
@@ -5820,10 +5944,9 @@
 [#ParticipantRef,reftext=ParticipantRef]
 === The toplevel element `ParticipantRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ParticipantRef`
+5+| `ParticipantRef`
 | _→siri:ParticipantRefStructure_ | Reference to a Participant ([equivalent of PARTICIPANT in SIRI] IT system that is participating in a communication with other participant(s))
 
 
@@ -5832,10 +5955,9 @@
 [#OperatorRef,reftext=OperatorRef]
 === The toplevel element `OperatorRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OperatorRef`
+5+| `OperatorRef`
 | _→siri:OperatorRefStructure_ | Reference to an Operator ([TMv6] company  providing public transport services.) 
 
 
@@ -5845,19 +5967,20 @@
 [#OperatorFilterStructure,reftext=OperatorFilterStructure]
 === The complex type `OperatorFilterStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OperatorFilterStructure`
+5+| `OperatorFilterStructure`
 2+| Filter for in/exclusion of transport operators.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Exclude`
 | 0:1 | _xs:boolean_
 | Whether operators in list are to include or exclude from search. Default is exclude.
 
-
+|
 3+| `OperatorRef`
 | 0:* | _siri:OperatorRefStructure_
 | Reference to transport operator
@@ -5868,9 +5991,9 @@
 [#ProductCategoryRefStructure,reftext=ProductCategoryRefStructure]
 === The complex type `ProductCategoryRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ProductCategoryRefStructure`
+5+| `ProductCategoryRefStructure`
 2+| Reference to a product category. As defined in NeTEx and SIRI, a product category is a classification for VEHICLE JOURNEYs to express some common properties of journeys for marketing and fare products, e.g. to identify boats that run with steam in Switzerland ("BAV")
 
 |===
@@ -5878,10 +6001,9 @@
 [#ProductCategoryRef,reftext=ProductCategoryRef]
 === The toplevel element `ProductCategoryRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ProductCategoryRef`
+5+| `ProductCategoryRef`
 | _→siri:ProductCategoryRefStructure_ | Reference to a product category. Product categories should be defined once and used uniformly in all channels (e.g. NeTEx, SIRI, OJP)
 
 
@@ -5891,19 +6013,20 @@
 [#LineDirectionFilterStructure,reftext=LineDirectionFilterStructure]
 === The complex type `LineDirectionFilterStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `LineDirectionFilterStructure`
+5+| `LineDirectionFilterStructure`
 2+| Filter for in/exclusion of lines (and directions).
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Line*`
 | *1:** | _siri:LineDirectionStructure_
 | Reference a GROUP of DIRECTIONs  of the ROUTEs belonging to the same LINE created  for the purpose of filtering and organising timetables..
 
-
+|
 3+| `Exclude`
 | 0:1 | _xs:boolean_
 | Whether lines in list are to include or exclude from search. Default is exclude.
@@ -5914,9 +6037,9 @@
 [#JourneyRefStructure,reftext=JourneyRefStructure]
 === The complex type `JourneyRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `JourneyRefStructure`
+5+| `JourneyRefStructure`
 2+| Reference to a Journey
 
 |===
@@ -5924,10 +6047,9 @@
 [#JourneyRef,reftext=JourneyRef]
 === The toplevel element `JourneyRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `JourneyRef`
+5+| `JourneyRef`
 | _→JourneyRefStructure_ | Reference to a Journey
 
 
@@ -5936,19 +6058,20 @@
 [#DatedJourneyRefGroup,reftext=DatedJourneyRefGroup]
 === The `DatedJourneyRefGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `DatedJourneyRefGroup`
+5+| `DatedJourneyRefGroup`
 2+| Reference to a DATED VEHICLE JOURNEY (Reference to a journey on a specific operating day)
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<JourneyRef>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| →`*<<OperatingDayRef>>*`
 | *1:1* | 
 | 
@@ -5958,19 +6081,20 @@
 [#TimedVehicleRefGroup,reftext=TimedVehicleRefGroup]
 === The `TimedVehicleRefGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `TimedVehicleRefGroup`
+5+| `TimedVehicleRefGroup`
 2+| Reference to a vehicle for a specific point in time.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*siri:VehicleRef*`
 | *1:1* | 
 | 
 
-
+|
 3+| `*TimeOfOperation*`
 | *1:1* | _xs:dateTime_
 | Time stamp when the vehicle is operating. In most use cases equal to "now".
@@ -5980,19 +6104,20 @@
 [#SharingServiceUsageGroup,reftext=SharingServiceUsageGroup]
 === The `SharingServiceUsageGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `SharingServiceUsageGroup`
+5+| `SharingServiceUsageGroup`
 2+| Usage parameters of a sharing service.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `TimeBufferBefore`
 | 0:1 | _xs:duration_
 | Typical time a user will need  to check in and unlock the vehicle.
 
-
+|
 3+| `TimeBufferAfter`
 | 0:1 | _xs:duration_
 | Typical time a user will need  to lock the vehicle and check out.
@@ -6003,34 +6128,35 @@
 [#SharingServiceStructure,reftext=SharingServiceStructure]
 === The complex type `SharingServiceStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `SharingServiceStructure`
+5+| `SharingServiceStructure`
 2+| Service that provides shared vehicles.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*OperatorRef*`
 | *1:1* | _siri:OperatorRefStructure_
 | Identifier of the operator of the sharing service 
 
-
+|
 3+| `Name`
 | 0:1 | _xs:string_
 | Public name of the service.
 
-
+|
 3+| `SharingModel`
 | 0:1 | _<<SharingModelEnumeration>>_
 | Type of the sharing scheme.
 
-
+|
 3+| →`<<SharingServiceUsageGroup>>`
 | 0:1 | 
 | 
 
-
+|
 3+| `InfoUrl`
 | 0:1 | _<<WebLinkStructure>>_
 | Link to web page providing more details on service.
@@ -6041,9 +6167,9 @@
 [#OwnerRefStructure,reftext=OwnerRefStructure]
 === The complex type `OwnerRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OwnerRefStructure`
+5+| `OwnerRefStructure`
 2+| Reference to an ORGANISATION with ownership as the RESPONSIBILITY ROLE
 
 |===
@@ -6051,10 +6177,9 @@
 [#OwnerRef,reftext=OwnerRef]
 === The toplevel element `OwnerRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OwnerRef`
+5+| `OwnerRef`
 | _→OwnerRefStructure_ | Reference to an  ORGANISATION with ownership as the RESPONSIBILITY ROLE
 
 
@@ -6064,9 +6189,9 @@
 [#OperatingDayRefStructure,reftext=OperatingDayRefStructure]
 === The complex type `OperatingDayRefStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OperatingDayRefStructure`
+5+| `OperatingDayRefStructure`
 2+| Reference to an Operating Day
 
 |===
@@ -6074,10 +6199,9 @@
 [#OperatingDayRef,reftext=OperatingDayRef]
 === The toplevel element `OperatingDayRef`
 
-
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OperatingDayRef`
+5+| `OperatingDayRef`
 | _→OperatingDayRefStructure_ | Reference to an Operating Day
 
 
@@ -6087,24 +6211,25 @@
 [#OperatingDaysStructure,reftext=OperatingDaysStructure]
 === The complex type `OperatingDaysStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OperatingDaysStructure`
+5+| `OperatingDaysStructure`
 2+|  [TMv6] day of public transport operation of which the characteristics are defined in a specific SERVICE CALENDAR and which may last more than 24 hours.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*From*`
 | *1:1* | _xs:date_
 | Start date of period.
 
-
+|
 3+| `*To*`
 | *1:1* | _xs:date_
 | End date of period.
 
-
+|
 3+| `*Pattern*`
 | *1:1* | _<<ValidDayBitType>>_
 | Bit pattern for operating days between start date and end date. The length of the pattern is equal to the number of days from start date to end date. A bit value of "1" indicates that an event actually happens on the day that is represented by the bit position.
@@ -6114,19 +6239,20 @@
 [#OperatingDaysGroup,reftext=OperatingDaysGroup]
 === The `OperatingDaysGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `OperatingDaysGroup`
+5+| `OperatingDaysGroup`
 2+| Coded as bit pattern
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `OperatingDays`
 | 0:1 | _<<OperatingDaysStructure>>_
 | Bit string definition of operating days.
 
-
+|
 3+| `OperatingDaysDescription`
 | 0:1 | _<<InternationalTextStructure>>_
 | Textual description of the operation days, e.g. "monday to friday" or "not on holidays".
@@ -6137,24 +6263,25 @@
 [#WeekdayTimePeriodStructure,reftext=WeekdayTimePeriodStructure]
 === The complex type `WeekdayTimePeriodStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `WeekdayTimePeriodStructure`
+5+| `WeekdayTimePeriodStructure`
 2+| [a specialisation of TIME BAND in TMv6] aggregation of TIME BAND and DAY OF WEEK (Time period on a weekday).
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Weekday`
 | 0:* | _<<WeekdayTypeEnumeration>>_
 | [a specialisation of DAY OF WEEK in TMv6] enumeration of individual the seven DAYs OF WEEK, along with public holidays
 
-
+|
 3+| `*StartTime*`
 | *1:1* | _xs:time_
 | Start time of period.
 
-
+|
 3+| `*Duration*`
 | *1:1* | _xs:duration_
 | Time duration of period.
@@ -6165,39 +6292,40 @@
 [#GeneralAttributeStructure,reftext=GeneralAttributeStructure]
 === The complex type `GeneralAttributeStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `GeneralAttributeStructure`
+5+| `GeneralAttributeStructure`
 2+| Structured attribute classification with associated text. If URL is given, it refers to the whole attribute text.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Text*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Text of the attribute to be shown to the user.
 
-
+|
 3+| `*Code*`
 | *1:1* | _xs:NMTOKEN_
 | Internal code of the attribute. Can be used for detection of double occurrences.
 
-
+|
 3+| →`*<<AllFacilitiesGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `Mandatory`
 | 0:1 | _xs:boolean_
 | Defines whether the attribute has to be shown to the user.
 
-
+|
 3+| `Importance`
 | 0:1 | _<<PercentType>>_
 | Importance of the attribute.
 
-
+|
 3+| →`<<WebLinkGroup>>`
 | 0:1 | 
 | 
@@ -6210,14 +6338,15 @@
 [#AllFacilitiesGroup,reftext=AllFacilitiesGroup]
 === The `AllFacilitiesGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `AllFacilitiesGroup`
+5+| `AllFacilitiesGroup`
 2+| Wrapper for SIRI facilities.
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| →`*siri:AllFacilitiesGroup*`
 | *1:1* | 
 | 
@@ -6227,14 +6356,15 @@
 [#StopFacilityGroup,reftext=StopFacilityGroup]
 === The `StopFacilityGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `StopFacilityGroup`
+5+| `StopFacilityGroup`
 2+| Wrapper for SIRI stop facilities.
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| →`*siri:StopFacilityGroup*`
 | *1:1* | 
 | 
@@ -6244,14 +6374,15 @@
 [#ServiceFacilityGroup,reftext=ServiceFacilityGroup]
 === The `ServiceFacilityGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ServiceFacilityGroup`
+5+| `ServiceFacilityGroup`
 2+| Wrapper for SIRI service facilities.
 
-6+| The element contains only one element:
 
+7+| The element contains only one element:
 
+|
 3+| →`*siri:ServiceFacilityGroup*`
 | *1:1* | 
 | 
@@ -6278,44 +6409,45 @@
 [#IndividualTransportOptionsStructure,reftext=IndividualTransportOptionsStructure]
 === The complex type `IndividualTransportOptionsStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `IndividualTransportOptionsStructure`
+5+| `IndividualTransportOptionsStructure`
 2+| Individual modes and their usage limits as stated by the passenger
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Mode*`
 | *1:1* | _<<IndividualModesEnumeration>>_
 | Mode of individual transport.	When mode self-drive-car is used the connection to another mode will need a parking space for the car. Thus, this mode is a generalisation of all park and ride use cases. The mode others-drive-car, however, only needs a place to let a person be set down from a car.
 
-
+|
 3+| `MaxDistance`
 | 0:1 | _siri:DistanceType_
 | Maximum distance in meters. If given, it restricts the maximum distance of routes with the given mode.
 
-
+|
 3+| `MaxDuration`
 | 0:1 | _xs:duration_
 | Maximum duration. If given, it restricts the maximum time of routes with the given mode.
 
-
+|
 3+| `MinDistance`
 | 0:1 | _siri:DistanceType_
 | Minimum distance in meters. If given, it restricts the minimum distance of routes with the given mode.
 
-
+|
 3+| `MinDuration`
 | 0:1 | _xs:duration_
 | Minimum duration. If given, it restricts the minimum time of routes with the given mode.
 
-
+|
 3+| `Speed`
 | 0:1 | _<<OpenPercentType>>_
 | Relative speed in percent. If given slows the standard speed (below 100) or fasten it (above 100).
 
-
+|
 3+| `AdditionalTime`
 | 0:1 | _xs:duration_
 | Additional time added to the actual traveling time needed to use a specific mode.
@@ -6326,29 +6458,30 @@
 [#ModeStructure,reftext=ModeStructure]
 === The complex type `ModeStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ModeStructure`
+5+| `ModeStructure`
 2+| [a specialisation of MODE in TMv6] an extended range of VEHICLE MODEs, aggregating them with some SUBMODEs
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| →`*<<ModeGroup>>*`
 | *1:1* | 
 | 
 
-
+|
 3+| `Name`
 | 0:1 | _<<InternationalTextStructure>>_
 | Name of the mode.
 
-
+|
 3+| `ShortName`
 | 0:1 | _<<InternationalTextStructure>>_
 | Short name or acronym of the mode.
 
-
+|
 3+| `Description`
 | 0:1 | _<<InternationalTextStructure>>_
 | Additional text that further describes the mode.
@@ -6358,19 +6491,20 @@
 [#ModeGroup,reftext=ModeGroup]
 === The `ModeGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `ModeGroup`
+5+| `ModeGroup`
 2+| Elements for a Transport Mode
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*PtMode*`
 | *1:1* | _siri:VehicleModesOfTransportEnumeration_
 | Categorisation of mode 
 
-
+|
 3+| →`siri:PtModeChoiceGroup`
 | 0:1 | 
 | 
@@ -6381,24 +6515,25 @@
 [#PtModeFilterStructure,reftext=PtModeFilterStructure]
 === The complex type `PtModeFilterStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PtModeFilterStructure`
+5+| `PtModeFilterStructure`
 2+| List of public transport modes ([from SIRI] mode of public transport service, corresponds to VEHICLE MODE) to include or exclude.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Exclude`
 | 0:1 | _xs:boolean_
 | Whether modes in list are to include or exclude from search. Default is exclude.
 
-
+|
 3+| `PtMode`
 | 0:* | _siri:VehicleModesOfTransportEnumeration_
 | List of PT Transport modes to include/exclude.
 
-
+|
 3+| →`siri:PtModeChoiceGroup`
 | 0:* | 
 | 
@@ -6409,19 +6544,20 @@
 [#PrivateModeFilterStructure,reftext=PrivateModeFilterStructure]
 === The complex type `PrivateModeFilterStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `PrivateModeFilterStructure`
+5+| `PrivateModeFilterStructure`
 2+| List of private mobility offers to include or exclude.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `Exclude`
 | 0:1 | _xs:boolean_
 | Whether modes in list are to include or exclude from search. Default is exclude.
 
-
+|
 3+| `PrivateMode`
 | 0:* | _<<PrivateModesEnumeration>>_
 | List of private mobility offers to include/exclude.
@@ -6452,19 +6588,20 @@
 [#InternationalTextStructure,reftext=InternationalTextStructure]
 === The complex type `InternationalTextStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `InternationalTextStructure`
+5+| `InternationalTextStructure`
 2+| [a restricted view of ALTERNATIVE NAME in TMv6] alternative identified text to be used in specified languages.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Text*`
 | *1:** | _siri:NaturalLanguageStringStructure_
 | Text content.
 
-
+|
 3+| `TextId`
 | 0:1 | _xs:NMTOKEN_
 | Id of this text. May be used for matching to pre-recorded audio files.
@@ -6474,24 +6611,25 @@
 [#WebLinkGroup,reftext=WebLinkGroup]
 === The `WebLinkGroup` group
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `WebLinkGroup`
+5+| `WebLinkGroup`
 2+| URL of a web resource including type of resource.
 
-6+| The element contains a _sequence_ of the following elements:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Url*`
 | *1:1* | _xs:anyURI_
 | URL to resource on web.
 
-
+|
 3+| `MimeType`
 | 0:1 | _xs:normalizedString_
 | MIME type of the referenced resource. To which kind of resource does the URL point to?
 
-
+|
 3+| `Embeddable`
 | 0:1 | _xs:boolean_
 | Is the referenced resource meant to be embedded as a webview in a surrounding context, e.g. app or web page? If yes, the resource has to be fully responsive. Default is false.
@@ -6502,19 +6640,20 @@
 [#WebLinkStructure,reftext=WebLinkStructure]
 === The complex type `WebLinkStructure`
 
-[%noheader,cols="1,1,1,20,20,30"]
+[%noheader,cols="1,1,1,1,20,20,30"]
 |===
-4+| `WebLinkStructure`
+5+| `WebLinkStructure`
 2+| URL of a web resource with label.
 
-6+| The element contains only one element:
 
+7+| The element contains a _sequence_ of the following elements:
 
+|
 3+| `*Label*`
 | *1:1* | _<<InternationalTextStructure>>_
 | Label for link description.
 
-
+|
 3+| →`*<<WebLinkGroup>>*`
 | *1:1* | 
 | 
