@@ -594,6 +594,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_code_timewindowgroup_code_group">The <code>TimeWindowGroup</code> group</a></li>
 <li><a href="#_the_code_servicetimegroup_code_group">The <code>ServiceTimeGroup</code> group</a></li>
 <li><a href="#_the_code_estimatedtimebandgroup_code_group">The <code>EstimatedTimeBandGroup</code> group</a></li>
+<li><a href="#_the_complex_type_code_servicearrivalstructure_code">The complex type <code>ServiceArrivalStructure</code></a></li>
+<li><a href="#_the_complex_type_code_servicedeparturestructure_code">The complex type <code>ServiceDepartureStructure</code></a></li>
 <li><a href="#_the_complex_type_code_callatstopstructure_code">The complex type <code>CallAtStopStructure</code></a></li>
 <li><a href="#_the_code_stopcallstatusgroup_code_group">The <code>StopCallStatusGroup</code> group</a></li>
 <li><a href="#_the_code_servicestatusgroup_code_group">The <code>ServiceStatusGroup</code> group</a></li>
@@ -4139,22 +4141,16 @@ The element contains a <em>sequence</em> of the following elements:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
-</p><p class="tableblock">The element contains only one element:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceTimeGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ServiceArrivalStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceDeparture</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
-</p><p class="tableblock">The element contains only one element:</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceTimeGroup</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ServiceDepartureStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>DistributorInterchangeId</code></p></td>
@@ -4200,22 +4196,16 @@ The element contains a <em>sequence</em> of the following elements:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">describes the arrival situation at the leg alight stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
-</p><p class="tableblock">The element contains only one element:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceTimeGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ServiceArrivalStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">describes the arrival situation at the leg alight stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceDeparture</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">describes the departure situation at this leg alight stop point (empty for last leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
-</p><p class="tableblock">The element contains only one element:</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceTimeGroup</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ServiceDepartureStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">describes the departure situation at this leg alight stop point (empty for last leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>FeederInterchangeId</code></p></td>
@@ -4261,22 +4251,16 @@ The element contains a <em>sequence</em> of the following elements:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
-</p><p class="tableblock">The element contains only one element:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceTimeGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ServiceArrivalStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceDeparture</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)
-</p><p class="tableblock">The element contains only one element:</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceTimeGroup</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ServiceDepartureStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MeetsViaRequest</code></p></td>
@@ -5275,6 +5259,30 @@ The element contains a <em>sequence</em> of the following elements:</p>
 </table>
 </div>
 <div class="sect2">
+<h3 id="_the_complex_type_code_servicearrivalstructure_code">The complex type <code>ServiceArrivalStructure</code></h3>
+<div class="paragraph">
+<p>Arrival times of a service at a stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</p>
+</div>
+<div class="paragraph">
+<p>The element contains only one element:</p>
+</div>
+<div class="paragraph">
+<p>| <code>ServiceTimeGroup</code> | 1:1</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_complex_type_code_servicedeparturestructure_code">The complex type <code>ServiceDepartureStructure</code></h3>
+<div class="paragraph">
+<p>Departure times of a service at a stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</p>
+</div>
+<div class="paragraph">
+<p>The element contains only one element:</p>
+</div>
+<div class="paragraph">
+<p>| <code>ServiceTimeGroup</code> | 1:1</p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_the_complex_type_code_callatstopstructure_code">The complex type <code>CallAtStopStructure</code></h3>
 <div class="paragraph">
 <p>[same as CALL in SIRI] the meeting of a VEHICLE JOURNEY with a specific SCHEDULED STOP POINT
@@ -5295,22 +5303,16 @@ The element contains a <em>sequence</em> of the following elements:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Arrival times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).
-</p><p class="tableblock">The element contains only one element:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceTimeGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ServiceArrivalStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arrival times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceDeparture</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Departure times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).
-</p><p class="tableblock">The element contains only one element:</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ServiceTimeGroup</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>ServiceDepartureStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Departure times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>StopCallStatusGroup</code></p></td>
