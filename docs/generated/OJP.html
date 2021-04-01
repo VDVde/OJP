@@ -673,6 +673,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_simple_type_definitions_8">Simple type definitions</a></li>
 <li><a href="#_the_complex_type_code_errormessagestructure_code">The complex type <code>ErrorMessageStructure</code></a></li>
 <li><a href="#_the_complex_type_code_privatecodestructure_code">The complex type <code>PrivateCodeStructure</code></a></li>
+<li><a href="#_the_complex_type_code_linkprojectionstructure_code">The complex type <code>LinkProjectionStructure</code></a></li>
+<li><a href="#_the_complex_type_code_areastructure_code">The complex type <code>AreaStructure</code></a></li>
 <li><a href="#_the_toplevel_element_code_participantref_code">The toplevel element <code>ParticipantRef</code></a></li>
 <li><a href="#_the_complex_type_code_operatorfilterstructure_code">The complex type <code>OperatorFilterStructure</code></a></li>
 <li><a href="#_the_complex_type_code_productcategoryrefstructure_code">The complex type <code>ProductCategoryRefStructure</code></a></li>
@@ -2377,9 +2379,8 @@ The element contains a <em>sequence</em> of the following elements:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Area</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Area covered by the locality described as a polygon.
-</p><p class="tableblock">The element contains only one element:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Points</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>AreaStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Area covered by the locality described as a polygon.</p></td>
 </tr>
 </tbody>
 </table>
@@ -5904,7 +5905,7 @@ The element contains a <em>sequence</em> of the following elements:</p>
 <p>The element contains only one element:</p>
 </div>
 <div class="paragraph">
-<p>| <code>TrackSection</code> | 1:*  | <em>TrackSectionStructure</em> | LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information</p>
+<p>| <code>TrackSection</code> | 1:*  | <em>TrackSectionStructure</em> | LINK PROJECTION on the infrastructure network of the trip leg section together with time information.</p>
 </div>
 </div>
 <div class="sect2">
@@ -5936,33 +5937,26 @@ The element contains a <em>sequence</em> of the following elements:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>LinkProjection</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">an oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE, COMPLEX FEATURE, within a defined TYPE OF PROJECTION
-</p><p class="tableblock">The element contains only one element:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Position</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>LinkProjectionStructure</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2:*</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>siri:LocationStructure</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>RoadName</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>xs:string</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name of the road this track section is attached to.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Duration</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>xs:duration</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duration the passenger needs to travel through this track section.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Length</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Length</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>siri:DistanceType</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Length of this track section.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Extension</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
 </tr>
 </tbody>
 </table>
@@ -7425,6 +7419,30 @@ The element contains a <em>sequence</em> of the following elements:</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect2">
+<h3 id="_the_complex_type_code_linkprojectionstructure_code">The complex type <code>LinkProjectionStructure</code></h3>
+<div class="paragraph">
+<p>An oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE.</p>
+</div>
+<div class="paragraph">
+<p>The element contains only one element:</p>
+</div>
+<div class="paragraph">
+<p>| <code>Position</code> | 2:*  | <em>siri:LocationStructure</em> | Ordered list of locations representing the geogemtry of the link.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_complex_type_code_areastructure_code">The complex type <code>AreaStructure</code></h3>
+<div class="paragraph">
+<p>Area described as a polygon.</p>
+</div>
+<div class="paragraph">
+<p>The element contains only one element:</p>
+</div>
+<div class="paragraph">
+<p>| <code>Points</code> | 3:*  | <em>siri:LocationStructure</em> | Ordered list of geographic locations describing the polygon of the area.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_the_toplevel_element_code_participantref_code">The toplevel element <code>ParticipantRef</code></h3>
