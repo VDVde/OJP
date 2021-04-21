@@ -362,9 +362,6 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
-				<xs:annotation>
-					<xs:documentation>Choice for the type of the trip leg.</xs:documentation>
-				</xs:annotation>
 				<xs:element name="TimedLeg" type="TimedLegStructure"/>
 				<xs:element name="TransferLeg" type="TransferLegStructure"/>
 				<xs:element name="ContinuousLeg" type="ContinuousLegStructure"/>

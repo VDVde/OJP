@@ -15,9 +15,6 @@
 	<xs:group name="PlaceInformationRequestGroup">
 		<xs:sequence>
 			<xs:choice>
-				<xs:annotation>
-					<xs:documentation>A place information request either consists of an initial request for places (by name and/or coordinates, with restrictions), or of an follow up request in which a place object is further refined.</xs:documentation>
-				</xs:annotation>
 				<xs:element name="InitialInput" type="InitialPlaceInputStructure">
 					<xs:annotation>
 						<xs:documentation>Initial input for the place information request. This input defines what is originally looked for.</xs:documentation>
