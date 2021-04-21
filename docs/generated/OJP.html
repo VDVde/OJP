@@ -1536,33 +1536,55 @@ The element contains a <em>sequence</em> of the following elements:</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.667%;">
+<col style="width: 100%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Then, the element contains <em>one of</em> the following elements:
-
-A place information request either consists of an initial request for places (by name and/or coordinates, with restrictions), or of an follow up request in which a place object is further refined.</th>
-<th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top"><code>InitialInput</code></th>
-<th class="tableblock halign-left valign-top">1:1</th>
-<th class="tableblock halign-left valign-top"><em>InitialPlaceInputStructure</em></th>
-<th class="tableblock halign-left valign-top">Initial input for the place information request. This input defines what is originally looked for.</th>
+<th class="tableblock halign-left valign-top">Then, the element contains <em>one of</em> the following elements:</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PlaceRef</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>InitialInput</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>InitialPlaceInputStructure</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial input for the place information request. This input defines what is originally looked for.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PlaceRef</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>PlaceRefStructure</em></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Place for further refinement. If a place in a previous response was marked as not "complete" it can be refined by putting it here.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Restrictions</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0:1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>PlaceParamStructure</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E.g. place types (stops, addresses, POIs) or specific place attributes</p></td>
 </tr>
 </tbody>
 </table>
@@ -3822,8 +3844,7 @@ The element contains a <em>sequence</em> of the following elements:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[equivalent of PARTICIPANT in SIRI] IT system that is participating in a communication with other participant(s)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Then, the element contains <em>one of</em> the following elements:
-</p><p class="tableblock">Choice for the type of the trip leg.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Then, the element contains <em>one of</em> the following elements:</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ContinuousLeg</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>

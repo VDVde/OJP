@@ -385,7 +385,7 @@ The element contains a _sequence_ of the following elements:
 |===
 | Then, the element contains _one of_ the following elements:
 
-A place information request either consists of an initial request for places (by name and/or coordinates, with restrictions), or of an follow up request in which a place object is further refined.|| `InitialInput` | 1:1  | _InitialPlaceInputStructure_ | Initial input for the place information request. This input defines what is originally looked for.
+|| `InitialInput` | 1:1  | _InitialPlaceInputStructure_ | Initial input for the place information request. This input defines what is originally looked for.
 || `PlaceRef` | 1:1  | _PlaceRefStructure_ | Place for further refinement. If a place in a previous response was marked as not "complete" it can be refined by putting it here.
 | `Restrictions` | 0:1  | _PlaceParamStructure_ | E.g. place types (stops, addresses, POIs) or specific place attributes
 |===
@@ -1138,7 +1138,7 @@ The element contains a _sequence_ of the following elements:
 | `ParticipantRef` | 0:1  | _siri:ParticipantRefStructure_ | [equivalent of PARTICIPANT in SIRI] IT system that is participating in a communication with other participant(s)
 | Then, the element contains _one of_ the following elements:
 
-Choice for the type of the trip leg.|| `ContinuousLeg` | 1:1  | _ContinuousLegStructure_ 
+|| `ContinuousLeg` | 1:1  | _ContinuousLegStructure_ 
 || `TimedLeg` | 1:1  | _TimedLegStructure_ 
 || `TransferLeg` | 1:1  | _TransferLegStructure_ 
 |===
