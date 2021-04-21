@@ -681,12 +681,7 @@ The element contains a _sequence_ of the following elements:
 | `PrivateCode` | 0:*  | _PrivateCodeStructure_ | Code of this TopographicPlace in private/foreign/proprietary coding schemes.
 | `ParentRef` | 0:1  | _TopographicPlaceRefStructure_ | Reference to a parent TopographicPlace.
 | `ReferredSystemId` | 0:1  | _xs:normalizedString_ | Used in distributed environments (e.g. EU-Spirit). If set, this topographic place resides within the given system (in EU-Spirit "passive server"). This system can be queried for actual places within this topographic place. This is used in an distributed environment for a two-steps place identification. In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/
-| `Area` | 0:1  | Area covered by the locality described as a polygon.
-
-The element contains only one element:
-
-| `Points` | 3:*  | _siri:LocationStructure_ 
-
+| `Area` | 0:1  | _AreaStructure_ | Area covered by the locality described as a polygon.
 |===
 
 
@@ -1759,7 +1754,7 @@ The LINK PROJECTION of a Leg onto the topography of the route being followed.
 
 The element contains only one element:
 
-| `TrackSection` | 1:*  | _TrackSectionStructure_ | LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information
+| `TrackSection` | 1:*  | _TrackSectionStructure_ | LINK PROJECTION on the infrastructure network of the trip leg section together with time information.
 
 
 
@@ -1771,12 +1766,7 @@ The element contains a _sequence_ of the following elements:
 |===
 | `TrackStart` | 0:1  | _PlaceRefStructure_ | Start place of this track.
 | `TrackEnd` | 0:1  | _PlaceRefStructure_ | End place of this track.
-| `LinkProjection` | 0:1  | an oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE, COMPLEX FEATURE, within a defined TYPE OF PROJECTION
-
-The element contains only one element:
-
-| `Position` | 2:*  | _siri:LocationStructure_ 
-
+| `LinkProjection` | 0:1  | _LinkProjectionStructure_ | An oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE.
 | `RoadName` | 0:1  | _xs:string_ | Name of the road this track section is attached to.
 | `Duration` | 0:1  | _xs:duration_ | Duration the passenger needs to travel through this track section.
 | `Length` | 0:1  | _siri:DistanceType_ | Length of this track section.
@@ -2284,6 +2274,26 @@ The element contains a _sequence_ of the following elements:
 | `System` | 1:1  | _xs:NMTOKEN_ | Code of the foreign referential system.
 | `Value` | 1:1  | _xs:NMTOKEN_ | Object code within this private/foreign system.
 |===
+
+
+=== The complex type `LinkProjectionStructure`
+
+An oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE.
+
+The element contains only one element:
+
+| `Position` | 2:*  | _siri:LocationStructure_ | Ordered list of locations representing the geogemtry of the link.
+
+
+
+=== The complex type `AreaStructure`
+
+Area described as a polygon.
+
+The element contains only one element:
+
+| `Points` | 3:*  | _siri:LocationStructure_ | Ordered list of geographic locations describing the polygon of the area.
+
 
 === The toplevel element `ParticipantRef`
 `ParticipantRef` | _siri:ParticipantRefStructure_ | 
