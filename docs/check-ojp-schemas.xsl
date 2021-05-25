@@ -21,6 +21,11 @@ XSLT Stylesheet to check the design and documentation conventions for the XSDs d
 
 	<!-- *** convention checking templates *** -->
 
+	<xsl:template match="xs:schema[1]">
+		<!-- Skipping OJP.xsd because of references to Siri XSDs. -->
+		<xsl:message>Skipping... <xsl:apply-templates select="." mode="reference-text"/></xsl:message>
+	</xsl:template>
+	
 	<xsl:template match="xs:schema">
 		<xsl:message>Checking... <xsl:apply-templates select="." mode="reference-text"/></xsl:message>
 		<xsl:apply-templates/>
@@ -63,6 +68,10 @@ XSLT Stylesheet to check the design and documentation conventions for the XSDs d
 	</xsl:template>
 	
 	<xsl:template match="xs:sequence">
+		<xsl:if test="xs:annotation/xs:documentation">
+			<xsl:message>[ERROR] Documentation is not allowed on xs:sequence! Context: <xsl:call-template name="output-context"/></xsl:message>
+		</xsl:if>
+		
 		<xsl:apply-templates/>
 	</xsl:template>
 	

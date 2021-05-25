@@ -13,7 +13,7 @@ base_dir="$(dirname "${0}")/.."
 xsl_dir=$base_dir/docs
 
 # Run the checks in the checker stylesheet
-xsltproc -xinclude "${xsl_dir}"/check-ojp-schemas.xsl \
+xsltproc --xinclude "${xsl_dir}"/check-ojp-schemas.xsl \
  "${xsl_dir}"/schema-collection.xml
 
 # end of file
