@@ -235,6 +235,13 @@
 				<p class="tableblock">
 					<xsl:if test="type">
 	  					<xsl:apply-templates select="type" mode="italic"/>
+						<xsl:if test="type/@substitutionGroup">
+							<xsl:text> (</xsl:text>
+							<em>
+								<xsl:value-of select="concat('↔&#160;', type/@substitutionGroup)"/>
+							</em>
+							<xsl:text>)</xsl:text>
+						</xsl:if>
 					</xsl:if>
 				</p>
 			</td>

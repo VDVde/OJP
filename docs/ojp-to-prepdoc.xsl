@@ -88,6 +88,7 @@ format in preparation to generate the documentation.
 		<xsl:choose>
 			<xsl:when test="@type">
 				<type>
+					<xsl:copy-of select="@substitutionGroup"/>
 					<xsl:call-template name="output-name-ref">
 						<xsl:with-param name="name" select="@type"/>
 						<xsl:with-param name="referenced" select="$referenced"/>
