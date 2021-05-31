@@ -362,9 +362,6 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
-				<xs:annotation>
-					<xs:documentation>Choice for the type of the trip leg.</xs:documentation>
-				</xs:annotation>
 				<xs:element name="TimedLeg" type="TimedLegStructure"/>
 				<xs:element name="TransferLeg" type="TransferLegStructure"/>
 				<xs:element name="ContinuousLeg" type="ContinuousLegStructure"/>
@@ -519,25 +516,15 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="StopPointGroup"/>
-			<xs:element name="ServiceArrival" minOccurs="0">
+			<xs:element name="ServiceArrival" type="ServiceArrivalStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
-			<xs:element name="ServiceDeparture">
+			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure">
 				<xs:annotation>
 					<xs:documentation>describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
 			<xs:element name="DistributorInterchangeId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -558,25 +545,15 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="StopPointGroup"/>
-			<xs:element name="ServiceArrival">
+			<xs:element name="ServiceArrival" type="ServiceArrivalStructure">
 				<xs:annotation>
 					<xs:documentation>describes the arrival situation at the leg alight stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
-			<xs:element name="ServiceDeparture" minOccurs="0">
+			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>describes the departure situation at this leg alight stop point (empty for last leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
 			<xs:element name="FeederInterchangeId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -597,25 +574,15 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="StopPointGroup"/>
-			<xs:element name="ServiceArrival">
+			<xs:element name="ServiceArrival" type="ServiceArrivalStructure">
 				<xs:annotation>
 					<xs:documentation>describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
-			<xs:element name="ServiceDeparture">
+			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure">
 				<xs:annotation>
 					<xs:documentation>describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>

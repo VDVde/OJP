@@ -272,31 +272,37 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:complexType name="ServiceArrivalStructure">
+		<xs:annotation>
+			<xs:documentation>Arrival times of a service at a stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="ServiceTimeGroup"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ServiceDepartureStructure">
+		<xs:annotation>
+			<xs:documentation>Departure times of a service at a stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="ServiceTimeGroup"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="CallAtStopStructure">
 		<xs:annotation>
 			<xs:documentation>[same as CALL in SIRI] the meeting of a VEHICLE JOURNEY with a specific SCHEDULED STOP POINT </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="StopPointGroup"/>
-			<xs:element name="ServiceArrival" minOccurs="0">
+			<xs:element name="ServiceArrival" type="ServiceArrivalStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Arrival times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
-			<xs:element name="ServiceDeparture" minOccurs="0">
+			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Departure times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup"/>
 			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
@@ -625,7 +631,7 @@
 		<xs:sequence>
 			<xs:element name="TrackSection" type="TrackSectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information</xs:documentation>
+					<xs:documentation>LINK PROJECTION on the infrastructure network of the trip leg section together with time information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -645,15 +651,10 @@
 					<xs:documentation>End place of this track.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LinkProjection" minOccurs="0">
+			<xs:element name="LinkProjection" type="LinkProjectionStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>an oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE, COMPLEX FEATURE, within a defined TYPE OF PROJECTION</xs:documentation>
+					<xs:documentation>An oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE.</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="Position" type="siri:LocationStructure" minOccurs="2" maxOccurs="unbounded"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
 			<xs:element name="RoadName" type="xs:string" minOccurs="0">
 				<xs:annotation>
