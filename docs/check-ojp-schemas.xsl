@@ -33,10 +33,10 @@ XSLT Stylesheet to check the design and documentation conventions for the XSDs d
 	
 	<xsl:template match="xs:choice">
 		<xsl:if test="count(*)=1">
-			<xsl:message>[WARN] xs:choice with just one child! Context: <xsl:call-template name="output-context"/></xsl:message>
+			<xsl:message>\033[1;33m[WARN] xs:choice with just one child! Context: <xsl:call-template name="output-context"/>\033[0m</xsl:message>
 		</xsl:if>
 		<xsl:if test="xs:annotation/xs:documentation">
-			<xsl:message>[ERROR] Documentation is not allowed on xs:choice! Context: <xsl:call-template name="output-context"/></xsl:message>
+			<xsl:message>\033[0;31m[ERROR] Documentation is not allowed on xs:choice! Context: <xsl:call-template name="output-context"/>\033[0m</xsl:message>
 		</xsl:if>
 
 		<xsl:apply-templates/>
@@ -49,7 +49,7 @@ XSLT Stylesheet to check the design and documentation conventions for the XSDs d
 			<!-- Resolve/expand the group reference --> 
 			<xsl:variable name="resolved" select="//xs:group[@name = $group-name]"/>
 			<xsl:if test="not($resolved) and not(starts-with($group-name, 'siri:'))">
-				<xsl:message>[ERROR] Group could not be resolved: <xsl:value-of select="@ref"/></xsl:message>
+				<xsl:message>\033[0;31m[ERROR] Group could not be resolved: <xsl:value-of select="@ref"/></xsl:message>
 			</xsl:if>
 			
 		</xsl:if>
@@ -57,7 +57,7 @@ XSLT Stylesheet to check the design and documentation conventions for the XSDs d
 	
 	<xsl:template match="xs:complexType">
 		<xsl:if test="ancestor::xs:complexType and not(@name)">
-			<xsl:message>[ERROR] Unnamed complexTypes are not allowed inside complexTypes! Context: <xsl:call-template name="output-context"/></xsl:message>
+			<xsl:message>\033[0;31m[ERROR] Unnamed complexTypes are not allowed inside complexTypes! Context: <xsl:call-template name="output-context"/>\033[0m</xsl:message>
 		</xsl:if>
 		
 		<xsl:apply-templates/>
@@ -69,7 +69,7 @@ XSLT Stylesheet to check the design and documentation conventions for the XSDs d
 	
 	<xsl:template match="xs:sequence">
 		<xsl:if test="xs:annotation/xs:documentation">
-			<xsl:message>[ERROR] Documentation is not allowed on xs:sequence! Context: <xsl:call-template name="output-context"/></xsl:message>
+			<xsl:message>\033[0;31m[ERROR] Documentation is not allowed on xs:sequence! Context: <xsl:call-template name="output-context"/>\033[0m</xsl:message>
 		</xsl:if>
 		
 		<xsl:apply-templates/>
@@ -85,7 +85,7 @@ XSLT Stylesheet to check the design and documentation conventions for the XSDs d
 	
 	
 	<xsl:template match="*">
-		<xsl:message>[WARN] Not implemented: <xsl:value-of select="name()"/></xsl:message>
+		<xsl:message>\033[1;33m[WARN] Not implemented: <xsl:value-of select="name()"/>\033[0m</xsl:message>
 	</xsl:template>
 
 </xsl:stylesheet>
