@@ -20,10 +20,6 @@
 
 	<!-- *** Helper stuff *** -->
 
-	<!--
-	<xsl:variable name="max-depth" select="2"/>
-	-->
-
 	<!-- Writes context information about the place where a problem occurs -->
 	<xsl:template name="output-context">
 		<xsl:apply-templates select="ancestor-or-self::*[@context][1]/@context" mode="reference-text"/>
@@ -38,42 +34,6 @@
 		</xsl:variable>
 	</xsl:template>
 
-<!--
-	<xsl:template name="empty-cell">
-		<xsl:param name="count" select="0"/>
-		<xsl:if test="$count &gt; 0">
-			<td class="tableblock halign-left valign-top">
-				<p class="tableblock">
-					<xsl:comment>empty/indent</xsl:comment>
-				</p>
-			</td>
-			<xsl:call-template name="empty-cell">
-				<xsl:with-param name="count" select="$count - 1"/>
-			</xsl:call-template>
-		</xsl:if>
-	</xsl:template>
--->	
-	
-	<xsl:template name="indent">
-		<xsl:param name="depth" select="@depth"/>
-		<!-- Indent disabled
-		<xsl:variable name="cap-depth">
-			<xsl:choose>
-				<xsl:when test="$depth &gt; $max-depth">
-					<xsl:value-of select="$max-depth"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="$depth"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-		
-		<xsl:call-template name="empty-cell">
-			<xsl:with-param name="count" select="$cap-depth"/>
-		</xsl:call-template>
-		-->
-	</xsl:template>
-	
 	
 	<!-- *** schema *** -->
 	
@@ -157,6 +117,7 @@
 		<xsl:value-of select="@reference-text"/>
 	</xsl:template>
 	
+	
 	<!-- *** Simple Types *** -->
 
 	<xsl:template match="simple-type-definitions">
@@ -178,6 +139,7 @@
 			</div>
 		</div>
 	</xsl:template>
+	
 	
 	<xsl:template match="simple-type">
 		<tr>
@@ -210,7 +172,6 @@
 				</p>
 			</td>
 		</tr>
-		
 	</xsl:template>
 
 	<xsl:template match="simple-type/definition">
@@ -249,9 +210,6 @@
 	<xsl:template match="table">
 		<table class="tableblock frame-all grid-all spread">
 			<colgroup>
-				<!--col style="width:{1 div 84 * 100}%"/--> <!-- indent -->
-				<!--col style="width:{1 div 84 * 100}%"/--> <!-- indent -->
-				<!--col style="width:{1 div 84 * 100}%"/--> <!-- indent -->
 				<col style="width:{10 div 84 * 100}%"/> <!-- group -->
 				<col style="width:{1 div 84 * 100}%"/> <!-- option -->
 				<col style="width:{10 div 84 * 100}%"/> <!-- element name -->
@@ -289,25 +247,8 @@
 	</xsl:template>
 	
 	<xsl:template match="table/line">
-		<xsl:param name="depth" select="@depth"/>
-		<!--
-		<xsl:variable name="cap-depth">
-			<xsl:choose>
-				<xsl:when test="$depth &gt; $max-depth">
-					<xsl:value-of select="$max-depth"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="$depth"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-		-->
-		
 		<xsl:comment>======= line</xsl:comment>
 		<tr>
-			<xsl:call-template name="indent">
-				<xsl:with-param name="depth" select="$depth"/>
-			</xsl:call-template>
 			<td class="tableblock halign-left valign-top" colspan="6">
 				<p class="tableblock">
 					<xsl:apply-templates select="node()"/>
@@ -317,25 +258,8 @@
 	</xsl:template>
 
 	<xsl:template match="table/row">
-		<xsl:param name="depth" select="@depth"/>
-		<!--
-		<xsl:variable name="cap-depth">
-			<xsl:choose>
-				<xsl:when test="$depth &gt; $max-depth">
-					<xsl:value-of select="$max-depth"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="$depth"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-		-->
-		
 		<xsl:comment>======= row</xsl:comment>
 		<tr>
-			<xsl:call-template name="indent">
-				<xsl:with-param name="depth" select="$depth"/>
-			</xsl:call-template>
 			<xsl:variable name="group-ref" select="group/xref/@ref"/>
 			<xsl:if test="group and not(preceding-sibling::row[1][group/xref/@ref = $group-ref])">
 				<!-- Create row-spanned cell on first row with a group -->
@@ -509,11 +433,6 @@
 	
 	<xsl:template match="comment()">
 		<xsl:copy-of select="."/>
-		<!--
-		<xsl:text>// </xsl:text>
-		<xsl:value-of select="."/>
-		<xsl:text>&#xa;&#xa;</xsl:text>
-		-->
 	</xsl:template>
 	
 	<xsl:template match="*">

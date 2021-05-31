@@ -27,6 +27,10 @@ from top to bottom. Note, however, that for the actual operation,
 
 (C) cantamen/Dirk Hillbrecht 2017
 
+
+DEPRECATION NOTICE: this stylesheet is no longer maintained!
+Use ojp-to-prepdoc.xsl and ojp-prep-to-html-with-toc.xsl instead.
+
 -->
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
