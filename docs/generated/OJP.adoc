@@ -2091,7 +2091,7 @@ The element contains a _sequence_ of the following elements:
 | `BookingUrl` | 0:1  | _WebLinkStructure_ | URL to online booking service.
 | `InfoUrl` | 0:1  | _WebLinkStructure_ | URL to information page.
 | `PhoneNumber` | 0:1  | _PhoneNumberType_ | Phone number for booking.
-| `MinimumBookingPeriod.` | 0:1  | _xs:duration_ | Minimum duration bookings must be completed before trip starts.
+| `MinimumBookingPeriod` | 0:1  | _xs:duration_ | Minimum duration bookings must be completed before trip starts.
 | `Extension` | 0:1  | _xs:anyType_ 
 |===
 
