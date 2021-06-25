@@ -265,6 +265,27 @@ format in preparation to generate the documentation.
 		</xsl:if>
 	</xsl:template>
 
+	<xsl:template name="add-group">
+		<xsl:variable name="group" select="ancestor::xs:group[1]"/>
+		<xsl:if test="$group">
+			<group>
+				<xsl:call-template name="output-name-ref">
+					<xsl:with-param name="name" select="$group/@name"/>
+					<xsl:with-param name="remove-suffix" select="'Group'"/>
+				</xsl:call-template>
+			</group>
+		</xsl:if>
+	</xsl:template>
+	
+	<xsl:template name="add-option">
+		<xsl:param name="option" select="0"/>
+		<xsl:if test="number($option) &gt; 0">
+			<option>
+				<xsl:value-of select="$abc/letter[number($option)]"/>
+			</option>
+		</xsl:if>
+	</xsl:template>
+	
 	<!-- *** schema collections, just a container *** -->
 	
 	<xsl:template match="/schema-collection">
@@ -322,7 +343,8 @@ format in preparation to generate the documentation.
 	type is read from attribute or from restriction base if it's a simple type. -->
 	<xsl:template match="xs:element">
 		<xsl:param name="depth" select="0"/>
-
+		<xsl:param name="option" select="0"/>
+		
 		<xsl:variable name="min">
 			<xsl:choose>
 				<xsl:when test="@minOccurs"><xsl:value-of select="@minOccurs"/></xsl:when>
@@ -330,28 +352,23 @@ format in preparation to generate the documentation.
 			</xsl:choose>
 		</xsl:variable>
 		
-		<xsl:variable name="option">
-			<xsl:if test="parent::xs:choice">
-				<xsl:value-of select="position()"/>
-			</xsl:if>
+		<xsl:variable name="eff-option">
+			<xsl:choose>
+				<xsl:when test="parent::xs:choice">
+					<xsl:value-of select="position()"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$option"/>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:variable>
 		
 		<row depth="{$depth}" role="element">
-			<xsl:variable name="group" select="ancestor::xs:group[1]"/>
-			<xsl:if test="$group">
-				<group>
-					<xsl:call-template name="output-name-ref">
-						<xsl:with-param name="name" select="$group/@name"/>
-						<xsl:with-param name="remove-suffix" select="'Group'"/>
-					</xsl:call-template>
-				</group>
-			</xsl:if>
+			<xsl:call-template name="add-group"/>
 			
-			<xsl:if test="number($option) &gt; 0">
-				<option>
-					<xsl:value-of select="$abc/letter[number($option)]"/>
-				</option>
-			</xsl:if>
+			<xsl:call-template name="add-option">
+				<xsl:with-param name="option" select="$eff-option"/>
+			</xsl:call-template>
 			<name>
 				<xsl:call-template name="output-name-or-ref">
 					<xsl:with-param name="bold" select="number($min) &gt; 0"/>
@@ -374,7 +391,8 @@ format in preparation to generate the documentation.
 	Elements are printed as list one level deeper. -->
 	<xsl:template match="xs:sequence">
 		<xsl:param name="depth" select="0"/>
-
+		<xsl:param name="option" select="0"/>
+		
 		<xsl:if test="xs:annotation/xs:documentation">
 			<xsl:message terminate="no">Documentation is not allowed on xs:sequence! Context: <xsl:call-template name="output-context"/></xsl:message>
 		</xsl:if>
@@ -395,6 +413,7 @@ format in preparation to generate the documentation.
 
 		<xsl:apply-templates select="*[not(self::xs:annotation)]">
 			<xsl:with-param name="depth" select="$depth + 1"/>
+			<xsl:with-param name="option" select="$option"/>
 		</xsl:apply-templates>
 	</xsl:template>
 
@@ -428,7 +447,8 @@ format in preparation to generate the documentation.
 	Also here, we handle the toplevel case separately. -->
 	<xsl:template match="xs:choice">
 		<xsl:param name="depth" select="0"/>
-
+		<xsl:param name="option" select="0"/>
+		
 		<xsl:if test="xs:annotation/xs:documentation">
 			<xsl:message terminate="no">Documentation is not allowed on xs:choice! Context: <xsl:call-template name="output-context"/></xsl:message>
 		</xsl:if>
@@ -442,6 +462,7 @@ format in preparation to generate the documentation.
 
 		<xsl:apply-templates select="*[not(self::xs:annotation)]">
 			<xsl:with-param name="depth" select="$depth"/>
+			<xsl:with-param name="option" select="$option"/>
 			<xsl:sort select="@name"/>
 		</xsl:apply-templates>
 	</xsl:template>
@@ -475,17 +496,31 @@ format in preparation to generate the documentation.
 	<!-- Any other groups: They are handled as references and only their reference is printed. -->
 	<xsl:template match="xs:group">
 		<xsl:param name="depth" select="0"/>
+		<xsl:param name="option" select="0"/>
 		
 		<xsl:choose>
 			<xsl:when test="@ref">
+				<xsl:variable name="eff-option">
+					<xsl:choose>
+						<xsl:when test="parent::xs:choice">
+							<xsl:value-of select="position()"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="$option"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				
+				
 				<xsl:variable name="group-name" select="@ref"/>
 			  <!-- Resolve/expand the group reference --> 
 				<xsl:variable name="resolved" select="//xs:group[@name = $group-name]"/>
 				<xsl:choose>
 					<xsl:when test="$resolved">
-					  <xsl:comment>Group <xsl:value-of select="$group-name"/> ──────┐</xsl:comment>
+					  <xsl:comment>Group <xsl:value-of select="$group-name"/><!-- (o<xsl:value-of select="$eff-option"/>)--> ──────┐</xsl:comment>
 						<xsl:apply-templates select="$resolved" mode="resolved">
 							<xsl:with-param name="depth" select="$depth"/>
+							<xsl:with-param name="option" select="$eff-option"/>
 						</xsl:apply-templates>
 					  <xsl:comment>Group <xsl:value-of select="$group-name"/> ──────┘</xsl:comment>
 					</xsl:when>
@@ -507,6 +542,7 @@ format in preparation to generate the documentation.
 			<xsl:otherwise>
 				<xsl:apply-templates select="." mode="resolved">
 					<xsl:with-param name="depth" select="$depth"/>
+					<xsl:with-param name="option" select="$option"/>
 				</xsl:apply-templates>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -515,60 +551,21 @@ format in preparation to generate the documentation.
 
 	<xsl:template match="xs:group" mode="resolved">
 		<xsl:param name="depth" select="0"/>
-		
-		<xsl:if test="false()">
-			<xsl:variable name="min">
-				<xsl:choose>
-					<xsl:when test="@minOccurs"><xsl:value-of select="@minOccurs"/></xsl:when>
-					<xsl:otherwise>1</xsl:otherwise>
-				</xsl:choose>
-			</xsl:variable>
-			<xsl:variable name="option">
-				<xsl:if test="parent::xs:choice">
-					<xsl:value-of select="position()"/>
-				</xsl:if>
-			</xsl:variable>
-			
-			
-			<row depth="{$depth}" role="group">
-				<xsl:variable name="group" select="ancestor::xs:group[1]"/>
-				<xsl:if test="ancestor::xs:group[1]">
-					<group>
-						<xsl:call-template name="output-name-ref">
-							<xsl:with-param name="name" select="$group/@name"/>
-							<xsl:with-param name="remove-suffix" select="'Group'"/>
-						</xsl:call-template>
-					</group>
-				</xsl:if>
-				
-				<xsl:if test="number($option) &gt; 0">
-					<option>
-						<xsl:value-of select="$abc/letter[number($option)]"/>
-					</option>
-				</xsl:if>
-				<name>
-					<xsl:call-template name="output-name-or-ref">
-						<xsl:with-param name="bold" select="number($min) &gt; 0"/>
-					</xsl:call-template>
-				</name>
-				<xsl:call-template name="output-cardinality"/>
-				<xsl:apply-templates select="." mode="type"/>
-				<documentation>
-					<xsl:apply-templates select="." mode="documentation"/>
-				</documentation>
-			</row>
-		</xsl:if>
+		<xsl:param name="option" select="0"/>
 		
 		<xsl:apply-templates select="*[not(self::xs:annotation)]">
 			<xsl:with-param name="depth" select="$depth"/>
+			<xsl:with-param name="option" select="$option"/>
 		</xsl:apply-templates>
 	</xsl:template>
 
 
 	<xsl:template match="xs:group/xs:sequence">
 		<xsl:param name="depth" select="0"/>
+		<xsl:param name="option" select="0"/>
 		<xsl:apply-templates>
 			<xsl:with-param name="depth" select="$depth"/>
+			<xsl:with-param name="option" select="$option"/>
 		</xsl:apply-templates>
 	</xsl:template>
 
