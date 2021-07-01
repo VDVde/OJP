@@ -1842,7 +1842,7 @@ The element contains a _sequence_ of the following elements:
 | `IncludeTrackSections` | 0:1  | _xs:boolean_ | Whether the result should include TrackSection elements to describe the geographic route of this vehicle journey.
 | `IncludeTrackProjection` | 0:1  | _xs:boolean_ | Whether the result should include the geographic projection (coordinates) of this vehicle journey.
 | `IncludePlacesContext` | 0:1  | _xs:boolean_ | Whether the place context is needed. If a requestor has that information already, the response can be made slimmer, when set to false. Default is true. 
-| `IncludeSituationsContext` | 0:1  | _xs:boolean_ | Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true
+| `IncludeSituationsContext` | 0:1  | _xs:boolean_ | Whether the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true
 |===
 
 === The `TripInfoResponseGroup` group
