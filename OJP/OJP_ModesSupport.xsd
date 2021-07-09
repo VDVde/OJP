@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_ModesSupport.xsd - Supporting definitions for the classification of modes of transport</xs:documentation>
+	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
-		<xs:documentation>========================================= Individual Modes ============================</xs:documentation>
+		<xs:documentation>========================================== Individual Modes ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:simpleType name="IndividualModesEnumeration">
 		<xs:annotation>
@@ -17,6 +20,11 @@
 			<xs:enumeration value="others-drive-car"/>
 			<xs:enumeration value="motorcycle"/>
 			<xs:enumeration value="truck"/>
+			<xs:enumeration value="scooter"/>
+			<xs:enumeration value="ride-pool-car"/>
+			<xs:enumeration value="car-sharing"/>
+			<xs:enumeration value="cycle-sharing"/>
+			<xs:enumeration value="scooter-sharing"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PrivateModesEnumeration">
@@ -80,7 +88,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
-		<xs:documentation>========================================= Interchange Modes ============================</xs:documentation>
+		<xs:documentation>========================================== Interchange Modes ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:simpleType name="TransferModesEnumeration">
 		<xs:annotation>
@@ -101,7 +109,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
-		<xs:documentation>========================================= Public Transport Modes ============================</xs:documentation>
+		<xs:documentation>========================================== Public Transport Modes ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="ModeStructure">
 		<xs:annotation>
@@ -139,7 +147,9 @@
 			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
-	<!-- ================ Filters ======================================================= -->
+	<xs:annotation>
+		<xs:documentation>========================================== Filters ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:complexType name="PtModeFilterStructure">
 		<xs:annotation>
 			<xs:documentation>List of public transport modes ([from SIRI] mode of public transport service, corresponds to VEHICLE MODE) to include or exclude.</xs:documentation>

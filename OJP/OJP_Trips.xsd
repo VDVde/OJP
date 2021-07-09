@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning</xs:documentation>
+	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
-		<xs:documentation>===== Request Structures ===============================================</xs:documentation>
+		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripRequestGroup">
 		<xs:annotation>
@@ -198,7 +201,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>====================================================</xs:documentation>
+		<xs:documentation>========================================== Response definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripResponseGroup">
 		<xs:annotation>
@@ -339,6 +342,7 @@
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
 			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:group ref="TripStatusGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -775,7 +779,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>===== Multi-point trip request ===============================================</xs:documentation>
+		<xs:documentation>========================================== Multi-point trip request ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="MultiPointTripRequestGroup">
 		<xs:annotation>
@@ -833,7 +837,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
-			<xs:element name="TransferLimit" type="xs:positiveInteger" minOccurs="0">
+			<xs:element name="TransferLimit" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
 				</xs:annotation>
@@ -860,6 +864,9 @@
 			<xs:enumeration value="eachDestination"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:annotation>
+		<xs:documentation>========================================== Multi-point trip response ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:group name="MultiPointTripResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Multi-point trip response structure.</xs:documentation>
@@ -917,6 +924,38 @@
 			<xs:element name="DestinationWaitTime" type="xs:duration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Additional wait time at destination of this trip.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="TripStatusGroup">
+		<xs:annotation>
+			<xs:documentation>Parameters which describe the current status of a TRIP</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Unplanned" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether this trip is an additional one that has not been planned. Default is false.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Cancelled" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether this trip is cancelled and will not be run. Default is false.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Deviation" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether this trip deviates from the planned service pattern. Default is false.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Delayed" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether this trip is delayed. Default is false.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Infeasible" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether this trip cannot be used, due to operational delays and impossible transfers. Default is false.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

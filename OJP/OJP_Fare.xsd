@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Fare.xsd - Request and response definitions for general, stop-specific and trip-specific fare information</xs:documentation>
+	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
-		<xs:documentation>====================================================Request definitions====================================================</xs:documentation>
+		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="FareRequestGroup">
 		<xs:annotation>
@@ -90,7 +93,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>====================================================Response definitions====================================================</xs:documentation>
+		<xs:documentation>========================================== Response definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="FareResponseGroup">
 		<xs:sequence>
@@ -224,7 +227,7 @@
 					<xs:documentation>The set of passed zones.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="StaticInfoUrl" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="StaticInfoUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>URL to Fare information pages on the web.</xs:documentation>
 				</xs:annotation>

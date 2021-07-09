@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Places.xsd - Supporting definitions for place information</xs:documentation>
+	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
-		<xs:documentation>========================================= Stop Points =============================================</xs:documentation>
+		<xs:documentation>========================================== Stop Points ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="StopPointGroup">
 		<xs:annotation>
@@ -54,7 +57,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= Stop Places =============================================</xs:documentation>
+		<xs:documentation>========================================== Stop Places ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:simpleType name="StopPlaceCodeType">
 		<xs:annotation>
@@ -109,7 +112,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= Attributes ==============================================</xs:documentation>
+		<xs:documentation>========================================== Attributes ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="StopAttributesGroup">
 		<xs:annotation>
@@ -392,7 +395,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= Places ==============================================</xs:documentation>
+		<xs:documentation>========================================== Places ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="PlaceStructure">
 		<xs:annotation>

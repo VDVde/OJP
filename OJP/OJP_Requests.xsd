@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified" id="OJP_siri_service">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Requests.xsd - OJP service requests and responses</xs:documentation>
+	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	<!-- ==== Fare Service=============================================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== Fare Service ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:element name="OJPFareRequest" type="OJPFareRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPFareRequestStructure">
 		<xs:complexContent>
@@ -14,7 +19,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
 	<xs:element name="OJPFareDelivery" type="OJPFareDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPFareDeliveryStructure">
 		<xs:complexContent>
@@ -28,7 +32,9 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ==== PlaceInformation Service=============================================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== PlaceInformation Service ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:element name="OJPPlaceInformationRequest" type="OJPPlaceInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPPlaceInformationRequestStructure">
 		<xs:complexContent>
@@ -40,7 +46,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
 	<xs:element name="OJPPlaceInformationDelivery" type="OJPPlaceInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPPlaceInformationDeliveryStructure">
 		<xs:complexContent>
@@ -54,8 +59,9 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
-	<!-- ==== ExchangePoints Service=============================================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== ExchangePoints Service ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:element name="OJPExchangePointsRequest" type="OJPExchangePointsRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPExchangePointsRequestStructure">
 		<xs:complexContent>
@@ -67,8 +73,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
-	<!-- ======================================================================= -->
 	<xs:element name="OJPExchangePointsDelivery" type="OJPExchangePointsDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPExchangePointsDeliveryStructure">
 		<xs:complexContent>
@@ -82,8 +86,9 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
-	<!-- ==== StopEvent Service=============================================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== StopEvent Service ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:element name="OJPStopEventRequest" type="OJPStopEventRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPStopEventRequestStructure">
 		<xs:complexContent>
@@ -95,8 +100,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
-	<!-- ======================================================================= -->
 	<xs:element name="OJPStopEventDelivery" type="OJPStopEventDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPStopEventDeliveryStructure">
 		<xs:complexContent>
@@ -110,8 +113,9 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
-	<!-- ==== TripInfo Service=============================================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== TripInfo Service ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:element name="OJPTripInfoRequest" type="OJPTripInfoRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPTripInfoRequestStructure">
 		<xs:complexContent>
@@ -123,8 +127,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
-	<!-- ======================================================================= -->
 	<xs:element name="OJPTripInfoDelivery" type="OJPTripInfoDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPTripInfoDeliveryStructure">
 		<xs:complexContent>
@@ -138,7 +140,9 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ==== Trip Service=============================================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== Trip Service ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:element name="OJPTripRequest" type="OJPTripRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPTripRequestStructure">
 		<xs:complexContent>
@@ -150,8 +154,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
-	<!-- ======================================================================= -->
 	<xs:element name="OJPTripDelivery" type="OJPTripDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPTripDeliveryStructure">
 		<xs:complexContent>
@@ -165,8 +167,9 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
-	<!-- ==== MultiPointTrip Service=============================================== -->
+	<xs:annotation>
+		<xs:documentation>========================================== MultiPointTrip Service ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:element name="OJPMultiPointTripRequest" type="OJPMultiPointTripRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPMultiPointTripRequestStructure">
 		<xs:complexContent>
@@ -178,8 +181,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
-	<!-- ======================================================================= -->
 	<xs:element name="OJPMultiPointTripDelivery" type="OJPMultiPointTripDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPMultiPointTripDeliveryStructure">
 		<xs:complexContent>
@@ -193,5 +194,4 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!-- ======================================================================= -->
 </xs:schema>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_FareSupport.xsd - Supporting definitions for fare information on passenger trips</xs:documentation>
+	</xs:annotation>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:simpleType name="TypeOfFareClassEnumeration">
 		<xs:annotation>
@@ -26,7 +29,9 @@
 			<xs:enumeration value="unknown"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<!-- ========================================== Fare Authority  ============================= -->
+	<xs:annotation>
+		<xs:documentation>========================================== Fare Authority ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:simpleType name="FareAuthorityCodeType">
 		<xs:annotation>
 			<xs:documentation>Identifier of a Fare Authority.</xs:documentation>
@@ -60,7 +65,7 @@
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
-		<xs:documentation>========================================= Zones ================================================</xs:documentation>
+		<xs:documentation>========================================== Zones ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:simpleType name="TariffZoneCodeType">
 		<xs:annotation>
@@ -117,7 +122,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= Passengers ==============================================</xs:documentation>
+		<xs:documentation>========================================== Passengers ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:simpleType name="PassengerCategoryEnumeration">
 		<xs:annotation>
@@ -132,7 +137,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
-		<xs:documentation>========================================= Booking  ==============================================</xs:documentation>
+		<xs:documentation>========================================== Booking ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="BookingArrangementStructure">
 		<xs:annotation>
@@ -144,12 +149,12 @@
 					<xs:documentation>Name of the booking agency (contractual partner).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BookingUrl" type="xs:anyURI" minOccurs="0">
+			<xs:element name="BookingUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>URL to online booking service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InfoUrl" type="xs:anyURI" minOccurs="0">
+			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>URL to information page.</xs:documentation>
 				</xs:annotation>
@@ -181,7 +186,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= Tickets ==============================================</xs:documentation>
+		<xs:documentation>========================================== Tickets ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:simpleType name="FareProductCodeType">
 		<xs:annotation>
@@ -336,7 +341,7 @@
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
-		<xs:documentation>========================================= Trip Fare ==============================================</xs:documentation>
+		<xs:documentation>========================================== Trip Fare ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripLegRangeGroup">
 		<xs:annotation>
@@ -384,7 +389,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================= Fare request parameter ==============================================</xs:documentation>
+		<xs:documentation>========================================== Fare request parameter ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="FarePassengerStructure">
 		<xs:annotation>
