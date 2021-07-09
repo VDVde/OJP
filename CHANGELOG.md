@@ -93,16 +93,16 @@ The releases can be found at https://github.com/VDVde/OJP/releases
   [#110](https://github.com/VDVde/OJP/pull/110)
 * Optimized formatting of the files.
   [#74](https://github.com/VDVde/OJP/pull/74)
-* Added private modes to PlaceContextStructure/IndividualTransportOptions (allowing for scooter, ride-pool-car, car-sharing, cycle-sharing, scooter-sharing)
+* Added private modes to `PlaceContextStructure/IndividualTransportOptions` (allowing for scooter, ride-pool-car, car-sharing, cycle-sharing, scooter-sharing)
   [#127](https://github.com/VDVde/OJP/pull/127)
-* Allow TransferLimit to be 0
+* Allow `TransferLimit` to be 0
   [#129](https://github.com/VDVde/OJP/pull/129)
-* Changed Places to PlacessStructure in context
+* Changed `Places` to `PlacessStructure` in `context`
   [#150](https://github.com/VDVde/OJP/pull/150)
 * Changes that were needed for the automated documentation (and slo to be able to convert XSD2OpenAPI)
-    * Changed TopographicPlaceStructureArea to AreaStructure, Changed TrackSectionStructure.LinkProjection to type LinkProjectionStructure. 
+    * Changed `TopographicPlaceStructureArea` to `AreaStructure`, changed `TrackSectionStructure.LinkProjection` to type `LinkProjectionStructure`. 
 	  [#155](https://github.com/VDVde/OJP/pull/155)
-    * Introducted ServiceArrivalStructure and ServiceDepartureStructure, changed then CallAtStopStructure, LegBoardStructure, LegAlightStructure and LegIntermediateStructure to the new type
+    * Introducted `ServiceArrivalStructure` and `ServiceDepartureStructure`, changed then `CallAtStopStructure`, `LegBoardStructure`, `LegAlightStructure` and `LegIntermediateStructure` to the new type
       [#156](https://github.com/VDVde/OJP/pull/156)  
 
 ### Removed
