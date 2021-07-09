@@ -53,7 +53,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 * Added new examples namely form Switzerland
   [#126](https://github.com/VDVde/OJP/pull/126)
 * Added scripts to generate documentation tables HTML from XSD: This will be in the docs folder.
--  [#131](https://github.com/VDVde/OJP/pull/131)[#154](https://github.com/VDVde/OJP/pull/154)
+ [#131](https://github.com/VDVde/OJP/pull/131)[#154](https://github.com/VDVde/OJP/pull/154)
 
 
 ### Changed
@@ -100,10 +100,10 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 * Changed Places to PlacessStructure in context
   [#150](https://github.com/VDVde/OJP/pull/150)
 * Changes that were needed for the automated documentation (and slo to be able to convert XSD2OpenAPI)
-- Changed TopographicPlaceStructureArea to AreaStructure, Changed TrackSectionStructure.LinkProjection to type LinkProjectionStructure. 
-  [#155](https://github.com/VDVde/OJP/pull/155)
-- Introducted ServiceArrivalStructure and ServiceDepartureStructure, changed then CallAtStopStructure, LegBoardStructure, LegAlightStructure and LegIntermediateStructure to the new type
-  [#156](https://github.com/VDVde/OJP/pull/156)  
+    * Changed TopographicPlaceStructureArea to AreaStructure, Changed TrackSectionStructure.LinkProjection to type LinkProjectionStructure. 
+	  [#155](https://github.com/VDVde/OJP/pull/155)
+    * Introducted ServiceArrivalStructure and ServiceDepartureStructure, changed then CallAtStopStructure, LegBoardStructure, LegAlightStructure and LegIntermediateStructure to the new type
+      [#156](https://github.com/VDVde/OJP/pull/156)  
 
 ### Removed
 * Omit unused requests and responses
