@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file. The format 
 
 The releases can be found at https://github.com/VDVde/OJP/releases
 
-## [1.1] - Unreleased
+## [1.1] - Not released yet
 
 ### Added
 
@@ -50,10 +50,12 @@ The releases can be found at https://github.com/VDVde/OJP/releases
   [#115](https://github.com/VDVde/OJP/pull/115)
 * Added `OJP_All.xsd` and changed directory structure.
   [#117](https://github.com/VDVde/OJP/pull/117)
-* Added new examples namely form Switzerland
+* Added new examples namely from Switzerland.
   [#126](https://github.com/VDVde/OJP/pull/126)
-* Added scripts to generate documentation tables HTML from XSD: This will be in the docs folder.
- [#131](https://github.com/VDVde/OJP/pull/131)[#154](https://github.com/VDVde/OJP/pull/154)
+* Added private modes to `PlaceContextStructure/IndividualTransportOptions` (allowing for scooter, ride-pool-car, car-sharing, cycle-sharing, scooter-sharing)
+  [#127](https://github.com/VDVde/OJP/pull/127)
+* Added scripts to generate documentation tables HTML from XSD.
+ [#131](https://github.com/VDVde/OJP/pull/131) [#154](https://github.com/VDVde/OJP/pull/154)
 
 
 ### Changed
@@ -93,20 +95,18 @@ The releases can be found at https://github.com/VDVde/OJP/releases
   [#110](https://github.com/VDVde/OJP/pull/110)
 * Optimized formatting of the files.
   [#74](https://github.com/VDVde/OJP/pull/74)
-* Added private modes to `PlaceContextStructure/IndividualTransportOptions` (allowing for scooter, ride-pool-car, car-sharing, cycle-sharing, scooter-sharing)
-  [#127](https://github.com/VDVde/OJP/pull/127)
-* Allow `TransferLimit` to be 0
+* Allow `TransferLimit` to be 0 in `MultiPointTripRequest` as well (like done for `TripRequest` in v1.0.1).
   [#129](https://github.com/VDVde/OJP/pull/129)
-* Changed `Places` to `PlacessStructure` in `context`
+* Changed `Places` to `PlacesStructure` in `context`.
   [#150](https://github.com/VDVde/OJP/pull/150)
-* Changes that were needed for the automated documentation (and slo to be able to convert XSD2OpenAPI)
-    * Changed `TopographicPlaceStructureArea` to `AreaStructure`, changed `TrackSectionStructure.LinkProjection` to type `LinkProjectionStructure`. 
-	  [#155](https://github.com/VDVde/OJP/pull/155)
-    * Introducted `ServiceArrivalStructure` and `ServiceDepartureStructure`, changed then `CallAtStopStructure`, `LegBoardStructure`, `LegAlightStructure` and `LegIntermediateStructure` to the new type
-      [#156](https://github.com/VDVde/OJP/pull/156)  
+* Changed `TopographicPlaceStructureArea` to new type `AreaStructure`, changed `LegTrackStructure.LinkProjection` to new type `LinkProjectionStructure`.
+  [#155](https://github.com/VDVde/OJP/pull/155)
+* Changed `CallAtStopStructure`, `LegBoardStructure`, `LegAlightStructure` and `LegIntermediateStructure` to new types
+  `ServiceArrivalStructure` and `ServiceDepartureStructure`.
+  [#156](https://github.com/VDVde/OJP/pull/156)  
 
 ### Removed
-* Omit unused requests and responses
+* Omit unused requests and responses.
   [#76](https://github.com/VDVde/OJP/pull/76)
 * Removed unused structures.
   [#55](https://github.com/VDVde/OJP/pull/55)
