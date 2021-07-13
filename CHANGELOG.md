@@ -95,7 +95,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
   [#74](https://github.com/VDVde/OJP/pull/74)
 * Allow `TransferLimit` to be 0 in `MultiPointTripRequest` as well (like done for `TripRequest` in v1.0.1).
   [#129](https://github.com/VDVde/OJP/pull/129)
-* Changed `Places` to `PlacesStructure` in `context`.
+* Changed `Places` to new type `PlacesStructure` in `ResponseContextStructure`.
   [#150](https://github.com/VDVde/OJP/pull/150)
 * Changed `TopographicPlaceStructureArea` to new type `AreaStructure`, changed `LegTrackStructure/LinkProjection` to new type `LinkProjectionStructure`.
   [#155](https://github.com/VDVde/OJP/pull/155)
