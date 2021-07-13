@@ -46,14 +46,12 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 * Added `ProtoProduct` in `FareProductStructure` to allow carrying product related information to be processed further and used for tariffing
   in a distributed environment, where OJP services can deliver only parts of a fare product.
   [#60](https://github.com/VDVde/OJP/pull/60)
-* Added valid v1.1 examples of OJP requests and responses.
-  [#115](https://github.com/VDVde/OJP/pull/115)
-* Added `OJP_All.xsd` and changed directory structure.
-  [#117](https://github.com/VDVde/OJP/pull/117)
-* Added new examples namely from Switzerland.
-  [#126](https://github.com/VDVde/OJP/pull/126)
 * Added private modes to `PlaceContextStructure/IndividualTransportOptions` (allowing for scooter, ride-pool-car, car-sharing, cycle-sharing, scooter-sharing)
   [#127](https://github.com/VDVde/OJP/pull/127)
+* Added valid v1.1 examples of OJP requests and responses.
+  [#115](https://github.com/VDVde/OJP/pull/115) [#126](https://github.com/VDVde/OJP/pull/126)
+* Added `OJP_All.xsd` and changed directory structure.
+  [#117](https://github.com/VDVde/OJP/pull/117)
 * Added scripts to generate documentation tables HTML from XSD.
  [#131](https://github.com/VDVde/OJP/pull/131) [#154](https://github.com/VDVde/OJP/pull/154)
 
@@ -99,7 +97,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
   [#129](https://github.com/VDVde/OJP/pull/129)
 * Changed `Places` to `PlacesStructure` in `context`.
   [#150](https://github.com/VDVde/OJP/pull/150)
-* Changed `TopographicPlaceStructureArea` to new type `AreaStructure`, changed `LegTrackStructure.LinkProjection` to new type `LinkProjectionStructure`.
+* Changed `TopographicPlaceStructureArea` to new type `AreaStructure`, changed `LegTrackStructure/LinkProjection` to new type `LinkProjectionStructure`.
   [#155](https://github.com/VDVde/OJP/pull/155)
 * Changed `CallAtStopStructure`, `LegBoardStructure`, `LegAlightStructure` and `LegIntermediateStructure` to new types
   `ServiceArrivalStructure` and `ServiceDepartureStructure`.
