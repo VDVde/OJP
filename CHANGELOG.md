@@ -71,7 +71,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
   whether to deliver complete trips or only trip summaries. The concept of a deferred delivery has been removed. Additionally, replaced 
   `MultiPointTripContentFilterGroup` in `MultiPointTripParamStructure` by `TripContentFilterGroup` as legs are mandatory within trip results.
   [#109](https://github.com/VDVde/OJP/pull/109)
-* Allow multiple languages to be requested and returned
+* Allow multiple languages to be requested and returned.
   [#32](https://github.com/VDVde/OJP/pull/32)
 * Simplified all ResponseContexts to use a single `ResponseContextStructure`.
   [#39](https://github.com/VDVde/OJP/pull/39)
