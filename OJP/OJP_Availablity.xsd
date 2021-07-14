@@ -163,6 +163,4 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-
-
 </xs:schema>
