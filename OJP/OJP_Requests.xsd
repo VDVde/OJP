@@ -98,7 +98,7 @@
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
-		</xs:complexContent> 
+		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="OJPStopEventDelivery" type="OJPStopEventDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPStopEventDeliveryStructure">
@@ -240,7 +240,7 @@
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
 				<xs:sequence>
-					<xs:group ref="ServiceResponseContextGroup"/> <!-- TODO do we need it -->
+					<xs:group ref="ServiceResponseContextGroup"/><!-- TODO do we need it -->
 					<xs:group ref="AvailabilityResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
