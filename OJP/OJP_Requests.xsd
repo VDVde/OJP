@@ -208,14 +208,14 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPAvailabityDelivery" type="OJPAvailabityDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
-	<xs:complexType name="OJPAvailabityDeliveryStructure">
+	<xs:element name="OJPAvailabilityDelivery" type="OJPAvailabilityDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPAvailabilityDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
 				<xs:sequence>
 					<xs:group ref="ServiceResponseContextGroup"/>
 					<!-- TODO do we need it -->
-					<xs:group ref="AvailabityResponseGroup"/>
+					<xs:group ref="AvailabilityResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
