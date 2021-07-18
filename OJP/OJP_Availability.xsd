@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Availability.xsd - Request and response definitions for availability information</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<!--TODO: the next line can be removed if it doesnt help with siri:PassengerAccessibilityNeedsStructure (see BookingUserStructure below) -->
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/acsb/acsb_passengerMobility-v0.3.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
+	<xs:annotation>
+		<xs:documentation>TODO</xs:documentation>
+	</xs:annotation>
+	<xs:group name="AvailabilityRequestGroup">
+		<xs:sequence>
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation>This choice is intended for later extension to other mobility services than public transport.</xs:documentation>
+				</xs:annotation>
+				<xs:element name="PublicTransport" type="BookingPTLegStructure">
+					<xs:annotation>
+						<xs:documentation>Definition of the journey leg that should be made by public transport.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="MobilityUser" type="BookingUserStructure" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Passenger(s) for whom the service needs to be booked.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="EstimatedTimeBandGroup" minOccurs="0"/>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:annotation>
+		<xs:documentation>========================================== Additional Declarations [TODO: Or move to Availability/BookingSupport.xsd ? ] ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="BookingPTLegStructure">
+		<xs:annotation>
+			<xs:documentation>Journey leg by public transport.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PickUpLocation" type="ProvisionedCallAtPlaceStructure">
+				<xs:annotation>
+					<xs:documentation>Location where passenger intends to enter the service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SetDownLocation" type="ProvisionedCallAtPlaceStructure">
+				<xs:annotation>
+					<xs:documentation>Location where passenger intends to leave the service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ServiceGroup" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Service of which the availability is being checked.</xs:documentation>
+				</xs:annotation>
+			</xs:group>
+			<!-- TODO: is the previous group the right pick for the following lines (from Trias)?
+			<xs:element name="Service" type="ServiceJourneyPropertiesStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Service of which the availability is being checked.</xs:documentation>
+				</xs:annotation>
+			</xs:element> -->
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BookingUserStructure">
+		<xs:annotation>
+			<xs:documentation>User(s) for whom the service needs to be booked.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Age" type="xs:nonNegativeInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Age of the passenger on the day of travel.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!-- TODO: No solution yet for accessibilty ...-->
+			<!--<xs:element name="PassengerAccessibilityNeeds" type="siri:PassengerAccessibilityNeedsStructure" minOccurs="0"/>-->
+			<!-- TODO: siri/acsb/acsb_passengerMobility-v0.3.xsd contains PassengerAccessibilityNeedsStructure. Would that be the right choice? Or rather recreate the complete Trias accessibility patterns?
+			<xs:group ref="PassengerProfileGroup"/>
+			<xs:group ref="PassengerRequirementsGroup"/> -->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProvisionedCallAtPlaceStructure">
+		<xs:annotation>
+			<xs:documentation>[TODO: adapted from Trias_JourneySupport.xsd - OK?]Provisioned vehicle call at a general location.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="DatedJourneyRefGroup" minOccurs="0"/>
+			<xs:element name="CallPlace" type="PlaceRefStructure">
+				<xs:annotation>
+					<xs:documentation>More general location for a call than stop points. May be used with flexible services or "Area Dial-A-Ride".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ServiceArrival" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Arrival times of the service at this stop.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:group ref="ServiceTimeGroup"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ServiceDeparture" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Departure times of the service at this stop.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:group ref="ServiceTimeGroup"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="StopCallStatusGroup" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Response ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="AvailabilityResponseGroup">
+		<xs:sequence>
+<!--			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Error messages related to the service request.</xs:documentation>
+				</xs:annotation>
+			</xs:element> -->
+			<xs:element name="AvailabilityResult" type="AvailabilityResultStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Indication of the availability of the requested service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:annotation>
+		<xs:documentation>========================================== Additional declarations  ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="AvailabilityResultStructure">
+		<xs:annotation>
+			<xs:documentation>Availability result structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!--<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Error messages related to this availability information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>-->
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation>This choice is intended for later extension to other mobility services than public transport.</xs:documentation>
+				</xs:annotation>
+				<xs:element name="PublicTransport" type="BookingPTLegStructure"/>
+			</xs:choice>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
