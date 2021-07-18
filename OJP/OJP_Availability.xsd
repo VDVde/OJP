@@ -4,8 +4,6 @@
 		<xs:documentation>OJP/OJP_Availability.xsd - Request and response definitions for availability information</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
-	<!--TODO: the next line can be removed if it doesnt help with siri:PassengerAccessibilityNeedsStructure (see BookingUserStructure below) -->
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/acsb/acsb_passengerMobility-v0.3.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>TODO</xs:documentation>
@@ -54,7 +52,7 @@
 					<xs:documentation>Service of which the availability is being checked.</xs:documentation>
 				</xs:annotation>
 			</xs:group>
-			<!-- TODO: is the previous group the right pick for the following lines (from Trias)?
+			<!-- TODO: is the previous group the right pick for the following lines (from Trias)? Or would replicating the code from Trias be the preferred choice?
 			<xs:element name="Service" type="ServiceJourneyPropertiesStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Service of which the availability is being checked.</xs:documentation>
@@ -73,11 +71,9 @@
 					<xs:documentation>Age of the passenger on the day of travel.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<!-- TODO: No solution yet for accessibilty ...-->
-			<!--<xs:element name="PassengerAccessibilityNeeds" type="siri:PassengerAccessibilityNeedsStructure" minOccurs="0"/>-->
-			<!-- TODO: siri/acsb/acsb_passengerMobility-v0.3.xsd contains PassengerAccessibilityNeedsStructure. Would that be the right choice? Or rather recreate the complete Trias accessibility patterns?
+			<!-- TODO: the two groups below have been replicated from Trias (in OJP_AvailabilitySupport.xsd for now) - But siri/acsb/acsb_passengerMobility-v0.3.xsd contains PassengerAccessibilityNeedsStructure. Might using the siri structures instead be the preferred choice?  -->
 			<xs:group ref="PassengerProfileGroup"/>
-			<xs:group ref="PassengerRequirementsGroup"/> -->
+			<xs:group ref="PassengerRequirementsGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ProvisionedCallAtPlaceStructure">
