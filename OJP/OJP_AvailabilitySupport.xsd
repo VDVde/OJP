@@ -4,31 +4,6 @@
 		<xs:documentation>OJP/OJP_AvailabilitySupport.xsd - Supporting definitions for availability information on passenger trips</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	<xs:simpleType name="TypeOfFareClassEnumeration">
-		<xs:annotation>
-			<xs:documentation>classes of travel available on a particular service which will affect the price to be paid</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:NMTOKEN">
-			<xs:enumeration value="all"/>
-			<xs:enumeration value="first"/>
-			<xs:enumeration value="second"/>
-			<xs:enumeration value="third"/>
-			<xs:enumeration value="business"/>
-			<xs:enumeration value="economy"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="VatRateEnumeration">
-		<xs:annotation>
-			<xs:documentation>Enumeration of Value Added Tax rates.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:NMTOKEN">
-			<xs:enumeration value="no"/>
-			<xs:enumeration value="full"/>
-			<xs:enumeration value="half"/>
-			<xs:enumeration value="mixed"/>
-			<xs:enumeration value="unknown"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== From Trias_JourneySupport.xsd ==========================================</xs:documentation>
 	</xs:annotation>
@@ -100,12 +75,12 @@
 		<xs:sequence>
 			<xs:element name="BoardingAssistance" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whetherr assistance is required for boarding. Could be offered by the driver or station staff. Default is FALSE.</xs:documentation>
+					<xs:documentation>Whether assistance is required for boarding. Could be offered by the driver or station staff. Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AlightingAssistance" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whetherr assistance is required for alightng. Could be offered by the driver or station staff. Default is FALSE.</xs:documentation>
+					<xs:documentation>Whether assistance is required for alightng. Could be offered by the driver or station staff. Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
