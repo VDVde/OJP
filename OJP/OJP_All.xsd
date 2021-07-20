@@ -19,6 +19,5 @@
 	<xs:include schemaLocation="OJP_TripInfo.xsd"/>
 	<xs:include schemaLocation="OJP_Trips.xsd"/>
 	<xs:include schemaLocation="OJP_Utility.xsd"/>
-	<xs:include schemaLocation="OJP_Availability.xsd"/>
-	<xs:include schemaLocation="OJP_AvailabilitySupport.xsd"/>
+	<xs:include schemaLocation="OJP_Booking.xsd"/>
 </xs:schema>
