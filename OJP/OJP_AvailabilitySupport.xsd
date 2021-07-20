@@ -100,12 +100,12 @@
 		<xs:sequence>
 			<xs:element name="BoardingAssistance" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whetherr assistance is required for boarding. Could be offered by the driver or station staff. Default is FALSE.</xs:documentation>
+					<xs:documentation>Whether assistance is required for boarding. Could be offered by the driver or station staff. Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AlightingAssistance" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whetherr assistance is required for alightng. Could be offered by the driver or station staff. Default is FALSE.</xs:documentation>
+					<xs:documentation>Whether assistance is required for alightng. Could be offered by the driver or station staff. Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
