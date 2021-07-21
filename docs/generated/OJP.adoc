@@ -2583,6 +2583,7 @@ The element contains a _sequence_ of the following elements:
 === Simple type definitions
 
 |===
+| `EMailAddressType`| _xs:normalizedString_ | Type definition for e-mail addresses.
 | `LengthType`| _xs:nonNegativeInteger_ | Data type for lengths, in meters.
 | `OpenPercentType`| _xs:nonNegativeInteger_ | Percent value as integer, no upper limit.
 | `PercentType`| _xs:nonNegativeInteger_ | Percent value as integer, limited to max value 100.

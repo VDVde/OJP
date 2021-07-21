@@ -427,7 +427,6 @@
 			<xs:extension base="ParticipantCodeType"/>
 		</xs:simpleContent>
 	</xs:complexType>
-
 	<xs:annotation>
 		<xs:documentation>========================================= System users =============================================</xs:documentation>
 	</xs:annotation>
