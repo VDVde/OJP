@@ -73,7 +73,6 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ProvisionedCallAtPlaceStructure">
-		<!-- Adapted from Trias_JourneySupport.xsd -->
 		<xs:annotation>
 			<xs:documentation>Provisioned vehicle call at a general location.</xs:documentation>
 		</xs:annotation>
@@ -106,6 +105,7 @@
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup" minOccurs="0"/>
 		</xs:sequence>
+		<!-- Adapted from Trias_JourneySupport.xsd -->
 	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== From Trias_JourneySupport.xsd ==========================================</xs:documentation>
@@ -427,11 +427,7 @@
 			<xs:extension base="ParticipantCodeType"/>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:element name="ParticipantRef" type="ParticipantRefStructure">
-		<xs:annotation>
-			<xs:documentation>Reference to a Participant</xs:documentation>
-		</xs:annotation>
-	</xs:element>
+
 	<xs:annotation>
 		<xs:documentation>========================================= System users =============================================</xs:documentation>
 	</xs:annotation>
