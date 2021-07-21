@@ -72,7 +72,8 @@
 			<xs:group ref="PassengerRequirementsGroup"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="ProvisionedCallAtPlaceStructure"> <!-- Adapted from Trias_JourneySupport.xsd -->
+	<xs:complexType name="ProvisionedCallAtPlaceStructure">
+		<!-- Adapted from Trias_JourneySupport.xsd -->
 		<xs:annotation>
 			<xs:documentation>Provisioned vehicle call at a general location.</xs:documentation>
 		</xs:annotation>
