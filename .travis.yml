@@ -1,7 +1,7 @@
 language: minimal
 
 before_script:
-  - sudo apt-get install -qq libxml2-utils xsltproc asciidoctor
+  - sudo apt-get install -qq libxml2-utils xsltproc
 
 script:
   - bash .travis/xmllint-check.sh && bash docs/check-ojp-schemas.sh && bash docs/generate-tables.sh
