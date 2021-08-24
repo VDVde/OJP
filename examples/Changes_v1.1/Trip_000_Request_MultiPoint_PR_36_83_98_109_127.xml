@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri file:///C:/Users/ue71603/MG_Daten/OJP/github/OJP1/ojp.xsd">
+	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
+	- PR #83 - IncludePlacesContext and IncludeSituationsContext
+	- PR #109 - TripSummaryOnly
+	- PR #98 - MultipointTypeEnumeration 
+	- PR #36 - NoSight
+	- PR #127 - additionally available private modes: scooter, ride-pool-car, car-sharing, cycle-sharing, scooter-sharing
+-->
+	<OJPRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-09-01T19:33:23Z</RequestTimestamp>
+			<RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7_test</RequestorRef>
+			<ojp:OJPMultiPointTripRequest>
+				<RequestTimestamp>2020-09-01T19:33:23Z</RequestTimestamp>
+				<ojp:Origin>
+					<ojp:PlaceRef>
+						<ojp:StopPlaceRef>8506302</ojp:StopPlaceRef>
+						<ojp:Name>
+							<ojp:Text>Name, but can be ignored as the id usually is the only thing interpreted by the router</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+					<ojp:DepArrTime>2020-09-30T11:00:00Z</ojp:DepArrTime>
+					<!-- with seconds -->
+				</ojp:Origin>
+				<ojp:Destination>
+					<ojp:PlaceRef>
+						<ojp:StopPlaceRef>8505000</ojp:StopPlaceRef>
+						<ojp:Name>
+							<ojp:Text>Luzern</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+					<ojp:IndividualTransportOptions>
+						<ojp:Mode>scooter</ojp:Mode>
+						<!-- V1.1, PR #127 - additionally available private modes -->
+						<ojp:MaxDistance>5000</ojp:MaxDistance>
+						<ojp:MaxDuration>PT1H</ojp:MaxDuration>
+						<ojp:Speed>120</ojp:Speed>
+					</ojp:IndividualTransportOptions>
+				</ojp:Destination>
+				<ojp:Params>
+					<ojp:NoSight>false</ojp:NoSight>
+					<!-- V1.1, PR #36 - NoSight -->
+					<ojp:NumberOfResults>5</ojp:NumberOfResults>
+					<ojp:OptimisationMethod>fastest</ojp:OptimisationMethod>
+					<ojp:MultiPointType>anyPoint</ojp:MultiPointType>
+					<!-- V1.1, PR #98 - anyPoint is default; other values are: eachOrigin, eachDestination -->
+					<ojp:IncludePlacesContext>false</ojp:IncludePlacesContext>
+					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
+					<ojp:IncludeSituationsContext>false</ojp:IncludeSituationsContext>
+					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
+					<ojp:TripSummaryOnly>false</ojp:TripSummaryOnly>
+					<!-- V1.1, PR #109 - TripSummaryOnly -->
+				</ojp:Params>
+			</ojp:OJPMultiPointTripRequest>
+		</ServiceRequest>
+	</OJPRequest>
+</OJP>

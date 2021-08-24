@@ -1,0 +1,4946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri file:///C:/Users/ue71603/MG_Daten/OJP/github/OJP1/ojp.xsd">
+	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
+	- PR #39, PR #150 - standard ResponseContextStructure including a PlaceStructure
+	- PR #107 - only referenced places and situations should be put into the Context
+	- PR #83 - IncludePlacesContext and IncludeSituationsContext -> this response includes Places in Context
+	- PR #96 - IncludeStopHierarchy -> StopEvents for all nearby Places (meta stop)
+-->
+	<siri:OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2021-08-16T18:11:51Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<ojp:OJPStopEventDelivery>
+				<siri:ResponseTimestamp>2021-08-16T18:11:51Z</siri:ResponseTimestamp>
+				<siri:RequestMessageRef>756</siri:RequestMessageRef>
+				<siri:Status>true</siri:Status>
+				<ojp:CalcTime>39</ojp:CalcTime>
+				<ojp:StopEventResponseContext>
+					<ojp:Places>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8504375</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>109232:0:</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23006740:2</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Ligerz (Schiff)</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>7.13548</siri:Longitude>
+								<siri:Latitude>47.08335</siri:Latitude>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23006740:2</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Ligerz</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>0.0</siri:Longitude>
+								<siri:Latitude>0.0</siri:Latitude>
+								<siri:Precision>20000000</siri:Precision>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8504227</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>109117:0:1</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23006740:2</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Ligerz</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>7.13516</siri:Longitude>
+								<siri:Latitude>47.08377</siri:Latitude>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23006740:2</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Ligerz</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>0.0</siri:Longitude>
+								<siri:Latitude>0.0</siri:Latitude>
+								<siri:Precision>20000000</siri:Precision>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8504356</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>109214:0:</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23006740:2</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>7.13470</siri:Longitude>
+								<siri:Latitude>47.08395</siri:Latitude>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23006740:2</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Ligerz</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>0.0</siri:Longitude>
+								<siri:Latitude>0.0</siri:Latitude>
+								<siri:Precision>20000000</siri:Precision>
+							</ojp:GeoPosition>
+						</ojp:Place>
+					</ojp:Places>
+				</ojp:StopEventResponseContext>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-1903E461-C436-4CCB-A928-5A4A06E15320</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T08:25:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>5</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:R:j21:12</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504577</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Murten/Morat (Schiff/bateau)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">301</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-EFE73051-EB63-44F6-85BD-2466B3B711A7</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T09:25:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>5</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:R:j21:14</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___2</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504378</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Erlach (Schiff)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">65</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-058D8A5B-607D-4044-AC49-E78E118CFF71</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T10:33:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:H:j21:2</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___2</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504378</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Erlach (Schiff)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504371</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">66</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-70B06624-391D-4A0E-AAC7-8920AF7F3374</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T10:40:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>5</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:R:j21:19</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___2</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Mittagsfahrt</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>I_070</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504378</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Erlach (Schiff)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">69</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-74390381-3206-44F2-A64B-43B44C7282A8</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T11:30:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>16</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9401H:Y:R:j21:2</ojp:JourneyRef>
+							<siri:LineRef>ojp:9401H:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:189</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Dampfschiff</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__DS</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">VELOS: Platzzahl eingeschrÃ¤nkt</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__VB</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Bar</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___B</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504577</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Murten/Morat (Schiff/bateau)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504371</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">41</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-8B4AA351-BAA1-417D-BF87-50059ADE8A9A</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T11:50:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:H:j21:8</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___2</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Mittagsfahrt</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>I_070</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504378</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Erlach (Schiff)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504371</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">70</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-8BC7642A-29F6-4670-86BE-537AC38725F5</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T12:40:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>5</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:R:j21:15</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___2</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504378</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Erlach (Schiff)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">71</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-9ADEBB69-B90E-4223-B14D-39160E843AC9</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T13:20:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>3</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9401H:Y:H:j21:1</ojp:JourneyRef>
+							<siri:LineRef>ojp:9401H:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:189</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Dampfschiff</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__DS</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">VELOS: Platzzahl eingeschrÃ¤nkt</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__VB</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Bar</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___B</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504577</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Murten/Morat (Schiff/bateau)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">42</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-A6517DE1-4838-49A4-940C-60D255B708BA</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T13:50:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:H:j21:3</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___2</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504378</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Erlach (Schiff)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504371</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">72</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-97908BC8-B074-4BC8-98CE-112D11A87E50</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T13:55:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>5</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:R:j21:16</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___2</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504378</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Erlach (Schiff)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">73</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-A0216DCB-28D7-4CC9-B949-2C7B85C97436</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T15:05:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:H:j21:4</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___2</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504378</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Erlach (Schiff)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504371</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">74</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-0125A677-5F44-4E79-A555-1F5DAEBCECBE</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T15:40:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>11</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:H:j21:6</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A___2</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__WR</ojp:Code>
+								<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504577</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Murten/Morat (Schiff/bateau)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504371</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">302</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-AD5E4825-36FE-405A-9CCC-43EA4124A40E</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-16T19:54:00Z</ojp:TimetabledTime>
+									<ojp:EstimatedTime>2021-08-16T19:56:00Z</ojp:EstimatedTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-16</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:41</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7489</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-2889F272-D915-4D56-BB74-2D3198DD05F1</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-16T20:00:00Z</ojp:TimetabledTime>
+									<ojp:EstimatedTime>2021-08-16T20:01:00Z</ojp:EstimatedTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-16</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:136</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7488</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-C9FF6C8B-ABDD-42FC-8EBE-F2F072B933D2</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-16T20:54:00Z</ojp:TimetabledTime>
+									<ojp:EstimatedTime>2021-08-16T20:56:00Z</ojp:EstimatedTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-16</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:45</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7493</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-ADD4EE0A-13E5-4430-ACEF-6AE74D72AC7E</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-16T21:00:00Z</ojp:TimetabledTime>
+									<ojp:EstimatedTime>2021-08-16T21:01:00Z</ojp:EstimatedTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-16</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:143</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7492</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-C5B29837-1085-4E48-AF94-391C6CDFFDAF</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-16T21:47:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-16</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9205P:Y:H:j21:1</ojp:JourneyRef>
+							<siri:LineRef>ojp:9205P:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>bus</ojp:PtMode>
+								<siri:BusSubmode>localBusService</siri:BusSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Bus</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">B</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>B</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:7203</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">VELOS: Keine BefÃ¶rderung mÃ¶glich</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__VN</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">GRUPPEN: Reservierung obligatorisch</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__GR</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Bahnersatz</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__BE</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">101</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-A6747B1E-F9C2-411E-92C7-5A429100F922</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-16T22:05:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>3</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9204G:Y:R:j21:5</ojp:JourneyRef>
+							<siri:LineRef>ojp:9204G:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>bus</ojp:PtMode>
+								<siri:BusSubmode>localBusService</siri:BusSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Bus</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">B</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>B</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:7203</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">VELOS: Keine BefÃ¶rderung mÃ¶glich</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__VN</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">GRUPPEN: Reservierung obligatorisch</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__GR</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Bahnersatz</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__BE</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504225</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Le Landeron</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">401</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-545F9469-055E-4077-B6A5-F1C448FAE51D</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-16T22:06:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9204G:Y:H:j21:1</ojp:JourneyRef>
+							<siri:LineRef>ojp:9204G:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>bus</ojp:PtMode>
+								<siri:BusSubmode>localBusService</siri:BusSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Bus</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">B</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>B</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:7203</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">VELOS: Keine BefÃ¶rderung mÃ¶glich</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__VN</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">GRUPPEN: Reservierung obligatorisch</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__GR</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Bahnersatz</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__BE</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504225</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Le Landeron</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Bus</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">102</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-43379B89-2F0A-409D-9C9C-D8FAB8F85AD3</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T03:16:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:1</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7401</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-1321E485-710B-4BF1-A16D-984120DC1B5E</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T03:32:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:60</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7402</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-7E71E9B7-B2C5-4993-86CE-906933E4AADE</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T03:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:5</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7403</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-7AC5BD7F-D8FA-488F-80BC-C774096AE4AA</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T04:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:65</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7404</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-D0A5214B-82A1-49CA-A7BD-19E5A08D3D35</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T04:24:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:9</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7405</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-DF66EB09-E5EF-4576-92CB-87BB8A6D0ECA</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T04:32:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:67</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7406</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-FB9DB4AB-B1DF-4A0C-B920-8ED55BFDFE7D</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T04:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:10</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7407</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-84752EC1-B942-45E7-8185-C66DB14F8C11</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T05:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:71</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7408</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-3805F2A5-5D75-40B8-98DF-EFC750A4722D</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T05:24:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:11</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7413</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-418E3CD2-A550-4D2E-8423-D39E4691E7EB</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T05:32:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:73</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7410</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-4BE43695-956D-49C7-A778-D74BF16F175C</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T05:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:12</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7415</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-FCBA840F-8451-4AFE-BD25-BE256BAFEAC6</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T06:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:75</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7416</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-0F70B0C8-556C-4C3C-A941-95FB39E6DC31</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T06:24:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:13</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7417</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-AD72CD46-F358-4374-9249-B549CA59F648</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T06:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:14</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7421</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-291E9908-9B25-4AD9-AEF7-861B274C88B7</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T07:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:78</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7420</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-22D72521-10E2-4711-8706-F98861F4F459</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T07:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:16</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7425</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-508C73CE-4A69-4301-8CF0-615FDF5F5987</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T08:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:82</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7424</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-CE2EC969-B564-4828-9867-F7E5DA4C8BC2</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T08:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:19</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7429</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-8087A444-EA74-4B39-9BBB-F4D60F052366</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T09:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:85</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7428</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-6791673B-3DCA-432D-93C0-241211D145FD</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T09:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:22</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7433</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-F389569F-5018-4235-AF27-C8FD35C92E32</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T10:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:88</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7432</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-69BEC647-5A93-460B-A683-457F645BAC14</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T10:24:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:24</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7435</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-96646835-D32B-4B57-8A4F-89BEA6AFFE12</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T10:32:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:90</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7434</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-B44DC821-773F-44EA-A9EA-86D8EC7AB758</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T10:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:25</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7439</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-BB9E2DD3-E04D-4592-8BBE-5118D17EEBA7</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T11:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:92</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7438</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-CC25B6DE-A56B-4C6B-9B16-7649306E7355</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T11:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:26</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7445</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-E78C6B08-A344-44F9-B680-DA53BDF7CD74</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T12:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:94</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7444</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-B56E8098-E952-46FB-85AD-A71081D8377E</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T12:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:27</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7449</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-D7BB0F0A-1226-4912-B0D2-726FC40E3135</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T13:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:97</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7448</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-7ACF0235-453B-4E07-B003-710572E3CAA0</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T13:32:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:99</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7450</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-48691688-91F3-43D9-A209-4E901F16661C</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T13:54:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:28</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7453</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-478D675F-8E71-4711-AD55-0BEEF72B7349</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T14:00:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>4</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:R:j21:101</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504300</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504221</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7452</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-5D5BCBA9-56DB-4512-B666-D7944BE4E5CF</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504227</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:PlannedQuay>
+									<ojp:Text xml:lang="de">1</ojp:Text>
+								</ojp:PlannedQuay>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T14:24:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>7</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9101N:Y:H:j21:29</ojp:JourneyRef>
+							<siri:LineRef>ojp:9101N:Y</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">R</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>R</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504221</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">NeuchÃ¢tel</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504300</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Biel/Bienne</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Regio</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7455</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-0DE69DAA-AD34-4FD0-8C38-91BC93764E95</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-16T19:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-16</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:25</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">61</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-55A7A20B-770E-4AF6-94F4-4075967D6A42</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T04:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:1</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">3</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-AAE7D87E-3B2D-49DE-A196-C986F4010654</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T05:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:2</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">5</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-F7AE140F-24E6-4D08-BF34-E12270C3EFE3</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T05:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:3</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">7</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-8BD2018D-5EA7-4C79-88FE-1EEA74060B7F</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T06:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:4</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">9</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-97586B51-C225-414E-8B28-0AE67E7E9D7F</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T07:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:5</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">13</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-4D05B283-1F58-442D-8DE2-6E7B803AB242</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T08:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:6</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">17</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-22F8762B-77E9-4E8A-80BE-FAFA54E9FF39</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T08:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:7</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">19</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-85E667AA-5D56-4B12-BF26-A518643F64AD</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T09:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:8</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">21</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-D0210ECE-EE3E-466E-A8A4-13C0DFC8E6D7</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T09:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:9</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">23</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-3E33FF30-AAA0-4996-B7E7-87D3A865FEBB</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T10:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:10</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">25</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-3EF7652B-117F-4082-9EBC-6C042C971176</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T10:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:11</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">27</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-1AB1D256-41FE-4921-A903-CB84285D23B7</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T11:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:12</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">29</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-F32BA73D-489D-4565-9A9A-3DCD3F187174</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T11:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:13</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">31</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-ED0C79C1-22A6-45B5-8C54-324BC02891E7</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T12:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:14</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">33</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-58E22BF0-1259-4B4D-A2F4-EAC2CAB66E4C</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T12:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:15</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">35</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-027906DC-90F7-4F0E-8A24-029E69E20706</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T13:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:16</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">37</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-A408639A-D37D-4EAB-9F4C-E38386AA17EE</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T13:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:17</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">39</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-DA105B34-E779-4C52-AFC9-6AE3DCC662F6</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T14:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:18</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">41</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-51ED4207-0875-4E8E-B00C-802504E42EC0</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T14:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:19</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">43</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-B1712EF9-0B74-4FBC-A0C1-F8A992D0243D</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T15:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:20</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">45</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-DC7730B4-E383-40F3-B511-704A6184EF4C</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T15:34:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:21</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">47</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-B03D70C9-637D-4C62-AFCE-E9695386C521</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T16:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:22</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">49</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-BD60C8C5-3DA4-40E0-95CA-A9A65A8DA22E</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T17:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:23</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">53</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:ResultId>ID-52FBBC2A-5C0A-4CF7-BCEF-0F6D15AACA51</ojp:ResultId>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T18:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:24</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>telecabin</ojp:PtMode>
+								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">57</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+			</ojp:OJPStopEventDelivery>
+		</siri:ServiceDelivery>
+	</siri:OJPResponse>
+</siri:OJP>
