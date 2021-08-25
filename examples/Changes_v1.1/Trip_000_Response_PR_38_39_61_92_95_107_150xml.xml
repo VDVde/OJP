@@ -7,7 +7,7 @@
 	- PR #92 - Extension in DatedJourneyStructure
 	- PR #92 - Extension in ContinuousServiceStructure
 	- PR #38 + #116 - TripStatusGroup
-	- PR #61 -  LineId at boarding / alighting - TODO
+	- PR #61 -  LineId at boarding / alighting
 -->
 	<siri:OJPResponse>
 		<siri:ServiceDelivery>
@@ -19,6 +19,7 @@
 				<siri:Status>true</siri:Status>
 				<ojp:CalcTime>1247</ojp:CalcTime>
 				<ojp:TripResponseContext>
+					<!-- V1.1, PR #39, #150, #107 - Context with Places -->
 					<ojp:Places>
 						<ojp:Place>
 							<ojp:StopPlace>
@@ -191,6 +192,15 @@
 								</ojp:LegEnd>
 								<ojp:Service>
 									<ojp:IndividualMode>walk</ojp:IndividualMode>
+									<ojp:Extension>
+										<!-- V1.1, PR #92 - Illustration of new Extension (second of two changes of the PR, ContinuousServiceStructure)-->
+										<ojp:TransportTypeName>
+											<ojp:Text xml:lang="de">Wanderweg</ojp:Text>
+										</ojp:TransportTypeName>
+										<ojp:DestinationText>
+											<ojp:Text xml:lang="de">Schiffländte</ojp:Text>
+										</ojp:DestinationText>
+									</ojp:Extension>
 								</ojp:Service>
 								<ojp:TimeWindowStart>2021-08-20T11:40:00Z</ojp:TimeWindowStart>
 								<ojp:TimeWindowEnd>2021-08-20T11:55:00Z</ojp:TimeWindowEnd>
@@ -446,6 +456,8 @@
 									<ojp:ServiceDeparture>
 										<ojp:TimetabledTime>2021-08-20T11:55:00Z</ojp:TimetabledTime>
 									</ojp:ServiceDeparture>
+									<ojp:DistributorInterchangeId>BAT-XTRA-INTL-001-03</ojp:DistributorInterchangeId>
+									<!-- V1.1, PR #61 - Illustration of line id for system interchange, LegBoard -->
 									<ojp:Order>1</ojp:Order>
 								</ojp:LegBoard>
 								<ojp:LegAlight>
@@ -456,6 +468,8 @@
 									<ojp:ServiceArrival>
 										<ojp:TimetabledTime>2021-08-20T12:40:00Z</ojp:TimetabledTime>
 									</ojp:ServiceArrival>
+									<ojp:FeederInterchangeId>BAT-XTRA-INTL-001-03</ojp:FeederInterchangeId>
+									<!-- V1.1, PR #61 - Illustration of line id for system interchange, LegAlight -->
 									<ojp:Order>2</ojp:Order>
 								</ojp:LegAlight>
 								<ojp:Service>
@@ -704,6 +718,12 @@
 											<ojp:Text xml:lang="de">BAT</ojp:Text>
 										</ojp:ShortName>
 									</ojp:Mode>
+									<ojp:ProductCategory>
+										<!-- V1.1, PR #95 - Illustration of ProductCategory -->
+										<ojp:Name>
+											<ojp:Text>Dampfschiff</ojp:Text>
+										</ojp:Name>
+									</ojp:ProductCategory>
 									<ojp:PublishedServiceName>
 										<ojp:Text>BAT</ojp:Text>
 									</ojp:PublishedServiceName>
@@ -724,6 +744,15 @@
 									<ojp:DestinationText>
 										<ojp:Text xml:lang="de">Murten/Morat (Schiff/bateau)</ojp:Text>
 									</ojp:DestinationText>
+									<ojp:Extension>
+										<!-- V1.1, PR #92 - Illustration of new Extension (first of two changes of the PR, DatedJourneyStructure)-->
+										<ojp:TransportTypeName>
+											<ojp:Text xml:lang="de">Schiff</ojp:Text>
+										</ojp:TransportTypeName>
+										<ojp:PublishedJourneyNumber>
+											<ojp:Text xml:lang="de">301</ojp:Text>
+										</ojp:PublishedJourneyNumber>
+									</ojp:Extension>
 								</ojp:Service>
 								<ojp:LegTrack>
 									<ojp:TrackSection>
