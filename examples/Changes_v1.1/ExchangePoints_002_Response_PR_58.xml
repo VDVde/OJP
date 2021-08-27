@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
+<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
+	- PR #58 - Illustrative example of WaitDuration in ExchangePointsResultStructure
+-->
+   <siri:OJPResponse>
+      <siri:ServiceDelivery>
+         <siri:ResponseTimestamp>2021-08-25T17:34:02Z</siri:ResponseTimestamp>
+         <siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+         <siri:Status>true</siri:Status>
+         <ojp:OJPExchangePointsDelivery>
+            <siri:ResponseTimestamp>2021-08-25T17:34:01Z</siri:ResponseTimestamp>
+            <siri:RequestMessageRef>4712</siri:RequestMessageRef>
+            <siri:Status>true</siri:Status>
+            <ojp:CalcTime>60</ojp:CalcTime>
+			<ojp:Place>
+			   <ojp:Place>
+                  <ojp:StopPlace>
+                     <ojp:StopPlaceRef>8500010</ojp:StopPlaceRef>
+                     <ojp:StopPlaceName>
+                        <ojp:Text>Basel SBB</ojp:Text>
+                     </ojp:StopPlaceName>
+                     <ojp:TopographicPlaceRef>23005701:2</ojp:TopographicPlaceRef>
+                  </ojp:StopPlace>
+                  <ojp:Name>
+                     <ojp:Text xml:lang="de">Basel SBB (Basel)</ojp:Text>
+                  </ojp:Name>
+                  <ojp:GeoPosition>
+                     <siri:Longitude>7.58956</siri:Longitude>
+                     <siri:Latitude>47.54741</siri:Latitude>
+                  </ojp:GeoPosition>
+			   </ojp:Place>
+			   <ojp:WaitDuration>PT10M</ojp:WaitDuration> <!-- V1.1, PR #58 - Illustration of WaitDuration -->
+			</ojp:Place>
+         </ojp:OJPExchangePointsDelivery>
+      </siri:ServiceDelivery>
+   </siri:OJPResponse>
+</siri:OJP>

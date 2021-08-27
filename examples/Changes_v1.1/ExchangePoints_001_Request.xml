@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
+	<OJPRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2022-01-19T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPExchangePointsRequest>
+				<RequestTimestamp>2022-01-19T12:00:00Z</RequestTimestamp>
+				<MessageIdentifier>4712</MessageIdentifier>
+				<ojp:PlaceRef>
+				   <ojp:GeoPosition>
+                          <Longitude>7.589563</Longitude>
+                          <Latitude>47.547412</Latitude>
+                   </ojp:GeoPosition>
+				   <ojp:Name>
+                      <ojp:Text>Basel SBB</ojp:Text>
+                   </ojp:Name>
+				</ojp:PlaceRef>
+			</ojp:OJPExchangePointsRequest>
+		</ServiceRequest>
+	</OJPRequest>
+</OJP>
