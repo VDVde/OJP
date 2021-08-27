@@ -8,13 +8,13 @@
 				<RequestTimestamp>2022-01-19T12:00:00Z</RequestTimestamp>
 				<MessageIdentifier>4712</MessageIdentifier>
 				<ojp:PlaceRef>
-				   <ojp:GeoPosition>
-                          <Longitude>7.589563</Longitude>
-                          <Latitude>47.547412</Latitude>
-                   </ojp:GeoPosition>
-				   <ojp:Name>
-                      <ojp:Text>Basel SBB</ojp:Text>
-                   </ojp:Name>
+					<ojp:GeoPosition>
+						<Longitude>7.589563</Longitude>
+						<Latitude>47.547412</Latitude>
+					</ojp:GeoPosition>
+					<ojp:Name>
+						<ojp:Text>Basel SBB</ojp:Text>
+					</ojp:Name>
 				</ojp:PlaceRef>
 			</ojp:OJPExchangePointsRequest>
 		</ServiceRequest>

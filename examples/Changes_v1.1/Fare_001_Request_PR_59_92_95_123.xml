@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
-<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
+	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
 	- PR #123 - WebLinkStructure
 	- PR  #59 - MIME type in an arbitrary WebLinkStructure
 	- PR #95 - ProductCategoryStructure
@@ -15,144 +15,146 @@
 				<RequestTimestamp>2022-01-19T12:00:00Z</RequestTimestamp>
 				<MessageIdentifier>4712</MessageIdentifier>
 				<ojp:TripFareRequest>
-				   <ojp:Trip>
-					  <ojp:TripId>ID-1232663C-71EF-4E51-8F72-3C0D4A48A809</ojp:TripId>
-					  <ojp:Duration>PT38M</ojp:Duration>
-					  <ojp:StartTime>2021-08-20T13:25:00Z</ojp:StartTime>
-					  <ojp:EndTime>2021-08-20T14:03:00Z</ojp:EndTime>
-					  <ojp:Transfers>0</ojp:Transfers>
-					  <ojp:TripLeg>
-						 <ojp:LegId>1</ojp:LegId>
-						 <ojp:TimedLeg>
-							<ojp:LegBoard>
-							   <StopPointRef>8504376</StopPointRef>
-							   <ojp:StopPointName>
-								  <ojp:Text>St. Petersinsel Nord</ojp:Text>
-							   </ojp:StopPointName>
-							   <ojp:ServiceDeparture>
-								  <ojp:TimetabledTime>2021-08-20T13:40:00Z</ojp:TimetabledTime>
-							   </ojp:ServiceDeparture>
-							   <ojp:Order>1</ojp:Order>
-							</ojp:LegBoard>
-							<ojp:LegAlight>
-							   <StopPointRef>8504375</StopPointRef>
-							   <ojp:StopPointName>
-								  <ojp:Text>Ligerz (Schiff)</ojp:Text>
-							   </ojp:StopPointName>
-							   <ojp:ServiceArrival>
-								  <ojp:TimetabledTime>2021-08-20T13:50:00Z</ojp:TimetabledTime>
-							   </ojp:ServiceArrival>
-							   <ojp:Order>2</ojp:Order>
-							</ojp:LegAlight>
-							<ojp:Service>
-							   <ojp:OperatingDayRef>2021-08-20</ojp:OperatingDayRef>
-							   <ojp:JourneyRef>ojp:9400B:Y:H:j21:14</ojp:JourneyRef>
-							   <LineRef>ojp:9400B:Y</LineRef>
-							   <DirectionRef>H</DirectionRef>
-							   <ojp:Mode>
-								  <ojp:PtMode>water</ojp:PtMode>
-								  <WaterSubmode>unknown</WaterSubmode>
-								  <ojp:Name>
-									 <ojp:Text xml:lang="de">Schiff</ojp:Text>
-								  </ojp:Name>
-								  <ojp:ShortName>
-									 <ojp:Text xml:lang="de">BAT</ojp:Text>
-								  </ojp:ShortName>
-							   </ojp:Mode>
-							   <ojp:ProductCategory><!-- V1.1, PR #95 - Illustration of ProductCategory -->
-			                      <ojp:Name>
-				                     <ojp:Text>Dampfschiff</ojp:Text>
-			                      </ojp:Name> 
-		                       </ojp:ProductCategory>
-							   <ojp:PublishedServiceName>
-								  <ojp:Text>BAT</ojp:Text>
-							   </ojp:PublishedServiceName>
-							   <ojp:OperatorRef>ojp:182</ojp:OperatorRef>
-							   <ojp:Attribute>
-								  <ojp:Text>
-									 <ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
-								  </ojp:Text>
-								  <ojp:Code>A___2</ojp:Code>
-							   </ojp:Attribute>
-							   <ojp:Attribute>
-								  <ojp:Text>
-									 <ojp:Text xml:lang="de">Restaurant</ojp:Text>
-								  </ojp:Text>
-								  <ojp:Code>A__WR</ojp:Code>
-								  <RefreshmentFacility>restaurantService</RefreshmentFacility>
-							   </ojp:Attribute>
-							   <ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-							   <ojp:DestinationText>
-								  <ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
-							   </ojp:DestinationText>
-							   <ojp:Extension><!-- V1.1, PR #92 - Illustration of new Extension -->
-								  <ojp:TransportTypeName>
-								    <ojp:Text xml:lang="de">Schiff</ojp:Text>
-								  </ojp:TransportTypeName>
-								  <ojp:PublishedJourneyNumber>
-									<ojp:Text xml:lang="de">301</ojp:Text>
-								  </ojp:PublishedJourneyNumber>
-							   </ojp:Extension>
-							</ojp:Service>
-							<ojp:LegTrack>
-							   <ojp:TrackSection>
-								  <ojp:TrackStart>
-									 <StopPointRef>8504376</StopPointRef>
-									 <ojp:Name>
-										<ojp:Text xml:lang="de">St. Petersinsel Nord</ojp:Text>
-									 </ojp:Name>
-								  </ojp:TrackStart>
-								  <ojp:TrackEnd>
-									 <StopPointRef>8504375</StopPointRef>
-									 <ojp:Name>
-										<ojp:Text xml:lang="de">Ligerz (Schiff)</ojp:Text>
-									 </ojp:Name>
-								  </ojp:TrackEnd>
-								  <ojp:LinkProjection>
-									 <ojp:Position>
-										<Longitude>7.13561</Longitude>
-										<Latitude>47.06832</Latitude>
-									 </ojp:Position>
-									 <ojp:Position>
-										<Longitude>7.13537</Longitude>
-										<Latitude>47.06836</Latitude>
-									 </ojp:Position>
-									 <ojp:Position>
-										<Longitude>7.13537</Longitude>
-										<Latitude>47.06836</Latitude>
-									 </ojp:Position>
-									 <ojp:Position>
-										<Longitude>7.13435</Longitude>
-										<Latitude>47.07271</Latitude>
-									 </ojp:Position>
-									 <ojp:Position>
-										<Longitude>7.13435</Longitude>
-										<Latitude>47.07611</Latitude>
-									 </ojp:Position>
-									 <ojp:Position>
-										<Longitude>7.13478</Longitude>
-										<Latitude>47.07891</Latitude>
-									 </ojp:Position>
-									 <ojp:Position>
-										<Longitude>7.13551</Longitude>
-										<Latitude>47.08329</Latitude>
-									 </ojp:Position>
-								  </ojp:LinkProjection>
-								  <ojp:Duration>PT10M</ojp:Duration>
-								  <ojp:Length>1671</ojp:Length>
-							   </ojp:TrackSection>
-							</ojp:LegTrack>
-							<ojp:Extension>
-							   <ojp:TransportTypeName>
-								  <ojp:Text xml:lang="de">Schiff</ojp:Text>
-							   </ojp:TransportTypeName>
-							   <ojp:PublishedJourneyNumber>
-								  <ojp:Text xml:lang="de">72</ojp:Text>
-							   </ojp:PublishedJourneyNumber>
-							</ojp:Extension>
-						 </ojp:TimedLeg>
-					  </ojp:TripLeg>
-				   </ojp:Trip>
+					<ojp:Trip>
+						<ojp:TripId>ID-1232663C-71EF-4E51-8F72-3C0D4A48A809</ojp:TripId>
+						<ojp:Duration>PT38M</ojp:Duration>
+						<ojp:StartTime>2021-08-20T13:25:00Z</ojp:StartTime>
+						<ojp:EndTime>2021-08-20T14:03:00Z</ojp:EndTime>
+						<ojp:Transfers>0</ojp:Transfers>
+						<ojp:TripLeg>
+							<ojp:LegId>1</ojp:LegId>
+							<ojp:TimedLeg>
+								<ojp:LegBoard>
+									<StopPointRef>8504376</StopPointRef>
+									<ojp:StopPointName>
+										<ojp:Text>St. Petersinsel Nord</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:ServiceDeparture>
+										<ojp:TimetabledTime>2021-08-20T13:40:00Z</ojp:TimetabledTime>
+									</ojp:ServiceDeparture>
+									<ojp:Order>1</ojp:Order>
+								</ojp:LegBoard>
+								<ojp:LegAlight>
+									<StopPointRef>8504375</StopPointRef>
+									<ojp:StopPointName>
+										<ojp:Text>Ligerz (Schiff)</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:ServiceArrival>
+										<ojp:TimetabledTime>2021-08-20T13:50:00Z</ojp:TimetabledTime>
+									</ojp:ServiceArrival>
+									<ojp:Order>2</ojp:Order>
+								</ojp:LegAlight>
+								<ojp:Service>
+									<ojp:OperatingDayRef>2021-08-20</ojp:OperatingDayRef>
+									<ojp:JourneyRef>ojp:9400B:Y:H:j21:14</ojp:JourneyRef>
+									<LineRef>ojp:9400B:Y</LineRef>
+									<DirectionRef>H</DirectionRef>
+									<ojp:Mode>
+										<ojp:PtMode>water</ojp:PtMode>
+										<WaterSubmode>unknown</WaterSubmode>
+										<ojp:Name>
+											<ojp:Text xml:lang="de">Schiff</ojp:Text>
+										</ojp:Name>
+										<ojp:ShortName>
+											<ojp:Text xml:lang="de">BAT</ojp:Text>
+										</ojp:ShortName>
+									</ojp:Mode>
+									<ojp:ProductCategory>
+										<!-- V1.1, PR #95 - Illustration of ProductCategory -->
+										<ojp:Name>
+											<ojp:Text>Dampfschiff</ojp:Text>
+										</ojp:Name>
+									</ojp:ProductCategory>
+									<ojp:PublishedServiceName>
+										<ojp:Text>BAT</ojp:Text>
+									</ojp:PublishedServiceName>
+									<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Nur 2. Klasse</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___2</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Restaurant</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A__WR</ojp:Code>
+										<RefreshmentFacility>restaurantService</RefreshmentFacility>
+									</ojp:Attribute>
+									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
+									<ojp:DestinationText>
+										<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+									</ojp:DestinationText>
+									<ojp:Extension>
+										<!-- V1.1, PR #92 - Illustration of new Extension -->
+										<ojp:TransportTypeName>
+											<ojp:Text xml:lang="de">Schiff</ojp:Text>
+										</ojp:TransportTypeName>
+										<ojp:PublishedJourneyNumber>
+											<ojp:Text xml:lang="de">301</ojp:Text>
+										</ojp:PublishedJourneyNumber>
+									</ojp:Extension>
+								</ojp:Service>
+								<ojp:LegTrack>
+									<ojp:TrackSection>
+										<ojp:TrackStart>
+											<StopPointRef>8504376</StopPointRef>
+											<ojp:Name>
+												<ojp:Text xml:lang="de">St. Petersinsel Nord</ojp:Text>
+											</ojp:Name>
+										</ojp:TrackStart>
+										<ojp:TrackEnd>
+											<StopPointRef>8504375</StopPointRef>
+											<ojp:Name>
+												<ojp:Text xml:lang="de">Ligerz (Schiff)</ojp:Text>
+											</ojp:Name>
+										</ojp:TrackEnd>
+										<ojp:LinkProjection>
+											<ojp:Position>
+												<Longitude>7.13561</Longitude>
+												<Latitude>47.06832</Latitude>
+											</ojp:Position>
+											<ojp:Position>
+												<Longitude>7.13537</Longitude>
+												<Latitude>47.06836</Latitude>
+											</ojp:Position>
+											<ojp:Position>
+												<Longitude>7.13537</Longitude>
+												<Latitude>47.06836</Latitude>
+											</ojp:Position>
+											<ojp:Position>
+												<Longitude>7.13435</Longitude>
+												<Latitude>47.07271</Latitude>
+											</ojp:Position>
+											<ojp:Position>
+												<Longitude>7.13435</Longitude>
+												<Latitude>47.07611</Latitude>
+											</ojp:Position>
+											<ojp:Position>
+												<Longitude>7.13478</Longitude>
+												<Latitude>47.07891</Latitude>
+											</ojp:Position>
+											<ojp:Position>
+												<Longitude>7.13551</Longitude>
+												<Latitude>47.08329</Latitude>
+											</ojp:Position>
+										</ojp:LinkProjection>
+										<ojp:Duration>PT10M</ojp:Duration>
+										<ojp:Length>1671</ojp:Length>
+									</ojp:TrackSection>
+								</ojp:LegTrack>
+								<ojp:Extension>
+									<ojp:TransportTypeName>
+										<ojp:Text xml:lang="de">Schiff</ojp:Text>
+									</ojp:TransportTypeName>
+									<ojp:PublishedJourneyNumber>
+										<ojp:Text xml:lang="de">72</ojp:Text>
+									</ojp:PublishedJourneyNumber>
+								</ojp:Extension>
+							</ojp:TimedLeg>
+						</ojp:TripLeg>
+					</ojp:Trip>
 				</ojp:TripFareRequest>
 			</ojp:OJPFareRequest>
 		</ServiceRequest>

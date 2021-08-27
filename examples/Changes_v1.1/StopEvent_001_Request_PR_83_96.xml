@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
-<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
+	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
 	- PR #83 - IncludePlacesContext and IncludeSituationsContext
 	- PR #96 - IncludeStopHierarchy
 -->
@@ -13,11 +13,11 @@
 				<MessageIdentifier>756</MessageIdentifier>
 				<ojp:Place>
 					<ojp:PlaceRef>
-			            <StopPointRef>8504375</StopPointRef>
-			            <ojp:Name>
-			              <ojp:Text> Ligerz (Schiff)(Text is ignored)</ojp:Text>
-			            </ojp:Name>
-			          </ojp:PlaceRef>
+						<StopPointRef>8504375</StopPointRef>
+						<ojp:Name>
+							<ojp:Text> Ligerz (Schiff)(Text is ignored)</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
 				</ojp:Place>
 				<ojp:Params>
 					<ojp:StopEventType>departure</ojp:StopEventType>
@@ -25,9 +25,12 @@
 					<ojp:IncludeOnwardCalls>false</ojp:IncludeOnwardCalls>
 					<ojp:IncludeOperatingDays>false</ojp:IncludeOperatingDays>
 					<ojp:IncludeRealtimeData>false</ojp:IncludeRealtimeData>
-					<ojp:IncludePlacesContext>true</ojp:IncludePlacesContext> <!-- V1.1, PR #83 - Illustrative use of optional parameter -->
-					<ojp:IncludeSituationsContext>true</ojp:IncludeSituationsContext> <!-- V1.1, PR #83 - Illustrative use of optional parameter -->
-					<ojp:IncludeStopHierarchy>all</ojp:IncludeStopHierarchy> <!-- V1.1, PR #96 - Illustrative use of optional parameter, possible values "local", "no", "down", "all" -->
+					<ojp:IncludePlacesContext>true</ojp:IncludePlacesContext>
+					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
+					<ojp:IncludeSituationsContext>true</ojp:IncludeSituationsContext>
+					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
+					<ojp:IncludeStopHierarchy>all</ojp:IncludeStopHierarchy>
+					<!-- V1.1, PR #96 - Illustrative use of optional parameter, possible values "local", "no", "down", "all" -->
 				</ojp:Params>
 			</ojp:OJPStopEventRequest>
 		</ServiceRequest>
