@@ -14,12 +14,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:annotation>
-					<xs:documentation>This choice is intended for later extension to other mobility services than public transport.</xs:documentation>
-				</xs:annotation>
 				<xs:element name="PublicTransport" type="BookingPTLegStructure">
 					<xs:annotation>
-						<xs:documentation>Definition of the journey leg that should be made by public transport.</xs:documentation>
+						<xs:documentation>Definition of the journey leg that should be made by public transport. Other mobility services may be added later.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -83,25 +80,15 @@
 					<xs:documentation>More general location for a call than stop points. May be used with flexible services or "Area Dial-A-Ride".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ServiceArrival" minOccurs="0">
+			<xs:element name="ServiceArrival" type="ServiceArrivalStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Arrival times of the service at this stop.</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
-			<xs:element name="ServiceDeparture" minOccurs="0">
+			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Departure times of the service at this stop.</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:group ref="ServiceTimeGroup"/>
-					</xs:sequence>
-				</xs:complexType>
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup" minOccurs="0"/>
 		</xs:sequence>
@@ -156,7 +143,7 @@
 			</xs:element>
 			<xs:element name="ReadingImpaired" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Passenger is reading mpaired.</xs:documentation>
+					<xs:documentation>Passenger is reading impaired.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -222,10 +209,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
-				<xs:annotation>
-					<xs:documentation>This choice is intended for later extension to other mobility services than public transport.</xs:documentation>
-				</xs:annotation>
-				<xs:element name="PublicTransport" type="BookingPTLegStructure"/>
+				<xs:element name="PublicTransport" type="BookingPTLegStructure">
+					<xs:annotation>
+						<xs:documentation>Definition of the journey leg that should be made by public transport. Other mobility services may be added later.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
@@ -248,12 +236,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:annotation>
-					<xs:documentation>This choice is intended for later extension to other mobility services than public transport.</xs:documentation>
-				</xs:annotation>
 				<xs:element name="PublicTransport" type="BookingPTLegStructure">
 					<xs:annotation>
-						<xs:documentation>Definition of the journey leg that should be made by public transport.</xs:documentation>
+						<xs:documentation>Definition of the journey leg that should be made by public transport. Other mobility services may be added later.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -265,7 +250,7 @@
 			<xs:group ref="EstimatedTimeBandGroup" minOccurs="0"/>
 			<xs:element name="CustomerDetail" type="CustomerDetailStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Details on the customer that is doing the booking transaction.</xs:documentation>
+					<xs:documentation>Details on the customer executing the booking transaction.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="BookingProcessGroup"/>
@@ -303,10 +288,11 @@
 			</xs:element>
 			<xs:group ref="BookingCodeGroup" minOccurs="0"/>
 			<xs:choice minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>This choice is intended for later extension to other mobility services than public transport.</xs:documentation>
-				</xs:annotation>
-				<xs:element name="PublicTransport" type="BookingPTLegStructure"/>
+				<xs:element name="PublicTransport" type="BookingPTLegStructure">
+					<xs:annotation>
+						<xs:documentation>Definition of the journey leg that should be made by public transport. Other mobility services may be added later.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 			<xs:element name="ExpiresAfter" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
