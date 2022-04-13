@@ -4,7 +4,7 @@
 	<!-- ===Dependencies ======================================= -->
 	<xs:import namespace="http://www.vdv.de/ojp" schemaLocation="OJP_Requests.xsd"/>
 	<!-- ======================================================================= -->
-	<xs:include schemaLocation="siri/siri_base-v2.0.xsd"/>
+	<xs:include schemaLocation="siri/siri_all_framework-v2.0.xsd"/>
 	<!--== SIRI Request include OJP Requests ===================================================================== -->
 	<xs:element name="OJP">
 		<xs:annotation>
