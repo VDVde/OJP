@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<!-- ===Dependencies ======================================= -->
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
-	<!-- ===========================================================================================================-->
-	<xs:include schemaLocation="OJP_Common.xsd"/>
-	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_StopEvents.xsd - Request and response definitions for arrivals and departures of public transport services at stops</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
+	<xs:annotation>
+		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
+	</xs:annotation>
 	<xs:group name="StopEventRequestGroup">
 		<xs:annotation>
 			<xs:documentation>Request structure for departure and arrival events at stops</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Location" type="PlaceContextStructure">
+			<xs:element name="Place" type="PlaceContextStructure">
 				<xs:annotation>
-					<xs:documentation>Location for which to obtain stop event information.</xs:documentation>
+					<xs:documentation>Place for which to obtain stop event information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Params" type="StopEventParamStructure" minOccurs="0">
@@ -66,7 +69,7 @@
 			</xs:element>
 			<xs:element name="TimeWindow" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Time window events should lie within. Starting from time  given in LocationContext.</xs:documentation>
+					<xs:documentation>Time window events should lie within. Starting from time given in PlaceContext.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StopEventType" type="StopEventTypeEnumeration" minOccurs="0">
@@ -76,6 +79,26 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="HierarchyEnumeration">
+		<xs:annotation>
+			<xs:documentation>
+			Indicates for which parts of the hierarchy of the StopPlace(s) stop events should be provided 
+			(if known by the server). "local" (default) is the local server setting. "no" will include no hierarchy and only 
+			provide the given StopPlace / StopPoint. "down" will include all lower StopPoints/StopPlaces in the hierarchy, if
+			such a hierarchy exists. "all" does include all StopPoints/StopPlaces for the meta station, if it is known. How 
+			to use this: if you indicate the reference to a train station and the parameter is set to "down", the departures/
+			arrivals at the associated bus stations will show as well. If you have the ScheduledStopPoint of platform B of 
+			the local bus and it is associated with 3 other stations, you will get all these arrivals/departures as well, 
+			if the parameter is set to "all".
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="local"/>
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="down"/>
+			<xs:enumeration value="all"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:group name="StopEventContentFilterGroup">
 		<xs:annotation>
 			<xs:documentation>Content filters which data is expected in the response</xs:documentation>
@@ -101,6 +124,29 @@
 					<xs:documentation>Whether realtime information of this stop event should be included in the response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the place context is needed. If a requestor has that information already, the response can be made slimmer, when set to false. Default is true. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeSituationsContext" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeStopHierarchy" type="HierarchyEnumeration" default="local" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Indicates for which parts of the hierarchy of the StopPlace(s) stop events should 
+					be provided (if known by the server). "local" (default) is the local server setting. "no" will include
+					no hierarchy and only provide the given StopPlace / StopPoint. "down" will include all lower StopPoints/
+					StopPlaces in the hierarchy, if such a hierarchy exists. "all" does include all StopPoints/StopPlaces 
+					for the meta station, if it is known. How to use this: if you indicate the reference to a train station 
+					and the parameter is set to "down", the departures/arrivals at the associated bus stations will show as 
+					well. If you have the ScheduledStopPoint of platform B of the local bus and it is associated with 3 other 
+					stations, you will get all these arrivals/departures as well, if the parameter is set to "all".
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:simpleType name="StopEventTypeEnumeration">
@@ -114,7 +160,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
-		<xs:documentation>====================================================</xs:documentation>
+		<xs:documentation>========================================== Response definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="StopEventResponseGroup">
 		<xs:annotation>
@@ -196,12 +242,12 @@
 			</xs:element>
 			<xs:element name="WalkDistance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Distance from request location (f.e. address) to this stop in metres.</xs:documentation>
+					<xs:documentation>Distance from request place (f.e. address) to this stop in metres.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WalkDuration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Distance from request location (f.e. address) to this stop in seconds. All user options taken into account (f.e. walk speed).</xs:documentation>
+					<xs:documentation>Walking duration from request place (f.e. address) to this stop. All user options taken into account (f.e. walk speed).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

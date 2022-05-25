@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:include schemaLocation="OJP_Common.xsd"/>
-	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
 	<xs:annotation>
-		<xs:documentation>===================== Request structures ============================================================</xs:documentation>
+		<xs:documentation>OJP/OJP_TripInfo.xsd - Request and response definitions for information on a single trip</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="OJP_All.xsd"/>
+	<xs:annotation>
+		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripInfoRequestGroup">
 		<xs:annotation>
@@ -50,7 +52,7 @@
 		<xs:sequence>
 			<xs:element name="IncludeCalls" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether service pattern is to be included. Default is true.</xs:documentation>
+					<xs:documentation>Whether call information is to be included. Default is true.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludePosition" type="xs:boolean" default="true" minOccurs="0">
@@ -73,10 +75,20 @@
 					<xs:documentation>Whether the result should include the geographic projection (coordinates) of this vehicle journey.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the place context is needed. If a requestor has that information already, the response can be made slimmer, when set to false. Default is true. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeSituationsContext" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
-		<xs:documentation>===================== Response structures ============================================================</xs:documentation>
+		<xs:documentation>========================================== Response definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripInfoResponseGroup">
 		<xs:annotation>

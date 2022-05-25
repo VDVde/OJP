@@ -1,54 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<!-- ===Dependencies ======================================= -->
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_model/siri_modes-v1.1.xsd"/>
-	<!-- ===========================================================================================================-->
-	<xs:include schemaLocation="OJP_Common.xsd"/>
-	<xs:include schemaLocation="OJP_LocationSupport.xsd"/>
 	<xs:annotation>
-		<xs:documentation>FUNCTION 1: Location Identification</xs:documentation>
+		<xs:documentation>OJP/OJP_Places.xsd - Request and response definitions for place information</xs:documentation>
 	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
+		<xs:documentation>FUNCTION 1: Place Identification</xs:documentation>
 		<xs:documentation>FUNCTION 2: Object Information</xs:documentation>
-	</xs:annotation>
-	<xs:annotation>
 		<xs:documentation>FUNCTION 3: Geographical Context</xs:documentation>
-	</xs:annotation>
-	<xs:annotation>
 		<xs:documentation>FUNCTION 4: Coordinate to Address</xs:documentation>
-	</xs:annotation>
-	<xs:annotation>
 		<xs:documentation>All functions integrated into one request / response</xs:documentation>
 	</xs:annotation>
-	<xs:group name="LocationInformationRequestGroup">
+	<xs:group name="PlaceInformationRequestGroup">
 		<xs:sequence>
 			<xs:choice>
-				<xs:annotation>
-					<xs:documentation>A location information request either consists of an initial request for locations (by name and/or coordinates, with restrictions), or of an follow up request in which a location object is further refined.</xs:documentation>
-				</xs:annotation>
-				<xs:element name="InitialInput" type="InitialLocationInputStructure">
+				<xs:element name="InitialInput" type="InitialPlaceInputStructure">
 					<xs:annotation>
-						<xs:documentation>Initial input for the location information request. This input defines what is originally looked for.</xs:documentation>
+						<xs:documentation>Initial input for the place information request. This input defines what is originally looked for.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="PlaceRef" type="PlaceRefStructure">
 					<xs:annotation>
-						<xs:documentation>Location for further refinement. If a location in a previous response was marked as not "complete" it can be refined by putting it here.</xs:documentation>
+						<xs:documentation>Place for further refinement. If a place in a previous response was marked as not "complete" it can be refined by putting it here.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
 			<xs:element name="Restrictions" type="PlaceParamStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>E.g. location types (stops, addresses, POIs) or specific location attributes</xs:documentation>
+					<xs:documentation>E.g. place types (stops, addresses, POIs) or specific place attributes</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:group name="LocationInformationResponseGroup">
+	<xs:group name="PlaceInformationResponseGroup">
 		<xs:sequence>
-			<xs:element name="LocationInformationResponseContext" type="ResponseContextStructure" minOccurs="0">
+			<xs:element name="PlaceInformationResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
+					<xs:documentation>Context to hold response objects that occur frequently.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
@@ -56,32 +45,32 @@
 					<xs:documentation>If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Location" type="PlaceResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="PlaceResult" type="PlaceResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
-		<xs:documentation>Additional declarations</xs:documentation>
+		<xs:documentation>========================================== Additional declarations ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:complexType name="InitialLocationInputStructure">
+	<xs:complexType name="InitialPlaceInputStructure">
 		<xs:sequence>
-			<xs:element name="LocationName" type="xs:string" minOccurs="0">
+			<xs:element name="Name" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Name of the location object which is looked after. This is usually the user's input. If not given, the name of the resulting location objects is not relevant.</xs:documentation>
+					<xs:documentation>Name of the place object which is looked after. This is usually the user's input. If not given, the name of the resulting place objects is not relevant.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeoPosition" type="siri:LocationStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Coordinate where to look for locations. If given, the result should prefer location objects near to this GeoPosition.</xs:documentation>
+					<xs:documentation>Coordinate where to look for places. If given, the result should prefer place objects near to this GeoPosition.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeoRestriction" type="GeoRestrictionsStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Restricts the resulting location objects to the given geographical area.</xs:documentation>
+					<xs:documentation>Restricts the resulting place objects to the given geographical area.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AllowedSystemId" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the location information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the location information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -130,10 +119,10 @@
 	</xs:complexType>
 	<xs:complexType name="PlaceResultStructure">
 		<xs:sequence>
-			<xs:element name="Location" type="PlaceStructure"/>
+			<xs:element name="Place" type="PlaceStructure"/>
 			<xs:element name="Complete" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation>States whether the included location is complete or needs further refinement. Only complete locations are fully resolved and can be used in e.g. trip requests. Incomplete locations have to be refined entering them once again into a LocationInformationRequest.</xs:documentation>
+					<xs:documentation>States whether the included place is complete or needs further refinement. Only complete places are fully resolved and can be used in e.g. trip requests. Incomplete places have to be refined entering them once again into a PlaceInformationRequest.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Probability" minOccurs="0">
@@ -147,7 +136,11 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="PlacePolicyGroup">
@@ -159,7 +152,7 @@
 			</xs:element>
 			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (eg: in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The location information service is expected to support a response volume of at least 500 location objects within one single response.</xs:documentation>
+					<xs:documentation>Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (eg: in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The place information service is expected to support a response volume of at least 500 objects within one single response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
@@ -178,27 +171,27 @@
 		<xs:sequence>
 			<xs:element name="Type" type="PlaceTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Allowed location object types. If none is given, all types are allowed.</xs:documentation>
+					<xs:documentation>Allowed place object types. If none is given, all types are allowed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Usage" type="PlaceUsageEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Defines, whether location objects for origin, via, or destination are searched.</xs:documentation>
+					<xs:documentation>Defines, whether place objects for origin, via, or destination are searched.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PtModes" type="PtModeFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned location objects. Applies only to stops.</xs:documentation>
+					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned place objects. Applies only to stops.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Filter for locations that are operated by certain organisations.</xs:documentation>
+					<xs:documentation>Filter for places that are operated by certain organisations.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TopographicPlaceRef" type="TopographicPlaceRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>If at least one is set, only location objects within the given localities are allowed.</xs:documentation>
+					<xs:documentation>If at least one is set, only place objects within the given localities are allowed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PointOfInterestFilter" type="PointOfInterestFilterStructure" minOccurs="0">
@@ -225,18 +218,18 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
-		<xs:documentation>===== Exchange point request ===============================================</xs:documentation>
+		<xs:documentation>========================================== Exchange point request ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="ExchangePointsRequestGroup">
 		<xs:sequence>
 			<xs:element name="PlaceRef" type="PlaceRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Location for which exchange points to other "neighbour" systems are to be searched. This location is usually the origin/destination of a passenger journey. May be omitted if all exchange points shall be returned.</xs:documentation>
+					<xs:documentation>Place for which exchange points to other "neighbour" systems are to be searched. This place is usually the origin/destination of a passenger journey. May be omitted if all exchange points shall be returned.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Params" type="ExchangePointsParamStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>E.g. location types (stops, addresses, POIs) or specific location attributes</xs:documentation>
+					<xs:documentation>E.g. place types (stops, addresses, POIs) or specific place attributes</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -251,27 +244,27 @@
 		<xs:sequence>
 			<xs:element name="Type" type="PlaceTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Allowed location object types. If none is given, all types are allowed.</xs:documentation>
+					<xs:documentation>Allowed place object types. If none is given, all types are allowed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Usage" type="PlaceUsageEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Defines, whether the location object of this request acts as origin, via or destination point of the passenger journey.</xs:documentation>
+					<xs:documentation>Defines, whether the place object of this request acts as origin, via or destination point of the passenger journey.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PtModes" type="PtModeFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned location objects. Applies only to stops.</xs:documentation>
+					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned place objects. Applies only to stops.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Filter for locations that are operated by certain organisations.</xs:documentation>
+					<xs:documentation>Filter for places that are operated by certain organisations.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TopographicPlaceRef" type="TopographicPlaceRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>If at least one is set, only location objects within the given localities are allowed.</xs:documentation>
+					<xs:documentation>If at least one is set, only place objects within the given localities are allowed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DestinationSystem" type="siri:ParticipantRefStructure" minOccurs="0">
@@ -325,7 +318,7 @@
 			</xs:element>
 			<xs:element name="TravelDurationEstimate" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Rough estimate of the travel duration from the specified location to this exchange point.</xs:documentation>
+					<xs:documentation>Rough estimate of the travel duration from the specified refrence place to this exchange point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WaitDuration" type="xs:duration" minOccurs="0" default="PT0M">
@@ -340,7 +333,7 @@
 			</xs:element>
 			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>List of transport modes that call at this location object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.</xs:documentation>
+					<xs:documentation>List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

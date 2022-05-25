@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<!-- ===Dependencies ======================================= -->
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_location-v2.0.xsd"/>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri_utility/siri_types-v2.0.xsd"/>
 	<xs:annotation>
-		<xs:documentation>========================================= General ================================================</xs:documentation>
+		<xs:documentation>OJP/OJP_Utility.xsd - Support definitions not specifically related to the public transport domain</xs:documentation>
 	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:simpleType name="PercentType">
 		<xs:annotation>
 			<xs:documentation>Percent value as integer, limited to max value 100.</xs:documentation>
@@ -66,16 +65,11 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="WebLinkStructure">
+	<xs:group name="WebLinkGroup">
 		<xs:annotation>
-			<xs:documentation>URL of a web resource with label.</xs:documentation>
+			<xs:documentation>URL of a web resource including type of resource.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Label" type="InternationalTextStructure">
-				<xs:annotation>
-					<xs:documentation>Label for link description.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="Url" type="xs:anyURI">
 				<xs:annotation>
 					<xs:documentation>URL to resource on web.</xs:documentation>
@@ -91,6 +85,19 @@
 					<xs:documentation>Is the referenced resource meant to be embedded as a webview in a surrounding context, e.g. app or web page? If yes, the resource has to be fully responsive. Default is false.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="WebLinkStructure">
+		<xs:annotation>
+			<xs:documentation>URL of a web resource with label.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Label" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Label for link description.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="WebLinkGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

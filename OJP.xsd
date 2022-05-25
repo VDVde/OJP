@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ojp="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.siri.org.uk/siri" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="OJP_siri">
-	<!-- ===Dependencies ======================================= -->
-	<xs:import namespace="http://www.vdv.de/ojp" schemaLocation="OJP_Requests.xsd"/>
-	<!-- ======================================================================= -->
-	<xs:include schemaLocation="siri/siri_base-v2.0.xsd"/>
-	<!--== SIRI Request include OJP Requests ===================================================================== -->
+<xs:schema xmlns="http://www.siri.org.uk/siri" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="OJP_siri">
+	<xs:annotation>
+		<xs:documentation>OJP.xsd - OJP messages as extension of SIRI</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.vdv.de/ojp" schemaLocation="./OJP/OJP_All.xsd"/>
+	<!-- ifopt must be imported before siri, otherwise xmllint fails -->
+	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="./siri/ifopt/ifopt_allStopPlace-v0.3.xsd"/>
+	<xs:include schemaLocation="./siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:element name="OJP">
 		<xs:annotation>
 			<xs:documentation>Root element for OJP messages based on SIRI message exchange protocol.</xs:documentation>
@@ -17,10 +19,9 @@
 				</xs:choice>
 				<xs:element ref="Extensions" minOccurs="0"/>
 			</xs:sequence>
-			<xs:attribute name="version" type="xs:NMTOKEN" use="required" fixed="1.0"/>
+			<xs:attribute name="version" type="xs:NMTOKEN" use="required" fixed="1.1-dev"/>
 		</xs:complexType>
 	</xs:element>
-	<!-- ======================================================================= -->
 	<xs:element name="OJPRequest" type="OJPRequestStructure">
 		<xs:annotation>
 			<xs:documentation>OJP Request - Groups individual functional requests.</xs:documentation>
@@ -34,7 +35,6 @@
 			<xs:group ref="RequestGroup"/>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- ======================================================================= -->
 	<xs:element name="OJPResponse" type="OJPResponseStructure">
 		<xs:annotation>
 			<xs:documentation>OJP Request - Groups individual functional responses.</xs:documentation>
