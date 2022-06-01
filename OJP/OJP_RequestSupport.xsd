@@ -74,6 +74,11 @@
 					<xs:documentation>Calculation time.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>OJP specific error messages for the whole delivery.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="SubscriptionRequestContextGroup">
