@@ -15,7 +15,11 @@
 		<xs:sequence>
 			<xs:element name="Code" type="xs:normalizedString">
 				<xs:annotation>
-					<xs:documentation>Code of the error situation.</xs:documentation>
+					<xs:documentation>Code of the error situation. 
+					STOPEVENT_DATEOUTOFRANGE: There are no timetables available for the requested date.
+					STOPEVENT_LOCATIONUNKNOWN:The location (address, stop etc.) for which stop events have been requested is unknown. 
+					STOPEVENT_LOCATIONUNSERVED: There is no public transport service available at all at the locations (address, stop etc.) for which stop events have been requested. 
+					STOPEVENT_NOEVENTFOUND: No departure/arrival could be found within the requested period of time that meets the given restrictions.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Text" type="InternationalTextStructure" minOccurs="0">
