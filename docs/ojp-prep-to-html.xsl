@@ -355,13 +355,39 @@
 		<xsl:choose>
 			<xsl:when test="@class = 'bold'">
 				<strong>
+					<xsl:call-template name="explain-cardinality"/>
 					<xsl:value-of select="."/>
 				</strong>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="."/>
+				<span>
+					<xsl:call-template name="explain-cardinality"/>
+					<xsl:value-of select="."/>
+				</span>
 			</xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+
+	<data:explained-cardinalities>
+		<data:case name="0:1">optional, single</data:case>
+		<data:case name="0:*">optional, multiple</data:case>
+		<data:case name="1:1">mandatory, single</data:case>
+		<data:case name="1:*">mandatory, at least one</data:case>
+		<data:case name="-0:1">optional, single, part of a choice</data:case>
+		<data:case name="-0:*">optional, multiple, part of a choice</data:case>
+		<data:case name="-1:1">mandatory, single, part of a choice</data:case>
+		<data:case name="-1:*">mandatory, at least one, part of a choice</data:case>
+	</data:explained-cardinalities>
+	<xsl:variable name="explained-cardinalities" select="document('')/xsl:stylesheet/data:explained-cardinalities"/>
+
+	<xsl:template name="explain-cardinality">
+		<xsl:param name="cardinality" select="."/>
+		<xsl:variable name="explanation" select="$explained-cardinalities/data:case[@name = $cardinality]"/>
+		<xsl:if test="$explanation">
+			<xsl:attribute name="title">
+				<xsl:value-of select="string($explanation)"/>
+			</xsl:attribute>
+		</xsl:if>
 	</xsl:template>
 
 	<!-- *** various *** -->
