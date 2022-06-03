@@ -383,7 +383,7 @@
 	</xsl:template>
 
 	<xsl:template match="xref">
-	  <a href="#{@ref}">
+	  <a href="#{@ref}" title="{@ref}">
 	    <xsl:apply-templates/>
 	  </a>
 	</xsl:template>
