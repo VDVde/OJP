@@ -77,7 +77,7 @@
 			</xs:element>
 			<xs:element name="ServiceList" type="ServiceListOfEnumerations" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>List of available OJP servcies</xs:documentation>
+					<xs:documentation>List of available OJP services.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceStarted" type="xs:dateTime" minOccurs="0">
