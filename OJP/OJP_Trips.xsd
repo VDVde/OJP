@@ -285,7 +285,7 @@
 			<xs:documentation>Structure for trip overview information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="xs:NMTOKEN">
 				<xs:annotation>
 					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -381,7 +381,7 @@
 			<xs:documentation>a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="LegId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="xs:NMTOKEN">
 				<xs:annotation>
 					<xs:documentation>Id of this trip leg. Unique within trip result.</xs:documentation>
 				</xs:annotation>
