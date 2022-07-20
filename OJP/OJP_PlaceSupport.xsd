@@ -222,12 +222,12 @@
 			<xs:documentation>[corresponds to POINT OF INTEREST in TMv6 with related information] type of PLACE to or through which passengers may wish to navigate as part of their journey and which is modelled in detail by journey planners. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PointOfInterestCode" type="PointOfInterestCodeType">
+			<xs:element name="Code" type="PointOfInterestCodeType">
 				<xs:annotation>
 					<xs:documentation>ID of this Point of Interest.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PointOfInterestName" type="InternationalTextStructure">
+			<xs:element name="Name" type="InternationalTextStructure">
 				<xs:annotation>
 					<xs:documentation>Name or description of point of interest for use in passenger information.</xs:documentation>
 				</xs:annotation>
@@ -366,7 +366,7 @@
 			<xs:documentation>descriptive data associated with a PLACE that can be used to describe the unique geographical context of a PLACE for the purposes of identifying it. May be refined as either a ROAD ADDRESS, a POSTAL ADDRESS or both</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="AddressCode" type="AddressCodeType">
+			<xs:element name="Code" type="AddressCodeType">
 				<xs:annotation>
 					<xs:documentation>ID of this address.</xs:documentation>
 				</xs:annotation>
@@ -376,7 +376,7 @@
 					<xs:documentation>Code of this address in private/foreign/proprietary coding schemes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AddressName" type="InternationalTextStructure">
+			<xs:element name="Name" type="InternationalTextStructure">
 				<xs:annotation>
 					<xs:documentation>Name or description of address for use in passenger information.</xs:documentation>
 				</xs:annotation>
