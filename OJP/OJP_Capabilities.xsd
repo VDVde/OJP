@@ -103,7 +103,7 @@
 			</xs:element>
 			<xs:element name="SustainsDisruptions" type="LimitationStatusEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether this service contains disruption information. </xs:documentation>
+					<xs:documentation>Whether this service contains disruption information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeoSearchesPossible" type="xs:boolean" minOccurs="0">
