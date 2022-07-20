@@ -178,7 +178,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="true">
 				<xs:annotation>
-					<xs:documentation>Fulfilled everywehre</xs:documentation>
+					<xs:documentation>Fulfilled everywhere</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="false">
