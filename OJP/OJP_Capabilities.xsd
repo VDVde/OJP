@@ -113,7 +113,7 @@
 			</xs:element>
 			<xs:element name="OJPAlgorithmType" type="OJPAlgorithmTypeEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Which OJP algorithm is supported for this service, when used in distributed trip planning. </xs:documentation>
+					<xs:documentation>Which OJP algorithm is supported for this service, when used in distributed journey planning.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServerBuildVersion" type="xs:normalizedString" minOccurs="0">
