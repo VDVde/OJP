@@ -5,8 +5,7 @@
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	<xs:import  namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_modes-v1.1.xsd"/>
-	
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_modes-v1.1.xsd"/>
 	<xs:annotation>
 		<xs:documentation>=============================== Capabilities Service ==========================================</xs:documentation>
 	</xs:annotation>
@@ -33,11 +32,9 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-
 	<xs:annotation>
 		<xs:documentation>=============================== Capabilities Response Group ==========================================</xs:documentation>
 	</xs:annotation>
-		
 	<xs:group name="CapabilitiesResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Capabilities response group.</xs:documentation>
@@ -47,7 +44,7 @@
 				<xs:annotation>
 					<xs:documentation>System description</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="CoveredArea" type="AreaStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>CoveredArea</xs:documentation>
@@ -57,38 +54,37 @@
 				<xs:annotation>
 					<xs:documentation>Covered list of modes</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 			<xs:element name="CoveredOperatorList" type="OperatorListOfEnumerations" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Covered list of operator names</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
-
+			</xs:element>
 			<xs:element name="ContainsRealTime" type="LimitationStatusEnumeration" minOccurs="0" default="false">
 				<xs:annotation>
 					<xs:documentation>Limitations to realtime based on LimitationStatusEnumeration (NeTEx). Default is false.</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 			<xs:element name="CrognosisWindowForward" type="xs:duration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>prognosis window forward in time</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 			<xs:element name="PlanningHorizon" type="xs:duration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Allowed planning horizon as xs:duration</xs:documentation>
 				</xs:annotation>
-			</xs:element>				
+			</xs:element>
 			<xs:element name="ServiceList" type="ServiceListOfEnumerations" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>List of available OJP servcies</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 			<xs:element name="ServiceStarted" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Datetime when service was started</xs:documentation>
 				</xs:annotation>
-			</xs:element>					
+			</xs:element>
 			<xs:element name="SystemAvailability" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>System availability as a percentage</xs:documentation>
@@ -98,61 +94,56 @@
 						<xs:minInclusive value="0.0"/>
 						<xs:maxInclusive value="100.0"/>
 					</xs:restriction>
-				</xs:simpleType>					
-			</xs:element>		
+				</xs:simpleType>
+			</xs:element>
 			<xs:element name="LastTimetableUpdate" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>System description</xs:documentation>
 				</xs:annotation>
-			</xs:element>									
+			</xs:element>
 			<xs:element name="SustainsDisruptions" type="LimitationStatusEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether this service contains disruption information. </xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 			<xs:element name="GeoSearchesPossible" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether searches with coordinates are possible. </xs:documentation>
 				</xs:annotation>
-			</xs:element>													
+			</xs:element>
 			<xs:element name="OJPAlgorithmType" type="OJPAlgorithmTypeEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Which OJP algorithm is supported for this service, when used in distributed trip planning. </xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 			<xs:element name="ServerBuildVersion" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Information about the server build.</xs:documentation>
 				</xs:annotation>
-			</xs:element>					
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	
-		<xs:annotation>
+	<xs:annotation>
 		<xs:documentation>=============================== Capabilities support functions ==========================================</xs:documentation>
 	</xs:annotation>
-	
 	<xs:simpleType name="ServiceListOfEnumerations">
 		<xs:annotation>
 			<xs:documentation>List of OJP services.</xs:documentation>
 		</xs:annotation>
 		<xs:list itemType="OJPServiceEnumeration"/>
 	</xs:simpleType>
-	
 	<xs:simpleType name="ModeListOfEnumerations">
 		<xs:annotation>
 			<xs:documentation>List of Modes.</xs:documentation>
 		</xs:annotation>
 		<xs:list itemType="siri:VehicleModesOfTransportEnumeration"/>
 	</xs:simpleType>
-		
-		<xs:simpleType name="OperatorListOfEnumerations">
+	<xs:simpleType name="OperatorListOfEnumerations">
 		<xs:annotation>
 			<xs:documentation>List of operator names.</xs:documentation>
 		</xs:annotation>
 		<xs:list itemType="xs:normalizedString"/>
 	</xs:simpleType>
-	
 	<xs:simpleType name="OJPServiceEnumeration">
 		<xs:annotation>
 			<xs:documentation>Enumeration OJP services</xs:documentation>
@@ -169,7 +160,6 @@
 			<xs:enumeration value="allUses"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
 	<xs:simpleType name="OJPAlgorithmTypeEnumeration">
 		<xs:annotation>
 			<xs:documentation>Enumeration of known behaviour of passive systems</xs:documentation>
@@ -180,8 +170,7 @@
 			<xs:enumeration value="EU_Spirit"/>
 			<xs:enumeration value="other"/>
 		</xs:restriction>
-	</xs:simpleType>	
-		
+	</xs:simpleType>
 	<xs:simpleType name="LimitationStatusEnumeration">
 		<xs:annotation>
 			<xs:documentation>Based on LimitationStatusEnumeration in NeTEx</xs:documentation>
@@ -208,5 +197,5 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
 </xs:schema>
