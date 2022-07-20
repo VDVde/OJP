@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified" id="OJP_siri_service">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Capabilites.xsd - OJP capabilites request and response</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
+	<xs:annotation>
+		<xs:documentation>========================================== Fare Service ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPCapabilitieseRequest" type="OJPCapabilitiesRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceCapabilitiesRequest"/>
+	<xs:complexType name="OJPCapabilitiesRequestStructure">
+		<xs:complexContent>
+			<xs:extension base="AbstractOJPServiceRequestStructure">
+				<xs:sequence>
+					<!-- currently no content -->
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="OJPCapabilitiesResponse" type="OJPCapabilitiesResponseStructure" substitutionGroup="siri:AbstractFunctionalServiceCapabilitiesResponse"/>
+	<xs:complexType name="OJPFareDeliveryStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceDeliveryStructure">
+				<xs:sequence>
+					<!--					<xs:element ref="OJPFareRequest" minOccurs="0"/> use SIRI RequestMessageRef -->
+					<xs:group ref="ServiceResponseContextGroup"/> <!-- to check -->
+					<xs:group ref="CapabilitiesResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:annotation>
+		
+</xs:schema>
