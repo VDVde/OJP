@@ -212,7 +212,7 @@
 			<xs:enumeration value="poi"/>
 			<xs:enumeration value="coord">
 				<xs:annotation>
-					<xs:documentation>depreciated. Is replaced by geoPosition.</xs:documentation>
+					<xs:documentation>deprecated. Is replaced by geoPosition.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="geoPosition">
