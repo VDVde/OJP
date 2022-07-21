@@ -217,7 +217,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="geoPosition">
 				<xs:annotation>
-					<xs:documentation>New value for GeoPosition.</xs:documentation>
+					<xs:documentation>New value for geoPosition.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="topographicPlace"/>
