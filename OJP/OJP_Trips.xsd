@@ -54,6 +54,7 @@
 			<xs:group ref="TripMobilityFilterGroup"/>
 			<xs:group ref="TripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
+			<xs:element name="UserPreferences" type="UserPreferencesStructure" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
@@ -147,6 +148,11 @@
 					<xs:documentation>Whether the result should include intermediate stops (between the passenger's board and alight stops).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="IncludeSecondBestOptions" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether second best options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second best route.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="IncludeFare" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the result should include fare information.</xs:documentation>
@@ -208,6 +214,17 @@
 			<xs:documentation>Trip response structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="Score">
+				<xs:annotation>
+					<xs:documentation>The score from User Preferences or the algorithm.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:float">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element name="TripResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
@@ -878,6 +895,172 @@
 			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="UserPreferencesStructure">
+		<xs:annotation>
+			<xs:documentation>A collection of user preferences to allow the algorithm to narrow-down multimodal trip combinations to those that may be suitable for the user.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LowPrice" default="average" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference that the trip has a low price.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="important"/>
+						<xs:enumeration value="average"/>
+						<xs:enumeration value="unimportant"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Speed" default="average" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference about the speed/short duration of the trip.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="important"/>
+						<xs:enumeration value="average"/>
+						<xs:enumeration value="unimportant"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Comfort" default="average" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference about the comfort/convenience of the trip, including few changes, short transfers and convenient vehicle types. Reflect USER PREFERENCE from Transmodel</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="premium"/>
+						<xs:enumeration value="average"/>
+						<xs:enumeration value="basic"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Sportiness" default="average" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's endurance and fitness for sportive, self-powered trip legs (walk, cycle, etd.).</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="high"/>
+						<xs:enumeration value="average"/>
+						<xs:enumeration value="low"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EnvironmentalSafety" default="average" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference about climate/environmental-friendliness of the trip (option 'low' might have no effect).</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="high"/>
+						<xs:enumeration value="average"/>
+						<xs:enumeration value="low"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="WeatherProtection" type="xs:boolean" default="false" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference not be exposed to eventual weather hazards, thus, to avoid walks and micromobility.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtraSafe" type="xs:boolean" default="false" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference for an extra high level of safety.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtraReliable" type="xs:boolean" default="false" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference for an extra high reliability (low probabilty of delays, cancellations, etc.).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtraAccessible" type="xs:boolean" default="false" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference for perfect accessibility (lifts, ramps, no stairs, etc.), including extra transfer time, short transfer distances, etc.. May be superseeded by EPIAP updates. TODO</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Scenic" type="xs:boolean" default="false" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference for scenic, touristic impressions on some parts of the trip.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Peaceful" type="xs:boolean" default="false" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>User's preference for peacful transport (quiet travel compartements or low occupation).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripReason" type="TripReasonEnumeration" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A classification of a passenger's reason for undertaking a TRIP PATTERN (TRIP REASON from Transmodel).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WalkingProfile" default="normal" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Users walking profile (especially for hiking)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="normal">
+							<xs:annotation>
+								<xs:documentation>e.g. yellow hiking signs</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="medium">
+							<xs:annotation>
+								<xs:documentation>e.g. white-red-white hiking signs</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="difficult">
+							<xs:annotation>
+								<xs:documentation>E.g. white-blue-white hiking signs</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>			
+			<xs:element name="CyclingProfile" default="normalfast" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Users cycling profile (especially for sportive activities).</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="normalfast">
+							<xs:annotation>
+								<xs:documentation>fastest normal cycle route</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="normalgreen">
+							<xs:annotation>
+								<xs:documentation>greenest normal cycle route</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="normalcomfortrable">
+							<xs:annotation>
+								<xs:documentation>family friendly and leisurely route</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>				
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TripReasonEnumeration">
+		<xs:annotation>
+			<xs:documentation>Possible TRIP REASON.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="workCommute"/>
+			<xs:enumeration value="schoolPickupDropoff"/>
+			<xs:enumeration value="shopping"/>
+			<xs:enumeration value="leisure"/>
+			<xs:enumeration value="hike"/>
+			<xs:enumeration value="business"/>
+			<xs:enumeration value="delivery"/>
+			<xs:enumeration value="appointment"/>
+			<xs:enumeration value="other"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:group name="MultiPointWaitTimeGroup">
 		<xs:annotation>
 			<xs:documentation>Group for wait times at origin/destination.</xs:documentation>
