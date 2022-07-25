@@ -166,13 +166,18 @@
 	</xs:group>
 	<xs:simpleType name="OptimisationMethodEnumeration">
 		<xs:annotation>
-			<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc).</xs:documentation>
+			<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="fastest"/>
 			<xs:enumeration value="minChanges"/>
 			<xs:enumeration value="leastWalking"/>
 			<xs:enumeration value="leastCost"/>
+			<xs:enumeration value="shortestPath">
+				<xs:annotation>
+					<xs:documentation>Shortest Path (km). Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
+				</xs:annotation>			
+			</xs:enumeration>
 			<xs:enumeration value="earliestArrival"/>
 			<xs:enumeration value="latestDeparture"/>
 			<xs:enumeration value="earliestArrivalAndLatestDeparture"/>
