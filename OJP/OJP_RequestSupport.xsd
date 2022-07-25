@@ -171,11 +171,25 @@
 			<xs:documentation>Structure providing response contexts related to journeys, containing collections of places and situations.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="Operators"  minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Container for OPERATOR objects. Only operator objects that are referenced in the response should be put into the container.</xs:documentation>
+				</xs:annotation>	
+				<xs:complexType>		
+					<xs:sequence>
+						<xs:element name="Operator" type="siri:AffectedOperatorStructure" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Operators of services.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>	
+				</xs:complexType>									
+			</xs:element>		
 			<xs:element name="Places" type="PlacesStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Container for place objects. Only place objects that are referenced in the response should be put into the container.</xs:documentation>
 				</xs:annotation>
-			</xs:element>
+			</xs:element>		
 			<xs:element name="Situations" type="SituationsStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Container for SIRI SX situation objects. Only situations that are referenced in the response should be put into the container.</xs:documentation>
