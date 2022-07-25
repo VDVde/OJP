@@ -176,7 +176,7 @@
 			<xs:enumeration value="shortestPath">
 				<xs:annotation>
 					<xs:documentation>Shortest Path (km). Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
-				</xs:annotation>			
+				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="earliestArrival"/>
 			<xs:enumeration value="latestDeparture"/>
