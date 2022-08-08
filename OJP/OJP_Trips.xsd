@@ -1035,7 +1035,7 @@
 								<xs:documentation>greenest normal cycle route</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
-						<xs:enumeration value="normalcomfortrable">
+						<xs:enumeration value="normalcomfortable">
 							<xs:annotation>
 								<xs:documentation>family friendly and leisurely route</xs:documentation>
 							</xs:annotation>
