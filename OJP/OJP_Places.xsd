@@ -215,7 +215,7 @@
 					<xs:documentation>deprecated. Is replaced by geoPosition.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="geoPosition">
+			<xs:enumeration value="location">
 				<xs:annotation>
 					<xs:documentation>New value for geoPosition.</xs:documentation>
 				</xs:annotation>
