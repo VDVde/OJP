@@ -222,7 +222,7 @@
 			<xs:documentation>[corresponds to POINT OF INTEREST in TMv6 with related information] type of PLACE to or through which passengers may wish to navigate as part of their journey and which is modelled in detail by journey planners. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Code" type="PointOfInterestCodeType">
+			<xs:element name="PublicCode" type="PointOfInterestCodeType">
 				<xs:annotation>
 					<xs:documentation>ID of this Point of Interest.</xs:documentation>
 				</xs:annotation>
