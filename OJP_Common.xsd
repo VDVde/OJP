@@ -73,6 +73,41 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
+		<xs:documentation>========================================= Type of Product Categories =============================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="TypeOfProductCategoryType">
+		<xs:annotation>
+			<xs:documentation>Identifier of a TypeOfProductCategory</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:complexType name="TypeOfProductCategoryRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a TypeOfProductCategory</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="TypeOfProductCategoryType"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="TypeOfProductCategoryRef" type="TypeOfProductCategoryRefStructure">
+		<xs:annotation>
+			<xs:documentation>Reference to a TypeOfProductCategory</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="TypeOfProductCategoryFilterStructure">
+		<xs:annotation>
+			<xs:documentation>Filter for in/exclusion of type of product category.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether a type of product category in list are to include or exclude from search. Default is exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TypeOfProductCategoryRef" type="TypeOfProductCategoryRefStructure" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
 		<xs:documentation>========================================= Lines ======================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="LineDirectionFilterStructure">
