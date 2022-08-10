@@ -938,7 +938,7 @@
 			</xs:element>
 			<xs:element name="Sportiness" default="average" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>User's endurance and fitness for sportive, self-powered trip legs (walk, cycle, etd.).</xs:documentation>
+					<xs:documentation>User's endurance and fitness for sportive, self-powered trip legs (walk, cycle, etc.).</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
