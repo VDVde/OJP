@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- edited with XMLSpy v2020 (x64) (http://www.altova.com) by  (Schweizerische Bundesbahnen SBB) -->
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_FareSupport.xsd - Supporting definitions for fare information on passenger trips</xs:documentation>
 	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:simpleType name="TypeOfFareClassEnumeration">
 		<xs:annotation>
@@ -207,6 +209,18 @@
 			<xs:documentation>Reference to a FareProduct.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:complexType name="EntitlementProductListStructure">
+		<xs:annotation>
+			<xs:documentation>A list of ENTITLEMENT PRODUCT references</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EntitlementProduct" type="EntitlementProductRefStructure" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:simpleType name="EntitlementProductCodeType">
 		<xs:annotation>
 			<xs:documentation>Identifier of a traveller card (f.e. BahnCard50, BahnCard50First etc.).</xs:documentation>
@@ -217,9 +231,20 @@
 		<xs:annotation>
 			<xs:documentation>Reference to a a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc).</xs:documentation>
 		</xs:annotation>
-		<xs:simpleContent>
-			<xs:extension base="EntitlementProductCodeType"/>
-		</xs:simpleContent>
+		<xs:sequence>
+			<xs:element ref="FareAuthorityRef"/>
+			<xs:element name="EntitlementProductRef" type="EntitlementProductCodeType"/>
+			<xs:element name="ValidityPeriod" type="siri:HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Validity period of the ENTITLEMENT PRODUCT</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EntitlementProductName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The name of the entitlement product</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="EntitlementProductRef" type="EntitlementProductRefStructure">
 		<xs:annotation>
@@ -408,9 +433,9 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
-			<xs:element name="EntitlementProduct" type="EntitlementProductRefStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="EntitlementProducts" type="EntitlementProductListStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc) </xs:documentation>
+					<xs:documentation>A list of ENTITLEMENT PRODUCTs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice minOccurs="0">
