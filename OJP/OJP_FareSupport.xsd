@@ -152,8 +152,7 @@
 			<xs:enumeration value="other"/>
 		</xs:restriction>
 	</xs:simpleType>
-
-		<xs:simpleType name="PhoneType">
+	<xs:simpleType name="PhoneType">
 		<xs:annotation>
 			<xs:documentation>Type for an International phone number. + Country + MSIDDN e.g. +41 675601 etc.</xs:documentation>
 		</xs:annotation>
@@ -170,7 +169,8 @@
 			<xs:documentation>Type for contact details.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ContactPerson" type="xs:string" minOccurs="0"> <!--NeTEx multilingualstring -->
+			<xs:element name="ContactPerson" type="xs:string" minOccurs="0">
+				<!--NeTEx multilingualstring -->
 				<xs:annotation>
 					<xs:documentation>Name of contact person.</xs:documentation>
 				</xs:annotation>
@@ -201,9 +201,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-	</xs:complexType>	
-
-		<!-- ======================================================================= -->
+	</xs:complexType>
+	<!-- ======================================================================= -->
 	<xs:simpleType name="BookingMethodEnumeration">
 		<xs:annotation>
 			<xs:documentation>Allowed values for Flexible Booking method.</xs:documentation>
@@ -414,7 +413,7 @@
 				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:group name="BookingArrangementsGroup">
 		<xs:annotation>
 			<xs:documentation>Elements for BOOKING ARRANGEMENTs.</xs:documentation>
@@ -467,7 +466,7 @@
 			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
-	</xs:group>	
+	</xs:group>
 	<xs:complexType name="BookingArrangementsContainerStructure">
 		<xs:annotation>
 			<xs:documentation>Container for multiple booking arrangements.</xs:documentation>
