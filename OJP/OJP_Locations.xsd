@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
-		<xs:documentation>OJP/OJP_Places.xsd - Request and response definitions for place information</xs:documentation>
+		<xs:documentation>OJP/OJP_Location.xsd - Request and response definitions for location information</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
@@ -12,7 +12,7 @@
 		<xs:documentation>FUNCTION 4: Coordinate to Address</xs:documentation>
 		<xs:documentation>All functions integrated into one request / response</xs:documentation>
 	</xs:annotation>
-	<xs:group name="PlaceInformationRequestGroup">
+	<xs:group name="LocationInformationRequestGroup">
 		<xs:sequence>
 			<xs:choice>
 				<xs:element name="InitialInput" type="InitialPlaceInputStructure">
@@ -33,9 +33,9 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:group name="PlaceInformationResponseGroup">
+	<xs:group name="LocationInformationResponseGroup">
 		<xs:sequence>
-			<xs:element name="PlaceInformationResponseContext" type="ResponseContextStructure" minOccurs="0">
+			<xs:element name="LocationInformationResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Context to hold response objects that occur frequently.</xs:documentation>
 				</xs:annotation>

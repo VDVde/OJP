@@ -40,7 +40,7 @@
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
 				<xs:sequence>
-					<xs:group ref="PlaceInformationRequestGroup"/>
+					<xs:group ref="LocationInformationRequestGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
@@ -53,7 +53,7 @@
 				<xs:sequence>
 					<xs:element ref="OJPPlaceInformationRequest" minOccurs="0"/>
 					<xs:group ref="ServiceResponseContextGroup"/>
-					<xs:group ref="PlaceInformationResponseGroup"/>
+					<xs:group ref="LocationInformationResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>

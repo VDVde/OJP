@@ -9,7 +9,7 @@
 	<xi:include href="../OJP/OJP_Fare.xsd"/>
 	<xi:include href="../OJP/OJP_FareSupport.xsd"/>
 	<xi:include href="../OJP/OJP_Lines.xsd"/>
-	<xi:include href="../OJP/OJP_Places.xsd"/>
+	<xi:include href="../OJP/OJP_Locations.xsd"/>
 	<xi:include href="../OJP/OJP_PlaceSupport.xsd"/>
 	<xi:include href="../OJP/OJP_StopEvents.xsd"/>
 	<xi:include href="../OJP/OJP_TripInfo.xsd"/>
