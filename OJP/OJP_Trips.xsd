@@ -315,7 +315,7 @@
 					<xs:documentation>Arrival time at destination.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PTTripLegs" type="xs:nonNegativeInteger" minOccurs="0">
+			<xs:element name="PTLegs" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Number of public transport trip legs.</xs:documentation>
 				</xs:annotation>
@@ -365,7 +365,7 @@
 					<xs:documentation>Trip distance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TripLeg" type="TripLegStructure" maxOccurs="unbounded">
+			<xs:element name="Leg" type="LegStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Legs of the trip</xs:documentation>
 				</xs:annotation>
@@ -376,7 +376,7 @@
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="TripLegStructure">
+	<xs:complexType name="LegStructure">
 		<xs:annotation>
 			<xs:documentation>a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)</xs:documentation>
 		</xs:annotation>
