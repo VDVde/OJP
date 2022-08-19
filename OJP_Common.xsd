@@ -75,7 +75,7 @@
 	<xs:annotation>
 		<xs:documentation>========================================= Type of Product Categories =============================================</xs:documentation>
 	</xs:annotation>
-	<xs:simpleType name="TypeOfProductCategoryType">
+	<xs:simpleType name="TypeOfProductCategoryIdType">
 		<xs:annotation>
 			<xs:documentation>Identifier of a TypeOfProductCategory</xs:documentation>
 		</xs:annotation>
@@ -86,7 +86,7 @@
 			<xs:documentation>Reference to a TypeOfProductCategory</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
-			<xs:extension base="TypeOfProductCategoryType"/>
+			<xs:extension base="TypeOfProductCategoryIdType"/>
 		</xs:simpleContent>
 	</xs:complexType>
 	<xs:element name="TypeOfProductCategoryRef" type="TypeOfProductCategoryRefStructure">
