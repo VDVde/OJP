@@ -366,7 +366,7 @@
 			<xs:documentation>descriptive data associated with a PLACE that can be used to describe the unique geographical context of a PLACE for the purposes of identifying it. May be refined as either a ROAD ADDRESS, a POSTAL ADDRESS or both</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Code" type="AddressCodeType">
+			<xs:element name="PublicCode" type="AddressCodeType">
 				<xs:annotation>
 					<xs:documentation>ID of this address.</xs:documentation>
 				</xs:annotation>
