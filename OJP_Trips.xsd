@@ -777,12 +777,12 @@
 	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
 		<xs:annotation>
-			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs,BOARDING POSITIONs,, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
+			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs,BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Transition" type="TransitionEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether path is up down or level .</xs:documentation>
+					<xs:documentation>Whether path is up down or level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessFeatureType" type="AccessFeatureTypeEnumeration" minOccurs="0">
@@ -793,6 +793,33 @@
 			<xs:element name="Count" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Number how often the access feature occurs in this PathLink</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FromLevel" type="LevelNameStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Designations of the level where the PathLink starts.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ToLevel" type="LevelNameStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Designations of the level where the PathLink ends.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LevelNameStructure">
+		<xs:annotation>
+			<xs:documentation>Designations of a floor.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PublicCode" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Public identifier of the level as found on elevators and signs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Name" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Official name of the level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
