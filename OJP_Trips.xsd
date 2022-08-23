@@ -795,29 +795,29 @@
 					<xs:documentation>Number how often the access feature occurs in this PathLink</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FromLevel" type="LevelNameStructure" minOccurs="0">
+			<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Designations of the level where the PathLink starts.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToLevel" type="LevelNameStructure" minOccurs="0">
+			<xs:element name="To" type="PathLinkEndStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Designations of the level where the PathLink ends.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="LevelNameStructure">
+	<xs:complexType name="PathLinkEndStructure">
 		<xs:annotation>
 			<xs:documentation>Designations of a floor.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PublicCode" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="LevelPublicCode" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Public identifier of the level as found on elevators and signs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Name" type="InternationalTextStructure" minOccurs="0">
+			<xs:element name="LevelName" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Official name of the level.</xs:documentation>
 				</xs:annotation>
