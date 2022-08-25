@@ -393,6 +393,8 @@
 			<xs:enumeration value="PublicHoliday"/>
 		</xs:restriction>
 	</xs:simpleType>
+
+	
 	<xs:annotation>
 		<xs:documentation>========================================== General Attributes ==========================================</xs:documentation>
 	</xs:annotation>
