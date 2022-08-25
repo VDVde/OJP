@@ -63,9 +63,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="JourneyRef"/>
-			<xs:element name="PublishedJourneyName" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="PublicCode" type="xs:String" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Descriptive name/number of the SERVICE JOURNEY.</xs:documentation>
+					<xs:documentation>Descriptive public code of the SERVICE JOURNEY.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="ServiceGroup"/>
