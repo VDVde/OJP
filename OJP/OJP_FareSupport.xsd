@@ -370,6 +370,18 @@
 		</xs:annotation>
 		<xs:list itemType="BookingProcessEnumeration"/>
 	</xs:simpleType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="BookingAccessEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for Booking Access.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="public"/>
+			<xsd:enumeration value="authorisedPublic"/>
+			<xsd:enumeration value="staff"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>	
 	<!-- =================================================== -->
 	<xs:simpleType name="GroupBookingEnumeration">
 		<xs:annotation>
@@ -429,6 +441,11 @@
 					<xs:documentation>Allowed Ways of Making a BOOKING.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xsd:element name="BookingAccess" type="BookingAccessEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Who can make a booking. Default is public.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>			
 			<xs:element name="BookWhen" type="PurchaseWhenEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>When Booking can be made. +V1.1</xs:documentation>
