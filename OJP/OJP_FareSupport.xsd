@@ -214,7 +214,7 @@
 			<xs:documentation>A list of ENTITLEMENT PRODUCT references</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="EntitlementProduct" type="EntitlementProductRefStructure" maxOccurs="unbounded">
+			<xs:element name="EntitlementProduct" type="EntitlementProductStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc) </xs:documentation>
 				</xs:annotation>
@@ -227,7 +227,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:NMTOKEN"/>
 	</xs:simpleType>
-	<xs:complexType name="EntitlementProductRefStructure">
+	<xs:complexType name="EntitlementProductStructure">
 		<xs:annotation>
 			<xs:documentation>Reference to a a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc).</xs:documentation>
 		</xs:annotation>
@@ -246,7 +246,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="EntitlementProductRef" type="EntitlementProductRefStructure">
+	<xs:element name="EntitlementProductRef" type="EntitlementProductCodeType">
 		<xs:annotation>
 			<xs:documentation>Reference to a a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc).</xs:documentation>
 		</xs:annotation>
@@ -315,7 +315,7 @@
 					<xs:documentation>Travel class for which the FareProduct is valid.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RequiredCard" type="EntitlementProductRefStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="RequiredCard" type="EntitlementProductStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>One or more traveller cards that are needed for purchase of this FareProduct. In most cases traveller cards offer discounts, f.e. BahnCard50 of Deutsche Bahn.</xs:documentation>
 				</xs:annotation>
