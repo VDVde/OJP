@@ -381,7 +381,7 @@
 			<xsd:enumeration value="staff"/>
 			<xsd:enumeration value="other"/>
 		</xsd:restriction>
-	</xsd:simpleType>	
+	</xsd:simpleType>
 	<!-- =================================================== -->
 	<xs:simpleType name="GroupBookingEnumeration">
 		<xs:annotation>
@@ -445,7 +445,7 @@
 				<xsd:annotation>
 					<xsd:documentation>Who can make a booking. Default is public.</xsd:documentation>
 				</xsd:annotation>
-			</xsd:element>			
+			</xsd:element>
 			<xs:element name="BookWhen" type="PurchaseWhenEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>When Booking can be made. +V1.1</xs:documentation>
