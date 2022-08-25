@@ -63,9 +63,8 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperatorRef" type="siri:OperatorRefStructure" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>		
-	</xs:complexType>			
-
+		</xs:sequence>
+	</xs:complexType>
 	<xs:group name="ScheduledJourneyGroup">
 		<xs:annotation>
 			<xs:documentation>Vehicle journey (not dated).</xs:documentation>
@@ -116,7 +115,7 @@
 				<xs:annotation>
 					<xs:documentation>Contains additional OPERATORs namenly if in a ContinuousLeg the Leg can be performed by several operators mainly in ALTERNATIVE MODE OF OPERATION, where there might be dozens of taxi companys and 5-10 free floating sharing companies.</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 			<xs:element name="RouteDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Descriptive text for a route, f.e. "Airport via City Centre"</xs:documentation>
