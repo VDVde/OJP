@@ -27,7 +27,7 @@
 			<xs:maxInclusive value="100.0"/>
 		</xs:restriction>
 	</xs:simpleType>
-		<xs:complexType name="MultilingualString">
+	<xs:complexType name="MultilingualString">
 		<xs:annotation>
 			<xs:documentation>Type for a string in a specified language.</xs:documentation>
 		</xs:annotation>
