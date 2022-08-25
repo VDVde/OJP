@@ -407,7 +407,6 @@
 		</xs:annotation>
 		<xs:group ref="BookingArrangementsGroup"/>
 	</xs:complexType>
-
 	<xs:group name="BookingArrangementsGroup">
 		<xs:annotation>
 			<xs:documentation>Elements for BOOKING ARRANGEMENTs.</xs:documentation>
