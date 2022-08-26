@@ -1075,14 +1075,25 @@
 			<xs:enumeration value="validator"/>
 		</xs:restriction>
 	</xs:simpleType>
+		<xs:simpleType name="EquipmentStatusEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for status of EQUIPMENT.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="available"/>
+			<xs:enumeration value="notAvailable"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
 		<xs:annotation>
-			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs,BOARDING POSITIONs,, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
+			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs,BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
+
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Transition" type="TransitionEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether path is up down or level .</xs:documentation>
+					<xs:documentation>Whether path is up down or level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessFeatureType" type="AccessFeatureTypeEnumeration" minOccurs="0">
@@ -1095,41 +1106,9 @@
 					<xs:documentation>Number how often the access feature occurs in this PathLink</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AccessibilityFeature" type="AccessibilityFeatureTypesEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="AccessFeatureStatus" type="EquipmentStatusEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Presence of an accessibility feature on the PathLink.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Designations of level and place where this PathLink starts.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="To" type="PathLinkEndStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Designations of level and place where this PathLink ends.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="PathLinkEndStructure">
-		<xs:annotation>
-			<xs:documentation>Designations of a floor/level.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="LevelPublicCode" type="xs:normalizedString" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Public identifier of the level as found on elevators and signs.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LevelName" type="InternationalTextStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Official name of the level.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Id" type="xs:normalizedString" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Id of the element at this end of the PathLink (typically a PLACE, e.g. where the elevator is located).</xs:documentation>
+					<xs:documentation>Whether the access feature is available or out of service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
