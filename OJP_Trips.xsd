@@ -822,6 +822,11 @@
 					<xs:documentation>Official name of the level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="id" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Id of the element at the From or To end of the PathLink (typically a PLACE).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
