@@ -1075,7 +1075,7 @@
 			<xs:enumeration value="validator"/>
 		</xs:restriction>
 	</xs:simpleType>
-		<xs:simpleType name="EquipmentStatusEnumeration">
+	<xs:simpleType name="EquipmentStatusEnumeration">
 		<xs:annotation>
 			<xs:documentation>Allowed values for status of EQUIPMENT.</xs:documentation>
 		</xs:annotation>
@@ -1088,7 +1088,6 @@
 	<xs:complexType name="PathLinkStructure">
 		<xs:annotation>
 			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs,BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
-
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Transition" type="TransitionEnumeration" minOccurs="0">
