@@ -703,12 +703,17 @@
 			<xs:documentation>Allowed values for a AccessFeature.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="lift"/>
+			<xs:enumeration value="elevator"/>
 			<xs:enumeration value="stairs"/>
 			<xs:enumeration value="seriesOfStairs"/>
+			<xs:enumeration value="singleStep"/>
+			<xs:enumeration value="seriesOfSingleSteps"/>
 			<xs:enumeration value="escalator"/>
+			<xs:enumeration value="travelator"/>
 			<xs:enumeration value="ramp"/>
 			<xs:enumeration value="footpath"/>
+			<xs:enumeration value="other"/>
+			<xs:enumeration value="unkown"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TransitionEnumeration">
@@ -721,6 +726,25 @@
 			<xs:enumeration value="level"/>
 			<xs:enumeration value="upAndDown"/>
 			<xs:enumeration value="downAndUp"/>
+		</xs:restriction>
+	</xs:simpleType>
+		<xs:simpleType name="AccessibilityFeaturesTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for AccessibilityFeatures.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="visualSigns"/>
+			<xs:enumeration value="tactileGuidingStrips"/>
+			<xs:enumeration value="tactileOrAuditorySigns"/>
+			<xs:enumeration value="elevatorAccousticAnnouncements"/>
+			<xs:enumeration value="elevatorTactileButtons"/>
+			<xs:enumeration value="elevatorSuitableForCycles"/>
+			<xs:enumeration value="entranceLevelAccess"/>
+			<xs:enumeration value="entranceLiftInVehicle"/>
+			<xs:enumeration value="entranceAssistedLiftOnPlatform"/>
+			<xs:enumeration value="entranceAssistedRamp"/>
+			<xs:enumeration value="entranceSlidingStep"/>
+			<xs:enumeration value="entranceUnassistedWheelchairSuitable"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
@@ -743,6 +767,11 @@
 					<xs:documentation>Number how often the access feature occurs in this PathLink</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AccessibilityFeatures" type="AccessibilityFeaturesTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Presence of accessibility features on the PathLink.</xs:documentation>
+				</xs:annotation>
+			</xs:element>	
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
