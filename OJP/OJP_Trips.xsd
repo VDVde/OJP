@@ -728,7 +728,7 @@
 			<xs:enumeration value="downAndUp"/>
 		</xs:restriction>
 	</xs:simpleType>
-		<xs:simpleType name="AccessibilityFeaturesTypeEnumeration">
+	<xs:simpleType name="AccessibilityFeaturesTypeEnumeration">
 		<xs:annotation>
 			<xs:documentation>Allowed values for AccessibilityFeatures.</xs:documentation>
 		</xs:annotation>
@@ -771,7 +771,7 @@
 				<xs:annotation>
 					<xs:documentation>Presence of accessibility features on the PathLink.</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
