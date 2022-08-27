@@ -10,7 +10,7 @@
 				<siri:RequestMessageRef>4711</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
 				<ojp:CalcTime>20</ojp:CalcTime>
-				<ojp:SystemDescription></ojp:SystemDescription>
+				<ojp:SystemDescription/>
 				<ojp:CoveredArea>
 					<ojp:Points>
 						<siri:Longitude>10.1</siri:Longitude>
