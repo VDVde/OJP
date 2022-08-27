@@ -5,13 +5,13 @@
 			<siri:ResponseTimestamp>2020-10-01T17:54:38Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<ojp:OJPPlaceInformationDelivery>
+			<ojp:OJPLocationInformationDelivery>
 				<siri:ResponseTimestamp>2020-10-01T17:54:38Z</siri:ResponseTimestamp>
 				<siri:RequestMessageRef>4711</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
 				<ojp:CalcTime>20</ojp:CalcTime>
 				<ojp:PlaceResult>
-					<ojp:Place>
+					<ojp:Location>
 						<ojp:StopPlace>
 							<ojp:StopPlaceRef>8530813</ojp:StopPlaceRef>
 							<ojp:StopPlaceName>
@@ -26,7 +26,7 @@
 							<siri:Longitude>8.55408</siri:Longitude>
 							<siri:Latitude>47.36488</siri:Latitude>
 						</ojp:GeoPosition>
-					</ojp:Place>
+					</ojp:Location>
 					<ojp:Complete>true</ojp:Complete>
 					<ojp:Probability>1</ojp:Probability>
 					<ojp:Mode>
@@ -42,7 +42,7 @@
 						<siri:BusSubmode>localBusService</siri:BusSubmode>
 					</ojp:Mode>
 				</ojp:PlaceResult>
-			</ojp:OJPPlaceInformationDelivery>
+			</ojp:OJPLocationInformationDelivery>
 		</siri:ServiceDelivery>
 	</siri:OJPResponse>
 </siri:OJP>
