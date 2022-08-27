@@ -89,12 +89,13 @@
 			</xs:element>
 			<xs:element name="TrainNumber" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Contains the TrainNumber from NeTEx (TRAIN NUMBER from Transmodel). If several TrainNumber types exist, use the commercial one.</xs:documentation>
+					<xs:documentation>Contains the TrainNumber from NeTEx (TRAIN NUMBER from Transmodel). If several TrainNumber types exist, use the commercial one. In some cases also non-train modes
+will use TrainNumber.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VehicleNumber" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="VehicleRef" type="siri:VehicleRef" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Contains the VehicleNumber of the vehicle. If several number types exist, use the commercial number. In Transmodel this may be VEHICLE.Id or VEHICLE.VehicleRegistrationNumber.</xs:documentation>
+					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be VEHICLE.Id.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="OperatorRef" minOccurs="0"/>
