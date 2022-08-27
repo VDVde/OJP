@@ -99,7 +99,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:annotation>
+
+	<xs:annotation>	
 		<xs:documentation>========================================== ProductCategories ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="ProductCategoryRefStructure">
@@ -121,6 +122,7 @@
 			<xs:documentation>Reference to a product category. Product categories should be defined once and used uniformly in all channels (e.g. NeTEx, SIRI, OJP)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	
 	<xs:annotation>
 		<xs:documentation>========================================= Lines ======================================</xs:documentation>
 	</xs:annotation>
@@ -188,6 +190,29 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+
+	<xs:complexType name="VehicleFilterStructure">
+		<xs:annotation>
+			<xs:documentation>Filter for Vehicles</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether Vehicle and TRAIN NUMBERS in list are to include or exclude from search. Default is exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VehicleRef" type="siri:VehicleRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to transport operator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TrainNumber" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>TRAIN NUMBERs</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+		</xs:sequence>
+	</xs:complexType>	
 	<xs:annotation>
 		<xs:documentation>========================================== Sharing Services ==========================================</xs:documentation>
 	</xs:annotation>
