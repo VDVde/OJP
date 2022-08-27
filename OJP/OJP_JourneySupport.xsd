@@ -93,7 +93,7 @@
 will use TrainNumber.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VehicleRef" type="siri:VehicleRef" minOccurs="0">
+			<xs:element ref="siri:VehicleRef" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be VEHICLE.Id.</xs:documentation>
 				</xs:annotation>
