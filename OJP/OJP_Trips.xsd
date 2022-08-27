@@ -87,7 +87,7 @@
 				<xs:annotation>
 					<xs:documentation>Filter for VEHICLE and TRAIN NUMBERs.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripPolicyGroup">

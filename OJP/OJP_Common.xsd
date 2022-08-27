@@ -99,8 +99,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
-	<xs:annotation>	
+	<xs:annotation>
 		<xs:documentation>========================================== ProductCategories ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:complexType name="ProductCategoryRefStructure">
@@ -122,7 +121,6 @@
 			<xs:documentation>Reference to a product category. Product categories should be defined once and used uniformly in all channels (e.g. NeTEx, SIRI, OJP)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	
 	<xs:annotation>
 		<xs:documentation>========================================= Lines ======================================</xs:documentation>
 	</xs:annotation>
@@ -190,7 +188,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-
 	<xs:complexType name="VehicleFilterStructure">
 		<xs:annotation>
 			<xs:documentation>Filter for Vehicles</xs:documentation>
@@ -210,9 +207,9 @@
 				<xs:annotation>
 					<xs:documentation>TRAIN NUMBERs</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 		</xs:sequence>
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== Sharing Services ==========================================</xs:documentation>
 	</xs:annotation>
