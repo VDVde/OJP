@@ -207,7 +207,8 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>
+	</xs:complexType>					
+
 	<xs:element name="OJPTripRefineDelivery" type="OJPTripRefineDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPTripRefineDeliveryStructure">
 		<xs:complexContent>
@@ -216,6 +217,33 @@
 					<xs:element ref="OJPTripRefineRequest" minOccurs="0"/>
 					<xs:group ref="ServiceResponseContextGroup"/>
 					<xs:group ref="TripRefineResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>											
+
+	<xs:annotation>		
+		<xs:documentation>========================================== Status Service ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPStatusRequest" type="OJPStatusRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:complexType name="OJPStatusRequestStructure">
+		<xs:complexContent>
+			<xs:extension base="AbstractOJPServiceRequestStructure">
+				<xs:sequence>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="OJPStatusDelivery" type="OJPStatusDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPStatusDeliveryStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceDeliveryStructure">
+				<xs:sequence>
+					<xs:element ref="OJPStatusRequest" minOccurs="0"/>
+					<xs:group ref="ServiceResponseContextGroup"/>
+					<xs:group ref="StatusResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>

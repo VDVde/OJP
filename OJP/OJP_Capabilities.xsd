@@ -9,17 +9,6 @@
 	<xs:annotation>
 		<xs:documentation>=============================== Capabilities Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPCapabilitieseRequest" type="OJPCapabilitiesRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceCapabilitiesRequest"/>
-	<xs:complexType name="OJPCapabilitiesRequestStructure">
-		<xs:complexContent>
-			<xs:extension base="AbstractOJPServiceRequestStructure">
-				<xs:sequence>
-					<!-- currently no content, always gives the same answer -->
-					<xs:element ref="siri:Extensions" minOccurs="0"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:element name="OJPCapabilitiesResponse" type="OJPCapabilitiesResponseStructure" substitutionGroup="siri:AbstractFunctionalServiceCapabilitiesResponse"/>
 	<xs:complexType name="OJPCapabilitiesResponseStructure">
 		<xs:complexContent>
@@ -60,7 +49,7 @@
 					<xs:documentation>Covered list of operator names</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ContainsRealTime" type="LimitationStatusEnumeration" minOccurs="0" default="false">
+			<xs:element name="ContainsRealTime" type="LimitationStatusEnumeration" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Limitations to realtime based on LimitationStatusEnumeration (NeTEx). Default is false.</xs:documentation>
 				</xs:annotation>
@@ -80,27 +69,6 @@
 					<xs:documentation>List of available OJP services.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ServiceStarted" type="xs:dateTime" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Datetime when service was started</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SystemAvailability" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>System availability as a percentage</xs:documentation>
-				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:decimal">
-						<xs:minInclusive value="0.0"/>
-						<xs:maxInclusive value="100.0"/>
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
-			<xs:element name="LastTimetableUpdate" type="xs:dateTime" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>System description</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="SustainsDisruptions" type="LimitationStatusEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether this service contains disruption information.</xs:documentation>
@@ -114,11 +82,6 @@
 			<xs:element name="OJPAlgorithmType" type="OJPAlgorithmTypeEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Which OJP algorithm is supported for this service, when used in distributed journey planning.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ServerBuildVersion" type="xs:normalizedString" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Information about the server build.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -156,18 +119,32 @@
 			<xs:enumeration value="OJPPlace"/>
 			<xs:enumeration value="OJPExchangePoint"/>
 			<xs:enumeration value="OJPMultipPointTrip"/>
+			<xs:enumeration value="OJPStatus"/>
+			<xs:enumeration value="OJPCapabilities"/>
 			<xs:enumeration value="other"/>
 			<xs:enumeration value="allUses"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="OJPAlgorithmTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>Enumeration of known behaviour of passive systems</xs:documentation>
+			<xs:documentation>Enumeration of known behaviour of passive systems. Will be expanded to reference the description of the algorithms</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="LA_HaCon"/>
-			<xs:enumeration value="LA_MENTZ"/>
-			<xs:enumeration value="EU_Spirit"/>
+			<xs:enumeration value="LA_Type_1">
+				<xs:annotation>
+					<xs:documentation>The type one implementation of LinkingAlps</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LA_Type_2">
+				<xs:annotation>
+					<xs:documentation>The type two implementation of LinkingAlps</xs:documentation>
+				</xs:annotation>				
+			</xs:enumeration>
+			<xs:enumeration value="EU_Spirit">
+				<xs:annotation>
+					<xs:documentation>The EU spirit algorithm</xs:documentation>
+				</xs:annotation>			
+			</xs:enumeration>
 			<xs:enumeration value="other"/>
 		</xs:restriction>
 	</xs:simpleType>

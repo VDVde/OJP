@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2020 (x64) (http://www.altova.com) by  (Schweizerische Bundesbahnen SBB) -->
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified" id="OJP_siri_service">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Status.xsd - OJP Status request and response</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_modes-v1.1.xsd"/>
+	<xs:annotation>
+		<xs:documentation>=============================== Status Service ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPStatusResponse" type="OJPStatusResponseStructure" substitutionGroup="siri:AbstractFunctionalServiceCapabilitiesResponse"/>
+	<xs:complexType name="OJPStatusResponseStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceCapabilitiesResponseStructure">
+				<xs:sequence>
+					<xs:group ref="ServiceResponseContextGroup"/>
+					<xs:group ref="StatusResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:annotation>  
+		<xs:documentation>=============================== Status Response Group ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="StatusResponseGroup">
+		<xs:annotation>
+			<xs:documentation>Status response group.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ServiceStarted" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Datetime when service was started</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SystemAvailability" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>System availability as a percentage</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:minInclusive value="0.0"/>
+						<xs:maxInclusive value="100.0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LastTimetableUpdate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>System description</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ServerBuildVersion" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Information about the server build.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+</xs:schema>
