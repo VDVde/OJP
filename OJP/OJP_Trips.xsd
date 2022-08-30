@@ -1087,12 +1087,12 @@
 	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
 		<xs:annotation>
-			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs,BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
+			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs, BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Transition" type="TransitionEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether path is up down or level.</xs:documentation>
+					<xs:documentation>Whether path is up, down or level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessFeatureType" type="AccessFeatureTypeEnumeration" minOccurs="0">
@@ -1102,7 +1102,7 @@
 			</xs:element>
 			<xs:element name="Count" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Number how often the access feature occurs in this PathLink</xs:documentation>
+					<xs:documentation>Number indicating how often the access feature occurs in this PathLink</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessFeatureStatus" type="EquipmentStatusEnumeration" minOccurs="0">
