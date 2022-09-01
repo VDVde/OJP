@@ -102,7 +102,7 @@
 		<xs:sequence>
 			<xs:element name="Name" type="xs:normalizedString"/>
 			<xs:element name="Version" type="xs:normalizedString"/>
-			<xs:element name=Description" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
