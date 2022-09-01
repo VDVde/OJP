@@ -79,13 +79,32 @@
 					<xs:documentation>Whether searches with coordinates are possible.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OJPAlgorithmType" type="OJPAlgorithmTypeEnumeration" minOccurs="0">
+			<xs:element name="profiles" type="OJPProfileList" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Which OJP algorithm is supported for this service, when used in distributed journey planning.</xs:documentation>
+					<xs:documentation>Supported profiles.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	
+	<xs:complexType name="OJPProfileList">
+		<xs:annotation>
+			<xs:documentation>List of supported OJP Profiles (with version number)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Profile" type="OJPProfil" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OJPProfile">
+		<xs:annotation>
+			<xs:documentation>OJP profile.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="xs:normalizedString"/>
+			<xs:element name="Version" type="xs:normalizedString"/>
+			<xs:element name=Description" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>=============================== Capabilities support functions ==========================================</xs:documentation>
 	</xs:annotation>
@@ -123,29 +142,6 @@
 			<xs:enumeration value="OJPCapabilities"/>
 			<xs:enumeration value="other"/>
 			<xs:enumeration value="allUses"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="OJPAlgorithmTypeEnumeration">
-		<xs:annotation>
-			<xs:documentation>Enumeration of known behaviour of passive systems. Will be expanded to reference the description of the algorithms</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="LA_Type_1">
-				<xs:annotation>
-					<xs:documentation>The type one implementation of LinkingAlps</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="LA_Type_2">
-				<xs:annotation>
-					<xs:documentation>The type two implementation of LinkingAlps</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="EU_Spirit">
-				<xs:annotation>
-					<xs:documentation>The EU spirit algorithm</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="other"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="LimitationStatusEnumeration">
