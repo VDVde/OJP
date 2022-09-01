@@ -200,7 +200,7 @@
 			</xs:element>
 			<xs:element name="VehicleRef" type="siri:VehicleRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Reference to transport operator</xs:documentation>
+					<xs:documentation>Reference to VEHICLE</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TrainNumber" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
