@@ -86,7 +86,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	
 	<xs:complexType name="OJPProfileList">
 		<xs:annotation>
 			<xs:documentation>List of supported OJP Profiles (with version number)</xs:documentation>
