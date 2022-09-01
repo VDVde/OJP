@@ -433,7 +433,7 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
-			<xs:element name="EntitlementProducts" type="EntitlementProductListStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="EntitlementProducts" type="EntitlementProductListStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>A list of ENTITLEMENT PRODUCTs.</xs:documentation>
 				</xs:annotation>
