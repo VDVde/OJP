@@ -195,7 +195,7 @@
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether Vehicle and TRAIN NUMBERS in list are to include or exclude from search. Default is exclude.</xs:documentation>
+					<xs:documentation>Whether to include or exclude given VehicleRefs and TRAIN NUMBERS in the list from the search. Default is exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VehicleRef" type="siri:VehicleRefStructure" minOccurs="0" maxOccurs="unbounded">
