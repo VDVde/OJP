@@ -736,7 +736,7 @@
 			<xs:enumeration value="visualSigns"/>
 			<xs:enumeration value="tactileGuidingStrips"/>
 			<xs:enumeration value="tactileOrAuditorySigns"/>
-			<xs:enumeration value="elevatorAccousticAnnouncements"/>
+			<xs:enumeration value="elevatorAcousticAnnouncements"/>
 			<xs:enumeration value="elevatorTactileButtons"/>
 			<xs:enumeration value="elevatorSuitableForCycles"/>
 			<xs:enumeration value="entranceLevelAccess"/>
