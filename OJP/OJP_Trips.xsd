@@ -755,19 +755,19 @@
 			</xs:element>
 					<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Designations of the level where the PathLink starts.</xs:documentation>
+					<xs:documentation>Designations of level and place where this PathLink starts.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="To" type="PathLinkEndStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Designations of the level where the PathLink ends.</xs:documentation>
+					<xs:documentation>Designations of level and place where this PathLink ends.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PathLinkEndStructure">
 		<xs:annotation>
-			<xs:documentation>Designations of a floor.</xs:documentation>
+			<xs:documentation>Designations of a floor/level.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="LevelPublicCode" type="xs:normalizedString" minOccurs="0">
@@ -782,7 +782,7 @@
 			</xs:element>
 			<xs:element name="Id" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Id of the element at the From or To end of the PathLink (typically a PLACE).</xs:documentation>
+					<xs:documentation>Id of the element at this end of the PathLink (typically a PLACE, e.g. where the elevator is located).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
