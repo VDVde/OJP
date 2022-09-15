@@ -39,7 +39,7 @@
 			<xs:element name="Shape" type="siri:LineShapeStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The shape of the line. Normally a line has multiple routes. This is just the main one for presentation.</xs:documentation>
-				</xs:annotation>			
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="Probability" minOccurs="0">
 				<xs:annotation>
