@@ -425,4 +425,43 @@
 			<xs:group ref="WebLinkGroup" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
+	
+	<xs:annotation>
+		<xs:documentation>========================================== Sustainability ==========================================</xs:documentation>
+	</xs:annotation>
+
+		<xs:group  name="SustainabilityGroup">
+			<xs:annotation>
+				<xs:documentation>Elements about sustainability. Primarily for TRIPs and LEGs.</xs:documentation>
+			</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EmissionCO2" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="GramPerPersonKm">
+							<xs:annotation>
+								<xs:documentation>Gram by person and by kilometer of CO2 emmisions.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:decimal">
+									<xs:minInclusive value="0"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="ConfidenceLevel" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Confidence level of the emission value in percent.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:decimal">
+									<xs:minInclusive value="0"/>
+									<xs:maxInclusive value="100"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
 </xs:schema>
