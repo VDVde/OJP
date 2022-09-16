@@ -68,7 +68,7 @@
 					<xs:documentation>Restricts the resulting place objects to the given geographical area.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AllowedSystemId" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="AllowedSystem" type="siri:ParticipantRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
@@ -147,9 +147,9 @@
 					<xs:documentation>List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SystemID" type="xs:normalizedString">
+			<xs:element name="System" type="siri:ParticipantRefStructure">
 				<xs:annotation>
-					<xs:documentation>Stores the system ID, where to ask for actual locations corresponding to this city name result. In order to get actual locations, a new location information request using the system ID of this result is needed.</xs:documentation>
+					<xs:documentation>Stores the system reference, where to ask for actual locations corresponding to this city name result. In order to get actual locations, a new location information request using the system ID of this result is needed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
