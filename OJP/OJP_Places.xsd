@@ -151,7 +151,7 @@
 				<xs:annotation>
 					<xs:documentation>Stores the system ID, where to ask for actual locations corresponding to this city name result. In order to get actual locations, a new location information request using the system ID of this result is needed.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="PlacePolicyGroup">

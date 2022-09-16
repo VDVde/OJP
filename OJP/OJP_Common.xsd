@@ -425,15 +425,13 @@
 			<xs:group ref="WebLinkGroup" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	
 	<xs:annotation>
 		<xs:documentation>========================================== Sustainability ==========================================</xs:documentation>
 	</xs:annotation>
-
-		<xs:group  name="SustainabilityGroup">
-			<xs:annotation>
-				<xs:documentation>Elements about sustainability. Primarily for TRIPs and LEGs.</xs:documentation>
-			</xs:annotation>
+	<xs:group name="SustainabilityGroup">
+		<xs:annotation>
+			<xs:documentation>Elements about sustainability. Primarily for TRIPs and LEGs.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="EmissionCO2" minOccurs="0">
 				<xs:complexType>
