@@ -1044,12 +1044,42 @@
 	</xs:group>
 	<xs:simpleType name="MultiPointTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>How the multiple origin/destination points should be considered</xs:documentation>
+			<xs:documentation>How the multiple origin/destination points should be considered. 
+			i Or a distinct solution for each of the 
+origin/destination points has to be found.
+			
+			Note: Unfortunately this element was underdefined before and this resulted in different implementations.
+			
+			Note: MultiPointType trumps the number of results. If the algorithm thinks it necessary to provide more results, it should.
+			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="anyPoint"/>
-			<xs:enumeration value="eachOrigin"/>
-			<xs:enumeration value="eachDestination"/>
+			<xs:enumeration value="anyPoint">
+				<xs:annotation>
+					<xs:documentation>if a solution for any one of multiple origin/destination points is sufficient. Some implementation will return only one origin-destination pair even for multiple results with this setting. Others will provide multiple. </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="eachOrigin">
+				<xs:annotation>
+					<xs:documentation>a distinct solution for each of the 
+origin points has to be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="eachDestination">
+				<xs:annotation>
+					<xs:documentation>a distinct solution for each of the destination points has to be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="eachOriginDestination">
+				<xs:annotation>
+					<xs:documentation>At least a result for each Origin-Destination pair must be presented.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="somePoints">
+				<xs:annotation>
+					<xs:documentation>Clarifies that some (probably the "best") origin-destination pairs should be returned.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
@@ -1060,6 +1090,11 @@
 			<xs:documentation>Multi-point trip response structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The MultiPointType should be returned, because it may differ from the one asked. Many systems will support only a subset of the MultiPointTypes and it is important to know, what the result is based on.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="MultiPointTripResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
