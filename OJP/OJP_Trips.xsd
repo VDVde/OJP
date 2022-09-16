@@ -34,7 +34,7 @@
 				<xs:annotation>
 					<xs:documentation>With this parameter a distributing system is asked to build a trip using a given System to pass through. This helps in selecting Exchange Points for this trip. ViaSystem is also used in sequence.
 					Note: Systems may support only one.</xs:documentation>
-				</xs:annotation>			
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="NotVia" type="NotViaStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
