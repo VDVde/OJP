@@ -26,15 +26,14 @@
 			<xs:element name="Via" type="TripViaStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops.
-					
 					Note: Systems may support only one.</xs:documentation>
-				</xs:annotation>
+		</xs:annotation>
 			</xs:element>
 			<xs:element name="ViaSystem" type="siri:ParticipantRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>With this parameter a distributing system is asked to build a trip using a given System to pass through. This helps in selecting Exchange Points for this trip. ViaSystem is also used in sequence.
 					Note: Systems may support only one.</xs:documentation>
-				</xs:annotation>
+				</xs:annotation>			
 			</xs:element>
 			<xs:element name="NotVia" type="NotViaStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
