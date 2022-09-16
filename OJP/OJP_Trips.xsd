@@ -1053,7 +1053,7 @@
 	</xs:group>
 	<xs:simpleType name="MultiPointTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>How the multiple origin/destination points should be considered. 		
+			<xs:documentation>How the multiple origin/destination points should be considered.
 			Note: Unfortunately this element was underdefined before and this resulted in different implementations.
 			Note: MultiPointType trumps the number of results. If the algorithm thinks it necessary to provide more results, it should.
 			</xs:documentation>
