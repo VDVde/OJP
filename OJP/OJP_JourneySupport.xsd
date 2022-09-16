@@ -106,13 +106,13 @@
 				<xs:annotation>
 					<xs:documentation>Contains the name of the train, if it exist.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element ref="OperatorRef" minOccurs="0"/>
 			<xs:element name="OperatorName" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The name of the OPERATOR.</xs:documentation>
 				</xs:annotation>
-			</xs:element>				
+			</xs:element>
 			<xs:element name="RouteDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Descriptive text for a route, f.e. "Airport via City Centre"</xs:documentation>

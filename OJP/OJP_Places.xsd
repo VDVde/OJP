@@ -388,7 +388,6 @@
 				<xs:annotation>
 					<xs:documentation>The priority of the exchange point. 100 is the maximum.</xs:documentation>
 				</xs:annotation>
-				<!-- may be switched to type="Score" with "User Preferences TODO -->
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
