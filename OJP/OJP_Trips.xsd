@@ -968,10 +968,11 @@
 				</xs:annotation>
 			</xs:element>			
 			<xs:group ref="TripContentFilterGroup"/>
-			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
+			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
 				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
