@@ -389,18 +389,6 @@
 		</xs:annotation>
 		<xs:list itemType="BookingProcessEnumeration"/>
 	</xs:simpleType>
-	<!-- ======================================================================= -->
-	<xs:simpleType name="BookingAccessEnumeration">
-		<xs:annotation>
-			<xs:documentation>Allowed values for Booking Access.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="public"/>
-			<xs:enumeration value="authorisedPublic"/>
-			<xs:enumeration value="staff"/>
-			<xs:enumeration value="other"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<!-- =================================================== -->
 	<xs:simpleType name="GroupBookingEnumeration">
 		<xs:annotation>
