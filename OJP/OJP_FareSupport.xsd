@@ -392,7 +392,7 @@
 	<!-- ======================================================================= -->
 	<xs:simpleType name="BookingAccessEnumeration">
 		<xs:annotation>
-			<xs:documentation>Allowed values for Booking Access.</xsd:documentation>
+			<xs:documentation>Allowed values for Booking Access.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="public"/>
@@ -443,7 +443,7 @@
 			</xs:element>
 			<xs:element name="BookingAccess" type="BookingAccessEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Who can make a booking. Default is public.</xsd:documentation>
+					<xs:documentation>Who can make a booking. Default is public.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BookWhen" type="PurchaseWhenEnumeration" minOccurs="0">
