@@ -6,7 +6,7 @@
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
-		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
+		<xs:documentation>========================================== TripRequest definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripRequestGroup">
 		<xs:annotation>
@@ -201,7 +201,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================== Response definitions ==========================================</xs:documentation>
+		<xs:documentation>========================================== TripResponse definitions ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:group name="TripResponseGroup">
 		<xs:annotation>
@@ -923,6 +923,79 @@
 			<xs:element name="Infeasible" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether this trip cannot be used, due to operational delays and impossible transfers. Default is false.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:annotation>
+		<xs:documentation>========================================== TripRefineRequest definitions ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="TripRefineRequestGroup">
+		<xs:annotation>
+			<xs:documentation>Trip refinement request structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="RefineParams" type="TripRefineParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Options to control the refine</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripResult" type="TripResultStructure">
+				<xs:annotation>
+					<xs:documentation>The trip result to be refined by the server.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold objects, which are referenced within the response.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="TripRefineParamStructure">
+		<xs:annotation>
+			<xs:documentation>Trip refinement request parameter structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ForeignObjectRefs" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If true, then the request may contain object references from another system. Default is FALSE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RefineLegRef" type="xs:NMTOKEN" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Refers to a leg to be refined by the server.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:group ref="TripContentFilterGroup"/>
+			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
+				<xs:annotation>
+					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
+				</xs:annotation>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== TripRefineResponse definitions ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="TripRefineResponseGroup">
+		<xs:annotation>
+			<xs:documentation>Trip refinement response structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TripResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+ 			<xs:element name="UnknownLegRef" type="xs:NMTOKEN" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Refers to a leg that was not found in the data of the server. If the to be refined TripResult could not be found or unequivocally determined, all RefineLegRefs are returned as UnknownLegRefs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripResult" type="TripResultStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The trip results refined by the server.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
