@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2020 (x64) (http://www.altova.com) by  (Schweizerische Bundesbahnen SBB) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_FareSupport.xsd - Supporting definitions for fare information on passenger trips</xs:documentation>
@@ -211,29 +210,37 @@
 	</xs:element>
 	<xs:complexType name="EntitlementProductListStructure">
 		<xs:annotation>
-			<xs:documentation>A list of ENTITLEMENT PRODUCT references</xs:documentation>
+			<xs:documentation>A list of ENTITLEMENT PRODUCTs</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="EntitlementProduct" type="EntitlementProductStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc) </xs:documentation>
+					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g. military card, concessionary card, ...). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g. the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="EntitlementProductCodeType">
 		<xs:annotation>
-			<xs:documentation>Identifier of a traveller card (f.e. BahnCard50, BahnCard50First etc.).</xs:documentation>
+			<xs:documentation>Identifier of an ENTITLEMENT PRODUCT (e.g. BahnCard50, BahnCard50First, military card, concessionary card, ...). It is defined by the fare authority.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:NMTOKEN"/>
 	</xs:simpleType>
 	<xs:complexType name="EntitlementProductStructure">
 		<xs:annotation>
-			<xs:documentation>Reference to a a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc).</xs:documentation>
+			<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g. military card, concessionary card, ...). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g. the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element ref="FareAuthorityRef"/>
-			<xs:element name="EntitlementProductRef" type="EntitlementProductCodeType"/>
+			<xs:element ref="FareAuthorityRef">
+				<xs:annotation>
+					<xs:documentation>Reference to the fare authority that issued the ENTITLEMENT PRODUCT</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EntitlementProductRef" type="EntitlementProductCodeType">
+				<xs:annotation>
+					<xs:documentation>Identifier of the ENTITLEMENT PRODUCT (e.g. BahnCard50, BahnCard50First, ...)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ValidityPeriod" type="siri:HalfOpenTimestampOutputRangeStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Validity period of the ENTITLEMENT PRODUCT</xs:documentation>
@@ -241,16 +248,11 @@
 			</xs:element>
 			<xs:element name="EntitlementProductName" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>The name of the entitlement product</xs:documentation>
+					<xs:documentation>Name of the ENTITLEMENT PRODUCT</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="EntitlementProductRef" type="EntitlementProductCodeType">
-		<xs:annotation>
-			<xs:documentation>Reference to a a precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (eg: military card, concessionary card, etc).</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:complexType name="FareProductStructure">
 		<xs:annotation>
 			<xs:documentation>[related to FARE PRODUCT in TM and NeTEx] different FARE PRODUCTs that may be available with related information</xs:documentation>
@@ -317,7 +319,7 @@
 			</xs:element>
 			<xs:element name="RequiredCard" type="EntitlementProductStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>One or more traveller cards that are needed for purchase of this FareProduct. In most cases traveller cards offer discounts, f.e. BahnCard50 of Deutsche Bahn.</xs:documentation>
+					<xs:documentation>One or more ENTITLEMENT PRODUCTs required for the purchase of this FareProduct. In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g. the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ValidFor" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
