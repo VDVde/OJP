@@ -228,12 +228,11 @@
 			<xs:documentation>Lists those tickets or surcharges and service characteristics such as the transportation of wheelchairs, prams, luggage etc. or the provision of required child seats or booster seats that are offered in the trips transport company to be booked for the trip.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<!-- TODO: Do we already want that? Take TicketStructure from TRIAS? 
-			<xs:element name="BookableTicket" type="TicketStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="BookableTicket" type="FareProductStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Sequence of bookable tickets or surcharges for this part of the trip. If ticket price is zero: an already purchased/virtual ticket of this type presented to the driver would be accepted.</xs:documentation>
 				</xs:annotation>
-			</xs:element>-->
+			</xs:element>
 			<xs:element name="BookableServiceInformation" type="BookableServiceInformationStructure" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
