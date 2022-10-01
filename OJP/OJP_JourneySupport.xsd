@@ -63,9 +63,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="JourneyRef"/>
-			<xs:element name="PublicCode" type="xs:string" minOccurs="0">
+			<xs:element name="PublicCode" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Descriptive public code of the SERVICE JOURNEY.</xs:documentation>
+					<xs:documentation>Public code of the SERVICE JOURNEY.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="ServiceGroup"/>
@@ -98,7 +98,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="OperatorRef" minOccurs="0"/>
-			<xs:element name="OperatorName" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="OperatorName" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Descriptive name of the OPERATOR."</xs:documentation>
 				</xs:annotation>
