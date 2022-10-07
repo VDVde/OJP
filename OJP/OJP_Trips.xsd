@@ -97,11 +97,6 @@
 					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
@@ -164,20 +159,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:simpleType name="OptimisationMethodEnumeration">
-		<xs:annotation>
-			<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc).</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="fastest"/>
-			<xs:enumeration value="minChanges"/>
-			<xs:enumeration value="leastWalking"/>
-			<xs:enumeration value="leastCost"/>
-			<xs:enumeration value="earliestArrival"/>
-			<xs:enumeration value="latestDeparture"/>
-			<xs:enumeration value="earliestArrivalAndLatestDeparture"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:complexType name="NotViaStructure">
 		<xs:annotation>
 			<xs:documentation>Not-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through</xs:documentation>
@@ -989,11 +970,6 @@
 			<xs:element name="TransferLimit" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" default="anyPoint" minOccurs="0">
