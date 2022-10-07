@@ -523,43 +523,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:group name="BaseTripMobilityFilterGroup">
-		<xs:annotation>
-			<xs:documentation>Base mobility options to be applied for both public and individual transport.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="NoSingleStep" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user is not able to climb one step.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="NoStairs" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user is not able to walk up/down stairs.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="NoEscalator" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user is not able to use an escalator.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="NoElevator" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user is not able to use an elevator.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="NoRamp" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user is not able to use an ramp.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="NoSight" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user is not able to see.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
 	<xs:group name="BaseTripContentFilterGroup">
 		<xs:annotation>
 			<xs:documentation>Parameters to control the level of detail of both public and individual transport journey results.</xs:documentation>

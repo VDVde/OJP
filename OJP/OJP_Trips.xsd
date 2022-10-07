@@ -52,6 +52,7 @@
 		<xs:sequence>
 			<xs:group ref="TripDataFilterGroup"/>
 			<xs:group ref="TripMobilityFilterGroup"/>
+			<xs:element name="Score" type="Score" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:group ref="TripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
@@ -113,7 +114,6 @@
 			<xs:documentation>Parameters the user can set to restrict the mobility options - particularly for interchanging.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:group ref="BaseTripMobilityFilterGroup"/>
 			<xs:element name="LevelEntrance" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The user needs vehicles with level entrance between  platform and vehicle, f.e. for wheelchair access.</xs:documentation>
@@ -166,7 +166,7 @@
 	</xs:group>
 	<xs:simpleType name="OptimisationMethodEnumeration">
 		<xs:annotation>
-			<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc).</xs:documentation>
+			<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="fastest"/>
@@ -180,7 +180,7 @@
 	</xs:simpleType>
 	<xs:complexType name="NotViaStructure">
 		<xs:annotation>
-			<xs:documentation>NNot-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through</xs:documentation>
+			<xs:documentation>Not-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
@@ -191,7 +191,7 @@
 	</xs:complexType>
 	<xs:complexType name="NoChangeAtStructure">
 		<xs:annotation>
-			<xs:documentation>no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.</xs:documentation>
+			<xs:documentation>No-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
@@ -200,6 +200,181 @@
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Score / cost function definitions ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="Score">
+		<xs:annotation>
+			<xs:documentation>Cost function to be optimized.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ScoreType" type="ScoreTypeEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Predefined ScoreTypes favoring the use of similar scores across countries.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Name" type="xs:NMTOKEN" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Identifier of the score.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Intention" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Description what the score intends to achieve / optimize.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Priority" type="ScorePriorityTypeEnumeration" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Priority when optimizing multiple scores. Higher priorities dominate lower priorities.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Preference" type="Preference" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Definition of how violating a preference like no stairs or short distance adds to the cost function.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalConditions" type="TripParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Additional conditions relevant for the passenger type in question may apply, as can be specified in a TripParamStructure. Examples: PrivateModeFilter, BikeTransport, WalkSpeed, AdditionalTransferTime.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Result" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Return parameter - the calculated score / cost value of the Trip.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ScorePriorityTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Priority when optimizing multiple scores.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="priority1"/>
+			<xs:enumeration value="priority2"/>
+			<xs:enumeration value="priority3"/>
+			<xs:enumeration value="justComputeScore"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ScoreTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Common types of scores. They can also be used to retrieve standard (pre-defined) Score definitions. Additional knowledge, e.g., about sportiness may be used to adapt a Score.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:annotation>
+				<xs:documentation>Accessibility.</xs:documentation>
+			</xs:annotation>
+			<xs:enumeration value="wheelchair"/>
+			<xs:enumeration value="assistedWheelchair"/>
+			<xs:enumeration value="sportyWheelchair"/>
+			<xs:enumeration value="motorisedWheelchair"/>
+			<xs:enumeration value="pushchair"/>
+			<xs:enumeration value="rollator"/>
+			<xs:enumeration value="walkingImpaired"/>
+			<xs:enumeration value="baggageTrolley"/>
+			<xs:enumeration value="baggageEncumbered"/>
+			<xs:enumeration value="visuallyImpaired"/>
+			<xs:enumeration value="auditorilyImpaired"/>
+			<xs:annotation>
+				<xs:documentation>Traditional optimization methods.</xs:documentation>
+			</xs:annotation>
+			<xs:enumeration value="fastest"/>
+			<xs:enumeration value="minChanges"/>
+			<xs:enumeration value="leastWalking"/>
+			<xs:enumeration value="leastCost"/>
+			<xs:enumeration value="earliestArrival"/>
+			<xs:enumeration value="latestDeparture"/>
+			<xs:enumeration value="earliestArrivalAndLatestDeparture"/>
+			<xs:annotation>
+				<xs:documentation>Further options.</xs:documentation>
+			</xs:annotation>
+			<xs:enumeration value="comfort"/>
+			<xs:enumeration value="weatherProtection"/>
+			<!-- The following seem less close to realisation:
+			<xs:enumeration value="environmentalFootprint"/>
+			<xs:enumeration value="reliability"/>
+			<xs:enumeration value="safety"/>
+			<xs:enumeration value="scenic"/>
+			<xs:enumeration value="peaceful"/>
+			-->
+			<xs:enumeration value="custom"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Preference">
+		<xs:annotation>
+			<xs:documentation>The less a Preference is met, the more it adds to the cost function.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PreferenceType" type="PreferenceTypeEnumeration" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Preference features the server side is able to check / evaluate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WeightFactor" type="xs:float" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Multiplication factor reflecting the importance of the preference. Convention: A WeightFactor of 1000 or more means that the preference is essential (in case of boolean preferences).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SumCompleteTrip" type="xs:float" default="0" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The preference has to be evaluated for each PathLink and the results are summed over the complete Trip. Convention: A value over 1000 means that an essential preference has been violated and the Trip is not valid.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncompleteDataButRealityMightBeBetter" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Indicates whether SumCompletTrip is based on incomplete data. Convention: In case of incomplete data, SumCompleteTrip is calculated by assuming an unfavorable evaluation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="PreferenceTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Preference features the system is able to check or evaluate.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:annotation>
+				<xs:documentation>Boolean features - they evaluate to 0 in the favorable case, to 1 in the unvaforable case.</xs:documentation>
+			</xs:annotation>
+			<xs:enumeration value="levelEntrance"/>
+			<xs:enumeration value="noSingleStep"/>
+			<xs:enumeration value="noStairs"/>
+			<xs:enumeration value="noRamp"/>
+			<xs:enumeration value="noRampUp"/>
+			<xs:enumeration value="noRampDown"/>
+			<xs:enumeration value="noElevator"/>
+			<xs:enumeration value="noEscalator"/>
+			<xs:enumeration value="noTravelator"/>
+			<xs:enumeration value="visualSigns"/>
+			<xs:enumeration value="tactileGuidingStrips"/>
+			<xs:enumeration value="tactileOrAuditorySigns"/>
+			<xs:enumeration value="theAdditionalConditions">
+				<xs:annotation>
+					<xs:documentation>The boolean conditions in Score.AdditionalConditions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<!-- The following seem less close to realisation:
+			<xs:enumeration value="onlyExtraReliableConnections"/>
+			<xs:enumeration value="onlyConnectionsWithBaggageTrolleys"/>
+			-->
+			<xs:annotation>
+				<xs:documentation>Numerical features - they evaluate to a value that will be multiplied by Preference.WeightFactor.</xs:documentation>
+			</xs:annotation>
+			<xs:enumeration value="numberOfChanges"/>
+			<xs:enumeration value="waitDuration"/>
+			<xs:enumeration value="walkDistance"/>
+			<xs:enumeration value="walkDistanceCovered"/>
+			<xs:enumeration value="walkDistanceNotCovered"/>
+			<xs:enumeration value="walkDistancePossiblyCovered"/>
+			<!-- The following seem less close to realisation:
+			<xs:enumeration value="distanceByCycle"/>
+			<xs:enumeration value="distanceByScooter"/>
+			<xs:enumeration value="price"/>
+			<xs:enumeration value="scenicRatingsMax"/>
+			<xs:enumeration value="scenicRatingsAvg"/>
+			<xs:enumeration value="environmentalFootprint"/>
+			-->
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Response definitions ==========================================</xs:documentation>
 	</xs:annotation>
@@ -247,6 +422,7 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
+			<xs:element name="Score" type="Score" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -703,12 +879,17 @@
 			<xs:documentation>Allowed values for a AccessFeature.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="lift"/>
+			<xs:enumeration value="elevator"/>
 			<xs:enumeration value="stairs"/>
 			<xs:enumeration value="seriesOfStairs"/>
+			<xs:enumeration value="singleStep"/>
+			<xs:enumeration value="seriesOfSingleSteps"/>
 			<xs:enumeration value="escalator"/>
+			<xs:enumeration value="travelator"/>
 			<xs:enumeration value="ramp"/>
 			<xs:enumeration value="footpath"/>
+			<xs:enumeration value="other"/>
+			<xs:enumeration value="unknown"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TransitionEnumeration">
@@ -792,6 +973,7 @@
 		<xs:sequence>
 			<xs:group ref="TripDataFilterGroup"/>
 			<xs:group ref="TripMobilityFilterGroup"/>
+			<xs:element name="Score" type="Score" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:group ref="MultiPointTripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
@@ -874,6 +1056,7 @@
 				</xs:element>
 				<xs:element name="TripSummary" type="TripSummaryStructure"/>
 			</xs:choice>
+			<xs:element name="Score" type="Score" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:group ref="MultiPointWaitTimeGroup" minOccurs="0"/>
 			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
