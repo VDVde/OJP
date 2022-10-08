@@ -278,7 +278,7 @@
 			<xs:enumeration value="scenic"/>
 			<xs:enumeration value="peaceful"/>
 			-->
-			<xs:enumeration value="custom"/>
+			<xs:enumeration value="customPreference"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="Preference">
@@ -341,8 +341,31 @@
 				<xs:documentation>Numerical features - they evaluate to a value that will be multiplied by Preference.WeightFactor.</xs:documentation>
 			</xs:annotation>
 			<xs:enumeration value="numberOfChanges"/>
-			<xs:enumeration value="waitDuration"/>
-			<xs:enumeration value="walkDistance"/>
+			<xs:enumeration value="waitDuration">
+				<xs:annotation>
+					<xs:documentation>Calculated value: duration in minutes.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tripDuration">
+				<xs:annotation>
+					<xs:documentation>Calculated value: duration in minutes.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="earliestArrival">
+				<xs:annotation>
+					<xs:documentation>Calculated value: difference to the earliest arrival time of all trips found in minutes.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="latestDeparture">
+				<xs:annotation>
+					<xs:documentation>Calculated value: difference to the latest departure time of all trips found; absolute value in minutes.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="walkDistance">
+				<xs:annotation>
+					<xs:documentation>Calculated value: distance in meters.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="walkDistanceCovered"/>
 			<xs:enumeration value="walkDistanceNotCovered"/>
 			<xs:enumeration value="walkDistancePossiblyCovered"/>
