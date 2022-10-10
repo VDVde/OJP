@@ -27,7 +27,7 @@
 			<xs:maxInclusive value="100.0"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="MultilingualString">
+/*	<xs:complexType name="MultilingualString">
 		<xs:annotation>
 			<xs:documentation>Type for a string in a specified language.</xs:documentation>
 		</xs:annotation>
@@ -45,7 +45,7 @@
 				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
-	</xs:complexType>
+	</xs:complexType>*/
 	<xs:annotation>
 		<xs:documentation>========================================== Fare Authority ==========================================</xs:documentation>
 	</xs:annotation>
@@ -209,7 +209,7 @@
 					<xs:documentation>Contact fax number.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Url" type="xs:anyURI" minOccurs="0">
+			<xs:element name="Url" type="xs:WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The web site address of the contact.</xs:documentation>
 				</xs:annotation>
@@ -459,12 +459,12 @@
 					<xs:documentation>Maximum interval in advance of departure day or time that Service may be ordered. +V1.2..2</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BookingUrl" type="xs:anyURI" minOccurs="0">
+			<xs:element name="BookingUrl" type="xs:WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>URL for booking. +V1.1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BookingNote" type="MultilingualString" minOccurs="0">
+			<xs:element name="BookingNote" type="InternationalString" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Note about booking the FLEXIBLE LINE.</xs:documentation>
 				</xs:annotation>
