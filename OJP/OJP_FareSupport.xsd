@@ -221,174 +221,20 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+
 	<!-- ======================================================================= -->
-	<xs:simpleType name="BookingMethodEnumeration">
-		<xs:annotation>
-			<xs:documentation>Allowed values for Flexible Booking method.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="callDriver"/>
-			<xs:enumeration value="callOffice"/>
-			<xs:enumeration value="online"/>
-			<xs:enumeration value="other"/>
-			<xs:enumeration value="phoneAtStop"/>
-			<xs:enumeration value="text"/>
-			<xs:enumeration value="mobileApp"/>
-			<xs:enumeration value="atOffice"/>
-			<xs:enumeration value="none"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="BookingMethodListOfEnumerations">
-		<xs:annotation>
-			<xs:documentation>List of values for Flexible Booking values.</xs:documentation>
-		</xs:annotation>
-		<xs:list itemType="BookingMethodEnumeration"/>
-	</xs:simpleType>
+	<xs:simpleType name="BookingMethodEnumeration"><xs:annotation><xs:documentation>Allowed values for Flexible Booking method.</xs:documentation></xs:annotation><xs:restriction base="xs:string"><xs:enumeration value="callDriver"/><xs:enumeration value="callOffice"/><xs:enumeration value="online"/><xs:enumeration value="other"/><xs:enumeration value="phoneAtStop"/><xs:enumeration value="text"/><xs:enumeration value="mobileApp"/><xs:enumeration value="atOffice"/><xs:enumeration value="none"/></xs:restriction></xs:simpleType>
+	<xs:simpleType name="BookingMethodListOfEnumerations"><xs:annotation><xs:documentation>List of values for Flexible Booking values.</xs:documentation></xs:annotation><xs:list itemType="BookingMethodEnumeration"/></xs:simpleType>
 	<!-- ======================================================================= -->
-	<xs:simpleType name="BookingAccessEnumeration">
-		<xs:annotation>
-			<xs:documentation>Allowed values for Booking Access.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="public"/>
-			<xs:enumeration value="authorisedPublic"/>
-			<xs:enumeration value="staff"/>
-			<xs:enumeration value="other"/>
-		</xs:restriction>
-	</xs:simpleType>
+	<xs:simpleType name="BookingAccessEnumeration"><xs:annotation><xs:documentation>Allowed values for Booking Access.</xs:documentation></xs:annotation><xs:restriction base="xs:string"><xs:enumeration value="public"/><xs:enumeration value="authorisedPublic"/><xs:enumeration value="staff"/><xs:enumeration value="other"/></xs:restriction></xs:simpleType>
 	<!-- =================================================== -->
-	<xs:simpleType name="PurchaseWhenEnumeration">
-		<xs:annotation>
-			<xs:documentation>Allowed values for Purchase when.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:normalizedString">
-			<xs:enumeration value="advanceOnly"/>
-			<xs:enumeration value="untilPreviousDay"/>
-			<xs:enumeration value="dayOfTravelOnly"/>
-			<xs:enumeration value="advanceAndDayOfTravel"/>
-			<xs:enumeration value="timeOfTravelOnly"/>
-			<xs:enumeration value="subscriptionChargeMoment"/>
-			<xs:enumeration value="other"/>
-		</xs:restriction>
-	</xs:simpleType>
+	<xs:simpleType name="PurchaseWhenEnumeration"><xs:annotation><xs:documentation>Allowed values for Purchase when.</xs:documentation></xs:annotation><xs:restriction base="xs:normalizedString"><xs:enumeration value="advanceOnly"/><xs:enumeration value="untilPreviousDay"/><xs:enumeration value="dayOfTravelOnly"/><xs:enumeration value="advanceAndDayOfTravel"/><xs:enumeration value="timeOfTravelOnly"/><xs:enumeration value="subscriptionChargeMoment"/><xs:enumeration value="other"/></xs:restriction></xs:simpleType>
 	<!-- =================================================== -->
-	<xs:simpleType name="PurchaseMomentEnumeration">
-		<xs:annotation>
-			<xs:documentation>Allowed values for Purchase Moment.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:normalizedString">
-			<xs:enumeration value="onReservation">
-				<xs:annotation>
-					<xs:documentation>Purchase must   be made on reservation in advance of travel.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="inAdvance">
-				<xs:annotation>
-					<xs:documentation>Purchase can  be made in advance of travel.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="inAdvanceOnly">
-				<xs:annotation>
-					<xs:documentation>Purchase can only be made in advance of travel (e.g. for season ticket or advance ticket).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="beforeBoarding">
-				<xs:annotation>
-					<xs:documentation>Purchase can   be made before boarding transport vehicle.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="beforeBoardingOnly">
-				<xs:annotation>
-					<xs:documentation>Purchase must  be made before boarding transport vehicle.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="onBoarding">
-				<xs:annotation>
-					<xs:documentation>Purchase can   be made on boarding  transport vehicle.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="onBoardingOnly">
-				<xs:annotation>
-					<xs:documentation>Purchase can  only be made on boarding  transport vehicle.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="afterBoarding">
-				<xs:annotation>
-					<xs:documentation>Purchase can  be made after boarding  transport vehicle.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="onCheckIn">
-				<xs:annotation>
-					<xs:documentation>Purchase can  be made on entering transport system.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="onCheckOut">
-				<xs:annotation>
-					<xs:documentation>Purchase can   be made on leaving transport system.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="subscriptionOnly">
-				<xs:annotation>
-					<xs:documentation>Purchase can  only be made on subscription.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="other">
-				<xs:annotation>
-					<xs:documentation>Other moment of Purchase </xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="PurchaseMomentListOfEnumerations">
-		<xs:annotation>
-			<xs:documentation>List of Purchase Moment. values.</xs:documentation>
-		</xs:annotation>
-		<xs:list itemType="PurchaseMomentEnumeration"/>
-	</xs:simpleType>
+	<xs:simpleType name="PurchaseMomentEnumeration"><xs:annotation><xs:documentation>Allowed values for Purchase Moment.</xs:documentation></xs:annotation><xs:restriction base="xs:normalizedString"><xs:enumeration value="onReservation"><xs:annotation><xs:documentation>Purchase must   be made on reservation in advance of travel.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="inAdvance"><xs:annotation><xs:documentation>Purchase can  be made in advance of travel.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="inAdvanceOnly"><xs:annotation><xs:documentation>Purchase can only be made in advance of travel (e.g. for season ticket or advance ticket).</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="beforeBoarding"><xs:annotation><xs:documentation>Purchase can   be made before boarding transport vehicle.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="beforeBoardingOnly"><xs:annotation><xs:documentation>Purchase must  be made before boarding transport vehicle.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="onBoarding"><xs:annotation><xs:documentation>Purchase can   be made on boarding  transport vehicle.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="onBoardingOnly"><xs:annotation><xs:documentation>Purchase can  only be made on boarding  transport vehicle.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="afterBoarding"><xs:annotation><xs:documentation>Purchase can  be made after boarding  transport vehicle.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="onCheckIn"><xs:annotation><xs:documentation>Purchase can  be made on entering transport system.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="onCheckOut"><xs:annotation><xs:documentation>Purchase can   be made on leaving transport system.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="subscriptionOnly"><xs:annotation><xs:documentation>Purchase can  only be made on subscription.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="other"><xs:annotation><xs:documentation>Other moment of Purchase </xs:documentation></xs:annotation></xs:enumeration></xs:restriction></xs:simpleType>
+	<xs:simpleType name="PurchaseMomentListOfEnumerations"><xs:annotation><xs:documentation>List of Purchase Moment. values.</xs:documentation></xs:annotation><xs:list itemType="PurchaseMomentEnumeration"/></xs:simpleType>
 	<!-- =================================================== -->
-	<xs:simpleType name="BookingProcessEnumeration">
-		<xs:annotation>
-			<xs:documentation>Allowed values for Booking Process UIC 7037 Code list.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:normalizedString">
-			<xs:enumeration value="productNotAvailable">
-				<xs:annotation>
-					<xs:documentation>Product is not available.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="productNotBookable">
-				<xs:annotation>
-					<xs:documentation>Product cannot be booked.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="bookableThroughInternationalSystem">
-				<xs:annotation>
-					<xs:documentation>Product can be booked online internationally.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="bookableThroughNationalSystem">
-				<xs:annotation>
-					<xs:documentation>Product can be booked online nationally.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="bookableManuallly">
-				<xs:annotation>
-					<xs:documentation>Product can only be booked by contacting specific authorised retail outlets</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="other">
-				<xs:annotation>
-					<xs:documentation>Other booking process.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="BookingProcessListOfEnumerations">
-		<xs:annotation>
-			<xs:documentation>List of Booking Process values.</xs:documentation>
-		</xs:annotation>
-		<xs:list itemType="BookingProcessEnumeration"/>
-	</xs:simpleType>
+	<xs:simpleType name="BookingProcessEnumeration"><xs:annotation><xs:documentation>Allowed values for Booking Process UIC 7037 Code list.</xs:documentation></xs:annotation><xs:restriction base="xs:normalizedString"><xs:enumeration value="productNotAvailable"><xs:annotation><xs:documentation>Product is not available.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="productNotBookable"><xs:annotation><xs:documentation>Product cannot be booked.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="bookableThroughInternationalSystem"><xs:annotation><xs:documentation>Product can be booked online internationally.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="bookableThroughNationalSystem"><xs:annotation><xs:documentation>Product can be booked online nationally.</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="bookableManuallly"><xs:annotation><xs:documentation>Product can only be booked by contacting specific authorised retail outlets</xs:documentation></xs:annotation></xs:enumeration><xs:enumeration value="other"><xs:annotation><xs:documentation>Other booking process.</xs:documentation></xs:annotation></xs:enumeration></xs:restriction></xs:simpleType>
+	<xs:simpleType name="BookingProcessListOfEnumerations"><xs:annotation><xs:documentation>List of Booking Process values.</xs:documentation></xs:annotation><xs:list itemType="BookingProcessEnumeration"/></xs:simpleType>
 	<!-- =================================================== -->
 	<xs:simpleType name="GroupBookingEnumeration">
 		<xs:annotation>
