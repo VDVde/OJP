@@ -753,7 +753,7 @@
 					<xs:documentation>Number how often the access feature occurs in this PathLink</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-					<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
+			<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Designations of level and place where this PathLink starts.</xs:documentation>
 				</xs:annotation>
