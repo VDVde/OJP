@@ -83,6 +83,11 @@
 					<xs:documentation>Private mobility options to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="VehicleFilter" type="VehicleFilterStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Filter for VEHICLE and TRAIN NUMBERs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripPolicyGroup">
