@@ -511,7 +511,7 @@
 			<xs:choice minOccurs="0">
 				<xs:element name="DepArrTime" type="xs:dateTime" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Time when departure/arrival from/to location/place is required.</xs:documentation>
+						<xs:documentation>Time when departure/arrival from/to location is required.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="TimeAllowance" type="xs:duration" minOccurs="0">
