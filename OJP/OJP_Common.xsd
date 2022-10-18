@@ -8,19 +8,68 @@
 	<xs:annotation>
 		<xs:documentation>========================================== General ==========================================</xs:documentation>
 	</xs:annotation>
+	<xs:simpleType name="ErrorCodeEnumeration">
+		<xs:annotation>
+			<xs:documentation>All error codes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TRIP_ORIGINEQUIVALENT">
+				<xs:annotation>
+					<xs:documentation>The requested origin stop place has been replaced by an equivalent stop place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_DESTINATIONEQUIVALENT">
+				<xs:annotation>
+					<xs:documentation>The requested destination stop place has been replaced by an equivalent stop place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_VIAEQUIVALENT">
+				<xs:annotation>
+					<xs:documentation>One of the requested via stop places has been replaced by an equivalent stop place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="...">
+				<xs:annotation>
+					<xs:documentation>TODO search for "possible error" in spec and copy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+
+			<xs:enumeration value="STOPEVENT_NOEVENTFOUND">
+				<xs:annotation>
+					<xs:documentation>No departure/arrival could be found within the requested period of time that meets the given restrictions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="STOPEVENT_LOCATIONUNSERVED">
+				<xs:annotation>
+					<xs:documentation>At the locations (address, stop, etc.) for which stop events have been requested, there is no public transport service at all.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="STOPEVENT_LOCATIONUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The location (address, stop, etc.) for which stop events were requested is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="STOPEVENT_DATEOUTOFRANGE">
+				<xs:annotation>
+					<xs:documentation>There are no timetables available for the requested date.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OTHER">
+				<xs:annotation>
+					<xs:documentation>if the error can not be found from the list above</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="ErrorMessageStructure">
 		<xs:annotation>
 			<xs:documentation>Structured error messages</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Code" type="xs:normalizedString">
+			<xs:element name="Code" type="ErrorCodeEnumeration">
 				<xs:annotation>
 					<xs:documentation>
-						Open list of codes of the error situations, the issuing system may define additional codes:
-						STOPEVENT_DATEOUTOFRANGE: There are no timetables available for the requested date.
-						STOPEVENT_LOCATIONUNKNOWN: The location (address, stop, etc.) for which stop events were requested is unknown.
-						STOPEVENT_LOCATIONUNSERVED: At the locations (address, stop, etc.) for which stop events have been requested, there is no public transport service at all.
-						STOPEVENT_NOEVENTFOUND: No departure/arrival could be found within the requested period of time that meets the given restrictions.
+						error code. For additional codes. OTHER, if the error can't be found in the list
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -29,6 +78,11 @@
 					<xs:documentation>Description of the error situation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="LogData" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If additional log data is provided.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PrivateCodeStructure">
