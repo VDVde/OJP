@@ -95,7 +95,7 @@
 					<xs:documentation>Private mobility options to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TypeOfProductCategoryFilter" type="TypeOfProductCategoryFilterStructure" minOccurs="0">
+			<xs:element name="ProductCategoryFilter" type="ProductCategoryFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Product categories to include/exclude.</xs:documentation>
 				</xs:annotation>
