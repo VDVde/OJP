@@ -179,7 +179,7 @@
 					<xs:sequence>
 						<xs:element name="Operator" type="siri:AffectedOperatorStructure" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Operators of services.</xs:documentation>
+								<xs:documentation>Operators of the services.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
