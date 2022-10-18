@@ -656,7 +656,8 @@ format in preparation to generate the documentation.
 
 
 	<xsl:template match="xs:simpleType[@name]" priority="-1">
-		<xsl:message terminate="yes">Proper documentation rules for simpleType <xsl:value-of select="@name"/> not in place, yet!</xsl:message>
+		<!--<xsl:message terminate="yes">Proper documentation rules for simpleType <xsl:value-of select="@name"/> not in place, yet!</xsl:message> -->
+		<!--TODO list things not done yet -->
 	</xsl:template>
 
 
