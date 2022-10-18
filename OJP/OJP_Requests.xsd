@@ -194,7 +194,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-
 	<xs:annotation>		
 		<xs:documentation>========================================== Status Service ==========================================</xs:documentation>
 	</xs:annotation>
@@ -222,8 +221,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-					
-<xs:annotation>				
+	<xs:annotation>
 		<xs:documentation>========================================== TripRefine Service ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:element name="OJPTripRefineRequest" type="OJPTripRefineRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
@@ -236,7 +234,7 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>					
+	</xs:complexType>
 	<xs:element name="OJPTripRefineDelivery" type="OJPTripRefineDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPTripRefineDeliveryStructure">
 		<xs:complexContent>
