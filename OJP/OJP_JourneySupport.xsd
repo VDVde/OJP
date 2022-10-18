@@ -516,7 +516,7 @@
 				</xs:element>
 				<xs:element name="TimeAllowance" type="xs:duration" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Extra time needed before reaching/after leaving this location/place.</xs:documentation>
+						<xs:documentation>Extra time needed before reaching/after leaving this location.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
