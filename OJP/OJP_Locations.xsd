@@ -22,7 +22,7 @@
 				</xs:element>
 				<xs:element name="PlaceRef" type="PlaceRefStructure">
 					<xs:annotation>
-						<xs:documentation>LOCATION / PLACE for further refinement. If a location/place in a previous response was marked as not "complete" it can be refined by putting it here.</xs:documentation>
+						<xs:documentation>LOCATION for further refinement. If a location in a previous response was marked as not "complete" it can be refined by putting it here.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
