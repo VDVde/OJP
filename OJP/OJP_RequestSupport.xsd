@@ -175,7 +175,7 @@
 				<xs:annotation>
 					<xs:documentation>Container for OPERATOR objects. Only operator objects that are referenced in the response should be put into the container.</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
+				<xs:complexType name="AffectedOperatorList">
 					<xs:sequence>
 						<xs:element name="Operator" type="siri:AffectedOperatorStructure" maxOccurs="unbounded">
 							<xs:annotation>
