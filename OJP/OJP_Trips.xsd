@@ -712,6 +712,7 @@
 			<xs:enumeration value="travelator"/>
 			<xs:enumeration value="ramp"/>
 			<xs:enumeration value="footpath"/>
+			<xs:enumeration value="shuttle"/>
 			<xs:enumeration value="other"/>
 			<xs:enumeration value="unkown"/>
 		</xs:restriction>
@@ -733,18 +734,48 @@
 			<xs:documentation>Allowed values for AccessibilityFeatures.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="visualSigns"/>
+			<xs:annotation>
+				<xs:documentation>For mobility impairments...</xs:documentation>
+			</xs:annotation>
+			<xs:enumeration value="lowFloorAccess"/>
+			<xs:enumeration value="stepFreeAccess"/>
+			<xs:enumeration value="accessWithSteps"/>
+			<xs:enumeration value="slidingStep"/>
+			<xs:enumeration value="raisedKerb"/>
+			<xs:enumeration value="narrowEntrance"/>
+			<xs:enumeration value="wheelchairLift"/>
+			<xs:enumeration value="manualRamp"/>
+			<xs:enumeration value="automaticRamp"/>
+			<xs:enumeration value="suitableForWheelchairs"/>
+			<xs:enumeration value="suitableForUnassistedWheelchairs"/>
+			<xs:enumeration value="suitableForHeaviliyDisabled"/>
+			<xs:enumeration value="suitableForPushchairs"/>
+			<xs:enumeration value="suitableForBicycles"/>
+			<xs:annotation>
+				<xs:documentation>For sensory impairments...</xs:documentation>
+			</xs:annotation>
+			<xs:enumeration value="tactilePlatformEdges"/>
 			<xs:enumeration value="tactileGuidingStrips"/>
 			<xs:enumeration value="tactileOrAuditorySigns"/>
-			<xs:enumeration value="elevatorAcousticAnnouncements"/>
-			<xs:enumeration value="elevatorTactileButtons"/>
-			<xs:enumeration value="elevatorSuitableForCycles"/>
-			<xs:enumeration value="entranceLevelAccess"/>
-			<xs:enumeration value="entranceLiftInVehicle"/>
-			<xs:enumeration value="entranceAssistedLiftOnPlatform"/>
-			<xs:enumeration value="entranceAssistedRamp"/>
-			<xs:enumeration value="entranceSlidingStep"/>
-			<xs:enumeration value="entranceUnassistedWheelchairSuitable"/>
+			<xs:enumeration value="visualSigns"/>
+			<xs:enumeration value="elevatorWithTactileButtons"/>
+			<xs:enumeration value="elevatorWithAcousticAnnouncements"/>
+			<xs:enumeration value="audioInformation"/>
+			<xs:enumeration value="audioForHearingImpaired"/>
+			<xs:enumeration value="visualDisplays"/>
+			<xs:enumeration value="displaysForVisuallyImpaired"/>
+			<xs:enumeration value="largePrintTimetables"/>
+			<xs:annotation>
+				<xs:documentation>Assistance...</xs:documentation>
+			</xs:annotation>
+			<xs:enumeration value="boardingAssistance"/>
+			<xs:enumeration value="onboardAssistance"/>
+			<xs:enumeration value="unaccompaniedMinorAssistance"/>
+			<xs:annotation>
+				<xs:documentation>To pay attention to...</xs:documentation>
+			</xs:annotation>
+			<xs:enumeration value="barrier"/>
+			<xs:enumeration value="validator"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
