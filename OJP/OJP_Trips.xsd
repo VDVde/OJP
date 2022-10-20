@@ -734,9 +734,7 @@
 			<xs:documentation>Allowed values for AccessibilityFeatures.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:annotation>
-				<xs:documentation>For mobility impairments...</xs:documentation>
-			</xs:annotation>
+			<!--For mobility impairments...-->
 			<xs:enumeration value="lowFloorAccess"/>
 			<xs:enumeration value="stepFreeAccess"/>
 			<xs:enumeration value="accessWithSteps"/>
@@ -751,9 +749,7 @@
 			<xs:enumeration value="suitableForHeaviliyDisabled"/>
 			<xs:enumeration value="suitableForPushchairs"/>
 			<xs:enumeration value="suitableForBicycles"/>
-			<xs:annotation>
-				<xs:documentation>For sensory impairments...</xs:documentation>
-			</xs:annotation>
+			<!--For sensory impairments...-->
 			<xs:enumeration value="tactilePlatformEdges"/>
 			<xs:enumeration value="tactileGuidingStrips"/>
 			<xs:enumeration value="tactileOrAuditorySigns"/>
@@ -765,15 +761,11 @@
 			<xs:enumeration value="visualDisplays"/>
 			<xs:enumeration value="displaysForVisuallyImpaired"/>
 			<xs:enumeration value="largePrintTimetables"/>
-			<xs:annotation>
-				<xs:documentation>Assistance...</xs:documentation>
-			</xs:annotation>
+			<!--Assistance...-->
 			<xs:enumeration value="boardingAssistance"/>
 			<xs:enumeration value="onboardAssistance"/>
 			<xs:enumeration value="unaccompaniedMinorAssistance"/>
-			<xs:annotation>
-				<xs:documentation>To pay attention to...</xs:documentation>
-			</xs:annotation>
+			<!--To pay attention to...-->
 			<xs:enumeration value="barrier"/>
 			<xs:enumeration value="validator"/>
 		</xs:restriction>
