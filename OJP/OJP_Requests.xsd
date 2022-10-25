@@ -194,8 +194,8 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:annotation>
-		<xs:documentation>========================================== TripRefine Service ==========================================</xs:documentation>
+  <xs:annotation>
+  		<xs:documentation>========================================== TripRefine Service ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:element name="OJPTripRefineRequest" type="OJPTripRefineRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPTripRefineRequestStructure">
