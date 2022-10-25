@@ -43,17 +43,6 @@
 					<xs:documentation>The GML LineString of the line, which "represents" the route. Normally a line has multiple routes. This is just the main one for presentation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Probability" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Probability, that this result is the one meant by the user's input. Value should be between 0 and 1.</xs:documentation>
-				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:float">
-						<xs:minInclusive value="0"/>
-						<xs:maxInclusive value="1"/>
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
 			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>List of transport modes that are supported by this line.</xs:documentation>
