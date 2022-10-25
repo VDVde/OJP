@@ -1082,11 +1082,11 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="unknown"/>
 			<xs:enumeration value="available"/>
-			<xs:enumeration value="partiallyAvailable"/>
+			<xs:enumeration value="partiallyAvailable">
 				<xs:annotation>
-					<xs:documentation>Always a note must be provided with the usage of partiallyAvailable</xs:documentation>
+					<xs:documentation>If partiallyAvailable is used, then some note should be provided in one of the descriptive elements of the containing PathLink</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>					       
+			</xs:enumeration>
 			<xs:enumeration value="notAvailable"/>
 		</xs:restriction>
 	</xs:simpleType>
