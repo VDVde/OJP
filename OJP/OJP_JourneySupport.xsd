@@ -518,8 +518,6 @@
 				<xs:element name="TimeAllowance" type="xs:duration" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Extra time needed before reaching/after leaving this place.
-						
-						Note: In some implementations this value is needed by a responding system in a OJPMultiPointTripRequest to be filled with an estimation with all travel time before/after this place. Generally, this element is to be used for now+time to reach the starting point of the first leg or the destination from the last leg. Overloading the meaning in a responding system is discouraged.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
