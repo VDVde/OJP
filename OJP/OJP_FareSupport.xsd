@@ -358,14 +358,7 @@
 			</xs:element>
 			<xs:element name="SaleUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>URL to buy the FareProduct online.
-					
-					Note: EU-Spirit: 
-					FareProductStructure.FareProductBookingGroup.SaleUrl contains an URL pointing to a fully responsive 
-					webview, which can be used within any container. The webview itself should contain further ticketing 
-					information and/or the possibility to sell the ticket. The URL can also be a universal link URL, which 
-					automatically redirects to the correct ticketing platform, depending on used OS and context. 
-					</xs:documentation>
+					<xs:documentation>URL to buy the FareProduct online.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0" maxOccurs="unbounded"/>
