@@ -436,7 +436,7 @@
 			<xs:element name="EmissionCO2" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="GramPerPersonKm">
+						<xs:element name="KilogramPerPersonKm">
 							<xs:annotation>
 								<xs:documentation>Gram by person and by kilometer of CO2 emmisions.</xs:documentation>
 							</xs:annotation>
