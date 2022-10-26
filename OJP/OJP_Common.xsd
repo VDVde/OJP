@@ -8,7 +8,7 @@
 	<xs:annotation>
 		<xs:documentation>========================================== General ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:simpleType name="ErrorCodeEnumeration">
+	<xs:simpleType name="ProblemTypeEnumeration">
 		<xs:annotation>
 			<xs:documentation>All error codes</xs:documentation>
 		</xs:annotation>
@@ -33,22 +33,21 @@
 					<xs:documentation>TODO search for "possible error" in spec and copy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-
 			<xs:enumeration value="STOPEVENT_NOEVENTFOUND">
 				<xs:annotation>
 					<xs:documentation>No departure/arrival could be found within the requested period of time that meets the given restrictions.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="STOPEVENT_LOCATIONUNSERVED">
 				<xs:annotation>
 					<xs:documentation>At the locations (address, stop, etc.) for which stop events have been requested, there is no public transport service at all.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="STOPEVENT_LOCATIONUNKNOWN">
 				<xs:annotation>
 					<xs:documentation>The location (address, stop, etc.) for which stop events were requested is unknown.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="STOPEVENT_DATEOUTOFRANGE">
 				<xs:annotation>
 					<xs:documentation>There are no timetables available for the requested date.</xs:documentation>
@@ -58,31 +57,35 @@
 				<xs:annotation>
 					<xs:documentation>if the error can not be found from the list above</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
-		</xs:restriction>
+			</xs:enumeration>
+		</xs:restriction>	
 	</xs:simpleType>
-	<xs:complexType name="ErrorMessageStructure">
+	<xs:complexType name="ProblemStructure">
 		<xs:annotation>
 			<xs:documentation>Structured error messages</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Code" type="ErrorCodeEnumeration">
+			<xs:element name="Type" type="ProblemTypeEnumeration">
 				<xs:annotation>
-					<xs:documentation>
-						error code. For additional codes. OTHER, if the error can't be found in the list
+					<xs:documentation>Problem type (code). OTHER, if the problem can't be found in the list
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Text" type="InternationalTextStructure" minOccurs="0">
+			<xs:element name="Title" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Description of the error situation.</xs:documentation>
+					<xs:documentation>Title of the problem situation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Detail" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Human readable explanation of the problem situation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="LogData" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If additional log data is provided.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PrivateCodeStructure">
@@ -248,6 +251,28 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:complexType name="VehicleFilterStructure">
+		<xs:annotation>
+			<xs:documentation>Filter for Vehicles</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether to include or exclude given VehicleRefs and TRAIN NUMBERS in the list from the search. Default is exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VehicleRef" type="siri:VehicleRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to VEHICLE</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TrainNumber" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>TRAIN NUMBERs</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== Sharing Services ==========================================</xs:documentation>
 	</xs:annotation>
