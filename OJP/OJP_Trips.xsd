@@ -283,7 +283,7 @@
 			<xs:annotation>
 				<xs:documentation>Id of this trip result for referencing purposes. Unique within trip response.</xs:documentation>
 			</xs:annotation>
-		</xs:attribute>		
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="TripSummaryStructure">
 		<xs:annotation>
@@ -333,7 +333,7 @@
 			<xs:annotation>
 				<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 			</xs:annotation>
-		</xs:attribute>		
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="TripStructure">
 		<xs:annotation>
@@ -379,7 +379,7 @@
 			<xs:annotation>
 				<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 			</xs:annotation>
-		</xs:attribute>		
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="TripLegStructure">
 		<xs:annotation>
@@ -401,7 +401,7 @@
 			<xs:annotation>
 				<xs:documentation>Id of this trip leg. Unique within trip result.</xs:documentation>
 			</xs:annotation>
-		</xs:attribute>		
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="TimedLegStructure">
 		<xs:annotation>
@@ -996,7 +996,7 @@
 			<xs:annotation>
 				<xs:documentation>Id of this trip result for referencing purposes. Unique within multipoint-trip response.</xs:documentation>
 			</xs:annotation>
-		</xs:attribute>		
+		</xs:attribute>
 	</xs:complexType>
 	<xs:group name="MultiPointWaitTimeGroup">
 		<xs:annotation>

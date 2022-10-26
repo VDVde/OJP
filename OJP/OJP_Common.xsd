@@ -5,14 +5,13 @@
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	
 	<!-- ==== Entity ================================================================ -->
 	<xs:simpleType name="ObjectIdType">
 		<xs:annotation>
 			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:normalizedString"/>
-	</xs:simpleType>	
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== General ==========================================</xs:documentation>
 	</xs:annotation>

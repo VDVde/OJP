@@ -147,11 +147,11 @@
 				</xs:element>
 			</xs:choice>
 		</xs:sequence>
-			<xs:attribute name="id" type="ObjectIdType">
-				<xs:annotation>
-					<xs:documentation>ID of this result.</xs:documentation>
-				</xs:annotation>
-			</xs:attribute>		
+		<xs:attribute name="id" type="ObjectIdType">
+			<xs:annotation>
+				<xs:documentation>ID of this result.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="StopFareResultStructure">
 		<xs:annotation>
