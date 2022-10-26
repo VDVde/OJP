@@ -91,7 +91,7 @@
 			<xs:minInclusive value="0.0"/>
 			<xs:maxInclusive value="100.0"/>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
 	<xs:complexType name="AreaStructure">
 		<xs:annotation>
 			<xs:documentation>Area described as a polygon.</xs:documentation>
