@@ -581,7 +581,7 @@
 									</ojp:PublishedServiceName>
 									<ojp:Operators>
 										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
-									</ojp:Operators>	
+									</ojp:Operators>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
