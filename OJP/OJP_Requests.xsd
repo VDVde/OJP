@@ -194,7 +194,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:annotation>		
+	<xs:annotation>
 		<xs:documentation>========================================== Status Service ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:element name="OJPStatusRequest" type="OJPStatusRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
@@ -206,8 +206,7 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>					
-
+	</xs:complexType>
 	<xs:element name="OJPStatusDelivery" type="OJPStatusDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPStatusDeliveryStructure">
 		<xs:complexContent>
