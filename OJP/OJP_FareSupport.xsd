@@ -169,7 +169,7 @@
 			<xs:documentation>Type for contact details.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ContactPerson" type="xs:string" minOccurs="0">
+			<xs:element name="ContactPerson" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Name of contact person.</xs:documentation>
 				</xs:annotation>
