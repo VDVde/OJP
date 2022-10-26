@@ -34,12 +34,12 @@
 			<xs:element ref="siri:PublishedLineName" minOccurs="0"/>
 			<xs:element name="DirectionRef" type="siri:DirectionRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>DIRECTION of LINE if relevant for the shape.</xs:documentation>
+					<xs:documentation>DIRECTION of LINE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="gml:LineString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The GML LineString of the line, which "represents" the route. Normally a line has multiple routes. This is just the main one for presentation.</xs:documentation>
+					<xs:documentation>The GML LineString of the line, which "represents" the route. Normally a line has multiple routes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
