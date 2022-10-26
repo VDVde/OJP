@@ -148,7 +148,7 @@
 			</xs:element>
 			<xs:element name="Operators" type="OperatorsRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Operators relevant to this PlaceResult.</xs:documentation>
+					<xs:documentation>st of operators operating at this place object. This list should only be filled if this is explicitly requested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -175,6 +175,11 @@
 					<xs:documentation>Tells the service to include the available public transport modes at returned stops.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="IncludeOperators" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Tells the service to include the available operators at returned stops.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="PlaceDataFilterGroup">

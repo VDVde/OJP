@@ -171,7 +171,7 @@
 			<xs:documentation>Structure providing a collection of operators.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="OperatorsStructure" type="siri:AffectedOperatorStructure" maxOccurs="unbounded">
+			<xs:element name="Operator" type="siri:AffectedOperatorStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Operators of the services.</xs:documentation>
 				</xs:annotation>
