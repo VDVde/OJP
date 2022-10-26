@@ -1065,8 +1065,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="eachOrigin">
 				<xs:annotation>
-					<xs:documentation>a distinct solution for each of the 
-origin points has to be found.</xs:documentation>
+					<xs:documentation>a distinct solution for each of the origin points has to be found.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="eachDestination">
