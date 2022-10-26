@@ -240,7 +240,7 @@
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="ProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Error messages related to this trip result.</xs:documentation>
 				</xs:annotation>
@@ -903,7 +903,7 @@
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within multipoint-trip response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="ProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Error messages related to trip result.</xs:documentation>
 				</xs:annotation>

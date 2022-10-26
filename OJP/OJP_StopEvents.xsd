@@ -189,7 +189,7 @@
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="ProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Error messages that refer to this stop event.</xs:documentation>
 				</xs:annotation>
