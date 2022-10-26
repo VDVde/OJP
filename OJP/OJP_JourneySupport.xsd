@@ -65,7 +65,7 @@
 			<xs:element ref="JourneyRef"/>
 			<xs:element name="PublicCode" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Public code of the SERVICE JOURNEY (same meaning as in NeTEx).</xs:documentation>
+					<xs:documentation>Public code of the SERVICE JOURNEY (same meaning as in NeTEx). Examples: "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="ServiceGroup"/>
