@@ -58,7 +58,7 @@
 					<xs:documentation>if the error can not be found from the list above</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-		</xs:restriction>	
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="ProblemStructure">
 		<xs:annotation>
@@ -80,7 +80,7 @@
 				<xs:annotation>
 					<xs:documentation>Human readable explanation of the problem situation.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="LogData" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If additional log data is provided.</xs:documentation>
