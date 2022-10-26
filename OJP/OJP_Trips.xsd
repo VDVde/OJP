@@ -1077,6 +1077,11 @@
 					<xs:documentation>Refers to a leg to be refined by the server.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Usage of realtime data in refinment. Default is "fulL".</xs:documentation>
+				</xs:annotation>			
+			</xs:element>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
 				<xs:annotation>

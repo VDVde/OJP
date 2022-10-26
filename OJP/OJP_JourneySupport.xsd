@@ -531,6 +531,25 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="UseRealtimeDataEnumeration">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="full">
+				<xs:annotation>
+					<xs:documentation>Full usage of realtime information, including the removing of SERVICE JOURNEYS.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="explanatory">
+				<xs:annotation>
+					<xs:documentation>Cancelled SERVICE JOURNEY are still being shown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="none">
+				<xs:annotation>
+					<xs:documentation>Only based on timetable data</xs:documentation>
+				</xs:annotation>			
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>		
 	<xs:group name="BaseTripPolicyGroup">
 		<xs:annotation>
 			<xs:documentation>Policies that control the trip search behaviour for both public and individual transport.</xs:documentation>
@@ -544,9 +563,9 @@
 				</xs:element>
 				<xs:group ref="NumberOfResultsGroup" minOccurs="0"/>
 			</xs:choice>
-			<xs:element name="IgnoreRealtimeData" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The trip calculation should not use any realtime or incident data.</xs:documentation>
+					<xs:documentation>The way realtime data is used in the calculation of the trip (repleases IgnoreRealtimeData)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ImmediateTripStart" type="xs:boolean" default="false" minOccurs="0">

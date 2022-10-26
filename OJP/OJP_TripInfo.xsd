@@ -38,9 +38,9 @@
 			<xs:documentation>Parameters that control the response behaviour.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="UseTimetabledDataOnly" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="UseRealTimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Do not show any realtime or incident data. Default is false.</xs:documentation>
+					<xs:documentation>Use realtime data. Default is "fulL"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
