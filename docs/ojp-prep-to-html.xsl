@@ -39,16 +39,57 @@
 	
 	<xsl:template match="/schema-documentation">
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
-		<html xml:lang="de" lang="de">
+		<html xml:lang="en" lang="en">
 			<head>
 				<title>OJP - Open API for distributed Journey Planning</title>
 				<meta charset="UTF-8"/>
-				<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-				<meta name="robots" content="noindex nofollow"/>
+				<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+				<script type="text/javascript"><xsl:text disable-output-escaping='yes'>
+					<![CDATA[
+					document.addEventListener('DOMContentLoaded', function() {
+						var headers = ['h2', 'h3', 'h4', 'h5', 'h6'];
+						for (var i = 0; i < headers.length; i++) {
+							var headerElements = document.getElementsByTagName(headers[i]);
+							for (var j = 0; j < headerElements.length; j++) {
+								var header = headerElements[j];
+								header.innerHTML += '<a class="header-link" href="#' + header.parentNode.id + '"><span class="link-icon"></span></a>';
+							}
+						}
+					});
+					]]>
+				</xsl:text></script>
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"/>
 				<link rel="stylesheet" href="asciidoc.css"/>
-				<!--xsl:call-template name="css-stylesheet"/-->
+				<style><xsl:text disable-output-escaping='yes'>
+					<![CDATA[
+					.header-link {
+						position: relative;
+						font-size: 0.65em;
+						left: 0.5em;
+						opacity: 0;
+
+						-webkit-transition: opacity 0.2s ease-in-out 0.1s;
+						-moz-transition: opacity 0.2s ease-in-out 0.1s;
+						-ms-transition: opacity 0.2s ease-in-out 0.1s;
+					}
+
+					h2:hover .header-link,
+					h3:hover .header-link,
+					h4:hover .header-link,
+					h5:hover .header-link,
+					h6:hover .header-link {
+						opacity: 1;
+					}
+
+					.link-icon {
+						width: 22px;
+						height: 18px;
+						display: inline-block;
+						background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3e%3c!--! Font Awesome Pro 6.2.0 by %40fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons%2c Inc.--%3e%3cpath d='M579.8 267.7c56.5-56.5 56.5-148 0-204.5-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6 31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0l112.3-112.3zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5 50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5l112.2-112.3c31.5-31.5 82.5-31.5 114 0 27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z'/%3e%3c/svg%3e") no-repeat;
+					}
+					]]>
+				</xsl:text></style>
 			</head>
 			<body class="article">
 				<xsl:call-template name="pre-content"/>
@@ -355,13 +396,39 @@
 		<xsl:choose>
 			<xsl:when test="@class = 'bold'">
 				<strong>
+					<xsl:call-template name="explain-cardinality"/>
 					<xsl:value-of select="."/>
 				</strong>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="."/>
+				<span>
+					<xsl:call-template name="explain-cardinality"/>
+					<xsl:value-of select="."/>
+				</span>
 			</xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+
+	<data:explained-cardinalities>
+		<data:case name="0:1">optional, single</data:case>
+		<data:case name="0:*">optional, multiple</data:case>
+		<data:case name="1:1">mandatory, single</data:case>
+		<data:case name="1:*">mandatory, at least one</data:case>
+		<data:case name="-0:1">optional, single, part of a choice</data:case>
+		<data:case name="-0:*">optional, multiple, part of a choice</data:case>
+		<data:case name="-1:1">mandatory, single, part of a choice</data:case>
+		<data:case name="-1:*">mandatory, at least one, part of a choice</data:case>
+	</data:explained-cardinalities>
+	<xsl:variable name="explained-cardinalities" select="document('')/xsl:stylesheet/data:explained-cardinalities"/>
+
+	<xsl:template name="explain-cardinality">
+		<xsl:param name="cardinality" select="."/>
+		<xsl:variable name="explanation" select="$explained-cardinalities/data:case[@name = $cardinality]"/>
+		<xsl:if test="$explanation">
+			<xsl:attribute name="title">
+				<xsl:value-of select="string($explanation)"/>
+			</xsl:attribute>
+		</xsl:if>
 	</xsl:template>
 
 	<!-- *** various *** -->
@@ -383,7 +450,7 @@
 	</xsl:template>
 
 	<xsl:template match="xref">
-	  <a href="#{@ref}">
+	  <a href="#{@ref}" title="{@ref}">
 	    <xsl:apply-templates/>
 	  </a>
 	</xsl:template>
