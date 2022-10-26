@@ -31,7 +31,7 @@
 		<xs:sequence>
 			<xs:element name="ServiceStarted" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Datetime when service was started</xs:documentation>
+					<xs:documentation>Time when service was started</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SystemAvailability" minOccurs="0">
