@@ -279,17 +279,17 @@
 			</xs:choice>
 			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
+		<xs:attribute name="id" type="ObjectIdType">
+			<xs:annotation>
+				<xs:documentation>Id of this trip result for referencing purposes. Unique within trip response.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>		
 	</xs:complexType>
 	<xs:complexType name="TripSummaryStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for trip overview information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="xs:NMTOKEN">
-				<xs:annotation>
-					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="Origin" type="PlaceRefStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Describes the origin situation of this trip.</xs:documentation>
@@ -329,17 +329,17 @@
 			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
+		<xs:attribute name="id" type="ObjectIdType">
+			<xs:annotation>
+				<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>		
 	</xs:complexType>
 	<xs:complexType name="TripStructure">
 		<xs:annotation>
 			<xs:documentation>[an extended form of PT TRIP in TM and NeTEx as it also includes the initial and final access legs to and from public transport] whole journey from passenger origin to passenger destination in one or more trip LEGs </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripId" type="xs:NMTOKEN">
-				<xs:annotation>
-					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="Duration" type="xs:duration">
 				<xs:annotation>
 					<xs:documentation>Overall duration of the trip.</xs:documentation>
@@ -375,17 +375,17 @@
 			<xs:group ref="TripStatusGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
+		<xs:attribute name="id" type="ObjectIdType">
+			<xs:annotation>
+				<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>		
 	</xs:complexType>
 	<xs:complexType name="TripLegStructure">
 		<xs:annotation>
 			<xs:documentation>a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="xs:NMTOKEN">
-				<xs:annotation>
-					<xs:documentation>Id of this trip leg. Unique within trip result.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="ParticipantRef" type="siri:ParticipantRefStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>[equivalent of PARTICIPANT in SIRI] IT system that is participating in a communication with other participant(s)</xs:documentation>
@@ -397,6 +397,11 @@
 				<xs:element name="ContinuousLeg" type="ContinuousLegStructure"/>
 			</xs:choice>
 		</xs:sequence>
+		<xs:attribute name="id" type="ObjectIdType">
+			<xs:annotation>
+				<xs:documentation>Id of this trip leg. Unique within trip result.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>		
 	</xs:complexType>
 	<xs:complexType name="TimedLegStructure">
 		<xs:annotation>
@@ -987,6 +992,11 @@
 			<xs:group ref="MultiPointWaitTimeGroup" minOccurs="0"/>
 			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
+		<xs:attribute name="id" type="ObjectIdType">
+			<xs:annotation>
+				<xs:documentation>Id of this trip result for referencing purposes. Unique within multipoint-trip response.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>		
 	</xs:complexType>
 	<xs:group name="MultiPointWaitTimeGroup">
 		<xs:annotation>
