@@ -57,14 +57,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="OperatorRefList">
-		<xs:annotation>
-			<xs:documentation>List of OperatorRef</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="OperatorRef" type="siri:OperatorRefStructure" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:group name="ScheduledJourneyGroup">
 		<xs:annotation>
 			<xs:documentation>Vehicle journey (not dated).</xs:documentation>
@@ -110,10 +102,9 @@
 					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be the VEHICLE Id.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="OperatorRef" minOccurs="0"/>
-			<xs:element name="additionalOperators" type="OperatorRefList" minOccurs="0">
+			<xs:element name="Operators" type="OperatorsRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Contains additional OPERATORs namenly if in a ContinuousLeg the Leg can be performed by several operators mainly in ALTERNATIVE MODE OF OPERATION, where there might be dozens of taxi companys and 5-10 free floating sharing companies.</xs:documentation>
+					<xs:documentation>Reference to the OPERATORS. Multiple OPERATORS in case a ContinuousLeg can be operated by more than one operator, especially in the ALTERNATIVE MODE OF OPERATION where there can be dozens of taxi companies and many free floating sharing companies.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RouteDescription" type="InternationalTextStructure" minOccurs="0">
