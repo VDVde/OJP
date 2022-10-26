@@ -34,20 +34,14 @@
 					<xs:documentation>Time when service was started</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SystemAvailability" minOccurs="0">
+			<xs:element name="SystemAvailability" type="Percentage" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>System availability as a percentage</xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:decimal">
-						<xs:minInclusive value="0.0"/>
-						<xs:maxInclusive value="100.0"/>
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
 			<xs:element name="LastTimetableUpdate" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>System description</xs:documentation>
+					<xs:documentation>Time, when the timetable was last updated.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServerBuildVersion" type="xs:normalizedString" minOccurs="0">
