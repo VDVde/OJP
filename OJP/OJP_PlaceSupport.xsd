@@ -460,7 +460,7 @@
 					<xs:documentation>Public name of the place.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AllowedSystemId" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="AllowedSystemId" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
