@@ -1095,9 +1095,9 @@
 			<xs:enumeration value="validator"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="EquipmentStatusEnumeration">
+	<xs:simpleType name="AccessFeatureStatusEnumeration">
 		<xs:annotation>
-			<xs:documentation>Allowed values for status of EQUIPMENT.</xs:documentation>
+			<xs:documentation>Allowed values for status of the access feature.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="unknown"/>
@@ -1142,7 +1142,7 @@
 					<xs:documentation>Number indicating how often the access feature occurs in this PathLink</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AccessFeatureStatus" type="EquipmentStatusEnumeration" minOccurs="0">
+			<xs:element name="AccessFeatureStatus" type="AccessFeatureStatusEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the access feature is available or out of service.</xs:documentation>
 				</xs:annotation>
