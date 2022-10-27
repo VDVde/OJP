@@ -422,6 +422,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
+			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information about the feasibility of the TRIP, in particular with respect to the access features used.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
@@ -471,12 +476,17 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
+			<xs:group ref="TripStatusGroup" minOccurs="0"/>
+			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information about the feasibility of the TRIP, in particular with respect to the access features used.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="TripStatusGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -592,12 +602,17 @@
 					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information about the feasibility of the TransferLeg, in particular with respect to the access features used.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ContinuousLegStructure">
@@ -646,12 +661,17 @@
 					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information about the feasibility of the ContinuousLeg, in particular with respect to the access features used.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
+			<xs:group ref="SustainabilityGroup" minOccurs="0"/>			
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -1090,6 +1110,18 @@
 			<xs:enumeration value="notAvailable"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="FeasibilityEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for the feasibility of a TRIP or part of a TRIP.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="allAccessFeaturesOk"/>
+			<xs:enumeration value="accessFeatureOutOfService"/>
+			<xs:enumeration value="accessFeaturePartiallyAvailable"/>
+			<xs:enumeration value="accessFeaturesWithUnknownStatus"/>
+			<xs:enumeration value="seeSituations"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
 		<xs:annotation>
 			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs, BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
@@ -1113,6 +1145,48 @@
 			<xs:element name="AccessFeatureStatus" type="EquipmentStatusEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the access feature is available or out of service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccessFeatureStatusText" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Textual information about reduced availability of the access feature, in particular if AccessFeatureStatus is partiallyAvailable.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to a situation that affects the availability of the access feature.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Designations of level and place where this PathLink starts.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="To" type="PathLinkEndStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Designations of level and place where this PathLink ends.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PathLinkEndStructure">
+		<xs:annotation>
+			<xs:documentation>Designations of a floor/level.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LevelPublicCode" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Public identifier of the level as found on elevators and signs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LevelName" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Official name of the level.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Id" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Id of the element at this end of the PathLink (typically a PLACE, e.g. where the elevator is located).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
