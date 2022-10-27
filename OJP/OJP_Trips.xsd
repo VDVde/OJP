@@ -805,6 +805,16 @@
 					<xs:documentation>Presence of accessibility features on the PathLink.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Designations of level and place where this PathLink starts.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="To" type="PathLinkEndStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Designations of level and place where this PathLink ends.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PathLinkEndStructure">
