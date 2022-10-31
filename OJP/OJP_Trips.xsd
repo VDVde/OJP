@@ -1115,10 +1115,10 @@
 			<xs:documentation>Allowed values for the feasibility of a TRIP or part of a TRIP.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="allAccessFeaturesOk"/>
-			<xs:enumeration value="accessFeatureOutOfService"/>
+			<xs:enumeration value="allAccessFeaturesAvailable"/>
+			<xs:enumeration value="accessFeatureNotAvailable"/>
 			<xs:enumeration value="accessFeaturePartiallyAvailable"/>
-			<xs:enumeration value="accessFeaturesWithUnknownStatus"/>
+			<xs:enumeration value="accessFeatureWithUnknownAvailability"/>
 			<xs:enumeration value="seeSituations"/>
 		</xs:restriction>
 	</xs:simpleType>
