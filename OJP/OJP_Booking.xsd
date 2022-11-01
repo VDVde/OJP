@@ -343,7 +343,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="boardingAssistance">
 				<xs:annotation>
-					<xs:documentation>Assistance for boarding and unboarding.</xs:documentation>
+					<xs:documentation>Assistance for boarding.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="alightingAssistance">
+				<xs:annotation>
+					<xs:documentation>Assistance for unboarding.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="onboardAssistance">
