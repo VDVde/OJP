@@ -10,12 +10,12 @@
 	</xs:annotation>
 	<xs:simpleType name="ProblemTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>All error codes</xs:documentation>
+			<xs:documentation>All problem codes</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="OJPGENERIC_REQUESTNOTSUPPORTED">
 				<xs:annotation>
-					<xs:documentation>The server does not support the specific request (eg: MultiPointTripRequest).</xs:documentation>
+					<xs:documentation>The server does not support the specific request (e.g.: MultiPointTripRequest).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="OJPGENERIC_FEATURENOTSUPPORTED">
@@ -45,7 +45,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="FARES_JOURNEYNOTPERMITTED">
 				<xs:annotation>
-					<xs:documentation>The trip planning result suggest a service which is not permitted by the fare authority.</xs:documentation>
+					<xs:documentation>The trip planning result suggests a service which is not permitted by the fare authority.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="FARES_ADDITIONALCHARGES">
@@ -60,7 +60,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="FARES_ROUTENOTFEASIBLE">
 				<xs:annotation>
-					<xs:documentation>Fare calculation is not possible because the suggested trip is not in compliance with the fare regulations (eg: because of round trips, TripLegs that go forth and return or exceeding the maximal total trip duration).</xs:documentation>
+					<xs:documentation>Fare calculation is not possible because the suggested trip is not in compliance with the fare regulations (e.g.: because of round trips, TripLegs that go forth and return or exceeding the maximal total trip duration).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="FARES_ALREADYCOVERED">
@@ -118,12 +118,12 @@
 					<xs:documentation>No exchange points could be found that match the query criteria.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="EXCHANGEPOINTS _UNKNOWNDESTINATION">
+			<xs:enumeration value="EXCHANGEPOINTS_UNKNOWNDESTINATION">
 				<xs:annotation>
 					<xs:documentation>The destination system given in the request parameters is unknown.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="EXCHANGEPOINTS _UNKNOWNADJACENTSYSTEM">
+			<xs:enumeration value="EXCHANGEPOINTS_UNKNOWNADJACENTSYSTEM">
 				<xs:annotation>
 					<xs:documentation>One or more of the adjacent systems given in the request parameters are unknown.</xs:documentation>
 				</xs:annotation>
@@ -180,7 +180,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_DEPARTUREAFTERARRIVAL">
 				<xs:annotation>
-					<xs:documentation>The requested departure time at each origin locations is after the requested arrival time at any destination location.</xs:documentation>
+					<xs:documentation>The requested departure time at each origin is after the requested arrival time at any destination.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_DATEOUTOFRANGE">
@@ -190,12 +190,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="MULTIPOINTTRIP_NOTALLPOINTSCOVERED">
 				<xs:annotation>
-					<xs:documentation>In case a multi-point request with MultiPointType set to eachDestination could not be responded with a trip solution to each of the destination points. And respectively in case a multi-point request with MultiPointType set to eachOrigin could not be responded with a trip solution for each of the origin points.</xs:documentation>
+					<xs:documentation>No trip solution was found covering each of the requested points.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="MULTIPOINTTRIP_TOOMANYPOINTS">
 				<xs:annotation>
-					<xs:documentation>In case a multi-point request uses too many points as departure or arrival.</xs:documentation>
+					<xs:documentation>Too many points have been requested as departure or arrival.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_ORIGINEQUIVALENT">
@@ -220,7 +220,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_ITTIMEEXTENDED">
 				<xs:annotation>
-					<xs:documentation>The maximum time allowed for using modes of individual transport (mostly walking or cycling) has been extended by the system because otherweise no trip could be found.</xs:documentation>
+					<xs:documentation>The maximum time allowed for using modes of individual transport (mostly walking or cycling) has been extended by the system because otherwise no trip could be found.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_ITMODECHANGED">
@@ -288,6 +288,7 @@
 					<xs:documentation>The object to be refined could not be found in the separate database or could not be found unequivocally.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<!-- ROUTE related problems not used in OJP will be removed at some point
 			<xs:enumeration value="ROUTE_NOROUTEFOUND">
 				<xs:annotation>
 					<xs:documentation>Individual transport routes could not be found with regard to the start locations and destinations stated, the desired departure and arrival time and keeping in mind the specified parameters.</xs:documentation>
@@ -367,17 +368,17 @@
 				<xs:annotation>
 					<xs:documentation>At least one of the ban filters (motorways, toll roads, ferries) has been ignored for this individual transport route.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>
+			</xs:enumeration> -->
 			<xs:enumeration value="OTHER">
 				<xs:annotation>
-					<xs:documentation>if the error can not be found from the list above</xs:documentation>
+					<xs:documentation>if the problem cannot be found from the above list</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="ProblemStructure">
 		<xs:annotation>
-			<xs:documentation>Structured error messages</xs:documentation>
+			<xs:documentation>Structured problem messages</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Type" type="ProblemTypeEnumeration">
@@ -391,14 +392,14 @@
 					<xs:documentation>Title of the problem situation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Detail" type="InternationalTextStructure" minOccurs="0">
+			<xs:element name="Details" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Human readable explanation of the problem situation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LogData" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If additional log data is provided.</xs:documentation>
+					<xs:documentation>Additional log data.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
