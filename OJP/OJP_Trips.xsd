@@ -501,6 +501,7 @@
 				<xs:element name="TransferLeg" type="TransferLegStructure"/>
 				<xs:element name="ContinuousLeg" type="ContinuousLegStructure"/>
 			</xs:choice>
+			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TimedLegStructure">
@@ -539,7 +540,6 @@
 					<xs:documentation>Geographic embedding of this leg.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
