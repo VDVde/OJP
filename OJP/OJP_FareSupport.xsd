@@ -18,16 +18,13 @@
 			<xs:enumeration value="economy"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="VatRateEnumeration">
+	<xs:simpleType name="Percentage">
 		<xs:annotation>
-			<xs:documentation>Enumeration of Value Added Tax rates.</xs:documentation>
+			<xs:documentation>A percentage value between 0 and 100</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:NMTOKEN">
-			<xs:enumeration value="no"/>
-			<xs:enumeration value="full"/>
-			<xs:enumeration value="half"/>
-			<xs:enumeration value="mixed"/>
-			<xs:enumeration value="unknown"/>
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0.0"/>
+			<xs:maxInclusive value="100.0"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
@@ -300,9 +297,9 @@
 					<xs:documentation>iso 4217 currency code, e.g. EUR for Euro or GBP for Pound Sterling </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VatRate" type="VatRateEnumeration" minOccurs="0">
+			<xs:element name="VatRate" type="Percentage" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Rate of value added tax. Default is unknown.</xs:documentation>
+					<xs:documentation>Rate of value added tax.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
