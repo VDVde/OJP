@@ -242,7 +242,7 @@
 			</xs:element>
 			<xs:element name="Problem" type="ProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Error messages related to this trip result.</xs:documentation>
+					<xs:documentation>Problem messages related to this trip result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
