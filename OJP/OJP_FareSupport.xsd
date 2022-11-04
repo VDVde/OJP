@@ -391,7 +391,7 @@
 		<xs:sequence>
 			<xs:element name="Problem" type="ProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Result-specific error messages </xs:documentation>
+					<xs:documentation>Result-specific problem messages </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TripLegRangeGroup" minOccurs="0"/>
