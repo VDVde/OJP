@@ -76,7 +76,7 @@
 			</xs:element>
 			<xs:element name="Problem" type="ProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>OJP specific error messages for the whole delivery.</xs:documentation>
+					<xs:documentation>OJP specific problem messages for the whole delivery.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
