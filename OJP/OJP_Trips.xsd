@@ -739,12 +739,14 @@
 			<xs:enumeration value="downAndUp"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="AccessibilityFeaturesTypeEnumeration">
+	<xs:simpleType name="AccessibilityFeatureTypesEnumeration">
 		<xs:annotation>
-			<xs:documentation>Allowed values for AccessibilityFeatures.</xs:documentation>
+			<xs:documentation>Allowed values for AccessibilityFeature.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<!--For mobility impairments...-->
+			<xs:annotation>
+				<xs:documentation>For mobility impairments...</xs:documentation>
+			</xs:annotation>
 			<xs:enumeration value="lowFloorAccess"/>
 			<xs:enumeration value="stepFreeAccess"/>
 			<xs:enumeration value="accessWithSteps"/>
@@ -759,7 +761,9 @@
 			<xs:enumeration value="suitableForHeaviliyDisabled"/>
 			<xs:enumeration value="suitableForPushchairs"/>
 			<xs:enumeration value="suitableForBicycles"/>
-			<!--For sensory impairments...-->
+			<xs:annotation>
+				<xs:documentation>For sensory impairments...</xs:documentation>
+			</xs:annotation>
 			<xs:enumeration value="tactilePlatformEdges"/>
 			<xs:enumeration value="tactileGuidingStrips"/>
 			<xs:enumeration value="tactileOrAuditorySigns"/>
@@ -771,11 +775,15 @@
 			<xs:enumeration value="visualDisplays"/>
 			<xs:enumeration value="displaysForVisuallyImpaired"/>
 			<xs:enumeration value="largePrintTimetables"/>
-			<!--Assistance...-->
+			<xs:annotation>
+				<xs:documentation>Assistance...</xs:documentation>
+			</xs:annotation>
 			<xs:enumeration value="boardingAssistance"/>
 			<xs:enumeration value="onboardAssistance"/>
 			<xs:enumeration value="unaccompaniedMinorAssistance"/>
-			<!--To pay attention to...-->
+			<xs:annotation>
+				<xs:documentation>To pay attention to...</xs:documentation>
+			</xs:annotation>
 			<xs:enumeration value="barrier"/>
 			<xs:enumeration value="validator"/>
 		</xs:restriction>
@@ -800,9 +808,9 @@
 					<xs:documentation>Number how often the access feature occurs in this PathLink</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AccessibilityFeatures" type="AccessibilityFeaturesTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="AccessibilityFeature" type="AccessibilityFeatureTypesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Presence of accessibility features on the PathLink.</xs:documentation>
+					<xs:documentation>Presence of an accessibility feature on the PathLink.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
