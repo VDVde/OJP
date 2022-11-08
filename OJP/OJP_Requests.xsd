@@ -240,7 +240,7 @@
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
 				<xs:sequence>
-					<xs:group ref="ServiceResponseContextGroup"/><!-- TODO do we need it -->
+					<xs:group ref="ServiceResponseContextGroup"/>
 					<xs:group ref="AvailabilityResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
