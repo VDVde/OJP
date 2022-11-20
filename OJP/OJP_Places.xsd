@@ -148,7 +148,7 @@
 			</xs:element>
 			<xs:element name="Operators" type="OperatorsRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>st of operators operating at this place object. This list should only be filled if this is explicitly requested.</xs:documentation>
+					<xs:documentation>List of operators operating at this place object. This list should only be filled if this is explicitly requested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
