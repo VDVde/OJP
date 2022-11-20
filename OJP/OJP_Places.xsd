@@ -146,7 +146,7 @@
 					<xs:documentation>List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Operators" type="OperatorsRefStructure" minOccurs="0">
+			<xs:element name="Operators" type="OperatorsRefsStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>List of operators operating at this place object. This list should only be filled if this is explicitly requested.</xs:documentation>
 				</xs:annotation>
@@ -354,7 +354,7 @@
 					<xs:documentation>Rough estimate of the travel duration from the specified reference place to this exchange point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WaitDuration" type="xs:duration" minOccurs="0" default="PT0M">
+			<xs:element name="WaitDuration" type="xs:duration" default="PT0M" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it has to take care, that feeding arrival and fetching departure are at least this duration apart.</xs:documentation>
 				</xs:annotation>
