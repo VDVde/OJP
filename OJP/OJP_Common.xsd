@@ -82,14 +82,14 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Operators ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
+	<xs:element name="OperatorRef" type="siri:OperatorRefsStructure">
 		<xs:annotation>
 			<xs:documentation>Reference to an Operator ([TMv6] company  providing public transport services.) </xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OperatorsRefStructure">
 		<xs:sequence>
-			<xs:element name="OperatorRef" type="siri:OperatorRefStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="OperatorRef" type="siri:OperatorRefsStructure" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="OperatorFilterStructure">
@@ -102,7 +102,7 @@
 					<xs:documentation>Whether operators in list are to include or exclude from search. Default is exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OperatorRef" type="siri:OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="OperatorRef" type="siri:OperatorRefsStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Reference to transport operator</xs:documentation>
 				</xs:annotation>
@@ -255,7 +255,7 @@
 			<xs:documentation>Service that provides shared vehicles.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
+			<xs:element name="OperatorRef" type="siri:OperatorRefsStructure">
 				<xs:annotation>
 					<xs:documentation>Identifier of the operator of the sharing service </xs:documentation>
 				</xs:annotation>
