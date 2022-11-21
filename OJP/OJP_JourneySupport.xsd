@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2020 (x64) (http://www.altova.com) by  (Schweizerische Bundesbahnen SBB) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_JourneySupport.xsd - Supporting definitions for journeys on public transport vehicles</xs:documentation>
@@ -57,6 +58,32 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="ServiceSectionStructure">
+		<xs:annotation>
+			<xs:documentation>Properties of a service combined with a stop sequence interval.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="StopSeqIntervalGroup"/>
+			<xs:group ref="ServiceGroup"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="StopSeqIntervalGroup">
+		<xs:annotation>
+			<xs:documentation>Interval of stop sequence numbers</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FromStopSeqNumber" type="xs:positiveInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Stop sequence number, where the interval begins (inclusive). If missing, the interval begins at the beginning of the leg (or at the beginning of the journey for uses in StopEvents and TripInfo).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ToStopSeqNumber" type="xs:positiveInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Stop sequence number, where the interval ends (inclusive). If missing, the interval ends at the end of the leg (or at the end of the journey for uses in StopEvents and TripInfo).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
 	<xs:group name="ScheduledJourneyGroup">
 		<xs:annotation>
 			<xs:documentation>Vehicle journey (not dated).</xs:documentation>
@@ -68,7 +95,14 @@
 					<xs:documentation>Public code of the SERVICE JOURNEY (same meaning as in NeTEx). Examples: "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="ServiceGroup"/>
+			<xs:choice>
+				<xs:element name="ServiceSection" type="ServiceSectionStructure" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Sequence of stop sequence intervals with respective service properties.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			<xs:group ref="ServiceGroup"/>	
+			</xs:choice>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="ServiceGroup">
