@@ -247,4 +247,30 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Availability Request ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPAvailabilityRequest" type="OJPAvailabilityRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:complexType name="OJPAvailabilityRequestStructure">
+		<xs:complexContent>
+			<xs:extension base="AbstractOJPServiceRequestStructure">
+				<xs:sequence>
+					<xs:group ref="AvailabilityRequestGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="OJPAvailabilityDelivery" type="OJPAvailabilityDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPAvailabilityDeliveryStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceDeliveryStructure">
+				<xs:sequence>
+					<xs:group ref="ServiceResponseContextGroup"/>
+					<xs:group ref="AvailabilityResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 </xs:schema>

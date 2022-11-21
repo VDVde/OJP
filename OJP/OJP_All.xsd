@@ -5,6 +5,7 @@
 		<xs:documentation>OJP/OJP_All.xsd - Includes for all OJP schema files</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="OJP_Common.xsd"/>
+	<xs:include schemaLocation="OJP_Booking.xsd"/>
 	<xs:include schemaLocation="OJP_FacilitySupport.xsd"/>
 	<xs:include schemaLocation="OJP_Fare.xsd"/>
 	<xs:include schemaLocation="OJP_FareSupport.xsd"/>
