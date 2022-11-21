@@ -100,7 +100,7 @@
 						<xs:documentation>Sequence of stop sequence intervals with respective service properties.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:group ref="ServiceGroup"/>	
+				<xs:group ref="ServiceGroup"/>
 			</xs:choice>
 		</xs:sequence>
 	</xs:group>
