@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2020 (x64) (http://www.altova.com) by  (Schweizerische Bundesbahnen SBB) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_JourneySupport.xsd - Supporting definitions for journeys on public transport vehicles</xs:documentation>
@@ -101,7 +100,7 @@
 						<xs:documentation>Sequence of stop sequence intervals with respective service properties.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-			<xs:group ref="ServiceGroup"/>	
+				<xs:group ref="ServiceGroup"/>	
 			</xs:choice>
 		</xs:sequence>
 	</xs:group>
