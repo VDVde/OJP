@@ -663,7 +663,7 @@
 				<xs:annotation>
 					<xs:documentation>Road name, if applicable.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="Follow" type="FollowStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Signs, roads, POI to follow.</xs:documentation>
@@ -857,12 +857,12 @@
 				<xs:annotation>
 					<xs:documentation>Upwards, the target level is in the PathLink structure.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="down">
 				<xs:annotation>
 					<xs:documentation>Downwards, the target level is in the PathLink structure.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>					
+			</xs:enumeration>
 			<xs:enumeration value="unknown_turn_action"/>
 		</xs:restriction>
 	</xs:simpleType>
