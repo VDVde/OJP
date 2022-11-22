@@ -396,6 +396,15 @@
 					<xs:documentation>Alighting will not be allowed at this stop of this journey.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			 <xs:choice>
+				<xs:sequence>
+					<xs:element ref="siri:ExpectedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="siri:ExpectedDepartureCapacities" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:sequence>
+					<xs:element ref="siri:RecordedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="siri:RecordedDepartureCapacities" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence></xs:choice>			
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="ServiceStatusGroup">
