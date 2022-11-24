@@ -738,7 +738,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="turn">
 				<xs:annotation>
-					<xs:documentation>Study turn action in this cas as well.</xs:documentation>
+					<xs:documentation>Study turn action in this case as well.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="leave">
@@ -810,7 +810,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TurnActionEnumeration">
 		<xs:annotation>
-			<xs:documentation>the range of alternative turns that can be described</xs:documentation>
+			<xs:documentation>The range of alternative turns that can be described</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="sharp_left">
