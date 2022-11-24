@@ -40,7 +40,7 @@
 		<xs:sequence>
 			<xs:element name="UseRealTimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Use realtime data. Default is "fulL"</xs:documentation>
+					<xs:documentation>Use realtime data. Default is "full"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
