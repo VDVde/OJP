@@ -416,7 +416,7 @@
 			</xs:element>
 			<xs:element name="BookWhen" type="PurchaseWhenEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>When Booking can be made. +V1.1</xs:documentation>
+					<xs:documentation>When Booking can be made.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BuyWhen" type="PurchaseMomentListOfEnumerations" minOccurs="0">
