@@ -5,7 +5,6 @@
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_modes-v1.1.xsd"/>
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gml_extract_all_objects_v_3_2_1.xsd"/>
 	<xs:annotation>
 		<xs:documentation>=============================== Line Information Service ==========================================</xs:documentation>
