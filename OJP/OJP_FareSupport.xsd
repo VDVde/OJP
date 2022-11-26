@@ -224,7 +224,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="BookingMethod" type="BookingMethodEnumeration" minOccurs="1" maxOccurs="unbounded"/>
-		</xs:sequence>	
+		</xs:sequence>
 	</xs:complexType>
 	<!-- ======================================================================= -->
 	<xs:simpleType name="BookingAccessEnumeration">
