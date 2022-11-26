@@ -218,12 +218,14 @@
 			<xs:enumeration value="none"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="BookingMethodListOfEnumerations">
+	<xs:complexType name="BookingMethodListOfEnumerations">
 		<xs:annotation>
 			<xs:documentation>List of values for Flexible Booking values.</xs:documentation>
 		</xs:annotation>
-		<xs:list itemType="BookingMethodEnumeration"/>
-	</xs:simpleType>
+		<xs:sequence>
+			<xs:element name="BookingMethod" type="BookingMethodEnumeration" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>	
+	</xs:complexType>
 	<!-- ======================================================================= -->
 	<xs:simpleType name="BookingAccessEnumeration">
 		<xs:annotation>
