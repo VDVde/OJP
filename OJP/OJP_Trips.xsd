@@ -1058,6 +1058,33 @@
 			<xs:enumeration value="downAndUp"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="AccessFeatureStatusEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for status of the access feature.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="available"/>
+			<xs:enumeration value="partiallyAvailable">
+				<xs:annotation>
+					<xs:documentation>If partiallyAvailable is used, then some note should be provided in one of the descriptive elements of the containing PathLink</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="notAvailable"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FeasibilityEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for the feasibility of a TRIP or part of a TRIP.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="allAccessFeaturesAvailable"/>
+			<xs:enumeration value="accessFeatureNotAvailable"/>
+			<xs:enumeration value="accessFeaturePartiallyAvailable"/>
+			<xs:enumeration value="accessFeatureWithUnknownAvailability"/>
+			<xs:enumeration value="seeSituations"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="AccessibilityFeatureTypesEnumeration">
 		<xs:annotation>
 			<xs:documentation>Allowed values for AccessibilityFeature (for mobility and sensory impairments, assistance and important elements to pay attention to).</xs:documentation>
@@ -1093,33 +1120,6 @@
 			<xs:enumeration value="unaccompaniedMinorAssistance"/>
 			<xs:enumeration value="barrier"/>
 			<xs:enumeration value="validator"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="AccessFeatureStatusEnumeration">
-		<xs:annotation>
-			<xs:documentation>Allowed values for status of the access feature.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="unknown"/>
-			<xs:enumeration value="available"/>
-			<xs:enumeration value="partiallyAvailable">
-				<xs:annotation>
-					<xs:documentation>If partiallyAvailable is used, then some note should be provided in one of the descriptive elements of the containing PathLink</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="notAvailable"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FeasibilityEnumeration">
-		<xs:annotation>
-			<xs:documentation>Allowed values for the feasibility of a TRIP or part of a TRIP.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="allAccessFeaturesAvailable"/>
-			<xs:enumeration value="accessFeatureNotAvailable"/>
-			<xs:enumeration value="accessFeaturePartiallyAvailable"/>
-			<xs:enumeration value="accessFeatureWithUnknownAvailability"/>
-			<xs:enumeration value="seeSituations"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
