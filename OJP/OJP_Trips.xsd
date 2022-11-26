@@ -659,7 +659,7 @@
 					<xs:documentation>The range of alternative turns that can be described.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RoadName" type="xs:string" minOccurs="0">
+			<xs:element name="RoadName" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Road name, if applicable.</xs:documentation>
 				</xs:annotation>
@@ -689,22 +689,22 @@
 	</xs:complexType>
 	<xs:complexType name="FollowStructure">
 		<xs:choice>
-			<xs:element name="FollowSignName" type="xs:string">
+			<xs:element name="FollowSignName" type="InternationalTextStructure">
 				<xs:annotation>
 					<xs:documentation>Follow a sign.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FollowRoadName" type="xs:string">
+			<xs:element name="FollowRoadName" type="InternationalTextStructure">
 				<xs:annotation>
 					<xs:documentation>Follow a road/route.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FollowDirectionName" type="xs:string">
+			<xs:element name="FollowDirectionName" type="InternationalTextStructure">
 				<xs:annotation>
-					<xs:documentation>Follow an direction.</xs:documentation>
+					<xs:documentation>Follow a direction.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FollowExit" type="xs:string">
+			<xs:element name="FollowExit" type="InternationalTextStructure">
 				<xs:annotation>
 					<xs:documentation>Follow an exit.</xs:documentation>
 				</xs:annotation>
@@ -715,6 +715,7 @@
 		<xs:annotation>
 			<xs:documentation>Various types of guidance advice given to traveller. Suitable values may differ by MODE (e.g. a car driver needs different advice than a person walking for a transfer.</xs:documentation>
 		</xs:annotation>
+		<!-- the classic values from OJP 1.0 with explanations -->
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="origin">
 				<xs:annotation>
@@ -728,17 +729,17 @@
 			</xs:enumeration>
 			<xs:enumeration value="continue">
 				<xs:annotation>
-					<xs:documentation>Continue onward with this guidance advice.</xs:documentation>
+					<xs:documentation>continue on the same street/road/path.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="keep">
 				<xs:annotation>
-					<xs:documentation>Keep doing</xs:documentation>
+					<xs:documentation>keep going on the same street/road/path.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="turn">
 				<xs:annotation>
-					<xs:documentation>Study turn action in this case as well.</xs:documentation>
+					<xs:documentation>When this value is used, you always have to consider the value in TurnAction as well. There must be a TurnAction present if "turn" is used.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="leave">
@@ -751,6 +752,7 @@
 					<xs:documentation>Can be something like an elevator or a vehicle.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<!-- additional enum values for individual vehicles -->
 			<xs:enumeration value="enter_roundabout">
 				<xs:annotation>
 					<xs:documentation>Entering a roundabout.</xs:documentation>
@@ -766,12 +768,12 @@
 					<xs:documentation>Leave the roundabout.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="enter_buildup_area">
+			<xs:enumeration value="enter_builtup_area">
 				<xs:annotation>
 					<xs:documentation>Entering a builtup area / community.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="leave_buildup_area">
+			<xs:enumeration value="leave_builtup_area">
 				<xs:annotation>
 					<xs:documentation>Leave the builtup area / community.</xs:documentation>
 				</xs:annotation>
@@ -781,6 +783,7 @@
 					<xs:documentation>Access lane to highway or the like.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<!-- lane choice -->
 			<xs:enumeration value="unknown_lane_choice">
 				<xs:annotation>
 					<xs:documentation>If it is unclear which line to choose.</xs:documentation>
@@ -801,11 +804,8 @@
 					<xs:documentation>If there are more than 2 lanes, then TurnAction half_right,right,sharp_right may help decide</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="unknown_turning_kind"/>
-			<!-- the classic values from OJP 1.0 with explanations -->
-			<!-- additional enum values for motorized individual vehicles -->
-			<!-- lane choice -->
 			<!-- undefined values -->
+			<xs:enumeration value="unknown_turning_kind"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TurnActionEnumeration">
@@ -813,44 +813,45 @@
 			<xs:documentation>The range of alternative turns that can be described</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="sharp_left">
-				<xs:annotation>
-					<xs:documentation>202-248 degrees</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="left">
-				<xs:annotation>
-					<xs:documentation>248-292 degrees</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="half_left">
-				<xs:annotation>
-					<xs:documentation>202-248 degrees</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="straight_on">
 				<xs:annotation>
-					<xs:documentation>less than 22 degrees </xs:documentation>
+					<xs:documentation>338-21 degrees </xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>
+			</xs:enumeration>		
 			<xs:enumeration value="half_right">
 				<xs:annotation>
-					<xs:documentation>22-68 degrees</xs:documentation>
+					<xs:documentation>22-67 degrees</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>
+			</xs:enumeration>			
+
 			<xs:enumeration value="right">
 				<xs:annotation>
-					<xs:documentation>68-112 degrees</xs:documentation>
+					<xs:documentation>68-111 degrees</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="sharp_right">
 				<xs:annotation>
-					<xs:documentation>112-158 degrees</xs:documentation>
+					<xs:documentation>112-157 degrees</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="uturn">
 				<xs:annotation>
-					<xs:documentation>158-202 degrees</xs:documentation>
+					<xs:documentation>158-201 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sharp_left">
+				<xs:annotation>
+					<xs:documentation>202-247 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="left">
+				<xs:annotation>
+					<xs:documentation>248-291 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="half_left">
+				<xs:annotation>
+					<xs:documentation>292-337 degrees</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="up">
