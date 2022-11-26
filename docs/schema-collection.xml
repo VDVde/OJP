@@ -16,4 +16,5 @@
 	<xi:include href="../OJP/OJP_TripInfo.xsd"/>
 	<xi:include href="../OJP/OJP_Trips.xsd"/>
 	<xi:include href="../OJP/OJP_Utility.xsd"/>
+	<xi:include href="../OJP/OJP_Status.xsd"/>	
 </schema-collection>
