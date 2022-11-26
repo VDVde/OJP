@@ -817,13 +817,12 @@
 				<xs:annotation>
 					<xs:documentation>338-21 degrees </xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>		
+			</xs:enumeration>
 			<xs:enumeration value="half_right">
 				<xs:annotation>
 					<xs:documentation>22-67 degrees</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
-
+			</xs:enumeration>
 			<xs:enumeration value="right">
 				<xs:annotation>
 					<xs:documentation>68-111 degrees</xs:documentation>
