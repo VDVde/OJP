@@ -426,7 +426,7 @@
 			</xs:element>
 			<xs:element name="LatestBookingTime" type="xs:time" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Latest time in day that booking can be made.</xs:documentation>
+					<xs:documentation>Latest time that booking can be made. The exact meaning must be derived also from BookWhen and MinimumBookingPeriod.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MinimumBookingPeriod" type="xs:duration" minOccurs="0">
