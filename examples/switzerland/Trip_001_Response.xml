@@ -525,7 +525,7 @@
 				</ojp:TripResponseContext>
 				<ojp:TripResult>
 					<ojp:Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:Id>
-					<ojp:Trip >
+					<ojp:Trip>
 						<ojp:Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:Id>
 						<ojp:Duration>PT2H18M</ojp:Duration>
 						<ojp:StartTime>2020-09-30T10:03:00Z</ojp:StartTime>
