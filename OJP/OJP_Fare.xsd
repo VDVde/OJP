@@ -116,7 +116,7 @@
 		<xs:sequence>
 			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
-				<xs:documentation>ID of this result.</xs:documentation>
+					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>	
 			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
