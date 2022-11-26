@@ -15,7 +15,7 @@
 			<xs:extension base="siri:AbstractServiceCapabilitiesResponseStructure">
 				<xs:sequence>
 					<xs:group ref="ServiceResponseContextGroup"/>
-					<xs:group ref="ServiceStatusResponseGroup"/>
+					<xs:group ref="OJPStatusResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
@@ -24,7 +24,7 @@
 	<xs:annotation>
 		<xs:documentation>=============================== Status Response Group ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:group name="ServiceStatusResponseGroup">
+	<xs:group name="OJPStatusResponseGroup">
 		<xs:annotation>
 			<xs:documentation>Status response group.</xs:documentation>
 		</xs:annotation>
