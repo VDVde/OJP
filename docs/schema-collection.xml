@@ -21,4 +21,6 @@
 	<xi:include href="../OJP/OJP_ModesSupport.xsd"/>
 	<xi:include href="../OJP/OJP_SituationSupport.xsd"/>
 	<xi:include href="../OJP/OJP_Utility.xsd"/>
+	<xi:include href="../OJP/OJP_Status.xsd"/>
+
 </schema-collection>
