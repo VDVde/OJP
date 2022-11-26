@@ -255,7 +255,7 @@
 			<xs:documentation>[related to FARE PRODUCT in TM and NeTEx] different FARE PRODUCTs that may be available with related information</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="FareProductCode" type="FareProductCodeType">
+			<xs:element name="FareProductId" type="FareProductCodeType">
 				<xs:annotation>
 					<xs:documentation>Unique Code of the FareProduct.</xs:documentation>
 				</xs:annotation>

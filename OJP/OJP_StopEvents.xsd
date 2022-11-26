@@ -184,11 +184,11 @@
 			<xs:documentation>Wrapper element for a single stop event result.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ResultId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
-			</xs:element>
+			</xs:element>		
 			<xs:element name="Problem" type="StopEventProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this STOPEVENT result.</xs:documentation>
@@ -200,11 +200,6 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="id" type="ObjectIdType">
-			<xs:annotation>
-				<xs:documentation>ID of this result.</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="StopEventStructure">
 		<xs:annotation>
