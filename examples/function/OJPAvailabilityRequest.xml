@@ -39,7 +39,7 @@
 						<ojp:UnplannedStop>false</ojp:UnplannedStop>
 						<ojp:NotServicedStop>false</ojp:NotServicedStop>
 					</ojp:SetDownLocation>
-					<LineRef>ch:1:slnid:102301231</LineRef>	
+					<LineRef>ch:1:slnid:102301231</LineRef>
 					<ojp:Mode>
 						<ojp:PtMode>bus</ojp:PtMode>
 						<BusSubmode>demandAndResponseBus</BusSubmode>
@@ -51,7 +51,7 @@
 						<ojp:Text>NB 1</ojp:Text>
 					</ojp:PublishedServiceName>
 					<VehicleRef>1293912-1231</VehicleRef>
-					<ojp:OperatorRef>ch:1:sboid:13123</ojp:OperatorRef>		
+					<ojp:OperatorRef>ch:1:sboid:13123</ojp:OperatorRef>
 				</ojp:PublicTransport>
 				<ojp:MobilityUser>
 					<ojp:Age>19</ojp:Age>
@@ -61,7 +61,7 @@
 					<ojp:LevelEntrance>true</ojp:LevelEntrance>
 					<ojp:WalkSpeed>70</ojp:WalkSpeed>
 					<ojp:AdditionalTransferTime>PT2M</ojp:AdditionalTransferTime>
-				</ojp:MobilityUser>	
+				</ojp:MobilityUser>
 				<ojp:EarliestDepartureTime>2022-10-19T11:30:00Z</ojp:EarliestDepartureTime>
 				<ojp:LatestArrivalTime>2022-10-19T12:10:00Z</ojp:LatestArrivalTime>
 			</ojp:OJPAvailabilityRequest>
