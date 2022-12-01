@@ -2,7 +2,6 @@
 <schema-collection xmlns:xi="http://www.w3.org/2001/XInclude">
 	<xi:include href="../OJP.xsd"/>
 	<xi:include href="../OJP/OJP_Common.xsd"/>
-	<xi:include href="../OJP/OJP_Booking.xsd"/>
 	<xi:include href="../OJP/OJP_FacilitySupport.xsd"/>
 	<xi:include href="../OJP/OJP_Fare.xsd"/>
 	<xi:include href="../OJP/OJP_FareSupport.xsd"/>
@@ -17,4 +16,5 @@
 	<xi:include href="../OJP/OJP_TripInfo.xsd"/>
 	<xi:include href="../OJP/OJP_Trips.xsd"/>
 	<xi:include href="../OJP/OJP_Utility.xsd"/>
+	<xi:include href="../OJP/OJP_Availability.xsd"/>
 </schema-collection>
