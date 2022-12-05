@@ -370,8 +370,8 @@
 			<xs:documentation>List of Booking Process values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-		<xs:element name="BookingProcess" type="BookingProcessEnumeration" minOccurs="1" maxOccurs="unbounded"/>
-		</xs:sequence>		
+			<xs:element name="BookingProcess" type="BookingProcessEnumeration" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
 	</xs:complexType>
 	<!-- =================================================== -->
 	<xs:simpleType name="GroupBookingEnumeration">
