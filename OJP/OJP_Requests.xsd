@@ -274,7 +274,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================== Availability Request ==========================================</xs:documentation>
+		<xs:documentation>========================================== Availability Service ==========================================</xs:documentation>
 	</xs:annotation>
 	<xs:element name="OJPAvailabilityRequest" type="OJPAvailabilityRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
 	<xs:complexType name="OJPAvailabilityRequestStructure">
