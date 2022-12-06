@@ -12,7 +12,6 @@
 		<xs:documentation>FUNCTION 4: Coordinate to Address</xs:documentation>
 		<xs:documentation>All functions integrated into one request / response</xs:documentation>
 	</xs:annotation>
-
 	<xs:group name="PlaceInformationRequestGroup">
 		<xs:sequence>
 			<xs:choice>
@@ -124,7 +123,7 @@
 				<xs:annotation>
 					<xs:documentation>Result-specific problem messages.</xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 			<xs:element name="Place" type="PlaceStructure"/>
 			<xs:element name="Complete" type="xs:boolean">
 				<xs:annotation>
@@ -334,7 +333,7 @@
 				<xs:annotation>
 					<xs:documentation>Result-specific problem messages.</xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 			<xs:element name="Place" type="PlaceStructure">
 				<xs:annotation>
 					<xs:documentation>Place object that describes this exchange point.</xs:documentation>

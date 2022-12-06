@@ -38,7 +38,8 @@
 					<xs:documentation>The server cannot provide the data frame (data version) required by the requestor.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="REFINE_OBJECTNOTFOUND"> <!--TODO update, when the new Requests are done -->
+			<xs:enumeration value="REFINE_OBJECTNOTFOUND">
+				<!--TODO update, when the new Requests are done -->
 				<xs:annotation>
 					<xs:documentation>The object to be refined could not be found in the separate database or could not be found unequivocally.</xs:documentation>
 				</xs:annotation>

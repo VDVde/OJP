@@ -4,7 +4,6 @@
 		<xs:documentation>OJP/OJP_TripInfo.xsd - Request and response definitions for information on a single trip</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	
 	<xs:simpleType name="TripInfoProblemTypeEnumeration">
 		<xs:annotation>
 			<xs:documentation>All LOCATION problem codes</xs:documentation>
@@ -47,9 +46,8 @@
 					<xs:documentation>Problem type (code). OTHER, if the problem can't be found in the list</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-
 		</xs:sequence>
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
 	</xs:annotation>

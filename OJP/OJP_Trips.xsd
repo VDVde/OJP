@@ -5,13 +5,11 @@
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	
-	
-		<xs:simpleType name="TripProblemTypeEnumeration">
-			<xs:annotation>
-				<xs:documentation>All problem codes</xs:documentation>
-			</xs:annotation>
-			<xs:restriction base="xs:string">
+	<xs:simpleType name="TripProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>All problem codes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
 			<xs:enumeration value="TRIP_NOTRIPFOUND">
 				<xs:annotation>
 					<xs:documentation>No trip plan could be found that meets all the parameters as they have been set by the user (start and end locations, departure/arrival time and further options possibly set by the user).</xs:documentation>
@@ -121,10 +119,10 @@
 				<xs:annotation>
 					<xs:documentation>if the problem cannot be found from the above list</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>				
+			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>	
-		<xs:complexType name="TripProblemStructure">
+	</xs:simpleType>
+	<xs:complexType name="TripProblemStructure">
 		<xs:annotation>
 			<xs:documentation>Structured problem messages</xs:documentation>
 		</xs:annotation>

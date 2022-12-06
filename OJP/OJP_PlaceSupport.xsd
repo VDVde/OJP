@@ -60,11 +60,11 @@
 			<xs:element name="Type" type="LocationProblemTypeEnumeration">
 				<xs:annotation>
 					<xs:documentation>Problem type (code). OTHER, if the problem can't be found in the list</xs:documentation>
-				</xs:annotation>	
+				</xs:annotation>
 			</xs:element>
 			<xs:group ref="ProblemDetailGroup"/>
 		</xs:sequence>
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:simpleType name="ExchangePointProblemTypeEnumeration">
 		<xs:annotation>
 			<xs:documentation>All EXCHANGE POINT problem codes</xs:documentation>
@@ -74,7 +74,7 @@
 				<xs:annotation>
 					<xs:documentation>No exchange points could be found that match the query criteria.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="EXCHANGEPOINTS_NORESULTS">
 				<xs:annotation>
 					<xs:documentation>No exchange points could be found that match the query criteria.</xs:documentation>
@@ -109,7 +109,7 @@
 			</xs:element>
 			<xs:group ref="ProblemDetailGroup"/>
 		</xs:sequence>
-	</xs:complexType>		
+	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== Stop Points ==========================================</xs:documentation>
 	</xs:annotation>

@@ -5,7 +5,6 @@
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	
 	<xs:simpleType name="StopEventProblemTypeEnumeration">
 		<xs:annotation>
 			<xs:documentation>All problem codes</xs:documentation>
@@ -45,9 +44,9 @@
 				<xs:annotation>
 					<xs:documentation>if the problem cannot be found from the above list</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>				
+			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>		
+	</xs:simpleType>
 	<xs:complexType name="StopEventProblemStructure">
 		<xs:annotation>
 			<xs:documentation>Structured problem messages</xs:documentation>
@@ -61,7 +60,7 @@
 			</xs:element>
 			<xs:group ref="ProblemDetailGroup"/>
 		</xs:sequence>
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
 	</xs:annotation>
