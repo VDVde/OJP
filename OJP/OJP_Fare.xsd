@@ -207,7 +207,7 @@
 			<xs:documentation>Structure of a Multi Trip Fare Request result</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Problem" type="ProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Result-specific problem messages.</xs:documentation>
 				</xs:annotation>

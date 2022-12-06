@@ -12,6 +12,7 @@
 		<xs:documentation>FUNCTION 4: Coordinate to Address</xs:documentation>
 		<xs:documentation>All functions integrated into one request / response</xs:documentation>
 	</xs:annotation>
+
 	<xs:group name="PlaceInformationRequestGroup">
 		<xs:sequence>
 			<xs:choice>
@@ -119,6 +120,11 @@
 	</xs:complexType>
 	<xs:complexType name="PlaceResultStructure">
 		<xs:sequence>
+			<xs:element name="Problem" type="LocationProblemStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Result-specific problem messages.</xs:documentation>
+				</xs:annotation>
+			</xs:element>		
 			<xs:element name="Place" type="PlaceStructure"/>
 			<xs:element name="Complete" type="xs:boolean">
 				<xs:annotation>
@@ -324,6 +330,11 @@
 	</xs:group>
 	<xs:complexType name="ExchangePointsResultStructure">
 		<xs:sequence>
+			<xs:element name="Problem" type="ExchangePointProblemStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Result-specific problem messages.</xs:documentation>
+				</xs:annotation>
+			</xs:element>		
 			<xs:element name="Place" type="PlaceStructure">
 				<xs:annotation>
 					<xs:documentation>Place object that describes this exchange point.</xs:documentation>
@@ -334,7 +345,7 @@
 					<xs:documentation>Rough estimate of the travel duration from the specified refrence place to this exchange point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WaitDuration" type="xs:duration" minOccurs="0" default="PT0M">
+			<xs:element name="WaitDuration" type="xs:duration" default="PT0M" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it has to take care, that feeding arrival and fetching departure are at least this duration apart.</xs:documentation>
 				</xs:annotation>

@@ -38,337 +38,11 @@
 					<xs:documentation>The server cannot provide the data frame (data version) required by the requestor.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="FARES_OUTOFAREA">
-				<xs:annotation>
-					<xs:documentation>The trip planning has found a route that leaves the area of the fare authority.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_JOURNEYNOTPERMITTED">
-				<xs:annotation>
-					<xs:documentation>The trip planning result suggests a service which is not permitted by the fare authority.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_ADDITIONALCHARGES">
-				<xs:annotation>
-					<xs:documentation>Passengers may be charged additional fees (eg: for road tolls or seat reservation).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_ADDITIONALTICKETS">
-				<xs:annotation>
-					<xs:documentation>Additional tickets may be necessary because only parts of the passenger trip could be covered.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_ROUTENOTFEASIBLE">
-				<xs:annotation>
-					<xs:documentation>Fare calculation is not possible because the suggested trip is not in compliance with the fare regulations (e.g.: because of round trips, TripLegs that go forth and return or exceeding the maximal total trip duration).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_ALREADYCOVERED">
-				<xs:annotation>
-					<xs:documentation>The ticket that has been specified in the request is valid for the suggested trip (or parts of it as defined by TripLegRange).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_DATEOUTOFRANGE">
-				<xs:annotation>
-					<xs:documentation>The fare request cannot be processed because there is no information available for the requested date.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_STOPPOINTUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>The fare request cannot be processed because the requested stop is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="LOCATION_NORESULTS">
-				<xs:annotation>
-					<xs:documentation>No location objects could be found that match the input data.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="LOCATION_UNSUPPORTEDTYPE">
-				<xs:annotation>
-					<xs:documentation>The requested location types are not supported by the service.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="LOCATION_UNSUPPORTEDCOMBINATION">
-				<xs:annotation>
-					<xs:documentation>The combination of input data (text string, coordinates, geographical restrictions) cannot be processed by the service.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="LOCATION_NOREFINEMENT">
-				<xs:annotation>
-					<xs:documentation>The given location object could not be refined.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="LOCATION_USAGEIGNORED">
-				<xs:annotation>
-					<xs:documentation>The usage type has been ignored.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="LOCATION_UNSUPPORTEDPTMODES">
-				<xs:annotation>
-					<xs:documentation>The service does not support any restrictions by transport modes.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="LOCATION_UNSUPPORTEDLOCALITY">
-				<xs:annotation>
-					<xs:documentation>The service does not support any restrictions by localities.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="EXCHANGEPOINTS_NORESULTS">
-				<xs:annotation>
-					<xs:documentation>No exchange points could be found that match the query criteria.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="EXCHANGEPOINTS_UNKNOWNDESTINATION">
-				<xs:annotation>
-					<xs:documentation>The destination system given in the request parameters is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="EXCHANGEPOINTS_UNKNOWNADJACENTSYSTEM">
-				<xs:annotation>
-					<xs:documentation>One or more of the adjacent systems given in the request parameters are unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_NOTRIPFOUND">
-				<xs:annotation>
-					<xs:documentation>No trip plan could be found that meets all the parameters as they have been set by the user (start and end locations, departure/arrival time and further options possibly set by the user).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_ORIGINUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>The start location (address, stop place, …) for the requested trip is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_DESTINATIONUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>The end location (address, stop place, …) for the requested trip is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_VIAUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>One of the via points is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_NOTVIAUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>One of the not-via points is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_NOCHANGEATUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>One of the no-change-at stations is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_NOORIGIN">
-				<xs:annotation>
-					<xs:documentation>No start location has been defined for the trip.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_NODESTINATION">
-				<xs:annotation>
-					<xs:documentation>No end location has been defined for the trip.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_ORIGINDESTINATIONIDENTICAL">
-				<xs:annotation>
-					<xs:documentation>Start and end of the trip are identical.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_DATETIMEERROR">
-				<xs:annotation>
-					<xs:documentation>The requested date and/or time do not make sense.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_DEPARTUREAFTERARRIVAL">
-				<xs:annotation>
-					<xs:documentation>The requested departure time at each origin is after the requested arrival time at any destination.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_DATEOUTOFRANGE">
-				<xs:annotation>
-					<xs:documentation>There is no timetable data available for the requested date.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="MULTIPOINTTRIP_NOTALLPOINTSCOVERED">
-				<xs:annotation>
-					<xs:documentation>No trip solution was found covering each of the requested points.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="MULTIPOINTTRIP_TOOMANYPOINTS">
-				<xs:annotation>
-					<xs:documentation>Too many points have been requested as departure or arrival.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_ORIGINEQUIVALENT">
-				<xs:annotation>
-					<xs:documentation>The requested origin stop place has been replaced by an equivalent stop place.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_DESTINATIONEQUIVALENT">
-				<xs:annotation>
-					<xs:documentation>The requested destination stop place has been replaced by an equivalent stop place.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_VIAEQUIVALENT">
-				<xs:annotation>
-					<xs:documentation>One of the requested via stop places has been replaced by an equivalent stop place.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_REALTIMEINCOMPLETE">
-				<xs:annotation>
-					<xs:documentation>There is no realtime information available for at least one of the services within this trip result.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_ITTIMEEXTENDED">
-				<xs:annotation>
-					<xs:documentation>The maximum time allowed for using modes of individual transport (mostly walking or cycling) has been extended by the system because otherwise no trip could be found.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_ITMODECHANGED">
-				<xs:annotation>
-					<xs:documentation>The mode of individual transport specified by the user has been replaced by the system because otherwise no trip could be found. Usually this means taking a taxi instead of walking.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIP_INCONVENIENTWAITING">
-				<xs:annotation>
-					<xs:documentation>The trip plan in this trip result contains a long waiting time.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="STOPEVENT_NOEVENTFOUND">
-				<xs:annotation>
-					<xs:documentation>No departure/arrival could be found within the requested period of time that meets the given restrictions.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="STOPEVENT_LOCATIONUNSERVED">
-				<xs:annotation>
-					<xs:documentation>At the locations (address, stop, etc.) for which stop events have been requested, there is no public transport service at all.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="STOPEVENT_LOCATIONUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>The location (address, stop, etc.) for which stop events were requested is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="STOPEVENT_DATEOUTOFRANGE">
-				<xs:annotation>
-					<xs:documentation>There are no timetables available for the requested date.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="STOPEVENT_LASTSERVICEOFTHISLINE">
-				<xs:annotation>
-					<xs:documentation>This departure/arrival event is the last one of this line for this operating day.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="STOPEVENT_NOREALTIME">
-				<xs:annotation>
-					<xs:documentation>There is no realtime or forecast data available for this departure/arrival event.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIPINFO_JOURNEYREFUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>The journey reference used in the request is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIPINFO_VEHICLEUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>The vehicle reference used in the request is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIPINFO_NOJOURNEYFOUND">
-				<xs:annotation>
-					<xs:documentation>No matching journey could be found for the requested time and journey/vehicle identifiers.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TRIPINFO_NOGEOINFO">
-				<xs:annotation>
-					<xs:documentation>No geographic information available for this vehicle journey.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="REFINE_OBJECTNOTFOUND">
+			<xs:enumeration value="REFINE_OBJECTNOTFOUND"> <!--TODO update, when the new Requests are done -->
 				<xs:annotation>
 					<xs:documentation>The object to be refined could not be found in the separate database or could not be found unequivocally.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!-- ROUTE related problems not used in OJP will be removed at some point
-			<xs:enumeration value="ROUTE_NOROUTEFOUND">
-				<xs:annotation>
-					<xs:documentation>Individual transport routes could not be found with regard to the start locations and destinations stated, the desired departure and arrival time and keeping in mind the specified parameters.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_ORIGINUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>The specified location (address, stop etc.) for the start of the individual route is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_DESTINATIONUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>The specified location (address, stop etc.) for the destination of the individual route is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_VIAUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>One of the via-points specified is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_ORIGINDESTINATIONIDENTICAL">
-				<xs:annotation>
-					<xs:documentation>Start and destination are identical.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_UNSUPPORTEDMODE">
-				<xs:annotation>
-					<xs:documentation>One of the requested individual modes is not supported.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_UNSUPPORTEDMOBILITYFILTER">
-				<xs:annotation>
-					<xs:documentation>One of the requested mobility filters is not supported.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_UNSUPPORTEDALGORITHM">
-				<xs:annotation>
-					<xs:documentation>The requested algorithm type is not supported.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_UNSUPPORTEDBAN">
-				<xs:annotation>
-					<xs:documentation>One of the requested ban filters (motorways, toll roads, ferries) is not supported.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_NODATETIME">
-				<xs:annotation>
-					<xs:documentation>Neither the departure time nor the arrival time has been stated.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_DATETIMEERROR">
-				<xs:annotation>
-					<xs:documentation>Date and/or time are incomprehensible.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_DEPARTUREAFTERARRIVAL">
-				<xs:annotation>
-					<xs:documentation>The desired departure time at all the start points is after the desired arrival time at al destination points.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_DATEOUTOFRANGE">
-				<xs:annotation>
-					<xs:documentation>Routing data is not available for the requested date, e.g. because the date is in the past or far into the future.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_MODEPARAMETERSIGNORED">
-				<xs:annotation>
-					<xs:documentation>At least one of the parameters for this individual mode has been ignored for this individual transport route.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_MOBILITYFILTERIGNORED">
-				<xs:annotation>
-					<xs:documentation>At least one of the mobility filters has been ignored for this individual transport route.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ROUTE_BANIGNORED">
-				<xs:annotation>
-					<xs:documentation>At least one of the ban filters (motorways, toll roads, ferries) has been ignored for this individual transport route.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration> -->
 			<xs:enumeration value="OTHER">
 				<xs:annotation>
 					<xs:documentation>if the problem cannot be found from the above list</xs:documentation>
@@ -376,17 +50,8 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="ProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Structured problem messages</xs:documentation>
-		</xs:annotation>
+	<xs:group name="ProblemDetailGroup">
 		<xs:sequence>
-			<xs:element name="Type" type="ProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Problem type (code). OTHER, if the problem can't be found in the list
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="Title" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Title of the problem situation.</xs:documentation>
@@ -402,6 +67,20 @@
 					<xs:documentation>Additional log data.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="ProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Structured problem messages</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="ProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Problem type (code). OTHER, if the problem can't be found in the list
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ProblemDetailGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PrivateCodeStructure">

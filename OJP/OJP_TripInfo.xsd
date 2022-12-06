@@ -4,6 +4,52 @@
 		<xs:documentation>OJP/OJP_TripInfo.xsd - Request and response definitions for information on a single trip</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="OJP_All.xsd"/>
+	
+	<xs:simpleType name="TripInfoProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>All LOCATION problem codes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TRIPINFO_JOURNEYREFUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The journey reference used in the request is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_VEHICLEUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The vehicle reference used in the request is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_NOJOURNEYFOUND">
+				<xs:annotation>
+					<xs:documentation>No matching journey could be found for the requested time and journey/vehicle identifiers.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_NOGEOINFO">
+				<xs:annotation>
+					<xs:documentation>No geographic information available for this vehicle journey.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_OTHER">
+				<xs:annotation>
+					<xs:documentation>if the problem cannot be found from the above list</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TripInfoProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Structured problem messages for TRIP INFORMATION</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="TripInfoProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Problem type (code). OTHER, if the problem can't be found in the list</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+		</xs:sequence>
+	</xs:complexType>	
 	<xs:annotation>
 		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
 	</xs:annotation>
