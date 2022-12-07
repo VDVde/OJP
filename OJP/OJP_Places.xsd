@@ -121,7 +121,7 @@
 		<xs:sequence>
 			<xs:element name="Problem" type="LocationProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Result-specific problem messages.</xs:documentation>
+					<xs:documentation>Problems related to this LOCATION result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Place" type="PlaceStructure"/>
@@ -157,7 +157,7 @@
 			</xs:element>
 			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (eg: in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The place information service is expected to support a response volume of at least 500 objects within one single response.</xs:documentation>
+					<xs:documentation>Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (e.g.: in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The place information service is expected to support a response volume of at least 500 objects within one single response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
@@ -331,7 +331,7 @@
 		<xs:sequence>
 			<xs:element name="Problem" type="ExchangePointProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Result-specific problem messages.</xs:documentation>
+					<xs:documentation>Problems related to this EXCHANGE POINTS result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Place" type="PlaceStructure">
@@ -341,7 +341,7 @@
 			</xs:element>
 			<xs:element name="TravelDurationEstimate" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Rough estimate of the travel duration from the specified refrence place to this exchange point.</xs:documentation>
+					<xs:documentation>Rough estimate of the travel duration from the specified reference place to this exchange point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WaitDuration" type="xs:duration" default="PT0M" minOccurs="0">

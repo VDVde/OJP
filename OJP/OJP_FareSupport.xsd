@@ -27,72 +27,6 @@
 			<xs:maxInclusive value="100.0"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="FareProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Structured problem messages</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="FareProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Problem type (code). OTHER, if the problem can't be found in the list
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:simpleType name="FareProblemTypeEnumeration">
-		<xs:annotation>
-			<xs:documentation>All fare problem codes</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="FARES_OUTOFAREA">
-				<xs:annotation>
-					<xs:documentation>The trip planning has found a route that leaves the area of the fare authority.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_JOURNEYNOTPERMITTED">
-				<xs:annotation>
-					<xs:documentation>The trip planning result suggests a service which is not permitted by the fare authority.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_ADDITIONALCHARGES">
-				<xs:annotation>
-					<xs:documentation>Passengers may be charged additional fees (eg: for road tolls or seat reservation).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_ADDITIONALTICKETS">
-				<xs:annotation>
-					<xs:documentation>Additional tickets may be necessary because only parts of the passenger trip could be covered.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_ROUTENOTFEASIBLE">
-				<xs:annotation>
-					<xs:documentation>Fare calculation is not possible because the suggested trip is not in compliance with the fare regulations (e.g.: because of round trips, TripLegs that go forth and return or exceeding the maximal total trip duration).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_ALREADYCOVERED">
-				<xs:annotation>
-					<xs:documentation>The ticket that has been specified in the request is valid for the suggested trip (or parts of it as defined by TripLegRange).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_DATEOUTOFRANGE">
-				<xs:annotation>
-					<xs:documentation>The fare request cannot be processed because there is no information available for the requested date.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_STOPPOINTUNKNOWN">
-				<xs:annotation>
-					<xs:documentation>The fare request cannot be processed because the requested stop is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="FARES_OTHER">
-				<xs:annotation>
-					<xs:documentation>if the problem cannot be found from the above list</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Fare Authority ==========================================</xs:documentation>
 	</xs:annotation>
@@ -455,11 +389,6 @@
 			<xs:documentation>Structure of a Single Trip Fare Request result</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Result-specific problem messages </xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:group ref="TripLegRangeGroup" minOccurs="0"/>
 			<xs:element name="PassedZones" type="TariffZoneListInAreaStructure" minOccurs="0">
 				<xs:annotation>
@@ -550,6 +479,74 @@
 					<xs:documentation>Number of travellers that will make the journey and for which Fare information needs to be gathered.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="FareProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to FARE requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FARE_OUTOFAREA">
+				<xs:annotation>
+					<xs:documentation>The trip planning has found a route that leaves the area of the fare authority.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FARE_JOURNEYNOTPERMITTED">
+				<xs:annotation>
+					<xs:documentation>The trip planning result suggests a service which is not permitted by the fare authority.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FARE_ADDITIONALCHARGES">
+				<xs:annotation>
+					<xs:documentation>Passengers may be charged additional fees (e.g.: for road tolls or seat reservation).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FARE_ADDITIONALTICKETS">
+				<xs:annotation>
+					<xs:documentation>Additional tickets may be necessary because only parts of the passenger trip could be covered.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FARE_ROUTENOTFEASIBLE">
+				<xs:annotation>
+					<xs:documentation>Fare calculation is not possible because the suggested trip is not in compliance with the fare regulations, e.g. because of round trips, TripLegs that go forth and return or exceed the maximal total trip duration.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FARE_ALREADYCOVERED">
+				<xs:annotation>
+					<xs:documentation>The ticket that has been specified in the request is valid for the suggested trip (or parts of it as defined by TripLegRange).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FARE_DATEOUTOFRANGE">
+				<xs:annotation>
+					<xs:documentation>The fare request cannot be processed because there is no information available for the requested date.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FARE_STOPPOINTUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The fare request cannot be processed because the requested stop is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FARE_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="FareProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Problem that may be returned in responses to FARE requests.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="FareProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Type of the FARE problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ProblemDetailGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

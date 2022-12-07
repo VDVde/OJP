@@ -74,9 +74,9 @@
 					<xs:documentation>Calculation time.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="ProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="OJPGenericProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>OJP specific problem messages for the whole delivery.</xs:documentation>
+					<xs:documentation>OJP generic problem for the whole delivery.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -181,6 +181,59 @@
 					<xs:documentation>Container for SIRI SX situation objects. Only situations that are referenced in the response should be put into the container.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="OJPGenericProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in case of generic problems with the request.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OJPGENERIC_REQUESTNOTSUPPORTED">
+				<xs:annotation>
+					<xs:documentation>The server does not support the specific request (e.g.: MultiPointTripRequest).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OJPGENERIC_FEATURENOTSUPPORTED">
+				<xs:annotation>
+					<xs:documentation>The server does not support the requested feature (e.g.: parameter NotVia in TripRequest).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OJPGENERIC_LANGUAGENOTSUPPORTED">
+				<xs:annotation>
+					<xs:documentation>For the display of texts within the result, the server (at least in the context of this request) does not support the requested language.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OJPGENERIC_EXCEPTIONFROMREQUESTEDLANGUAGE">
+				<xs:annotation>
+					<xs:documentation>When displaying texts within the result, the server does not support the requested language for all occurring text elements.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OJPGENERIC_DATAFRAMEREFNOTAVAILABLE">
+				<xs:annotation>
+					<xs:documentation>The server cannot provide the requested data frame (data version).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OJPGENERIC_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="OJPGenericProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Problem that may be returned in case of generic problems with the request.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="OJPGenericProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Type of the generic problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ProblemDetailGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
