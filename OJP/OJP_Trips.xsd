@@ -200,8 +200,8 @@
 						</xs:enumeration>
 					</xs:restriction>
 				</xs:simpleType>
-			</xs:element>							
-			<xs:element name="CyclingProfile" default="fast" minOccurs="0" maxOccurs="1">	
+			</xs:element>
+			<xs:element name="CyclingProfile" default="fast" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Users cycling profile (especially for sportive activities).</xs:documentation>
 				</xs:annotation>
@@ -257,7 +257,7 @@
 			<xs:enumeration value="extraSafe">
 				<xs:annotation>
 					<xs:documentation>High level of safety. If used, certain modes, lines or zones/districts known for lower safety, i.e. higher risk of accidents and crime, may be avoided, others may be preferred. This may depend on the actual, local or time of day situation.E.g. bike or scooter may be considered unsafe in some cities/districts while safe in others.</xs:documentation>
-				</xs:annotation>			
+				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="extraReliable">
 				<xs:annotation>
@@ -273,8 +273,8 @@ based on punctuality statics, traffic jam statistics or rush hours. E.g. taxis i
 			<xs:enumeration value="peaceful">
 				<xs:annotation>
 					<xs:documentation>E.g. first class or quiet compartments preferred. Journeys that are with low occupancy.</xs:documentation>
-				</xs:annotation>			
-			</xs:enumeration>	
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="NotViaStructure">
