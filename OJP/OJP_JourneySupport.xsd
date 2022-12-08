@@ -191,6 +191,24 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+		<xs:simpleType name="ReservationNeededEnumeration">
+		<xs:annotation>
+			<xs:documentation>Possible types of reservation needed for services.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="service">
+			<xs:annotation>
+				<xs:documentation>Reservation/booking is needed that the service operates. BookingArrangment should then be used and contain more details.</xs:documentation>
+			</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="stop">
+			<xs:annotation>
+				<xs:documentation>Reservation/booking is needed for the service to touch a stop (for alighting or boading).BookingArrangment should then be used and contain more details..</xs:documentation>
+			</xs:annotation>
+			</xs:enumeration>			
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="DatedJourneyStructure">
 		<xs:annotation>
 			<xs:documentation>[equivalent to  DATED VEHICLE JOURNEY in TMv6]  passenger carrying VEHICLE JOURNEY for one specified DAY TYPE for which the pattern of working is in principle defined by a SERVICE JOURNEY PATTERN. DatedJourney details of a service include its operating days. </xs:documentation>
@@ -206,6 +224,11 @@
 			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Container with information on booking possibilities for this service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReservationNeeded" type="ReservationNeededEnumeration">
+				<xs:annotation>
+					<xs:documentation>Indicates whether this service needs some kind of reservation or booking to run.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
