@@ -261,7 +261,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="extraReliable">
 				<xs:annotation>
-					<xs:documentation>Low probably of delays, cancellations etc. If used, modes known for their (un)reliability may be avoided/preferred, and extra time added for transfers. This may depend on the actual, local or time of day situation,
+					<xs:documentation>Low probability of delays, cancellations etc. If used, modes known for their (un)reliability may be avoided/preferred, and extra time added for transfers. This may depend on the actual, local or time of day situation,
 based on punctuality statics, traffic jam statistics or rush hours. E.g. taxis in a given city might be known to be unreliable during at 8-10 and 16-19 hours, otherwise reliable.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
@@ -270,7 +270,7 @@ based on punctuality statics, traffic jam statistics or rush hours. E.g. taxis i
 					<xs:documentation>Scenic (or touristic) travel. Different by modes or by the surrounding.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="peaceful">
+			<xs:enumeration value="quietTravel">
 				<xs:annotation>
 					<xs:documentation>E.g. first class or quiet compartments preferred. Journeys that are with low occupancy.</xs:documentation>
 				</xs:annotation>
