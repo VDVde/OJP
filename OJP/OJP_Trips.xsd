@@ -119,9 +119,14 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripMobilityFilterGroup"/>
-			<xs:element name="LevelEntrance" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="LevelEntranceOrBoardingAid" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The user needs vehicles with level entrance between  platform and vehicle, f.e. for wheelchair access.</xs:documentation>
+					<xs:documentation>The user needs vehicles with level entrance between platform and vehicle, an appropriate ramp, or assistance for boarding or unboarding (for assisted and unassisted wheelchairs, or similar constraints).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccessibilityPreference" type="AccessibilityPreferenceEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The user may specify access features to be avoided. The routing algorithm tries to minimise the occurrences of the listed access features, the order of priority is given by the sequence in which they are listed. Unless bestIfMobilityImpaired is chosen as OptimisationMethod, the minimisation is restricted to optimising walking paths in TransferLegs and ContinuousLegs. If bestIfMobilityImpaired is chosen as OptimisationMethod, the algorithm tries to minimise the obstacles by also considering substantially longer Trips.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BikeTransport" type="xs:boolean" default="false" minOccurs="0">
@@ -175,22 +180,58 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="fastest"/>
+				<xs:annotation>
+					<xs:documentation>Shortest duration.</xs:documentation>
+				</xs:annotation>
 			<xs:enumeration value="minChanges"/>
+				<xs:annotation>
+					<xs:documentation>Minimal number of interchanges.</xs:documentation>
+				</xs:annotation>
 			<xs:enumeration value="leastWalking"/>
+				<xs:annotation>
+					<xs:documentation>Shortest walking distance in meters, summed over all legs.</xs:documentation>
+				</xs:annotation>
 			<xs:enumeration value="leastCost"/>
+				<xs:annotation>
+					<xs:documentation>Cheapest fare, taking into account the applicable reductions.</xs:documentation>
+				</xs:annotation>
 			<xs:enumeration value="leastDistance">
 				<xs:annotation>
-					<xs:documentation>Least distance in meter. Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
+					<xs:documentation>Least distance in meters. Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="earliestArrival"/>
+				<xs:annotation>
+					<xs:documentation>Earliest arrival time respecting the time constraints.</xs:documentation>
+				</xs:annotation>
 			<xs:enumeration value="latestDeparture"/>
+				<xs:annotation>
+					<xs:documentation>Latest departure time while still arriving on time.</xs:documentation>
+				</xs:annotation>
 			<xs:enumeration value="earliestArrivalAndLatestDeparture"/>
+				<xs:annotation>
+					<xs:documentation>TODO - add description</xs:documentation>
+				</xs:annotation>
+			<xs:enumeration value="bestIfVisuallyImpaired">
+				<xs:annotation>
+					<xs:documentation>Optimised for the visually impaired (tactileGuidingStrips, tactileOrAuditorySigns, etc.).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="bestIfMobilityImpaired">
+				<xs:annotation>
+					<xs:documentation>Minimal occurences of obstacles as given by AccessibilityPreferences.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="bestIfAuditorilyImpaired">
+				<xs:annotation>
+					<xs:documentation>Optimised for the hearing impaired (visualSigns, visualDisplays, etc.).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="NotViaStructure">
 		<xs:annotation>
-			<xs:documentation>NNot-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through</xs:documentation>
+			<xs:documentation>Not-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
@@ -201,7 +242,7 @@
 	</xs:complexType>
 	<xs:complexType name="NoChangeAtStructure">
 		<xs:annotation>
-			<xs:documentation>no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.</xs:documentation>
+			<xs:documentation>No-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
@@ -210,6 +251,22 @@
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="AccessibilityPreferenceEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for a AccessibilityPreference.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="levelEntranceOrBoardingAid"/>
+			<xs:enumeration value="noSingleStep"/>
+			<xs:enumeration value="noStairs"/>
+			<xs:enumeration value="noRampUp"/>
+			<xs:enumeration value="noRamp"/>
+			<xs:enumeration value="noEscalator"/>
+			<xs:enumeration value="noTravelator"/>
+			<xs:enumeration value="noElevator"/>
+			<xs:enumeration value="tactileGuidingStrips"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== TripResponse definitions ==========================================</xs:documentation>
 	</xs:annotation>
