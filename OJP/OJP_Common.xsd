@@ -188,6 +188,28 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:complexType name="VehicleFilterStructure">
+		<xs:annotation>
+			<xs:documentation>Filter for Vehicles</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether to include or exclude given VehicleRefs and TRAIN NUMBERS in the list from the search. Default is exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VehicleRef" type="siri:VehicleRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to VEHICLE</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TrainNumber" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>TRAIN NUMBERs</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== Sharing Services ==========================================</xs:documentation>
 	</xs:annotation>

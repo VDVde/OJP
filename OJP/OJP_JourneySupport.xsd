@@ -63,6 +63,11 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="JourneyRef"/>
+			<xs:element name="PublicCode" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Public code of the SERVICE JOURNEY (same meaning as in NeTEx). Examples: "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:group ref="ServiceGroup"/>
 		</xs:sequence>
 	</xs:group>
@@ -89,7 +94,12 @@
 			</xs:element>
 			<xs:element name="TrainNumber" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Contains the TrainNumber description from NeTEx. If several TrainNumber types exist, use the commercial number.</xs:documentation>
+					<xs:documentation>Contains the TrainNumber from NeTEx (TRAIN NUMBER from Transmodel). If several TrainNumber types exist, use the commercial one. In some cases also non-train modes will use TrainNumber.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="siri:VehicleRef" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be the VEHICLE Id.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="OperatorRef" minOccurs="0"/>
