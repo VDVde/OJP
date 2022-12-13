@@ -179,39 +179,46 @@
 			<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="fastest"/>
+			<xs:enumeration value="fastest">
 				<xs:annotation>
 					<xs:documentation>Shortest duration.</xs:documentation>
 				</xs:annotation>
-			<xs:enumeration value="minChanges"/>
+			</xs:enumeration>	
+			<xs:enumeration value="minChanges">
 				<xs:annotation>
 					<xs:documentation>Minimal number of interchanges.</xs:documentation>
 				</xs:annotation>
-			<xs:enumeration value="leastWalking"/>
+			</xs:enumeration>					
+			<xs:enumeration value="leastWalking">
 				<xs:annotation>
 					<xs:documentation>Shortest walking distance in meters, summed over all legs.</xs:documentation>
 				</xs:annotation>
-			<xs:enumeration value="leastCost"/>
+			</xs:enumeration>					
+			<xs:enumeration value="leastCost">
 				<xs:annotation>
 					<xs:documentation>Cheapest fare, taking into account the applicable reductions.</xs:documentation>
 				</xs:annotation>
+			</xs:enumeration>					
 			<xs:enumeration value="leastDistance">
 				<xs:annotation>
 					<xs:documentation>Least distance in meters. Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="earliestArrival"/>
+			<xs:enumeration value="earliestArrival">
 				<xs:annotation>
 					<xs:documentation>Earliest arrival time respecting the time constraints.</xs:documentation>
 				</xs:annotation>
-			<xs:enumeration value="latestDeparture"/>
+			</xs:enumeration>					
+			<xs:enumeration value="latestDeparture">
 				<xs:annotation>
 					<xs:documentation>Latest departure time while still arriving on time.</xs:documentation>
 				</xs:annotation>
-			<xs:enumeration value="earliestArrivalAndLatestDeparture"/>
+			</xs:enumeration>					
+			<xs:enumeration value="earliestArrivalAndLatestDeparture">
 				<xs:annotation>
-					<xs:documentation>TODO - add description</xs:documentation>
+					<xs:documentation>Combines earliestArrival and latestDeparture.</xs:documentation>
 				</xs:annotation>
+			</xs:enumeration>					
 			<xs:enumeration value="bestIfVisuallyImpaired">
 				<xs:annotation>
 					<xs:documentation>Optimised for the visually impaired (tactileGuidingStrips, tactileOrAuditorySigns, etc.).</xs:documentation>
