@@ -111,6 +111,11 @@
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ConsiderElevationData" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Trip calculation takes elevation data into account (bike, walk)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripMobilityFilterGroup">
