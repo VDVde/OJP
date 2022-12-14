@@ -248,6 +248,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="TopographicPlaceRef" minOccurs="0"/>
+			<xs:element name="AdditionalInformation" type="PointOfInterestAdditionalInformationStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Additional information for this POI. (E. g. information on available parking slots, charging infrastructures, sharing vehicles.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PointOfInterestCategoryStructure">
@@ -266,6 +271,21 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="PointOfInterestAdditionalInformationStructure">
+		<xs:annotation>
+			<xs:documentation>Generic structure for additional information on POIs.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Category" type="xs:string" minOccurs="0"/>
+			<xs:element name="Attributes" type="KeyValueType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KeyValueType">
+		<xs:sequence>
+			<xs:element name="Key" type="xs:string"/>
+			<xs:element name="Value" type="xs:string"/>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="OsmTagStructure">
 		<xs:annotation>
