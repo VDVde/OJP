@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML-Beispieldatei von XMLSpy generiert v2020 (x64) (http://www.altova.com)-->
+<ojp:OJPAvailabilityDelivery xmlns:ojp="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri  ../../OJP.xsd">
+	<siri:ResponseTimestamp>2001-12-17T09:30:47Z</siri:ResponseTimestamp>
+	<siri:Status>false</siri:Status>
+	<siri:ErrorCondition>
+		<siri:OtherError>
+			<siri:ErrorText>Anfrage konnte nicht verarbeitet werden</siri:ErrorText>
+		</siri:OtherError>
+	</siri:ErrorCondition>
+</ojp:OJPAvailabilityDelivery>
