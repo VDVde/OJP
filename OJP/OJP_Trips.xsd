@@ -206,17 +206,17 @@
 			</xs:enumeration>
 			<xs:enumeration value="earliestArrival">
 				<xs:annotation>
-					<xs:documentation>Earliest arrival time respecting the time constraints.</xs:documentation>
+					<xs:documentation>Earliest possible arrival time respecting the time constraints. (forward search)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>					
 			<xs:enumeration value="latestDeparture">
 				<xs:annotation>
-					<xs:documentation>Latest departure time while still arriving on time.</xs:documentation>
+					<xs:documentation>Latest departure time for a given arrival time. (backward search)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>					
 			<xs:enumeration value="earliestArrivalAndLatestDeparture">
 				<xs:annotation>
-					<xs:documentation>Combines earliestArrival and latestDeparture.</xs:documentation>
+					<xs:documentation>Combines earliestArrival and latestDeparture, allowing to compress the departure time. (forward-backward-forward search)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>					
 			<xs:enumeration value="bestIfVisuallyImpaired">
