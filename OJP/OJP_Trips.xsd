@@ -778,7 +778,7 @@
 					<xs:documentation>Leave the builtup area / community.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="ramp">
+			<xs:enumeration value="freewayAccessRamp">
 				<xs:annotation>
 					<xs:documentation>Access lane to highway or the like.</xs:documentation>
 				</xs:annotation>
