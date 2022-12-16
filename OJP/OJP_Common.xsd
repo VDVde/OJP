@@ -8,23 +8,28 @@
 	<xs:annotation>
 		<xs:documentation>========================================== General ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:complexType name="ErrorMessageStructure">
+	<xs:group name="ProblemDetailGroup">
 		<xs:annotation>
-			<xs:documentation>Structured error messages</xs:documentation>
+			<xs:documentation>Detailed description of the problem.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Code" type="xs:normalizedString">
+			<xs:element name="Title" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Code of the error situation.</xs:documentation>
+					<xs:documentation>Title of the problem.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Text" type="InternationalTextStructure" minOccurs="0">
+			<xs:element name="Details" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Description of the error situation.</xs:documentation>
+					<xs:documentation>Explanation of the problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LogData" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Additional log data.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-	</xs:complexType>
+	</xs:group>
 	<xs:complexType name="PrivateCodeStructure">
 		<xs:annotation>
 			<xs:documentation>Code within scope of a private referential system</xs:documentation>

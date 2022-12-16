@@ -189,9 +189,9 @@
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="StopEventProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Error messages that refer to this stop event.</xs:documentation>
+					<xs:documentation>Problems related to this STOPEVENT result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StopEvent" type="StopEventStructure">
@@ -250,6 +250,64 @@
 					<xs:documentation>Walking duration from request place (f.e. address) to this stop. All user options taken into account (f.e. walk speed).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="StopEventProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to STOPEVENT requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="STOPEVENT_NOEVENTFOUND">
+				<xs:annotation>
+					<xs:documentation>No departure/arrival could be found within the requested period of time that meets the given restrictions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="STOPEVENT_LOCATIONUNSERVED">
+				<xs:annotation>
+					<xs:documentation>At the locations (address, stop, etc.) for which stop events have been requested, there is no public transport service at all.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="STOPEVENT_LOCATIONUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The location (address, stop, etc.) for which stop events were requested is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="STOPEVENT_DATEOUTOFRANGE">
+				<xs:annotation>
+					<xs:documentation>There are no timetables available for the requested date.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="STOPEVENT_LASTSERVICEOFTHISLINE">
+				<xs:annotation>
+					<xs:documentation>This departure/arrival event is the last one of this line for this operating day.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="STOPEVENT_NOREALTIME">
+				<xs:annotation>
+					<xs:documentation>There is no realtime or forecast data available for this departure/arrival event.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="STOPEVENT_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="StopEventProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Problem that may be returned in responses to STOPEVENT requests.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="StopEventProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Type of the STOPEVENT problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ProblemDetailGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
