@@ -467,4 +467,107 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="LocationProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to LOCATION requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LOCATION_NORESULTS">
+				<xs:annotation>
+					<xs:documentation>No location objects could be found that match the input data.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LOCATION_UNSUPPORTEDTYPE">
+				<xs:annotation>
+					<xs:documentation>The requested location types are not supported by the service.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LOCATION_UNSUPPORTEDCOMBINATION">
+				<xs:annotation>
+					<xs:documentation>The combination of input data (text string, coordinates, geographical restrictions) cannot be processed by the service.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LOCATION_NOREFINEMENT">
+				<xs:annotation>
+					<xs:documentation>The given location object could not be refined.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LOCATION_USAGEIGNORED">
+				<xs:annotation>
+					<xs:documentation>The usage type has been ignored.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LOCATION_UNSUPPORTEDPTMODES">
+				<xs:annotation>
+					<xs:documentation>The service does not support any restrictions by transport modes.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LOCATION_UNSUPPORTEDLOCALITY">
+				<xs:annotation>
+					<xs:documentation>The service does not support any restrictions by localities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LOCATION_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="LocationProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Problem that may be returned in responses to LOCATION requests.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="LocationProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Type of the LOCATION problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ProblemDetailGroup"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ExchangePointsProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to EXCHANGE POINTS requests</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EXCHANGEPOINTS_NORESULTS">
+				<xs:annotation>
+					<xs:documentation>No exchange points could be found that match the query criteria.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EXCHANGEPOINTS_UNKNOWNDESTINATIONSYSTEM">
+				<xs:annotation>
+					<xs:documentation>The destination system given in the request parameters is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EXCHANGEPOINTS_UNKNOWNADJACENTSYSTEM">
+				<xs:annotation>
+					<xs:documentation>One or more of the adjacent systems given in the request parameters are unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EXCHANGEPOINTS_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ExchangePointProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Problem that may be returned in responses to EXCHANGE POINTS requests.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="ExchangePointsProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Type of the EXCHANGE POINTS problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ProblemDetailGroup"/>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>

@@ -26,7 +26,7 @@ at [CEN](https://www.cen.eu).
 
 ## Repository
 
-Download the XSD schema files and examples in the git repository found at https://github.com/VDVde/OJP and take a look at the [documentation tables](https://vdvde.github.io/OJP/generated/OJP.html).
+Download the XSD schema files and examples in the git repository found at https://github.com/VDVde/OJP and take a look at the [documentation tables](https://vdvde.github.io/OJP/index.html).
 
 
 ## Regulatory environment of OJP
