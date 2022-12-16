@@ -124,10 +124,11 @@
 					<xs:documentation>The user needs vehicles with level entrance between platform and vehicle, an appropriate ramp, or assistance for boarding or unboarding (for assisted and unassisted wheelchairs, or similar constraints).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AccessibilityPreference" type="AccessibilityPreferenceEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="AccessibilityPreferences" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If bestIfMobilityImpaired is chosen as OptimisationMethod, the algorithm tries to minimise the obstacles by also considering substantially longer Trips. The user may specify access features to be avoided. The routing algorithm tries to minimise the occurrences of the listed access features, the order of priority is given by the sequence in which they are listed.</xs:documentation>
 				</xs:annotation>
+				<xsd:list itemType="AccessibilityPreferenceEnumeration" />
 			</xs:element>
 			<xs:element name="BikeTransport" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
