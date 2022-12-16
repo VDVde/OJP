@@ -219,7 +219,7 @@
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether to include or exclude given tariff zones in the list from the search. Default is include.</xs:documentation>
+					<xs:documentation>Whether to include or exclude given tariff zones in the list from the search. Default is to include.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TariffZones" type="TariffZoneListInAreaStructure"/>
