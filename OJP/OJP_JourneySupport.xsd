@@ -191,7 +191,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-		<xs:simpleType name="ReservationNeededEnumeration">
+	<xs:simpleType name="ReservationNeededEnumeration">
 		<xs:annotation>
 			<xs:documentation>Possible types of reservation needed for services.</xs:documentation>
 		</xs:annotation>
@@ -206,7 +206,7 @@
 				<xs:annotation>
 					<xs:documentation>Reservation/booking is needed for the service to touch a stop (for alighting or boading). BookingArrangement should then be used and contain more details.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="DatedJourneyStructure">
