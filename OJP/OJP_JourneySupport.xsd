@@ -203,9 +203,9 @@
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="stop">
-			<xs:annotation>
-				<xs:documentation>Reservation/booking is needed for the service to touch a stop (for alighting or boading). BookingArrangement should then be used and contain more details.</xs:documentation>
-			</xs:annotation>
+				<xs:annotation>
+					<xs:documentation>Reservation/booking is needed for the service to touch a stop (for alighting or boading). BookingArrangement should then be used and contain more details.</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>			
 		</xs:restriction>
 	</xs:simpleType>
