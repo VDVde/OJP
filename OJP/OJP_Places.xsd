@@ -216,7 +216,7 @@
 			</xs:element>
 			<xs:element name="GeoPosition" type="siri:LocationStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>WGS84 coordinates position. Locations closer to this GeoPosition are prefered.</xs:documentation>
+					<xs:documentation>WGS84 coordinates position. Locations closer to this GeoPosition are preferred.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MinimalProbability" type="xs:float" minOccurs="0">
