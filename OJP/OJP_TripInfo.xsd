@@ -112,6 +112,11 @@
 			<xs:documentation>TripInfo result structure containing the current status of a trip.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="Problem" type="TripInfoProblemStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Problems related to this TripInfo result.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="PreviousCall" type="CallAtStopStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The stops this service already has called at. Including the current stop if service is currently at stop.</xs:documentation>
@@ -140,6 +145,53 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="TripInfoProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to TripInfo requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TRIPINFO_JOURNEYREFUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The journey reference used in the request is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_VEHICLEUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The vehicle reference used in the request is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_NOJOURNEYFOUND">
+				<xs:annotation>
+					<xs:documentation>No matching journey could be found for the requested time and journey/vehicle identifiers.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_NOGEOINFO">
+				<xs:annotation>
+					<xs:documentation>No geographic information available for this vehicle journey.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TripInfoProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Problem that may be returned in responses to TripInfo requests.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="TripInfoProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Type of the TripInfo problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
