@@ -259,7 +259,7 @@
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="AccessibilityPreferenceEnumeration">
+	<xs:simpleType name="AccessibilityRoutingPreferenceEnumeration">
 		<xs:annotation>
 			<xs:documentation>Allowed values for a AccessibilityPreference.</xs:documentation>
 		</xs:annotation>
