@@ -540,7 +540,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="explanatory">
 				<xs:annotation>
-					<xs:documentation>Cancelled SERVICE JOURNEYs are still returned.</xs:documentation>
+					<xs:documentation>Cancelled and delayed SERVICE JOURNEYs are still returned, but an additional explanatory textual information is provide to decribe their current realtime status.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="none">
