@@ -199,7 +199,7 @@
 			<xs:enumeration value="none"/>
 			<xs:enumeration value="service">
 				<xs:annotation>
-					<xs:documentation>Reservation/booking is needed that the service operates. BookingArrangment should then be used and contain more details.</xs:documentation>
+					<xs:documentation>Reservation/booking is needed that the service operates. BookingArrangement should then be used and contain more details.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="stop">
