@@ -257,7 +257,7 @@
 		<xs:sequence>
 			<xs:element name="FareProductId" type="FareProductCodeType">
 				<xs:annotation>
-					<xs:documentation>Unique Code of the FareProduct.</xs:documentation>
+					<xs:documentation>Unique Id of the FareProduct.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FareProductName" type="xs:string">
