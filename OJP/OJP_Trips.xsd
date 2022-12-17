@@ -88,6 +88,11 @@
 					<xs:documentation>Filter for VEHICLE and TRAIN NUMBERs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="TariffzoneFilter" type="TariffzoneFilterStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Filter for trips using only specific tariff zones.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripPolicyGroup">
@@ -213,6 +218,16 @@
 				<xs:element ref="siri:StopPointRef"/>
 				<xs:element ref="StopPlaceRef"/>
 			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TariffzoneFilterStructure">
+		<xs:sequence>
+			<xs:element name="Exclude" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether to include or exclude given tariff zones in the list from the search. Default is to include.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TariffZones" type="TariffZoneListInAreaStructure"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
