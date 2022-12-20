@@ -106,11 +106,14 @@
 					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:choice>
+				<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration"/>
+				<xs:element name="OptimisationMethods" type="OptimisationMethodList" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
+					</xs:annotation>			
+				</xs:element>
+			</xs:choice>
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
@@ -164,7 +167,7 @@
 			</xs:element>
 			<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether altnerative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second best route. Should be optimised for the user expectance (see. e.g https://tel.archives-ouvertes.fr/tel-01848737)</xs:documentation>
+					<xs:documentation>Whether altnerative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second best route. Should be optimised for the user expectance (see. e.g https://tel.archives-ouvertes.fr/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludeFare" type="xs:boolean" default="false" minOccurs="0">
@@ -177,25 +180,25 @@
 					<xs:documentation>Whether the result should include operating day information - as encoded bit string and in natural language.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HikingProfile" default="normal" minOccurs="0" maxOccurs="1">
+			<xs:element name="HikingProfile" default="easy" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Users walking profile (especially for hiking)</xs:documentation>
+					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: possible explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen#:~:text=Die%20Kategorie%20Blau,Sturzes%20drastische%20Konsequenzen%20haben%20w%C3%BCrden</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="normal">
+						<xs:enumeration value="easy">
 							<xs:annotation>
-								<xs:documentation>e.g. yellow hiking signs</xs:documentation>
+								<xs:documentation>Regular hiking/walking in valleys and plains and easy mountain trails e.g. yellow hiking signs in Switzerland or blue in Germany</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="medium">
 							<xs:annotation>
-								<xs:documentation>e.g. white-red-white hiking signs</xs:documentation>
+								<xs:documentation>Medium difficulty mountain trails. E.g. white-red-white hiking signs in Switzerland or red in Germany.</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="difficult">
 							<xs:annotation>
-								<xs:documentation>E.g. white-blue-white hiking signs</xs:documentation>
+								<xs:documentation>Difficult mountain trails. E.g. white-blue-white hiking signs in Switzerland or black in Germany.</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 					</xs:restriction>
@@ -209,12 +212,12 @@
 					<xs:restriction base="xs:string">
 						<xs:enumeration value="fast">
 							<xs:annotation>
-								<xs:documentation>fastest normal cycle route</xs:documentation>
+								<xs:documentation>fastest cycle route</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="green">
 							<xs:annotation>
-								<xs:documentation>greenest normal cycle route</xs:documentation>
+								<xs:documentation>greenest cycle route</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="comfortable">
@@ -232,6 +235,14 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:complexType name="OptimisationMethodList">
+		<xs:annotation>
+			<xs:documentation>List of OptimisationMethods. The order of precedence - if used at all - is high to low. In single criteria optimisers the optimisation methods may be used in parallel and not truely used to score the results.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>	
+			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
 	<xs:simpleType name="OptimisationMethodEnumeration">
 		<xs:annotation>
 			<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
@@ -256,7 +267,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="extraSafe">
 				<xs:annotation>
-					<xs:documentation>High level of safety. If used, certain modes, lines or zones/districts known for lower safety, i.e. higher risk of accidents and crime, may be avoided, others may be preferred. This may depend on the actual, local or time of day situation. E.g. bike or scooter may be considered unsafe in some cities/districts while safe in others.</xs:documentation>
+					<xs:documentation>High level of safety (refering to crime, hazards or prone to accidents). If used, certain modes, lines or zones/districts known for lower safety, i.e. higher risk of accidents and crime, may be avoided, others may be preferred. This may depend on the actual, local or time of day situation. E.g. bike or scooter may be considered unsafe in some cities/districts while safe in others.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="extraReliable">
