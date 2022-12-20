@@ -623,11 +623,10 @@
 					<xs:documentation>Whether the result should include real time status of access features to indicate broken equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncludeAccessibilityDetails" minOccurs="0">
+			<xs:element name="IncludeAccessibilityDetails" type="AccessibilityDetailsProfileList" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Which accessibility features and other accessibility-related information (e.g., guidance text for the visually impaired) to retrieve.</xs:documentation>
 				</xs:annotation>
-				<xs:list itemType="AccessibilityDetailsProfileEnumeration"/>
 			</xs:element>
 			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
@@ -641,6 +640,9 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="AccessibilityDetailsProfileList">
+		<xs:list itemType="AccessibilityDetailsProfileEnumeration"/>
+	</xs:simpleType>
 	<xs:simpleType name="AccessibilityDetailsProfileEnumeration">
 		<xs:annotation>
 			<xs:documentation>Allowed values for AccessibilityDetailsProfile.</xs:documentation>
