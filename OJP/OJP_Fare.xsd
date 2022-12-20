@@ -119,6 +119,11 @@
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Problems related to this FARE result.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:choice>
 				<xs:element name="StopFareResult" type="StopFareResultStructure">
 					<xs:annotation>
@@ -207,11 +212,6 @@
 			<xs:documentation>Structure of a Multi Trip Fare Request result</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Result-specific error messages.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="TripFareProductReference" type="TripFareProductReferenceStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Non-empty list of trip references in the corresponding MultiTripFareRequestStructure</xs:documentation>

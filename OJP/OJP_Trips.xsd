@@ -88,6 +88,11 @@
 					<xs:documentation>Filter for VEHICLE and TRAIN NUMBERs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="TariffzoneFilter" type="TariffzoneFilterStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Filter for trips using only specific tariff zones.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripPolicyGroup">
@@ -115,6 +120,11 @@
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ConsiderElevationData" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Trip calculation takes elevation data into account (bike, walk)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -266,6 +276,16 @@
 			<xs:enumeration value="visualDisplays"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:complexType name="TariffzoneFilterStructure">
+		<xs:sequence>
+			<xs:element name="Exclude" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether to include or exclude given tariff zones in the list from the search. Default is to include.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TariffZones" type="TariffZoneListInAreaStructure"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== TripResponse definitions ==========================================</xs:documentation>
 	</xs:annotation>
@@ -288,7 +308,7 @@
 	</xs:group>
 	<xs:complexType name="TripResultStructure">
 		<xs:annotation>
-			<xs:documentation>Structure for a single trip result and its accompanying error messages.</xs:documentation>
+			<xs:documentation>Structure for a single trip result and associated problems.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ResultId" type="xs:NMTOKEN">
@@ -296,9 +316,9 @@
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="TripProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Error messages related to this trip result.</xs:documentation>
+					<xs:documentation>Problems related to this Trip result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
@@ -1005,7 +1025,7 @@
 	</xs:group>
 	<xs:complexType name="MultiPointTripResultStructure">
 		<xs:annotation>
-			<xs:documentation>Structure for a single trip result and its accompanying error messages.</xs:documentation>
+			<xs:documentation>Structure for a multipoint trip result and associated problems</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ResultId" type="xs:NMTOKEN">
@@ -1013,9 +1033,9 @@
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within multipoint-trip response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ErrorMessage" type="ErrorMessageStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="TripProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Error messages related to trip result.</xs:documentation>
+					<xs:documentation>Problems related to this trip result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
@@ -1153,4 +1173,137 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="TripProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to Trip requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TRIP_NOTRIPFOUND">
+				<xs:annotation>
+					<xs:documentation>No trip plan could be found that meets all the parameters as they have been set by the user (start and end locations, departure/arrival time and further options possibly set by the user).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_ORIGINUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The start location (address, stop place, …) for the requested trip is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_DESTINATIONUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The end location (address, stop place, …) for the requested trip is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_VIAUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>One of the via points is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_NOTVIAUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>One of the not-via points is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_NOCHANGEATUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>One of the no-change-at stations is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_NOORIGIN">
+				<xs:annotation>
+					<xs:documentation>No start location has been defined for the trip.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_NODESTINATION">
+				<xs:annotation>
+					<xs:documentation>No end location has been defined for the trip.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_ORIGINDESTINATIONIDENTICAL">
+				<xs:annotation>
+					<xs:documentation>Start and end of the trip are identical.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_DATETIMEERROR">
+				<xs:annotation>
+					<xs:documentation>The requested date and/or time do not make sense.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_DEPARTUREAFTERARRIVAL">
+				<xs:annotation>
+					<xs:documentation>The requested departure time at each origin is after the requested arrival time at any destination.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_DATEOUTOFRANGE">
+				<xs:annotation>
+					<xs:documentation>There is no timetable data available for the requested date.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_ORIGINEQUIVALENT">
+				<xs:annotation>
+					<xs:documentation>The requested origin stop place has been replaced by an equivalent stop place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_DESTINATIONEQUIVALENT">
+				<xs:annotation>
+					<xs:documentation>The requested destination stop place has been replaced by an equivalent stop place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_VIAEQUIVALENT">
+				<xs:annotation>
+					<xs:documentation>One of the requested via stop places has been replaced by an equivalent stop place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_REALTIMEINCOMPLETE">
+				<xs:annotation>
+					<xs:documentation>There is no realtime information available for at least one of the services within this trip result.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_ITTIMEEXTENDED">
+				<xs:annotation>
+					<xs:documentation>The maximum time allowed for using modes of individual transport (mostly walking or cycling) has been extended by the system because otherwise no trip could be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_ITMODECHANGED">
+				<xs:annotation>
+					<xs:documentation>The mode of individual transport specified by the user has been replaced by the system because otherwise no trip could be found. Usually this means taking a taxi instead of walking.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_INCONVENIENTWAITING">
+				<xs:annotation>
+					<xs:documentation>The trip plan in this trip result contains a long waiting time.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_MULTIPOINT_NOTALLPOINTSCOVERED">
+				<xs:annotation>
+					<xs:documentation>No trip solution was found covering each of the requested points.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_MULTIPOINT_TOOMANYPOINTS">
+				<xs:annotation>
+					<xs:documentation>Too many points have been requested as departure or arrival.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TripProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Problem that may be returned in responses to trip requests.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="TripProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Type of the trip problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ProblemDetailGroup"/>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>
