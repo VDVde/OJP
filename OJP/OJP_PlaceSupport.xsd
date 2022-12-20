@@ -248,7 +248,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="TopographicPlaceRef" minOccurs="0"/>
-			<xs:element name="AdditionalInformation" type="PointOfInterestAdditionalInformationStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="POIAdditionalInformation" type="PointOfInterestAdditionalInformationStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Additional information for this POI. (E. g. information on available parking slots, charging infrastructures, sharing vehicles.)</xs:documentation>
 				</xs:annotation>
@@ -277,12 +277,18 @@
 			<xs:documentation>Generic structure for additional information on POIs.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Category" type="xs:string" minOccurs="0"/>
-			<xs:element name="Attributes" type="KeyValueType" maxOccurs="unbounded"/>
+			<xs:element name="POIAdditionalInformation" type="CategoryKeyValueType" maxOccurs="unbounded">
+			<xs:annotation>
+				<xs:documentation>POI additional information is a set of key/value pairs that are associated with defined categories.</xs:documentation>
+			</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="KeyValueType">
-		<xs:sequence>
+	<xs:complexType name="CategoryKeyValueType">
+		<xs:annotation>
+			<xs:documentation>Category Key Value triplets. Category can be empty. Several such elements form the information necessary for a given category.</xs:documentation>
+		</xs:annotation>		<xs:sequence>
+			<xs:element name="Category" type="xs:string" minOccurs="0"/>		
 			<xs:element name="Key" type="xs:string"/>
 			<xs:element name="Value" type="xs:string"/>
 		</xs:sequence>
