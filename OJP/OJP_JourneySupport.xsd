@@ -59,7 +59,7 @@
 	</xs:complexType>
 	<xs:complexType name="ServiceSectionStructure">
 		<xs:annotation>
-			<xs:documentation>Properties of a service combined with a stop sequence interval. In many cases the elements about VEHICLE JOURNEY etc that are bundledn in a service in OJP are enough for the whole Leg. However, in some cases enough of these element change within a single leg (usually a PT RIDE LEG), that e.g. the LINE, OPERATOR, FARE SECTION, COMMON SECTION changes. Possible cases are splitting/joining of trans, international trains at the border. Then it becomes necessary to tell at a StopPoint that the information has changed and this results in multiple ServiceSections. </xs:documentation>
+			<xs:documentation>Properties of a service combined with a stop sequence interval. In many cases the elements about VEHICLE JOURNEY etc that are bundledn in a service in OJP are enough for the whole Leg. However, in some cases enough of these element change within a single leg (usually a PT RIDE LEG), that e.g. the LINE, OPERATOR, FARE SECTION, COMMON SECTION changes. Possible cases are splitting/joining of trans, international trains at the border. Then it becomes necessary to tell at a StopPoint that the information has changed and this results in multiple ServiceSections. This implementation of ServiceSection is a view of some parts of JOURNEY PARTs.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="StopSequenceIntervalGroup"/>
@@ -97,7 +97,7 @@
 			<xs:choice>
 				<xs:element name="ServiceSection" type="ServiceSectionStructure" maxOccurs="unbounded">
 					<xs:annotation>
-						<xs:documentation>Sequence of stop sequence intervals with respective service properties.</xs:documentation>
+						<xs:documentation>Sequence of stop sequence intervals with respective service properties (a view of JOURNEY PART).</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:group ref="ServiceGroup"/>
