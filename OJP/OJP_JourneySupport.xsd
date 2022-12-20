@@ -641,6 +641,9 @@
 		</xs:sequence>
 	</xs:group>
 	<xs:simpleType name="AccessibilityDetailsProfileList">
+		<xs:annotation>
+			<xs:documentation>List holding the AccessibilityDetailsProfileEnumerations.</xs:documentation>
+		</xs:annotation>
 		<xs:list itemType="AccessibilityDetailsProfileEnumeration"/>
 	</xs:simpleType>
 	<xs:simpleType name="AccessibilityDetailsProfileEnumeration">
