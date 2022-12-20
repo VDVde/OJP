@@ -111,7 +111,7 @@
 				<xs:element name="OptimisationMethods" type="OptimisationMethodList" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
-					</xs:annotation>			
+					</xs:annotation>
 				</xs:element>
 			</xs:choice>
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -239,8 +239,8 @@
 		<xs:annotation>
 			<xs:documentation>List of OptimisationMethods. The order of precedence - if used at all - is high to low. In single criteria optimisers the optimisation methods may be used in parallel and not truely used to score the results.</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>	
-			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" maxOccurs="unbounded" />
+		<xs:sequence>
+			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="OptimisationMethodEnumeration">
