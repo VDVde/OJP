@@ -613,11 +613,6 @@
 					<xs:documentation>Whether the result should include turn-by-turn instructions for each journey leg.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncludeAccessibility" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the result should include accessibility information.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="IncludeAccessFeatures" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the result should include the access features (stairs, elevator, etc.) on each path link.</xs:documentation>
