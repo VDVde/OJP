@@ -815,7 +815,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="straight_on">
 				<xs:annotation>
-					<xs:documentation>338-21 degrees </xs:documentation>
+					<xs:documentation>338-21 degrees</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="half_right">
