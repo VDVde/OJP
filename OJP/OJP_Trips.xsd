@@ -786,7 +786,7 @@
 			<!-- lane choice -->
 			<xs:enumeration value="unknown_lane_choice">
 				<xs:annotation>
-					<xs:documentation>If it is unclear which line to choose.</xs:documentation>
+					<xs:documentation>If it is unclear which lane to choose.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="left_lane">
