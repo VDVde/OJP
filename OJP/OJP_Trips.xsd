@@ -661,7 +661,7 @@
 			</xs:element>
 			<xs:element name="RoadName" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Road name, if applicable.</xs:documentation>
+					<xs:documentation>Road name</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Follow" type="FollowStructure" minOccurs="0" maxOccurs="unbounded">
