@@ -227,7 +227,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>For SITUATIONs that affect the whole StopEvent. Otherwise References for SITUATIONs can be added at the different CALL elements</xs:documentation>
 				</xs:annotation>

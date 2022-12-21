@@ -326,7 +326,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0" />
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -371,7 +371,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0" />
 			<xs:group ref="TripStatusGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
@@ -486,7 +486,7 @@
 					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0" />
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -536,7 +536,7 @@
 					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0" />
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -674,7 +674,7 @@
 					<xs:documentation>Description of the type of accessibility on this navigation section.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SituationFullRef" type="SituationFullRefStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="GuidanceAdviceEnumeration">
