@@ -624,7 +624,7 @@
 	</xs:complexType>
 	<xs:complexType name="PathGuidanceStructure">
 		<xs:annotation>
-			<xs:documentation> description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>
+			<xs:documentation>Description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PathGuidanceSection" type="PathGuidanceSectionStructure" maxOccurs="unbounded">
