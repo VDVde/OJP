@@ -681,7 +681,7 @@
 			</xs:element>
 			<xs:element name="PathLink" type="PathLinkStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Description of the type of accessibility on this navigation section. This is greatly reduced from the NeTEx PathLink structure.</xs:documentation>
+					<xs:documentation>Description of the type of accessibility on this navigation section. This view is simplified in comparison to the NeTEx PathLink structure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SituationFullRef" type="SituationFullRefStructure" minOccurs="0" maxOccurs="unbounded"/>
