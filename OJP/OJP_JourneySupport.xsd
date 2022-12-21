@@ -231,7 +231,7 @@
 					<xs:documentation>Indicates whether this service needs some kind of reservation or booking to run.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0" />
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -338,7 +338,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup"/>
-			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0" />
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="StopCallStatusGroup">
@@ -433,7 +433,7 @@
 					<xs:documentation>Container with information on booking possibilities for this service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0" />
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
