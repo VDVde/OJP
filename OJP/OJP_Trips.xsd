@@ -636,7 +636,7 @@
 	</xs:complexType>
 	<xs:complexType name="PathGuidanceSectionStructure">
 		<xs:annotation>
-			<xs:documentation>An extended definition of a NAVIGATION PATH in TMv6 and PATH GUIDANCE to include the textual navigation instructions] description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>
+			<xs:documentation>An extended definition of a NAVIGATION PATH in TMv6 and PATH GUIDANCE to include the textual navigation instructions. Description of a part of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TrackSection" type="TrackSectionStructure" minOccurs="0">
