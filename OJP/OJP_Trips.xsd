@@ -629,7 +629,7 @@
 		<xs:sequence>
 			<xs:element name="PathGuidanceSection" type="PathGuidanceSectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>One or more PATH GUIDANCE sections that build the LEG. The sections may need to be rather short to incororpate the necessary guidance in a detailed level. This may depend a lot on the MODE and on the type of guidance that is needed.</xs:documentation>
+					<xs:documentation>One or more PATH GUIDANCE sections that form the LEG. For a good PATH GUIDANCE a fine granularity of the sections may be needed. This may also depend on the MODE and the type of guidance required.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
