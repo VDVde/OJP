@@ -111,7 +111,7 @@
 					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AccessibilityRoutingPreferences" type="AccessibilityRoutingPreferencesList" minOccurs="0">
+			<xs:element name="AccessibilityRoutingPreference" type="AccessibilityRoutingPreferenceEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>If bestAccessibility is chosen as OptimisationMethod, the algorithm tries to minimise obstacles and sections without accessibility aids. The user may specify the criteria to be considered. The order of priority is given by the sequence in which they are listed (starting with the highest priority). Higher priority means, in terms of a cost function, that a change at a higher priority can never be compensated by changes at the lower priorities.</xs:documentation>
 				</xs:annotation>
@@ -128,12 +128,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:simpleType name="AccessibilityRoutingPreferencesList">
-		<xs:annotation>
-			<xs:documentation>If bestAccessibility is chosen as OptimisationMethod, the algorithm tries to minimise obstacles and sections without accessibility aids. The user may specify the criteria to be considered. The order of priority is given by the sequence in which they are listed (starting with the highest priority). Higher priority means, in terms of a cost function, that a change at a higher priority can never be compensated by changes at the lower priorities.</xs:documentation>
-		</xs:annotation>	
-		<xs:list itemType="AccessibilityRoutingPreferenceEnumeration"/>		
-	</xs:simpleType>
 	<xs:group name="TripMobilityFilterGroup">
 		<xs:annotation>
 			<xs:documentation>Parameters the user can set to restrict the mobility options - particularly for interchanging.</xs:documentation>
@@ -985,7 +979,7 @@
 					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AccessibilityRoutingPreferences" type="AccessibilityRoutingPreferencesList" minOccurs="0">
+			<xs:element name="AccessibilityRoutingPreference" type="AccessibilityRoutingPreferenceEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>If bestAccessibility is chosen as OptimisationMethod, the algorithm tries to minimise obstacles and sections without accessibility aids. The user may specify the criteria to be considered. The order of priority is given by the sequence in which they are listed (starting with the highest priority). Higher priority means, in terms of a cost function, that a change at a higher priority can never be compensated by changes at the lower priorities.</xs:documentation>
 				</xs:annotation>
