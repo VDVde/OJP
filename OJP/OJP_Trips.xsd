@@ -1152,6 +1152,7 @@
 					<xs:documentation>Textual information about reduced availability of the access feature, in particular if AccessFeatureStatus is partiallyAvailable.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AccessibilityFeature" type="AccessibilityFeatureTypesEnumeration" minOccurs="0" maxOccurs="unbounded">
 			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Reference to a situation that affects the availability of the access feature.</xs:documentation>
