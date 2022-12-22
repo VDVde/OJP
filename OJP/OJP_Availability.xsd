@@ -199,7 +199,6 @@
 			<xs:documentation>Availability response.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-
 			<xs:element name="AvailabilityResult" type="AvailabilityResultStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Indication of the availability of the requested service.</xs:documentation>
@@ -220,7 +219,7 @@
 				<xs:annotation>
 					<xs:documentation>Problems related to this AVAILABILITY result.</xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 			<xs:choice>
 				<xs:element name="PublicTransport" type="BookingPTLegStructure">
 					<xs:annotation>
