@@ -1161,7 +1161,7 @@
 				<xs:annotation>
 					<xs:documentation>Reference to a situation that affects the availability of the access feature.</xs:documentation>
 				</xs:annotation>
-			</xs:element>					
+			</xs:element>
 			<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Designations of level and place where this PathLink starts.</xs:documentation>
