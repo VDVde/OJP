@@ -27,7 +27,7 @@
 				<xs:annotation>
 					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops.
 					Note: Systems may support only one.</xs:documentation>
-		</xs:annotation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="ViaSystem" type="siri:ParticipantRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
