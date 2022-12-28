@@ -370,7 +370,7 @@
 	</xs:annotation>
 	<xs:simpleType name="AvailabilityProblemTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>Types of problems that may be returned in responses to STOPEVENT requests.</xs:documentation>
+			<xs:documentation>Types of problems that may be returned in responses to AVAILABILITY requests.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="AVAILIBILITY_NOSERIVCEFOUND">
