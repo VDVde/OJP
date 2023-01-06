@@ -76,7 +76,7 @@
 		<xs:sequence>
 			<xs:element name="PtModeFilter" type="PtModeFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Modes (VEHICLE MODE) to be excluded or included in trip calculation.</xs:documentation>
+					<xs:documentation>Modes to be considered in trip calculation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LineFilter" type="LineDirectionFilterStructure" minOccurs="0">
@@ -112,6 +112,16 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
+			<xs:element name="TransferLimit" type="xs:nonNegativeInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
@@ -125,9 +135,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripMobilityFilterGroup"/>
-			<xs:element name="LevelEntrance" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="LevelEntranceOrBoardingAid" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The user needs vehicles with level entrance between  platform and vehicle, f.e. for wheelchair access.</xs:documentation>
+					<xs:documentation>The user needs vehicles with level entrance between platform and vehicle, an appropriate ramp, or assistance for boarding or unboarding (for assisted and unassisted wheelchairs, or similar constraints).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BikeTransport" type="xs:boolean" default="false" minOccurs="0">
@@ -241,13 +251,49 @@
 			<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc.). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="fastest"/>
-			<xs:enumeration value="minChanges"/>
-			<xs:enumeration value="leastWalking"/>
-			<xs:enumeration value="leastCost"/>
+			<xs:enumeration value="fastest">
+				<xs:annotation>
+					<xs:documentation>Shortest duration somewhere in the future. This may present a shorter trip than the next earliest arrival (with latest departure).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>	
+			<xs:enumeration value="minChanges">
+				<xs:annotation>
+					<xs:documentation>Minimise the number of interchanges.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>					
+			<xs:enumeration value="leastWalking">
+				<xs:annotation>
+					<xs:documentation>Shortest walking distance in meters, summed over all legs.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>					
+			<xs:enumeration value="leastCost">
+				<xs:annotation>
+					<xs:documentation>Cheapest fare, taking into account the applicable reductions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>					
 			<xs:enumeration value="leastDistance">
 				<xs:annotation>
-					<xs:documentation>Least distance in meter. Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
+					<xs:documentation>Least distance in metres. Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="earliestArrival">
+				<xs:annotation>
+					<xs:documentation>Earliest possible arrival time respecting the time constraints. (forward search)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>					
+			<xs:enumeration value="latestDeparture">
+				<xs:annotation>
+					<xs:documentation>Latest departure time for a given arrival time. (backward search)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>					
+			<xs:enumeration value="earliestArrivalAndLatestDeparture">
+				<xs:annotation>
+					<xs:documentation>Combines earliestArrival and latestDeparture, allowing to compress the departure time. (forward-backward-forward search)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>					
+			<xs:enumeration value="bestAccessibility">
+				<xs:annotation>
+					<xs:documentation>Optimises obstacles and aids for passengers with accessibility limitations (mobility, visual, auditory). The criteria to be taken into account are defined in the AccessibilityRoutingPreferences.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="earliestArrival"/>
@@ -318,6 +364,23 @@
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="AccessibilityRoutingPreferenceEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for a AccessibilityRoutingPreference.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="levelEntranceOrBoardingAid"/>
+			<xs:enumeration value="noSingleStep"/>
+			<xs:enumeration value="noStairs"/>
+			<xs:enumeration value="noRampUp"/>
+			<xs:enumeration value="noRamp"/>
+			<xs:enumeration value="noEscalator"/>
+			<xs:enumeration value="noTravelator"/>
+			<xs:enumeration value="noElevator"/>
+			<xs:enumeration value="tactileGuidingStrips"/>
+			<xs:enumeration value="visualDisplays"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="TariffzoneFilterStructure">
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="false" minOccurs="0">
@@ -1304,6 +1367,16 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
+			<xs:element name="TransferLimit" type="xs:nonNegativeInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" default="anyPoint" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found.</xs:documentation>
