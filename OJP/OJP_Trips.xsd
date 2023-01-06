@@ -275,7 +275,7 @@
 				<xs:annotation>
 					<xs:documentation>Cheapest fare, taking into account the applicable reductions.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>					
+			</xs:enumeration>
 			<xs:enumeration value="leastDistance">
 				<xs:annotation>
 					<xs:documentation>Least distance in metres. Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
