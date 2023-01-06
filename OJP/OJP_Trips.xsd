@@ -122,6 +122,11 @@
 					<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AccessibilityRoutingPreference" type="AccessibilityRoutingPreferenceEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>If bestAccessibility is chosen as OptimisationMethod, the algorithm tries to minimise obstacles and sections without accessibility aids. The user may specify the criteria to be considered. The order of priority is given by the sequence in which they are listed (starting with the highest priority). Higher priority means, in terms of a cost function, that a change at a higher priority can never be compensated by changes at the lower priorities.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
@@ -135,11 +140,6 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripMobilityFilterGroup"/>
-			<xs:element name="LevelEntrance" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user needs vehicles with level entrance between platform and vehicle.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="LevelEntranceOrBoardingAid" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The user needs vehicles with level entrance between platform and vehicle, an appropriate ramp, or assistance for boarding or unboarding (for assisted and unassisted wheelchairs, or similar constraints).</xs:documentation>
@@ -275,7 +275,7 @@
 				<xs:annotation>
 					<xs:documentation>Cheapest fare, taking into account the applicable reductions.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>
+			</xs:enumeration>					
 			<xs:enumeration value="leastDistance">
 				<xs:annotation>
 					<xs:documentation>Least distance in metres. Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
@@ -295,17 +295,6 @@
 				<xs:annotation>
 					<xs:documentation>Combines earliestArrival and latestDeparture, allowing to compress the departure time. (forward-backward-forward search)</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="levelEntrance"/>
-			<xs:enumeration value="levelEntranceOrBoardingAid"/>
-			<xs:enumeration value="noSingleStep">
-				<xs:annotation>
-					<xs:documentation>The user wants to minimise the number of single steps. Stairs or non-level entrances are not taken into account.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="earliestArrival"/>
-			<xs:enumeration value="latestDeparture"/>
-			<xs:enumeration value="earliestArrivalAndLatestDeparture"/>
 			<xs:enumeration value="environmentalSafety">
 				<xs:annotation>
 					<xs:documentation>If set, favour "green" modes/lines such as bike sharing and (electric) trains, avoid or restrict modes/lines known for higher CO2 emissions such as (conventional) taxi, ride-hailing or coach.</xs:documentation>
@@ -331,15 +320,12 @@
 					<xs:documentation>E.g. first class or quiet compartments preferred. Journeys that are with low occupancy.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="noStairs"/>
-			<xs:enumeration value="noRampUp"/>
-			<xs:enumeration value="noRamp"/>
-			<xs:enumeration value="noEscalator"/>
-			<xs:enumeration value="noTravelator"/>
-			<xs:enumeration value="noElevator"/>
-			<xs:enumeration value="tactileGuidingStrips"/>
-			<xs:enumeration value="visualDisplays"/>
-			<xs:enumeration value="shortWalkingDistance"/>			
+			</xs:enumeration>
+			<xs:enumeration value="bestAccessibility">
+				<xs:annotation>
+					<xs:documentation>Optimises obstacles and aids for passengers with accessibility limitations (mobility, visual, auditory). The criteria to be taken into account are defined in the AccessibilityRoutingPreferences.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="NotViaStructure">
@@ -380,6 +366,23 @@
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="AccessibilityRoutingPreferenceEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for a AccessibilityRoutingPreference.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="levelEntranceOrBoardingAid"/>
+			<xs:enumeration value="noSingleStep"/>
+			<xs:enumeration value="noStairs"/>
+			<xs:enumeration value="noRampUp"/>
+			<xs:enumeration value="noRamp"/>
+			<xs:enumeration value="noEscalator"/>
+			<xs:enumeration value="noTravelator"/>
+			<xs:enumeration value="noElevator"/>
+			<xs:enumeration value="tactileGuidingStrips"/>
+			<xs:enumeration value="visualDisplays"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="TariffzoneFilterStructure">
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="false" minOccurs="0">
@@ -1374,6 +1377,11 @@
 			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccessibilityRoutingPreference" type="AccessibilityRoutingPreferenceEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>If bestAccessibility is chosen as OptimisationMethod, the algorithm tries to minimise obstacles and sections without accessibility aids. The user may specify the criteria to be considered. The order of priority is given by the sequence in which they are listed (starting with the highest priority). Higher priority means, in terms of a cost function, that a change at a higher priority can never be compensated by changes at the lower priorities.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" default="anyPoint" minOccurs="0">
