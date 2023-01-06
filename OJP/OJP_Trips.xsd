@@ -193,22 +193,22 @@
 				<xs:annotation>
 					<xs:documentation>Shortest duration somewhere in the future. This may present a shorter trip than the next earliest arrival (with latest departure).</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>	
+			</xs:enumeration>
 			<xs:enumeration value="minChanges">
 				<xs:annotation>
 					<xs:documentation>Minimise the number of interchanges.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>					
+			</xs:enumeration>
 			<xs:enumeration value="leastWalking">
 				<xs:annotation>
 					<xs:documentation>Shortest walking distance in meters, summed over all legs.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>					
+			</xs:enumeration>
 			<xs:enumeration value="leastCost">
 				<xs:annotation>
 					<xs:documentation>Cheapest fare, taking into account the applicable reductions.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>					
+			</xs:enumeration>
 			<xs:enumeration value="leastDistance">
 				<xs:annotation>
 					<xs:documentation>Least distance in metres. Mostly used for ALTERNATIVE MODE OF OPERATION</xs:documentation>
@@ -218,17 +218,17 @@
 				<xs:annotation>
 					<xs:documentation>Earliest possible arrival time respecting the time constraints. (forward search)</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>					
+			</xs:enumeration>
 			<xs:enumeration value="latestDeparture">
 				<xs:annotation>
 					<xs:documentation>Latest departure time for a given arrival time. (backward search)</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>					
+			</xs:enumeration>
 			<xs:enumeration value="earliestArrivalAndLatestDeparture">
 				<xs:annotation>
 					<xs:documentation>Combines earliestArrival and latestDeparture, allowing to compress the departure time. (forward-backward-forward search)</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>					
+			</xs:enumeration>
 			<xs:enumeration value="bestAccessibility">
 				<xs:annotation>
 					<xs:documentation>Optimises obstacles and aids for passengers with accessibility limitations (mobility, visual, auditory). The criteria to be taken into account are defined in the AccessibilityRoutingPreferences.</xs:documentation>
