@@ -13,7 +13,7 @@
 				<ojp:LineResult>
 					<ojp:LineRef>ch:slnid:123123</ojp:LineRef>
 					<siri:PublishedLineName>IC8</siri:PublishedLineName>
-					<ojp:LinkProjection>
+					<ojp:RouteGeometry>
 						<ojp:Position>
 							<siri:Longitude>7.48464</siri:Longitude>
 							<siri:Latitude>46.93150</siri:Latitude>
@@ -30,7 +30,7 @@
 							<siri:Longitude>7.48437</siri:Longitude>
 							<siri:Latitude>46.93134</siri:Latitude>
 						</ojp:Position>
-					</ojp:LinkProjection>
+					</ojp:RouteGeometry>
 					<ojp:Mode>
 						<ojp:PtMode>rail</ojp:PtMode>
 						<siri:RailSubmode>longDistanceTrain</siri:RailSubmode>
