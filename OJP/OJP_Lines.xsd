@@ -35,9 +35,9 @@
 					<xs:documentation>DIRECTION of LINE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LinkProjection" type="LinkProjectionStructure" minOccurs="0">
+			<xs:element name="RouteGeometry" type="LinkProjectionStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The LINE geometry as a single LinkProjection. A line usually has multiple ROUTEs an each has its own geometry. Here only the "main" geometry is used. And also no distinction between TrackSection is made.</xs:documentation>
+					<xs:documentation>The LINE's route geometry can be implemented as a single LinkProjection. A line usually has multiple ROUTEs and each has its own geometry. Here only the "main" geometry is used. And also no distinction between TrackSection is made.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
