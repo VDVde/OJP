@@ -557,7 +557,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="ExchangePointProblemStructure">
+	<xs:complexType name="ExchangePointsProblemStructure">
 		<xs:annotation>
 			<xs:documentation>Problem that may be returned in responses to EXCHANGE POINTS requests.</xs:documentation>
 		</xs:annotation>
