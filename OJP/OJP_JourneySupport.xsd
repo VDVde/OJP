@@ -68,7 +68,7 @@
 	</xs:complexType>
 	<xs:group name="StopSequenceIntervalGroup">
 		<xs:annotation>
-			<xs:documentation>Interval of stop sequence numbers.</xs:documentation>
+			<xs:documentation>Interval of stop sequence numbers of a given TimedLeg which my be one or multiple VEHICLE JOURNEY. The numbering starts with 1. An example is the train from Bern to Zweisimmen that is split in Spiez. The sequence 1-3 is the first sequence 3-9 the second.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="FromStopSeqNumber" type="xs:positiveInteger" minOccurs="0">
