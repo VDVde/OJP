@@ -270,10 +270,11 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="levelEntrance"/>
 			<xs:enumeration value="levelEntranceOrBoardingAid"/>
-			<xs:enumeration value="noSingleStep"/>
+			<xs:enumeration value="noSingleStep">
 				<xs:annotation>
 					<xs:documentation>The user wants to minimise the number of single steps. Stairs or non-level entrances are not taken into account.</xs:documentation>
 				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="noStairs"/>
 			<xs:enumeration value="noRampUp"/>
 			<xs:enumeration value="noRamp"/>
