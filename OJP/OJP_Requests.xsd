@@ -259,6 +259,7 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>	
 	<xs:element name="OJPLineInformationDelivery" type="OJPLineInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
 	<xs:complexType name="OJPLineInformationDeliveryStructure">
 		<xs:complexContent>
