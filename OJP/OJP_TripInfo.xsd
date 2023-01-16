@@ -175,7 +175,12 @@
 					<xs:documentation>No geographic information available for this vehicle journey.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="TRIPINFO_OTHER">
+			<xs:enumeration value="TRIPINFO_NOREALTIME">
+				<xs:annotation>
+					<xs:documentation>No real time information available.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+				<xs:enumeration value="TRIPINFO_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
 				</xs:annotation>
