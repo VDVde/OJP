@@ -563,7 +563,7 @@
 		<xs:sequence>
 			<xs:element name="NoSingleStep" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The user is not able to pass over a single step.</xs:documentation>
+					<xs:documentation>The user is not able to pass over, or wants to avoid, single steps. Stairs and non-level entrances are not excluded.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NoStairs" type="xs:boolean" default="false" minOccurs="0">
