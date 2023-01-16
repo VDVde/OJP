@@ -40,7 +40,7 @@
 		<xs:sequence>
 			<xs:element name="UseRealTimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Use realtime data. Default is "full"</xs:documentation>
+					<xs:documentation>Use real-time data. Default is "full"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -177,7 +177,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="TRIPINFO_NOREALTIME">
 				<xs:annotation>
-					<xs:documentation>No real time information available.</xs:documentation>
+					<xs:documentation>No real-time information available.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TRIPINFO_OTHER">

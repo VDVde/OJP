@@ -1079,7 +1079,7 @@
 			</xs:element>
 			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Usage of realtime data in refinement. Default is "full".</xs:documentation>
+					<xs:documentation>Usage of real-time data in refinement. Default is "full".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TripContentFilterGroup"/>

@@ -540,7 +540,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="explanatory">
 				<xs:annotation>
-					<xs:documentation>Cancelled and delayed SERVICE JOURNEYs are still returned, but an additional explanatory textual information is provide to decribe their current realtime status.</xs:documentation>
+					<xs:documentation>Cancelled and delayed SERVICE JOURNEYs are still returned, but an additional explanatory textual information is provide to decribe their current real-time status.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="none">
@@ -565,7 +565,7 @@
 			</xs:choice>
 			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The way realtime data should be used in the calculation of the trip.</xs:documentation>
+					<xs:documentation>The way real-time data should be used in the calculation of the trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ImmediateTripStart" type="xs:boolean" default="false" minOccurs="0">
