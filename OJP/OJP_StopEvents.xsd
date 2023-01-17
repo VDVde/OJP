@@ -42,7 +42,7 @@
 		<xs:sequence>
 			<xs:element name="PtModeFilter" type="PtModeFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Modes to be considered in stop events.</xs:documentation>
+					<xs:documentation>Modes (VEHICLE MODE) to be excluded or included in stop events.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LineFilter" type="LineDirectionFilterStructure" minOccurs="0">
