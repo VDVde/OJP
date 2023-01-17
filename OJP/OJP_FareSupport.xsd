@@ -154,7 +154,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="PhoneType">
 		<xs:annotation>
-			<xs:documentation>Type for an International phone number. + Country + MSIDDN e.g. +41 675601 etc.</xs:documentation>
+			<xs:documentation>Type for an International phone number. + Country + MSISDN e.g. +41 675601 etc.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:normalizedString"/>
 	</xs:simpleType>
