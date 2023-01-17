@@ -94,14 +94,11 @@
 					<xs:documentation>Public code of the SERVICE JOURNEY (same meaning as in NeTEx). Examples: "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:choice>
-				<xs:element name="ServiceSection" type="ServiceSectionStructure" maxOccurs="unbounded">
-					<xs:annotation>
-						<xs:documentation>Sequence of stop sequence intervals with respective service properties (a view of some parts of JOURNEY PART).</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:group ref="ServiceGroup"/>
-			</xs:choice>
+			<xs:element name="ServiceSection" type="ServiceSectionStructure" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Sequence of stop sequence intervals with respective service properties (a view of some parts of JOURNEY PART). The standard case is exactly one Service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="ServiceGroup">
