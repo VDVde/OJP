@@ -250,7 +250,7 @@
 			<xs:element ref="TopographicPlaceRef" minOccurs="0"/>
 			<xs:element name="POIAdditionalInformation" type="PointOfInterestAdditionalInformationStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Additional information for this POI. (E. g. information on available parking slots, charging infrastructures, sharing vehicles.)</xs:documentation>
+					<xs:documentation>Additional information for this POI. (E.g. information on available parking slots, charging infrastructures, sharing vehicles.)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
