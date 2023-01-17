@@ -281,7 +281,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="beforeBoardingOnly">
 				<xs:annotation>
-					<xs:documentation>Purchase must  be made before boarding transport vehicle.</xs:documentation>
+					<xs:documentation>Purchase must be made before boarding transport vehicle.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="onBoarding">
