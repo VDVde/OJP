@@ -266,7 +266,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="inAdvance">
 				<xs:annotation>
-					<xs:documentation>Purchase can  be made in advance of travel.</xs:documentation>
+					<xs:documentation>Purchase can be made in advance of travel.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="inAdvanceOnly">
