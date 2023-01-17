@@ -1060,17 +1060,17 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="anyPoint">
 				<xs:annotation>
-					<xs:documentation>if a solution for any one of multiple origin/destination points is sufficient. Some implementation will return only one origin-destination pair even for multiple results with this setting. Others will provide multiple. </xs:documentation>
+					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Some implementation will return only one origin-destination pair even for multiple results with this setting. Others will provide multiple.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="eachOrigin">
 				<xs:annotation>
-					<xs:documentation>a distinct solution for each of the origin points has to be found.</xs:documentation>
+					<xs:documentation>A distinct solution for each of the origin points has to be found.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="eachDestination">
 				<xs:annotation>
-					<xs:documentation>a distinct solution for each of the destination points has to be found.</xs:documentation>
+					<xs:documentation>A distinct solution for each of the destination points has to be found.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="eachOriginDestination">
