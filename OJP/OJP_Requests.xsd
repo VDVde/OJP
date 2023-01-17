@@ -203,6 +203,7 @@
 			<xs:extension base="AbstractOJPServiceRequestStructure">
 				<xs:sequence>
 					<xs:group ref="TripRefineRequestGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>					
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
