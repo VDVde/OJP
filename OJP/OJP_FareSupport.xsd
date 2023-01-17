@@ -321,12 +321,14 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="PurchaseMomentListOfEnumerations">
+	<xs:complexType name="PurchaseMomentListOfEnumerations">
 		<xs:annotation>
 			<xs:documentation>List of Purchase Moment. values.</xs:documentation>
 		</xs:annotation>
-		<xs:list itemType="PurchaseMomentEnumeration"/>
-	</xs:simpleType>
+		<xs:sequence>
+			<xs:element name="PurchaeMoment" type="PurchaseMomentEnumeration" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 	<!-- =================================================== -->
 	<xs:simpleType name="BookingProcessEnumeration">
 		<xs:annotation>
@@ -386,12 +388,14 @@
 			<xs:enumeration value="unknown"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="GroupBookingListOfEnumerations">
+	<xs:complexType name="GroupBookingListOfEnumerations">
 		<xs:annotation>
 			<xs:documentation>List of Group Booking values.</xs:documentation>
 		</xs:annotation>
-		<xs:list itemType="GroupBookingEnumeration"/>
-	</xs:simpleType>
+		<xs:sequence>
+			<xs:element name="GroupBooking" type="GroupBookingEnumeration" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="BookingArrangementsStructure" abstract="false">
 		<xs:annotation>
 			<xs:documentation>Type for BOOKING ARRANGEMENTs modified from NeTEx.</xs:documentation>
