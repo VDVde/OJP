@@ -139,7 +139,7 @@
 	</xs:annotation>
 	<xs:simpleType name="ContactTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>Allowed values for CONTACT role. +v1.2.2</xs:documentation>
+			<xs:documentation>Allowed values for CONTACT role.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:NMTOKEN">
 			<xs:enumeration value="any"/>
