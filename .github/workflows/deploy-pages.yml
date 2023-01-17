@@ -1,8 +1,8 @@
-name: Deploy documentation tables
+name: "Deploy documentation tables"
 
 on:
   push:
-    branches: ["changes_for_v1.1"]
+    branches:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,20 +19,41 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  deploy-documentation-tables:
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Check out repository code
         uses: actions/checkout@v3
+        with:
+          # https://github.com/marketplace/actions/add-commit#working-with-prs
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Install xmllint and xsltproc
+        run: |
+          sudo apt-get update
+          sudo apt-get install libxml2-utils xsltproc
+
       - name: Setup Pages
         uses: actions/configure-pages@v2
+
+      - name: Generate documentation tables for upload
+        run: ./docs/generate-tables.sh
+
+      - name: Move generated files
+        run: ./.github/scripts/move-generated-files.sh
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: './docs/generated'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

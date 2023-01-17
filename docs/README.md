@@ -18,7 +18,7 @@ For Windows, you'll find Windows binaries for xsltproc at http://xmlsoft.org/XSL
 
 ### Instructions
 
-On Linux and with the above prerequisites at hand, you can run `generate-tables.sh` to convert the XML schemas into a single HTML file [`index.html`](generated/index.html) in the `generated` subdirectory.
+On Linux and with the above prerequisites at hand, you can run `generate-tables.sh` to convert the XML schemas into a single HTML file `generated/index.html`.
 
 The generated HTML file requires the file `asciidoc.css` to be in the same directory. The above script makes sure it's there.
 

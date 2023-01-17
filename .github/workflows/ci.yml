@@ -1,7 +1,8 @@
+# Validate, lint, build and deploy documentation
 name: CI
 
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
+  # Triggers the workflow on push or pull request events for specific branches
   push:
     branches: [ "master", "main", "changes_for_v*" ]
   pull_request:
@@ -11,7 +12,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  run:
+  validate-and-lint:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -32,17 +34,17 @@ jobs:
       - name: Validate structure and lint XSD and XML files
         run: ./.github/scripts/validate-and-lint.sh
 
-      - name: Validate OJP XML examples
-        run: ./.github/scripts/validate-examples.sh
-
-      - name: Check schema structure for generation for documentation tables
-        run: ./docs/validate-schema-conventions.sh
-
-      - name: Generate documentation tables
-        run: ./docs/generate-tables.sh
-
       - name: Commit changes
         uses: EndBug/add-and-commit@v9 # https://github.com/marketplace/actions/add-commit
         with:
           default_author: github_actions
-          message: 'Lint and update documentation tables'
+          message: 'Fixed linting issues'
+
+      - name: Validate OJP XML examples
+        run: ./.github/scripts/validate-examples.sh
+
+      - name: Validate schema structure for generation for documentation tables
+        run: ./docs/validate-schema-conventions.sh
+
+      - name: Generate documentation tables (for validation only)
+        run: ./docs/generate-tables.sh
