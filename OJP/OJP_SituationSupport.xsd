@@ -36,7 +36,7 @@
 			<xs:documentation>List of references to SITUATIONs.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="SituationFullRef" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
