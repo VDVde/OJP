@@ -261,7 +261,7 @@
 		<xs:restriction base="xs:normalizedString">
 			<xs:enumeration value="onReservation">
 				<xs:annotation>
-					<xs:documentation>Purchase must   be made on reservation in advance of travel.</xs:documentation>
+					<xs:documentation>Purchase must be made on reservation in advance of travel.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="inAdvance">
