@@ -166,7 +166,7 @@
 			<xs:element name="Place" type="PlaceStructure" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="OperatorsStructure">
+	<xs:complexType name="Operators_RelStructure">
 		<xs:annotation>
 			<xs:documentation>Structure providing a collection of operators.</xs:documentation>
 		</xs:annotation>
@@ -183,7 +183,7 @@
 			<xs:documentation>Structure providing response contexts related to journeys, containing collections of places and situations.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Operators" type="OperatorsStructure" minOccurs="0">
+			<xs:element name="Operators" type="Operators_RelStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Container for OPERATOR objects. Only operator objects that are referenced in the response should be put into the container.</xs:documentation>
 				</xs:annotation>
