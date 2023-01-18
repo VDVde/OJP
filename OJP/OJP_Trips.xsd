@@ -108,7 +108,7 @@
 			</xs:element>
 			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
+					<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessibilityRoutingPreference" type="AccessibilityRoutingPreferenceEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -191,7 +191,7 @@
 	</xs:group>
 	<xs:simpleType name="OptimisationMethodEnumeration">
 		<xs:annotation>
-			<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
+			<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="fastest">
@@ -986,7 +986,7 @@
 			</xs:element>
 			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
+					<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessibilityRoutingPreference" type="AccessibilityRoutingPreferenceEnumeration" minOccurs="0" maxOccurs="unbounded">
