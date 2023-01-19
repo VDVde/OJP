@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
+	<siri:OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2022-12-01T17:54:38Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<ojp:OJPLineInformationDelivery>
+				<siri:ResponseTimestamp>2022-12-01T17:54:38Z</siri:ResponseTimestamp>
+				<siri:RequestMessageRef>4711</siri:RequestMessageRef>
+				<siri:Status>true</siri:Status>
+				<!-- no CalcTime for this service <ojp:CalcTime>20</ojp:CalcTime> -->
+				<ojp:LineResult>
+					<ojp:LineRef>ch:slnid:123123</ojp:LineRef>
+					<siri:PublishedLineName>IC8</siri:PublishedLineName>
+					<ojp:RouteGeometry>
+						<ojp:Position>
+							<siri:Longitude>7.48464</siri:Longitude>
+							<siri:Latitude>46.93150</siri:Latitude>
+						</ojp:Position>
+						<ojp:Position>
+							<siri:Longitude>7.48447</siri:Longitude>
+							<siri:Latitude>46.93141</siri:Latitude>
+						</ojp:Position>
+						<ojp:Position>
+							<siri:Longitude>7.48441</siri:Longitude>
+							<siri:Latitude>46.93138</siri:Latitude>
+						</ojp:Position>
+						<ojp:Position>
+							<siri:Longitude>7.48437</siri:Longitude>
+							<siri:Latitude>46.93134</siri:Latitude>
+						</ojp:Position>
+					</ojp:RouteGeometry>
+					<ojp:Mode>
+						<ojp:PtMode>rail</ojp:PtMode>
+						<siri:RailSubmode>longDistanceTrain</siri:RailSubmode>
+						<ojp:Name>
+							<ojp:Text>Intercity</ojp:Text>
+						</ojp:Name>
+					</ojp:Mode>
+				</ojp:LineResult>
+			</ojp:OJPLineInformationDelivery>
+		</siri:ServiceDelivery>
+	</siri:OJPResponse>
+</siri:OJP>
