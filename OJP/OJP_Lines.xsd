@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified" id="OJP_siri_service">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Lines.xsd - Request and response definitions for information on lines</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
+	<xs:annotation>
+		<xs:documentation>=============================== Line Information Service ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>=============================== Line Information Response Group ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="LineInformationResponseGroup">
+		<xs:annotation>
+			<xs:documentation>Line Information response group.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LineResult" type="LineResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:annotation>
+		<xs:documentation>=============================== LineInformation support functions ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="LineResultStructure">
+		<xs:sequence>
+			<xs:element name="LineRef" type="siri:LineRefStructure">
+				<xs:annotation>
+					<xs:documentation>Reference to the LINE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="siri:PublishedLineName" minOccurs="0"/>
+			<xs:element name="DirectionRef" type="siri:DirectionRefStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>DIRECTION of LINE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RouteGeometry" type="LinearShapeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The LINE's route geometry. A line can have multiple ROUTEs and each has its own geometry. The first should be the "main" geometry.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of transport modes that are supported by this line.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
