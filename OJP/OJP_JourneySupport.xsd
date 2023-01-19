@@ -346,7 +346,7 @@
 				<xs:annotation>
 					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="StopCallStatusGroup">
@@ -445,7 +445,7 @@
 				<xs:annotation>
 					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
