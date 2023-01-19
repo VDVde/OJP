@@ -153,12 +153,12 @@
 	</xs:annotation>
 	<xs:complexType name="PtModeFilterStructure">
 		<xs:annotation>
-			<xs:documentation>List of public transport modes ([from SIRI] mode of public transport service, corresponds to VEHICLE MODE) to include or exclude.</xs:documentation>
+			<xs:documentation>List of public transport modes ([from SIRI] mode of public transport service, corresponds to VEHICLE MODE) to exclude or include.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether modes in list are to include or exclude from search. Default is exclude.</xs:documentation>
+					<xs:documentation>Whether VEHICLE MODEs in list are to be excluded or included from search. Default is to exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PtMode" type="siri:VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
