@@ -110,7 +110,7 @@
 				<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration"/>
 				<xs:element name="OptimisationMethods" type="OptimisationMethodList" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
+						<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc.)</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -188,7 +188,7 @@
 					<xs:restriction base="xs:string">
 						<xs:enumeration value="easy">
 							<xs:annotation>
-								<xs:documentation>Regular hiking/walking in valleys and plains and easy mountain trails e.g. yellow hiking signs in Switzerland or blue in Germany</xs:documentation>
+								<xs:documentation>Regular hiking/walking in valleys and plains and easy mountain trails e.g. yellow hiking signs in Switzerland or blue in Germany.</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="medium">
