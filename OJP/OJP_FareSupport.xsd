@@ -316,14 +316,14 @@
 			</xs:enumeration>
 			<xs:enumeration value="other">
 				<xs:annotation>
-					<xs:documentation>Other moment of Purchase </xs:documentation>
+					<xs:documentation>Other moment of Purchase.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="PurchaseMomentListOfEnumerations">
 		<xs:annotation>
-			<xs:documentation>List of Purchase Moment. values.</xs:documentation>
+			<xs:documentation>List of Purchase Moment values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PurchaeMoment" type="PurchaseMomentEnumeration" maxOccurs="unbounded"/>
@@ -357,7 +357,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="bookableManuallly">
 				<xs:annotation>
-					<xs:documentation>Product can only be booked by contacting specific authorised retail outlets</xs:documentation>
+					<xs:documentation>Product can only be booked by contacting specific authorised retail outlets.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="other">
@@ -681,7 +681,7 @@
 		<xs:sequence>
 			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Result-specific error messages </xs:documentation>
+					<xs:documentation>Result-specific error messages.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TripLegRangeGroup" minOccurs="0"/>
