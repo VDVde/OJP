@@ -247,4 +247,30 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Line Information Service ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPLineInformationRequest" type="OJPLineInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:complexType name="OJPLineInformationRequestStructure">
+		<xs:complexContent>
+			<xs:extension base="AbstractOJPServiceRequestStructure">
+				<xs:sequence>
+					<xs:element name="LineDirectionFilter" type="LineDirectionFilterStructure" minOccurs="0"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="OJPLineInformationDelivery" type="OJPLineInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPLineInformationDeliveryStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceDeliveryStructure">
+				<xs:sequence>
+					<xs:element ref="OJPLineInformationRequest" minOccurs="0"/>
+					<xs:group ref="LineInformationResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 </xs:schema>
