@@ -515,6 +515,11 @@
 					<xs:documentation>The service does not support any restrictions by localities.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="LOCATION_UNSUPPORTEDSORTINGMETHOD">
+				<xs:annotation>
+					<xs:documentation>The service does not support the sorting method. The details should provide a list of the allowed methods the service supports.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="LOCATION_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
