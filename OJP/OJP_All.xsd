@@ -9,6 +9,7 @@
 	<xs:include schemaLocation="OJP_Fare.xsd"/>
 	<xs:include schemaLocation="OJP_FareSupport.xsd"/>
 	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
+	<xs:include schemaLocation="OJP_Lines.xsd"/>
 	<xs:include schemaLocation="OJP_ModesSupport.xsd"/>
 	<xs:include schemaLocation="OJP_Places.xsd"/>
 	<xs:include schemaLocation="OJP_PlaceSupport.xsd"/>
