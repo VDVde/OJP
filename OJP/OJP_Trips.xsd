@@ -110,7 +110,7 @@
 				<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration"/>
 				<xs:element name="OptimisationMethods" type="OptimisationMethodList" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
+						<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -167,7 +167,7 @@
 			</xs:element>
 			<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether altnerative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second best route. Should be optimised for the user expectance (see. e.g https://tel.archives-ouvertes.fr/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
+					<xs:documentation>Whether alternative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second-best route. Should be optimised for the user expectance (see. e.g https://theses.hal.science/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludeFare" type="xs:boolean" default="false" minOccurs="0">
@@ -182,7 +182,7 @@
 			</xs:element>
 			<xs:element name="HikingProfile" default="easy" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: possible explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen#:~:text=Die%20Kategorie%20Blau,Sturzes%20drastische%20Konsequenzen%20haben%20w%C3%BCrden</xs:documentation>
+					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: possible explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -206,23 +206,23 @@
 			</xs:element>
 			<xs:element name="CyclingProfile" default="fast" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Users cycling profile (especially for sportive activities).</xs:documentation>
+					<xs:documentation>Cycling profile of the user (especially for sportive activities).</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:enumeration value="fast">
 							<xs:annotation>
-								<xs:documentation>fastest cycle route</xs:documentation>
+								<xs:documentation>Fastest cycle route</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="green">
 							<xs:annotation>
-								<xs:documentation>greenest cycle route</xs:documentation>
+								<xs:documentation>Greenest cycle route</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="comfortable">
 							<xs:annotation>
-								<xs:documentation>family friendly and leisurely route</xs:documentation>
+								<xs:documentation>Family friendly and leisurely route</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 					</xs:restriction>
@@ -237,7 +237,7 @@
 	</xs:group>
 	<xs:complexType name="OptimisationMethodList">
 		<xs:annotation>
-			<xs:documentation>List of OptimisationMethods. The order of precedence - if used at all - is high to low. In single criteria optimisers the optimisation methods may be used in parallel and not truely used to score the results.</xs:documentation>
+			<xs:documentation>List of OptimisationMethods. The order of precedence - if used at all - is high to low. In single criteria optimisers the optimisation methods may be used in parallel and not truly used to score the results.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" maxOccurs="unbounded"/>
@@ -245,7 +245,7 @@
 	</xs:complexType>
 	<xs:simpleType name="OptimisationMethodEnumeration">
 		<xs:annotation>
-			<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
+			<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc.). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="fastest"/>
@@ -262,18 +262,17 @@
 			<xs:enumeration value="earliestArrivalAndLatestDeparture"/>
 			<xs:enumeration value="environmentalSafety">
 				<xs:annotation>
-					<xs:documentation>If set, favour "green" modes/lines such as bike sharing and (electric) trains, avoid or restrict modes/lines known for higher CO2 emissions such as (conventional) taxi, ridehailing or coach.</xs:documentation>
+					<xs:documentation>If set, favour "green" modes/lines such as bike sharing and (electric) trains, avoid or restrict modes/lines known for higher CO2 emissions such as (conventional) taxi, ride-hailing or coach.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="extraSafe">
 				<xs:annotation>
-					<xs:documentation>High level of safety (refering to crime, hazards or prone to accidents). If used, certain modes, lines or zones/districts known for lower safety, i.e. higher risk of accidents and crime, may be avoided, others may be preferred. This may depend on the actual, local or time of day situation. E.g. bike or scooter may be considered unsafe in some cities/districts while safe in others.</xs:documentation>
+					<xs:documentation>High level of safety (referring to crime, hazards or prone to accidents). If used, certain modes, lines or zones/districts known for lower safety, i.e. higher risk of accidents and crime, may be avoided, others may be preferred. This may depend on the actual, local or time of day situation. E.g. bike or scooter may be considered unsafe in some cities/districts while safe in others.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="extraReliable">
 				<xs:annotation>
-					<xs:documentation>Low probability of delays, cancellations etc. If used, modes known for their (un)reliability may be avoided/preferred, and extra time added for transfers. This may depend on the actual, local or time of day situation,
-based on punctuality statics, traffic jam statistics or rush hours. E.g. taxis in a given city might be known to be unreliable during at 8-10 and 16-19 hours, otherwise reliable.</xs:documentation>
+					<xs:documentation>Low probability of delays, cancellations etc. If used, modes known for their (un)reliability may be avoided/preferred, and extra time added for transfers. This may depend on the actual, local or time of day situation, based on punctuality statics, traffic jam statistics or rush hours. E.g. taxis in a given city might be known to be unreliable during at 8-10 and 16-19 hours, otherwise reliable.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="scenic">
@@ -1011,7 +1010,7 @@ based on punctuality statics, traffic jam statistics or rush hours. E.g. taxis i
 			</xs:element>
 			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
+					<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc.)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" default="anyPoint" minOccurs="0">
