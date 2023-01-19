@@ -79,6 +79,7 @@
 		<xs:sequence>
 			<xs:group ref="PlaceDataFilterGroup"/>
 			<xs:group ref="PlacePolicyGroup"/>
+			<xs:group ref="PlaceSortingGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="GeoRestrictionsStructure">
@@ -202,6 +203,25 @@
 			<xs:element name="PointOfInterestFilter" type="PointOfInterestFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Filter to narrow down POI searches.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="PlaceSortingGroup">
+		<xs:sequence>
+			<xs:element name="SortingMethod" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If there are multiple sorting methods supported by the system, the client can choose one of the existing. Which methods are available needs to be known to the client and may differ from system to system. Therefore use with care.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GeoPosition" type="siri:LocationStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>WGS84 coordinates position. Locations closer to this GeoPosition are preferred.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MinimalProbability" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ignore locations with a lower probability.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
