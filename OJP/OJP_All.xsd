@@ -3,11 +3,13 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_All.xsd - Includes for all OJP schema files</xs:documentation>
 	</xs:annotation>
+	<xs:include schemaLocation="OJP_Availability.xsd"/>
 	<xs:include schemaLocation="OJP_Common.xsd"/>
 	<xs:include schemaLocation="OJP_FacilitySupport.xsd"/>
 	<xs:include schemaLocation="OJP_Fare.xsd"/>
 	<xs:include schemaLocation="OJP_FareSupport.xsd"/>
 	<xs:include schemaLocation="OJP_JourneySupport.xsd"/>
+	<xs:include schemaLocation="OJP_Lines.xsd"/>
 	<xs:include schemaLocation="OJP_ModesSupport.xsd"/>
 	<xs:include schemaLocation="OJP_Places.xsd"/>
 	<xs:include schemaLocation="OJP_PlaceSupport.xsd"/>
