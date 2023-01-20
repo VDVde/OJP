@@ -351,7 +351,7 @@
 			<xs:documentation>Structure for a single trip result and associated problems.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ResultId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -381,7 +381,7 @@
 			<xs:documentation>Structure for trip overview information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripId" type="xs:NMTOKEN">
+			<xs:element name="TripId" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -440,7 +440,7 @@
 			<xs:documentation>[an extended form of PT TRIP in TM and NeTEx as it also includes the initial and final access legs to and from public transport] whole journey from passenger origin to passenger destination in one or more LEGs </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -495,7 +495,7 @@
 			<xs:documentation>a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="LegId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this leg. Unique within trip result.</xs:documentation>
 				</xs:annotation>
@@ -1337,7 +1337,7 @@
 			<xs:documentation>Structure for a multipoint trip result and associated problems</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ResultId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within multipoint-trip response.</xs:documentation>
 				</xs:annotation>
