@@ -824,7 +824,6 @@
 					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SituationFullRef" type="SituationFullRefStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="FollowStructure">
