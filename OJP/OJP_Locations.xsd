@@ -202,7 +202,7 @@
 			</xs:element>
 			<xs:element name="PtModes" type="PtModeFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned location / place objects. Applies only to stops.</xs:documentation>
+					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned location/place objects. Applies only to stops.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
