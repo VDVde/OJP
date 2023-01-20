@@ -195,7 +195,7 @@
 					<xs:documentation>Identifies the "valid from" LEG. If missing, then valid from the first LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToLegIdRef" type="xs:NMTOKEN">
+			<xs:element name="ToTripIdRef" type="xs:NMTOKEN">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid to" trip.</xs:documentation>
 				</xs:annotation>
