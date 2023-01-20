@@ -70,7 +70,7 @@
 			</xs:element>
 			<xs:element name="AllowedSystem" type="siri:ParticipantRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the location / place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the location /  place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the location/place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the location/place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -212,7 +212,7 @@
 			</xs:element>
 			<xs:element name="TopographicPlaceRef" type="TopographicPlaceRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>If at least one is set, only location / place objects within the given localities are allowed.</xs:documentation>
+					<xs:documentation>If at least one is set, only location/place objects within the given localities are allowed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PointOfInterestFilter" type="PointOfInterestFilterStructure" minOccurs="0">
@@ -278,12 +278,12 @@
 		<xs:sequence>
 			<xs:element name="PlaceRef" type="PlaceRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Location / Place for which exchange points to other "neighbour" systems are to be searched. This location / place is usually the origin/destination of a passenger journey. May be omitted if all exchange points shall be returned.</xs:documentation>
+					<xs:documentation>Location/Place for which exchange points to other "neighbour" systems are to be searched. This location/place is usually the origin/destination of a passenger journey. May be omitted if all exchange points shall be returned.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Params" type="ExchangePointsParamStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>E.g. location / place types (stops, addresses, POIs) or specific location / place attributes</xs:documentation>
+					<xs:documentation>E.g. location/place types (stops, addresses, POIs) or specific location/place attributes</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -298,27 +298,27 @@
 		<xs:sequence>
 			<xs:element name="Type" type="PlaceTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Allowed location / place object types. If none is given, all types are allowed.</xs:documentation>
+					<xs:documentation>Allowed location/place object types. If none is given, all types are allowed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Usage" type="PlaceUsageEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Defines, whether the location / place object of this request acts as origin, via or destination point of the passenger journey.</xs:documentation>
+					<xs:documentation>Defines, whether the location/place object of this request acts as origin, via or destination point of the passenger journey.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PtModes" type="PtModeFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned location / place objects. Applies only to stops.</xs:documentation>
+					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned location/place objects. Applies only to stops.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Filter for locations / places that are operated by certain organisations.</xs:documentation>
+					<xs:documentation>Filter for locations/places that are operated by certain organisations.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TopographicPlaceRef" type="TopographicPlaceRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>If at least one is set, only location / place objects within the given localities are allowed.</xs:documentation>
+					<xs:documentation>If at least one is set, only location/place objects within the given localities are allowed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DestinationSystem" type="siri:ParticipantRefStructure" minOccurs="0">
