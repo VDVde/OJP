@@ -28,7 +28,7 @@
 				<xs:annotation>
 					<xs:documentation>Problems related to this Line result.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="LineRef" type="siri:LineRefStructure">
 				<xs:annotation>
 					<xs:documentation>Reference to the LINE.</xs:documentation>
