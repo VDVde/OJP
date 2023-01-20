@@ -729,24 +729,24 @@
 	</xs:complexType>
 	<xs:complexType name="PathGuidanceStructure">
 		<xs:annotation>
-			<xs:documentation> description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information </xs:documentation>
+			<xs:documentation>Description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PathGuidanceSection" type="PathGuidanceSectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>one or more path guidance sections that build the trip Leg</xs:documentation>
+					<xs:documentation>One or more PATH GUIDANCE sections that form the LEG. For a good PATH GUIDANCE a fine granularity of the sections may be needed. This may also depend on the MODE and the type of guidance required.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PathGuidanceSectionStructure">
 		<xs:annotation>
-			<xs:documentation>[an extended definition of a NAVIGATION PATH in TMv6 to include the textual navigation instructions] description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information </xs:documentation>
+			<xs:documentation>An extended definition of a NAVIGATION PATH in TMv6 and PATH GUIDANCE to include the textual navigation instructions. Description of a part of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TrackSection" type="TrackSectionStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information</xs:documentation>
+					<xs:documentation>LINK PROJECTION on the infrastructure network of the LEG together with time information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TurnDescription" type="InternationalTextStructure" minOccurs="0">
@@ -756,12 +756,22 @@
 			</xs:element>
 			<xs:element name="GuidanceAdvice" type="GuidanceAdviceEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>various types of guidance advice given to travelle.</xs:documentation>
+					<xs:documentation>Various types of guidance advice given to traveller.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TurnAction" type="TurnActionEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>the range of alternative turns that can be described.</xs:documentation>
+					<xs:documentation>The range of alternative turns that can be described.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RoadName" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Road name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Follow" type="FollowStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Signs, roads, POI to follow.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DirectionHint" type="InternationalTextStructure" minOccurs="0">
@@ -769,14 +779,14 @@
 					<xs:documentation>Textual direction hint for better understanding, e.g. "follow signs to Hamburg".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Bearing" type="siri:AbsoluteBearingType" minOccurs="0">
+			<xs:element name="AbsoluteBearing" type="siri:AbsoluteBearingType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Absolute bearing after the described manoeuvre.</xs:documentation>
+					<xs:documentation>Absolute bearing (sky direction) after the described manoeuvre.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PathLink" type="PathLinkStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Description of the type of accessibility on this navigation section.</xs:documentation>
+					<xs:documentation>Description of the type of accessibility on this navigation section. This view is simplified in comparison to the NeTEx PathLink structure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
@@ -786,33 +796,183 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="FollowStructure">
+		<xs:choice>
+			<xs:element name="FollowSignName" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Follow a sign.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FollowRoadName" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Follow a road/route.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FollowDirectionName" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Follow a direction.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FollowExit" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Follow an exit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
 	<xs:simpleType name="GuidanceAdviceEnumeration">
 		<xs:annotation>
-			<xs:documentation>various types of guidance advice given to travelle</xs:documentation>
+			<xs:documentation>Various types of guidance advice given to traveller. Suitable values may differ by MODE (e.g. a car driver needs different advice than a person walking for a transfer.</xs:documentation>
 		</xs:annotation>
+		<!-- the classic values from OJP 1.0 with explanations -->
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="origin"/>
-			<xs:enumeration value="destination"/>
-			<xs:enumeration value="continue"/>
-			<xs:enumeration value="keep"/>
-			<xs:enumeration value="turn"/>
-			<xs:enumeration value="leave"/>
-			<xs:enumeration value="enter"/>
+			<xs:enumeration value="origin">
+				<xs:annotation>
+					<xs:documentation>Defining origin.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="destination">
+				<xs:annotation>
+					<xs:documentation>Defining a destination.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="continue">
+				<xs:annotation>
+					<xs:documentation>continue on the same street/road/path.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="keep">
+				<xs:annotation>
+					<xs:documentation>keep going on the same street/road/path.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="turn">
+				<xs:annotation>
+					<xs:documentation>When this value is used, you always have to consider the value in TurnAction as well. There must be a TurnAction present if "turn" is used.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="leave">
+				<xs:annotation>
+					<xs:documentation>Can be something like an elevator or a vehicle.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="enter">
+				<xs:annotation>
+					<xs:documentation>Can be something like an elevator or a vehicle.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<!-- additional enum values for individual vehicles -->
+			<xs:enumeration value="enter_roundabout">
+				<xs:annotation>
+					<xs:documentation>Entering a roundabout.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="stay_in_roundabout">
+				<xs:annotation>
+					<xs:documentation>Staying in the roundabout.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="leave_roundabout">
+				<xs:annotation>
+					<xs:documentation>Leave the roundabout.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="enter_builtup_area">
+				<xs:annotation>
+					<xs:documentation>Entering a builtup area / community.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="leave_builtup_area">
+				<xs:annotation>
+					<xs:documentation>Leave the builtup area / community.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="freewayAccessRamp">
+				<xs:annotation>
+					<xs:documentation>Access lane to highway or the like.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<!-- lane choice -->
+			<xs:enumeration value="unknown_lane_choice">
+				<xs:annotation>
+					<xs:documentation>If it is unclear which lane to choose.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="left_lane">
+				<xs:annotation>
+					<xs:documentation>If there are more than 2 lanes, then TurnAction half_left,left,sharp_left may help decide.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="middle_lane">
+				<xs:annotation>
+					<xs:documentation>If there are more than 3 lanes, then Turnaction straight defines the middle one.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="right_lane">
+				<xs:annotation>
+					<xs:documentation>If there are more than 2 lanes, then TurnAction half_right,right,sharp_right may help decide</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<!-- undefined values -->
+			<xs:enumeration value="unknown_turning_kind"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TurnActionEnumeration">
 		<xs:annotation>
-			<xs:documentation>the range of alternative turns that can be described</xs:documentation>
+			<xs:documentation>The range of alternative turns that can be described</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="sharp left"/>
-			<xs:enumeration value="left"/>
-			<xs:enumeration value="half left"/>
-			<xs:enumeration value="straight on"/>
-			<xs:enumeration value="half right"/>
-			<xs:enumeration value="right"/>
-			<xs:enumeration value="sharp right"/>
-			<xs:enumeration value="uturn"/>
+			<xs:enumeration value="straight_on">
+				<xs:annotation>
+					<xs:documentation>338-21 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="half_right">
+				<xs:annotation>
+					<xs:documentation>22-67 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="right">
+				<xs:annotation>
+					<xs:documentation>68-111 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sharp_right">
+				<xs:annotation>
+					<xs:documentation>112-157 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="uturn">
+				<xs:annotation>
+					<xs:documentation>158-201 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sharp_left">
+				<xs:annotation>
+					<xs:documentation>202-247 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="left">
+				<xs:annotation>
+					<xs:documentation>248-291 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="half_left">
+				<xs:annotation>
+					<xs:documentation>292-337 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="up">
+				<xs:annotation>
+					<xs:documentation>Upwards, the target level is in the PathLink structure.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="down">
+				<xs:annotation>
+					<xs:documentation>Downwards, the target level is in the PathLink structure.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown_turn_action"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:group name="TransferDurationGroup">
