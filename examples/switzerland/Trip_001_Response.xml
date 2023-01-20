@@ -532,7 +532,7 @@
 						<ojp:EndTime>2020-09-30T12:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:Id>1</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -579,7 +579,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -612,7 +614,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
@@ -624,7 +626,7 @@
 						<ojp:EndTime>2020-09-30T13:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:Id>2</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -671,7 +673,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -704,7 +708,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
@@ -716,7 +720,7 @@
 						<ojp:EndTime>2020-09-30T14:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:Id>3</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -763,7 +767,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -796,7 +802,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
@@ -808,7 +814,7 @@
 						<ojp:EndTime>2020-09-30T15:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:Id>4</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -855,7 +861,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -888,7 +896,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
@@ -900,7 +908,7 @@
 						<ojp:EndTime>2020-09-30T16:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:Id>5</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -947,7 +955,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -980,7 +990,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 			</ojp:OJPTripDelivery>

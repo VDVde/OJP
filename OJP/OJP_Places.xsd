@@ -68,7 +68,7 @@
 					<xs:documentation>Restricts the resulting place objects to the given geographical area.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AllowedSystemId" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="AllowedSystem" type="siri:ParticipantRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
@@ -79,6 +79,7 @@
 		<xs:sequence>
 			<xs:group ref="PlaceDataFilterGroup"/>
 			<xs:group ref="PlacePolicyGroup"/>
+			<xs:group ref="PlaceSortingGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="GeoRestrictionsStructure">
@@ -146,6 +147,16 @@
 					<xs:documentation>List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="System" type="siri:ParticipantRefStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Stores the system reference, where to ask for actual locations corresponding to this city name result. In order to get actual locations, a new location information request using the system ID of this result is needed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Operators" type="OperatorRefs_RelStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>List of operators operating at this place object. This list should only be filled if this is explicitly requested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="PlacePolicyGroup">
@@ -168,6 +179,11 @@
 			<xs:element name="IncludePtModes" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Tells the service to include the available public transport modes at returned stops.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeOperators" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Tells the service to include the available operators at returned stops.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -202,6 +218,26 @@
 			<xs:element name="PointOfInterestFilter" type="PointOfInterestFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Filter to narrow down POI searches.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="PlaceSortingGroup">
+		<xs:sequence>
+			<xs:element name="SortingMethod" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If there are multiple sorting methods supported by the system, the client can choose one of the existing. Which methods are available needs to be known to the client and may differ from system to system. Therefore use with care.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GeoPosition" type="siri:LocationStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>WGS84 coordinates position. Locations closer to this GeoPosition are preferred.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MinimalProbability" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ignore locations with a lower probability.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -314,7 +350,7 @@
 	</xs:group>
 	<xs:group name="ExchangePointsResponseGroup">
 		<xs:sequence>
-			<xs:element name="ExchangePointResponseContext" type="ResponseContextStructure" minOccurs="0">
+			<xs:element name="ExchangePointsResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
 				</xs:annotation>
@@ -324,12 +360,12 @@
 					<xs:documentation>If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Place" type="ExchangePointsResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExchangePointsResult" type="ExchangePointsResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:complexType name="ExchangePointsResultStructure">
 		<xs:sequence>
-			<xs:element name="Problem" type="ExchangePointProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="ExchangePointsProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this EXCHANGE POINTS result.</xs:documentation>
 				</xs:annotation>
@@ -357,6 +393,11 @@
 			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Priority" type="PercentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The priority of the exchange point. 100 is the maximum.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
