@@ -476,7 +476,7 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Tickets ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:simpleType name="FareProductCodeType">
+	<xs:simpleType name="FareProductIdType">
 		<xs:annotation>
 			<xs:documentation>Identifier of a FareProduct</xs:documentation>
 		</xs:annotation>
@@ -487,7 +487,7 @@
 			<xs:documentation>Reference to a FareProduct.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
-			<xs:extension base="FareProductCodeType"/>
+			<xs:extension base="FareProductIdType"/>
 		</xs:simpleContent>
 	</xs:complexType>
 	<xs:element name="FareProductRef" type="FareProductRefStructure">
@@ -545,20 +545,20 @@
 			<xs:documentation>[related to FARE PRODUCT in TM and NeTEx] different FARE PRODUCTs that may be available with related information</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="FareProductId" type="FareProductCodeType">
+			<xs:element name="FareProductId" type="FareProductIdType">
 				<xs:annotation>
-					<xs:documentation>Unique Id of the FareProduct.</xs:documentation>
+					<xs:documentation>Identifier of a FareProduct</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FareProductName" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>printable FareProduct name</xs:documentation>
+					<xs:documentation>Printable FareProduct name</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="FareAuthorityGroup"/>
 			<xs:element name="ProtoProduct" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Is this product a proto product? Default is false. If true, it should not be shown to the user. In a distributed environment (e.g. EU-Spirit) partial systems may generate incomplete product information (proto product), which has to be be processed further and combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Is this product a proto product? Default is false. If true, it should not be shown to the user. In a distributed environment (e.g. EU-Spirit) partial systems may generate incomplete product information (proto product), which has to be processed further and combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="FareProductPriceGroup"/>
@@ -648,7 +648,7 @@
 			</xs:element>
 			<xs:element name="SaleUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>URL to buy the FareProduct online</xs:documentation>
+					<xs:documentation>URL to buy the FareProduct online.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0" maxOccurs="unbounded"/>
