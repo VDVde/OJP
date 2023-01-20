@@ -430,6 +430,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeoPosition" type="siri:LocationStructure"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>SITUATION reference. Mostly used for STOP PLACE, SCHEDULED STOP POINT (StopPoint). However, in future a situation reference may occur on many geographic elements (e.g. roads) as well.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Attribute associated with this place.</xs:documentation>
@@ -508,6 +513,11 @@
 			<xs:enumeration value="LOCATION_UNSUPPORTEDLOCALITY">
 				<xs:annotation>
 					<xs:documentation>The service does not support any restrictions by localities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LOCATION_UNSUPPORTEDSORTINGMETHOD">
+				<xs:annotation>
+					<xs:documentation>The service does not support the sorting method. The details should provide a list of the allowed methods the service supports.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="LOCATION_OTHER">
