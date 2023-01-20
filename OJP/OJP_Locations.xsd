@@ -128,7 +128,7 @@
 			<xs:element name="Location" type="PlaceStructure"/>
 			<xs:element name="Complete" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation>States whether the included location / place is complete or needs further refinement. Only complete locations / places are fully resolved and can be used in e.g. trip requests. Incomplete locations / places have to be refined entering them once again into a LocationInformationRequest.</xs:documentation>
+					<xs:documentation>States whether the included location/place is complete or needs further refinement. Only complete locations/places are fully resolved and can be used in e.g. trip requests. Incomplete locations/places have to be refined entering them once again into a LocationInformationRequest.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Probability" minOccurs="0">
