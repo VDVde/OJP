@@ -532,7 +532,7 @@
 						<ojp:EndTime>2020-09-30T12:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:LegId>1</ojp:LegId>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -614,7 +614,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
@@ -626,7 +626,7 @@
 						<ojp:EndTime>2020-09-30T13:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:LegId>1</ojp:LegId>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -708,7 +708,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
@@ -720,7 +720,7 @@
 						<ojp:EndTime>2020-09-30T14:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:LegId>1</ojp:LegId>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -802,7 +802,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
@@ -814,7 +814,7 @@
 						<ojp:EndTime>2020-09-30T15:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:LegId>1</ojp:LegId>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -896,7 +896,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
@@ -908,7 +908,7 @@
 						<ojp:EndTime>2020-09-30T16:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:Leg>
 							<ojp:LegId>1</ojp:LegId>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -990,7 +990,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 			</ojp:OJPTripDelivery>
