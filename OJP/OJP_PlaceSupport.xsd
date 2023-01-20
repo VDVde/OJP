@@ -183,7 +183,7 @@
 					<xs:documentation>Reference to a parent TopographicPlace.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ReferredSystemId" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="ReferredSystem" type="siri:ParticipantRefStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Used in distributed environments (e.g. EU-Spirit). If set, this topographic place resides within the given system (in EU-Spirit "passive server"). This system can be queried for actual places within this topographic place. This is used in an distributed environment for a two-steps place identification. In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
@@ -430,6 +430,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeoPosition" type="siri:LocationStructure"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>SITUATION reference. Mostly used for STOP PLACE, SCHEDULED STOP POINT (StopPoint). However, in future a situation reference may occur on many geographic elements (e.g. roads) as well.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Attribute associated with this place.</xs:documentation>
@@ -510,6 +515,11 @@
 					<xs:documentation>The service does not support any restrictions by localities.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="LOCATION_UNSUPPORTEDSORTINGMETHOD">
+				<xs:annotation>
+					<xs:documentation>The service does not support the sorting method. The details should provide a list of the allowed methods the service supports.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="LOCATION_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
@@ -557,7 +567,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="ExchangePointProblemStructure">
+	<xs:complexType name="ExchangePointsProblemStructure">
 		<xs:annotation>
 			<xs:documentation>Problem that may be returned in responses to EXCHANGE POINTS requests.</xs:documentation>
 		</xs:annotation>
