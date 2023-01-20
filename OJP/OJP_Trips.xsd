@@ -25,7 +25,14 @@
 			</xs:element>
 			<xs:element name="Via" type="TripViaStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops.</xs:documentation>
+					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops.
+					Note: Systems may support only one.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ViaSystem" type="siri:ParticipantRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>With this parameter a distributing system is asked to build a trip using a given System to pass through. This helps in selecting Exchange Points for this trip. ViaSystem is also used in sequence.
+					Note: Systems may support only one.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NotVia" type="NotViaStructure" minOccurs="0" maxOccurs="unbounded">
@@ -493,6 +500,7 @@
 				<xs:element name="TransferLeg" type="TransferLegStructure"/>
 				<xs:element name="ContinuousLeg" type="ContinuousLegStructure"/>
 			</xs:choice>
+			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TimedLegStructure">
@@ -531,6 +539,7 @@
 					<xs:documentation>Geographic embedding of this leg.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -642,6 +651,7 @@
 					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -1202,12 +1212,37 @@
 	</xs:group>
 	<xs:simpleType name="MultiPointTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>How the multiple origin/destination points should be considered</xs:documentation>
+			<xs:documentation>How the multiple origin/destination points should be considered.
+			Note: Unfortunately this element was underdefined before and this resulted in different implementations.
+			Note: MultiPointType trumps the number of results. If the algorithm thinks it necessary to provide more results, it should.
+			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="anyPoint"/>
-			<xs:enumeration value="eachOrigin"/>
-			<xs:enumeration value="eachDestination"/>
+			<xs:enumeration value="anyPoint">
+				<xs:annotation>
+					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Some implementation will return only one origin-destination pair even for multiple results with this setting. Others will provide multiple.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="eachOrigin">
+				<xs:annotation>
+					<xs:documentation>A distinct solution for each of the origin points has to be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="eachDestination">
+				<xs:annotation>
+					<xs:documentation>A distinct solution for each of the destination points has to be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="eachOriginDestination">
+				<xs:annotation>
+					<xs:documentation>At least a result for each Origin-Destination pair must be presented.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="somePoints">
+				<xs:annotation>
+					<xs:documentation>Clarifies that some (probably the "best") origin-destination pairs should be returned.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
@@ -1218,6 +1253,11 @@
 			<xs:documentation>Multi-point trip response structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The MultiPointType should be returned, because it may differ from the one asked. Many systems will support only a subset of the MultiPointTypes and it is important to know, what the result is based on.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="MultiPointTripResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
