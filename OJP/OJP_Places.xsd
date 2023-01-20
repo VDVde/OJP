@@ -68,7 +68,7 @@
 					<xs:documentation>Restricts the resulting place objects to the given geographical area.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AllowedSystemId" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="AllowedSystem" type="siri:ParticipantRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
@@ -79,6 +79,7 @@
 		<xs:sequence>
 			<xs:group ref="PlaceDataFilterGroup"/>
 			<xs:group ref="PlacePolicyGroup"/>
+			<xs:group ref="PlaceSortingGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="GeoRestrictionsStructure">
@@ -144,6 +145,11 @@
 			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="System" type="siri:ParticipantRefStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Stores the system reference, where to ask for actual locations corresponding to this city name result. In order to get actual locations, a new location information request using the system ID of this result is needed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Operators" type="OperatorRefs_RelStructure" minOccurs="0">
@@ -212,6 +218,25 @@
 			<xs:element name="PointOfInterestFilter" type="PointOfInterestFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Filter to narrow down POI searches.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="PlaceSortingGroup">
+		<xs:sequence>
+			<xs:element name="SortingMethod" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If there are multiple sorting methods supported by the system, the client can choose one of the existing. Which methods are available needs to be known to the client and may differ from system to system. Therefore use with care.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GeoPosition" type="siri:LocationStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>WGS84 coordinates position. Locations closer to this GeoPosition are preferred.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MinimalProbability" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ignore locations with a lower probability.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -354,7 +379,7 @@
 					<xs:documentation>Rough estimate of the travel duration from the specified reference place to this exchange point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WaitDuration" type="xs:duration" default="PT0M" minOccurs="0">
+			<xs:element name="WaitDuration" type="xs:duration" minOccurs="0" default="PT0M">
 				<xs:annotation>
 					<xs:documentation>Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it has to take care, that feeding arrival and fetching departure are at least this duration apart.</xs:documentation>
 				</xs:annotation>
@@ -367,6 +392,11 @@
 			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>List of transport modes that call at this place object. This list should only be filled in case of stop points or stop places – and only when explicitly requested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Priority" type="PercentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The priority of the exchange point. 100 is the maximum.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

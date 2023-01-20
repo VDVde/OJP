@@ -38,9 +38,9 @@
 			<xs:documentation>Parameters that control the response behaviour.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="UseTimetabledDataOnly" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="UseRealTimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Do not show any realtime or incident data. Default is false.</xs:documentation>
+					<xs:documentation>Use real-time data. Default is "full"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -173,6 +173,11 @@
 			<xs:enumeration value="TRIPINFO_NOGEOINFO">
 				<xs:annotation>
 					<xs:documentation>No geographic information available for this vehicle journey.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_NOREALTIME">
+				<xs:annotation>
+					<xs:documentation>No real-time information available.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TRIPINFO_OTHER">

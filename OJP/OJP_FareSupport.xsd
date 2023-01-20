@@ -358,7 +358,7 @@
 			</xs:element>
 			<xs:element name="SaleUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>URL to buy the FareProduct online</xs:documentation>
+					<xs:documentation>URL to buy the FareProduct online.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0" maxOccurs="unbounded"/>
