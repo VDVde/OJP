@@ -152,6 +152,11 @@
 					<xs:documentation>Stores the system reference, where to ask for actual locations corresponding to this city name result. In order to get actual locations, a new location information request using the system ID of this result is needed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Operators" type="OperatorRefs_RelStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>List of operators operating at this place object. This list should only be filled if this is explicitly requested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="PlacePolicyGroup">
@@ -174,6 +179,11 @@
 			<xs:element name="IncludePtModes" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Tells the service to include the available public transport modes at returned stops.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeOperators" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Tells the service to include the available operators at returned stops.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
