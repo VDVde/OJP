@@ -6,7 +6,17 @@ All notable changes to this project will be documented in this file. The format 
 
 The releases can be found at https://github.com/VDVde/OJP/releases
 
-## [1.1] - Not released yet
+Currently active is [1.0.2]
+
+## [2.0]
+
+### Added
+
+### Changed
+
+### Removed
+
+## [1.1] - Not released yet (will be released as part of 2.0)
 
 ### Added
 
