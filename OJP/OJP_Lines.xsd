@@ -24,6 +24,11 @@
 	</xs:annotation>
 	<xs:complexType name="LineResultStructure">
 		<xs:sequence>
+			<xs:element name="Problem" type="LineInformationProblemStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Problems related to this Line result.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="LineRef" type="siri:LineRefStructure">
 				<xs:annotation>
 					<xs:documentation>Reference to the LINE.</xs:documentation>
@@ -45,6 +50,39 @@
 					<xs:documentation>List of transport modes that are supported by this line.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="LineInformationProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to LINE INFORMATION requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LINEINFORMATION_LINEUNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The requested LINE is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LINEINFORMATION_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="LineInformationProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Problem that may be returned in responses to LINE information requests.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="LineInformationProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Type of the LINE information problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ProblemDetailGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
