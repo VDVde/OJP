@@ -119,9 +119,9 @@
 					<xs:documentation>Whether operating day information of this stop event should be included in the response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncludeRealtimeData" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether realtime information of this stop event should be included in the response.</xs:documentation>
+					<xs:documentation>Whether real-time information of this stop event should be used in the response. Default is "full"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
@@ -227,6 +227,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>For SITUATIONs that affect the whole StopEvent. Otherwise References for SITUATIONs can be added at the different CALL elements</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
