@@ -51,7 +51,9 @@
 						<ojp:Text>NB 1</ojp:Text>
 					</ojp:PublishedServiceName>
 					<VehicleRef>1293912-1231</VehicleRef>
-					<ojp:OperatorRef>ch:1:sboid:13123</ojp:OperatorRef>
+					<ojp:OperatorRefs>
+						<ojp:OperatorRef>ch:1:sboid:13123</ojp:OperatorRef>
+					</ojp:OperatorRefs>
 				</ojp:PublicTransport>
 				<ojp:MobilityUser>
 					<ojp:Age>19</ojp:Age>

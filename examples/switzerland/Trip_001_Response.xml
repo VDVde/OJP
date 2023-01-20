@@ -579,7 +579,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -671,7 +673,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -763,7 +767,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -855,7 +861,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -947,7 +955,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
