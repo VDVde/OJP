@@ -664,14 +664,14 @@
 		<xs:sequence>
 			<xs:element name="TrackSection" type="TrackSectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>LINK PROJECTION on the infrastructure network of the trip leg section together with time information.</xs:documentation>
+					<xs:documentation>LINK PROJECTION on the infrastructure network of the leg section together with time information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TrackSectionStructure">
 		<xs:annotation>
-			<xs:documentation>LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information</xs:documentation>
+			<xs:documentation>LINK PROJECTION on the infrastructure network of the LEG together with time information</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TrackStart" type="PlaceRefStructure" minOccurs="0">
