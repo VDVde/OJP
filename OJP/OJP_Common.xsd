@@ -438,7 +438,7 @@
 					<xs:sequence>
 						<xs:element name="KilogramPerPersonKm">
 							<xs:annotation>
-								<xs:documentation>Kilogram by person and by kilometer of CO2 emmisions.</xs:documentation>
+								<xs:documentation>Kilogram by person and by kilometer of CO2 emission.</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:float">
