@@ -349,7 +349,7 @@
 	</xs:group>
 	<xs:group name="ExchangePointsResponseGroup">
 		<xs:sequence>
-			<xs:element name="ExchangePointResponseContext" type="ResponseContextStructure" minOccurs="0">
+			<xs:element name="ExchangePointsResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
 				</xs:annotation>
@@ -359,12 +359,12 @@
 					<xs:documentation>If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Place" type="ExchangePointsResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExchangePointsResult" type="ExchangePointsResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:complexType name="ExchangePointsResultStructure">
 		<xs:sequence>
-			<xs:element name="Problem" type="ExchangePointProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Problem" type="ExchangePointsProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this EXCHANGE POINTS result.</xs:documentation>
 				</xs:annotation>
