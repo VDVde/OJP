@@ -791,7 +791,7 @@
 			</xs:element>
 			<xs:element name="TurnAction" type="TurnActionEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The range of alternative turns that can be described.</xs:documentation>
+					<xs:documentation>The range of possible turns that can be described.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RoadName" type="InternationalTextStructure" minOccurs="0">
@@ -854,7 +854,6 @@
 		<xs:annotation>
 			<xs:documentation>Various types of guidance advice given to traveller. Suitable values may differ by MODE (e.g. a car driver needs different advice than a person walking for a transfer.</xs:documentation>
 		</xs:annotation>
-		<!-- the classic values from OJP 1.0 with explanations -->
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="origin">
 				<xs:annotation>
@@ -868,12 +867,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="continue">
 				<xs:annotation>
-					<xs:documentation>continue on the same street/road/path.</xs:documentation>
+					<xs:documentation>Continue on the same street/road/path.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="keep">
 				<xs:annotation>
-					<xs:documentation>keep going on the same street/road/path.</xs:documentation>
+					<xs:documentation>Keep going on the same street/road/path.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="turn">
@@ -891,7 +890,6 @@
 					<xs:documentation>Can be something like an elevator or a vehicle.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!-- additional enum values for individual vehicles -->
 			<xs:enumeration value="enter_roundabout">
 				<xs:annotation>
 					<xs:documentation>Entering a roundabout.</xs:documentation>
@@ -922,7 +920,6 @@
 					<xs:documentation>Access lane to highway or the like.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!-- lane choice -->
 			<xs:enumeration value="unknown_lane_choice">
 				<xs:annotation>
 					<xs:documentation>If it is unclear which lane to choose.</xs:documentation>
@@ -943,13 +940,16 @@
 					<xs:documentation>If there are more than 2 lanes, then TurnAction half_right,right,sharp_right may help decide</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!-- undefined values -->
 			<xs:enumeration value="unknown_turning_kind"/>
+			<!-- additional enum values for individual vehicles -->
+			<!-- lane choice -->
+			<!-- undefined values -->
 		</xs:restriction>
+		<!-- the classic values from OJP 1.0 with explanations -->
 	</xs:simpleType>
 	<xs:simpleType name="TurnActionEnumeration">
 		<xs:annotation>
-			<xs:documentation>The range of alternative turns that can be described</xs:documentation>
+			<xs:documentation>The range of possible turns that can be described.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="straight_on">
