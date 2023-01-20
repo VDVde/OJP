@@ -682,7 +682,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="visualImpairment"/>
 			<xs:enumeration value="auditoryImpairment"/>
-			<xs:enumeration value="mobilityImpairement"/>
+			<xs:enumeration value="mobilityImpairment"/>
 			<xs:enumeration value="bicycle"/>
 			<xs:enumeration value="general"/>
 		</xs:restriction>
