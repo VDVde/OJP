@@ -197,7 +197,7 @@
 			</xs:element>
 			<xs:element name="Usage" type="PlaceUsageEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Defines, whether location / place objects for origin, via, or destination are searched.</xs:documentation>
+					<xs:documentation>Defines, whether location/place objects for origin, via, or destination are searched.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PtModes" type="PtModeFilterStructure" minOccurs="0">
