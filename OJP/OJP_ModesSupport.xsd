@@ -25,6 +25,7 @@
 			<xs:enumeration value="car-sharing"/>
 			<xs:enumeration value="cycle-sharing"/>
 			<xs:enumeration value="scooter-sharing"/>
+			<xs:enumeration value="park-ride-car"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PrivateModesEnumeration">
