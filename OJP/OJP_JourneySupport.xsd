@@ -648,9 +648,19 @@
 					<xs:documentation>Whether the result should include turn-by-turn instructions for each journey leg.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncludeAccessibility" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="IncludeAccessFeatures" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether the result should include accessibility information.</xs:documentation>
+					<xs:documentation>Whether the result should include the access features (stairs, elevator, etc.) on each path link.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeAccessFeaturesStatus" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the result should include real time status of access features to indicate broken equipment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeAccessibilityDetails" type="AccessibilityDetailsProfileEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Which accessibility features and other accessibility-related information to retrieve (e.g. guidance text for the visually impaired).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
@@ -665,6 +675,18 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="AccessibilityDetailsProfileEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for AccessibilityDetails.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="visualImpairment"/>
+			<xs:enumeration value="auditoryImpairment"/>
+			<xs:enumeration value="mobilityImpairment"/>
+			<xs:enumeration value="bicycle"/>
+			<xs:enumeration value="general"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Leg Attributes ==========================================</xs:documentation>
 	</xs:annotation>
