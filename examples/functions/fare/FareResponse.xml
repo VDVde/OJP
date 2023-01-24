@@ -82,8 +82,7 @@
 					</ojp:Label>
 					<ojp:Url>https://www.sbb.ch/NOVA</ojp:Url>
 				</ojp:SaleUrl>
-			</ojp:FareProduct>			
-		</ojp:TripFareResult>		
+			</ojp:FareProduct>
+		</ojp:TripFareResult>
 	</ojp:FareResult>
-
 </ojp:OJPFareDelivery>

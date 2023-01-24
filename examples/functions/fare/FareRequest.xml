@@ -39,7 +39,8 @@
 									<ojp:ContinuousMode>demandResponsive</ojp:ContinuousMode>
 									<ojp:OperatingDayRef>2023-12-24</ojp:OperatingDayRef>
 									<VehicleRef>ch:1:vehicle:31231:12311</VehicleRef>
-									<ojp:JourneyRef>ch:1:jyid:12931231</ojp:JourneyRef> <!-- mandatory and I don't like this -->
+									<ojp:JourneyRef>ch:1:jyid:12931231</ojp:JourneyRef>
+									<!-- mandatory and I don't like this -->
 									<LineRef>ch:1:slnid:1231912</LineRef>
 									<DirectionRef>ch:1:direction:H</DirectionRef>
 									<ojp:Mode>
@@ -90,7 +91,7 @@
 						</ojp:Leg>
 						<ojp:Leg>
 							<ojp:Id>1231123</ojp:Id>
-								<ojp:TimedLeg>
+							<ojp:TimedLeg>
 								<ojp:LegBoard>
 									<StopPointRef>ch:1:sloid:3000:7</StopPointRef>
 									<ojp:StopPointName>
