@@ -71,7 +71,6 @@ Currently active is [1.0.2]
 * Improved *title* attribute and cardinality in generated HTML documentation. [#233](https://github.com/VDVde/OJP/pull/233)
 
 
-### Changed
 
 ### Removed
 
