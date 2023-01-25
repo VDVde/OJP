@@ -72,7 +72,6 @@ Currently active is [1.0.2]
 
 
 
-### Removed
 
 ## [1.1] - Not released yet (will be released as part of 2.0)
 
