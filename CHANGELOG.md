@@ -21,7 +21,6 @@ Currently active is [1.0.2]
 * New `OJPLineInformationRequest` and `OJPLineInformationDelivery`. [#243](https://github.com/VDVde/OJP/pull/243), [#308](https://github.com/VDVde/OJP/pull/308)
 * New `OJPAvailabilityRequest` and `OJPAvailabilityDelivery`. [#262](https://github.com/VDVde/OJP/pull/262), [#241](https://github.com/VDVde/OJP/pull/241)
 * New `OJPTripRefineRequest` and `OJPTripRefineDelivery`. [#247](https://github.com/VDVde/OJP/pull/247)
-* New `OJPLineInformationRequest` and `OJPLineInformationDelivery`. [#243](https://github.com/VDVde/OJP/pull/243)
 * Additional `OptimisationMethod`s for trip planning (`leastDistance`, `environmentalSafety`, `extraSafe`, `extraReliable`, `scenic`, `quietTravel`), new `HikingProfile` and `CyclingProfile`, support for mutiple `OptimisationMethod`s, new filter `IncludeAlternativeOptions` to show second-best routes. [#302](https://github.com/VDVde/OJP/pull/302), [#271](https://github.com/VDVde/OJP/pull/271), [#242](https://github.com/VDVde/OJP/pull/242)
 * New place sorting options (`PlaceSortingGroup`) for `OJPPlaceInformationRequest`. [#301](https://github.com/VDVde/OJP/pull/301), [#287](https://github.com/VDVde/OJP/pull/287)
 * Added switches to request accessibility information (`IncludeAccessFeatureStatus`, `IncludeAccessibilityDetails`) in `OJPTripRequest`. [#291](https://github.com/VDVde/OJP/pull/291)
