@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ojp:OJPAvailabilityRequest xmlns:ojp="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri  ../../OJP.xsd">
+<ojp:OJPAvailabilityRequest xmlns:ojp="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri  ../../../OJP.xsd">
 	<siri:RequestTimestamp>2022-12-12T11:46:00Z</siri:RequestTimestamp>
 	<ojp:PublicTransport>
 		<ojp:PickUpLocation>
