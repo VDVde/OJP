@@ -11,7 +11,7 @@
 				<siri:Status>true</siri:Status>
 				<ojp:CalcTime>20</ojp:CalcTime>
 				<ojp:PlaceResult>
-					<ojp:Location>
+					<ojp:Place>
 						<ojp:StopPlace>
 							<ojp:StopPlaceRef>8530813</ojp:StopPlaceRef>
 							<ojp:StopPlaceName>
@@ -26,7 +26,7 @@
 							<siri:Longitude>8.55408</siri:Longitude>
 							<siri:Latitude>47.36488</siri:Latitude>
 						</ojp:GeoPosition>
-					</ojp:Location>
+					</ojp:Place>
 					<ojp:Complete>true</ojp:Complete>
 					<ojp:Probability>1</ojp:Probability>
 					<ojp:Mode>

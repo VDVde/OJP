@@ -11,7 +11,7 @@
 				<siri:Status>true</siri:Status>
 				<ojp:CalcTime>83</ojp:CalcTime>
 				<ojp:PlaceResult>
-					<ojp:Location>
+					<ojp:Place>
 						<ojp:StopPlace>
 							<ojp:StopPlaceRef>8507000</ojp:StopPlaceRef>
 							<ojp:StopPlaceName>
@@ -26,7 +26,7 @@
 							<siri:Longitude>7.43913</siri:Longitude>
 							<siri:Latitude>46.94883</siri:Latitude>
 						</ojp:GeoPosition>
-					</ojp:Location>
+					</ojp:Place>
 					<ojp:Complete>true</ojp:Complete>
 					<ojp:Probability>1</ojp:Probability>
 					<ojp:Mode>
@@ -39,7 +39,7 @@
 					</ojp:Mode>
 				</ojp:PlaceResult>
 				<ojp:PlaceResult>
-					<ojp:Location>
+					<ojp:Place>
 						<ojp:StopPlace>
 							<ojp:StopPlaceRef>8577001</ojp:StopPlaceRef>
 							<ojp:StopPlaceName>
@@ -54,7 +54,7 @@
 							<siri:Longitude>7.47534</siri:Longitude>
 							<siri:Latitude>46.95745</siri:Latitude>
 						</ojp:GeoPosition>
-					</ojp:Location>
+					</ojp:Place>
 					<ojp:Complete>true</ojp:Complete>
 					<ojp:Probability>0.949999988</ojp:Probability>
 					<ojp:Mode>
@@ -63,7 +63,7 @@
 					</ojp:Mode>
 				</ojp:PlaceResult>
 				<ojp:PlaceResult>
-					<ojp:Location>
+					<ojp:Place>
 						<ojp:StopPlace>
 							<ojp:StopPlaceRef>8587483</ojp:StopPlaceRef>
 							<ojp:StopPlaceName>
@@ -78,7 +78,7 @@
 							<siri:Longitude>7.45441</siri:Longitude>
 							<siri:Latitude>46.95390</siri:Latitude>
 						</ojp:GeoPosition>
-					</ojp:Location>
+					</ojp:Place>
 					<ojp:Complete>true</ojp:Complete>
 					<ojp:Probability>0.947000027</ojp:Probability>
 					<ojp:Mode>
