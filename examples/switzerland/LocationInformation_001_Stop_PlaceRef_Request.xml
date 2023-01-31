@@ -4,17 +4,20 @@
 		<ServiceRequest>
 			<RequestTimestamp>2020-01-19T12:00:00Z</RequestTimestamp>
 			<RequestorRef>IRMA</RequestorRef>
-			<ojp:OJPPlaceInformationRequest>
+			<ojp:OJPLocationInformationRequest>
 				<RequestTimestamp>2020-01-19T12:00:00Z</RequestTimestamp>
-				<MessageIdentifier>4712</MessageIdentifier>
-				<ojp:InitialInput>
-					<ojp:Name>Bern</ojp:Name>
-				</ojp:InitialInput>
+				<MessageIdentifier>4711</MessageIdentifier>
+				<ojp:PlaceRef>
+					<StopPointRef>8530813</StopPointRef>
+					<ojp:Name>
+						<ojp:Text>Zürich Kreuzplatz</ojp:Text>
+					</ojp:Name>
+				</ojp:PlaceRef>
 				<ojp:Restrictions>
 					<ojp:Type>stop</ojp:Type>
 					<ojp:IncludePtModes>true</ojp:IncludePtModes>
 				</ojp:Restrictions>
-			</ojp:OJPPlaceInformationRequest>
+			</ojp:OJPLocationInformationRequest>
 		</ServiceRequest>
 	</OJPRequest>
 </OJP>

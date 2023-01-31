@@ -13,9 +13,9 @@
 			<xs:documentation>Request structure for departure and arrival events at stops</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Place" type="PlaceContextStructure">
+			<xs:element name="Location" type="PlaceContextStructure">
 				<xs:annotation>
-					<xs:documentation>Place for which to obtain stop event information.</xs:documentation>
+					<xs:documentation>LOCATION / PLACE for which to obtain stop event information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Params" type="StopEventParamStructure" minOccurs="0">
@@ -247,12 +247,12 @@
 			</xs:element>
 			<xs:element name="WalkDistance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Distance from request place (f.e. address) to this stop in metres.</xs:documentation>
+					<xs:documentation>Distance from request LOCATION / PLACE (f.e. address) to this stop in metres.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WalkDuration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Walking duration from request place (f.e. address) to this stop. All user options taken into account (f.e. walk speed).</xs:documentation>
+					<xs:documentation>Walking duration from request LOCATION / PLACE (f.e. address) to this stop. All user options taken into account (f.e. walk speed).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

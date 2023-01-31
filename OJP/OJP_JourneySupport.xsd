@@ -243,9 +243,9 @@
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="TripPlaceStructure">
+	<xs:complexType name="TripLocationStructure">
 		<xs:annotation>
-			<xs:documentation>A trip place represents the current logical position of a  journey service. It can be used similarly to a place e.g. for starting a new trip requests from within this service. A trip place does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
+			<xs:documentation>A trip location represents the current logical position of a  journey service. It can be used similarly to a place e.g. for starting a new trip requests from within this service. A trip location does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="OperatingDayRef"/>
@@ -502,21 +502,21 @@
 						<xs:documentation>Static place.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="TripPlace" type="TripPlaceStructure">
+				<xs:element name="TripLocation" type="TripLocationStructure">
 					<xs:annotation>
-						<xs:documentation>Place within a (moving) vehicle.</xs:documentation>
+						<xs:documentation>Location within a (moving) vehicle.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
 			<xs:choice minOccurs="0">
 				<xs:element name="DepArrTime" type="xs:dateTime" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Time when departure/arrival from/to place is required.</xs:documentation>
+						<xs:documentation>Time when departure/arrival from/to location is required.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="TimeAllowance" type="xs:duration" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Extra time needed before reaching/after leaving this place.</xs:documentation>
+						<xs:documentation>Extra time needed before reaching/after leaving this location.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
