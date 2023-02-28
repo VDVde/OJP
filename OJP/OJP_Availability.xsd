@@ -373,14 +373,14 @@
 			<xs:documentation>Types of problems that may be returned in responses to AVAILABILITY requests.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="AVAILIBILITY_NOSERIVCEFOUND">
+			<xs:enumeration value="AVAILABILITY_NOSERVICEFOUND">
 				<xs:annotation>
 					<xs:documentation>No SERVICE (VEHICLE JOURNEY or VEHICLE) could be found for this request.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_LOCATIONUNSERVED">
 				<xs:annotation>
-					<xs:documentation>At the locations (address, stop, etc.) for which the availability has been requested, there is no public transport service at all. E.g. outside of the area</xs:documentation>
+					<xs:documentation>At the locations (address, stop, etc.) for which the availability has been requested, there is no public transport service at all. E.g. outside of the area.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_LOCATIONUNKNOWN">
@@ -390,7 +390,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_OUTSIDERULES">
 				<xs:annotation>
-					<xs:documentation>The vehicle is not available due to existing rules like operating hours or not competing against an existing public transport line. In the details of the problem there should be information, which rules where violated: e.g. The desired MOBILITY SERVICE can't be provided, because there exists a regulare line for this TRIP.</xs:documentation>
+					<xs:documentation>The vehicle is not available due to existing rules like operating hours or not competing against an existing public transport line. In the details of the problem there should be information indicating which rules were violated: e.g. The desired MOBILITY SERVICE can't be provided because there exists a regulare line for this TRIP.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_SERVICEDISRUPTED">

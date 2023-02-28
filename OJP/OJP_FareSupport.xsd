@@ -326,7 +326,7 @@
 			<xs:documentation>List of Purchase Moment values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PurchaeMoment" type="PurchaseMomentEnumeration" maxOccurs="unbounded"/>
+			<xs:element name="PurchaseMoment" type="PurchaseMomentEnumeration" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- =================================================== -->

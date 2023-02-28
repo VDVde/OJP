@@ -40,7 +40,7 @@
 				<ojp:BookingArrangements>
 					<ojp:BookingArrangement>
 						<ojp:BuyWhen>
-							<ojp:PurchaeMoment>onReservation</ojp:PurchaeMoment>
+							<ojp:PurchaseMoment>onReservation</ojp:PurchaseMoment>
 						</ojp:BuyWhen>
 						<ojp:MinimumBookingPeriod>PT10M</ojp:MinimumBookingPeriod>
 					</ojp:BookingArrangement>
