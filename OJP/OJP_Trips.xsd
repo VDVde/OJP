@@ -406,6 +406,11 @@
 					<xs:documentation>Fare and fare product information for this trip as a whole or parts of it.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="IsAlternativeOption" type="xs:boolean" minOccurs="0" default="false">
+				<xs:annotation>
+					<xs:documentation>When the result is an alternative option from IncludeAlternativeOptions, then the flag should be set to true.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TripSummaryStructure">
