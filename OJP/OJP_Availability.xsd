@@ -203,7 +203,7 @@
 				<xs:annotation>
 					<xs:documentation>Context to hold availability response objects that occur frequently.</xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 			<xs:element name="AvailabilityResult" type="AvailabilityResultStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Indication of the availability of the requested service.</xs:documentation>
