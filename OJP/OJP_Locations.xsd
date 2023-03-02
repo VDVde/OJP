@@ -246,7 +246,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="stop">
 				<xs:annotation>
-					<xs:documentation>stop covers StopPlace and StopPoint. The main reason is, that many systems may only return either STOP PLACE/QUAY information or SCHEDULED STOP POINTs.</xs:documentation>
+					<xs:documentation>stop covers StopPlace and StopPoint. The main reason is that many systems may only return either STOP PLACE/QUAY information or SCHEDULED STOP POINTs.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="address"/>
