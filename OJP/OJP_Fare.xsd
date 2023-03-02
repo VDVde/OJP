@@ -81,7 +81,7 @@
 				<xs:annotation>
 					<xs:documentation>Context to hold trip related objects that occur frequently. Especially necessary, when the system answering the fare request is not the same as the one that did the trip request.</xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 			<xs:element name="Trip" type="TripStructure">
 				<xs:annotation>
 					<xs:documentation>A complete trip from origin to destination</xs:documentation>
@@ -98,7 +98,7 @@
 				<xs:annotation>
 					<xs:documentation>Context to hold trip related objects that occur frequently.</xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 			<xs:element name="Trip" type="TripStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Multiple complete trips from multiple origins and multiple destination</xs:documentation>
