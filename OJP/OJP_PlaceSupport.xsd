@@ -461,9 +461,9 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeoPosition" type="siri:LocationStructure">
-					<xs:annotation>
-						<xs:documentation>WGS84 coordinates position.</xs:documentation>
-					</xs:annotation>			
+				<xs:annotation>
+					<xs:documentation>WGS84 coordinates position.</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
 				<xs:annotation>
