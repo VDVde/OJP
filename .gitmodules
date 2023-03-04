@@ -1,4 +1,4 @@
 [submodule "SIRI"]
 	path = SIRI
 	url = https://github.com/SIRI-CEN/SIRI
-	branch = 2.0q
+	branch = 2.1
