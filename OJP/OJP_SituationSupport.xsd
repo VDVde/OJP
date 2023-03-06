@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_SituationSupport.xsd - Supporting definitions for situations containing wrappers for SIRI Situation Exchange service (SIRI SX)</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../SIRI/xsd/siri.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:complexType name="SituationsStructure">
 		<xs:annotation>
