@@ -391,6 +391,7 @@
 			<xs:enumeration value="noElevator"/>
 			<xs:enumeration value="tactileGuidingStrips"/>
 			<xs:enumeration value="visualDisplays"/>
+			<xs:enumeration value="shortWalkingDistance"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="TariffzoneFilterStructure">
@@ -1392,6 +1393,11 @@
 			<xs:element name="AccessibilityRoutingPreference" type="AccessibilityRoutingPreferenceEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>If bestAccessibility is chosen as OptimisationMethod, the algorithm tries to minimise obstacles and sections without accessibility aids. The user may specify the criteria to be considered. The order of priority is given by the sequence in which they are listed (starting with the highest priority). Higher priority means, in terms of a cost function, that a change at a higher priority can never be compensated by changes at the lower priorities.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccessibilityRoutingWeight" type="xs:float" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Only used if bestAccessibility is chosen as OptimisationMethod. Allows for defining a cost function which overrides the prioritisation given by the sequence of AccessibilityRoutingPreferences. The cost function is calculated as a sum of products, each AccessibilityRoutingPreference is multiplied by the corresponding (i.e., having the same position in the sequence) AccessibilityRoutingWeight. The values of the AccessibilityRoutingPreferences to multiply with are either the number of occurrences of an obstacle (noStairs, noRamp, etc.) or a distance in metres (shortWalkingDistance, distance without tactile guiding strips in case of tactileGuidingStrips).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" default="anyPoint" minOccurs="0">
