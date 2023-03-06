@@ -389,6 +389,7 @@
 			<xs:enumeration value="noElevator"/>
 			<xs:enumeration value="tactileGuidingStrips"/>
 			<xs:enumeration value="visualDisplays"/>
+			<xs:enumeration value="shortWalkingDistance"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="TariffzoneFilterStructure">
