@@ -4,7 +4,7 @@
 		<xs:documentation>OJP.xsd - OJP messages as extension of SIRI</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.vdv.de/ojp" schemaLocation="./OJP/OJP_All.xsd"/>
-	<xs:include schemaLocation="./SIRI/xsd/siri.xsd"/>
+	<xs:include schemaLocation="./SIRI/xsd/siri_model/siri_all.xsd"/>
 	<xs:element name="OJP">
 		<xs:annotation>
 			<xs:documentation>Root element for OJP messages based on SIRI message exchange protocol.</xs:documentation>
