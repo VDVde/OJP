@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Requests.xsd - OJP service requests and responses</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== Fare Service ==========================================</xs:documentation>
