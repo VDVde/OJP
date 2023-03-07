@@ -5,8 +5,8 @@
 	</xs:annotation>
 	<xs:import namespace="http://www.vdv.de/ojp" schemaLocation="./OJP/OJP_All.xsd"/>
 	<!-- ifopt must be imported before siri, otherwise xmllint fails -->
-	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="./SIRI/xsd/ifopt/ifopt_allStopPlace.xsd"/>
-	<xs:include schemaLocation="./SIRI/xsd/siri_model/siri_all.xsd"/>
+	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="./siri/xsd/ifopt/ifopt_allStopPlace.xsd"/>
+	<xs:include schemaLocation="./siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:element name="OJP">
 		<xs:annotation>
 			<xs:documentation>Root element for OJP messages based on SIRI message exchange protocol.</xs:documentation>
