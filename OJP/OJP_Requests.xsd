@@ -33,27 +33,27 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:annotation>
-		<xs:documentation>========================================== PlaceInformation Service ==========================================</xs:documentation>
+		<xs:documentation>========================================== Location Information Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPPlaceInformationRequest" type="OJPPlaceInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
-	<xs:complexType name="OJPPlaceInformationRequestStructure">
+	<xs:element name="OJPLocationInformationRequest" type="OJPLocationInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:complexType name="OJPLocationInformationRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
 				<xs:sequence>
-					<xs:group ref="PlaceInformationRequestGroup"/>
+					<xs:group ref="LocationInformationRequestGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPPlaceInformationDelivery" type="OJPPlaceInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
-	<xs:complexType name="OJPPlaceInformationDeliveryStructure">
+	<xs:element name="OJPLocationInformationDelivery" type="OJPLocationInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPLocationInformationDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
 				<xs:sequence>
-					<xs:element ref="OJPPlaceInformationRequest" minOccurs="0"/>
+					<xs:element ref="OJPLocationInformationRequest" minOccurs="0"/>
 					<xs:group ref="ServiceResponseContextGroup"/>
-					<xs:group ref="PlaceInformationResponseGroup"/>
+					<xs:group ref="LocationInformationResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
@@ -216,6 +216,58 @@
 					<xs:element ref="OJPTripRefineRequest" minOccurs="0"/>
 					<xs:group ref="ServiceResponseContextGroup"/>
 					<xs:group ref="TripRefineResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Availability Request ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPAvailabilityRequest" type="OJPAvailabilityRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:complexType name="OJPAvailabilityRequestStructure">
+		<xs:complexContent>
+			<xs:extension base="AbstractOJPServiceRequestStructure">
+				<xs:sequence>
+					<xs:group ref="AvailabilityRequestGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="OJPAvailabilityDelivery" type="OJPAvailabilityDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPAvailabilityDeliveryStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceDeliveryStructure">
+				<xs:sequence>
+					<xs:group ref="ServiceResponseContextGroup"/>
+					<xs:group ref="AvailabilityResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Line Information Service ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPLineInformationRequest" type="OJPLineInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:complexType name="OJPLineInformationRequestStructure">
+		<xs:complexContent>
+			<xs:extension base="AbstractOJPServiceRequestStructure">
+				<xs:sequence>
+					<xs:element name="LineDirectionFilter" type="LineDirectionFilterStructure" minOccurs="0"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="OJPLineInformationDelivery" type="OJPLineInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPLineInformationDeliveryStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceDeliveryStructure">
+				<xs:sequence>
+					<xs:element ref="OJPLineInformationRequest" minOccurs="0"/>
+					<xs:group ref="LineInformationResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>

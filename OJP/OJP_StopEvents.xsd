@@ -13,9 +13,9 @@
 			<xs:documentation>Request structure for departure and arrival events at stops</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Place" type="PlaceContextStructure">
+			<xs:element name="Location" type="PlaceContextStructure">
 				<xs:annotation>
-					<xs:documentation>Place for which to obtain stop event information.</xs:documentation>
+					<xs:documentation>LOCATION / PLACE for which to obtain stop event information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Params" type="StopEventParamStructure" minOccurs="0">
@@ -42,7 +42,7 @@
 		<xs:sequence>
 			<xs:element name="PtModeFilter" type="PtModeFilterStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Modes to be considered in stop events.</xs:documentation>
+					<xs:documentation>Modes (VEHICLE MODE) to be excluded or included in stop events.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LineFilter" type="LineDirectionFilterStructure" minOccurs="0">
@@ -119,9 +119,9 @@
 					<xs:documentation>Whether operating day information of this stop event should be included in the response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncludeRealtimeData" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether realtime information of this stop event should be included in the response.</xs:documentation>
+					<xs:documentation>Whether real-time information of this stop event should be used in the response. Default is "full"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
@@ -184,7 +184,7 @@
 			<xs:documentation>Wrapper element for a single stop event result.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ResultId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
@@ -227,6 +227,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>For SITUATIONs that affect the whole StopEvent. Otherwise References for SITUATIONs can be added at the different CALL elements</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -242,12 +247,12 @@
 			</xs:element>
 			<xs:element name="WalkDistance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Distance from request place (f.e. address) to this stop in metres.</xs:documentation>
+					<xs:documentation>Distance from request LOCATION / PLACE (f.e. address) to this stop in metres.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WalkDuration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Walking duration from request place (f.e. address) to this stop. All user options taken into account (f.e. walk speed).</xs:documentation>
+					<xs:documentation>Walking duration from request LOCATION / PLACE (f.e. address) to this stop. All user options taken into account (f.e. walk speed).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

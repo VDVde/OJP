@@ -5,6 +5,12 @@
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
+	<xs:simpleType name="ObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:normalizedString"/>
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== General ==========================================</xs:documentation>
 	</xs:annotation>
@@ -47,14 +53,14 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="LinkProjectionStructure">
+	<xs:complexType name="LinearShapeStructure">
 		<xs:annotation>
-			<xs:documentation>An oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE.</xs:documentation>
+			<xs:documentation>An oriented correspondence from one LINK or ROUTE of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE. As OJP is reduced in relation to NeTEx, we use a simple general structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Position" type="siri:LocationStructure" minOccurs="2" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Ordered list of locations representing the geogemtry of the link.</xs:documentation>
+					<xs:documentation>Ordered list of locations representing the geometry of the link or route.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -87,6 +93,11 @@
 			<xs:documentation>Reference to an Operator ([TMv6] company  providing public transport services.) </xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:complexType name="OperatorRefs_RelStructure">
+		<xs:sequence>
+			<xs:element name="OperatorRef" type="siri:OperatorRefStructure" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="OperatorFilterStructure">
 		<xs:annotation>
 			<xs:documentation>Filter for in/exclusion of transport operators.</xs:documentation>
@@ -425,4 +436,35 @@
 			<xs:group ref="WebLinkGroup" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Sustainability ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="SustainabilityGroup">
+		<xs:annotation>
+			<xs:documentation>Elements about sustainability. Primarily for TRIPs and LEGs.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EmissionCO2" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="KilogramPerPersonKm">
+							<xs:annotation>
+								<xs:documentation>Kilogram by person and by kilometer of CO2 emission.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:float">
+									<xs:minInclusive value="0"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="ConfidenceLevel" type="Percentage" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Confidence level of the emission value in percent.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
 </xs:schema>

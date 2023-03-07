@@ -114,7 +114,7 @@
 			<xs:documentation>Wrapper element for Fare results.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ResultId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
@@ -190,9 +190,9 @@
 					<xs:documentation>Identifies the "valid from" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FromTripLegIdRef" type="xs:NMTOKEN" minOccurs="0">
+			<xs:element name="FromLegIdRef" type="xs:NMTOKEN" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Identifies the "valid from" tripLeg. If missing, then valid from the first leg.</xs:documentation>
+					<xs:documentation>Identifies the "valid from" LEG. If missing, then valid from the first LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ToTripIdRef" type="xs:NMTOKEN">
@@ -200,9 +200,9 @@
 					<xs:documentation>Identifies the "valid to" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToTripLegIdRef" type="xs:NMTOKEN" minOccurs="0">
+			<xs:element name="ToLegIdRef" type="xs:NMTOKEN" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Identifies the "valid to" tripLeg. If missing, then valid to the last leg.</xs:documentation>
+					<xs:documentation>Identifies the "valid to" LEG. If missing, then valid to the last LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

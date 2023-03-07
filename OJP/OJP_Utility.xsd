@@ -48,6 +48,12 @@
 		</xs:annotation>
 		<xs:restriction base="xs:normalizedString"/>
 	</xs:simpleType>
+	<xs:simpleType name="EMailAddressType">
+		<xs:annotation>
+			<xs:documentation>Type definition for e-mail addresses.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:normalizedString"/>
+	</xs:simpleType>
 	<xs:complexType name="InternationalTextStructure">
 		<xs:annotation>
 			<xs:documentation>[a restricted view of ALTERNATIVE NAME in TMv6] alternative identified text to be used in specified languages.</xs:documentation>

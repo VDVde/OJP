@@ -5,7 +5,7 @@
 			<siri:ResponseTimestamp>2020-10-01T17:54:38Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<ojp:OJPPlaceInformationDelivery>
+			<ojp:OJPLocationInformationDelivery>
 				<siri:ResponseTimestamp>2020-10-01T17:54:38Z</siri:ResponseTimestamp>
 				<siri:RequestMessageRef>4711</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
@@ -42,7 +42,7 @@
 						<siri:BusSubmode>localBusService</siri:BusSubmode>
 					</ojp:Mode>
 				</ojp:PlaceResult>
-			</ojp:OJPPlaceInformationDelivery>
+			</ojp:OJPLocationInformationDelivery>
 		</siri:ServiceDelivery>
 	</siri:OJPResponse>
 </siri:OJP>

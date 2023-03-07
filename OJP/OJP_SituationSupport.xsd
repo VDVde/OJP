@@ -31,4 +31,12 @@
 			<xs:extension base="siri:SituationFullRefStructure"/>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="SituationRefList">
+		<xs:annotation>
+			<xs:documentation>List of references to SITUATIONs.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="SituationFullRef" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>

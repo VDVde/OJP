@@ -102,7 +102,11 @@
 					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be the VEHICLE Id.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="OperatorRef" minOccurs="0"/>
+			<xs:element name="OperatorRefs" type="OperatorRefs_RelStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>References to the OPERATORS. Multiple OPERATORS in case a ContinuousLeg can be operated by more than one operator, especially in the ALTERNATIVE MODE OF OPERATION where there can be dozens of taxi companies and many free floating sharing companies.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="RouteDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Descriptive text for a route, f.e. "Airport via City Centre"</xs:documentation>
@@ -231,13 +235,17 @@
 					<xs:documentation>Indicates whether this service needs some kind of reservation or booking to run.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="TripPlaceStructure">
+	<xs:complexType name="TripLocationStructure">
 		<xs:annotation>
-			<xs:documentation>A trip place represents the current logical position of a  journey service. It can be used similarly to a place e.g. for starting a new trip requests from within this service. A trip place does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
+			<xs:documentation>A trip location represents the current logical position of a  journey service. It can be used similarly to a place e.g. for starting a new trip requests from within this service. A trip location does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="OperatingDayRef"/>
@@ -338,7 +346,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup"/>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="StopCallStatusGroup">
@@ -433,7 +445,11 @@
 					<xs:documentation>Container with information on booking possibilities for this service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -486,21 +502,21 @@
 						<xs:documentation>Static place.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="TripPlace" type="TripPlaceStructure">
+				<xs:element name="TripLocation" type="TripLocationStructure">
 					<xs:annotation>
-						<xs:documentation>Place within a (moving) vehicle.</xs:documentation>
+						<xs:documentation>Location within a (moving) vehicle.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
 			<xs:choice minOccurs="0">
 				<xs:element name="DepArrTime" type="xs:dateTime" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Time when departure/arrival from/to place is required.</xs:documentation>
+						<xs:documentation>Time when departure/arrival from/to location is required.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="TimeAllowance" type="xs:duration" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Extra time needed before reaching/after leaving this place.</xs:documentation>
+						<xs:documentation>Extra time needed before reaching/after leaving this location.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -531,6 +547,25 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="UseRealtimeDataEnumeration">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="full">
+				<xs:annotation>
+					<xs:documentation>Full use of real-time information, including removal of SERVICE JOURNEYS.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="explanatory">
+				<xs:annotation>
+					<xs:documentation>Cancelled and delayed SERVICE JOURNEYs are still returned, but an additional explanatory textual information is provide to decribe their current real-time status.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="none">
+				<xs:annotation>
+					<xs:documentation>Only based on timetable data</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:group name="BaseTripPolicyGroup">
 		<xs:annotation>
 			<xs:documentation>Policies that control the trip search behaviour for both public and individual transport.</xs:documentation>
@@ -544,9 +579,9 @@
 				</xs:element>
 				<xs:group ref="NumberOfResultsGroup" minOccurs="0"/>
 			</xs:choice>
-			<xs:element name="IgnoreRealtimeData" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The trip calculation should not use any realtime or incident data.</xs:documentation>
+					<xs:documentation>The way real-time data should be used in the calculation of the trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ImmediateTripStart" type="xs:boolean" default="false" minOccurs="0">
@@ -613,9 +648,19 @@
 					<xs:documentation>Whether the result should include turn-by-turn instructions for each journey leg.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncludeAccessibility" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="IncludeAccessFeatures" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether the result should include accessibility information.</xs:documentation>
+					<xs:documentation>Whether the result should include the access features (stairs, elevator, etc.) on each path link.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeAccessFeaturesStatus" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the result should include real time status of access features to indicate broken equipment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeAccessibilityDetails" type="AccessibilityDetailsProfileEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Which accessibility features and other accessibility-related information to retrieve (e.g. guidance text for the visually impaired).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
@@ -630,6 +675,18 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="AccessibilityDetailsProfileEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for AccessibilityDetails.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="visualImpairment"/>
+			<xs:enumeration value="auditoryImpairment"/>
+			<xs:enumeration value="mobilityImpairment"/>
+			<xs:enumeration value="bicycle"/>
+			<xs:enumeration value="general"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Leg Attributes ==========================================</xs:documentation>
 	</xs:annotation>
@@ -664,14 +721,14 @@
 		<xs:sequence>
 			<xs:element name="TrackSection" type="TrackSectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>LINK PROJECTION on the infrastructure network of the trip leg section together with time information.</xs:documentation>
+					<xs:documentation>LINK PROJECTION on the infrastructure network of the leg section together with time information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TrackSectionStructure">
 		<xs:annotation>
-			<xs:documentation>LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information</xs:documentation>
+			<xs:documentation>LINK PROJECTION on the infrastructure network of the LEG together with time information</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TrackStart" type="PlaceRefStructure" minOccurs="0">
@@ -684,7 +741,7 @@
 					<xs:documentation>End place of this track.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LinkProjection" type="LinkProjectionStructure" minOccurs="0">
+			<xs:element name="LinkProjection" type="LinearShapeStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>An oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE.</xs:documentation>
 				</xs:annotation>
