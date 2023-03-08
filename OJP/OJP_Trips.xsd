@@ -349,8 +349,8 @@
 			</xs:element>
 			<xs:element name="TariffZones" type="TariffZoneListInAreaStructure">
 				<xs:annotation>
-						<xs:documentation>List of fare zones to include or exclude.</xs:documentation>
-					</xs:annotation>
+					<xs:documentation>List of fare zones to include or exclude.</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
