@@ -462,7 +462,7 @@
 			</xs:element>
 			<xs:element name="GeoPosition" type="siri:LocationStructure">
 				<xs:annotation>
-					<xs:documentation>WGS84 coordinates position.</xs:documentation>
+					<xs:documentation>Position using WGS84/EPSG:4326 coordinates.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
