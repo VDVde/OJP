@@ -106,8 +106,16 @@
 			<xs:documentation>Earliest possible departure time from a start location and latest possible arrival at a different destination location.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="EarliestDepartureTime" type="xs:dateTime" minOccurs="0"/>
-			<xs:element name="LatestArrivalTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="EarliestDepartureTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Earliest possible departure time from start location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LatestArrivalTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Latest possible arrival time at destination location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>

@@ -34,7 +34,11 @@
 					<xs:documentation>Reference to the LINE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="siri:PublishedLineName" minOccurs="0"/>
+			<xs:element ref="siri:PublishedLineName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name or Number by which the LINE is known to the public.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="DirectionRef" type="siri:DirectionRefStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>DIRECTION of LINE.</xs:documentation>

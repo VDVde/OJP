@@ -223,7 +223,11 @@
 			<xs:documentation>List of values for Flexible Booking values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="BookingMethod" type="BookingMethodEnumeration" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="BookingMethod" type="BookingMethodEnumeration" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Flexible booking methods.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- ======================================================================= -->
@@ -326,7 +330,11 @@
 			<xs:documentation>List of Purchase Moment values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PurchaseMoment" type="PurchaseMomentEnumeration" maxOccurs="unbounded"/>
+			<xs:element name="PurchaseMoment" type="PurchaseMomentEnumeration" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Possibilities when to pay.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- =================================================== -->
@@ -372,7 +380,11 @@
 			<xs:documentation>List of Booking Process values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="BookingProcess" type="BookingProcessEnumeration" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="BookingProcess" type="BookingProcessEnumeration" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Ways how to book (UIC 7037 codes).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- =================================================== -->
@@ -390,10 +402,14 @@
 	</xs:simpleType>
 	<xs:complexType name="GroupBookingListOfEnumerations">
 		<xs:annotation>
-			<xs:documentation>List of Group Booking values.</xs:documentation>
+			<xs:documentation>Possibilites and restrictions for group booking.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="GroupBooking" type="GroupBookingEnumeration" maxOccurs="unbounded"/>
+			<xs:element name="GroupBooking" type="GroupBookingEnumeration" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Group booking policies.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="BookingArrangementsStructure" abstract="false">
@@ -651,7 +667,11 @@
 					<xs:documentation>URL to buy the FareProduct online.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Multiple sets of multiple booking arrangements for different legs of a journey.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
