@@ -122,6 +122,7 @@
 					<xs:annotation>
 						<xs:documentation>The type of algorithm to be used for planning a journey (fastest, least walking, etc.).</xs:documentation>
 					</xs:annotation>
+				</xs:element>
 				<xs:element name="OptimisationMethods" type="OptimisationMethodList" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>The types of algorithm that should be used for planning a journey.</xs:documentation>
