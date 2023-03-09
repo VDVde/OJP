@@ -124,7 +124,7 @@
 					<xs:documentation>Problems related to this FARE result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FareEstimated" type="xs:boolean" default="true" minOccurs="0">
+			<xs:element name="FareEstimated" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the fare is only estimated by the service. Default is false.</xs:documentation>
 				</xs:annotation>
