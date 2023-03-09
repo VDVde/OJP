@@ -45,7 +45,11 @@
 					<xs:documentation>If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PlaceResult" type="PlaceResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="PlaceResult" type="PlaceResultStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The place/location objects found by the service are ordered in descending order of how well they match the input data. The first result in the list matches best.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
@@ -84,18 +88,30 @@
 	</xs:complexType>
 	<xs:complexType name="GeoRestrictionsStructure">
 		<xs:choice>
-			<xs:element name="Circle" type="GeoCircleStructure"/>
-			<xs:element name="Rectangle" type="GeoRectangleStructure"/>
+			<xs:element name="Circle" type="GeoCircleStructure">
+				<xs:annotation>
+					<xs:documentation>Area defined by a circle.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Rectangle" type="GeoRectangleStructure">
+				<xs:annotation>
+					<xs:documentation>Area defined by a rectangle.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Area" type="GeoAreaStructure">
 				<xs:annotation>
-					<xs:documentation>Area is defined by a polyline</xs:documentation>
+					<xs:documentation>Area defined by a polyline.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="GeoCircleStructure">
 		<xs:sequence>
-			<xs:element name="Center" type="siri:LocationStructure"/>
+			<xs:element name="Center" type="siri:LocationStructure">
+				<xs:annotation>
+					<xs:documentation>Centre position of the circle.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Radius" type="siri:DistanceType">
 				<xs:annotation>
 					<xs:documentation>Radius in metres.</xs:documentation>
@@ -105,8 +121,16 @@
 	</xs:complexType>
 	<xs:complexType name="GeoRectangleStructure">
 		<xs:sequence>
-			<xs:element name="UpperLeft" type="siri:LocationStructure"/>
-			<xs:element name="LowerRight" type="siri:LocationStructure"/>
+			<xs:element name="UpperLeft" type="siri:LocationStructure">
+				<xs:annotation>
+					<xs:documentation>Upper-left (north-west) corner of the rectangle.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LowerRight" type="siri:LocationStructure">
+				<xs:annotation>
+					<xs:documentation>Lower-right (south-east) corner of the rectangle.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="GeoAreaStructure">
@@ -115,7 +139,11 @@
 	</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PolylinePoint" type="siri:LocationStructure" minOccurs="3" maxOccurs="unbounded"/>
+			<xs:element name="PolylinePoint" type="siri:LocationStructure" minOccurs="3" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Vertices of a polyline defining an area.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PlaceResultStructure">
@@ -125,7 +153,11 @@
 					<xs:documentation>Problems related to this LOCATION result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Place" type="PlaceStructure"/>
+			<xs:element name="Place" type="PlaceStructure">
+				<xs:annotation>
+					<xs:documentation>The Place / Location object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Complete" type="xs:boolean">
 				<xs:annotation>
 					<xs:documentation>States whether the included location/place is complete or needs further refinement. Only complete locations/places are fully resolved and can be used in e.g. trip requests. Incomplete locations/places have to be refined entering them once again into a LocationInformationRequest.</xs:documentation>
@@ -340,7 +372,11 @@
 					<xs:documentation>Preferred language in which to return text values.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0"/>
+			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (e.g. in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The location information service is expected to support a response volume of at least 500 location objects within one single response.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Tells the server to skip the mentioned number of results in its response. Can be used in a follow-up request to get further results. The value is usually taken from the previous response.</xs:documentation>
@@ -360,7 +396,11 @@
 					<xs:documentation>If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExchangePointsResult" type="ExchangePointsResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExchangePointsResult" type="ExchangePointsResultStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The exchange points found by the service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:complexType name="ExchangePointsResultStructure">

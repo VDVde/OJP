@@ -12,10 +12,14 @@
 		<xs:sequence>
 			<xs:element name="PtSituation" type="siri:PtSituationElementStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>SIRI situation details.</xs:documentation>
+					<xs:documentation>SIRI situation details in public transport, see CEN/TS 15531-5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RoadSituation" type="siri:RoadSituationElementStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="RoadSituation" type="siri:RoadSituationElementStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>SIRI situation details in individual transport, see CEN/TS 15531-5.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="SituationFullRef" type="SituationFullRefStructure">

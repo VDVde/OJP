@@ -61,7 +61,11 @@
 			<xs:group ref="TripMobilityFilterGroup"/>
 			<xs:group ref="TripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
-			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
+			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -114,10 +118,14 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
-				<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration"/>
+				<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration">
+					<xs:annotation>
+						<xs:documentation>The type of algorithm to be used for planning a journey (fastest, least walking, etc.).</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 				<xs:element name="OptimisationMethods" type="OptimisationMethodList" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc.)</xs:documentation>
+						<xs:documentation>The types of algorithm that should be used for planning a journey.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -296,23 +304,39 @@
 	</xs:simpleType>
 	<xs:complexType name="NotViaStructure">
 		<xs:annotation>
-			<xs:documentation>NNot-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through</xs:documentation>
+			<xs:documentation>Not-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:element ref="siri:StopPointRef"/>
-				<xs:element ref="StopPlaceRef"/>
+				<xs:element ref="siri:StopPointRef">
+					<xs:annotation>
+						<xs:documentation>Reference to a not-via stop point.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="StopPlaceRef">
+					<xs:annotation>
+						<xs:documentation>Reference to a not-via stop place.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="NoChangeAtStructure">
 		<xs:annotation>
-			<xs:documentation>no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.</xs:documentation>
+			<xs:documentation>No-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:element ref="siri:StopPointRef"/>
-				<xs:element ref="StopPlaceRef"/>
+				<xs:element ref="siri:StopPointRef">
+					<xs:annotation>
+						<xs:documentation>Reference to a no-change stop point.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="StopPlaceRef">
+					<xs:annotation>
+						<xs:documentation>Reference to a no-change stop place.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
@@ -323,7 +347,11 @@
 					<xs:documentation>Whether to include or exclude given tariff zones in the list from the search. Default is to include.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TariffZones" type="TariffZoneListInAreaStructure"/>
+			<xs:element name="TariffZones" type="TariffZoneListInAreaStructure">
+				<xs:annotation>
+					<xs:documentation>List of fare zones to include or exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
@@ -373,7 +401,11 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
-			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Fare and fare product information for this trip as a whole or parts of it.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TripSummaryStructure">
@@ -506,9 +538,21 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
-				<xs:element name="TimedLeg" type="TimedLegStructure"/>
-				<xs:element name="TransferLeg" type="TransferLegStructure"/>
-				<xs:element name="ContinuousLeg" type="ContinuousLegStructure"/>
+				<xs:element name="TimedLeg" type="TimedLegStructure">
+					<xs:annotation>
+						<xs:documentation>Timetabled Leg.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TransferLeg" type="TransferLegStructure">
+					<xs:annotation>
+						<xs:documentation>Leg to connect between different services or modes of transport (interchanges).</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ContinuousLeg" type="ContinuousLegStructure">
+					<xs:annotation>
+						<xs:documentation>Leg by a continuously available service or mode of transport.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
 		</xs:sequence>
@@ -1245,7 +1289,11 @@
 			<xs:group ref="TripMobilityFilterGroup"/>
 			<xs:group ref="MultiPointTripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
-			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
+			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -1353,10 +1401,18 @@
 						<xs:documentation>Information on the trip.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="TripSummary" type="TripSummaryStructure"/>
+				<xs:element name="TripSummary" type="TripSummaryStructure">
+					<xs:annotation>
+						<xs:documentation>Summary on trip. Only if requestor set TripSummaryOnly in request.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 			<xs:group ref="MultiPointWaitTimeGroup" minOccurs="0"/>
-			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Fare and fare product information for this trip as a whole or parts of it.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="MultiPointWaitTimeGroup">

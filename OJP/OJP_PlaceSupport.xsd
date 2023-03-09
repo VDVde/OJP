@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
-		<xs:documentation>OJP/OJP_LocationSupport.xsd - Supporting definitions for location information</xs:documentation>
+		<xs:documentation>OJP/OJP_PlaceSupport.xsd - Supporting definitions for location information</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
@@ -13,7 +13,11 @@
 			<xs:documentation>A stop point with id and name</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element ref="siri:StopPointRef"/>
+			<xs:element ref="siri:StopPointRef">
+				<xs:annotation>
+					<xs:documentation>Reference to a stop point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="StopPointName" type="InternationalTextStructure">
 				<xs:annotation>
 					<xs:documentation>Name or description of stop point for use in passenger information.</xs:documentation>
@@ -476,7 +480,11 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:element ref="siri:StopPointRef"/>
+				<xs:element ref="siri:StopPointRef">
+					<xs:annotation>
+						<xs:documentation>Reference to a stop point.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 				<xs:element ref="StopPlaceRef"/>
 				<xs:element name="GeoPosition" type="siri:LocationStructure">
 					<xs:annotation>
