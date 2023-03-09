@@ -204,7 +204,7 @@
 							<siri:LineRef>ojp:93201:6</siri:LineRef>
 							<siri:DirectionRef>H</siri:DirectionRef>
 							<ojp:Mode>
-								<ojp:PtMode>telecabin</ojp:PtMode>
+								<ojp:PtMode>funicular</ojp:PtMode>
 								<siri:TelecabinSubmode>telecabin</siri:TelecabinSubmode>
 								<ojp:Name>
 									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
