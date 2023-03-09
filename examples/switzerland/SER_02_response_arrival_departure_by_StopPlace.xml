@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev">
+<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
 	<siri:OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-11-30T10:01:20Z</siri:ResponseTimestamp>
@@ -51,7 +51,7 @@
 					</ojp:Places>
 				</ojp:StopEventResponseContext>
 				<ojp:StopEventResult>
-					<ojp:ResultId>ID-15DE93F6-F85A-4F58-B680-0A187BCAE3CC</ojp:ResultId>
+					<ojp:Id>ID-15DE93F6-F85A-4F58-B680-0A187BCAE3CC</ojp:Id>
 					<ojp:StopEvent>
 						<ojp:PreviousCall>
 							<ojp:CallAtStop>
@@ -425,7 +425,9 @@
 							<ojp:PublishedServiceName>
 								<ojp:Text>8</ojp:Text>
 							</ojp:PublishedServiceName>
-							<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
+							<ojp:OperatorRefs>
+								<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
+							</ojp:OperatorRefs>
 							<ojp:Attribute>
 								<ojp:Text>
 									<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
@@ -452,7 +454,7 @@
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
-					<ojp:ResultId>ID-2CDE9C44-78F9-4872-BC9C-B98EE28254A0</ojp:ResultId>
+					<ojp:Id>ID-2CDE9C44-78F9-4872-BC9C-B98EE28254A0</ojp:Id>
 					<ojp:StopEvent>
 						<ojp:PreviousCall>
 							<ojp:CallAtStop>
@@ -976,7 +978,9 @@
 							<ojp:PublishedServiceName>
 								<ojp:Text>11</ojp:Text>
 							</ojp:PublishedServiceName>
-							<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
+							<ojp:OperatorRefs>
+								<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
+							</ojp:OperatorRefs>
 							<ojp:Attribute>
 								<ojp:Text>
 									<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>

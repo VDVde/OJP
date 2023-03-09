@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../ojp-xsd-v1.0/OJP.xsd">
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
 	<OJPRequest>
 		<ServiceRequest>
 			<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
@@ -7,7 +7,7 @@
 			<ojp:OJPStopEventRequest>
 				<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
 				<MessageIdentifier>756</MessageIdentifier>
-				<ojp:Place xmlns:siri="http://www.siri.org.uk/siri">
+				<ojp:Location xmlns:siri="http://www.siri.org.uk/siri">
 					<ojp:PlaceRef>
 						<ojp:TopographicPlaceRef>32000000:1</ojp:TopographicPlaceRef>
 						<ojp:Name>
@@ -15,13 +15,16 @@
 						</ojp:Name>
 					</ojp:PlaceRef>
 					<ojp:DepArrTime>2020-12-01T12:00:00Z</ojp:DepArrTime>
-				</ojp:Place>
+				</ojp:Location>
 				<ojp:Params>
 					<ojp:StopEventType>both</ojp:StopEventType>
 					<ojp:IncludePreviousCalls>true</ojp:IncludePreviousCalls>
 					<ojp:IncludeOnwardCalls>true</ojp:IncludeOnwardCalls>
 					<ojp:IncludeOperatingDays>true</ojp:IncludeOperatingDays>
-					<ojp:IncludeRealtimeData>true</ojp:IncludeRealtimeData>
+					<ojp:UseRealtimeData>none</ojp:UseRealtimeData>
+					<ojp:IncludePlacesContext>false</ojp:IncludePlacesContext>
+					<ojp:IncludeSituationsContext>false</ojp:IncludeSituationsContext>
+					<ojp:IncludeStopHierarchy>all</ojp:IncludeStopHierarchy>
 				</ojp:Params>
 			</ojp:OJPStopEventRequest>
 		</ServiceRequest>

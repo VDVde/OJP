@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev">
+<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
 	<siri:OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-11-30T09:33:07Z</siri:ResponseTimestamp>
@@ -92,7 +92,7 @@
 					</ojp:Places>
 				</ojp:StopEventResponseContext>
 				<ojp:StopEventResult>
-					<ojp:ResultId>ID-FE03CD03-6A1B-4C67-9D09-0F50CDD4F49A</ojp:ResultId>
+					<ojp:Id>ID-FE03CD03-6A1B-4C67-9D09-0F50CDD4F49A</ojp:Id>
 					<ojp:StopEvent>
 						<ojp:ThisCall>
 							<ojp:CallAtStop>
@@ -226,7 +226,9 @@
 							<ojp:PublishedServiceName>
 								<ojp:Text>17.18</ojp:Text>
 							</ojp:PublishedServiceName>
-							<ojp:OperatorRef>ojp:87_LEX</ojp:OperatorRef>
+							<ojp:OperatorRefs>
+								<ojp:OperatorRef>ojp:87_LEX</ojp:OperatorRef>
+							</ojp:OperatorRefs>
 							<ojp:Attribute>
 								<ojp:Text>
 									<ojp:Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</ojp:Text>
@@ -253,7 +255,7 @@
 					</ojp:StopEvent>
 				</ojp:StopEventResult>
 				<ojp:StopEventResult>
-					<ojp:ResultId>ID-B89FAEC3-59CA-4756-9F8A-3B560A939D44</ojp:ResultId>
+					<ojp:Id>ID-B89FAEC3-59CA-4756-9F8A-3B560A939D44</ojp:Id>
 					<ojp:StopEvent>
 						<ojp:PreviousCall>
 							<ojp:CallAtStop>
@@ -357,7 +359,9 @@
 							<ojp:PublishedServiceName>
 								<ojp:Text>17.</ojp:Text>
 							</ojp:PublishedServiceName>
-							<ojp:OperatorRef>ojp:87_LEX</ojp:OperatorRef>
+							<ojp:OperatorRefs>
+								<ojp:OperatorRef>ojp:87_LEX</ojp:OperatorRef>
+							</ojp:OperatorRefs>
 							<ojp:Attribute>
 								<ojp:Text>
 									<ojp:Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</ojp:Text>
