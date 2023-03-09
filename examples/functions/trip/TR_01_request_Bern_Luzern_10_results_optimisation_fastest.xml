@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../..//OJP.xsd">
+	<OJPRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-01-31T12:30:00Z</RequestTimestamp>
+			<RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7</RequestorRef>
+			<ojp:OJPTripRequest>
+				<RequestTimestamp>2020-01-31T12:30:00Z</RequestTimestamp>
+				<ojp:Origin>
+					<ojp:PlaceRef>
+						<ojp:StopPlaceRef>8503000</ojp:StopPlaceRef>
+						<ojp:Name xmlns:siri="http://www.siri.org.uk/siri">
+							<ojp:Text>Bern</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+				</ojp:Origin>
+				<ojp:Destination>
+					<ojp:PlaceRef>
+						<ojp:StopPlaceRef>8505000</ojp:StopPlaceRef>
+						<ojp:Name xmlns:siri="http://www.siri.org.uk/siri">
+							<ojp:Text>Luzern</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+				</ojp:Destination>
+				<ojp:Params>
+					<ojp:NumberOfResults>10</ojp:NumberOfResults>
+					<ojp:OptimisationMethod>fastest</ojp:OptimisationMethod>
+				</ojp:Params>
+			</ojp:OJPTripRequest>
+		</ServiceRequest>
+	</OJPRequest>
+</OJP>

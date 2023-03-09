@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+	<OJPRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-09-01T19:33:23Z</RequestTimestamp>
+			<RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7_test</RequestorRef>
+			<ojp:OJPTripRequest>
+				<RequestTimestamp>2020-09-01T19:33:23Z</RequestTimestamp>
+				<ojp:Origin>
+					<ojp:PlaceRef>
+						<ojp:StopPlaceRef>8506302</ojp:StopPlaceRef>
+						<ojp:Name>
+							<ojp:Text>Name, but can be ignored as the id usually is the only thing interpreted by the router</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+					<ojp:DepArrTime>2020-09-30T11:00:00Z</ojp:DepArrTime>
+					<!-- with seconds -->
+				</ojp:Origin>
+				<ojp:Destination>
+					<ojp:PlaceRef>
+						<ojp:StopPlaceRef>8505000</ojp:StopPlaceRef>
+						<ojp:Name>
+							<ojp:Text>Luzern</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+				</ojp:Destination>
+				<ojp:Params>
+					<ojp:NumberOfResults>5</ojp:NumberOfResults>
+					<ojp:TransferLimit>0</ojp:TransferLimit>
+					<ojp:OptimisationMethod>fastest</ojp:OptimisationMethod>
+				</ojp:Params>
+			</ojp:OJPTripRequest>
+		</ServiceRequest>
+	</OJPRequest>
+</OJP>

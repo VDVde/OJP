@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
+	- PR #123 - WebLinkStructure
+	- PR  #59 - MIME type and embeddability in an arbitrary WebLinkStructure
+	- PR  #60 - ProtoProduct
+-->
+	<siri:OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2021-08-25T17:34:02Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<ojp:OJPFareDelivery>
+				<siri:ResponseTimestamp>2021-08-25T17:34:01Z</siri:ResponseTimestamp>
+				<siri:RequestMessageRef>4712</siri:RequestMessageRef>
+				<siri:Status>true</siri:Status>
+				<ojp:CalcTime>60</ojp:CalcTime>
+				<ojp:FareResult>
+					<ojp:Id>2021-08-25-AX754</ojp:Id>
+					<!-- arbitrary, freely invented id -->
+					<ojp:TripFareResult>
+						<ojp:FareProduct>
+							<ojp:FareProductId>87</ojp:FareProductId>
+							<ojp:FareProductName>Aktion Inselhupf</ojp:FareProductName>
+							<ojp:FareAuthorityRef>CH-BSG</ojp:FareAuthorityRef>
+							<ojp:FareAuthorityText>BSG Bielsersee-Schifffahrts-Gesellschaft</ojp:FareAuthorityText>
+							<ojp:ProtoProduct>false</ojp:ProtoProduct>
+							<!-- V1.1, PR #60 - Illustration of ProtoProduct -->
+						</ojp:FareProduct>
+						<ojp:StaticInfoUrl>
+							<!-- V1.1, PR #123 - Illustration of WebLinkStructure -->
+							<ojp:Label>
+								<ojp:Text xml:lang="de">Link zum Angebot</ojp:Text>
+							</ojp:Label>
+							<ojp:Url>https://github.com/VDVde/OJP/pull/59/files</ojp:Url>
+							<ojp:MimeType>text/html</ojp:MimeType>
+							<!-- V1.1, PR #59 - Illustration of MIME type in a WebLinkStructure -->
+							<ojp:Embeddable>false</ojp:Embeddable>
+							<!-- V1.1, PR #59 - Illustration of Embeddable in a WebLinkStructure -->
+						</ojp:StaticInfoUrl>
+					</ojp:TripFareResult>
+				</ojp:FareResult>
+			</ojp:OJPFareDelivery>
+		</siri:ServiceDelivery>
+	</siri:OJPResponse>
+</siri:OJP>
