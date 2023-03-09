@@ -33,7 +33,7 @@
 					<ojp:IncludeTrackSections>true</ojp:IncludeTrackSections>
 					<ojp:IncludeLegProjection>true</ojp:IncludeLegProjection>
 					<ojp:IncludeTurnDescription>true</ojp:IncludeTurnDescription>
-					<ojp:includeAccessFeatures>false<ojp:IncludeAccessFeatures/>
+					<ojp:IncludeAccessFeatures>false</ojp:IncludeAccessFeatures>
 					<ojp:IncludeAccessFeaturesStatus>false</ojp:IncludeAccessFeaturesStatus>
 					<ojp:IncludeAccessibilityDetails>mobilityImpairment</ojp:IncludeAccessibilityDetails>
 					<ojp:IncludeAccessibilityDetails>auditoryImpairment</ojp:IncludeAccessibilityDetails>
