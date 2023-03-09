@@ -126,7 +126,7 @@
 			</xs:element>
 			<xs:element name="FareEstimated" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Is set to true, when the fare is only estimated by the service. If not set, it should be assumed to be true.</xs:documentation>
+					<xs:documentation>Whether the fare is only estimated by the service. Default is false.</xs:documentation>
 				</xs:annotation>
 			</xs:element>			
 			<xs:choice>
