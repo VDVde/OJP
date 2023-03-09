@@ -47,7 +47,7 @@
 			</xs:element>
 			<xs:element name="PlaceResult" type="PlaceResultStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The place / location object results found by the service. They have to be sorted by the ranking how well they match to the input data in descending order. The first result in the list matches best.</xs:documentation>
+					<xs:documentation>The place/location objects found by the service are ordered in descending order of how well they match the input data. The first result in the list matches best.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
