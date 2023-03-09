@@ -33,14 +33,14 @@
 					<ojp:IncludeTrackSections>true</ojp:IncludeTrackSections>
 					<ojp:IncludeLegProjection>true</ojp:IncludeLegProjection>
 					<ojp:IncludeTurnDescription>true</ojp:IncludeTurnDescription>
-					<ojp:IncludeAccessFeatures></ojp:IncludeAccessFeatures>
+					<ojp:IncludeAccessFeatures/>
 					<ojp:IncludeAccessFeaturesStatus>false</ojp:IncludeAccessFeaturesStatus>
 					<ojp:IncludeAccessibilityDetails>mobilityImpairment</ojp:IncludeAccessibilityDetails>
 					<ojp:IncludeAccessibilityDetails>auditoryImpairment</ojp:IncludeAccessibilityDetails>
 					<ojp:IncludePlacesContext>true</ojp:IncludePlacesContext>
-					<ojp:IncludeIntermediateStops>true</ojp:IncludeIntermediateStops>			
-					<ojp:IncludeAlternativeOptions>false</ojp:IncludeAlternativeOptions>	
-					<ojp:IncludeFare>true</ojp:IncludeFare>							
+					<ojp:IncludeIntermediateStops>true</ojp:IncludeIntermediateStops>
+					<ojp:IncludeAlternativeOptions>false</ojp:IncludeAlternativeOptions>
+					<ojp:IncludeFare>true</ojp:IncludeFare>
 					<ojp:IncludeOperatingDays>true</ojp:IncludeOperatingDays>
 					<ojp:HikingProfile>easy</ojp:HikingProfile>
 					<ojp:CyclingProfile>green</ojp:CyclingProfile>

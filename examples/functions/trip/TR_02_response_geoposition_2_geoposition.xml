@@ -558,7 +558,7 @@
 									</ojp:PublishedServiceName>
 									<ojp:OperatorRefs>
 										<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-									</ojp:OperatorRefs>									
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
@@ -948,7 +948,7 @@
 									</ojp:PublishedServiceName>
 									<ojp:OperatorRefs>
 										<ojp:OperatorRef>ojp:849</ojp:OperatorRef>
-									</ojp:OperatorRefs>									
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
@@ -1166,7 +1166,7 @@
 									</ojp:PublishedServiceName>
 									<ojp:OperatorRefs>
 										<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-									</ojp:OperatorRefs>									
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
@@ -1412,7 +1412,7 @@
 									</ojp:PublishedServiceName>
 									<ojp:OperatorRefs>
 										<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-									</ojp:OperatorRefs>									
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>

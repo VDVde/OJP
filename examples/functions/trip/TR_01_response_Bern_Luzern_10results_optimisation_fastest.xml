@@ -172,7 +172,6 @@
 									<ojp:Order>12</ojp:Order>
 								</ojp:LegAlight>
 								<ojp:Service>
-									
 									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 									<ojp:JourneyRef>ojp:910S1:N:H:j20:179</ojp:JourneyRef>
 									<siri:LineRef>ojp:910S1:N</siri:LineRef>
