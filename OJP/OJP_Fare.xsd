@@ -124,9 +124,9 @@
 					<xs:documentation>Problems related to this FARE result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FareEstimated" type="xs:boolean" default="false" minOccurs="0">
+			<xs:element name="FareEstimated" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether the fare is only estimated by the service. Default is FALSE.</xs:documentation>
+					<xs:documentation>Whether the fare is only estimated by the service and not an accurate price for the user. Estimated can mean different things: For example, the price may vary according to age, PassengerCategory, TravelClass, EntitlementProducts. It can also mean that the fare structure used by the fare service is not entirely accurate or that other factors, such as the time a shared vehicle is used, would need to be factored into the price. As a rule, the price should then be shown as an approximate and probably lower limit of the actual price. Default is TRUE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
