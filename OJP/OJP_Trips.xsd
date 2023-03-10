@@ -1277,7 +1277,7 @@
 	</xs:complexType>
 	<xs:group name="MultiPointTripPolicyGroup">
 		<xs:annotation>
-			<xs:documentation>Policies that control the multi-point trip search behaviour.</xs:documentation>
+			<xs:documentation>Policies that control the multipoint trip search behaviour.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
