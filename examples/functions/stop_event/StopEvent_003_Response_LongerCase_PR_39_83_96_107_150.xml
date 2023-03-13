@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
+	- PR #39, PR #150 - standard ResponseContextStructure including a PlaceStructure
+	- PR #107 - only referenced places and situations should be put into the Context
+	- PR #83 - IncludePlacesContext and IncludeSituationsContext -> this response includes Places in Context
+	- PR #96 - IncludeStopHierarchy -> StopEvents for all nearby Places (meta stop)
+-->
+	<siri:OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2021-08-16T18:11:51Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<ojp:OJPStopEventDelivery>
+				<siri:ResponseTimestamp>2021-08-16T18:11:51Z</siri:ResponseTimestamp>
+				<siri:RequestMessageRef>756</siri:RequestMessageRef>
+				<siri:Status>true</siri:Status>
+				<ojp:CalcTime>39</ojp:CalcTime>
+				<ojp:StopEventResponseContext>
+					<ojp:Places>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8504375</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>109232:0:</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23006740:2</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Ligerz (Schiff)</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>7.13548</siri:Longitude>
+								<siri:Latitude>47.08335</siri:Latitude>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23006740:2</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Ligerz</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>0.0</siri:Longitude>
+								<siri:Latitude>0.0</siri:Latitude>
+								<siri:Precision>20000000</siri:Precision>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8504227</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>109117:0:1</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23006740:2</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Ligerz</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>7.13516</siri:Longitude>
+								<siri:Latitude>47.08377</siri:Latitude>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23006740:2</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Ligerz</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>0.0</siri:Longitude>
+								<siri:Latitude>0.0</siri:Latitude>
+								<siri:Precision>20000000</siri:Precision>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8504356</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>109214:0:</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23006740:2</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>7.13470</siri:Longitude>
+								<siri:Latitude>47.08395</siri:Latitude>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23006740:2</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Ligerz</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Ligerz</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<siri:Longitude>0.0</siri:Longitude>
+								<siri:Latitude>0.0</siri:Latitude>
+								<siri:Precision>20000000</siri:Precision>
+							</ojp:GeoPosition>
+						</ojp:Place>
+					</ojp:Places>
+				</ojp:StopEventResponseContext>
+				<ojp:StopEventResult>
+					<ojp:Id>ID-1903E461-C436-4CCB-A928-5A4A06E15320</ojp:Id>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504375</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Schiff)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T08:25:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>5</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:9400B:Y:R:j21:12</ojp:JourneyRef>
+							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>water</ojp:PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Schiff</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">BAT</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>BAT</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRefs>
+								<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
+							</ojp:OperatorRefs>
+							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504577</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">Murten/Morat (Schiff/bateau)</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Schiff</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">301</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+				<ojp:StopEventResult>
+					<ojp:Id>ID-52FBBC2A-5C0A-4CF7-BCEF-0F6D15AACA51</ojp:Id>
+					<ojp:StopEvent>
+						<ojp:ThisCall>
+							<ojp:CallAtStop>
+								<siri:StopPointRef>8504356</siri:StopPointRef>
+								<ojp:StopPointName>
+									<ojp:Text>Ligerz (Talstation)</ojp:Text>
+								</ojp:StopPointName>
+								<ojp:ServiceDeparture>
+									<ojp:TimetabledTime>2021-08-17T18:04:00Z</ojp:TimetabledTime>
+								</ojp:ServiceDeparture>
+								<ojp:Order>1</ojp:Order>
+							</ojp:CallAtStop>
+						</ojp:ThisCall>
+						<ojp:Service>
+							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
+							<ojp:JourneyRef>ojp:93201:6:H:j21:24</ojp:JourneyRef>
+							<siri:LineRef>ojp:93201:6</siri:LineRef>
+							<siri:DirectionRef>H</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>funicular</ojp:PtMode>
+								<siri:FunicularSubmode>funicular</siri:FunicularSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">FUN</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>2016</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRefs>
+								<ojp:OperatorRef>ojp:128</ojp:OperatorRef>
+							</ojp:OperatorRefs>
+							<ojp:Attribute>
+								<ojp:Text>
+									<ojp:Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</ojp:Text>
+								</ojp:Text>
+								<ojp:Code>A__OM</ojp:Code>
+							</ojp:Attribute>
+							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
+							<ojp:OriginText>
+								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>
+							</ojp:OriginText>
+							<ojp:DestinationStopPointRef>8504359</ojp:DestinationStopPointRef>
+							<ojp:DestinationText>
+								<ojp:Text xml:lang="de">PrÃªles</ojp:Text>
+							</ojp:DestinationText>
+						</ojp:Service>
+						<ojp:Extension>
+							<ojp:TransportTypeName>
+								<ojp:Text xml:lang="de">Standseilbahn</ojp:Text>
+							</ojp:TransportTypeName>
+							<ojp:PublishedJourneyNumber>
+								<ojp:Text xml:lang="de">57</ojp:Text>
+							</ojp:PublishedJourneyNumber>
+						</ojp:Extension>
+					</ojp:StopEvent>
+				</ojp:StopEventResult>
+			</ojp:OJPStopEventDelivery>
+		</siri:ServiceDelivery>
+	</siri:OJPResponse>
+</siri:OJP>
