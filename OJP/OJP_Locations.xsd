@@ -22,7 +22,7 @@
 				</xs:element>
 				<xs:element name="PlaceRef" type="PlaceRefStructure">
 					<xs:annotation>
-						<xs:documentation>LOCATION / PLACE for further refinement. If a Place in a previous response was marked as not "complete" it can be refined by putting it here. If Places are organised hierarchically it may be reasonable to identify the Place in a top-down approach with several steps of refining a Place on each level of hierarchy. Following this approach an initial request retrieves a first list of top-level Places (eg: streets) which are to be refined in a subsequent request to the next level (e.g. house number intervals). The objects of the current level are presented to the user for selection. The object reference of the selected object is then sent in the next request for further refinement.</xs:documentation>
+						<xs:documentation>LOCATION / PLACE for further refinement. If a Place in a previous response was marked as not "complete" it can be refined by putting it here. If Places are organised hierarchically it may be reasonable to identify the Place in a top-down approach with several steps of refining a Place on each level of hierarchy. Following this approach an initial request retrieves a first list of top-level Places (e.g. streets) which are to be refined in a subsequent request to the next level (e.g. house number intervals). The objects of the current level are presented to the user for selection. The object reference of the selected object is then sent in the next request for further refinement.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
