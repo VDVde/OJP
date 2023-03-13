@@ -384,7 +384,7 @@
 					<xs:documentation>Fare and fare product information for this trip as a whole or parts of it.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IsAlternativeOption" type="xs:boolean" minOccurs="0" default="false">
+			<xs:element name="IsAlternativeOption" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>When the result is an alternative option from IncludeAlternativeOptions, then the flag should be set to true. If it is an alternative option this means that the server decided to add this result for its own reasons: e.g. to push a certain trip leg, because it believes that it might better suit at least some possible customers. Such options are not an optimal fit to the criteria that were in the request. The client may therefore disregard such results depending on the use case.</xs:documentation>
 				</xs:annotation>
@@ -1484,7 +1484,7 @@
 					<xs:documentation>If true, then the request may contain object references from another system. Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RefineLegRef" type="xs:NMTOKEN" maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="RefineLegRef" type="xs:NMTOKEN" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Refers to the legs to be refined by the server. If none is given, then all legs are open for refinement (depending if the relevant system can refine them).</xs:documentation>
 				</xs:annotation>
@@ -1500,11 +1500,6 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TripRefinementDataFilterGroup"/>
-			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>System reference to use for the refinement. If not specified the origin system of each leg are used for the refinement.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
 				<xs:annotation>
