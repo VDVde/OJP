@@ -9,8 +9,7 @@
 				<MessageIdentifier>4711</MessageIdentifier>
 				<ojp:RefineParams>
 					<ojp:RefineLegRef>1</ojp:RefineLegRef>
-					<ojp:RefineLegRef>2</ojp:RefineLegRef>
-					<ojp:RefineLegRef>4</ojp:RefineLegRef>
+					<ojp:RefineLegRef>3</ojp:RefineLegRef>
 					<ojp:SystemId>SBB:ojp:prod</ojp:SystemId>
 					<ojp:UseRealtimeData>full</ojp:UseRealtimeData>
 					<ojp:IncludeIntermediateStops>true</ojp:IncludeIntermediateStops>				
@@ -118,6 +117,65 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
+						</ojp:TripLeg>
+						<ojp:TripLeg>
+							<ojp:LegId>2</ojp:LegId>
+							<ojp:TransferLeg>
+								<ojp:TransferMode>walk</ojp:TransferMode>
+								<ojp:LegStart>
+									<StopPointRef>8505000</StopPointRef>
+									<ojp:Name>
+										<ojp:Text>Luzern</ojp:Text>
+									</ojp:Name>
+								</ojp:LegStart>
+								<ojp:LegEnd>
+									<ojp:GeoPosition>
+										<Longitude>47.042666496</Longitude>
+										<Latitude>8.306332108</Latitude>
+									</ojp:GeoPosition>
+									<ojp:Name>
+										<ojp:Text>Taxiplatz Luzern</ojp:Text>
+									</ojp:Name>
+								</ojp:LegEnd>
+								<ojp:Duration>PT3M</ojp:Duration>
+							</ojp:TransferLeg>
+						</ojp:TripLeg>
+						<ojp:TripLeg>
+							<ojp:LegId>3</ojp:LegId>
+							<ojp:ContinuousLeg>
+								<ojp:LegStart>
+									<ojp:GeoPosition>
+										<Longitude>47.042666496</Longitude>
+										<Latitude>8.306332108</Latitude>
+									</ojp:GeoPosition>			
+									<ojp:Name>
+										<ojp:Text>Taxiplatz Luzern</ojp:Text>
+									</ojp:Name>
+								</ojp:LegStart>
+								<ojp:LegEnd>
+									<ojp:GeoPosition>
+										<Longitude>47.06</Longitude>
+										<Latitude>8.32</Latitude>
+									</ojp:GeoPosition>
+									<ojp:Name>
+										<ojp:Text>Destination</ojp:Text>
+									</ojp:Name>
+								</ojp:LegEnd>
+								<ojp:Service>
+									<ojp:ContinuousMode>demandResponsive</ojp:ContinuousMode>
+									<ojp:SharingService>
+										<ojp:OperatorRef>ch:1:sboid:12391912</ojp:OperatorRef>
+									</ojp:SharingService>
+									<ojp:BookingArrangements>
+										<ojp:BookingArrangement>
+											<ojp:BuyWhen>
+												<ojp:PurchaseMoment>onBoarding</ojp:PurchaseMoment>
+											</ojp:BuyWhen>
+										</ojp:BookingArrangement>
+									</ojp:BookingArrangements>
+								</ojp:Service>
+								<ojp:Duration>PT13M</ojp:Duration>
+							</ojp:ContinuousLeg>
 						</ojp:TripLeg>
 					</ojp:Trip>
 				</ojp:TripResult>		

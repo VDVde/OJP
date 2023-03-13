@@ -20,7 +20,7 @@
 						<ojp:EndTime>2020-09-30T12:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
+						<ojp:TripLeg> <!-- Refinement: Updated leg -->
 							<ojp:LegId>1</ojp:LegId>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -31,8 +31,12 @@
 									<ojp:PlannedQuay>
 										<ojp:Text xml:lang="de">4</ojp:Text>
 									</ojp:PlannedQuay>
+									<ojp:EstimatedQuay>
+										<ojp:Text xml:lang="de">5</ojp:Text> <!-- Refinement: new Quay -->
+									</ojp:EstimatedQuay>									
 									<ojp:ServiceDeparture>
 										<ojp:TimetabledTime>2020-09-30T10:03:00Z</ojp:TimetabledTime>
+										<ojp:EstimatedTimeHigh>2020-09-30T10:06:00Z</ojp:EstimatedTimeHigh> <!-- Refinement: Delay -->
 									</ojp:ServiceDeparture>
 									<ojp:Order>1</ojp:Order>
 								</ojp:LegBoard>
@@ -82,12 +86,13 @@
 										</ojp:Text>
 										<ojp:Code>A___B</ojp:Code>
 									</ojp:Attribute>
+									<!-- Refine: Attribute gone 
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
 										</ojp:Text>
 										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
+									</ojp:Attribute>  -->
 									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
 									<ojp:DestinationText>
 										<ojp:Text xml:lang="de">Luzern</ojp:Text>
@@ -103,6 +108,65 @@
 								</ojp:Extension>
 							</ojp:TimedLeg>
 						</ojp:TripLeg>
+						<ojp:TripLeg>
+							<ojp:LegId>2</ojp:LegId> <!-- Refinement: No change to this leg -->
+							<ojp:TransferLeg>
+								<ojp:TransferMode>walk</ojp:TransferMode>
+								<ojp:LegStart>
+									<siri:StopPointRef>8505000</siri:StopPointRef>
+									<ojp:Name>
+										<ojp:Text>Luzern</ojp:Text>
+									</ojp:Name>
+								</ojp:LegStart>
+								<ojp:LegEnd>
+									<ojp:GeoPosition>
+										<siri:Longitude>47.042666496</siri:Longitude>
+										<siri:Latitude>8.306332108</siri:Latitude>
+									</ojp:GeoPosition>
+									<ojp:Name>
+										<ojp:Text>Taxiplatz Luzern</ojp:Text>
+									</ojp:Name>
+								</ojp:LegEnd>
+								<ojp:Duration>PT3M</ojp:Duration>
+							</ojp:TransferLeg>
+						</ojp:TripLeg>
+						<ojp:TripLeg>  <!-- Refinement: Updated leg -->
+							<ojp:LegId>3</ojp:LegId>
+							<ojp:ContinuousLeg>
+								<ojp:LegStart>
+									<ojp:GeoPosition>
+										<siri:Longitude>47.042666496</siri:Longitude>
+										<siri:Latitude>8.306332108</siri:Latitude>
+									</ojp:GeoPosition>			
+									<ojp:Name>
+										<ojp:Text>Taxiplatz Luzern</ojp:Text>
+									</ojp:Name>
+								</ojp:LegStart>
+								<ojp:LegEnd>
+									<ojp:GeoPosition>
+										<siri:Longitude>47.06</siri:Longitude>
+										<siri:Latitude >8.31</siri:Latitude>  <!-- Refinment: changed location: walk leg now needed to reach destination. Not done by refinement. -->
+									</ojp:GeoPosition>
+									<ojp:Name>
+										<ojp:Text>New destination</ojp:Text> <!-- Refinment: changed location: walk leg now needed to reach destination -->
+									</ojp:Name>
+								</ojp:LegEnd>
+								<ojp:Service>
+									<ojp:ContinuousMode>demandResponsive</ojp:ContinuousMode>
+									<ojp:SharingService>
+										<ojp:OperatorRef>ch:1:sboid:12391912</ojp:OperatorRef>
+									</ojp:SharingService>
+									<ojp:BookingArrangements>
+										<ojp:BookingArrangement>
+											<ojp:BuyWhen>
+												<ojp:PurchaseMoment>onBoarding</ojp:PurchaseMoment>
+											</ojp:BuyWhen>
+										</ojp:BookingArrangement>
+									</ojp:BookingArrangements>
+								</ojp:Service>
+								<ojp:Duration>PT11M</ojp:Duration> <!-- Refinement: New time -->
+							</ojp:ContinuousLeg>
+						</ojp:TripLeg>						
 					</ojp:Trip>
 				</ojp:TripResult>	
 			</ojp:OJPTripRefineDelivery>
