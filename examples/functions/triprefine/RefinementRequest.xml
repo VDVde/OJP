@@ -12,7 +12,7 @@
 					<ojp:RefineLegRef>3</ojp:RefineLegRef>
 					<ojp:SystemId>SBB:ojp:prod</ojp:SystemId>
 					<ojp:UseRealtimeData>full</ojp:UseRealtimeData>
-					<ojp:IncludeIntermediateStops>true</ojp:IncludeIntermediateStops>				
+					<ojp:IncludeIntermediateStops>true</ojp:IncludeIntermediateStops>
 					<ojp:IncludeAlternativeOptions>true</ojp:IncludeAlternativeOptions>
 					<ojp:IncludeFare>true</ojp:IncludeFare>
 					<ojp:HikingProfile>difficult</ojp:HikingProfile>
@@ -147,7 +147,7 @@
 									<ojp:GeoPosition>
 										<Longitude>47.042666496</Longitude>
 										<Latitude>8.306332108</Latitude>
-									</ojp:GeoPosition>			
+									</ojp:GeoPosition>
 									<ojp:Name>
 										<ojp:Text>Taxiplatz Luzern</ojp:Text>
 									</ojp:Name>
@@ -178,7 +178,7 @@
 							</ojp:ContinuousLeg>
 						</ojp:Leg>
 					</ojp:Trip>
-				</ojp:TripResult>		
+				</ojp:TripResult>
 				<ojp:TripResponseContext>
 					<ojp:Operators>
 						<ojp:Operator>
@@ -187,24 +187,24 @@
 						</ojp:Operator>
 					</ojp:Operators>
 					<ojp:Places>
-					<ojp:Place>
-						<ojp:StopPlace>
-							<ojp:StopPlaceRef>8530813</ojp:StopPlaceRef>
-							<ojp:StopPlaceName>
-								<ojp:Text>Zürich Kreuzplatz</ojp:Text>
-							</ojp:StopPlaceName>
-							<ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
-						</ojp:StopPlace>
-						<ojp:Name>
-							<ojp:Text xml:lang="de">Zürich</ojp:Text>
-						</ojp:Name>
-						<ojp:GeoPosition>
-							<Longitude>8.55408</Longitude>
-							<Latitude>47.36488</Latitude>
-						</ojp:GeoPosition>
-					</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8530813</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Zürich Kreuzplatz</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Zürich</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
+								<Longitude>8.55408</Longitude>
+								<Latitude>47.36488</Latitude>
+							</ojp:GeoPosition>
+						</ojp:Place>
 					</ojp:Places>
-				</ojp:TripResponseContext>		
+				</ojp:TripResponseContext>
 			</ojp:OJPTripRefineRequest>
 		</ServiceRequest>
 	</OJPRequest>

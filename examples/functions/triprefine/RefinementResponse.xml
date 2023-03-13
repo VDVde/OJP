@@ -20,7 +20,8 @@
 						<ojp:EndTime>2020-09-30T12:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:Leg> <!-- Refinement: Updated leg -->
+						<ojp:Leg>
+							<!-- Refinement: Updated leg -->
 							<ojp:Id>1</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
@@ -32,11 +33,13 @@
 										<ojp:Text xml:lang="de">4</ojp:Text>
 									</ojp:PlannedQuay>
 									<ojp:EstimatedQuay>
-										<ojp:Text xml:lang="de">5</ojp:Text> <!-- Refinement: new Quay -->
-									</ojp:EstimatedQuay>									
+										<ojp:Text xml:lang="de">5</ojp:Text>
+										<!-- Refinement: new Quay -->
+									</ojp:EstimatedQuay>
 									<ojp:ServiceDeparture>
 										<ojp:TimetabledTime>2020-09-30T10:03:00Z</ojp:TimetabledTime>
-										<ojp:EstimatedTimeHigh>2020-09-30T10:06:00Z</ojp:EstimatedTimeHigh> <!-- Refinement: Delay -->
+										<ojp:EstimatedTimeHigh>2020-09-30T10:06:00Z</ojp:EstimatedTimeHigh>
+										<!-- Refinement: Delay -->
 									</ojp:ServiceDeparture>
 									<ojp:Order>1</ojp:Order>
 								</ojp:LegBoard>
@@ -109,7 +112,8 @@
 							</ojp:TimedLeg>
 						</ojp:Leg>
 						<ojp:Leg>
-							<ojp:Id>2</ojp:Id> <!-- Refinement: No change to this leg -->
+							<ojp:Id>2</ojp:Id>
+							<!-- Refinement: No change to this leg -->
 							<ojp:TransferLeg>
 								<ojp:TransferMode>walk</ojp:TransferMode>
 								<ojp:LegStart>
@@ -130,14 +134,15 @@
 								<ojp:Duration>PT3M</ojp:Duration>
 							</ojp:TransferLeg>
 						</ojp:Leg>
-						<ojp:Leg>  <!-- Refinement: Updated leg -->
+						<ojp:Leg>
+							<!-- Refinement: Updated leg -->
 							<ojp:Id>3</ojp:Id>
 							<ojp:ContinuousLeg>
 								<ojp:LegStart>
 									<ojp:GeoPosition>
 										<siri:Longitude>47.042666496</siri:Longitude>
 										<siri:Latitude>8.306332108</siri:Latitude>
-									</ojp:GeoPosition>			
+									</ojp:GeoPosition>
 									<ojp:Name>
 										<ojp:Text>Taxiplatz Luzern</ojp:Text>
 									</ojp:Name>
@@ -145,10 +150,12 @@
 								<ojp:LegEnd>
 									<ojp:GeoPosition>
 										<siri:Longitude>47.06</siri:Longitude>
-										<siri:Latitude >8.31</siri:Latitude>  <!-- Refinment: changed location: walk leg now needed to reach destination. Not done by refinement. -->
+										<siri:Latitude>8.31</siri:Latitude>
+										<!-- Refinment: changed location: walk leg now needed to reach destination. Not done by refinement. -->
 									</ojp:GeoPosition>
 									<ojp:Name>
-										<ojp:Text>New destination</ojp:Text> <!-- Refinment: changed location: walk leg now needed to reach destination -->
+										<ojp:Text>New destination</ojp:Text>
+										<!-- Refinment: changed location: walk leg now needed to reach destination -->
 									</ojp:Name>
 								</ojp:LegEnd>
 								<ojp:Service>
@@ -164,11 +171,12 @@
 										</ojp:BookingArrangement>
 									</ojp:BookingArrangements>
 								</ojp:Service>
-								<ojp:Duration>PT11M</ojp:Duration> <!-- Refinement: New time -->
+								<ojp:Duration>PT11M</ojp:Duration>
+								<!-- Refinement: New time -->
 							</ojp:ContinuousLeg>
-						</ojp:Leg>						
+						</ojp:Leg>
 					</ojp:Trip>
-				</ojp:TripResult>	
+				</ojp:TripResult>
 			</ojp:OJPTripRefineDelivery>
 		</siri:ServiceDelivery>
 	</siri:OJPResponse>
