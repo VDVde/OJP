@@ -13,7 +13,7 @@
 	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== General ==========================================</xs:documentation>
-	</xs:annotation>	
+	</xs:annotation>
 	<xs:element name="OJPError" type="OJPErrorStructure" substitutionGroup="siri:ErrorCode">
 		<xs:annotation>
 			<xs:documentation>Error: All OJP related errors.</xs:documentation>
