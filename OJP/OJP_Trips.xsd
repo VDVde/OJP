@@ -112,31 +112,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
-			<xs:element name="TransferLimit" type="xs:nonNegativeInteger" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:choice>
-				<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration">
-					<xs:annotation>
-						<xs:documentation>The type of algorithm to be used for planning a journey (fastest, least walking, etc.).</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="OptimisationMethods" type="OptimisationMethodList" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>The types of algorithm that should be used for planning a journey.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:choice>
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ConsiderElevationData" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Trip calculation takes elevation data into account (bike, walk)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1304,20 +1282,10 @@
 	</xs:complexType>
 	<xs:group name="MultiPointTripPolicyGroup">
 		<xs:annotation>
-			<xs:documentation>Policies that control the multi-point trip search behaviour.</xs:documentation>
+			<xs:documentation>Policies that control the multipoint trip search behaviour.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
-			<xs:element name="TransferLimit" type="xs:nonNegativeInteger" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc.)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" default="anyPoint" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found.</xs:documentation>
