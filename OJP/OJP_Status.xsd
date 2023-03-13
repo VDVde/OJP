@@ -31,12 +31,12 @@
 		<xs:sequence>
 			<xs:element name="ServiceStarted" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Time when service was started</xs:documentation>
+					<xs:documentation>Time when the service was started.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SystemAvailability" type="Percentage" minOccurs="0">
+			<xs:element name="ServiceReady" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>System availability as a percentage</xs:documentation>
+					<xs:documentation>Time when the service started responding to queries.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastTimetableUpdate" type="xs:dateTime" minOccurs="0">
