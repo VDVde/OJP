@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.siri.org.uk/siri" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="OJP_siri">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="OJP_siri">
 	<xs:annotation>
 		<xs:documentation>OJP.xsd - OJP messages as extension of SIRI</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.vdv.de/ojp" schemaLocation="./OJP/OJP_All.xsd"/>
+	<xs:include schemaLocation="./OJP/OJP_All.xsd"/>
 	<!-- ifopt must be imported before siri, otherwise xmllint fails -->
 	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="./siri/ifopt/ifopt_allStopPlace-v0.3.xsd"/>
-	<xs:include schemaLocation="./siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="./siri/siri_model/siri_all-v2.0.xsd"/>
 	<xs:element name="OJP">
 		<xs:annotation>
 			<xs:documentation>Root element for OJP messages based on SIRI message exchange protocol.</xs:documentation>
@@ -17,7 +17,7 @@
 					<xs:element ref="OJPRequest"/>
 					<xs:element ref="OJPResponse"/>
 				</xs:choice>
-				<xs:element ref="Extensions" minOccurs="0"/>
+				<xs:element ref="siri:Extensions" minOccurs="0"/>
 			</xs:sequence>
 			<xs:attribute name="version" type="xs:NMTOKEN" use="required" fixed="1.1-dev"/>
 		</xs:complexType>
@@ -32,7 +32,7 @@
 			<xs:documentation>Type for OJP Request - Groups individual functional requests.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:group ref="RequestGroup"/>
+			<xs:group ref="siri:RequestGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="OJPResponse" type="OJPResponseStructure">
@@ -45,7 +45,7 @@
 			<xs:documentation>Type for OJP Response - Groups individual functional responses.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:group ref="ResponseGroup"/>
+			<xs:group ref="siri:ResponseGroup"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
