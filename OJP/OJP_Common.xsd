@@ -14,7 +14,7 @@
 	<xs:annotation>
 		<xs:documentation>========================================== General ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPError" type="OJPErrorStructure" substitutionGroup="siri:ErrorCode">
+	<xs:element name="OJPError" type="OJPErrorStructure" substitutionGroup="siri:OtherError">
 		<xs:annotation>
 			<xs:documentation>Error: All OJP related errors.</xs:documentation>
 		</xs:annotation>
@@ -24,7 +24,7 @@
 			<xs:documentation>Type for Error: OJP Error.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="siri:ErrorCodeStructure">
+			<xs:extension base="siri:OtherErrorStructure">
 				<xs:sequence>
 					<xs:group ref="ProblemDetailGroup" minOccurs="0">
 						<xs:annotation>
