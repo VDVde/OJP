@@ -268,7 +268,8 @@
 			</xs:group>
 			<xs:group ref="ServiceDestinationGroup"/>
 			<xs:group ref="ServiceStatusGroup"/>
-			<xs:group ref="siri:JourneyFormationGroup"> <!-- not in the old SIRI!!! -->
+			<xs:group ref="siri:JourneyFormationGroup">
+				<!-- not in the old SIRI!!! -->
 				<xs:annotation>
 					<xs:documentation>The formation elements on the journey level.</xs:documentation>
 				</xs:annotation>
@@ -367,8 +368,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="ServiceTimeGroup"/>
-			<xs:element ref="siri:ArrivalFormationAssignment" minOccurs="0"/> <!-- comes with SIRI 2.1 -->
-			<!-- TODO the quays should be moved here, too -->			
+			<xs:element ref="siri:ArrivalFormationAssignment" minOccurs="0"/>
+			<!-- comes with SIRI 2.1 -->
+			<!-- TODO the quays should be moved here, too -->
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ServiceDepartureStructure">
@@ -377,8 +379,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="ServiceTimeGroup"/>
-			<xs:element ref="siri:DepartureFormationAssignment" minOccurs="0"/> <!-- comes with SIRI 2.1 -->
-			<!-- TODO the quays should be moved here, too -->				
+			<xs:element ref="siri:DepartureFormationAssignment" minOccurs="0"/>
+			<!-- comes with SIRI 2.1 -->
+			<!-- TODO the quays should be moved here, too -->
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="CallAtStopStructure">
@@ -757,7 +760,7 @@
 				<xs:annotation>
 					<xs:documentation>Whether the place context is needed. If a requestor has that information already, the response can be made slimmer, when set to false. Default is true. </xs:documentation>
 				</xs:annotation>
-			</xs:element>
+			</xs:element>		
 			<xs:element name="IncludeSituationsContext" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
