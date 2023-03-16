@@ -397,8 +397,16 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:sequence>
-				<xs:element ref="siri:ExpectedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element ref="siri:ExpectedDepartureCapacities" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="siri:ExpectedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>The Occupancy structure from SIRI can be used here. It is recommended to mainly have one ExpectedDepartureOccupancy for each FareClass and mainly focus on OccupancyLevel and OccupancyPercentage. A lot more things can be transmitted, but many clients will not be able to  handle the information. For more details have a look at the SIRI documentation.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="siri:ExpectedDepartureCapacities" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>The Capacity structure also will probably rarely be used and parsed. When used, then it mainly show elements that are important for accessibility.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:sequence>
 		</xs:sequence>
 	</xs:group>
