@@ -86,7 +86,7 @@
 			<xs:documentation>Problem that may be returned in responses to LINE information requests.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="OJPErrorStructure">		
+			<xs:extension base="OJPErrorStructure">
 				<xs:sequence>
 					<xs:element name="Type" type="LineInformationProblemTypeEnumeration">
 						<xs:annotation>
@@ -96,6 +96,6 @@
 					<xs:group ref="ProblemDetailGroup"/>
 				</xs:sequence>
 			</xs:extension>
-		</xs:complexContent>					
+		</xs:complexContent>
 	</xs:complexType>
 </xs:schema>

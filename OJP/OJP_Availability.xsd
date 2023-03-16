@@ -437,7 +437,7 @@
 					</xs:element>
 					<xs:group ref="ProblemDetailGroup"/>
 				</xs:sequence>
-			</xs:extension>	
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 </xs:schema>
