@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Availability.xsd - Request and response definitions for availability of tickets and services on a journey leg.</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== AvailabilityRequest ==========================================</xs:documentation>
@@ -106,8 +106,16 @@
 			<xs:documentation>Earliest possible departure time from a start location and latest possible arrival at a different destination location.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="EarliestDepartureTime" type="xs:dateTime" minOccurs="0"/>
-			<xs:element name="LatestArrivalTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="EarliestDepartureTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Earliest possible departure time from start location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LatestArrivalTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Latest possible arrival time at destination location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:annotation>
@@ -199,6 +207,11 @@
 			<xs:documentation>Availability response.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="AvailabilityResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold availability response objects that occur frequently.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="AvailabilityResult" type="AvailabilityResultStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Indication of the availability of the requested service.</xs:documentation>
@@ -373,14 +386,14 @@
 			<xs:documentation>Types of problems that may be returned in responses to AVAILABILITY requests.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="AVAILIBILITY_NOSERIVCEFOUND">
+			<xs:enumeration value="AVAILABILITY_NOSERVICEFOUND">
 				<xs:annotation>
 					<xs:documentation>No SERVICE (VEHICLE JOURNEY or VEHICLE) could be found for this request.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_LOCATIONUNSERVED">
 				<xs:annotation>
-					<xs:documentation>At the locations (address, stop, etc.) for which the availability has been requested, there is no public transport service at all. E.g. outside of the area</xs:documentation>
+					<xs:documentation>At the locations (address, stop, etc.) for which the availability has been requested, there is no public transport service at all. E.g. outside of the area.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_LOCATIONUNKNOWN">
@@ -390,7 +403,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_OUTSIDERULES">
 				<xs:annotation>
-					<xs:documentation>The vehicle is not available due to existing rules like operating hours or not competing against an existing public transport line. In the details of the problem there should be information, which rules where violated: e.g. The desired MOBILITY SERVICE can't be provided, because there exists a regulare line for this TRIP.</xs:documentation>
+					<xs:documentation>The vehicle is not available due to existing rules like operating hours or not competing against an existing public transport line. In the details of the problem there should be information indicating which rules were violated: e.g. The desired MOBILITY SERVICE can't be provided because there exists a regulare line for this TRIP.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_SERVICEDISRUPTED">

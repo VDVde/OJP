@@ -524,16 +524,16 @@
 					</ojp:Places>
 				</ojp:TripResponseContext>
 				<ojp:TripResult>
-					<ojp:ResultId>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:ResultId>
+					<ojp:Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:Id>
 					<ojp:Trip>
-						<ojp:TripId>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:TripId>
+						<ojp:Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:Id>
 						<ojp:Duration>PT2H18M</ojp:Duration>
 						<ojp:StartTime>2020-09-30T10:03:00Z</ojp:StartTime>
 						<ojp:EndTime>2020-09-30T12:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
-							<ojp:LegId>1</ojp:LegId>
+						<ojp:Leg>
+							<ojp:Id>1</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
@@ -579,7 +579,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -612,20 +614,20 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
-					<ojp:ResultId>ID-D7BC624B-01C1-4710-BD57-66EF30D84FD4</ojp:ResultId>
+					<ojp:Id>ID-D7BC624B-01C1-4710-BD57-66EF30D84FD4</ojp:Id>
 					<ojp:Trip>
-						<ojp:TripId>ID-D7BC624B-01C1-4710-BD57-66EF30D84FD4</ojp:TripId>
+						<ojp:Id>ID-D7BC624B-01C1-4710-BD57-66EF30D84FD4</ojp:Id>
 						<ojp:Duration>PT2H18M</ojp:Duration>
 						<ojp:StartTime>2020-09-30T11:03:00Z</ojp:StartTime>
 						<ojp:EndTime>2020-09-30T13:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
-							<ojp:LegId>1</ojp:LegId>
+						<ojp:Leg>
+							<ojp:Id>2</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
@@ -671,7 +673,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -704,20 +708,20 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
-					<ojp:ResultId>ID-9258B3C7-13F8-42A3-94E4-AF1EE8691B30</ojp:ResultId>
+					<ojp:Id>ID-9258B3C7-13F8-42A3-94E4-AF1EE8691B30</ojp:Id>
 					<ojp:Trip>
-						<ojp:TripId>ID-9258B3C7-13F8-42A3-94E4-AF1EE8691B30</ojp:TripId>
+						<ojp:Id>ID-9258B3C7-13F8-42A3-94E4-AF1EE8691B30</ojp:Id>
 						<ojp:Duration>PT2H18M</ojp:Duration>
 						<ojp:StartTime>2020-09-30T12:03:00Z</ojp:StartTime>
 						<ojp:EndTime>2020-09-30T14:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
-							<ojp:LegId>1</ojp:LegId>
+						<ojp:Leg>
+							<ojp:Id>3</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
@@ -763,7 +767,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -796,20 +802,20 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
-					<ojp:ResultId>ID-88422412-857D-40E2-9479-7181EEBFCD79</ojp:ResultId>
+					<ojp:Id>ID-88422412-857D-40E2-9479-7181EEBFCD79</ojp:Id>
 					<ojp:Trip>
-						<ojp:TripId>ID-88422412-857D-40E2-9479-7181EEBFCD79</ojp:TripId>
+						<ojp:Id>ID-88422412-857D-40E2-9479-7181EEBFCD79</ojp:Id>
 						<ojp:Duration>PT2H18M</ojp:Duration>
 						<ojp:StartTime>2020-09-30T13:03:00Z</ojp:StartTime>
 						<ojp:EndTime>2020-09-30T15:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
-							<ojp:LegId>1</ojp:LegId>
+						<ojp:Leg>
+							<ojp:Id>4</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
@@ -855,7 +861,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -888,20 +896,20 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 				<ojp:TripResult>
-					<ojp:ResultId>ID-69ED1607-3F2A-4A5B-8ED4-A7EE3FA99FE6</ojp:ResultId>
+					<ojp:Id>ID-69ED1607-3F2A-4A5B-8ED4-A7EE3FA99FE6</ojp:Id>
 					<ojp:Trip>
-						<ojp:TripId>ID-69ED1607-3F2A-4A5B-8ED4-A7EE3FA99FE6</ojp:TripId>
+						<ojp:Id>ID-69ED1607-3F2A-4A5B-8ED4-A7EE3FA99FE6</ojp:Id>
 						<ojp:Duration>PT2H18M</ojp:Duration>
 						<ojp:StartTime>2020-09-30T14:03:00Z</ojp:StartTime>
 						<ojp:EndTime>2020-09-30T16:21:00Z</ojp:EndTime>
 						<ojp:Transfers>0</ojp:Transfers>
 						<ojp:Distance>125484</ojp:Distance>
-						<ojp:TripLeg>
-							<ojp:LegId>1</ojp:LegId>
+						<ojp:Leg>
+							<ojp:Id>5</ojp:Id>
 							<ojp:TimedLeg>
 								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
@@ -947,7 +955,9 @@
 									<ojp:PublishedServiceName>
 										<ojp:Text>empty</ojp:Text>
 									</ojp:PublishedServiceName>
-									<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
 									<ojp:Attribute>
 										<ojp:Text>
 											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
@@ -980,7 +990,7 @@
 									</ojp:PublishedJourneyNumber>
 								</ojp:Extension>
 							</ojp:TimedLeg>
-						</ojp:TripLeg>
+						</ojp:Leg>
 					</ojp:Trip>
 				</ojp:TripResult>
 			</ojp:OJPTripDelivery>

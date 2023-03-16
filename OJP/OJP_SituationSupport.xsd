@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_SituationSupport.xsd - Supporting definitions for situations containing wrappers for SIRI Situation Exchange service (SIRI SX)</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:complexType name="SituationsStructure">
 		<xs:annotation>
@@ -12,10 +12,14 @@
 		<xs:sequence>
 			<xs:element name="PtSituation" type="siri:PtSituationElementStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>SIRI situation details.</xs:documentation>
+					<xs:documentation>SIRI situation details in public transport, see CEN/TS 15531-5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RoadSituation" type="siri:RoadSituationElementStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="RoadSituation" type="siri:RoadSituationElementStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>SIRI situation details in individual transport, see CEN/TS 15531-5.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="SituationFullRef" type="SituationFullRefStructure">
@@ -30,5 +34,13 @@
 		<xs:complexContent>
 			<xs:extension base="siri:SituationFullRefStructure"/>
 		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SituationRefList">
+		<xs:annotation>
+			<xs:documentation>List of references to SITUATIONs.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="SituationFullRef" maxOccurs="unbounded"/>
+		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

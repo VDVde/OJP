@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== TripRequest definitions ==========================================</xs:documentation>
@@ -25,7 +25,14 @@
 			</xs:element>
 			<xs:element name="Via" type="TripViaStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops.</xs:documentation>
+					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops.
+					Note: Systems may support only one.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ViaSystem" type="siri:ParticipantRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>With this parameter a distributing system is asked to build a trip using a given System to pass through. This helps in selecting Exchange Points for this trip. ViaSystem is also used in sequence.
+					Note: Systems may support only one.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NotVia" type="NotViaStructure" minOccurs="0" maxOccurs="unbounded">
@@ -54,7 +61,11 @@
 			<xs:group ref="TripMobilityFilterGroup"/>
 			<xs:group ref="TripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
-			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
+			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -101,24 +112,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
-			<xs:element name="TransferLimit" type="xs:nonNegativeInteger" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ConsiderElevationData" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Trip calculation takes elevation data into account (bike, walk)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -162,6 +158,11 @@
 					<xs:documentation>Whether the result should include intermediate stops (between the passenger's board and alight stops).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether alternative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second-best route. Should be optimised for the user expectance (see. e.g https://theses.hal.science/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="IncludeFare" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the result should include fare information.</xs:documentation>
@@ -172,6 +173,54 @@
 					<xs:documentation>Whether the result should include operating day information - as encoded bit string and in natural language.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="HikingProfile" default="easy" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: possible explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="easy">
+							<xs:annotation>
+								<xs:documentation>Regular hiking/walking in valleys and plains and easy mountain trails e.g. yellow hiking signs in Switzerland or blue in Germany.</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="medium">
+							<xs:annotation>
+								<xs:documentation>Medium difficulty mountain trails. E.g. white-red-white hiking signs in Switzerland or red in Germany.</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="difficult">
+							<xs:annotation>
+								<xs:documentation>Difficult mountain trails. E.g. white-blue-white hiking signs in Switzerland or black in Germany.</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CyclingProfile" default="fast" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cycling profile of the user (especially for sportive activities).</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="fast">
+							<xs:annotation>
+								<xs:documentation>Fastest cycle route</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="green">
+							<xs:annotation>
+								<xs:documentation>Greenest cycle route</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="comfortable">
+							<xs:annotation>
+								<xs:documentation>Family friendly and leisurely route</xs:documentation>
+							</xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element name="TripSummaryOnly" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If true, then the response will contain only summaries of the found trips. Default is false.</xs:documentation>
@@ -179,9 +228,17 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:complexType name="OptimisationMethodList">
+		<xs:annotation>
+			<xs:documentation>List of OptimisationMethods. The order of precedence - if used at all - is high to low. In single criteria optimisers the optimisation methods may be used in parallel and not truly used to score the results.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:simpleType name="OptimisationMethodEnumeration">
 		<xs:annotation>
-			<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
+			<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc.). If multiple optimisation methods are needed, then several requests should be performed in parallel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="fastest"/>
@@ -196,27 +253,68 @@
 			<xs:enumeration value="earliestArrival"/>
 			<xs:enumeration value="latestDeparture"/>
 			<xs:enumeration value="earliestArrivalAndLatestDeparture"/>
+			<xs:enumeration value="environmentalSafety">
+				<xs:annotation>
+					<xs:documentation>If set, favour "green" modes/lines such as bike sharing and (electric) trains, avoid or restrict modes/lines known for higher CO2 emissions such as (conventional) taxi, ride-hailing or coach.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="extraSafe">
+				<xs:annotation>
+					<xs:documentation>High level of safety (referring to crime, hazards or prone to accidents). If used, certain modes, lines or zones/districts known for lower safety, i.e. higher risk of accidents and crime, may be avoided, others may be preferred. This may depend on the actual, local or time of day situation. E.g. bike or scooter may be considered unsafe in some cities/districts while safe in others.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="extraReliable">
+				<xs:annotation>
+					<xs:documentation>Low probability of delays, cancellations etc. If used, modes known for their (un)reliability may be avoided/preferred, and extra time added for transfers. This may depend on the actual, local or time of day situation, based on punctuality statics, traffic jam statistics or rush hours. E.g. taxis in a given city might be known to be unreliable during at 8-10 and 16-19 hours, otherwise reliable.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="scenic">
+				<xs:annotation>
+					<xs:documentation>Scenic (or touristic) travel. Different by modes or by the surrounding.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="quietTravel">
+				<xs:annotation>
+					<xs:documentation>E.g. first class or quiet compartments preferred. Journeys that are with low occupancy.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="NotViaStructure">
 		<xs:annotation>
-			<xs:documentation>NNot-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through</xs:documentation>
+			<xs:documentation>Not-via restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs that the TRIP is not allowed to pass through</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:element ref="siri:StopPointRef"/>
-				<xs:element ref="StopPlaceRef"/>
+				<xs:element ref="siri:StopPointRef">
+					<xs:annotation>
+						<xs:documentation>Reference to a not-via stop point.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="StopPlaceRef">
+					<xs:annotation>
+						<xs:documentation>Reference to a not-via stop place.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="NoChangeAtStructure">
 		<xs:annotation>
-			<xs:documentation>no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.</xs:documentation>
+			<xs:documentation>No-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:element ref="siri:StopPointRef"/>
-				<xs:element ref="StopPlaceRef"/>
+				<xs:element ref="siri:StopPointRef">
+					<xs:annotation>
+						<xs:documentation>Reference to a no-change stop point.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="StopPlaceRef">
+					<xs:annotation>
+						<xs:documentation>Reference to a no-change stop place.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
@@ -227,7 +325,11 @@
 					<xs:documentation>Whether to include or exclude given tariff zones in the list from the search. Default is to include.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TariffZones" type="TariffZoneListInAreaStructure"/>
+			<xs:element name="TariffZones" type="TariffZoneListInAreaStructure">
+				<xs:annotation>
+					<xs:documentation>List of fare zones to include or exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>
@@ -255,7 +357,7 @@
 			<xs:documentation>Structure for a single trip result and associated problems.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ResultId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -277,7 +379,16 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
-			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Fare and fare product information for this trip as a whole or parts of it.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IsAlternativeOption" type="xs:boolean" minOccurs="0" default="false">
+				<xs:annotation>
+					<xs:documentation>When the result is an alternative option from IncludeAlternativeOptions, then the flag should be set to true. If it is an alternative option this means that the server decided to add this result for its own reasons: e.g. to push a certain trip leg, because it believes that it might better suit at least some possible customers. Such options are not an optimal fit to the criteria that were in the request. The client may therefore disregard such results depending on the use case.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TripSummaryStructure">
@@ -285,7 +396,7 @@
 			<xs:documentation>Structure for trip overview information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripId" type="xs:NMTOKEN">
+			<xs:element name="TripId" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -315,9 +426,9 @@
 					<xs:documentation>Arrival time at destination.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PTTripLegs" type="xs:nonNegativeInteger" minOccurs="0">
+			<xs:element name="PTLegs" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Number of public transport trip legs.</xs:documentation>
+					<xs:documentation>Number of public transport legs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Distance" type="siri:DistanceType" minOccurs="0">
@@ -326,16 +437,25 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information about the feasibility of the TRIP, in particular with respect to the access features used.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TripStructure">
 		<xs:annotation>
-			<xs:documentation>[an extended form of PT TRIP in TM and NeTEx as it also includes the initial and final access legs to and from public transport] whole journey from passenger origin to passenger destination in one or more trip LEGs </xs:documentation>
+			<xs:documentation>[an extended form of PT TRIP in TM and NeTEx as it also includes the initial and final access legs to and from public transport] whole journey from passenger origin to passenger destination in one or more LEGs </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -365,25 +485,34 @@
 					<xs:documentation>Trip distance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TripLeg" type="TripLegStructure" maxOccurs="unbounded">
+			<xs:element name="Leg" type="LegStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Legs of the trip</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:group ref="TripStatusGroup" minOccurs="0"/>
+			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information about the feasibility of the TRIP, in particular with respect to the access features used.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="TripLegStructure">
+	<xs:complexType name="LegStructure">
 		<xs:annotation>
 			<xs:documentation>a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="LegId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
-					<xs:documentation>Id of this trip leg. Unique within trip result.</xs:documentation>
+					<xs:documentation>Id of this leg. Unique within trip result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ParticipantRef" type="siri:ParticipantRefStructure" minOccurs="0">
@@ -392,15 +521,28 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
-				<xs:element name="TimedLeg" type="TimedLegStructure"/>
-				<xs:element name="TransferLeg" type="TransferLegStructure"/>
-				<xs:element name="ContinuousLeg" type="ContinuousLegStructure"/>
+				<xs:element name="TimedLeg" type="TimedLegStructure">
+					<xs:annotation>
+						<xs:documentation>Timetabled Leg.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TransferLeg" type="TransferLegStructure">
+					<xs:annotation>
+						<xs:documentation>Leg to connect between different services or modes of transport (interchanges).</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ContinuousLeg" type="ContinuousLegStructure">
+					<xs:annotation>
+						<xs:documentation>Leg by a continuously available service or mode of transport.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
+			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TimedLegStructure">
 		<xs:annotation>
-			<xs:documentation>passenger TRIP LEG with timetabled schedule.  Corresponds to a RIDE.</xs:documentation>
+			<xs:documentation>passenger LEG with timetabled schedule.  Corresponds to a RIDE.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="LegBoard" type="LegBoardStructure">
@@ -420,7 +562,7 @@
 			</xs:element>
 			<xs:element name="Service" type="DatedJourneyStructure">
 				<xs:annotation>
-					<xs:documentation>Service that is used for this trip leg.</xs:documentation>
+					<xs:documentation>Service that is used for this leg.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LegAttribute" type="LegAttributeStructure" minOccurs="0" maxOccurs="unbounded">
@@ -434,6 +576,7 @@
 					<xs:documentation>Geographic embedding of this leg.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -486,7 +629,16 @@
 					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information about the feasibility of the TransferLeg, in particular with respect to the access features used.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -536,7 +688,17 @@
 					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Information about the feasibility of the ContinuousLeg, in particular with respect to the access features used.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -624,24 +786,24 @@
 	</xs:complexType>
 	<xs:complexType name="PathGuidanceStructure">
 		<xs:annotation>
-			<xs:documentation> description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information </xs:documentation>
+			<xs:documentation>Description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PathGuidanceSection" type="PathGuidanceSectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>one or more path guidance sections that build the trip Leg</xs:documentation>
+					<xs:documentation>One or more PATH GUIDANCE sections that form the LEG. For a good PATH GUIDANCE a fine granularity of the sections may be needed. This may also depend on the MODE and the type of guidance required.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PathGuidanceSectionStructure">
 		<xs:annotation>
-			<xs:documentation>[an extended definition of a NAVIGATION PATH in TMv6 to include the textual navigation instructions] description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information </xs:documentation>
+			<xs:documentation>An extended definition of a NAVIGATION PATH in TMv6 and PATH GUIDANCE to include the textual navigation instructions. Description of a part of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TrackSection" type="TrackSectionStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>LINK PROJECTION on the infrastructure network of the TRIP LEG together with time information</xs:documentation>
+					<xs:documentation>LINK PROJECTION on the infrastructure network of the LEG together with time information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TurnDescription" type="InternationalTextStructure" minOccurs="0">
@@ -651,12 +813,22 @@
 			</xs:element>
 			<xs:element name="GuidanceAdvice" type="GuidanceAdviceEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>various types of guidance advice given to travelle.</xs:documentation>
+					<xs:documentation>Various types of guidance advice given to traveller.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TurnAction" type="TurnActionEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>the range of alternative turns that can be described.</xs:documentation>
+					<xs:documentation>The range of possible turns that can be described.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RoadName" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Road name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Follow" type="FollowStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Signs, roads, POI to follow.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DirectionHint" type="InternationalTextStructure" minOccurs="0">
@@ -664,46 +836,200 @@
 					<xs:documentation>Textual direction hint for better understanding, e.g. "follow signs to Hamburg".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Bearing" type="siri:AbsoluteBearingType" minOccurs="0">
+			<xs:element name="AbsoluteBearing" type="siri:AbsoluteBearingType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Absolute bearing after the described manoeuvre.</xs:documentation>
+					<xs:documentation>Absolute bearing (sky direction) after the described manoeuvre.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PathLink" type="PathLinkStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Description of the type of accessibility on this navigation section.</xs:documentation>
+					<xs:documentation>Description of the type of accessibility on this navigation section. This view is simplified in comparison to the NeTEx PathLink structure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SituationFullRef" type="SituationFullRefStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FollowStructure">
+		<xs:choice>
+			<xs:element name="FollowSignName" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Follow a sign.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FollowRoadName" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Follow a road/route.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FollowDirectionName" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Follow a direction.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FollowExit" type="InternationalTextStructure">
+				<xs:annotation>
+					<xs:documentation>Follow an exit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
 	</xs:complexType>
 	<xs:simpleType name="GuidanceAdviceEnumeration">
 		<xs:annotation>
-			<xs:documentation>various types of guidance advice given to travelle</xs:documentation>
+			<xs:documentation>Various types of guidance advice given to traveller. Suitable values may differ by MODE (e.g. a car driver needs different advice than a person walking for a transfer.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="origin"/>
-			<xs:enumeration value="destination"/>
-			<xs:enumeration value="continue"/>
-			<xs:enumeration value="keep"/>
-			<xs:enumeration value="turn"/>
-			<xs:enumeration value="leave"/>
-			<xs:enumeration value="enter"/>
+			<xs:enumeration value="origin">
+				<xs:annotation>
+					<xs:documentation>Defining origin.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="destination">
+				<xs:annotation>
+					<xs:documentation>Defining a destination.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="continue">
+				<xs:annotation>
+					<xs:documentation>Continue on the same street/road/path.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="keep">
+				<xs:annotation>
+					<xs:documentation>Keep going on the same street/road/path.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="turn">
+				<xs:annotation>
+					<xs:documentation>When this value is used, you always have to consider the value in TurnAction as well. There must be a TurnAction present if "turn" is used.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="leave">
+				<xs:annotation>
+					<xs:documentation>Can be something like an elevator or a vehicle.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="enter">
+				<xs:annotation>
+					<xs:documentation>Can be something like an elevator or a vehicle.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="enter_roundabout">
+				<xs:annotation>
+					<xs:documentation>Entering a roundabout.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="stay_in_roundabout">
+				<xs:annotation>
+					<xs:documentation>Staying in the roundabout.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="leave_roundabout">
+				<xs:annotation>
+					<xs:documentation>Leave the roundabout.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="enter_builtup_area">
+				<xs:annotation>
+					<xs:documentation>Entering a builtup area / community.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="leave_builtup_area">
+				<xs:annotation>
+					<xs:documentation>Leave the builtup area / community.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="freewayAccessRamp">
+				<xs:annotation>
+					<xs:documentation>Access lane to highway or the like.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown_lane_choice">
+				<xs:annotation>
+					<xs:documentation>If it is unclear which lane to choose.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="left_lane">
+				<xs:annotation>
+					<xs:documentation>If there are more than 2 lanes, then TurnAction half_left,left,sharp_left may help decide.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="middle_lane">
+				<xs:annotation>
+					<xs:documentation>If there are more than 3 lanes, then Turnaction straight defines the middle one.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="right_lane">
+				<xs:annotation>
+					<xs:documentation>If there are more than 2 lanes, then TurnAction half_right,right,sharp_right may help decide</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown_turning_kind"/>
+			<!-- additional enum values for individual vehicles -->
+			<!-- lane choice -->
+			<!-- undefined values -->
 		</xs:restriction>
+		<!-- the classic values from OJP 1.0 with explanations -->
 	</xs:simpleType>
 	<xs:simpleType name="TurnActionEnumeration">
 		<xs:annotation>
-			<xs:documentation>the range of alternative turns that can be described</xs:documentation>
+			<xs:documentation>The range of possible turns that can be described.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="sharp left"/>
-			<xs:enumeration value="left"/>
-			<xs:enumeration value="half left"/>
-			<xs:enumeration value="straight on"/>
-			<xs:enumeration value="half right"/>
-			<xs:enumeration value="right"/>
-			<xs:enumeration value="sharp right"/>
-			<xs:enumeration value="uturn"/>
+			<xs:enumeration value="straight_on">
+				<xs:annotation>
+					<xs:documentation>338-21 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="half_right">
+				<xs:annotation>
+					<xs:documentation>22-67 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="right">
+				<xs:annotation>
+					<xs:documentation>68-111 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sharp_right">
+				<xs:annotation>
+					<xs:documentation>112-157 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="uturn">
+				<xs:annotation>
+					<xs:documentation>158-201 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sharp_left">
+				<xs:annotation>
+					<xs:documentation>202-247 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="left">
+				<xs:annotation>
+					<xs:documentation>248-291 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="half_left">
+				<xs:annotation>
+					<xs:documentation>292-337 degrees</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="up">
+				<xs:annotation>
+					<xs:documentation>Upwards, the target level is in the PathLink structure.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="down">
+				<xs:annotation>
+					<xs:documentation>Downwards, the target level is in the PathLink structure.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown_turn_action"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:group name="TransferDurationGroup">
@@ -759,6 +1085,33 @@
 			<xs:enumeration value="downAndUp"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="AccessFeatureStatusEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for status of the access feature.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="available"/>
+			<xs:enumeration value="partiallyAvailable">
+				<xs:annotation>
+					<xs:documentation>If partiallyAvailable is used, then some note should be provided in one of the descriptive elements of the containing PathLink</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="notAvailable"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FeasibilityEnumeration">
+		<xs:annotation>
+			<xs:documentation>Allowed values for the feasibility of a TRIP or part of a TRIP.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="allAccessFeaturesAvailable"/>
+			<xs:enumeration value="accessFeatureNotAvailable"/>
+			<xs:enumeration value="accessFeaturePartiallyAvailable"/>
+			<xs:enumeration value="accessFeatureWithUnknownAvailability"/>
+			<xs:enumeration value="seeSituations"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="AccessibilityFeatureTypesEnumeration">
 		<xs:annotation>
 			<xs:documentation>Allowed values for AccessibilityFeature (for mobility and sensory impairments, assistance and important elements to pay attention to).</xs:documentation>
@@ -798,12 +1151,12 @@
 	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
 		<xs:annotation>
-			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs,BOARDING POSITIONs,, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
+			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs, BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Transition" type="TransitionEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether path is up down or level .</xs:documentation>
+					<xs:documentation>Whether path is up, down or level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessFeatureType" type="AccessFeatureTypeEnumeration" minOccurs="0">
@@ -813,12 +1166,27 @@
 			</xs:element>
 			<xs:element name="Count" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Number how often the access feature occurs in this PathLink</xs:documentation>
+					<xs:documentation>Number indicating how often the access feature occurs in this PathLink</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccessFeatureStatus" type="AccessFeatureStatusEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the access feature is available or out of service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccessFeatureStatusText" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Textual information about reduced availability of the access feature, in particular if AccessFeatureStatus is partiallyAvailable.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessibilityFeature" type="AccessibilityFeatureTypesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Presence of an accessibility feature on the PathLink.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="SituationFullRef" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to a situation that affects the availability of the access feature.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="From" type="PathLinkEndStructure" minOccurs="0">
@@ -904,26 +1272,20 @@
 			<xs:group ref="TripMobilityFilterGroup"/>
 			<xs:group ref="MultiPointTripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
-			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0"/>
+			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="MultiPointTripPolicyGroup">
 		<xs:annotation>
-			<xs:documentation>Policies that control the multi-point trip search behaviour.</xs:documentation>
+			<xs:documentation>Policies that control the multipoint trip search behaviour.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
-			<xs:element name="TransferLimit" type="xs:nonNegativeInteger" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>the types of algorithm that can be used for planning a journey (fastest, least walking, etc)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" default="anyPoint" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found.</xs:documentation>
@@ -933,12 +1295,37 @@
 	</xs:group>
 	<xs:simpleType name="MultiPointTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>How the multiple origin/destination points should be considered</xs:documentation>
+			<xs:documentation>How the multiple origin/destination points should be considered.
+			Note: Unfortunately this element was underdefined before and this resulted in different implementations.
+			Note: MultiPointType trumps the number of results. If the algorithm thinks it necessary to provide more results, it should.
+			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="anyPoint"/>
-			<xs:enumeration value="eachOrigin"/>
-			<xs:enumeration value="eachDestination"/>
+			<xs:enumeration value="anyPoint">
+				<xs:annotation>
+					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Some implementation will return only one origin-destination pair even for multiple results with this setting. Others will provide multiple.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="eachOrigin">
+				<xs:annotation>
+					<xs:documentation>A distinct solution for each of the origin points has to be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="eachDestination">
+				<xs:annotation>
+					<xs:documentation>A distinct solution for each of the destination points has to be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="eachOriginDestination">
+				<xs:annotation>
+					<xs:documentation>At least a result for each Origin-Destination pair must be presented.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="somePoints">
+				<xs:annotation>
+					<xs:documentation>Clarifies that some (probably the "best") origin-destination pairs should be returned.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
@@ -949,6 +1336,11 @@
 			<xs:documentation>Multi-point trip response structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The MultiPointType should be returned, because it may differ from the one asked. Many systems will support only a subset of the MultiPointTypes and it is important to know, what the result is based on.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="MultiPointTripResponseContext" type="ResponseContextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
@@ -966,7 +1358,7 @@
 			<xs:documentation>Structure for a multipoint trip result and associated problems</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ResultId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within multipoint-trip response.</xs:documentation>
 				</xs:annotation>
@@ -982,10 +1374,18 @@
 						<xs:documentation>Information on the trip.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="TripSummary" type="TripSummaryStructure"/>
+				<xs:element name="TripSummary" type="TripSummaryStructure">
+					<xs:annotation>
+						<xs:documentation>Summary on trip. Only if requestor set TripSummaryOnly in request.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 			</xs:choice>
 			<xs:group ref="MultiPointWaitTimeGroup" minOccurs="0"/>
-			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="TripFare" type="TripFareResultStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Fare and fare product information for this trip as a whole or parts of it.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="MultiPointWaitTimeGroup">
@@ -1075,6 +1475,11 @@
 			<xs:element name="RefineLegRef" type="xs:NMTOKEN" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Refers to a leg to be refined by the server.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Usage of real-time data in refinement. Default is "full".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TripContentFilterGroup"/>

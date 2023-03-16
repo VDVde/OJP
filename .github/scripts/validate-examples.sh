@@ -9,7 +9,7 @@ set -e
 
 echo "Validating OJP XML examples ..."
 
-if xmllint --noout --schema OJP.xsd examples/*/*.xml; then
+if xmllint --noout --schema OJP.xsd examples/*/*.xml examples/*/*/*.xml; then
   echo -e '\033[0;32mValidating OJP XML examples succeeded\033[0m'
 else
   echo -e '\033[0;31mValidating OJP XML examples failed\033[0m'

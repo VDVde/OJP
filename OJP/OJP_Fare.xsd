@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Fare.xsd - Request and response definitions for general, stop-specific and trip-specific fare information</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
@@ -47,7 +47,11 @@
 			<xs:documentation>Sub-request: stop-related fare information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element ref="siri:StopPointRef"/>
+			<xs:element ref="siri:StopPointRef">
+				<xs:annotation>
+					<xs:documentation>Reference to the stop point.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Date" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Date for which to retrieve Fare information.</xs:documentation>
@@ -73,6 +77,11 @@
 			<xs:documentation>Structure of a Single Trip Fare Request.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="TripContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold trip related objects that occur frequently. Especially necessary, when the system answering the fare request is not the same as the one that did the trip request.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Trip" type="TripStructure">
 				<xs:annotation>
 					<xs:documentation>A complete trip from origin to destination</xs:documentation>
@@ -85,6 +94,11 @@
 			<xs:documentation>Structure of a Multi Trip Fare Request.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="TripContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold trip related objects that occur frequently.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Trip" type="TripStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Multiple complete trips from multiple origins and multiple destination</xs:documentation>
@@ -114,7 +128,7 @@
 			<xs:documentation>Wrapper element for Fare results.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ResultId" type="xs:NMTOKEN">
+			<xs:element name="Id" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
@@ -122,6 +136,11 @@
 			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this FARE result.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FareEstimated" type="xs:boolean" default="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the fare is only estimated by the service. Estimated can mean different things: For example, the fare may vary depending on age, PassengerCategory, TravelClass, EntitlementProducts. It can also mean that the fare structure used by the service is not entirely accurate or that other factors, such as the time a shared vehicle is used, need to be factored into the price. As a rule, the price should then be given as an approximate and probably lower limit of the actual price. Default is TRUE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
@@ -190,9 +209,9 @@
 					<xs:documentation>Identifies the "valid from" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FromTripLegIdRef" type="xs:NMTOKEN" minOccurs="0">
+			<xs:element name="FromLegIdRef" type="xs:NMTOKEN" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Identifies the "valid from" tripLeg. If missing, then valid from the first leg.</xs:documentation>
+					<xs:documentation>Identifies the "valid from" LEG. If missing, then valid from the first LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ToTripIdRef" type="xs:NMTOKEN">
@@ -200,9 +219,9 @@
 					<xs:documentation>Identifies the "valid to" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToTripLegIdRef" type="xs:NMTOKEN" minOccurs="0">
+			<xs:element name="ToLegIdRef" type="xs:NMTOKEN" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Identifies the "valid to" tripLeg. If missing, then valid to the last leg.</xs:documentation>
+					<xs:documentation>Identifies the "valid to" LEG. If missing, then valid to the last LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
