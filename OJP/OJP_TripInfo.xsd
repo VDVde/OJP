@@ -45,7 +45,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-		
 	<xs:simpleType name="IncludeFormationEnumeration">
 		<xs:annotation>
 			<xs:documentation>Possible values how to include formations in the basic filters</xs:documentation>
@@ -63,7 +62,7 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
 	<xs:group name="TripInfoContentFilterGroup">
 		<xs:annotation>
 			<xs:documentation>Parameters that control the level of detail to be returned in the results.</xs:documentation>
@@ -103,7 +102,7 @@
 				<xs:annotation>
 					<xs:documentation>Whether the formation should be included. With "simple" only VehicleFeature is used. "full" may unleash the full power of the SIRI formation model (especially for trains). The OJP specification document gives hints on how to limit oneself as a server to the most important aspects. Default is none.</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 			<xs:element name="IncludeSituationsContext" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
