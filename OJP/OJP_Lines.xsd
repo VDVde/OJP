@@ -85,13 +85,17 @@
 		<xs:annotation>
 			<xs:documentation>Problem that may be returned in responses to LINE information requests.</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="LineInformationProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the LINE information problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
+		<xs:complexContent>
+			<xs:extension base="OJPErrorStructure">		
+				<xs:sequence>
+					<xs:element name="Type" type="LineInformationProblemTypeEnumeration">
+						<xs:annotation>
+							<xs:documentation>Type of the LINE information problem.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:group ref="ProblemDetailGroup"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>					
 	</xs:complexType>
 </xs:schema>
