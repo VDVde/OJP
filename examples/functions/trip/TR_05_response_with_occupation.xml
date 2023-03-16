@@ -74,7 +74,7 @@
 										<!-- here for the whole tram  and not split up by TrainRef or TrainElementRef -->
 										<siri:FareClass>economyClass</siri:FareClass>
 										<siri:OccupancyLevel>manySeatsAvailable</siri:OccupancyLevel>
-										<siri:OccupancyPercentage>30</siri:OccupancyPercentage>	
+										<siri:OccupancyPercentage>30</siri:OccupancyPercentage>
 										<siri:GroupReservation>
 											<siri:NameOfGroup>Schule Interlaken</siri:NameOfGroup>
 											<siri:NumberOfReservedSeats>25</siri:NumberOfReservedSeats>
@@ -84,8 +84,8 @@
 										<!-- and one for the first class (trams in Zürich don't have first class, but just to show, how it would be done) -->
 										<siri:FareClass>firstClass</siri:FareClass>
 										<siri:OccupancyLevel>empty</siri:OccupancyLevel>
-										<siri:OccupancyPercentage>10</siri:OccupancyPercentage>	
-									</siri:ExpectedDepartureOccupancy>									
+										<siri:OccupancyPercentage>10</siri:OccupancyPercentage>
+									</siri:ExpectedDepartureOccupancy>
 									<siri:ExpectedDepartureCapacities>
 										<siri:FareClass>secondClass </siri:FareClass>
 										<siri:TotalCapacity>100</siri:TotalCapacity>
