@@ -204,22 +204,22 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="FareProductRef"/>
-			<xs:element name="FromTripIdRef" type="xs:NMTOKEN">
+			<xs:element name="FromTripIdRef" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid from" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FromLegIdRef" type="xs:NMTOKEN" minOccurs="0">
+			<xs:element name="FromLegIdRef" type="ObjectIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid from" LEG. If missing, then valid from the first LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToTripIdRef" type="xs:NMTOKEN">
+			<xs:element name="ToTripIdRef" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid to" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToLegIdRef" type="xs:NMTOKEN" minOccurs="0">
+			<xs:element name="ToLegIdRef" type="ObjectIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid to" LEG. If missing, then valid to the last LEG.</xs:documentation>
 				</xs:annotation>

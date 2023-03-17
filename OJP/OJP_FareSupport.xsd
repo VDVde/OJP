@@ -682,12 +682,12 @@
 			<xs:documentation>Range of LEGs (from - to) for which a Fare result (ticket) is valid.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="FromLegIdRef" type="xs:NMTOKEN">
+			<xs:element name="FromLegIdRef" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid from" LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToLegIdRef" type="xs:NMTOKEN">
+			<xs:element name="ToLegIdRef" type="ObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid to" LEG.</xs:documentation>
 				</xs:annotation>
