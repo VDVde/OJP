@@ -74,7 +74,7 @@
 					<xs:documentation>Calculation time.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="OJPGenericProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>OJP generic problem for the whole delivery.</xs:documentation>
 				</xs:annotation>
@@ -179,17 +179,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="OJPGenericProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in case of generic problems with the request.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="OJPGenericProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the generic problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="OJPGenericProblemType" type="OJPGenericProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

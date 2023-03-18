@@ -26,7 +26,7 @@
 		<xs:complexContent>
 			<xs:extension base="siri:OtherErrorStructure">
 				<xs:sequence>
-					<xs:element name="ErrorType" type="OJPGenericProblemTypeEnumeration"/>
+					<xs:element ref="ErrorType"/>
 					<xs:group ref="ProblemDetailGroup" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>ProblemDetailGroup</xs:documentation>
@@ -36,6 +36,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="ErrorType"  type="xs:string"/> 
 	<xs:group name="ProblemDetailGroup">
 		<xs:annotation>
 			<xs:documentation>Detailed description of the problem.</xs:documentation>

@@ -228,7 +228,7 @@
 			<xs:documentation>Availability result structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Problem" type="AvailabilityProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this AVAILABILITY result.</xs:documentation>
 				</xs:annotation>
@@ -423,21 +423,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="AvailabilityProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to AVAILABILITY requests.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="OJPErrorStructure">
-				<xs:sequence>
-					<xs:element name="Type" type="AvailabilityProblemTypeEnumeration">
-						<xs:annotation>
-							<xs:documentation>Type of the AVAILABILITY problem.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:group ref="ProblemDetailGroup"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
+	<xs:element name="AvailabilityProblemType" type="AvailabilityProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

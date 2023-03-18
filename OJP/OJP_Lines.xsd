@@ -24,7 +24,7 @@
 	</xs:annotation>
 	<xs:complexType name="LineResultStructure">
 		<xs:sequence>
-			<xs:element name="Problem" type="LineInformationProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this Line result.</xs:documentation>
 				</xs:annotation>
@@ -81,21 +81,6 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="LineInformationProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to LINE information requests.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="OJPErrorStructure">
-				<xs:sequence>
-					<xs:element name="Type" type="LineInformationProblemTypeEnumeration">
-						<xs:annotation>
-							<xs:documentation>Type of the LINE information problem.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:group ref="ProblemDetailGroup"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
+	<xs:element name="LineInformationProblemType" type="LineInformationProblemTypeEnumeration" substitutionGroup="ErrorType"/>
+
 </xs:schema>

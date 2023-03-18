@@ -566,12 +566,13 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="LocationProblemStructure">
+	<xs:element name="LocationProblemType" type="LocationProblemTypeEnumeration" substitutionGroup="ErrorType"/>
+	<xs:complexType name="LocationErrorConditionStructure">
 		<xs:annotation>
 			<xs:documentation>Problem that may be returned in responses to LOCATION requests.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Type" type="LocationProblemTypeEnumeration">
+			<xs:element ref="LocationProblemType">
 				<xs:annotation>
 					<xs:documentation>Type of the LOCATION problem.</xs:documentation>
 				</xs:annotation>
@@ -606,17 +607,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="ExchangePointsProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to EXCHANGE POINTS requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="ExchangePointsProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the EXCHANGE POINTS problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="ExchangePointsProblemType" type="ExchangePointsProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

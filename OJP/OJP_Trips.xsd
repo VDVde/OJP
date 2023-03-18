@@ -362,7 +362,7 @@
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="TripProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this Trip result.</xs:documentation>
 				</xs:annotation>
@@ -1363,7 +1363,7 @@
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within multipoint-trip response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="TripProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this trip result.</xs:documentation>
 				</xs:annotation>
@@ -1636,17 +1636,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="TripProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to trip requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="TripProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the trip problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="TripProblemType" type="TripProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

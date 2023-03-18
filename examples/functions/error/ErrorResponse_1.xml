@@ -12,15 +12,19 @@
 				<siri:ErrorCondition>
 					<ojp:OJPError>
 						<siri:ErrorText>Error text</siri:ErrorText>
-						<ojp:ErrorType>OJPGENERIC_REQUESTNOTSUPPORTED</ojp:ErrorType>
+						<ojp:OJPGenericProblemType>OJPGENERIC_DATAFRAMEREFNOTAVAILABLE</ojp:OJPGenericProblemType>
 					</ojp:OJPError>
 				</siri:ErrorCondition>
 				<!-- no CalcTime for this service <ojp:CalcTime>20</ojp:CalcTime> -->
 				<ojp:LineResult>
-					<ojp:Problem>
-						<ojp:ErrorType>OJPGENERIC_FEATURENOTSUPPORTED</ojp:ErrorType>
-						<ojp:Type>LINEINFORMATION_OTHER</ojp:Type>
-					</ojp:Problem>
+					<ojp:ErrorCondition>
+						<siri:ErrorText>Main error text</siri:ErrorText>
+						<ojp:LineInformationProblemType>LINEINFORMATION_LINEUNKNOWN</ojp:LineInformationProblemType>						
+						<ojp:Details>
+							<ojp:Text>Line is no longer valid.</ojp:Text>
+						</ojp:Details>
+						<ojp:LogData>Internal error 5051231: line not valid.</ojp:LogData>
+					</ojp:ErrorCondition>
 					<ojp:LineRef>ch:slnid:123123</ojp:LineRef>
 					<siri:PublishedLineName>IC8</siri:PublishedLineName>
 					<ojp:RouteGeometry>
