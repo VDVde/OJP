@@ -2,10 +2,12 @@
 <ojp:OJPFareDelivery xmlns:ojp="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri  ../../../OJP.xsd">
 	<siri:ResponseTimestamp>2001-12-17T09:30:47Z</siri:ResponseTimestamp>
 	<siri:Status>true</siri:Status>
+	<siri:ErrorCondition>
+		<ojp:OJPError>
+			<ojp:FareProblemType>FARE_ADDITIONALCHARGES</ojp:FareProblemType>
+		</ojp:OJPError>
+	</siri:ErrorCondition>
 	<siri:ValidUntil>2001-12-18T09:30:47Z</siri:ValidUntil>
-	<ojp:Problem>
-		<ojp:Type>OJPGENERIC_OTHER</ojp:Type>
-	</ojp:Problem>
 	<ojp:FareResponseContext>
 		<ojp:Operators>
 			<ojp:Operator>
@@ -20,6 +22,9 @@
 	</ojp:FareResponseContext>
 	<ojp:FareResult>
 		<ojp:Id>1231231112231</ojp:Id>
+		<ojp:ErrorCondition>
+			<ojp:FareProblemType>FARE_ADDITIONALTICKETS</ojp:FareProblemType>
+		</ojp:ErrorCondition>
 		<ojp:TripFareResult>
 			<ojp:FromLegIdRef>1</ojp:FromLegIdRef>
 			<ojp:ToLegIdRef>1</ojp:ToLegIdRef>
