@@ -302,5 +302,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:element name="StopEventProblemType" type="StopEventProblemTypeEnumeration" substitutionGroup="ErrorType"/>	
+	<xs:element name="StopEventProblemType" type="StopEventProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

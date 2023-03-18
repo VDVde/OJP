@@ -852,5 +852,4 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="FareProblemType" type="FareProblemTypeEnumeration" substitutionGroup="ErrorType"/>
-
 </xs:schema>

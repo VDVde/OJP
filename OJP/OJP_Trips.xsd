@@ -1638,7 +1638,7 @@
 				<xs:annotation>
 					<xs:documentation>Indicated legs do not exist.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>								
+			</xs:enumeration>
 			<xs:enumeration value="TRIP_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>

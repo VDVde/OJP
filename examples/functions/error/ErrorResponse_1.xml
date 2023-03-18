@@ -19,7 +19,7 @@
 				<ojp:LineResult>
 					<ojp:ErrorCondition>
 						<siri:ErrorText>Main error text</siri:ErrorText>
-						<ojp:LineInformationProblemType>LINEINFORMATION_LINEUNKNOWN</ojp:LineInformationProblemType>						
+						<ojp:LineInformationProblemType>LINEINFORMATION_LINEUNKNOWN</ojp:LineInformationProblemType>
 						<ojp:Details>
 							<ojp:Text>Line is no longer valid.</ojp:Text>
 						</ojp:Details>
