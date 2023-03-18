@@ -36,7 +36,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="ErrorType"  type="xs:string"/> 
+	<xs:element name="ErrorType" type="xs:string" abstract="true"/>
 	<xs:group name="ProblemDetailGroup">
 		<xs:annotation>
 			<xs:documentation>Detailed description of the problem.</xs:documentation>

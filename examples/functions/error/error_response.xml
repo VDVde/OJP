@@ -14,7 +14,10 @@
 						<ErrorText>STOPEVENT_NOEVENTFOUND</ErrorText>
 					</NoInfoForTopicError>
 				</ErrorCondition>
-				<ojp:CalcTime>78</ojp:CalcTime>
+				<ojp:CalcTime>23</ojp:CalcTime>				
+				<ojp:ErrorCondition>
+					<ojp:StopEventProblemType>STOPEVENT_NOEVENTFOUND</ojp:StopEventProblemType>
+				</ojp:ErrorCondition>
 			</ojp:OJPStopEventDelivery>
 		</ServiceDelivery>
 	</OJPResponse>

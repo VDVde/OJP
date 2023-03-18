@@ -1629,6 +1629,16 @@
 					<xs:documentation>Too many points have been requested as departure or arrival.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED">
+				<xs:annotation>
+					<xs:documentation>The indicated multipoint type is not supported.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_REFINE_LEG_UNKNOWN">
+				<xs:annotation>
+					<xs:documentation>Indicated legs do not exist.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>								
 			<xs:enumeration value="TRIP_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
