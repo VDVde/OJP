@@ -75,6 +75,7 @@
 					<xs:documentation>Result structure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+		</xs:sequence>
 	</xs:group>
 	<xs:complexType name="TripMonitoringResultStructure">
 		<xs:sequence>
