@@ -299,4 +299,39 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Trip Monitoring Service (Subscription) ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPTripMonitoringSubscriptionRequest" type="OJPTripMonitoringSubscriptionRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceSubscriptionRequest"/>
+	<xs:complexType name="OJPTripMonitoringSubscriptionRequestStructure">
+		<xs:complexContent>
+			<xs:extension base="AbstractOJPSubscriptionRequestStructure">
+				<xs:sequence>
+					<xs:element name="Trip" type="TripStructure"/>
+					<xs:element ref="OJPTripRequest" minOccurs="0"/>
+					<xs:element name="MonitoringParameters" type="TripMonitoringParamStructure" minOccurs="0"/>
+					<xs:group ref="AlertSettingsGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="OJPTerminateSubscriptionRequest" type="siri:TerminateSubscriptionRequestStructure">
+		<xs:annotation>
+			<xs:documentation>Request element for terminating subscriptions. To change parameters of a subscription, it is necessary to terminate and to re-subscribe. Successful termination is acknowledged by problem code TRIPMONITORING_SUBSCRIPTION_TERMINATED in a delivery.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="OJPTripMonitoringDelivery" type="OJPTripMonitoringDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPTripMonitoringDeliveryStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceDeliveryStructure">
+				<xs:sequence>
+					<xs:element ref="OJPTripMonitoringSubscriptionRequest" minOccurs="0"/>
+					<xs:element ref="OJPTerminateSubscriptionRequest" minOccurs="0"/>
+					<xs:group ref="TripMonitoringResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 </xs:schema>
