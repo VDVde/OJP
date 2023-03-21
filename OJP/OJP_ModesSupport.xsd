@@ -57,7 +57,7 @@
 			<xs:enumeration value="park-ride-car"/>
 			<xs:enumeration value="walk"/>
 			<xs:enumeration value="demandResponsive"/>
-			<xs:enumeration value="replacementService"/>	
+			<xs:enumeration value="replacementService"/>
 			<xs:enumeration value="air"/>
 			<xs:enumeration value="bus"/>
 			<xs:enumeration value="coach"/>
@@ -82,7 +82,7 @@
 				<xs:annotation>
 					<xs:documentation>(SIRI 2.1)</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>								
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="IndividualTransportOptionsStructure">
