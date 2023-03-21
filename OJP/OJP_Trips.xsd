@@ -112,9 +112,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
-			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ModesToCover" type="ModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
+					<xs:documentation>For each mode in this list at least a separate monomodal trip shall be found - in addition to one or more inter-modal solutions. For individual modes the whole trip is monomodal, for all others at least one leg must be in that mode (e.g. an air leg in the middle). </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

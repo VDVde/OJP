@@ -36,6 +36,55 @@
 			<xs:enumeration value="carPooling"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="ModesEnumeration">
+		<xs:annotation>
+			<xs:documentation>A modes enumeration used for ModesToCover</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="carPooling"/>
+			<xs:enumeration value="walk"/>
+			<xs:enumeration value="cycle"/>
+			<xs:enumeration value="taxi"/>
+			<xs:enumeration value="self-drive-car"/>
+			<xs:enumeration value="others-drive-car"/>
+			<xs:enumeration value="motorcycle"/>
+			<xs:enumeration value="truck"/>
+			<xs:enumeration value="scooter"/>
+			<xs:enumeration value="ride-pool-car"/>
+			<xs:enumeration value="car-sharing"/>
+			<xs:enumeration value="cycle-sharing"/>
+			<xs:enumeration value="scooter-sharing"/>
+			<xs:enumeration value="park-ride-car"/>
+			<xs:enumeration value="walk"/>
+			<xs:enumeration value="demandResponsive"/>
+			<xs:enumeration value="replacementService"/>	
+			<xs:enumeration value="air"/>
+			<xs:enumeration value="bus"/>
+			<xs:enumeration value="coach"/>
+			<xs:enumeration value="ferry">
+				<xs:annotation>
+					<xs:documentation>(SIRI 2.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="metro"/>
+			<xs:enumeration value="rail"/>
+			<xs:enumeration value="trolleyBus"/>
+			<xs:enumeration value="tram"/>
+			<xs:enumeration value="water"/>
+			<xs:enumeration value="cableway">
+				<xs:annotation>
+					<xs:documentation>(SIRI 2.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="funicular"/>
+			<xs:enumeration value="lift"/>
+			<xs:enumeration value="snowAndIce">
+				<xs:annotation>
+					<xs:documentation>(SIRI 2.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>								
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="IndividualTransportOptionsStructure">
 		<xs:annotation>
 			<xs:documentation>Individual modes and their usage limits as stated by the passenger</xs:documentation>
