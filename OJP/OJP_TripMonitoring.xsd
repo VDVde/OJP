@@ -84,7 +84,7 @@
 					<xs:documentation>Problems related to this TripMonitoring result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AffectedLeg" type="ObjectId" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="AffectedLeg" type="ObjectId" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Legs of the trip affected by a change.</xs:documentation>
 				</xs:annotation>
@@ -99,12 +99,12 @@
 					<xs:documentation>Response context aggregated for all TripInfoResults.</xs:documentation>
 				</xs:annotation>
 			</xs:element>			
-			<xs:element name="AlternativeTrip" type="TripResultStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="AlternativeTrip" type="TripResultStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Alternatives to a delayed or otherwise compromised trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FacilityCondition" type="siri:FacilityConditionStructure" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="FacilityCondition" type="siri:FacilityConditionStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Results from SIRI facility monitoring service.</xs:documentation>
 				</xs:annotation>
