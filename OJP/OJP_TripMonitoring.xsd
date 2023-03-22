@@ -98,7 +98,7 @@
 				<xs:annotation>
 					<xs:documentation>Response context aggregated for all TripInfoResults.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="AlternativeTrip" type="TripResultStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Alternatives to a delayed or otherwise compromised trip.</xs:documentation>
