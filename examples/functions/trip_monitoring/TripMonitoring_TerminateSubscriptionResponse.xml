@@ -8,13 +8,13 @@
 			<DelegatorAddress>https://182.82.1.23:89912/endpoint</DelegatorAddress>
 			<DelegatorRef>23188</DelegatorRef>
 			<TerminationResponseStatus>
-				<ResponseTimestamp>2023-03-17T09:30:47-05:00</ResponseTimestamp>		
+				<ResponseTimestamp>2023-03-17T09:30:47-05:00</ResponseTimestamp>
 				<SubscriberRef>1231123</SubscriberRef>
 				<SubscriptionRef>123123123213</SubscriptionRef>
 				<Status>true</Status>
 			</TerminationResponseStatus>
 			<TerminationResponseStatus>
-				<ResponseTimestamp>2023-03-17T09:30:47-05:00</ResponseTimestamp>		
+				<ResponseTimestamp>2023-03-17T09:30:47-05:00</ResponseTimestamp>
 				<SubscriberRef>1231123</SubscriberRef>
 				<SubscriptionRef>9RRR2313</SubscriptionRef>
 				<Status>false</Status>

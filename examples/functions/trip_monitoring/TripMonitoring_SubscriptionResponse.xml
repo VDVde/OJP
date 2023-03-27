@@ -12,7 +12,7 @@
 				<SubscriberRef>1231123</SubscriberRef>
 				<SubscriptionRef>123123123213</SubscriptionRef>
 				<Status>true</Status>
-				<ShortestPossibleCycle>PT10M</ShortestPossibleCycle>				
+				<ShortestPossibleCycle>PT10M</ShortestPossibleCycle>
 			</ResponseStatus>
 			<SubscriptionManagerAddress>https://182.82.1.23:89912/endpoint</SubscriptionManagerAddress>
 			<ServiceStartedTime>2023-03-17T09:30:47-05:00</ServiceStartedTime>

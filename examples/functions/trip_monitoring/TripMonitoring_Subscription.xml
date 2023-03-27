@@ -5,7 +5,7 @@
 			<RequestTimestamp>2023-02-17T09:30:47-05:00</RequestTimestamp>
 			<RequestorRef>theClient</RequestorRef>
 			<DelegatorAddress>https://182.82.1.23:89912/endpoint</DelegatorAddress>
-			<DelegatorRef>23188</DelegatorRef>			
+			<DelegatorRef>23188</DelegatorRef>
 			<ojp:OJPTripMonitoringSubscriptionRequest>
 				<SubscriberRef>1231123</SubscriberRef>
 				<SubscriptionIdentifier>123123123213</SubscriptionIdentifier>
@@ -167,21 +167,21 @@
 					<RequestTimestamp>2023-02-18T09:30:47-05:00</RequestTimestamp>
 					<ojp:Origin>
 						<ojp:PlaceRef>
-								<StopPointRef>8506302</StopPointRef>
-								<ojp:Name>
-									<ojp:Text>St. Gallen</ojp:Text>
-								</ojp:Name>
+							<StopPointRef>8506302</StopPointRef>
+							<ojp:Name>
+								<ojp:Text>St. Gallen</ojp:Text>
+							</ojp:Name>
 						</ojp:PlaceRef>
 					</ojp:Origin>
 					<ojp:Destination>
 						<ojp:PlaceRef>
-								<ojp:GeoPosition>
-									<Longitude>47.042666496</Longitude>
-									<Latitude>8.306332108</Latitude>
-								</ojp:GeoPosition>
-								<ojp:Name>
-									<ojp:Text>Taxiplatz Luzern</ojp:Text>
-								</ojp:Name>
+							<ojp:GeoPosition>
+								<Longitude>47.042666496</Longitude>
+								<Latitude>8.306332108</Latitude>
+							</ojp:GeoPosition>
+							<ojp:Name>
+								<ojp:Text>Taxiplatz Luzern</ojp:Text>
+							</ojp:Name>
 						</ojp:PlaceRef>
 					</ojp:Destination>
 				</ojp:OJPTripRequest>
