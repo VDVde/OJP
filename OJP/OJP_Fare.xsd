@@ -69,7 +69,11 @@
 					<xs:documentation>Date for which to retrieve Fare information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="FareProductRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="FareProductRef" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation> 
+					<xs:documentation>Reference to a FareProduct. If no FareProductRef is specified the responding system should reply with information about all available fare products.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TripFareRequestStructure">
