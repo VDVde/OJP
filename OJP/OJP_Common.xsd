@@ -448,27 +448,33 @@
 			<xs:documentation>Elements about sustainability. Primarily for TRIPs and LEGs.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="EmissionCO2" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="KilogramPerPersonKm">
-							<xs:annotation>
-								<xs:documentation>Kilogram by person and by kilometer of CO2 emission.</xs:documentation>
-							</xs:annotation>
-							<xs:simpleType>
-								<xs:restriction base="xs:float">
-									<xs:minInclusive value="0"/>
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:element>
-						<xs:element name="ConfidenceLevel" type="Percentage" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Confidence level of the emission value in percent.</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
+			<xs:element name="EmissionCO2" type="EmissionCO2Structure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Estimation of CO2 emissions.</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:complexType name="EmissionCO2Structure">
+		<xs:annotation>
+			<xs:documentation>Estimation of CO2 emissions.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="KilogramPerPersonKm">
+				<xs:annotation>
+					<xs:documentation>Kilograms of CO2 emission by person and by kilometre.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:float">
+						<xs:minInclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ConfidenceLevel" type="Percentage" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Confidence level of the emission value in percent.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>
