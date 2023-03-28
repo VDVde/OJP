@@ -218,42 +218,44 @@
 								<ojp:Service>
 									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 									<ojp:JourneyRef>ojp:91S24:Z:R:j20:259</ojp:JourneyRef>
-									<siri:LineRef>ojp:91S24:Z</siri:LineRef>
-									<siri:DirectionRef>R</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>rail</ojp:PtMode>
-										<siri:RailSubmode>local</siri:RailSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Zug</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">S</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>S24</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Rechts</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S24ZR_InfoCall259_106218_1</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Links</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S24ZR_InfoCall259_106536_1</ojp:Code>
-									</ojp:Attribute>
+									<ojp:ServiceSection>
+										<siri:LineRef>ojp:91S24:Z</siri:LineRef>
+										<siri:DirectionRef>R</siri:DirectionRef>
+										<ojp:Mode>
+											<ojp:PtMode>rail</ojp:PtMode>
+											<siri:RailSubmode>local</siri:RailSubmode>
+											<ojp:Name>
+												<ojp:Text xml:lang="de">Zug</ojp:Text>
+											</ojp:Name>
+											<ojp:ShortName>
+												<ojp:Text xml:lang="de">S</ojp:Text>
+											</ojp:ShortName>
+										</ojp:Mode>
+										<ojp:PublishedServiceName>
+											<ojp:Text>S24</ojp:Text>
+										</ojp:PublishedServiceName>
+										<ojp:OperatorRefs>
+											<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+										</ojp:OperatorRefs>
+										<ojp:Attribute>
+											<ojp:Text>
+												<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+											</ojp:Text>
+											<ojp:Code>A__OM</ojp:Code>
+										</ojp:Attribute>
+										<ojp:Attribute>
+											<ojp:Text>
+												<ojp:Text xml:lang="de">Aussteigeseite: Rechts</ojp:Text>
+											</ojp:Text>
+											<ojp:Code>ojp91S24ZR_InfoCall259_106218_1</ojp:Code>
+										</ojp:Attribute>
+										<ojp:Attribute>
+											<ojp:Text>
+												<ojp:Text xml:lang="de">Aussteigeseite: Links</ojp:Text>
+											</ojp:Text>
+											<ojp:Code>ojp91S24ZR_InfoCall259_106536_1</ojp:Code>
+										</ojp:Attribute>
+									</ojp:ServiceSection>
 									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
 									<ojp:DestinationText>
 										<ojp:Text xml:lang="de">Schaffhausen</ojp:Text>
@@ -362,30 +364,32 @@
 								<ojp:Service>
 									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 									<ojp:JourneyRef>ojp:91S12:Z:H:j20:73</ojp:JourneyRef>
-									<siri:LineRef>ojp:91S12:Z</siri:LineRef>
-									<siri:DirectionRef>H</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>rail</ojp:PtMode>
-										<siri:RailSubmode>local</siri:RailSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Zug</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">S</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>S12</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
+									<ojp:ServiceSection>
+										<siri:LineRef>ojp:91S12:Z</siri:LineRef>
+										<siri:DirectionRef>H</siri:DirectionRef>
+										<ojp:Mode>
+											<ojp:PtMode>rail</ojp:PtMode>
+											<siri:RailSubmode>local</siri:RailSubmode>
+											<ojp:Name>
+												<ojp:Text xml:lang="de">Zug</ojp:Text>
+											</ojp:Name>
+											<ojp:ShortName>
+												<ojp:Text xml:lang="de">S</ojp:Text>
+											</ojp:ShortName>
+										</ojp:Mode>
+										<ojp:PublishedServiceName>
+											<ojp:Text>S12</ojp:Text>
+										</ojp:PublishedServiceName>
+										<ojp:OperatorRefs>
+											<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+										</ojp:OperatorRefs>
+										<ojp:Attribute>
+											<ojp:Text>
+												<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+											</ojp:Text>
+											<ojp:Code>A__OM</ojp:Code>
+										</ojp:Attribute>
+									</ojp:ServiceSection>
 									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
 									<ojp:DestinationText>
 										<ojp:Text xml:lang="de">Wil SG</ojp:Text>
@@ -506,42 +510,44 @@
 								<ojp:Service>
 									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 									<ojp:JourneyRef>ojp:91S24:Z:R:j20:259</ojp:JourneyRef>
-									<siri:LineRef>ojp:91S24:Z</siri:LineRef>
-									<siri:DirectionRef>R</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>rail</ojp:PtMode>
-										<siri:RailSubmode>local</siri:RailSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Zug</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">S</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>S24</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Links</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S24ZR_InfoCall259_108328_1</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Links</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S24ZR_InfoCall259_106536_1</ojp:Code>
-									</ojp:Attribute>
+									<ojp:ServiceSection>
+										<siri:LineRef>ojp:91S24:Z</siri:LineRef>
+										<siri:DirectionRef>R</siri:DirectionRef>
+										<ojp:Mode>
+											<ojp:PtMode>rail</ojp:PtMode>
+											<siri:RailSubmode>local</siri:RailSubmode>
+											<ojp:Name>
+												<ojp:Text xml:lang="de">Zug</ojp:Text>
+											</ojp:Name>
+											<ojp:ShortName>
+												<ojp:Text xml:lang="de">S</ojp:Text>
+											</ojp:ShortName>
+										</ojp:Mode>
+										<ojp:PublishedServiceName>
+											<ojp:Text>S24</ojp:Text>
+										</ojp:PublishedServiceName>
+										<ojp:OperatorRefs>
+											<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+										</ojp:OperatorRefs>
+										<ojp:Attribute>
+											<ojp:Text>
+												<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+											</ojp:Text>
+											<ojp:Code>A__OM</ojp:Code>
+										</ojp:Attribute>
+										<ojp:Attribute>
+											<ojp:Text>
+												<ojp:Text xml:lang="de">Aussteigeseite: Links</ojp:Text>
+											</ojp:Text>
+											<ojp:Code>ojp91S24ZR_InfoCall259_108328_1</ojp:Code>
+										</ojp:Attribute>
+										<ojp:Attribute>
+											<ojp:Text>
+												<ojp:Text xml:lang="de">Aussteigeseite: Links</ojp:Text>
+											</ojp:Text>
+											<ojp:Code>ojp91S24ZR_InfoCall259_106536_1</ojp:Code>
+										</ojp:Attribute>
+									</ojp:ServiceSection>
 									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
 									<ojp:DestinationText>
 										<ojp:Text xml:lang="de">Schaffhausen</ojp:Text>

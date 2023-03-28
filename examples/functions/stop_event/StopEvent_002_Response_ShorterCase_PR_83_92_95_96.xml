@@ -36,27 +36,29 @@
 						<ojp:Service>
 							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
 							<ojp:JourneyRef>ojp:9400B:Y:R:j21:12</ojp:JourneyRef>
-							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
-							<siri:DirectionRef>R</siri:DirectionRef>
-							<ojp:Mode>
-								<ojp:PtMode>water</ojp:PtMode>
-								<siri:WaterSubmode>unknown</siri:WaterSubmode>
-								<ojp:Name>
-									<ojp:Text xml:lang="de">Schiff</ojp:Text>
-								</ojp:Name>
-								<ojp:ShortName>
-									<ojp:Text xml:lang="de">BAT</ojp:Text>
-								</ojp:ShortName>
-							</ojp:Mode>
-							<ojp:ProductCategory>
-								<!-- V1.1, PR #95 - Illustration of ProductCategory -->
-								<ojp:Name>
-									<ojp:Text>Dampfschiff</ojp:Text>
-								</ojp:Name>
-							</ojp:ProductCategory>
-							<ojp:PublishedServiceName>
-								<ojp:Text>BAT</ojp:Text>
-							</ojp:PublishedServiceName>
+							<ojp:ServiceSection>
+								<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+								<siri:DirectionRef>R</siri:DirectionRef>
+								<ojp:Mode>
+									<ojp:PtMode>water</ojp:PtMode>
+									<siri:WaterSubmode>unknown</siri:WaterSubmode>
+									<ojp:Name>
+										<ojp:Text xml:lang="de">Schiff</ojp:Text>
+									</ojp:Name>
+									<ojp:ShortName>
+										<ojp:Text xml:lang="de">BAT</ojp:Text>
+									</ojp:ShortName>
+								</ojp:Mode>
+								<ojp:ProductCategory>
+									<!-- V1.1, PR #95 - Illustration of ProductCategory -->
+									<ojp:Name>
+										<ojp:Text>Dampfschiff</ojp:Text>
+									</ojp:Name>
+								</ojp:ProductCategory>
+								<ojp:PublishedServiceName>
+									<ojp:Text>BAT</ojp:Text>
+								</ojp:PublishedServiceName>
+							</ojp:ServiceSection>
 							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
 							<ojp:OriginText>
 								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>

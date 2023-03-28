@@ -416,27 +416,29 @@
 					<ojp:Service>
 						<ojp:OperatingDayRef>2021-09-22</ojp:OperatingDayRef>
 						<ojp:JourneyRef>ojp:910A3:Y:R:j21:174</ojp:JourneyRef>
-						<siri:LineRef>ojp:910A3:Y</siri:LineRef>
-						<siri:DirectionRef>R</siri:DirectionRef>
-						<ojp:Mode>
-							<ojp:PtMode>rail</ojp:PtMode>
-							<siri:RailSubmode>regionalRail</siri:RailSubmode>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Zug</ojp:Text>
-							</ojp:Name>
-						</ojp:Mode>
-						<ojp:ProductCategory>
-							<!-- V1.1, PR #95 - Illustration of ProductCategory -->
-							<ojp:Name>
-								<ojp:Text>Panoramawagen</ojp:Text>
-							</ojp:Name>
-						</ojp:ProductCategory>
-						<ojp:PublishedServiceName>
-							<ojp:Text>RE</ojp:Text>
-						</ojp:PublishedServiceName>
-						<ojp:OperatorRefs>
-							<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-						</ojp:OperatorRefs>
+						<ojp:ServiceSection>
+							<siri:LineRef>ojp:910A3:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>rail</ojp:PtMode>
+								<siri:RailSubmode>regionalRail</siri:RailSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Zug</ojp:Text>
+								</ojp:Name>
+							</ojp:Mode>
+							<ojp:ProductCategory>
+								<!-- V1.1, PR #95 - Illustration of ProductCategory -->
+								<ojp:Name>
+									<ojp:Text>Panoramawagen</ojp:Text>
+								</ojp:Name>
+							</ojp:ProductCategory>
+							<ojp:PublishedServiceName>
+								<ojp:Text>RE</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRefs>
+								<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
+							</ojp:OperatorRefs>
+						</ojp:ServiceSection>
 						<ojp:OriginStopPointRef>8509000</ojp:OriginStopPointRef>
 						<ojp:OriginText>
 							<ojp:Text xml:lang="de">Chur</ojp:Text>

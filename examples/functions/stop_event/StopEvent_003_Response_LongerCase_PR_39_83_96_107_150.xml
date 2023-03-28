@@ -146,6 +146,7 @@
 						<ojp:Service>
 							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
 							<ojp:JourneyRef>ojp:9400B:Y:R:j21:12</ojp:JourneyRef>
+							<ojp:ServiceSection>
 							<siri:LineRef>ojp:9400B:Y</siri:LineRef>
 							<siri:DirectionRef>R</siri:DirectionRef>
 							<ojp:Mode>
@@ -164,6 +165,7 @@
 							<ojp:OperatorRefs>
 								<ojp:OperatorRef>ojp:182</ojp:OperatorRef>
 							</ojp:OperatorRefs>
+							</ojp:ServiceSection>
 							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
 							<ojp:OriginText>
 								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
@@ -201,6 +203,7 @@
 						<ojp:Service>
 							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
 							<ojp:JourneyRef>ojp:93201:6:H:j21:24</ojp:JourneyRef>
+							<ojp:ServiceSection>
 							<siri:LineRef>ojp:93201:6</siri:LineRef>
 							<siri:DirectionRef>H</siri:DirectionRef>
 							<ojp:Mode>
@@ -225,6 +228,7 @@
 								</ojp:Text>
 								<ojp:Code>A__OM</ojp:Code>
 							</ojp:Attribute>
+							</ojp:ServiceSection>
 							<ojp:OriginStopPointRef>8504356</ojp:OriginStopPointRef>
 							<ojp:OriginText>
 								<ojp:Text xml:lang="de">Ligerz (Talstation)</ojp:Text>

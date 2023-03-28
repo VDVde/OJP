@@ -211,30 +211,32 @@
 						<ojp:Service>
 							<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 							<ojp:JourneyRef>ojp:91A01:D:R:j20:39</ojp:JourneyRef>
-							<siri:LineRef>ojp:91A01:D</siri:LineRef>
-							<siri:DirectionRef>R</siri:DirectionRef>
-							<ojp:Mode>
-								<ojp:PtMode>rail</ojp:PtMode>
-								<siri:RailSubmode>local</siri:RailSubmode>
-								<ojp:Name>
-									<ojp:Text xml:lang="de">Zug</ojp:Text>
-								</ojp:Name>
-								<ojp:ShortName>
-									<ojp:Text xml:lang="de">TER</ojp:Text>
-								</ojp:ShortName>
-							</ojp:Mode>
-							<ojp:PublishedServiceName>
-								<ojp:Text>17.18</ojp:Text>
-							</ojp:PublishedServiceName>
-							<ojp:OperatorRefs>
-								<ojp:OperatorRef>ojp:87_LEX</ojp:OperatorRef>
-							</ojp:OperatorRefs>
-							<ojp:Attribute>
-								<ojp:Text>
-									<ojp:Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</ojp:Text>
-								</ojp:Text>
-								<ojp:Code>A__MO</ojp:Code>
-							</ojp:Attribute>
+							<ojp:ServiceSection>
+								<siri:LineRef>ojp:91A01:D</siri:LineRef>
+								<siri:DirectionRef>R</siri:DirectionRef>
+								<ojp:Mode>
+									<ojp:PtMode>rail</ojp:PtMode>
+									<siri:RailSubmode>local</siri:RailSubmode>
+									<ojp:Name>
+										<ojp:Text xml:lang="de">Zug</ojp:Text>
+									</ojp:Name>
+									<ojp:ShortName>
+										<ojp:Text xml:lang="de">TER</ojp:Text>
+									</ojp:ShortName>
+								</ojp:Mode>
+								<ojp:PublishedServiceName>
+									<ojp:Text>17.18</ojp:Text>
+								</ojp:PublishedServiceName>
+								<ojp:OperatorRefs>
+									<ojp:OperatorRef>ojp:87_LEX</ojp:OperatorRef>
+								</ojp:OperatorRefs>
+								<ojp:Attribute>
+									<ojp:Text>
+										<ojp:Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</ojp:Text>
+									</ojp:Text>
+									<ojp:Code>A__MO</ojp:Code>
+								</ojp:Attribute>
+							</ojp:ServiceSection>
 							<ojp:OriginStopPointRef>8721202</ojp:OriginStopPointRef>
 							<ojp:OriginText>
 								<ojp:Text xml:lang="de">Strasbourg</ojp:Text>
@@ -344,30 +346,32 @@
 						<ojp:Service>
 							<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 							<ojp:JourneyRef>ojp:9117.::R:j20:79</ojp:JourneyRef>
-							<siri:LineRef>ojp:9117.:</siri:LineRef>
-							<siri:DirectionRef>R</siri:DirectionRef>
-							<ojp:Mode>
-								<ojp:PtMode>rail</ojp:PtMode>
-								<siri:RailSubmode>local</siri:RailSubmode>
-								<ojp:Name>
-									<ojp:Text xml:lang="de">Zug</ojp:Text>
-								</ojp:Name>
-								<ojp:ShortName>
-									<ojp:Text xml:lang="de">TER</ojp:Text>
-								</ojp:ShortName>
-							</ojp:Mode>
-							<ojp:PublishedServiceName>
-								<ojp:Text>17.</ojp:Text>
-							</ojp:PublishedServiceName>
-							<ojp:OperatorRefs>
-								<ojp:OperatorRef>ojp:87_LEX</ojp:OperatorRef>
-							</ojp:OperatorRefs>
-							<ojp:Attribute>
-								<ojp:Text>
-									<ojp:Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</ojp:Text>
-								</ojp:Text>
-								<ojp:Code>A__MO</ojp:Code>
-							</ojp:Attribute>
+							<ojp:ServiceSection>
+								<siri:LineRef>ojp:9117.:</siri:LineRef>
+								<siri:DirectionRef>R</siri:DirectionRef>
+								<ojp:Mode>
+									<ojp:PtMode>rail</ojp:PtMode>
+									<siri:RailSubmode>local</siri:RailSubmode>
+									<ojp:Name>
+										<ojp:Text xml:lang="de">Zug</ojp:Text>
+									</ojp:Name>
+									<ojp:ShortName>
+										<ojp:Text xml:lang="de">TER</ojp:Text>
+									</ojp:ShortName>
+								</ojp:Mode>
+								<ojp:PublishedServiceName>
+									<ojp:Text>17.</ojp:Text>
+								</ojp:PublishedServiceName>
+								<ojp:OperatorRefs>
+									<ojp:OperatorRef>ojp:87_LEX</ojp:OperatorRef>
+								</ojp:OperatorRefs>
+								<ojp:Attribute>
+									<ojp:Text>
+										<ojp:Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</ojp:Text>
+									</ojp:Text>
+									<ojp:Code>A__MO</ojp:Code>
+								</ojp:Attribute>
+							</ojp:ServiceSection>
 							<ojp:OriginStopPointRef>8721428</ojp:OriginStopPointRef>
 							<ojp:OriginText>
 								<ojp:Text xml:lang="de">Obernai</ojp:Text>
