@@ -51,7 +51,7 @@
 			</xs:element>
 			<xs:element name="AreaGeometry" type="AreaStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The LINE's main area. Used for MOBILITY SERVICES that cover one or more areas. The interconnection between the areas is not calculated (e.g. exclusion zones can't be modeler). Don't mix RouteGeometry and AreaGeometry in a response.</xs:documentation>
+					<xs:documentation>The LINE's main area. Used for MOBILITY SERVICES that cover one or more areas. The interconnection between the areas is not calculated (e.g. exclusion zones can't be modelled). Don't mix RouteGeometry and AreaGeometry in a response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
