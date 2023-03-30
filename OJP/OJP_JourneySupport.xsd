@@ -76,7 +76,7 @@
 					<xs:documentation>Stop sequence number, where the interval begins (inclusive). If missing, the interval begins at the beginning of the leg (or at the beginning of the journey for uses in StopEvents and TripInfo).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToStopSeqNumber" type="xs:positiveInteger" minOccurs="0">
+			<xs:element name="ToStopSequenceNumber" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Stop sequence number, where the interval ends (inclusive). If missing, the interval ends at the end of the leg (or at the end of the journey for uses in StopEvents and TripInfo).</xs:documentation>
 				</xs:annotation>
