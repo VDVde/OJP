@@ -71,7 +71,7 @@
 			<xs:documentation>Interval of stop sequence numbers of a given TimedLeg which may be one or multiple VEHICLE JOURNEYs. The numbering starts with 1. An example is the train from Bern to Zweisimmen that is split in Spiez. The sequence 1-3 is the first sequence, 3-9 the second.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="FromStopSeqNumber" type="xs:positiveInteger" minOccurs="0">
+			<xs:element name="FromStopSequenceNumber" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Stop sequence number, where the interval begins (inclusive). If missing, the interval begins at the beginning of the leg (or at the beginning of the journey for uses in StopEvents and TripInfo).</xs:documentation>
 				</xs:annotation>
