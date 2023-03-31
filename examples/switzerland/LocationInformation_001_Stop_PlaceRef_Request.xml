@@ -13,9 +13,9 @@
 					<Name>
 						<Text>Zürich Kreuzplatz</Text>
 					</Name>
-				</ojp:PlaceRef>
-				<ojp:Restrictions>
-					<ojp:Type>stop</ojp:Type>
+				</PlaceRef>
+				<Restrictions>
+					<Type>stop</Type>
 					<IncludePtModes>true</IncludePtModes>
 				</Restrictions>
 			</OJPLocationInformationRequest>
