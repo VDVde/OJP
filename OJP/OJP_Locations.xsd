@@ -148,7 +148,7 @@
 	</xs:complexType>
 	<xs:complexType name="PlaceResultStructure">
 		<xs:sequence>
-			<xs:element name="ErrorCondition" type="LocationErrorConditionStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this LOCATION result.</xs:documentation>
 				</xs:annotation>
