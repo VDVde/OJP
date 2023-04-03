@@ -1657,6 +1657,16 @@
 					<xs:documentation>Indicated legs do not exist.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="REFINE_OBJECTNOTFOUND">
+				<xs:annotation>
+					<xs:documentation>The object to be refined could not be found in the database of the responding system or could not be found unequivocally.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="REFINE_PROFILENOTSUPPORTED">
+				<xs:annotation>
+					<xs:documentation>Refinement does not support the hiking or cycling profile.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
 			<xs:enumeration value="TRIP_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
