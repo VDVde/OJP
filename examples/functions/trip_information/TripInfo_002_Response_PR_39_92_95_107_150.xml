@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp  ../../../OJP.xsd">
 	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
 	- PR #39, PR #150 - standard ResponseContextStructure including a PlaceStructure
 	- PR #107 - only referenced places and situations should be put into the Context
@@ -8,458 +8,458 @@
 	- PR #92 - Extension in DatedJourneyStructure
 	- PR #92 - Extension in ContinuousServiceStructure
 -->
-	<siri:OJPResponse>
+	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2021-08-25T07:52:45Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<ojp:OJPTripInfoDelivery>
+			<OJPTripInfoDelivery>
 				<siri:ResponseTimestamp>2021-08-25T07:52:45Z</siri:ResponseTimestamp>
 				<siri:RequestMessageRef>756</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
-				<ojp:CalcTime>7</ojp:CalcTime>
-				<ojp:TripInfoResponseContext>
-					<ojp:Places>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8509000</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Chur</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>112213:0:7</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23011901:2</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Chur</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+				<CalcTime>7</CalcTime>
+				<TripInfoResponseContext>
+					<Places>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8509000</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Chur</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>112213:0:7</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23011901:2</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Chur</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>9.52893</siri:Longitude>
 								<siri:Latitude>46.85309</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8509002</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Landquart</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>112214:0:3</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23011955:2</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Landquart</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8509002</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Landquart</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>112214:0:3</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23011955:2</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Landquart</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>9.55404</siri:Longitude>
 								<siri:Latitude>46.96744</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8509004</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Bad Ragaz</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>112216:0:3</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23016291:1</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Bad Ragaz</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8509004</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Bad Ragaz</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>112216:0:3</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23016291:1</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Bad Ragaz</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>9.50523</siri:Longitude>
 								<siri:Latitude>47.01031</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8509411</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Sargans</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>112401:0:2</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23016296:2</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Sargans</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8509411</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Sargans</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>112401:0:2</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23016296:2</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Sargans</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>9.44540</siri:Longitude>
 								<siri:Latitude>47.04536</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8509414</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Walenstadt</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>112404:0:3</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23016298:4</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Walenstadt</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8509414</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Walenstadt</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>112404:0:3</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23016298:4</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Walenstadt</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>9.31298</siri:Longitude>
 								<siri:Latitude>47.11988</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8503225</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>ZiegelbrÃ¼cke</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>108441:0:6</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23016315:8</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">ZiegelbrÃ¼cke</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8503225</StopPlaceRef>
+								<StopPlaceName>
+									<Text>ZiegelbrÃ¼cke</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>108441:0:6</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23016315:8</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">ZiegelbrÃ¼cke</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>9.06005</siri:Longitude>
 								<siri:Latitude>47.13616</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8503221</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Siebnen-Wangen</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>108437:0:3</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23018349:2</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Siebnen-Wangen</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8503221</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Siebnen-Wangen</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>108437:0:3</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23018349:2</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Siebnen-Wangen</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.90071</siri:Longitude>
 								<siri:Latitude>47.18267</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8503209</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>PfÃ¤ffikon SZ</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>108430:0:3</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23018322:8</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">PfÃ¤ffikon SZ</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8503209</StopPlaceRef>
+								<StopPlaceName>
+									<Text>PfÃ¤ffikon SZ</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>108430:0:3</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23018322:8</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">PfÃ¤ffikon SZ</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.77813</siri:Longitude>
 								<siri:Latitude>47.20300</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8503206</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>WÃ¤denswil</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>108427:0:2</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23026142:8</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">WÃ¤denswil</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8503206</StopPlaceRef>
+								<StopPlaceName>
+									<Text>WÃ¤denswil</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>108427:0:2</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23026142:8</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">WÃ¤denswil</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.67522</siri:Longitude>
 								<siri:Latitude>47.22930</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8503202</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Thalwil</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>108423:0:5</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23026141:2</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Thalwil</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8503202</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Thalwil</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>108423:0:5</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23026141:2</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Thalwil</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.56477</siri:Longitude>
 								<siri:Latitude>47.29598</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8503000</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>ZÃ¼rich HB</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>108276:0:8</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">ZÃ¼rich HB</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8503000</StopPlaceRef>
+								<StopPlaceName>
+									<Text>ZÃ¼rich HB</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>108276:0:8</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23026261:27</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">ZÃ¼rich HB</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.54021</siri:Longitude>
 								<siri:Latitude>47.37818</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-					</ojp:Places>
-				</ojp:TripInfoResponseContext>
-				<ojp:TripInfoResult>
-					<ojp:OnwardCall>
+							</GeoPosition>
+						</Place>
+					</Places>
+				</TripInfoResponseContext>
+				<TripInfoResult>
+					<OnwardCall>
 						<siri:StopPointRef>8509000</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>Chur</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">7</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T08:16:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>1</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>Chur</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">7</Text>
+						</PlannedQuay>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T08:16:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>1</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8509002</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>Landquart</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">3</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T08:24:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T08:25:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>2</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>Landquart</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">3</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T08:24:00Z</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T08:25:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>2</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8509004</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>Bad Ragaz</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">3</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T08:30:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T08:30:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>3</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>Bad Ragaz</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">3</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T08:30:00Z</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T08:30:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>3</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8509411</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>Sargans</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">2</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T08:35:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T08:35:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>4</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>Sargans</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">2</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T08:35:00Z</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T08:35:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>4</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8509414</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>Walenstadt</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">3</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T08:43:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T08:44:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>5</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>Walenstadt</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">3</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T08:43:00Z</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T08:44:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>5</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8503225</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>ZiegelbrÃ¼cke</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">6</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T09:00:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T09:00:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>6</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>ZiegelbrÃ¼cke</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">6</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T09:00:00Z</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T09:00:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>6</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8503221</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>Siebnen-Wangen</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">3</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T09:09:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T09:10:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>7</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>Siebnen-Wangen</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">3</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T09:09:00Z</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T09:10:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>7</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8503209</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>PfÃ¤ffikon SZ</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">3</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T09:17:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T09:19:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>8</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>PfÃ¤ffikon SZ</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">3</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T09:17:00Z</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T09:19:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>8</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8503206</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>WÃ¤denswil</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">2</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T09:27:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T09:29:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>9</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>WÃ¤denswil</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">2</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T09:27:00Z</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T09:29:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>9</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8503202</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>Thalwil</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">5</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T09:38:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2021-09-22T09:39:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-						<ojp:Order>10</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:OnwardCall>
+						<StopPointName>
+							<Text>Thalwil</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">5</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T09:38:00Z</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2021-09-22T09:39:00Z</TimetabledTime>
+						</ServiceDeparture>
+						<Order>10</Order>
+					</OnwardCall>
+					<OnwardCall>
 						<siri:StopPointRef>8503000</siri:StopPointRef>
-						<ojp:StopPointName>
-							<ojp:Text>ZÃ¼rich HB</ojp:Text>
-						</ojp:StopPointName>
-						<ojp:PlannedQuay>
-							<ojp:Text xml:lang="de">8</ojp:Text>
-						</ojp:PlannedQuay>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2021-09-22T09:48:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-						<ojp:Order>11</ojp:Order>
-					</ojp:OnwardCall>
-					<ojp:Service>
-						<ojp:OperatingDayRef>2021-09-22</ojp:OperatingDayRef>
-						<ojp:JourneyRef>ojp:910A3:Y:R:j21:174</ojp:JourneyRef>
-						<ojp:ServiceSection>
-							<siri:LineRef>ojp:910A3:Y</siri:LineRef>
+						<StopPointName>
+							<Text>ZÃ¼rich HB</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text xml:lang="de">8</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2021-09-22T09:48:00Z</TimetabledTime>
+						</ServiceArrival>
+						<Order>11</Order>
+					</OnwardCall>
+					<Service>
+						<OperatingDayRef>2021-09-22</OperatingDayRef>
+						<JourneyRef>910A3:Y:R:j21:174</JourneyRef>
+						<ServiceSection>
+							<siri:LineRef>910A3:Y</siri:LineRef>
 							<siri:DirectionRef>R</siri:DirectionRef>
-							<ojp:Mode>
-								<ojp:PtMode>rail</ojp:PtMode>
+							<Mode>
+								<PtMode>rail</PtMode>
 								<siri:RailSubmode>regionalRail</siri:RailSubmode>
-								<ojp:Name>
-									<ojp:Text xml:lang="de">Zug</ojp:Text>
-								</ojp:Name>
-							</ojp:Mode>
-							<ojp:ProductCategory>
+								<Name>
+									<Text xml:lang="de">Zug</Text>
+								</Name>
+							</Mode>
+							<ProductCategory>
 								<!-- V1.1, PR #95 - Illustration of ProductCategory -->
-								<ojp:Name>
-									<ojp:Text>Panoramawagen</ojp:Text>
-								</ojp:Name>
-							</ojp:ProductCategory>
-							<ojp:PublishedServiceName>
-								<ojp:Text>RE</ojp:Text>
-							</ojp:PublishedServiceName>
-							<ojp:OperatorRefs>
-								<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-							</ojp:OperatorRefs>
-						</ojp:ServiceSection>
-						<ojp:OriginStopPointRef>8509000</ojp:OriginStopPointRef>
-						<ojp:OriginText>
-							<ojp:Text xml:lang="de">Chur</ojp:Text>
-						</ojp:OriginText>
-						<ojp:DestinationStopPointRef>8503000</ojp:DestinationStopPointRef>
-						<ojp:DestinationText>
-							<ojp:Text xml:lang="de">ZÃ¼rich HB</ojp:Text>
-						</ojp:DestinationText>
-						<ojp:Extension>
+								<Name>
+									<Text>Panoramawagen</Text>
+								</Name>
+							</ProductCategory>
+							<PublishedServiceName>
+								<Text>RE</Text>
+							</PublishedServiceName>
+							<OperatorRefs>
+								<OperatorRef>11</OperatorRef>
+							</OperatorRefs>
+						</ServiceSection>
+						<OriginStopPointRef>8509000</OriginStopPointRef>
+						<OriginText>
+							<Text xml:lang="de">Chur</Text>
+						</OriginText>
+						<DestinationStopPointRef>8503000</DestinationStopPointRef>
+						<DestinationText>
+							<Text xml:lang="de">ZÃ¼rich HB</Text>
+						</DestinationText>
+						<Extension>
 							<!-- V1.1, PR #92 - Illustration of new Extension (only for the first of two changes of the PR, DatedJourneyStructure)-->
-							<ojp:TransportTypeName>
-								<ojp:Text xml:lang="de">Regionalzug</ojp:Text>
-							</ojp:TransportTypeName>
-							<ojp:PublishedProductName>
-								<!-- ojp:PublishedProductName does not need to have been defined - so it seems... -->
-								<ojp:Text xml:lang="de">ZÃ¼risee-Express</ojp:Text>
-							</ojp:PublishedProductName>
-						</ojp:Extension>
-					</ojp:Service>
-				</ojp:TripInfoResult>
-			</ojp:OJPTripInfoDelivery>
+							<TransportTypeName>
+								<Text xml:lang="de">Regionalzug</Text>
+							</TransportTypeName>
+							<PublishedProductName>
+								<!-- PublishedProductName does not need to have been defined - so it seems... -->
+								<Text xml:lang="de">ZÃ¼risee-Express</Text>
+							</PublishedProductName>
+						</Extension>
+					</Service>
+				</TripInfoResult>
+			</OJPTripInfoDelivery>
 		</siri:ServiceDelivery>
-	</siri:OJPResponse>
-</siri:OJP>
+	</OJPResponse>
+</OJP>
