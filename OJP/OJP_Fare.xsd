@@ -127,12 +127,18 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="FareResultObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>	
 	<xs:complexType name="FareResultStructure">
 		<xs:annotation>
 			<xs:documentation>Wrapper element for Fare results.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="FareResultObjectIdType">
 				<xs:annotation>
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>

@@ -352,12 +352,18 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="TripResultObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>
 	<xs:complexType name="TripResultStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for a single trip result and associated problems.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="TripResultObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -450,12 +456,18 @@
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="TripObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>		
 	<xs:complexType name="TripStructure">
 		<xs:annotation>
 			<xs:documentation>[an extended form of PT TRIP in TM and NeTEx as it also includes the initial and final access legs to and from public transport] whole journey from passenger origin to passenger destination in one or more LEGs </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="TripObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -505,12 +517,18 @@
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="LegObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>		
 	<xs:complexType name="LegStructure">
 		<xs:annotation>
 			<xs:documentation>a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="LegObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this leg. Unique within trip result.</xs:documentation>
 				</xs:annotation>
@@ -1216,7 +1234,7 @@
 					<xs:documentation>Official name of the level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Id" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="Id" type="PlaceObjectIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Id of the element at this end of the PathLink (typically a PLACE, e.g. where the elevator is located).</xs:documentation>
 				</xs:annotation>
@@ -1353,12 +1371,18 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="MultiPointTripResultObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>		
 	<xs:complexType name="MultiPointTripResultStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for a multipoint trip result and associated problems</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="MultiPointTripResultObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within multipoint-trip response.</xs:documentation>
 				</xs:annotation>
