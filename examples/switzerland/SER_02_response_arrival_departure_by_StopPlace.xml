@@ -1,1016 +1,1016 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
-	<siri:OJPResponse>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-11-30T10:01:20Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<ojp:OJPStopEventDelivery>
+			<OJPStopEventDelivery>
 				<siri:ResponseTimestamp>2020-11-30T10:01:20Z</siri:ResponseTimestamp>
 				<siri:RequestMessageRef>756</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
-				<ojp:CalcTime>103</ojp:CalcTime>
-				<ojp:StopEventResponseContext>
-					<ojp:Places>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8530813</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Zürich Kreuzplatz</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>111188:0:</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Zürich Kreuzplatz</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+				<CalcTime>103</CalcTime>
+				<StopEventResponseContext>
+					<Places>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8530813</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Zürich Kreuzplatz</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>111188:0:</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23026261:27</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Zürich Kreuzplatz</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.55408</siri:Longitude>
 								<siri:Latitude>47.36488</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:TopographicPlace>
-								<ojp:TopographicPlaceCode>23026261:27</ojp:TopographicPlaceCode>
-								<ojp:TopographicPlaceName>
-									<ojp:Text>Unknown</ojp:Text>
-								</ojp:TopographicPlaceName>
-							</ojp:TopographicPlace>
-							<ojp:Name>
-								<ojp:Text>Zürich</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<TopographicPlace>
+								<TopographicPlaceCode>23026261:27</TopographicPlaceCode>
+								<TopographicPlaceName>
+									<Text>Unknown</Text>
+								</TopographicPlaceName>
+							</TopographicPlace>
+							<Name>
+								<Text>Zürich</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>0.0</siri:Longitude>
 								<siri:Latitude>0.0</siri:Latitude>
 								<siri:Precision>20000000</siri:Precision>
-							</ojp:GeoPosition>
-						</ojp:Place>
-					</ojp:Places>
-				</ojp:StopEventResponseContext>
-				<ojp:StopEventResult>
-					<ojp:Id>ID-15DE93F6-F85A-4F58-B680-0A187BCAE3CC</ojp:Id>
-					<ojp:StopEvent>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+							</GeoPosition>
+						</Place>
+					</Places>
+				</StopEventResponseContext>
+				<StopEventResult>
+					<Id>ID-15DE93F6-F85A-4F58-B680-0A187BCAE3CC</Id>
+					<StopEvent>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591178</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Hardturm</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:33:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>1</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Hardturm</Text>
+								</StopPointName>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:33:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>1</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591074</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bernoulli-Häuser</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:34:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:34:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>2</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bernoulli-Häuser</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:34:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:34:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>2</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591131</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Fischerweg</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:35:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:35:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>3</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Fischerweg</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:35:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:35:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>3</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591135</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Förrlibuckstrasse</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:36:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:36:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>4</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Förrlibuckstrasse</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:36:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:36:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>4</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8580522</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Escher-Wyss-Platz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:38:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:38:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>5</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Escher-Wyss-Platz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:38:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:38:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>5</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8594239</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Schiffbau</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:39:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:39:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>6</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Schiffbau</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:39:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:39:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>6</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591060</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich Hardbrücke, Bahnhof</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:41:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:41:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>7</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich Hardbrücke, Bahnhof</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:41:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:41:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>7</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591177</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Hardplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:42:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:42:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>8</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Hardplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:42:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:42:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>8</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591169</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Güterbahnhof</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:44:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:44:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>9</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Güterbahnhof</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:44:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:44:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>9</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591052</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bäckeranlage</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:45:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:45:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>10</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bäckeranlage</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:45:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:45:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>10</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591184</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Helvetiaplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:47:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:47:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>11</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Helvetiaplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:47:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:47:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>11</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591381</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Stauffacher</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:48:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:48:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>12</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Stauffacher</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:48:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:48:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>12</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591064</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich Selnau, Bahnhof</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:49:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:49:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>13</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich Selnau, Bahnhof</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:49:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:49:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>13</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591384</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Stockerstrasse</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:52:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:52:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>14</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Stockerstrasse</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:52:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:52:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>14</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591299</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Paradeplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:53:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:53:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>15</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Paradeplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:53:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:53:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>15</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591093</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Kantonalbank</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:54:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:54:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>16</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Kantonalbank</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:54:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:54:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>16</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591105</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bürkliplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:56:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:56:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>17</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bürkliplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:56:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:56:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>17</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8576193</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bellevue</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:58:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:58:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>18</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bellevue</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:58:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:58:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>18</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8503059</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich Stadelhofen FB</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:00:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:00:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>19</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:ThisCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich Stadelhofen FB</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:00:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:00:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>19</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<ThisCall>
+							<CallAtStop>
 								<siri:StopPointRef>8530813</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich Kreuzplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:01:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:01:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>20</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:ThisCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich Kreuzplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:01:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:01:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>20</Order>
+							</CallAtStop>
+						</ThisCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591119</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Englischviertelstrasse</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:03:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:03:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>21</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Englischviertelstrasse</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:03:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:03:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>21</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8503083</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Römerhof</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:04:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:04:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>22</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Römerhof</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:04:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:04:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>22</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591199</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Hölderlinstrasse</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:05:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:05:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>23</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Hölderlinstrasse</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:05:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:05:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>23</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591233</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Klusplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:06:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:Order>24</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:Service>
-							<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-							<ojp:JourneyRef>ojp:91008::H:j20:42</ojp:JourneyRef>
-							<ojp:ServiceSection>
-								<siri:LineRef>ojp:91008:</siri:LineRef>
+								<StopPointName>
+									<Text>Zürich, Klusplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:06:00Z</TimetabledTime>
+								</ServiceArrival>
+								<Order>24</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<Service>
+							<OperatingDayRef>Unknown</OperatingDayRef>
+							<JourneyRef>91008::H:j20:42</JourneyRef>
+							<ServiceSection>
+								<siri:LineRef>91008:</siri:LineRef>
 								<siri:DirectionRef>H</siri:DirectionRef>
-								<ojp:Mode>
-									<ojp:PtMode>tram</ojp:PtMode>
+								<Mode>
+									<PtMode>tram</PtMode>
 									<siri:TramSubmode>cityTram</siri:TramSubmode>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Tram</ojp:Text>
-									</ojp:Name>
-									<ojp:ShortName>
-										<ojp:Text xml:lang="de">T</ojp:Text>
-									</ojp:ShortName>
-								</ojp:Mode>
-								<ojp:PublishedServiceName>
-									<ojp:Text>8</ojp:Text>
-								</ojp:PublishedServiceName>
-								<ojp:OperatorRefs>
-									<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-								</ojp:OperatorRefs>
-								<ojp:Attribute>
-									<ojp:Text>
-										<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-									</ojp:Text>
-									<ojp:Code>A__OM</ojp:Code>
-								</ojp:Attribute>
-							</ojp:ServiceSection>
-							<ojp:OriginStopPointRef>8591178</ojp:OriginStopPointRef>
-							<ojp:OriginText>
-								<ojp:Text xml:lang="de">Zürich, Hardturm</ojp:Text>
-							</ojp:OriginText>
-							<ojp:DestinationStopPointRef>8591233</ojp:DestinationStopPointRef>
-							<ojp:DestinationText>
-								<ojp:Text xml:lang="de">Zürich, Klusplatz</ojp:Text>
-							</ojp:DestinationText>
-						</ojp:Service>
-						<ojp:Extension>
-							<ojp:TransportTypeName>
-								<ojp:Text xml:lang="de">Tram</ojp:Text>
-							</ojp:TransportTypeName>
-							<ojp:PublishedJourneyNumber>
-								<ojp:Text xml:lang="de">1915</ojp:Text>
-							</ojp:PublishedJourneyNumber>
-						</ojp:Extension>
-					</ojp:StopEvent>
-				</ojp:StopEventResult>
-				<ojp:StopEventResult>
-					<ojp:Id>ID-2CDE9C44-78F9-4872-BC9C-B98EE28254A0</ojp:Id>
-					<ojp:StopEvent>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+									<Name>
+										<Text xml:lang="de">Tram</Text>
+									</Name>
+									<ShortName>
+										<Text xml:lang="de">T</Text>
+									</ShortName>
+								</Mode>
+								<PublishedServiceName>
+									<Text>8</Text>
+								</PublishedServiceName>
+								<OperatorRefs>
+									<OperatorRef>3849</OperatorRef>
+								</OperatorRefs>
+								<Attribute>
+									<Text>
+										<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+									</Text>
+									<Code>A__OM</Code>
+								</Attribute>
+							</ServiceSection>
+							<OriginStopPointRef>8591178</OriginStopPointRef>
+							<OriginText>
+								<Text xml:lang="de">Zürich, Hardturm</Text>
+							</OriginText>
+							<DestinationStopPointRef>8591233</DestinationStopPointRef>
+							<DestinationText>
+								<Text xml:lang="de">Zürich, Klusplatz</Text>
+							</DestinationText>
+						</Service>
+						<Extension>
+							<TransportTypeName>
+								<Text xml:lang="de">Tram</Text>
+							</TransportTypeName>
+							<PublishedJourneyNumber>
+								<Text xml:lang="de">1915</Text>
+							</PublishedJourneyNumber>
+						</Extension>
+					</StopEvent>
+				</StopEventResult>
+				<StopEventResult>
+					<Id>ID-2CDE9C44-78F9-4872-BC9C-B98EE28254A0</Id>
+					<StopEvent>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591315</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Rehalp</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:52:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>1</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Rehalp</Text>
+								</StopPointName>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:52:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>1</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591142</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Friedhof Enzenbühl</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:53:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:53:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>2</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Friedhof Enzenbühl</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:53:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:53:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>2</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8530811</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich Balgrist</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:55:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:55:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>3</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich Balgrist</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:55:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:55:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>3</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591104</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Burgwies</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:56:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:56:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>4</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Burgwies</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:56:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:56:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>4</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591429</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Wetlistrasse</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:57:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:57:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>5</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Wetlistrasse</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:57:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:57:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>5</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591180</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Hedwigsteig</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:58:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:58:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>6</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Hedwigsteig</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:58:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:58:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>6</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8530812</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich Hegibachplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T11:59:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T11:59:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>7</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:PreviousCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich Hegibachplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T11:59:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T11:59:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>7</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<PreviousCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591364</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Signaustrasse</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:00:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:00:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>8</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:PreviousCall>
-						<ojp:ThisCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Signaustrasse</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:00:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:00:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>8</Order>
+							</CallAtStop>
+						</PreviousCall>
+						<ThisCall>
+							<CallAtStop>
 								<siri:StopPointRef>8530813</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich Kreuzplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:02:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:02:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>9</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:ThisCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich Kreuzplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:02:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:02:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>9</Order>
+							</CallAtStop>
+						</ThisCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8503059</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich Stadelhofen FB</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:04:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:04:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>10</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich Stadelhofen FB</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:04:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:04:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>10</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8576193</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bellevue</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:06:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:06:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>11</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bellevue</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:06:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:06:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>11</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591105</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bürkliplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:08:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:08:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>12</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bürkliplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:08:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:08:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>12</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591093</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Kantonalbank</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:09:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:09:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>13</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Kantonalbank</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:09:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:09:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>13</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591299</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Paradeplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:10:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:10:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>14</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Paradeplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:10:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:10:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>14</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591316</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Rennweg</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:12:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:12:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>15</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Rennweg</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:12:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:12:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>15</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591067</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bahnhofstrasse/HB</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:14:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:14:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>16</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bahnhofstrasse/HB</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:14:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:14:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>16</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8587349</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bahnhofquai/HB</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:16:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:16:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>17</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bahnhofquai/HB</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:16:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:16:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>17</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591379</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Stampfenbachplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:18:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:18:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>18</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Stampfenbachplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:18:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:18:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>18</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591071</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Beckenhof</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:19:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:19:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>19</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Beckenhof</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:19:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:19:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>19</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591237</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Kronenstrasse</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:21:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:21:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>20</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Kronenstrasse</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:21:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:21:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>20</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591335</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Schaffhauserplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:22:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:22:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>21</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Schaffhauserplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:22:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:22:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>21</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591246</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Laubiweg</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:23:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:23:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>22</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Laubiweg</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:23:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:23:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>22</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591101</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bucheggplatz</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:25:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:25:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>23</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bucheggplatz</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:25:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:25:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>23</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591307</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Radiostudio</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:26:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:26:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>24</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Radiostudio</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:26:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:26:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>24</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591053</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Bad Allenmoos</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:28:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:28:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>25</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Bad Allenmoos</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>25</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591314</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Regensbergbrücke</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:28:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:28:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>26</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Regensbergbrücke</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>26</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8580449</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich Oerlikon, Bahnhof</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:30:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:30:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>27</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich Oerlikon, Bahnhof</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:30:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:30:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>27</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591382</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Sternen Oerlikon</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:32:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:32:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>28</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Sternen Oerlikon</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:32:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:32:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>28</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591273</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Messe/Hallenstadion</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:33:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:33:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>29</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Messe/Hallenstadion</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:33:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:33:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>29</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591256</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Leutschenbach</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:34:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:34:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>30</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Leutschenbach</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:34:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:34:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>30</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591294</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Oerlikerhus</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:35:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:35:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>31</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Oerlikerhus</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:35:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:35:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>31</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591830</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Glattpark, Glattpark</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:36:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:36:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>32</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Glattpark, Glattpark</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:36:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:36:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>32</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591128</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Fernsehstudio</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:37:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2020-12-01T12:37:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>33</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:OnwardCall>
-							<ojp:CallAtStop>
+								<StopPointName>
+									<Text>Zürich, Fernsehstudio</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:37:00Z</TimetabledTime>
+								</ServiceArrival>
+								<ServiceDeparture>
+									<TimetabledTime>2020-12-01T12:37:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>33</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<OnwardCall>
+							<CallAtStop>
 								<siri:StopPointRef>8591049</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Zürich, Auzelg</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceArrival>
-									<ojp:TimetabledTime>2020-12-01T12:39:00Z</ojp:TimetabledTime>
-								</ojp:ServiceArrival>
-								<ojp:Order>34</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:OnwardCall>
-						<ojp:Service>
-							<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-							<ojp:JourneyRef>ojp:91011:A:R:j20:507</ojp:JourneyRef>
-							<ojp:ServiceSection>
-								<siri:LineRef>ojp:91011:A</siri:LineRef>
+								<StopPointName>
+									<Text>Zürich, Auzelg</Text>
+								</StopPointName>
+								<ServiceArrival>
+									<TimetabledTime>2020-12-01T12:39:00Z</TimetabledTime>
+								</ServiceArrival>
+								<Order>34</Order>
+							</CallAtStop>
+						</OnwardCall>
+						<Service>
+							<OperatingDayRef>Unknown</OperatingDayRef>
+							<JourneyRef>91011:A:R:j20:507</JourneyRef>
+							<ServiceSection>
+								<siri:LineRef>91011:A</siri:LineRef>
 								<siri:DirectionRef>R</siri:DirectionRef>
-								<ojp:Mode>
-									<ojp:PtMode>tram</ojp:PtMode>
+								<Mode>
+									<PtMode>tram</PtMode>
 									<siri:TramSubmode>cityTram</siri:TramSubmode>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Tram</ojp:Text>
-									</ojp:Name>
-									<ojp:ShortName>
-										<ojp:Text xml:lang="de">T</ojp:Text>
-									</ojp:ShortName>
-								</ojp:Mode>
-								<ojp:PublishedServiceName>
-									<ojp:Text>11</ojp:Text>
-								</ojp:PublishedServiceName>
-								<ojp:OperatorRefs>
-									<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-								</ojp:OperatorRefs>
-								<ojp:Attribute>
-									<ojp:Text>
-										<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-									</ojp:Text>
-									<ojp:Code>A__OM</ojp:Code>
-								</ojp:Attribute>
-							</ojp:ServiceSection>
-							<ojp:OriginStopPointRef>8591315</ojp:OriginStopPointRef>
-							<ojp:OriginText>
-								<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
-							</ojp:OriginText>
-							<ojp:DestinationStopPointRef>8591049</ojp:DestinationStopPointRef>
-							<ojp:DestinationText>
-								<ojp:Text xml:lang="de">Zürich, Auzelg</ojp:Text>
-							</ojp:DestinationText>
-						</ojp:Service>
-						<ojp:Extension>
-							<ojp:TransportTypeName>
-								<ojp:Text xml:lang="de">Tram</ojp:Text>
-							</ojp:TransportTypeName>
-							<ojp:PublishedJourneyNumber>
-								<ojp:Text xml:lang="de">8630</ojp:Text>
-							</ojp:PublishedJourneyNumber>
-						</ojp:Extension>
-					</ojp:StopEvent>
-				</ojp:StopEventResult>
-			</ojp:OJPStopEventDelivery>
+									<Name>
+										<Text xml:lang="de">Tram</Text>
+									</Name>
+									<ShortName>
+										<Text xml:lang="de">T</Text>
+									</ShortName>
+								</Mode>
+								<PublishedServiceName>
+									<Text>11</Text>
+								</PublishedServiceName>
+								<OperatorRefs>
+									<OperatorRef>3849</OperatorRef>
+								</OperatorRefs>
+								<Attribute>
+									<Text>
+										<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+									</Text>
+									<Code>A__OM</Code>
+								</Attribute>
+							</ServiceSection>
+							<OriginStopPointRef>8591315</OriginStopPointRef>
+							<OriginText>
+								<Text xml:lang="de">Zürich, Rehalp</Text>
+							</OriginText>
+							<DestinationStopPointRef>8591049</DestinationStopPointRef>
+							<DestinationText>
+								<Text xml:lang="de">Zürich, Auzelg</Text>
+							</DestinationText>
+						</Service>
+						<Extension>
+							<TransportTypeName>
+								<Text xml:lang="de">Tram</Text>
+							</TransportTypeName>
+							<PublishedJourneyNumber>
+								<Text xml:lang="de">8630</Text>
+							</PublishedJourneyNumber>
+						</Extension>
+					</StopEvent>
+				</StopEventResult>
+			</OJPStopEventDelivery>
 		</siri:ServiceDelivery>
-	</siri:OJPResponse>
-</siri:OJP>
+	</OJPResponse>
+</OJP>
