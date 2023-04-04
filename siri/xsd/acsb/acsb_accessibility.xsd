@@ -56,7 +56,7 @@ Rail transport, Roads and road transport
 	</xsd:annotation>
 	<xsd:include schemaLocation="acsb_limitations.xsd"/>
 	<xsd:include schemaLocation="acsb_passengerMobility.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_time.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
 	<!--===========================================================================================-->
 	<xsd:simpleType name="LimitationIdType">
 		<xsd:annotation>

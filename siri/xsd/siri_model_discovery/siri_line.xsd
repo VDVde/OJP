@@ -79,8 +79,8 @@ Rail transport, Roads and road transport
 	</xsd:annotation>
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="../siri_model/siri_journey.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_stop.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_location.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
+	<!-- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_location.xsd"/> -->
 	<xsd:include schemaLocation="siri_stopPoint.xsd"/>
 	<!-- ======================================================================= -->
 	<!-- === LINE =================================================== -->

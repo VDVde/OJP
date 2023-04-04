@@ -64,7 +64,7 @@ Rail transport, Roads and road transport
 	<xsd:include schemaLocation="../siri_utility/siri_participant.xsd"/>
 	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
 	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries.xsd"/>
+	<!-- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries.xsd"/> -->
 	<!-- ==Situation Reference as a single field : Participant + SITUATION Number + SITUATION Version=================================================================== -->
 	<xsd:group name="SituationReferenceGroup">
 		<xsd:annotation>
