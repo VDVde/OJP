@@ -184,7 +184,7 @@
 			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="ObjectIdType"/>
-	</xs:simpleType>	
+	</xs:simpleType>
 	<xs:complexType name="StopEventResultStructure">
 		<xs:annotation>
 			<xs:documentation>Wrapper element for a single stop event result.</xs:documentation>

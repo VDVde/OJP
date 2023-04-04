@@ -428,7 +428,7 @@
 			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="ObjectIdType"/>
-	</xs:simpleType>		
+	</xs:simpleType>
 	<xs:complexType name="PlaceStructure">
 		<xs:annotation>
 			<xs:documentation>geographic PLACE of any type which may be specified as the origin or destination of a trip</xs:documentation>

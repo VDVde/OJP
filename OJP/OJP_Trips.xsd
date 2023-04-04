@@ -461,7 +461,7 @@
 			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="ObjectIdType"/>
-	</xs:simpleType>		
+	</xs:simpleType>
 	<xs:complexType name="TripStructure">
 		<xs:annotation>
 			<xs:documentation>[an extended form of PT TRIP in TM and NeTEx as it also includes the initial and final access legs to and from public transport] whole journey from passenger origin to passenger destination in one or more LEGs </xs:documentation>
@@ -522,7 +522,7 @@
 			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="ObjectIdType"/>
-	</xs:simpleType>		
+	</xs:simpleType>
 	<xs:complexType name="LegStructure">
 		<xs:annotation>
 			<xs:documentation>a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)</xs:documentation>
@@ -1376,7 +1376,7 @@
 			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="ObjectIdType"/>
-	</xs:simpleType>		
+	</xs:simpleType>
 	<xs:complexType name="MultiPointTripResultStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for a multipoint trip result and associated problems</xs:documentation>
