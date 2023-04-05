@@ -137,7 +137,7 @@
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this FARE result.</xs:documentation>
 				</xs:annotation>

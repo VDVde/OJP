@@ -699,7 +699,7 @@
 			<xs:documentation>Structure of a Single Trip Fare Request result</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Result-specific error messages.</xs:documentation>
 				</xs:annotation>
@@ -851,17 +851,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="FareProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to FARE requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="FareProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the FARE problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="FareProblemType" type="FareProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

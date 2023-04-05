@@ -112,7 +112,7 @@
 			<xs:documentation>TripInfo result structure containing the current status of a trip.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Problem" type="TripInfoProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this TripInfo result.</xs:documentation>
 				</xs:annotation>
@@ -187,16 +187,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="TripInfoProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to TripInfo requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="TripInfoProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the TripInfo problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="TripInfoProblemType" type="TripInfoProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

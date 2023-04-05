@@ -14,16 +14,34 @@
 	<xs:annotation>
 		<xs:documentation>========================================== General ==========================================</xs:documentation>
 	</xs:annotation>
+	<xs:element name="OJPError" type="OJPErrorStructure" substitutionGroup="siri:OtherError">
+		<xs:annotation>
+			<xs:documentation>Error: All OJP related errors.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="OJPErrorStructure">
+		<xs:annotation>
+			<xs:documentation>Type for Error: OJP Error.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="siri:OtherErrorStructure">
+				<xs:sequence>
+					<xs:element ref="ErrorType"/>
+					<xs:group ref="ProblemDetailGroup" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>ProblemDetailGroup</xs:documentation>
+						</xs:annotation>
+					</xs:group>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ErrorType" type="xs:string" abstract="true"/>
 	<xs:group name="ProblemDetailGroup">
 		<xs:annotation>
 			<xs:documentation>Detailed description of the problem.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Title" type="InternationalTextStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Title of the problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="Details" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Explanation of the problem.</xs:documentation>
