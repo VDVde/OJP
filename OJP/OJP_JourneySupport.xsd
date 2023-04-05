@@ -253,7 +253,7 @@
 	</xs:complexType>
 	<xs:complexType name="TripLocationStructure">
 		<xs:annotation>
-			<xs:documentation>A trip location represents the current logical position of a  journey service. It can be used similarly to a place e.g. for starting a new trip requests from within this service. A trip location does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
+			<xs:documentation>A trip location represents the current logical position of a journey service. It can be used similarly to a place e.g. for starting a new trip request from within this service. A trip location does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="OperatingDayRef"/>
