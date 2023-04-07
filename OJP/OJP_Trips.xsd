@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri"  xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning</xs:documentation>
 	</xs:annotation>
+	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../siri/xsd/ifopt/ifopt_allStopPlace.xsd"/>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
@@ -106,6 +107,18 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:complexType name="AccessModesListOfEnumerations">
+		<xs:annotation>
+			<xs:documentation>List of Access Modes.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AccessMode" type="ifopt:AccessModesEnumeration" minOccurs="0">
+			<xs:annotation>
+				<xs:documentation>Access mode that should be considered.</xs:documentation>
+			</xs:annotation>			
+			</xs:element>		
+		</xs:sequence>	
+	</xs:complexType>
 	<xs:group name="TripPolicyGroup">
 		<xs:annotation>
 			<xs:documentation>Policies that control the trip search behaviour.</xs:documentation>
@@ -115,6 +128,21 @@
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Sequence of all passenger categories, for which this search shall be conducted. In rare cases (e.g. demand responsive, special areas are covered for seniors).</xs:documentation>
+				</xs:annotation>
+				</xs:element>			
+			<xs:element name="AccessModeList" type="AccessModesListOfEnumerations" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Access modes needed/supported for the trip. E.g. if one goes by car, then only ferry and carTransportRail may be possible for public transport. For dragLift skis or a snowboard may be necessary. When nothing is provided in the time table, then foot and bicycle should be assumed by the trip planner.</xs:documentation>
+				</xs:annotation>			
+			</xs:element>
+			<xs:element name="IncludePrivateLines" type="xs:boolean" minOccurs="0" default="false">
+				<xs:annotation>
+					<xs:documentation>There might exist lines that have special restrictions are not available to the public. E.g. school buses, company shuttles. If this flag is set, then the private lines are considered by the router. The results are marked as private with a hint to the restriction.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

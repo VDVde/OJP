@@ -216,7 +216,7 @@
 	</xs:group>
 	<xs:group name="PrivateServiceGroup">
 		<xs:annotation>
-			<xs:documentation>specific service operated by a Private Mode</xs:documentation>
+			<xs:documentation>specific service operated by a Private Mode. May also be a school bus, a company shuttle or some other transport opportunity for a (normally) closed community.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="JourneyRef" minOccurs="0"/>
@@ -225,6 +225,11 @@
 					<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals </xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Description" type="siri:NaturalLanguageStringStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Description of the private service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="OrganisationRef" type="siri:OperatorRefStructure" minOccurs="0"/>
 			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
