@@ -132,7 +132,7 @@
 			</xs:element>
 			<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Sequence of all passenger categories, for which this search shall be conducted. In rare cases (e.g. demand responsive, special areas are covered for seniors).</xs:documentation>
+					<xs:documentation>Sequence of all passenger categories, for which this search shall be conducted. In rare cases additional offerings may be available (e.g., demand responsive service with certain areas being reserved for seniors).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessModeList" type="AccessModesListOfEnumerations" minOccurs="0">
