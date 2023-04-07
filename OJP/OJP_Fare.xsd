@@ -214,7 +214,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="FareProductRef"/>
-			<xs:element name="FromTripIdRef" type="LegObjectIdType">
+			<xs:element name="FromTripIdRef" type="TripObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid from" trip.</xs:documentation>
 				</xs:annotation>
