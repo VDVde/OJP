@@ -402,7 +402,7 @@
 			<xs:documentation>Structure for trip overview information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripId" type="ObjectIdType">
+			<xs:element name="TripId" type="TripObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -1508,7 +1508,7 @@
 					<xs:documentation>If true, then the request may contain object references from another system. Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RefineLegRef" type="xs:NMTOKEN" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="RefineLegRef" type="LegObjectIdType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Refers to the legs to be refined by the server. If none is given, then all legs are open for refinement (depending if the relevant system can refine them).</xs:documentation>
 				</xs:annotation>
@@ -1546,7 +1546,7 @@
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UnknownLegRef" type="xs:NMTOKEN" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="UnknownLegRef" type="LegObjectIdType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Refers to a leg that was not found in the data of the server. If the to be refined TripResult could not be found or unequivocally determined, all RefineLegRefs are returned as UnknownLegRefs.</xs:documentation>
 				</xs:annotation>
