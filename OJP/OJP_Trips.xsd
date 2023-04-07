@@ -134,11 +134,11 @@
 				<xs:annotation>
 					<xs:documentation>Sequence of all passenger categories, for which this search shall be conducted. In rare cases (e.g. demand responsive, special areas are covered for seniors).</xs:documentation>
 				</xs:annotation>
-				</xs:element>			
+			</xs:element>
 			<xs:element name="AccessModeList" type="AccessModesListOfEnumerations" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Access modes needed/supported for the trip. E.g. if one goes by car, then only ferry and carTransportRail may be possible for public transport. For dragLift skis or a snowboard may be necessary. When nothing is provided in the time table, then foot and bicycle should be assumed by the trip planner.</xs:documentation>
-				</xs:annotation>			
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludePrivateLines" type="xs:boolean" minOccurs="0" default="false">
 				<xs:annotation>
