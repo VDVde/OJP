@@ -378,7 +378,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="ServiceTimeGroup"/>
-			<xs:element ref="siri:DepartureFormationAssignment" minOccurs="0"/>
+			<xs:element ref="siri:DepartureFormationAssignment" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="CallAtStopStructure">
