@@ -127,12 +127,18 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="FareResultObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>
 	<xs:complexType name="FareResultStructure">
 		<xs:annotation>
 			<xs:documentation>Wrapper element for Fare results.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="FareResultObjectIdType">
 				<xs:annotation>
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
@@ -208,22 +214,22 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="FareProductRef"/>
-			<xs:element name="FromTripIdRef" type="ObjectIdType">
+			<xs:element name="FromTripIdRef" type="TripObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid from" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FromLegIdRef" type="ObjectIdType" minOccurs="0">
+			<xs:element name="FromLegIdRef" type="LegObjectIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid from" LEG. If missing, then valid from the first LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToTripIdRef" type="ObjectIdType">
+			<xs:element name="ToTripIdRef" type="TripObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid to" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToLegIdRef" type="ObjectIdType" minOccurs="0">
+			<xs:element name="ToLegIdRef" type="LegObjectIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid to" LEG. If missing, then valid to the last LEG.</xs:documentation>
 				</xs:annotation>
