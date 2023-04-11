@@ -137,7 +137,7 @@
 			</xs:element>
 			<xs:element name="AccessModeList" type="AccessModesListOfEnumerations" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Access modes needed/supported for the trip. E.g. if one goes by car, then only ferry and carTransportRail may be possible for public transport. For dragLift skis or a snowboard may be necessary. When nothing is provided in the time table, then foot and bicycle should be assumed by the trip planner.</xs:documentation>
+					<xs:documentation>Access modes that are available to the traveller for the trip. The requester can tell the system what he might use as an access mode (e.g., car, motorcycle, ski) and it's the system's responsibility to know which access modes are supported or required by each service (thus no need for needed and supported. E.g. if one goes by car, then only ferry and carTransportRail may be possible for public transport. If the traveler has skis or a snowboard with him, then dragLifts can show up in the results to a search. When nothing is provided in the time table, then foot and bicycle should be assumed by the trip planner.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludePrivateLines" type="xs:boolean" minOccurs="0" default="false">
