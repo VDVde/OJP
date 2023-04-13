@@ -662,7 +662,7 @@
 					<xs:documentation>The maximum number of interchanges the user will accept per trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration">
+			<xs:element name="OptimisationMethod" type="OptimisationMethodEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The type of algorithm to be used in the calculation of the trip (fastest, least walking, etc.).</xs:documentation>
 				</xs:annotation>
