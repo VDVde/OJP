@@ -241,12 +241,12 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="fastest">
 				<xs:annotation>
-					<xs:documentation>Shortest duration somewhere in the future. This may present a shorter trip than the next earliest arrival (with latest departure).</xs:documentation>
+					<xs:documentation>Shortest duration somewhere in the future. This may present a shorter trip than the next earliest arrival (with latest departure). Core strategy.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="minChanges">
 				<xs:annotation>
-					<xs:documentation>Minimise the number of interchanges as the first criterion.</xs:documentation>
+					<xs:documentation>Minimise the number of interchanges as the first criterion. Core strategy.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="leastWalking">
@@ -256,7 +256,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="leastCost">
 				<xs:annotation>
-					<xs:documentation>Cheapest fare, taking into account the applicable reductions. Might not base on actual cost, but an estimation.</xs:documentation>
+					<xs:documentation>Cheapest fare, taking into account the applicable reductions. Might not base on actual cost, but an estimation. Core strategy.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="leastDistance">
