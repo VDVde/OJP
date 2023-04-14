@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified" id="OJP_siri_service">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_Status.xsd - OJP Status request and response</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_modes-v1.1.xsd"/>
+	<xs:annotation>
+		<xs:documentation>=============================== Status Service ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="StatusProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to status requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="STATUS_INSTANCE_USAGE_DEPRECATED">
+				<xs:annotation>
+					<xs:documentation>Usage of this instance is deprecated. Contact the provider for more information.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="STATUS_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="StatusProblemType" type="StatusProblemTypeEnumeration" substitutionGroup="ErrorType"/>
+	<xs:element name="OJPStatusResponse" type="OJPStatusResponseStructure" substitutionGroup="siri:AbstractFunctionalServiceCapabilitiesResponse"/>
+	<xs:complexType name="OJPStatusResponseStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceCapabilitiesResponseStructure">
+				<xs:sequence>
+					<xs:group ref="ServiceResponseContextGroup"/>
+					<xs:group ref="OJPStatusResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>=============================== Status Response Group ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="OJPStatusResponseGroup">
+		<xs:annotation>
+			<xs:documentation>Status response group.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ServiceStarted" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Time when the service was started.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ServiceReady" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Time when the service started responding to queries.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastTimetableUpdate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Time when the timetable was last updated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ServerBuildVersion" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Information about the server build.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+</xs:schema>

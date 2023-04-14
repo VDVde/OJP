@@ -18,15 +18,6 @@
 			<xs:enumeration value="economy"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="Percentage">
-		<xs:annotation>
-			<xs:documentation>A percentage value between 0 and 100</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:decimal">
-			<xs:minInclusive value="0.0"/>
-			<xs:maxInclusive value="100.0"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Fare Authority ==========================================</xs:documentation>
 	</xs:annotation>
