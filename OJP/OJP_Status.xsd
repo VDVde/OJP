@@ -26,7 +26,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:element name="StatusProblemType" type="StatusProblemTypeEnumeration" substitutionGroup="ErrorType"/>	
+	<xs:element name="StatusProblemType" type="StatusProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 	<xs:element name="OJPStatusResponse" type="OJPStatusResponseStructure" substitutionGroup="siri:AbstractFunctionalServiceCapabilitiesResponse"/>
 	<xs:complexType name="OJPStatusResponseStructure">
 		<xs:complexContent>
