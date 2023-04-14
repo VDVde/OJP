@@ -9,6 +9,24 @@
 	<xs:annotation>
 		<xs:documentation>=============================== Status Service ==========================================</xs:documentation>
 	</xs:annotation>
+	<xs:simpleType name="StatusProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to status requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="STATUS_SERVICE_DEPRECIATED">
+				<xs:annotation>
+					<xs:documentation>The status service is depreciated.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="STATUS_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="StatusProblemType" type="StatusProblemTypeEnumeration" substitutionGroup="ErrorType"/>	
 	<xs:element name="OJPStatusResponse" type="OJPStatusResponseStructure" substitutionGroup="siri:AbstractFunctionalServiceCapabilitiesResponse"/>
 	<xs:complexType name="OJPStatusResponseStructure">
 		<xs:complexContent>
