@@ -107,37 +107,37 @@
 									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 									<ojp:JourneyRef>ojp:91011:A:H:j20:255</ojp:JourneyRef>
 									<ojp:ServiceSection>
-									<siri:LineRef>ojp:91011:A</siri:LineRef>
-									<siri:DirectionRef>H</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>tram</ojp:PtMode>
-										<siri:TramSubmode>cityTram</siri:TramSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Tram</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">T</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>11</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Niederflureinstieg</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__NF</ojp:Code>
-									</ojp:Attribute>
-									</ojp:ServiceSection>								
+										<siri:LineRef>ojp:91011:A</siri:LineRef>
+										<siri:DirectionRef>H</siri:DirectionRef>
+										<ojp:Mode>
+											<ojp:PtMode>tram</ojp:PtMode>
+											<siri:TramSubmode>cityTram</siri:TramSubmode>
+											<ojp:Name>
+												<ojp:Text xml:lang="de">Tram</ojp:Text>
+											</ojp:Name>
+											<ojp:ShortName>
+												<ojp:Text xml:lang="de">T</ojp:Text>
+											</ojp:ShortName>
+										</ojp:Mode>
+										<ojp:PublishedServiceName>
+											<ojp:Text>11</ojp:Text>
+										</ojp:PublishedServiceName>
+										<ojp:OperatorRefs>
+											<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
+										</ojp:OperatorRefs>
+										<ojp:Attribute>
+											<ojp:Text>
+												<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+											</ojp:Text>
+											<ojp:Code>A__OM</ojp:Code>
+										</ojp:Attribute>
+										<ojp:Attribute>
+											<ojp:Text>
+												<ojp:Text xml:lang="de">Niederflureinstieg</ojp:Text>
+											</ojp:Text>
+											<ojp:Code>A__NF</ojp:Code>
+										</ojp:Attribute>
+									</ojp:ServiceSection>
 									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
 									<ojp:DestinationText>
 										<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
