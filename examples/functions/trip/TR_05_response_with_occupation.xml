@@ -106,6 +106,7 @@
 								<ojp:Service>
 									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 									<ojp:JourneyRef>ojp:91011:A:H:j20:255</ojp:JourneyRef>
+									<ojp:ServiceSection>
 									<siri:LineRef>ojp:91011:A</siri:LineRef>
 									<siri:DirectionRef>H</siri:DirectionRef>
 									<ojp:Mode>
@@ -136,6 +137,7 @@
 										</ojp:Text>
 										<ojp:Code>A__NF</ojp:Code>
 									</ojp:Attribute>
+									</ojp:ServiceSection>								
 									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
 									<ojp:DestinationText>
 										<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>

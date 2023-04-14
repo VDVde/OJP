@@ -59,6 +59,7 @@
 								<ojp:Service>
 									<ojp:OperatingDayRef>2020-09-30</ojp:OperatingDayRef>
 									<ojp:JourneyRef>ojp:910DG:Y:R:j20:210</ojp:JourneyRef>
+									<ojp:ServiceSection>
 									<siri:LineRef>ojp:910DG:Y</siri:LineRef>
 									<siri:DirectionRef>R</siri:DirectionRef>
 									<ojp:Mode>
@@ -96,6 +97,7 @@
 										</ojp:Text>
 										<ojp:Code>A__OM</ojp:Code>
 									</ojp:Attribute>  -->
+									</ojp:ServiceSection>							
 									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
 									<ojp:DestinationText>
 										<ojp:Text xml:lang="de">Luzern</ojp:Text>
