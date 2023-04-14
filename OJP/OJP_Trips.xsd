@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== TripRequest definitions ==========================================</xs:documentation>
@@ -352,17 +352,23 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="TripResultObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>
 	<xs:complexType name="TripResultStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for a single trip result and associated problems.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="TripResultObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="TripProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this Trip result.</xs:documentation>
 				</xs:annotation>
@@ -384,7 +390,7 @@
 					<xs:documentation>Fare and fare product information for this trip as a whole or parts of it.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IsAlternativeOption" type="xs:boolean" minOccurs="0" default="false">
+			<xs:element name="IsAlternativeOption" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>When the result is an alternative option from IncludeAlternativeOptions, then the flag should be set to true. If it is an alternative option this means that the server decided to add this result for its own reasons: e.g. to push a certain trip leg, because it believes that it might better suit at least some possible customers. Such options are not an optimal fit to the criteria that were in the request. The client may therefore disregard such results depending on the use case.</xs:documentation>
 				</xs:annotation>
@@ -396,7 +402,7 @@
 			<xs:documentation>Structure for trip overview information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TripId" type="ObjectIdType">
+			<xs:element name="TripId" type="TripObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -450,12 +456,18 @@
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="TripObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>
 	<xs:complexType name="TripStructure">
 		<xs:annotation>
 			<xs:documentation>[an extended form of PT TRIP in TM and NeTEx as it also includes the initial and final access legs to and from public transport] whole journey from passenger origin to passenger destination in one or more LEGs </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="TripObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip for referencing purposes. Unique within trip response.</xs:documentation>
 				</xs:annotation>
@@ -505,12 +517,18 @@
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="LegObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>
 	<xs:complexType name="LegStructure">
 		<xs:annotation>
 			<xs:documentation>a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="LegObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this leg. Unique within trip result.</xs:documentation>
 				</xs:annotation>
@@ -1216,7 +1234,7 @@
 					<xs:documentation>Official name of the level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Id" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="Id" type="PlaceObjectIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Id of the element at this end of the PathLink (typically a PLACE, e.g. where the elevator is located).</xs:documentation>
 				</xs:annotation>
@@ -1353,17 +1371,23 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="MultiPointTripResultObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>
 	<xs:complexType name="MultiPointTripResultStructure">
 		<xs:annotation>
 			<xs:documentation>Structure for a multipoint trip result and associated problems</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="MultiPointTripResultObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Id of this trip result for referencing purposes. Unique within multipoint-trip response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="TripProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this trip result.</xs:documentation>
 				</xs:annotation>
@@ -1462,6 +1486,18 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:group name="TripRefinementDataFilterGroup">
+		<xs:annotation>
+			<xs:documentation>Request data filters for Refinement</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
 	<xs:complexType name="TripRefineParamStructure">
 		<xs:annotation>
 			<xs:documentation>Trip refinement request parameter structure.</xs:documentation>
@@ -1472,9 +1508,14 @@
 					<xs:documentation>If true, then the request may contain object references from another system. Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RefineLegRef" type="xs:NMTOKEN" maxOccurs="unbounded">
+			<xs:element name="RefineLegRef" type="LegObjectIdType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Refers to a leg to be refined by the server.</xs:documentation>
+					<xs:documentation>Refers to the legs to be refined by the server. If none is given, then all legs are open for refinement (depending if the relevant system can refine them).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
@@ -1482,6 +1523,7 @@
 					<xs:documentation>Usage of real-time data in refinement. Default is "full".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:group ref="TripRefinementDataFilterGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
 				<xs:annotation>
@@ -1504,7 +1546,7 @@
 					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UnknownLegRef" type="xs:NMTOKEN" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="UnknownLegRef" type="LegObjectIdType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Refers to a leg that was not found in the data of the server. If the to be refined TripResult could not be found or unequivocally determined, all RefineLegRefs are returned as UnknownLegRefs.</xs:documentation>
 				</xs:annotation>
@@ -1629,6 +1671,26 @@
 					<xs:documentation>Too many points have been requested as departure or arrival.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED">
+				<xs:annotation>
+					<xs:documentation>The indicated multipoint type is not supported.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_REFINE_LEG_UNKNOWN">
+				<xs:annotation>
+					<xs:documentation>Indicated legs do not exist.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="REFINE_OBJECTNOTFOUND">
+				<xs:annotation>
+					<xs:documentation>The object to be refined could not be found in the database of the responding system or could not be found unequivocally.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="REFINE_PROFILENOTSUPPORTED">
+				<xs:annotation>
+					<xs:documentation>Refinement does not support the hiking or cycling profile.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="TRIP_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
@@ -1636,17 +1698,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="TripProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to trip requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="TripProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the trip problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="TripProblemType" type="TripProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

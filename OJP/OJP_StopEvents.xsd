@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_StopEvents.xsd - Request and response definitions for arrivals and departures of public transport services at stops</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
@@ -179,17 +179,23 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="StopEventResultObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>
 	<xs:complexType name="StopEventResultStructure">
 		<xs:annotation>
 			<xs:documentation>Wrapper element for a single stop event result.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="StopEventResultObjectIdType">
 				<xs:annotation>
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="StopEventProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this STOPEVENT result.</xs:documentation>
 				</xs:annotation>
@@ -302,17 +308,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="StopEventProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to STOPEVENT requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="StopEventProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the STOPEVENT problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="StopEventProblemType" type="StopEventProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

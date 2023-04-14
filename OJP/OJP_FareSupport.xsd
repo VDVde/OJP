@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_FareSupport.xsd - Supporting definitions for fare information on passenger trips</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:simpleType name="TypeOfFareClassEnumeration">
 		<xs:annotation>
@@ -682,12 +682,12 @@
 			<xs:documentation>Range of LEGs (from - to) for which a Fare result (ticket) is valid.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="FromLegIdRef" type="xs:NMTOKEN">
+			<xs:element name="FromLegIdRef" type="LegObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid from" LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToLegIdRef" type="xs:NMTOKEN">
+			<xs:element name="ToLegIdRef" type="LegObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid to" LEG.</xs:documentation>
 				</xs:annotation>
@@ -699,7 +699,7 @@
 			<xs:documentation>Structure of a Single Trip Fare Request result</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Result-specific error messages.</xs:documentation>
 				</xs:annotation>
@@ -851,17 +851,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="FareProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to FARE requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="FareProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the FARE problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="FareProblemType" type="FareProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

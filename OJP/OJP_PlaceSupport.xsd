@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_PlaceSupport.xsd - Supporting definitions for location information</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== Stop Points ==========================================</xs:documentation>
@@ -423,6 +423,12 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Places ==========================================</xs:documentation>
 	</xs:annotation>
+	<xs:simpleType name="PlaceObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>
 	<xs:complexType name="PlaceStructure">
 		<xs:annotation>
 			<xs:documentation>geographic PLACE of any type which may be specified as the origin or destination of a trip</xs:documentation>
@@ -566,19 +572,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="LocationProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to LOCATION requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="LocationProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the LOCATION problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="LocationProblemType" type="LocationProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 	<xs:simpleType name="ExchangePointsProblemTypeEnumeration">
 		<xs:annotation>
 			<xs:documentation>Types of problems that may be returned in responses to EXCHANGE POINTS requests</xs:documentation>
@@ -606,17 +600,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="ExchangePointsProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to EXCHANGE POINTS requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="ExchangePointsProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the EXCHANGE POINTS problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="ExchangePointsProblemType" type="ExchangePointsProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

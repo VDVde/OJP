@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Fare.xsd - Request and response definitions for general, stop-specific and trip-specific fare information</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== Request definitions ==========================================</xs:documentation>
@@ -69,7 +69,11 @@
 					<xs:documentation>Date for which to retrieve Fare information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="FareProductRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="FareProductRef" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to a FareProduct. If no FareProductRef is specified the responding system should reply with information about all available fare products.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TripFareRequestStructure">
@@ -123,17 +127,23 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="FareResultObjectIdType">
+		<xs:annotation>
+			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="ObjectIdType"/>
+	</xs:simpleType>
 	<xs:complexType name="FareResultStructure">
 		<xs:annotation>
 			<xs:documentation>Wrapper element for Fare results.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Id" type="ObjectIdType">
+			<xs:element name="Id" type="FareResultObjectIdType">
 				<xs:annotation>
 					<xs:documentation>ID of this result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="FareProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this FARE result.</xs:documentation>
 				</xs:annotation>
@@ -204,22 +214,22 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="FareProductRef"/>
-			<xs:element name="FromTripIdRef" type="xs:NMTOKEN">
+			<xs:element name="FromTripIdRef" type="TripObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid from" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FromLegIdRef" type="xs:NMTOKEN" minOccurs="0">
+			<xs:element name="FromLegIdRef" type="LegObjectIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid from" LEG. If missing, then valid from the first LEG.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToTripIdRef" type="xs:NMTOKEN">
+			<xs:element name="ToTripIdRef" type="TripObjectIdType">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid to" trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToLegIdRef" type="xs:NMTOKEN" minOccurs="0">
+			<xs:element name="ToLegIdRef" type="LegObjectIdType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Identifies the "valid to" LEG. If missing, then valid to the last LEG.</xs:documentation>
 				</xs:annotation>

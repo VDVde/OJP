@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_JourneySupport.xsd - Supporting definitions for journeys on public transport vehicles</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:complexType name="ServiceViaPointStructure">
 		<xs:annotation>
@@ -283,7 +283,7 @@
 	</xs:complexType>
 	<xs:complexType name="TripLocationStructure">
 		<xs:annotation>
-			<xs:documentation>A trip location represents the current logical position of a  journey service. It can be used similarly to a place e.g. for starting a new trip requests from within this service. A trip location does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
+			<xs:documentation>A trip location represents the current logical position of a journey service. It can be used similarly to a place e.g. for starting a new trip request from within this service. A trip location does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="OperatingDayRef"/>
@@ -426,6 +426,18 @@
 					<xs:documentation>Alighting will not be allowed at this stop of this journey.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:sequence>
+				<xs:element ref="siri:ExpectedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>The Occupancy structure from SIRI can be used here. It is recommended to mainly have one ExpectedDepartureOccupancy for each FareClass and mainly focus on OccupancyLevel and OccupancyPercentage. For more details have a look at the SIRI documentation.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="siri:ExpectedDepartureCapacities" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>The Capacity structure also will probably rarely be used and parsed. When used, then it mainly show elements that are important for accessibility.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="ServiceStatusGroup">

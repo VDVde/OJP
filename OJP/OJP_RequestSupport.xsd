@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_RequestSupport.xsd - Supporting definitions for OJP service requests and their responses</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== Simple Types ==========================================</xs:documentation>
@@ -74,7 +74,7 @@
 					<xs:documentation>Calculation time.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Problem" type="OJPGenericProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>OJP generic problem for the whole delivery.</xs:documentation>
 				</xs:annotation>
@@ -172,6 +172,11 @@
 					<xs:documentation>The server cannot provide the requested data frame (data version).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="OJPGENERIC_SYSTEMID_NOT_FOUND">
+				<xs:annotation>
+					<xs:documentation>The server was not able to work with the SystemID that was provided.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="OJPGENERIC_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
@@ -179,17 +184,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="OJPGenericProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in case of generic problems with the request.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="OJPGenericProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the generic problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="OJPGenericProblemType" type="OJPGenericProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>

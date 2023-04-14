@@ -3,7 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Lines.xsd - Request and response definitions for information on lines</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>=============================== Line Information Service ==========================================</xs:documentation>
@@ -24,7 +24,7 @@
 	</xs:annotation>
 	<xs:complexType name="LineResultStructure">
 		<xs:sequence>
-			<xs:element name="Problem" type="LineInformationProblemStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Problems related to this Line result.</xs:documentation>
 				</xs:annotation>
@@ -47,6 +47,11 @@
 			<xs:element name="RouteGeometry" type="LinearShapeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The LINE's route geometry. A line can have multiple ROUTEs and each has its own geometry. The first should be the "main" geometry.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AreaGeometry" type="AreaStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The LINE's main area. Used for MOBILITY SERVICES that cover one or more areas. The interconnection between the areas is not calculated (e.g. exclusion zones can't be modelled). Don't mix RouteGeometry and AreaGeometry in a response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Mode" type="ModeStructure" minOccurs="0" maxOccurs="unbounded">
@@ -76,17 +81,5 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="LineInformationProblemStructure">
-		<xs:annotation>
-			<xs:documentation>Problem that may be returned in responses to LINE information requests.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Type" type="LineInformationProblemTypeEnumeration">
-				<xs:annotation>
-					<xs:documentation>Type of the LINE information problem.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="ProblemDetailGroup"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="LineInformationProblemType" type="LineInformationProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>
