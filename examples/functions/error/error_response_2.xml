@@ -41,6 +41,7 @@
 					<ojp:Service>
 						<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 						<ojp:JourneyRef>ojp:91011:A:R:j20:719</ojp:JourneyRef>
+						<ojp:ServiceSection>
 						<siri:LineRef>ojp:91011:A</siri:LineRef>
 						<siri:DirectionRef>R</siri:DirectionRef>
 						<ojp:Mode>
@@ -59,6 +60,7 @@
 						<ojp:OperatorRefs>
 							<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
 						</ojp:OperatorRefs>
+						</ojp:ServiceSection>						
 						<ojp:OriginStopPointRef>8591315</ojp:OriginStopPointRef>
 						<ojp:OriginText>
 							<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
