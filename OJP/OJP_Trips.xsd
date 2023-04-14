@@ -112,7 +112,7 @@
 			<xs:documentation>List of Access Modes.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="AccessMode" type="ifopt:AccessModesEnumeration" minOccurs="0">
+			<xs:element name="AccessMode" type="ifopt:AccessModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Access mode that should be considered.</xs:documentation>
 				</xs:annotation>
