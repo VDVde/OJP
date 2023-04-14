@@ -5,18 +5,13 @@
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	<xs:simpleType name="TypeOfFareClassEnumeration">
+	<xs:simpleType name="Percentage">
 		<xs:annotation>
-			<xs:documentation>classes of travel available on a particular service which will affect the price to be paid</xs:documentation>
+			<xs:documentation>A percentage value between 0 and 100</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:NMTOKEN">
-			<xs:enumeration value="all"/>
-			<xs:enumeration value="first"/>
-			<xs:enumeration value="second"/>
-			<xs:enumeration value="third"/>
-			<xs:enumeration value="business"/>
-			<xs:enumeration value="economy"/>
-			<xs:enumeration value="unknown"/>
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0.0"/>
+			<xs:maxInclusive value="100.0"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
@@ -607,9 +602,9 @@
 			<xs:documentation>conditions of use for a particular FARE PRODUCT.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TravelClass" type="TypeOfFareClassEnumeration" minOccurs="0">
+			<xs:element name="FareClass" type="siri:FareClassEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Travel class for which the FareProduct is valid.</xs:documentation>
+					<xs:documentation>Fare class for which the FareProduct is valid.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RequiredCard" type="EntitlementProductStructure" minOccurs="0" maxOccurs="unbounded">
@@ -768,9 +763,9 @@
 					<xs:documentation>sequence of all passenger categories, for which this FareProduct is valid</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TravelClass" type="TypeOfFareClassEnumeration" minOccurs="0">
+			<xs:element name="FareClass" type="siri:FareClassEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Travel class for which to retrieve FareProducts. Refers to TYPE OF FARE CLASS (e.g. first class).</xs:documentation>
+					<xs:documentation>Fare class for which to retrieve FareProducts. Refers to TYPE OF FARE CLASS (e.g. first class).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
