@@ -704,16 +704,16 @@
 					<xs:documentation>The user is not able to use a ramp.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoTravelator" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user is not able to use a travelator.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="NoSight" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The user is not able to see.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="NoTravelator" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The user is not able to use a travelator.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="LevelEntrance" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The user needs vehicles with level entrance between platform and vehicle.</xs:documentation>
@@ -721,7 +721,7 @@
 			</xs:element>
 			<xs:element name="LevelEntranceOrBoardingAid" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The user needs vehicles with level entrance between platform and vehicle, an appropriate ramp, or assistance for boarding or unboarding (for assisted and unassisted wheelchairs, or similar constraints).</xs:documentation>
+					<xs:documentation>The user needs vehicles with level entrance between platform and vehicle, an appropriate ramp, or assistance for boarding or alighting (for assisted and unassisted wheelchairs, or similar constraints).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
