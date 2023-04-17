@@ -274,7 +274,11 @@
 			     <xs:documentation>xxx</xs:documentation
 			  </xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="minStairs"/>
+			<xs:enumeration value="minStairs">
+						  <xs:annotation>
+			     <xs:documentation>xxx</xs:documentation
+			  </xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="bestForVisualImpairment">
 				<xs:annotation>
 					<xs:documentation>The user wants to avoid transfers without tactile guidance, as well as platforms and vehicles without auditory signals.</xs:documentation>
