@@ -35,7 +35,7 @@
 				<ojp:FareAuthorityText>Mybuxi</ojp:FareAuthorityText>
 				<ojp:NetPrice>15</ojp:NetPrice>
 				<ojp:Currency>CHF</ojp:Currency>
-				<ojp:TravelClass>economy</ojp:TravelClass>
+				<ojp:FareClass>economyClass</ojp:FareClass>
 				<ojp:SaleUrl>
 					<ojp:Label>
 						<ojp:Text>MyBuxi</ojp:Text>
@@ -65,7 +65,7 @@
 				<ojp:FareAuthorityText>NOVA</ojp:FareAuthorityText>
 				<ojp:NetPrice>51</ojp:NetPrice>
 				<ojp:Currency>CHF</ojp:Currency>
-				<ojp:TravelClass>second</ojp:TravelClass>
+				<ojp:FareClass>secondClass</ojp:FareClass>
 				<ojp:SaleUrl>
 					<ojp:Label>
 						<ojp:Text>NOVA</ojp:Text>
@@ -80,7 +80,7 @@
 				<ojp:FareAuthorityText>NOVA</ojp:FareAuthorityText>
 				<ojp:NetPrice>75</ojp:NetPrice>
 				<ojp:Currency>CHF</ojp:Currency>
-				<ojp:TravelClass>first</ojp:TravelClass>
+				<ojp:FareClass>firstClass</ojp:FareClass>
 				<ojp:SaleUrl>
 					<ojp:Label>
 						<ojp:Text>NOVA</ojp:Text>

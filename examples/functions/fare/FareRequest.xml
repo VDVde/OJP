@@ -132,7 +132,7 @@
 				<ojp:Params>
 					<ojp:FareAuthorityFilter>ch:1:NOVA</ojp:FareAuthorityFilter>
 					<ojp:PassengerCategory>Adult</ojp:PassengerCategory>
-					<ojp:TravelClass>second</ojp:TravelClass>
+					<ojp:FareClass>secondClass</ojp:FareClass>
 					<ojp:Traveller>
 						<ojp:Age>25</ojp:Age>
 					</ojp:Traveller>
