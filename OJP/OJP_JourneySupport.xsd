@@ -723,7 +723,7 @@
 				<xs:annotation>
 					<xs:documentation>The user needs vehicles with level entrance between platform and vehicle, an appropriate ramp, or assistance for boarding or unboarding (for assisted and unassisted wheelchairs, or similar constraints).</xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="BaseTripContentFilterGroup">

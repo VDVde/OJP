@@ -117,7 +117,7 @@
 				<xs:annotation>
 					<xs:documentation>The user wants to carry a bike on public transport.</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
@@ -270,14 +270,14 @@
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="minNonLevelEntrances">
-			  <xs:annotation>
-			     <xs:documentation>The user wants to minimize non level entrances on the trip. this is useful for PRM who still can use some non-level entrances.</xs:documentation>
-			  </xs:annotation>
+				<xs:annotation>
+					<xs:documentation>The user wants to minimize non level entrances on the trip. this is useful for PRM who still can use some non-level entrances.</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="minStairs">
-						  <xs:annotation>
-			     <xs:documentation>The user wants to minimize stairs and steps on the trip. This is useful for PRM who still can use some steps/stairs.</xs:documentation>
-			  </xs:annotation>
+				<xs:annotation>
+					<xs:documentation>The user wants to minimize stairs and steps on the trip. This is useful for PRM who still can use some steps/stairs.</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="bestForVisualImpairment">
 				<xs:annotation>
@@ -288,7 +288,7 @@
 				<xs:annotation>
 					<xs:documentation>The user wants to avoid transfers without guidance for people with audio impairment, as well as platforms and vehicles without visual signals.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="environmentalSafety">
 				<xs:annotation>
 					<xs:documentation>If set, favour "green" modes/lines such as bike sharing and (electric) trains, avoid or restrict modes/lines known for higher CO2 emissions such as (conventional) taxi, ride-hailing or coach.</xs:documentation>
