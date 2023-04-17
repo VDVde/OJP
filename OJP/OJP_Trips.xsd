@@ -269,7 +269,11 @@
 					<xs:documentation>Combines earliestArrival and latestDeparture, allowing to compress the departure time. (forward-backward-forward search)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="levelEntrance"/>
+			<xs:enumeration value="minNonLevelEntrances">
+			  <xs:annotation>
+			     <xs:documentation>xxx</xs:documentation
+			  </xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="minStairs"/>
 			<xs:enumeration value="bestForVisualImpairment">
 				<xs:annotation>
