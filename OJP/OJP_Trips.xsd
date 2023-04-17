@@ -271,12 +271,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="minNonLevelEntrances">
 			  <xs:annotation>
-			     <xs:documentation>xxx</xs:documentation
+			     <xs:documentation>The user wants to minimize non level entrances on the trip. this is useful for PRM who still can use some non-level entrances.</xs:documentation>
 			  </xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="minStairs">
 						  <xs:annotation>
-			     <xs:documentation>xxx</xs:documentation
+			     <xs:documentation>The user wants to minimize stairs and steps on the trip. This is useful for PRM who still can use some steps/stairs.</xs:documentation>
 			  </xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="bestForVisualImpairment">
