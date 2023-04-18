@@ -286,7 +286,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="bestForAuditoryImpairment">
 				<xs:annotation>
-					<xs:documentation>The user wants to avoid transfers without guidance for people with audio impairment, as well as platforms and vehicles without visual signals.</xs:documentation>
+					<xs:documentation>The user wants to avoid transfers without guidance for people with auditory impairment, as well as platforms and vehicles without visual signs.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="environmentalSafety">
