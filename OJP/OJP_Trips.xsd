@@ -284,7 +284,7 @@
 					<xs:documentation>The user wants to avoid transfers without tactile guidance, as well as platforms and vehicles without auditory signals.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="bestForAudioImpairment">
+			<xs:enumeration value="bestForAuditoryImpairment">
 				<xs:annotation>
 					<xs:documentation>The user wants to avoid transfers without guidance for people with audio impairment, as well as platforms and vehicles without visual signals.</xs:documentation>
 				</xs:annotation>
