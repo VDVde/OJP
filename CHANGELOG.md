@@ -56,7 +56,6 @@ Currently active is [1.0.2]
 * Replaced `TravelClass` with `siri:FareClass` which uses the NeTEx enumeration values. [#354](https://github.com/VDVde/OJP/pull/354)
 * Reorganised `BaseTripPolicyGroup` so as to align the parameters in `MultiPointTripPolicyGroup` with `TripPolicyGroup` [#333](https://github.com/VDVde/OJP/pull/333)
 * Renamed `OJP_Places.xsd` to `OJP_Location.xsd`, `OJP_PlaceSupport.xsd` to `OJP_LocationSupport.xsd`, `OJPPlaceInformationRequest` to `OJPLocationInformationRequest`, as well as the related Delivery, structures and groups; renamed `Place` to `Location` in the StopEvent service and `TripPlace` to `TripLocation`. [#231](https://github.com/VDVde/OJP/pull/231)
-* Updated to SIRI 2.1 using a copy and adapted imports. [#330](https://github.com/VDVde/OJP/pull/330)
 * Corrected several typos.  [#320](https://github.com/VDVde/OJP/pull/320),  [#343](https://github.com/VDVde/OJP/pull/343)
 * Renamed elements in `ExchangePointsResponseGroup`. [#295](https://github.com/VDVde/OJP/pull/295)
 * Removed obsolete code in *OJPRequestSupport.xsd*. [#294](https://github.com/VDVde/OJP/pull/294)
