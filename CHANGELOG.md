@@ -18,6 +18,14 @@ Currently active is [1.0.2]
 
 ### Added
 
+* Added `AreaGeometry` to `LineResultStructure`.  [#337](https://github.com/VDVde/OJP/pull/337)
+* New `OJPErrorStructure` both at the level of the `xDelivery` and at the level of the `xResult`. [#336](https://github.com/VDVde/OJP/pull/336)
+* Added `IsAlternativeOption` to `TripResultStructure`.  [#326](https://github.com/VDVde/OJP/pull/326)
+* Added `FareEstimated` to `FareResultStructure`.  [#324](https://github.com/VDVde/OJP/pull/324)
+* Added `TripContext` to `TripFareRequestStructure` and `MultiTripFareRequestStructure`.  [#323](https://github.com/VDVde/OJP/pull/323)
+* New `OperatorFilter`and `SystemId` in `TripRefineRequest` to indicate the system to be queried. [#298](https://github.com/VDVde/OJP/pull/298)
+* Added `ExpectedDepartureOccupancy` and `ExpectedDepartureCapacities` (from SIRI) to Legs.  [#264](https://github.com/VDVde/OJP/pull/264)
+* New `OJPStatusRequest`and `OJPStatusDelivery`. [#216](https://github.com/VDVde/OJP/pull/216)
 * New `OJPLineInformationRequest` and `OJPLineInformationDelivery`. [#243](https://github.com/VDVde/OJP/pull/243), [#308](https://github.com/VDVde/OJP/pull/308)
 * New `OJPAvailabilityRequest` and `OJPAvailabilityDelivery`. [#262](https://github.com/VDVde/OJP/pull/262), [#241](https://github.com/VDVde/OJP/pull/241)
 * New `OJPTripRefineRequest` and `OJPTripRefineDelivery`. [#247](https://github.com/VDVde/OJP/pull/247)
