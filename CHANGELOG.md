@@ -91,6 +91,7 @@ Currently active is [1.0.2]
 
 ### Added
 
+* Added *README.md* and this *CHANGELOG.md* files. [#130](https://github.com/VDVde/OJP/pull/130)
 * Added `IncludeHierarchy` in `StopEventRequest` to allow including either parts, or the complete hierarchy of the stop point/stop place if known.
   [#96](https://github.com/VDVde/OJP/pull/96)
 * Added `NoBoardingAtStop` and `NoAlightingAtStop` to `Call` structures.
