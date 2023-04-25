@@ -71,6 +71,7 @@ Currently active is [1.0.2]
 
 ### Internal Use
 
+* Introduced more specific ObjectIdTypes for NeTEx objects: `FareResultObjectIdType`, `StopEventResultObjectIdType`, `TripResultObjectIdType`, `MultiPointTripResultObjectIdType`, `TripObjectIdType`, `LegObjectIdType`, `PlaceObjectIdType`. [#316](https://github.com/VDVde/OJP/pull/316),  [#348](https://github.com/VDVde/OJP/pull/348)
 * New OJP.spp (XML Spy project file). [#297](https://github.com/VDVde/OJP/pull/297)
 * Changed location of automatically generated documentation. [#279](https://github.com/VDVde/OJP/pull/279)
 * Migrated from *Travis* to *GitHub Actions*. [#274](https://github.com/VDVde/OJP/pull/274)
