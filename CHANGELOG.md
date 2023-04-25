@@ -40,7 +40,7 @@ Currently active is [1.0.2]
 * Added `SituationFullRefs` for all deliveries. [#268](https://github.com/VDVde/OJP/pull/268)
 * Richer data in `PathGuidance`. [#265](https://github.com/VDVde/OJP/pull/265)
 * Added `UseRealTimeData` switch in `OJPTripRequest` to specify whether and how real-time data is taken into account for the trips returned. [#259](https://github.com/VDVde/OJP/pull/259)
-* Additional enumeration values for `MultiPointType` (`OJPMultiPointTripRequest`), added `ViaSytem` for `OJPTripRequest` and `OJPMultiPointTripRequest`, added `SustainabilityGroup` with `EmissionCO2`, added `Priority` for exchange points, renamed `ReferredSystemId` and `AllowedSystemId` to `ReferredSystem` and `AllowedSystem`, respectively. [#244](https://github.com/VDVde/OJP/pull/244)
+* Additional enumeration values for `MultiPointType` (`OJPMultiPointTripRequest`), added `ViaSytem` for `OJPTripRequest` and `OJPMultiPointTripRequest`, added `SustainabilityGroup` with `EmissionCO2`, added `Priority` for exchange points, renamed `ReferredSystemId` and `AllowedSystemId` to `ReferredSystem` and `AllowedSystem`, respectively. [#244](https://github.com/VDVde/OJP/pull/244), [#344](https://github.com/VDVde/OJP/pull/344)
 * Added `VehicleFilter` to `TripParamStructure`. [#240](https://github.com/VDVde/OJP/pull/240)
 * Added `PathLinkEndStructure` to indicate levels and places connected by `PathLink`s. [#239](https://github.com/VDVde/OJP/pull/239)
 * Added `AccessibilityFeature`s (values like `stepFreeAccess`, `visualSigns`, etc.) and additional `AccessFeature`s (`singleStep`, `shuttle`, etc.) for `PathLink`s. [#237](https://github.com/VDVde/OJP/pull/237)
