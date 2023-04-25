@@ -13,6 +13,7 @@ Currently active is [1.0.2]
 
 ### Breaking
 
+* Updated to SIRI 2.1 using a copy and adapted imports. [#330](https://github.com/VDVde/OJP/pull/330)
 * Renamed `ResultId`s in \*`ResultStructure`s to `Id`, as well as `LegId` in `LegStructure` and `TripId` in `TripStructure`. [#215](https://github.com/VDVde/OJP/pull/215)
 
 
