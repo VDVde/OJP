@@ -1744,4 +1744,78 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="TripProblemType" type="TripProblemTypeEnumeration" substitutionGroup="ErrorType"/>
+	<xs:annotation>
+		<xs:documentation>========================================== TripChangeRequest definitions ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="TripChangeRequestGroup">
+		<xs:annotation>
+			<xs:documentation>Trip change request structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ChangeParams" type="TripChangeParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Options to control the change</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripResult" type="TripResultStructure">
+				<xs:annotation>
+					<xs:documentation>The trip result to be changed by the server.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold objects, which are referenced within the response.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="TripChangeParamStructure">
+		<xs:annotation>
+			<xs:documentation>Trip change request parameter structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ChangeLegRef" type="LegObjectIdType">
+				<xs:annotation>
+					<xs:documentation>Refers to the leg to be changed by the server.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EarlierArrivalLaterDeparture" default="laterDeparture" minOccurs="0" maxOccurs="1">
+				<xs:annotation/>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="laterDeparture"/>
+						<xs:enumeration value="earlierArrival"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:group ref="TripContentFilterGroup"/>
+			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EarlierArrivalLaterDepartureType"/>
+	<xs:annotation>
+		<xs:documentation>========================================== TripChangeResponse definitions ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="TripChangeResponseGroup">
+		<xs:annotation>
+			<xs:documentation>Trip change response structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TripResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripResult" type="TripResultStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The trip results refined by the server.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
 </xs:schema>
