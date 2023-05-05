@@ -299,4 +299,31 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Trip Change Service ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPTripChangeRequest" type="OJPTripChangeRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:complexType name="OJPTripChangeRequestStructure">
+		<xs:complexContent>
+			<xs:extension base="AbstractOJPServiceRequestStructure">
+				<xs:sequence>
+					<xs:group ref="TripChangeRequestGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="OJPTripChangeDelivery" type="OJPTripChangeDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPTripChangeDeliveryStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceDeliveryStructure">
+				<xs:sequence>
+					<xs:element ref="OJPTripChangeRequest" minOccurs="0"/>
+					<xs:group ref="ServiceResponseContextGroup"/>
+					<xs:group ref="TripChangeResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 </xs:schema>
