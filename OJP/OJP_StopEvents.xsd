@@ -56,9 +56,9 @@
 					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncludePrivateLines" minOccurs="0">
+			<xs:element name="IncludeRestrictedLines" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>There might exist lines that have special restrictions and are not available to the public. E.g. school buses, company shuttles. If this flag is set, then the private lines are considered by the router. The results are marked as private with a hint to the restriction.</xs:documentation>
+					<xs:documentation>There might exist lines that have special restrictions and are not available to the public. E.g. school buses, company shuttles or special ACCESS MODE like dragLift. If this flag is set, then the restricted lines are considered by the router. The results are marked as restricted.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
