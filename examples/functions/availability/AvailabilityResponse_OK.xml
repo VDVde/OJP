@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ojp:OJPAvailabilityDelivery xmlns:ojp="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri  ../../../OJP.xsd">
-	<siri:ResponseTimestamp>2001-12-17T09:30:47Z</siri:ResponseTimestamp>
-	<ojp:AvailabilityResult>
-		<ojp:PublicTransport>
-			<ojp:PickUpLocation>
-				<ojp:CallPlace>
-					<siri:StopPointRef>de:05766:2317</siri:StopPointRef>
-					<ojp:Name>
-						<ojp:Text>Winterberg/Kalldorf</ojp:Text>
-					</ojp:Name>
-				</ojp:CallPlace>
-			</ojp:PickUpLocation>
-			<ojp:SetDownLocation>
-				<ojp:CallPlace>
-					<siri:StopPointRef>de:05766:3437</siri:StopPointRef>
-					<ojp:Name>
-						<ojp:Text>Elfenborner Weg/Stemmen (Kalletal)</ojp:Text>
-					</ojp:Name>
-				</ojp:CallPlace>
-				<ojp:ServiceArrival>
-					<ojp:TimetabledTime>2022-12-14T11:02:00+01:00</ojp:TimetabledTime>
-				</ojp:ServiceArrival>
-			</ojp:SetDownLocation>
-		</ojp:PublicTransport>
-	</ojp:AvailabilityResult>
-</ojp:OJPAvailabilityDelivery>
+<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+	<siri:OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2020-11-30T10:07:19Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<ojp:OJPAvailabilityDelivery>
+				<siri:ResponseTimestamp>2001-12-17T09:30:47Z</siri:ResponseTimestamp>
+				<ojp:AvailabilityResult>
+					<ojp:PublicTransport>
+						<ojp:PickUpLocation>
+							<ojp:CallPlace>
+								<siri:StopPointRef>de:05766:2317</siri:StopPointRef>
+								<ojp:Name>
+									<ojp:Text>Winterberg/Kalldorf</ojp:Text>
+								</ojp:Name>
+							</ojp:CallPlace>
+						</ojp:PickUpLocation>
+						<ojp:SetDownLocation>
+							<ojp:CallPlace>
+								<siri:StopPointRef>de:05766:3437</siri:StopPointRef>
+								<ojp:Name>
+									<ojp:Text>Elfenborner Weg/Stemmen (Kalletal)</ojp:Text>
+								</ojp:Name>
+							</ojp:CallPlace>
+							<ojp:ServiceArrival>
+								<ojp:TimetabledTime>2022-12-14T11:02:00+01:00</ojp:TimetabledTime>
+							</ojp:ServiceArrival>
+						</ojp:SetDownLocation>
+					</ojp:PublicTransport>
+				</ojp:AvailabilityResult>
+			</ojp:OJPAvailabilityDelivery>
+		</siri:ServiceDelivery>
+	</siri:OJPResponse>
+</siri:OJP>

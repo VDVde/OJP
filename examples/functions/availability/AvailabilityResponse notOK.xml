@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ojp:OJPAvailabilityDelivery xmlns:ojp="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri  ../../../OJP.xsd">
-	<siri:ResponseTimestamp>2001-12-17T09:30:47Z</siri:ResponseTimestamp>
-	<siri:Status>false</siri:Status>
-	<siri:ErrorCondition>
-		<siri:OtherError>
-			<siri:ErrorText>Anfrage konnte nicht verarbeitet werden</siri:ErrorText>
-		</siri:OtherError>
-	</siri:ErrorCondition>
-</ojp:OJPAvailabilityDelivery>
+<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+	<siri:OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2020-11-30T10:07:19Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<ojp:OJPAvailabilityDelivery>
+				<siri:ResponseTimestamp>2001-12-17T09:30:47Z</siri:ResponseTimestamp>
+				<siri:Status>false</siri:Status>
+				<siri:ErrorCondition>
+					<siri:OtherError>
+						<siri:ErrorText>Anfrage konnte nicht verarbeitet werden</siri:ErrorText>
+					</siri:OtherError>
+				</siri:ErrorCondition>
+			</ojp:OJPAvailabilityDelivery>
+		</siri:ServiceDelivery>
+	</siri:OJPResponse>
+</siri:OJP>
