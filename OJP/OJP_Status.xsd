@@ -3,9 +3,9 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Status.xsd - OJP Status request and response</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_all-v2.0.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
-	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/siri_model/siri_modes-v1.1.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_modes.xsd"/>
 	<xs:annotation>
 		<xs:documentation>=============================== Status Service ==========================================</xs:documentation>
 	</xs:annotation>

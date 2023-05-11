@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ojp:OJPFareDelivery xmlns:ojp="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri  ../../../OJP.xsd">
+<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+	<siri:OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2021-08-25T17:34:02Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+<ojp:OJPFareDelivery>
 	<siri:ResponseTimestamp>2001-12-17T09:30:47Z</siri:ResponseTimestamp>
 	<siri:Status>true</siri:Status>
 	<siri:ErrorCondition>
@@ -91,3 +97,6 @@
 		</ojp:TripFareResult>
 	</ojp:FareResult>
 </ojp:OJPFareDelivery>
+</siri:ServiceDelivery>
+</siri:OJPResponse>
+</siri:OJP>
