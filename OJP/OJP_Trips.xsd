@@ -1779,14 +1779,10 @@
 					<xs:documentation>Refers to the leg to be changed by the server.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EarlierArrivalLaterDeparture" default="laterDeparture" minOccurs="0" maxOccurs="1">
-				<xs:annotation/>
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:enumeration value="laterDeparture"/>
-						<xs:enumeration value="earlierArrival"/>
-					</xs:restriction>
-				</xs:simpleType>
+			<xs:element name="EarlierArrivalLaterDeparture" type="EarlierArrivalLaterDepartureType" default="laterDeparture" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Whether the requested journey leg of the passed trip should arrive earlier or depart later to give the passenger more time to make the interchange.</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
@@ -1797,7 +1793,15 @@
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="EarlierArrivalLaterDepartureType"/>
+	<xs:simpleType name="EarlierArrivalLaterDepartureType">
+		<xs:annotation>
+			<xs:documentation>Prefer earlier arrival or later departure</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="laterDeparture"/>
+			<xs:enumeration value="earlierArrival"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== TripChangeResponse definitions ==========================================</xs:documentation>
 	</xs:annotation>
