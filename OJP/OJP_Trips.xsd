@@ -587,7 +587,7 @@
 				<xs:annotation>
 					<xs:documentation>The duration of the leg (e.g. from Transmodel PT RIDE LEG.Duration)</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:choice>
 				<xs:element name="TimedLeg" type="TimedLegStructure">
 					<xs:annotation>
