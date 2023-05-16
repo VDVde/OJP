@@ -71,7 +71,7 @@
 	</xs:complexType>
 	<xs:group name="TripDataFilterGroup">
 		<xs:annotation>
-			<xs:documentation>Data to be included/excluded from search, f.e. modes, operators.</xs:documentation>
+			<xs:documentation>Data to be included/excluded from search, f.e. modes, operators (Transmodel: TRIP REQUEST FILTER).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PtModeFilter" type="PtModeFilterStructure" minOccurs="0">
@@ -130,6 +130,16 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripMobilityFilterGroup"/>
+			<xs:element name="LevelEntrance" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The user needs vehicles with level entrance between  platform and vehicle, f.e. for wheelchair access.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BikeTransport" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The user wants to carry a bike on public transport (could be extended in future to transporting big luggage/animals/etc).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="WalkSpeed" type="OpenPercentType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Deviation from average walk speed in percent. 100% percent is average speed. Less than 100 % slower, Greater than 150% faster.</xs:documentation>
@@ -434,7 +444,7 @@
 	</xs:complexType>
 	<xs:complexType name="TripSummaryStructure">
 		<xs:annotation>
-			<xs:documentation>Structure for trip overview information.</xs:documentation>
+			<xs:documentation>Structure for trip overview information (only implementation related and therefore not modeled in Transmodel).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TripId" type="TripObjectIdType">
@@ -573,6 +583,11 @@
 					<xs:documentation>[equivalent of PARTICIPANT in SIRI] IT system that is participating in a communication with other participant(s)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Duration" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The duration of the leg (e.g. from Transmodel PT RIDE LEG.Duration)</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:choice>
 				<xs:element name="TimedLeg" type="TimedLegStructure">
 					<xs:annotation>
@@ -1087,17 +1102,17 @@
 	</xs:simpleType>
 	<xs:group name="TransferDurationGroup">
 		<xs:annotation>
-			<xs:documentation>[an attribute of a CONNECTION (not INTERCHANGE) in TMv6] calculated duration in a response taking into ccount the request parameters.; TransferDuration plus waiting time is the minimum interval between arrival and departure time..</xs:documentation>
+			<xs:documentation>[an attribute of a CONNECTION (not INTERCHANGE) in TMv6] calculated duration in a response taking into ccount the request parameters.; TransferDuration plus waiting time is the minimum interval between arrival and departure time.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Duration" type="xs:duration">
 				<xs:annotation>
-					<xs:documentation>Overall duration of this interchange.</xs:documentation>
+					<xs:documentation>Overall duration of this interchange (Transmodel: PT CONNECTION LEG.MEAN INTERCHANGE TIME).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WalkDuration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Walk time as part of the overall interchange duration.</xs:documentation>
+					<xs:documentation>Walk time as part of the overall interchange duration (in Transmodel might be modeled as TRANSFER.CONNECTION.DefaultDuration).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BufferTime" type="xs:duration" minOccurs="0">
@@ -1296,7 +1311,7 @@
 			</xs:element>
 			<xs:element name="Via" type="TripViaStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops.</xs:documentation>
+					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops (In Transmodel modeled as TRIP REQUEST PLACE.TRIP VIA PLACE.GoVia).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NotVia" type="NotViaStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1306,7 +1321,7 @@
 			</xs:element>
 			<xs:element name="NoChangeAt" type="NoChangeAtStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP</xs:documentation>
+					<xs:documentation>no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP (in Transmodel this would be an extension to TRIP MOBILITY FILTER).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Params" type="MultiPointTripParamStructure" minOccurs="0">
@@ -1466,7 +1481,7 @@
 	</xs:group>
 	<xs:group name="TripStatusGroup">
 		<xs:annotation>
-			<xs:documentation>Parameters which describe the current status of a TRIP</xs:documentation>
+			<xs:documentation>Parameters which describe the current status of a TRIP (will be added to MONITORED TRIP in Transmodel).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Unplanned" type="xs:boolean" default="false" minOccurs="0">
