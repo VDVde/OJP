@@ -137,7 +137,7 @@
 			</xs:element>
 			<xs:element name="AdditionalTransferTime" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport).</xs:documentation>
+					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport, not modeled in Transmodel).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -454,17 +454,17 @@
 			</xs:element>
 			<xs:element name="Duration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Overall duration of the trip.</xs:documentation>
+					<xs:documentation>Overall duration of the trip (Transmodel: TRIP PATTERN.Duration).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Departure time at origin.</xs:documentation>
+					<xs:documentation>Departure time at origin (Transmodel: TRIP PATTERN.StartTime).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Arrival time at destination.</xs:documentation>
+					<xs:documentation>Arrival time at destination (Transmodel: TRIP PATTERN.EndTime).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PTLegs" type="xs:nonNegativeInteger" minOccurs="0">
@@ -474,7 +474,7 @@
 			</xs:element>
 			<xs:element name="Distance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Trip distance.</xs:documentation>
+					<xs:documentation>Trip distance (Transmodel: TRIP PATTERN.Distance).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
@@ -509,17 +509,17 @@
 			</xs:element>
 			<xs:element name="Duration" type="xs:duration">
 				<xs:annotation>
-					<xs:documentation>Overall duration of the trip.</xs:documentation>
+					<xs:documentation>Overall duration of the trip (Transmodel: TRIP PATTERN.Duration).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartTime" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Departure time at origin.</xs:documentation>
+					<xs:documentation>Departure time at origin (Transmodel: TRIP PATTERN.StartTime).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndTime" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Arrival time at destination.</xs:documentation>
+					<xs:documentation>Arrival time at destination (Transmodel: TRIP PATTERN.EndTime).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Transfers" type="xs:nonNegativeInteger">
@@ -529,12 +529,12 @@
 			</xs:element>
 			<xs:element name="Distance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Trip distance.</xs:documentation>
+					<xs:documentation>Trip distance (Transmodel: TRIP PATTERN.Distance).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Leg" type="LegStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Legs of the trip</xs:documentation>
+					<xs:documentation>Legs of the trip (Transmodel: LEG or MONITORED LEG).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
@@ -652,12 +652,12 @@
 			</xs:choice>
 			<xs:element name="LegStart" type="PlaceRefStructure">
 				<xs:annotation>
-					<xs:documentation>Stop/Station where boarding is done</xs:documentation>
+					<xs:documentation>Stop/Station/Place where boarding is done (can be a PLACE, SCHEDULED STOP POINT or a VEHICLE MEETING POINT)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LegEnd" type="PlaceRefStructure">
 				<xs:annotation>
-					<xs:documentation>Stop/Station to alight</xs:documentation>
+					<xs:documentation>Stop/Station/Place to alight (can be a PLACE, SCHEDULED STOP POINT or a VEHICLE MEETING POINT).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TimeWindowGroup"/>
@@ -679,7 +679,7 @@
 			</xs:element>
 			<xs:element name="PathGuidance" type="PathGuidanceStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility.</xs:documentation>
+					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility (LEG.PATH GUIDANCE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -702,12 +702,12 @@
 		<xs:sequence>
 			<xs:element name="LegStart" type="PlaceRefStructure">
 				<xs:annotation>
-					<xs:documentation>Stop/Station where boarding is done</xs:documentation>
+					<xs:documentation>Stop/Station where boarding is done (can be a SCHEDULED STOP POINT or a VEHICLE MEETING POINT).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LegEnd" type="PlaceRefStructure">
 				<xs:annotation>
-					<xs:documentation>Stop/Station to alight</xs:documentation>
+					<xs:documentation>Stop/Station to alight (can be a SCHEDULED STOP POINT or a VEHICLE MEETING POINT).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Service" type="ContinuousServiceStructure">
@@ -738,7 +738,7 @@
 			</xs:element>
 			<xs:element name="PathGuidance" type="PathGuidanceStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility.</xs:documentation>
+					<xs:documentation>Structured model further describing this interchange, its geographic embedding and accessibility (LEG.PATH GUIDANCE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Feasibility" type="FeasibilityEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -844,7 +844,7 @@
 		<xs:sequence>
 			<xs:element name="PathGuidanceSection" type="PathGuidanceSectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>One or more PATH GUIDANCE sections that form the LEG. For a good PATH GUIDANCE a fine granularity of the sections may be needed. This may also depend on the MODE and the type of guidance required.</xs:documentation>
+					<xs:documentation>A view of LEG TRACK including  PATH JUNCTION information, PATH LINK information and PATH GUIDANCE. One or more path guidance sections that form the LEG. For a good PATH GUIDANCE a fine granularity of the sections may be needed. This may also depend on the MODE and the type of guidance required.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -856,22 +856,22 @@
 		<xs:sequence>
 			<xs:element name="TrackSection" type="TrackSectionStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>LINK PROJECTION on the infrastructure network of the LEG together with time information</xs:documentation>
+					<xs:documentation>An aggregate of information that may be leaning on LEG TRACK together with duration and length that can be used for representing the leg on a map. The points may be STOP PLACE, SCHEDULED STOP POINT, coordinates or ADDRESSes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TurnDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Textual description of a manoeuvre. This should imply the information from Manoeuvre, TurnAction, and TrackSection.RoadName.</xs:documentation>
+					<xs:documentation>Textual description of a traveller manoeuvre. Contains information from manoeuvre, TurnAction, and TrackSection.RoadName.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GuidanceAdvice" type="GuidanceAdviceEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Various types of guidance advice given to traveller.</xs:documentation>
+					<xs:documentation>Various types of guidance advice given to traveller (according to Transmodel a view of a LEG TRACK and PATH GUIDANCE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TurnAction" type="TurnActionEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The range of possible turns that can be described.</xs:documentation>
+					<xs:documentation>The range of possible turns that can be described (according to Transmodel a view of a LEG TRACK and PATH GUIDANCE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RoadName" type="InternationalTextStructure" minOccurs="0">
@@ -886,7 +886,7 @@
 			</xs:element>
 			<xs:element name="DirectionHint" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Textual direction hint for better understanding, e.g. "follow signs to Hamburg".</xs:documentation>
+					<xs:documentation>Textual direction hint for better understanding, e.g. "follow signs to Hamburg" (according to Transmodel a view of a LEG TRACK and PATH GUIDANCE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AbsoluteBearing" type="siri:AbsoluteBearingType" minOccurs="0">
@@ -1204,7 +1204,7 @@
 	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
 		<xs:annotation>
-			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs, BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE.</xs:documentation>
+			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs, BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists or other out-of-vehicle passengers within or between a PLACE. Here we use a reduced form of a PATH LINK containing the description of the type of accessibility on this navigation section.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Transition" type="TransitionEnumeration" minOccurs="0">
