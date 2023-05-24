@@ -261,8 +261,18 @@
 				<xs:group ref="PrivateServiceGroup"/>
 			</xs:choice>
 			<xs:group ref="ServiceOriginGroup" minOccurs="0"/>
+			<xs:group ref="siri:ServiceInfoGroup" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The group contains the VehicleFeatureRef from SIRI that are used to describe some characteristics of vehicles and don't rely on FORMATION.</xs:documentation>
+				</xs:annotation>
+			</xs:group>
 			<xs:group ref="ServiceDestinationGroup"/>
 			<xs:group ref="ServiceStatusGroup"/>
+			<xs:group ref="siri:JourneyFormationGroup">
+				<xs:annotation>
+					<xs:documentation>The formation elements on the journey level.</xs:documentation>
+				</xs:annotation>
+			</xs:group>
 			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Container with information on booking possibilities for this service.</xs:documentation>
@@ -357,6 +367,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="ServiceTimeGroup"/>
+			<xs:element ref="siri:ArrivalFormationAssignment" minOccurs="0"/>
+			<!-- comes with SIRI 2.1 -->
+			<!-- TODO the quays should be moved here, too -->
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ServiceDepartureStructure">
@@ -365,6 +378,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="ServiceTimeGroup"/>
+			<xs:element ref="siri:DepartureFormationAssignment" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="CallAtStopStructure">

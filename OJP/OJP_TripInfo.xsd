@@ -45,6 +45,24 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:simpleType name="IncludeFormationEnumeration">
+		<xs:annotation>
+			<xs:documentation>Possible values how to include formations in the basic filters</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="vehiclefeature">
+				<xs:annotation>
+					<xs:documentation>The response should include VehicleFeatureRef (from SIRI).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="full">
+				<xs:annotation>
+					<xs:documentation>Besides VehicleFeatureRefs also Formation, ArrivalFormation and DepartureFormation can be used. This is the full SIRI formation experience. Refer to the SIRI documentation for details. The specification document and the examples may show simpler ways of doing things. For full accessibility many features are needed. It is recommended to always also use VehicleFeatureRef (for people not processing SIRI formation and because buses and the like don't need Formation in most cases).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:group name="TripInfoContentFilterGroup">
 		<xs:annotation>
 			<xs:documentation>Parameters that control the level of detail to be returned in the results.</xs:documentation>
@@ -78,6 +96,11 @@
 			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the place context is needed. If a requestor has that information already, the response can be made slimmer, when set to false. Default is true. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeFormation" type="IncludeFormationEnumeration" default="none" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the formation should be included. With "simple" only VehicleFeature is used. "full" may unleash the full power of the SIRI formation model (especially for trains). The OJP specification document gives hints on how to limit oneself as a server to the most important aspects. Default is none.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludeSituationsContext" type="xs:boolean" default="true" minOccurs="0">
