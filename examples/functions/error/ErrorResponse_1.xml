@@ -15,7 +15,6 @@
 						<ojp:OJPGenericProblemType>OJPGENERIC_DATAFRAMEREFNOTAVAILABLE</ojp:OJPGenericProblemType>
 					</ojp:OJPError>
 				</siri:ErrorCondition>
-				<!-- no CalcTime for this service <ojp:CalcTime>20</ojp:CalcTime> -->
 				<ojp:LineResult>
 					<ojp:ErrorCondition>
 						<siri:ErrorText>Main error text</siri:ErrorText>
