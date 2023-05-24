@@ -79,24 +79,26 @@
 					<ojp:Service>
 						<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
 						<ojp:JourneyRef>ojp:91011:A:R:j20:719</ojp:JourneyRef>
-						<siri:LineRef>ojp:91011:A</siri:LineRef>
-						<siri:DirectionRef>R</siri:DirectionRef>
-						<ojp:Mode>
-							<ojp:PtMode>tram</ojp:PtMode>
-							<siri:TramSubmode>cityTram</siri:TramSubmode>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Tram</ojp:Text>
-							</ojp:Name>
-							<ojp:ShortName>
-								<ojp:Text xml:lang="de">T</ojp:Text>
-							</ojp:ShortName>
-						</ojp:Mode>
-						<ojp:PublishedServiceName>
-							<ojp:Text>11</ojp:Text>
-						</ojp:PublishedServiceName>
-						<ojp:OperatorRefs>
-							<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-						</ojp:OperatorRefs>
+						<ojp:ServiceSection>
+							<siri:LineRef>ojp:91011:A</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<ojp:Mode>
+								<ojp:PtMode>tram</ojp:PtMode>
+								<siri:TramSubmode>cityTram</siri:TramSubmode>
+								<ojp:Name>
+									<ojp:Text xml:lang="de">Tram</ojp:Text>
+								</ojp:Name>
+								<ojp:ShortName>
+									<ojp:Text xml:lang="de">T</ojp:Text>
+								</ojp:ShortName>
+							</ojp:Mode>
+							<ojp:PublishedServiceName>
+								<ojp:Text>11</ojp:Text>
+							</ojp:PublishedServiceName>
+							<ojp:OperatorRefs>
+								<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
+							</ojp:OperatorRefs>
+						</ojp:ServiceSection>
 						<ojp:OriginStopPointRef>8591315</ojp:OriginStopPointRef>
 						<ojp:OriginText>
 							<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
