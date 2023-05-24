@@ -272,65 +272,64 @@
 									<OperatingDayRef>Unknown</OperatingDayRef>
 									<JourneyRef>91IR7:5:R:j20:161</JourneyRef>
 									<ServiceSection>
-									<siri:LineRef>91IR7:5</siri:LineRef>
-									<siri:DirectionRef>R</siri:DirectionRef>
-									<Mode>
-										<PtMode>rail</PtMode>
-										<siri:RailSubmode>local</siri:RailSubmode>
-										<Name>
-											<Text xml:lang="de">Zug</Text>
-										</Name>
-										<ShortName>
-											<Text xml:lang="de">IR</Text>
-										</ShortName>
-									</Mode>
-									<PublishedServiceName>
-										<Text>IR75</Text>
-									</PublishedServiceName>
-									<OperatorRefs>
-										<OperatorRef>11</OperatorRef>
-									</OperatorRefs>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
-										<Code>A__OM</Code>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Businesszone in 1. Klasse</Text>
-										</Text>
-										<Code>A__BZ</Code>
-										<siri:FareClassFacility>firstClass</siri:FareClassFacility>
-										<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Familienwagen mit Spielplatz</Text>
-										</Text>
-										<Code>A__FA</Code>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
-										</Text>
-										<Code>A__RZ</Code>
-										<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
-										<Code>ojp91IR75R_InfoCall161_106218_1</Code>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
-										<Code>ojp91IR75R_InfoCall161_107680_1</Code>
-									</Attribute>
+										<siri:LineRef>91IR7:5</siri:LineRef>
+										<siri:DirectionRef>R</siri:DirectionRef>
+										<Mode>
+											<PtMode>rail</PtMode>
+											<siri:RailSubmode>local</siri:RailSubmode>
+											<Name>
+												<Text xml:lang="de">Zug</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">IR</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>IR75</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>11</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+											</Text>
+											<Code>A__OM</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Businesszone in 1. Klasse</Text>
+											</Text>
+											<Code>A__BZ</Code>
+											<siri:FareClassFacility>firstClass</siri:FareClassFacility>
+											<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Familienwagen mit Spielplatz</Text>
+											</Text>
+											<Code>A__FA</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
+											</Text>
+											<Code>A__RZ</Code>
+											<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Links</Text>
+											</Text>
+											<Code>ojp91IR75R_InfoCall161_106218_1</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Links</Text>
+											</Text>
+											<Code>ojp91IR75R_InfoCall161_107680_1</Code>
+										</Attribute>
 									</ServiceSection>
-								
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Luzern</Text>
