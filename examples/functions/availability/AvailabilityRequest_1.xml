@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri  ../../../OJP.xsd" version="1.1-dev">
-	<siri:OJPRequest>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPRequest>
 		<siri:ServiceRequest>
 			<siri:RequestTimestamp>2022-12-12T11:46:00Z</siri:RequestTimestamp>
 			<siri:RequestorRef>OeBB</siri:RequestorRef>
-			<ojp:OJPAvailabilityRequest>
+			<OJPAvailabilityRequest>
 				<siri:RequestTimestamp>2022-12-12T11:46:00Z</siri:RequestTimestamp>
-				<ojp:PublicTransport>
-					<ojp:PickUpLocation>
-						<ojp:CallPlace>
+				<PublicTransport>
+					<PickUpLocation>
+						<CallPlace>
 							<siri:StopPointRef>de:05766:2317:0:1</siri:StopPointRef>
-							<ojp:Name>
-								<ojp:Text>Kt-Kalldorf, Winterberg</ojp:Text>
-							</ojp:Name>
-						</ojp:CallPlace>
-						<ojp:ServiceDeparture>
-							<ojp:TimetabledTime>2022-12-12T11:46:00Z</ojp:TimetabledTime>
-						</ojp:ServiceDeparture>
-					</ojp:PickUpLocation>
-					<ojp:SetDownLocation>
-						<ojp:CallPlace>
+							<Name>
+								<Text>Kt-Kalldorf, Winterberg</Text>
+							</Name>
+						</CallPlace>
+						<ServiceDeparture>
+							<TimetabledTime>2022-12-12T11:46:00Z</TimetabledTime>
+						</ServiceDeparture>
+					</PickUpLocation>
+					<SetDownLocation>
+						<CallPlace>
 							<siri:StopPointRef>de:05766:3437:0:2</siri:StopPointRef>
-							<ojp:Name>
-								<ojp:Text>Kt-Stemmen, Elfenborner Weg</ojp:Text>
-							</ojp:Name>
-						</ojp:CallPlace>
-						<ojp:ServiceArrival>
-							<ojp:TimetabledTime>2022-12-12T12:02:00Z</ojp:TimetabledTime>
-						</ojp:ServiceArrival>
-					</ojp:SetDownLocation>
-				</ojp:PublicTransport>
-				<ojp:MobilityUser/>
-			</ojp:OJPAvailabilityRequest>
+							<Name>
+								<Text>Kt-Stemmen, Elfenborner Weg</Text>
+							</Name>
+						</CallPlace>
+						<ServiceArrival>
+							<TimetabledTime>2022-12-12T12:02:00Z</TimetabledTime>
+						</ServiceArrival>
+					</SetDownLocation>
+				</PublicTransport>
+				<MobilityUser/>
+			</OJPAvailabilityRequest>
 		</siri:ServiceRequest>
-	</siri:OJPRequest>
-</siri:OJP>
+	</OJPRequest>
+</OJP>

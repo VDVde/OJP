@@ -1,93 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
 	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
 	- PR #83 - IncludePlacesContext and IncludeSituationsContext -> both excluded in this response
 	- PR #96 - IncludeStopHierarchy -> only StopEvents for a single Place (in case of a meta stop)
 	- PR #95 - ProductCategoryStructure
 	- PR #92 - Extension in DatedJourneyStructure
 -->
-	<siri:OJPResponse>
+	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2021-08-16T18:11:51Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<ojp:OJPStopEventDelivery>
+			<OJPStopEventDelivery>
 				<siri:ResponseTimestamp>2021-08-16T18:11:51Z</siri:ResponseTimestamp>
 				<siri:RequestMessageRef>756</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
-				<ojp:CalcTime>39</ojp:CalcTime>
+				<CalcTime>39</CalcTime>
 				<!-- IncludePlacesContext==false, IncludeSituationsContext==false -> Places and Situations are excluded -->
-				<ojp:StopEventResult>
+				<StopEventResult>
 					<!-- IncludeStopHierarchy==no -> no services from nearby railway or funicular stations -->
-					<ojp:Id>ID-1903E461-C436-4CCB-A928-5A4A06E15320</ojp:Id>
-					<ojp:StopEvent>
-						<ojp:ThisCall>
-							<ojp:CallAtStop>
+					<Id>ID-1903E461-C436-4CCB-A928-5A4A06E15320</Id>
+					<StopEvent>
+						<ThisCall>
+							<CallAtStop>
 								<siri:StopPointRef>8504375</siri:StopPointRef>
-								<ojp:StopPointName>
-									<ojp:Text>Ligerz (Schiff)</ojp:Text>
-								</ojp:StopPointName>
-								<ojp:ServiceDeparture>
-									<ojp:TimetabledTime>2021-08-17T08:25:00Z</ojp:TimetabledTime>
-								</ojp:ServiceDeparture>
-								<ojp:Order>5</ojp:Order>
-							</ojp:CallAtStop>
-						</ojp:ThisCall>
-						<ojp:Service>
-							<ojp:OperatingDayRef>2021-08-17</ojp:OperatingDayRef>
-							<ojp:JourneyRef>ojp:9400B:Y:R:j21:12</ojp:JourneyRef>
-							<ojp:ServiceSection>
-								<siri:LineRef>ojp:9400B:Y</siri:LineRef>
+								<StopPointName>
+									<Text>Ligerz (Schiff)</Text>
+								</StopPointName>
+								<ServiceDeparture>
+									<TimetabledTime>2021-08-17T08:25:00Z</TimetabledTime>
+								</ServiceDeparture>
+								<Order>5</Order>
+							</CallAtStop>
+						</ThisCall>
+						<Service>
+							<OperatingDayRef>2021-08-17</OperatingDayRef>
+							<JourneyRef>9400B:Y:R:j21:12</JourneyRef>
+							<ServiceSection>
+								<siri:LineRef>9400B:Y</siri:LineRef>
 								<siri:DirectionRef>R</siri:DirectionRef>
-								<ojp:Mode>
-									<ojp:PtMode>water</ojp:PtMode>
+								<Mode>
+									<PtMode>water</PtMode>
 									<siri:WaterSubmode>unknown</siri:WaterSubmode>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Schiff</ojp:Text>
-									</ojp:Name>
-									<ojp:ShortName>
-										<ojp:Text xml:lang="de">BAT</ojp:Text>
-									</ojp:ShortName>
-								</ojp:Mode>
-								<ojp:ProductCategory>
+									<Name>
+										<Text xml:lang="de">Schiff</Text>
+									</Name>
+									<ShortName>
+										<Text xml:lang="de">BAT</Text>
+									</ShortName>
+								</Mode>
+								<ProductCategory>
 									<!-- V1.1, PR #95 - Illustration of ProductCategory -->
-									<ojp:Name>
-										<ojp:Text>Dampfschiff</ojp:Text>
-									</ojp:Name>
-								</ojp:ProductCategory>
-								<ojp:PublishedServiceName>
-									<ojp:Text>BAT</ojp:Text>
-								</ojp:PublishedServiceName>
-							</ojp:ServiceSection>
-							<ojp:OriginStopPointRef>8504371</ojp:OriginStopPointRef>
-							<ojp:OriginText>
-								<ojp:Text xml:lang="de">Biel/Bienne (Schiff/bateau)</ojp:Text>
-							</ojp:OriginText>
-							<ojp:DestinationStopPointRef>8504577</ojp:DestinationStopPointRef>
-							<ojp:DestinationText>
-								<ojp:Text xml:lang="de">Murten/Morat (Schiff/bateau)</ojp:Text>
-							</ojp:DestinationText>
-							<ojp:Extension>
+									<Name>
+										<Text>Dampfschiff</Text>
+									</Name>
+								</ProductCategory>
+								<PublishedServiceName>
+									<Text>BAT</Text>
+								</PublishedServiceName>
+							</ServiceSection>
+							<OriginStopPointRef>8504371</OriginStopPointRef>
+							<OriginText>
+								<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>
+							</OriginText>
+							<DestinationStopPointRef>8504577</DestinationStopPointRef>
+							<DestinationText>
+								<Text xml:lang="de">Murten/Morat (Schiff/bateau)</Text>
+							</DestinationText>
+							<Extension>
 								<!-- V1.1, PR #92 - Illustration of new Extension (first of two changes of the PR)-->
-								<ojp:TransportTypeName>
-									<ojp:Text xml:lang="de">Schiff</ojp:Text>
-								</ojp:TransportTypeName>
-								<ojp:PublishedJourneyNumber>
-									<ojp:Text xml:lang="de">301</ojp:Text>
-								</ojp:PublishedJourneyNumber>
-							</ojp:Extension>
-						</ojp:Service>
-						<ojp:Extension>
-							<ojp:TransportTypeName>
-								<ojp:Text xml:lang="de">Schiff</ojp:Text>
-							</ojp:TransportTypeName>
-							<ojp:PublishedJourneyNumber>
-								<ojp:Text xml:lang="de">301</ojp:Text>
-							</ojp:PublishedJourneyNumber>
-						</ojp:Extension>
-					</ojp:StopEvent>
-				</ojp:StopEventResult>
-			</ojp:OJPStopEventDelivery>
+								<TransportTypeName>
+									<Text xml:lang="de">Schiff</Text>
+								</TransportTypeName>
+								<PublishedJourneyNumber>
+									<Text xml:lang="de">301</Text>
+								</PublishedJourneyNumber>
+							</Extension>
+						</Service>
+						<Extension>
+							<TransportTypeName>
+								<Text xml:lang="de">Schiff</Text>
+							</TransportTypeName>
+							<PublishedJourneyNumber>
+								<Text xml:lang="de">301</Text>
+							</PublishedJourneyNumber>
+						</Extension>
+					</StopEvent>
+				</StopEventResult>
+			</OJPStopEventDelivery>
 		</siri:ServiceDelivery>
-	</siri:OJPResponse>
-</siri:OJP>
+	</OJPResponse>
+</OJP>

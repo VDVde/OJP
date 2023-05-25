@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
 	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
 	- PR #83 - IncludePlacesContext and IncludeSituationsContext
 	-->
 	<OJPRequest>
-		<ServiceRequest>
-			<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
-			<RequestorRef>IRMA</RequestorRef>
-			<ojp:OJPTripInfoRequest>
-				<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
-				<MessageIdentifier>756</MessageIdentifier>
-				<ojp:JourneyRef>ojp:910A3:Y:R:j21:174</ojp:JourneyRef>
-				<ojp:OperatingDayRef>2021-09-22</ojp:OperatingDayRef>
-				<ojp:Params>
-					<ojp:IncludeCalls>true</ojp:IncludeCalls>
-					<ojp:IncludePosition>true</ojp:IncludePosition>
-					<ojp:IncludeService>true</ojp:IncludeService>
-					<ojp:IncludeTrackSections>true</ojp:IncludeTrackSections>
-					<ojp:IncludeTrackProjection>true</ojp:IncludeTrackProjection>
-					<ojp:IncludePlacesContext>true</ojp:IncludePlacesContext>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2020-01-20T12:00:00Z</siri:RequestTimestamp>
+			<siri:RequestorRef>IRMA</siri:RequestorRef>
+			<OJPTripInfoRequest>
+				<siri:RequestTimestamp>2020-01-20T12:00:00Z</siri:RequestTimestamp>
+				<siri:MessageIdentifier>756</siri:MessageIdentifier>
+				<JourneyRef>910A3:Y:R:j21:174</JourneyRef>
+				<OperatingDayRef>2021-09-22</OperatingDayRef>
+				<Params>
+					<IncludeCalls>true</IncludeCalls>
+					<IncludePosition>true</IncludePosition>
+					<IncludeService>true</IncludeService>
+					<IncludeTrackSections>true</IncludeTrackSections>
+					<IncludeTrackProjection>true</IncludeTrackProjection>
+					<IncludePlacesContext>true</IncludePlacesContext>
 					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
-					<ojp:IncludeSituationsContext>true</ojp:IncludeSituationsContext>
+					<IncludeSituationsContext>true</IncludeSituationsContext>
 					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
-				</ojp:Params>
-			</ojp:OJPTripInfoRequest>
-		</ServiceRequest>
+				</Params>
+			</OJPTripInfoRequest>
+		</siri:ServiceRequest>
 	</OJPRequest>
 </OJP>

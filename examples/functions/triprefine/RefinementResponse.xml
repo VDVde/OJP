@@ -1,185 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
-	<siri:OJPResponse>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2022-12-01T17:54:38Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<ojp:OJPTripRefineDelivery>
+			<OJPTripRefineDelivery>
 				<siri:ResponseTimestamp>2022-12-01T17:54:38Z</siri:ResponseTimestamp>
 				<siri:RequestMessageRef>4711</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
-				<ojp:CalcTime>421</ojp:CalcTime>
-				<ojp:UnknownLegRef>4</ojp:UnknownLegRef>
-				<ojp:TripResult>
-					<ojp:Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:Id>
-					<ojp:Trip>
-						<ojp:Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:Id>
-						<ojp:Duration>PT2H18M</ojp:Duration>
-						<ojp:StartTime>2020-09-30T10:03:00Z</ojp:StartTime>
-						<ojp:EndTime>2020-09-30T12:21:00Z</ojp:EndTime>
-						<ojp:Transfers>0</ojp:Transfers>
-						<ojp:Distance>125484</ojp:Distance>
-						<ojp:Leg>
+				<CalcTime>421</CalcTime>
+				<UnknownLegRef>4</UnknownLegRef>
+				<TripResult>
+					<Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</Id>
+					<Trip>
+						<Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</Id>
+						<Duration>PT2H18M</Duration>
+						<StartTime>2020-09-30T10:03:00Z</StartTime>
+						<EndTime>2020-09-30T12:21:00Z</EndTime>
+						<Transfers>0</Transfers>
+						<Distance>125484</Distance>
+						<Leg>
 							<!-- Refinement: Updated leg -->
-							<ojp:Id>1</ojp:Id>
-							<ojp:TimedLeg>
-								<ojp:LegBoard>
+							<Id>1</Id>
+							<TimedLeg>
+								<LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>St. Gallen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">4</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:EstimatedQuay>
-										<ojp:Text xml:lang="de">5</ojp:Text>
+									<StopPointName>
+										<Text>St. Gallen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">4</Text>
+									</PlannedQuay>
+									<EstimatedQuay>
+										<Text xml:lang="de">5</Text>
 										<!-- Refinement: new Quay -->
-									</ojp:EstimatedQuay>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-09-30T10:03:00Z</ojp:TimetabledTime>
-										<ojp:EstimatedTimeHigh>2020-09-30T10:06:00Z</ojp:EstimatedTimeHigh>
+									</EstimatedQuay>
+									<ServiceDeparture>
+										<TimetabledTime>2020-09-30T10:03:00Z</TimetabledTime>
+										<EstimatedTimeHigh>2020-09-30T10:06:00Z</EstimatedTimeHigh>
 										<!-- Refinement: Delay -->
-									</ojp:ServiceDeparture>
-									<ojp:Order>1</ojp:Order>
-								</ojp:LegBoard>
-								<ojp:LegAlight>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegAlight>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Luzern</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">3</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-09-30T12:21:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:Order>15</ojp:Order>
-								</ojp:LegAlight>
-								<ojp:Service>
-									<ojp:OperatingDayRef>2020-09-30</ojp:OperatingDayRef>
-									<ojp:JourneyRef>ojp:910DG:Y:R:j20:210</ojp:JourneyRef>
-									<ojp:ServiceSection>
-										<siri:LineRef>ojp:910DG:Y</siri:LineRef>
+									<StopPointName>
+										<Text>Luzern</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">3</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-09-30T12:21:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>15</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>2020-09-30</OperatingDayRef>
+									<JourneyRef>910DG:Y:R:j20:210</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>910DG:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
-										<ojp:Mode>
-											<ojp:PtMode>rail</ojp:PtMode>
+										<Mode>
+											<PtMode>rail</PtMode>
 											<siri:RailSubmode>local</siri:RailSubmode>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zug</ojp:Text>
-											</ojp:Name>
-											<ojp:ShortName>
-												<ojp:Text xml:lang="de">IR</ojp:Text>
-											</ojp:ShortName>
-										</ojp:Mode>
-										<ojp:PublishedServiceName>
-											<ojp:Text>empty</ojp:Text>
-										</ojp:PublishedServiceName>
-										<ojp:OperatorRefs>
-											<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
-										</ojp:OperatorRefs>
-										<ojp:Attribute>
-											<ojp:Text>
-												<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
-											</ojp:Text>
-											<ojp:Code>A___R</ojp:Code>
-										</ojp:Attribute>
-										<ojp:Attribute>
-											<ojp:Text>
-												<ojp:Text xml:lang="de">Bar</ojp:Text>
-											</ojp:Text>
-											<ojp:Code>A___B</ojp:Code>
-										</ojp:Attribute>
+											<Name>
+												<Text xml:lang="de">Zug</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">IR</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>empty</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>82</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Reservierung möglich</Text>
+											</Text>
+											<Code>A___R</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Bar</Text>
+											</Text>
+											<Code>A___B</Code>
+										</Attribute>
 										<!-- Refine: Attribute gone 
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>  -->
-									</ojp:ServiceSection>
-									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-									<ojp:DestinationText>
-										<ojp:Text xml:lang="de">Luzern</ojp:Text>
-									</ojp:DestinationText>
-								</ojp:Service>
-								<ojp:Extension>
-									<ojp:TransportTypeName>
-										<ojp:Text xml:lang="de">Voralpen-Express</ojp:Text>
-									</ojp:TransportTypeName>
-									<ojp:PublishedJourneyNumber>
-										<ojp:Text xml:lang="de">2020</ojp:Text>
-									</ojp:PublishedJourneyNumber>
-								</ojp:Extension>
-							</ojp:TimedLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>2</ojp:Id>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+										</Text>
+										<Code>A__OM</Code>
+									</Attribute>  -->
+									</ServiceSection>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Luzern</Text>
+									</DestinationText>
+								</Service>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">Voralpen-Express</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">2020</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<Id>2</Id>
 							<!-- Refinement: No change to this leg -->
-							<ojp:TransferLeg>
-								<ojp:TransferMode>walk</ojp:TransferMode>
-								<ojp:LegStart>
+							<TransferLeg>
+								<TransferMode>walk</TransferMode>
+								<LegStart>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text>Luzern</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
-									<ojp:GeoPosition>
+									<Name>
+										<Text>Luzern</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<GeoPosition>
 										<siri:Longitude>47.042666496</siri:Longitude>
 										<siri:Latitude>8.306332108</siri:Latitude>
-									</ojp:GeoPosition>
-									<ojp:Name>
-										<ojp:Text>Taxiplatz Luzern</ojp:Text>
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:Duration>PT3M</ojp:Duration>
-							</ojp:TransferLeg>
-						</ojp:Leg>
-						<ojp:Leg>
+									</GeoPosition>
+									<Name>
+										<Text>Taxiplatz Luzern</Text>
+									</Name>
+								</LegEnd>
+								<Duration>PT3M</Duration>
+							</TransferLeg>
+						</Leg>
+						<Leg>
 							<!-- Refinement: Updated leg -->
-							<ojp:Id>3</ojp:Id>
-							<ojp:ContinuousLeg>
-								<ojp:LegStart>
-									<ojp:GeoPosition>
+							<Id>3</Id>
+							<ContinuousLeg>
+								<LegStart>
+									<GeoPosition>
 										<siri:Longitude>47.042666496</siri:Longitude>
 										<siri:Latitude>8.306332108</siri:Latitude>
-									</ojp:GeoPosition>
-									<ojp:Name>
-										<ojp:Text>Taxiplatz Luzern</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
-									<ojp:GeoPosition>
+									</GeoPosition>
+									<Name>
+										<Text>Taxiplatz Luzern</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<GeoPosition>
 										<siri:Longitude>47.06</siri:Longitude>
 										<siri:Latitude>8.31</siri:Latitude>
 										<!-- Refinment: changed location: walk leg now needed to reach destination. Not done by refinement. -->
-									</ojp:GeoPosition>
-									<ojp:Name>
-										<ojp:Text>New destination</ojp:Text>
+									</GeoPosition>
+									<Name>
+										<Text>New destination</Text>
 										<!-- Refinment: changed location: walk leg now needed to reach destination -->
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:Service>
-									<ojp:ContinuousMode>demandResponsive</ojp:ContinuousMode>
-									<ojp:SharingService>
-										<ojp:OperatorRef>ch:1:sboid:12391912</ojp:OperatorRef>
-									</ojp:SharingService>
-									<ojp:BookingArrangements>
-										<ojp:BookingArrangement>
-											<ojp:BuyWhen>
-												<ojp:PurchaseMoment>onBoarding</ojp:PurchaseMoment>
-											</ojp:BuyWhen>
-										</ojp:BookingArrangement>
-									</ojp:BookingArrangements>
-								</ojp:Service>
-								<ojp:Duration>PT11M</ojp:Duration>
+									</Name>
+								</LegEnd>
+								<Service>
+									<ContinuousMode>demandResponsive</ContinuousMode>
+									<SharingService>
+										<OperatorRef>ch:1:sboid:12391912</OperatorRef>
+									</SharingService>
+									<BookingArrangements>
+										<BookingArrangement>
+											<BuyWhen>
+												<PurchaseMoment>onBoarding</PurchaseMoment>
+											</BuyWhen>
+										</BookingArrangement>
+									</BookingArrangements>
+								</Service>
+								<Duration>PT11M</Duration>
 								<!-- Refinement: New time -->
-							</ojp:ContinuousLeg>
-						</ojp:Leg>
-					</ojp:Trip>
-				</ojp:TripResult>
-			</ojp:OJPTripRefineDelivery>
+							</ContinuousLeg>
+						</Leg>
+					</Trip>
+				</TripResult>
+			</OJPTripRefineDelivery>
 		</siri:ServiceDelivery>
-	</siri:OJPResponse>
-</siri:OJP>
+	</OJPResponse>
+</OJP>
