@@ -15,8 +15,13 @@ siri_model\siri_situation-v2.0.xsd:
 -->
 	<!-- ======================================================================= -->
 	<!--Needed to work around import limitation in JAXB - all namespaces. -->
+	<!--
+		OJP Change:
+		additional import of namespace="http://www.ifopt.org.uk/acsb" has been removed
+		import of namespace="http://www.ifopt.org.uk/ifopt" has been replaced by ifopt_allStopPlace.xsd
+		because several XML tools fail to validate the XSD if different files are defined to provide the same namespace
+	 -->
 	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
-	<!-- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/> -->
 	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
 	<xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema.xsd"/>
 	<!-- ======================================================================= -->
