@@ -9,7 +9,6 @@
 				<siri:ResponseTimestamp>2022-12-01T17:54:38Z</siri:ResponseTimestamp>
 				<siri:RequestMessageRef>4711</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
-				<!-- no CalcTime for this service <CalcTime>20</CalcTime> -->
 				<LineResult>
 					<LineRef>ch:slnid:123123</LineRef>
 					<siri:PublishedLineName>IC8</siri:PublishedLineName>
