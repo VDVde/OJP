@@ -33,9 +33,10 @@
 			<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals (or companies or closed communities).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="carPooling"/>
+			<xs:enumeration value="vehiclePooling"/>
 			<xs:enumeration value="schoolBus"/>
 			<xs:enumeration value="companyShuttle"/>
+			<xs:enumeration value="hotelShuttle"/>
 			<xs:enumeration value="other"/>
 		</xs:restriction>
 	</xs:simpleType>
