@@ -1,250 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
-	<siri:OJPResponse>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2023-02-17T09:30:47-05:00</siri:ResponseTimestamp>
-			<ojp:OJPTripMonitoringDelivery>
+			<OJPTripMonitoringDelivery>
 				<siri:ResponseTimestamp>2023-02-17T09:30:47-05:00</siri:ResponseTimestamp>
 				<siri:SubscriberRef>1231123</siri:SubscriberRef>
 				<siri:SubscriptionRef>123123123213</siri:SubscriptionRef>
 				<siri:DelegatorAddress>https://182.82.1.23:89912/endpoint</siri:DelegatorAddress>
 				<siri:DelegatorRef>23188</siri:DelegatorRef>
-				<ojp:TripMonitoringResult>
-					<ojp:AffectedLeg>1</ojp:AffectedLeg>
-					<ojp:TripInfoResult>
-						<ojp:CurrentPosition>
-							<ojp:GeoPosition>
+				<TripMonitoringResult>
+					<AffectedLeg>1</AffectedLeg>
+					<TripInfoResult>
+						<CurrentPosition>
+							<GeoPosition>
 								<siri:Longitude>23.12312312</siri:Longitude>
 								<siri:Latitude>45.23012301</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:CurrentPosition>
-						<ojp:OnwardCall>
+							</GeoPosition>
+						</CurrentPosition>
+						<OnwardCall>
 							<siri:StopPointRef>1823181</siri:StopPointRef>
-							<ojp:StopPointName>
-								<ojp:Text>example</ojp:Text>
-							</ojp:StopPointName>
-							<ojp:PlannedQuay>
-								<ojp:Text>7</ojp:Text>
-							</ojp:PlannedQuay>
-							<ojp:ServiceArrival>
-								<ojp:TimetabledTime>2023-02-17T09:30:47Z</ojp:TimetabledTime>
-								<ojp:EstimatedTimeLow>2023-02-17T09:35:47Z</ojp:EstimatedTimeLow>
-								<ojp:EstimatedTimeHigh>2023-02-17T09:37:47Z</ojp:EstimatedTimeHigh>
-							</ojp:ServiceArrival>
-							<ojp:ServiceDeparture>
-								<ojp:TimetabledTime>2023-02-17T09:30:47Z</ojp:TimetabledTime>
-								<ojp:EstimatedTime>2023-02-17T09:38:00Z</ojp:EstimatedTime>
-							</ojp:ServiceDeparture>
-							<ojp:UnplannedStop>true</ojp:UnplannedStop>
-						</ojp:OnwardCall>
-						<ojp:Service>
-							<ojp:OperatingDayRef>2020-09-30</ojp:OperatingDayRef>
-							<ojp:JourneyRef>ojp:910DG:Y:R:j20:210</ojp:JourneyRef>
-							<siri:LineRef>ojp:910DG:Y</siri:LineRef>
-							<siri:DirectionRef>R</siri:DirectionRef>
-							<ojp:Mode>
-								<ojp:PtMode>rail</ojp:PtMode>
-								<siri:RailSubmode>local</siri:RailSubmode>
-								<ojp:Name>
-									<ojp:Text xml:lang="de">Zug</ojp:Text>
-								</ojp:Name>
-								<ojp:ShortName>
-									<ojp:Text xml:lang="de">IR</ojp:Text>
-								</ojp:ShortName>
-							</ojp:Mode>
-							<ojp:PublishedServiceName>
-								<ojp:Text>empty</ojp:Text>
-							</ojp:PublishedServiceName>
-							<ojp:OperatorRefs>
-								<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
-							</ojp:OperatorRefs>
-							<ojp:Attribute>
-								<ojp:Text>
-									<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
-								</ojp:Text>
-								<ojp:Code>A___R</ojp:Code>
-							</ojp:Attribute>
-							<ojp:Attribute>
-								<ojp:Text>
-									<ojp:Text xml:lang="de">Bar</ojp:Text>
-								</ojp:Text>
-								<ojp:Code>A___B</ojp:Code>
-							</ojp:Attribute>
-							<ojp:Attribute>
-								<ojp:Text>
-									<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-								</ojp:Text>
-								<ojp:Code>A__OM</ojp:Code>
-							</ojp:Attribute>
-							<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-							<ojp:DestinationText>
-								<ojp:Text xml:lang="de">Luzern</ojp:Text>
-							</ojp:DestinationText>
-						</ojp:Service>
-					</ojp:TripInfoResult>
-					<ojp:AlternativeTrip>
-						<ojp:Id/>
-						<ojp:Trip>
-							<ojp:Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:Id>
-							<ojp:Duration>PT2H18M</ojp:Duration>
-							<ojp:StartTime>2020-09-30T10:03:00Z</ojp:StartTime>
-							<ojp:EndTime>2020-09-30T12:21:00Z</ojp:EndTime>
-							<ojp:Transfers>0</ojp:Transfers>
-							<ojp:Distance>125484</ojp:Distance>
-							<ojp:Leg>
-								<ojp:Id>1</ojp:Id>
-								<ojp:TimedLeg>
-									<ojp:LegBoard>
+							<StopPointName>
+								<Text>example</Text>
+							</StopPointName>
+							<PlannedQuay>
+								<Text>7</Text>
+							</PlannedQuay>
+							<ServiceArrival>
+								<TimetabledTime>2023-02-17T09:30:47Z</TimetabledTime>
+								<EstimatedTimeLow>2023-02-17T09:35:47Z</EstimatedTimeLow>
+								<EstimatedTimeHigh>2023-02-17T09:37:47Z</EstimatedTimeHigh>
+							</ServiceArrival>
+							<ServiceDeparture>
+								<TimetabledTime>2023-02-17T09:30:47Z</TimetabledTime>
+								<EstimatedTime>2023-02-17T09:38:00Z</EstimatedTime>
+							</ServiceDeparture>
+							<UnplannedStop>true</UnplannedStop>
+						</OnwardCall>
+						<Service>
+							<OperatingDayRef>2020-09-30</OperatingDayRef>
+							<JourneyRef>910DG:Y:R:j20:210</JourneyRef>
+							<ServiceSection>
+								<siri:LineRef>910DG:Y</siri:LineRef>
+								<siri:DirectionRef>R</siri:DirectionRef>
+								<Mode>
+									<PtMode>rail</PtMode>
+									<siri:RailSubmode>local</siri:RailSubmode>
+									<Name>
+										<Text xml:lang="de">Zug</Text>
+									</Name>
+									<ShortName>
+										<Text xml:lang="de">IR</Text>
+									</ShortName>
+								</Mode>
+								<PublishedServiceName>
+									<Text>empty</Text>
+								</PublishedServiceName>
+								<OperatorRefs>
+									<OperatorRef>82</OperatorRef>
+								</OperatorRefs>
+								<Attribute>
+									<Text>
+										<Text xml:lang="de">Reservierung möglich</Text>
+									</Text>
+									<Code>A___R</Code>
+								</Attribute>
+								<Attribute>
+									<Text>
+										<Text xml:lang="de">Bar</Text>
+									</Text>
+									<Code>A___B</Code>
+								</Attribute>
+								<Attribute>
+									<Text>
+										<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+									</Text>
+									<Code>A__OM</Code>
+								</Attribute>
+							</ServiceSection>
+							<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+							<DestinationText>
+								<Text xml:lang="de">Luzern</Text>
+							</DestinationText>
+						</Service>
+					</TripInfoResult>
+					<AlternativeTrip>
+						<Id/>
+						<Trip>
+							<Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</Id>
+							<Duration>PT2H18M</Duration>
+							<StartTime>2020-09-30T10:03:00Z</StartTime>
+							<EndTime>2020-09-30T12:21:00Z</EndTime>
+							<Transfers>0</Transfers>
+							<Distance>125484</Distance>
+							<Leg>
+								<Id>1</Id>
+								<TimedLeg>
+									<LegBoard>
 										<siri:StopPointRef>8506302</siri:StopPointRef>
-										<ojp:StopPointName>
-											<ojp:Text>St. Gallen</ojp:Text>
-										</ojp:StopPointName>
-										<ojp:PlannedQuay>
-											<ojp:Text xml:lang="de">4</ojp:Text>
-										</ojp:PlannedQuay>
-										<ojp:ServiceDeparture>
-											<ojp:TimetabledTime>2020-09-30T10:13:00Z</ojp:TimetabledTime>
-										</ojp:ServiceDeparture>
-										<ojp:Order>1</ojp:Order>
-									</ojp:LegBoard>
-									<ojp:LegAlight>
+										<StopPointName>
+											<Text>St. Gallen</Text>
+										</StopPointName>
+										<PlannedQuay>
+											<Text xml:lang="de">4</Text>
+										</PlannedQuay>
+										<ServiceDeparture>
+											<TimetabledTime>2020-09-30T10:13:00Z</TimetabledTime>
+										</ServiceDeparture>
+										<Order>1</Order>
+									</LegBoard>
+									<LegAlight>
 										<siri:StopPointRef>8505000</siri:StopPointRef>
-										<ojp:StopPointName>
-											<ojp:Text>Luzern</ojp:Text>
-										</ojp:StopPointName>
-										<ojp:PlannedQuay>
-											<ojp:Text xml:lang="de">3</ojp:Text>
-										</ojp:PlannedQuay>
-										<ojp:ServiceArrival>
-											<ojp:TimetabledTime>2020-09-30T12:31:00Z</ojp:TimetabledTime>
-										</ojp:ServiceArrival>
-										<ojp:Order>15</ojp:Order>
-									</ojp:LegAlight>
-									<ojp:Service>
-										<ojp:OperatingDayRef>2020-09-30</ojp:OperatingDayRef>
-										<ojp:JourneyRef>ojp:910DG:Y:R:j20:211</ojp:JourneyRef>
-										<siri:LineRef>ojp:910DG:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<ojp:Mode>
-											<ojp:PtMode>rail</ojp:PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zug</ojp:Text>
-											</ojp:Name>
-											<ojp:ShortName>
-												<ojp:Text xml:lang="de">IR</ojp:Text>
-											</ojp:ShortName>
-										</ojp:Mode>
-										<ojp:PublishedServiceName>
-											<ojp:Text>empty</ojp:Text>
-										</ojp:PublishedServiceName>
-										<ojp:OperatorRefs>
-											<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
-										</ojp:OperatorRefs>
-										<ojp:Attribute>
-											<ojp:Text>
-												<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
-											</ojp:Text>
-											<ojp:Code>A___R</ojp:Code>
-										</ojp:Attribute>
-										<ojp:Attribute>
-											<ojp:Text>
-												<ojp:Text xml:lang="de">Bar</ojp:Text>
-											</ojp:Text>
-											<ojp:Code>A___B</ojp:Code>
-										</ojp:Attribute>
-										<ojp:Attribute>
-											<ojp:Text>
-												<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-											</ojp:Text>
-											<ojp:Code>A__OM</ojp:Code>
-										</ojp:Attribute>
-										<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-										<ojp:DestinationText>
-											<ojp:Text xml:lang="de">Luzern</ojp:Text>
-										</ojp:DestinationText>
-									</ojp:Service>
-									<ojp:Extension>
-										<ojp:TransportTypeName>
-											<ojp:Text xml:lang="de">Voralpen-Express</ojp:Text>
-										</ojp:TransportTypeName>
-										<ojp:PublishedJourneyNumber>
-											<ojp:Text xml:lang="de">2020</ojp:Text>
-										</ojp:PublishedJourneyNumber>
-									</ojp:Extension>
-								</ojp:TimedLeg>
-							</ojp:Leg>
-							<ojp:Leg>
-								<ojp:Id>2</ojp:Id>
-								<ojp:TransferLeg>
-									<ojp:TransferMode>walk</ojp:TransferMode>
-									<ojp:LegStart>
+										<StopPointName>
+											<Text>Luzern</Text>
+										</StopPointName>
+										<PlannedQuay>
+											<Text xml:lang="de">3</Text>
+										</PlannedQuay>
+										<ServiceArrival>
+											<TimetabledTime>2020-09-30T12:31:00Z</TimetabledTime>
+										</ServiceArrival>
+										<Order>15</Order>
+									</LegAlight>
+									<Service>
+										<OperatingDayRef>2020-09-30</OperatingDayRef>
+										<JourneyRef>910DG:Y:R:j20:211</JourneyRef>
+										<ServiceSection>
+											<siri:LineRef>910DG:Y</siri:LineRef>
+											<siri:DirectionRef>R</siri:DirectionRef>
+											<Mode>
+												<PtMode>rail</PtMode>
+												<siri:RailSubmode>local</siri:RailSubmode>
+												<Name>
+													<Text xml:lang="de">Zug</Text>
+												</Name>
+												<ShortName>
+													<Text xml:lang="de">IR</Text>
+												</ShortName>
+											</Mode>
+											<PublishedServiceName>
+												<Text>empty</Text>
+											</PublishedServiceName>
+											<OperatorRefs>
+												<OperatorRef>82</OperatorRef>
+											</OperatorRefs>
+											<Attribute>
+												<Text>
+													<Text xml:lang="de">Reservierung möglich</Text>
+												</Text>
+												<Code>A___R</Code>
+											</Attribute>
+											<Attribute>
+												<Text>
+													<Text xml:lang="de">Bar</Text>
+												</Text>
+												<Code>A___B</Code>
+											</Attribute>
+											<Attribute>
+												<Text>
+													<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+												</Text>
+												<Code>A__OM</Code>
+											</Attribute>
+										</ServiceSection>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Luzern</Text>
+										</DestinationText>
+									</Service>
+									<Extension>
+										<TransportTypeName>
+											<Text xml:lang="de">Voralpen-Express</Text>
+										</TransportTypeName>
+										<PublishedJourneyNumber>
+											<Text xml:lang="de">2020</Text>
+										</PublishedJourneyNumber>
+									</Extension>
+								</TimedLeg>
+							</Leg>
+							<Leg>
+								<Id>2</Id>
+								<TransferLeg>
+									<TransferMode>walk</TransferMode>
+									<LegStart>
 										<siri:StopPointRef>8505000</siri:StopPointRef>
-										<ojp:Name>
-											<ojp:Text>Luzern</ojp:Text>
-										</ojp:Name>
-									</ojp:LegStart>
-									<ojp:LegEnd>
-										<ojp:GeoPosition>
+										<Name>
+											<Text>Luzern</Text>
+										</Name>
+									</LegStart>
+									<LegEnd>
+										<GeoPosition>
 											<siri:Longitude>47.042666496</siri:Longitude>
 											<siri:Latitude>8.306332108</siri:Latitude>
-										</ojp:GeoPosition>
-										<ojp:Name>
-											<ojp:Text>Taxiplatz Luzern</ojp:Text>
-										</ojp:Name>
-									</ojp:LegEnd>
-									<ojp:Duration>PT4M</ojp:Duration>
-								</ojp:TransferLeg>
-							</ojp:Leg>
-							<ojp:Leg>
-								<ojp:Id>3</ojp:Id>
-								<ojp:ContinuousLeg>
-									<ojp:LegStart>
-										<ojp:GeoPosition>
+										</GeoPosition>
+										<Name>
+											<Text>Taxiplatz Luzern</Text>
+										</Name>
+									</LegEnd>
+									<Duration>PT4M</Duration>
+								</TransferLeg>
+							</Leg>
+							<Leg>
+								<Id>3</Id>
+								<ContinuousLeg>
+									<LegStart>
+										<GeoPosition>
 											<siri:Longitude>47.042666496</siri:Longitude>
 											<siri:Latitude>8.306332108</siri:Latitude>
-										</ojp:GeoPosition>
-										<ojp:Name>
-											<ojp:Text>Taxiplatz Luzern</ojp:Text>
-										</ojp:Name>
-									</ojp:LegStart>
-									<ojp:LegEnd>
-										<ojp:GeoPosition>
+										</GeoPosition>
+										<Name>
+											<Text>Taxiplatz Luzern</Text>
+										</Name>
+									</LegStart>
+									<LegEnd>
+										<GeoPosition>
 											<siri:Longitude>47.06</siri:Longitude>
 											<siri:Latitude>8.32</siri:Latitude>
-										</ojp:GeoPosition>
-										<ojp:Name>
-											<ojp:Text>Destination</ojp:Text>
-										</ojp:Name>
-									</ojp:LegEnd>
-									<ojp:Service>
-										<ojp:ContinuousMode>demandResponsive</ojp:ContinuousMode>
-										<ojp:SharingService>
-											<ojp:OperatorRef>ch:1:sboid:12391912</ojp:OperatorRef>
-										</ojp:SharingService>
-										<ojp:BookingArrangements>
-											<ojp:BookingArrangement>
-												<ojp:BuyWhen>
-													<ojp:PurchaseMoment>onBoarding</ojp:PurchaseMoment>
-												</ojp:BuyWhen>
-											</ojp:BookingArrangement>
-										</ojp:BookingArrangements>
-									</ojp:Service>
-									<ojp:Duration>PT15M</ojp:Duration>
-								</ojp:ContinuousLeg>
-							</ojp:Leg>
-						</ojp:Trip>
-					</ojp:AlternativeTrip>
-					<ojp:FacilityCondition>
+										</GeoPosition>
+										<Name>
+											<Text>Destination</Text>
+										</Name>
+									</LegEnd>
+									<Service>
+										<ContinuousMode>demandResponsive</ContinuousMode>
+										<SharingService>
+											<OperatorRef>ch:1:sboid:12391912</OperatorRef>
+										</SharingService>
+										<BookingArrangements>
+											<BookingArrangement>
+												<BuyWhen>
+													<PurchaseMoment>onBoarding</PurchaseMoment>
+												</BuyWhen>
+											</BookingArrangement>
+										</BookingArrangements>
+									</Service>
+									<Duration>PT15M</Duration>
+								</ContinuousLeg>
+							</Leg>
+						</Trip>
+					</AlternativeTrip>
+					<FacilityCondition>
 						<siri:Facility>
 							<siri:FacilityCode>123313113--123-1--1231</siri:FacilityCode>
 						</siri:Facility>
 						<siri:FacilityStatus>
 							<siri:Status>notAvailable</siri:Status>
 						</siri:FacilityStatus>
-					</ojp:FacilityCondition>
-				</ojp:TripMonitoringResult>
-			</ojp:OJPTripMonitoringDelivery>
+					</FacilityCondition>
+				</TripMonitoringResult>
+			</OJPTripMonitoringDelivery>
 		</siri:ServiceDelivery>
-	</siri:OJPResponse>
-</siri:OJP>
+	</OJPResponse>
+</OJP>
