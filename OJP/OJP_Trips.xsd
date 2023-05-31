@@ -112,11 +112,6 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
-			<xs:element name="BikeTransport" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user wants to carry a bike on public transport.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
@@ -130,11 +125,6 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripMobilityFilterGroup"/>
-			<xs:element name="LevelEntrance" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The user needs vehicles with level entrance between  platform and vehicle, f.e. for wheelchair access.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="BikeTransport" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The user wants to carry a bike on public transport (could be extended in future to transporting big luggage/animals/etc).</xs:documentation>
