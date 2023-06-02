@@ -454,17 +454,17 @@
 			</xs:element>
 			<xs:element name="Duration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Overall duration of the trip (Transmodel: TRIP PATTERN.Duration).</xs:documentation>
+					<xs:documentation>Overall duration of the trip (TRIP attribute, not detailed in Transmodel, available from constituing LEGs).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Departure time at origin (Transmodel: TRIP PATTERN.StartTime).</xs:documentation>
+					<xs:documentation>Departure time at origin (TRIP attribute, not detailed in Transmodel, available from constituing LEGs).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Arrival time at destination (Transmodel: TRIP PATTERN.EndTime).</xs:documentation>
+					<xs:documentation>Arrival time at destination (TRIP attribute, not detailed in Transmodel, available from constituing LEGs).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PTLegs" type="xs:nonNegativeInteger" minOccurs="0">
@@ -474,7 +474,7 @@
 			</xs:element>
 			<xs:element name="Distance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Trip distance (Transmodel: TRIP PATTERN.Distance).</xs:documentation>
+					<xs:documentation>Trip distance (TRIP attribute, not detailed in Transmodel, available from constituing LEGs).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
@@ -509,17 +509,17 @@
 			</xs:element>
 			<xs:element name="Duration" type="xs:duration">
 				<xs:annotation>
-					<xs:documentation>Overall duration of the trip (Transmodel: TRIP PATTERN.Duration).</xs:documentation>
+					<xs:documentation>Overall duration of the trip (TRIP attribute, not detailed in Transmodel, available from constituing LEGs).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartTime" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Departure time at origin (Transmodel: TRIP PATTERN.StartTime).</xs:documentation>
+					<xs:documentation>Departure time at origin (TRIP attribute, not detailed in Transmodel, available from constituing LEGs).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndTime" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Arrival time at destination (Transmodel: TRIP PATTERN.EndTime).</xs:documentation>
+					<xs:documentation>Arrival time at destination (TRIP attribute, not detailed in Transmodel, available from constituing LEGs).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Transfers" type="xs:nonNegativeInteger">
@@ -529,7 +529,7 @@
 			</xs:element>
 			<xs:element name="Distance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Trip distance (Transmodel: TRIP PATTERN.Distance).</xs:documentation>
+					<xs:documentation>Trip distance (TRIP attribute, not detailed in Transmodel, available from constituing LEGs).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Leg" type="LegStructure" maxOccurs="unbounded">
