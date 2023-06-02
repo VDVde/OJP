@@ -275,7 +275,7 @@
 	</xs:group>
 	<xs:complexType name="SharingServiceStructure">
 		<xs:annotation>
-			<xs:documentation>Service that provides shared vehicles (Transmodel: ALTERNATIVE MODE LEG.SINGLE JOURNEY.COMMON.VEHICLE SERVICE.TRANSPORT ORGANISATION).</xs:documentation>
+			<xs:documentation>Service that provides shared vehicles (The Transmodel MODE OF OPERATION is VEHICLE SHARING; other related Transmodel concepts: ALTERNATIVE MODE LEG.SINGLE JOURNEY.COMMON.VEHICLE SERVICE.TRANSPORT ORGANISATION).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
