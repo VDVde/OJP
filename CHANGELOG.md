@@ -6,15 +6,15 @@ All notable changes to this project will be documented in this file. The format 
 
 The releases can be found at https://github.com/VDVde/OJP/releases
 
-Currently active is [1.0.2]
-
 ## [2.0]
 
 
-### Breaking
+### New Services
 
-* Updated to SIRI 2.1 using a copy and adapted imports. [#330](https://github.com/VDVde/OJP/pull/330)
-* Renamed `ResultId`s in \*`ResultStructure`s to `Id`, as well as `LegId` in `LegStructure` and `TripId` in `TripStructure`. [#215](https://github.com/VDVde/OJP/pull/215)
+* New `OJPStatusRequest`and `OJPStatusDelivery`. [#216](https://github.com/VDVde/OJP/pull/216)
+* New `OJPLineInformationRequest` and `OJPLineInformationDelivery`. [#243](https://github.com/VDVde/OJP/pull/243), [#308](https://github.com/VDVde/OJP/pull/308)
+* New `OJPAvailabilityRequest` and `OJPAvailabilityDelivery`. [#262](https://github.com/VDVde/OJP/pull/262), [#241](https://github.com/VDVde/OJP/pull/241), [#322](https://github.com/VDVde/OJP/pull/322)
+* New `OJPTripRefineRequest` and `OJPTripRefineDelivery`. [#247](https://github.com/VDVde/OJP/pull/247)
 
 
 ### Added
@@ -26,10 +26,6 @@ Currently active is [1.0.2]
 * Added `TripContext` to `TripFareRequestStructure` and `MultiTripFareRequestStructure`.  [#323](https://github.com/VDVde/OJP/pull/323)
 * New `OperatorFilter`and `SystemId` in `TripRefineRequest` to indicate the system to be queried. [#298](https://github.com/VDVde/OJP/pull/298)
 * Added `ExpectedDepartureOccupancy` and `ExpectedDepartureCapacities` (from SIRI) to Legs.  [#264](https://github.com/VDVde/OJP/pull/264)
-* New `OJPStatusRequest`and `OJPStatusDelivery`. [#216](https://github.com/VDVde/OJP/pull/216)
-* New `OJPLineInformationRequest` and `OJPLineInformationDelivery`. [#243](https://github.com/VDVde/OJP/pull/243), [#308](https://github.com/VDVde/OJP/pull/308)
-* New `OJPAvailabilityRequest` and `OJPAvailabilityDelivery`. [#262](https://github.com/VDVde/OJP/pull/262), [#241](https://github.com/VDVde/OJP/pull/241), [#322](https://github.com/VDVde/OJP/pull/322)
-* New `OJPTripRefineRequest` and `OJPTripRefineDelivery`. [#247](https://github.com/VDVde/OJP/pull/247)
 * Additional `OptimisationMethod`s for trip planning (`leastDistance`, `environmentalSafety`, `extraSafe`, `extraReliable`, `scenic`, `quietTravel`), new `HikingProfile` and `CyclingProfile`, support for mutiple `OptimisationMethod`s, new filter `IncludeAlternativeOptions` to show second-best routes. [#302](https://github.com/VDVde/OJP/pull/302), [#271](https://github.com/VDVde/OJP/pull/271), [#242](https://github.com/VDVde/OJP/pull/242)
 * New place sorting options (`PlaceSortingGroup`) for `OJPPlaceInformationRequest`. [#301](https://github.com/VDVde/OJP/pull/301), [#287](https://github.com/VDVde/OJP/pull/287)
 * Added switches to request accessibility information (`IncludeAccessFeatureStatus`, `IncludeAccessibilityDetails`) in `OJPTripRequest`. [#291](https://github.com/VDVde/OJP/pull/291)
@@ -40,57 +36,18 @@ Currently active is [1.0.2]
 * Added `ReservationNeeded` for dated journeys to indicate if and what aspect of a jouney (operation of a service, call at a stop) needs a reservation. [#272](https://github.com/VDVde/OJP/pull/272)
 * Added `SituationFullRefs` for all deliveries. [#268](https://github.com/VDVde/OJP/pull/268)
 * Richer data in `PathGuidance`. [#265](https://github.com/VDVde/OJP/pull/265)
-* Added `UseRealTimeData` switch in `OJPTripRequest` to specify whether and how real-time data is taken into account for the trips returned. [#259](https://github.com/VDVde/OJP/pull/259)
-* Additional enumeration values for `MultiPointType` (`OJPMultiPointTripRequest`), added `ViaSytem` for `OJPTripRequest` and `OJPMultiPointTripRequest`, added `SustainabilityGroup` with `EmissionCO2`, added `Priority` for exchange points, renamed `ReferredSystemId` and `AllowedSystemId` to `ReferredSystem` and `AllowedSystem`, respectively. [#244](https://github.com/VDVde/OJP/pull/244), [#344](https://github.com/VDVde/OJP/pull/344)
+* **[breaking]** Added `UseRealTimeData` switch in `OJPTripRequest` to specify whether and how real-time data is taken into account for the trips returned. [#259](https://github.com/VDVde/OJP/pull/259)
+* Additional enumeration values for `MultiPointType` (`OJPMultiPointTripRequest`), added `ViaSytem` for `OJPTripRequest` and `OJPMultiPointTripRequest`, added `SustainabilityGroup` with `EmissionCO2`, added `Priority` for exchange points. [#244](https://github.com/VDVde/OJP/pull/244), [#344](https://github.com/VDVde/OJP/pull/344)
+* **[breaking]** Renamed `ReferredSystemId` and `AllowedSystemId` to `ReferredSystem` and `AllowedSystem`, respectively. [#244](https://github.com/VDVde/OJP/pull/244)
 * Added `VehicleFilter` to `TripParamStructure`. [#240](https://github.com/VDVde/OJP/pull/240)
 * Added `PathLinkEndStructure` to indicate levels and places connected by `PathLink`s. [#239](https://github.com/VDVde/OJP/pull/239)
 * Added `AccessibilityFeature`s (values like `stepFreeAccess`, `visualSigns`, etc.) and additional `AccessFeature`s (`singleStep`, `shuttle`, etc.) for `PathLink`s. [#237](https://github.com/VDVde/OJP/pull/237)
-* Heavily extended `BookingArrangements` for better alignment with NeTEx. [#232](https://github.com/VDVde/OJP/pull/232)
+* **[breaking]** Heavily extended `BookingArrangements` for better alignment with NeTEx. [#232](https://github.com/VDVde/OJP/pull/232)
 * Added `Operators` in `PlaceResultStructure` and `ResponseContext`, added `IncludeOperators` for `OJPPlaceInformationRequest`. [#220](https://github.com/VDVde/OJP/pull/220)
 * Added `siri:VehicleRef`to `ServiceGroup`. [#214](https://github.com/VDVde/OJP/pull/214)
 * Added `AllowedSystemId`s to `PlaceRefStructure`, specifiying the systems to be queried by `OJPPlaceInformationRequest`. [#204](https://github.com/VDVde/OJP/pull/204)
 * Added `PublicCode` of the journey to `DatedJourney` and `ContinuousService`. [#201](https://github.com/VDVde/OJP/pull/201)
-
-
-### Changed
-
-* Replaced `TravelClass` with `siri:FareClass` which uses the NeTEx enumeration values. [#354](https://github.com/VDVde/OJP/pull/354)
-* Reorganised `BaseTripPolicyGroup` so as to align the parameters in `MultiPointTripPolicyGroup` with `TripPolicyGroup` [#333](https://github.com/VDVde/OJP/pull/333)
-* Renamed `OJP_Places.xsd` to `OJP_Location.xsd`, `OJP_PlaceSupport.xsd` to `OJP_LocationSupport.xsd`, `OJPPlaceInformationRequest` to `OJPLocationInformationRequest`, as well as the related Delivery, structures and groups; renamed `Place` to `Location` in the StopEvent service and `TripPlace` to `TripLocation`. [#231](https://github.com/VDVde/OJP/pull/231)
-* Corrected several typos.  [#320](https://github.com/VDVde/OJP/pull/320),  [#343](https://github.com/VDVde/OJP/pull/343)
-* Renamed elements in `ExchangePointsResponseGroup`. [#295](https://github.com/VDVde/OJP/pull/295)
-* Removed obsolete code in *OJPRequestSupport.xsd*. [#294](https://github.com/VDVde/OJP/pull/294)
-* `WaitDuration`: changed to standard order of attributes. [#286](https://github.com/VDVde/OJP/pull/286)
-* Renamed \*`TripLeg`\* to \*`Leg`\*. [#230](https://github.com/VDVde/OJP/pull/230) 
-* Replaced `EntitlementProductRef`s with a `EntitlementProductListStructure`, allowing for data like `EntitlementProductName` or `ValidityPeriod` for each `EntitlementProduct` in the list. [#229](https://github.com/VDVde/OJP/pull/229)
-* Redefined `VatRate` as a percentage instead of an enumeration. [#228](https://github.com/VDVde/OJP/pull/228)
-* Replaced `coord` with `location` in `PlaceTypeEnumeration`. [#218](https://github.com/VDVde/OJP/pull/218)
-* Renamed `PointOfInterestCode` and `AddressCode` to `PublicCode`, `PointOfInterestName` and `AddressName` to `Name`. [#217](https://github.com/VDVde/OJP/pull/217)
-* Corrected `schemaLocation` for *siri_reference-v2.0.xsd*. [#211](https://github.com/VDVde/OJP/pull/211)
-* Renamed `ErrorMessage` to `Problem`, `Code` to `Type`, `Text` to `Title` and added `Details` and `LogData`; added dedicated \*`ProblemStructure`s for each request, enumerating the possible types, some of which were previously only defined in the documentation, some not defined at all; added the `Problem` element to the \*`ResultStructure`s. Renamed some problem types, e.g., `FARES_`\* to `FARE_`\*, `MULTIPOINTTRIP_TOOMANYPOINTS` to `TRIP_MULTIPOINT_TOOMANYPOINTS`. [#203](https://github.com/VDVde/OJP/pull/203)
-* Bug fix: renamed `MinimumBookingPeriod.` to `MinimumBookingPeriod`. [#163](https://github.com/VDVde/OJP/pull/163)
-
-
-### Removed
-
-
-### Internal Use
-
-* Introduced more specific ObjectIdTypes for NeTEx objects: `FareResultObjectIdType`, `StopEventResultObjectIdType`, `TripResultObjectIdType`, `MultiPointTripResultObjectIdType`, `TripObjectIdType`, `LegObjectIdType`, `PlaceObjectIdType`. [#316](https://github.com/VDVde/OJP/pull/316),  [#348](https://github.com/VDVde/OJP/pull/348)
-* New OJP.spp (XML Spy project file). [#297](https://github.com/VDVde/OJP/pull/297)
-* Changed location of automatically generated documentation. [#279](https://github.com/VDVde/OJP/pull/279)
-* Migrated from *Travis* to *GitHub Actions*. [#274](https://github.com/VDVde/OJP/pull/274)
-* Renamed `FareProductCodeType` to `FareProductIdType`. [#267](https://github.com/VDVde/OJP/pull/267)
 * Added permalinks to headers in gnerated html documentation. [#246](https://github.com/VDVde/OJP/pull/246)
-* Improved *title* attribute and cardinality in generated HTML documentation. [#233](https://github.com/VDVde/OJP/pull/233)
-
-
-
-
-## [1.1] - Not released yet (will be released as part of 2.0)
-
-### Added
-
 * Added *README.md* and this *CHANGELOG.md* files. [#130](https://github.com/VDVde/OJP/pull/130)
 * Added `IncludeHierarchy` in `StopEventRequest` to allow including either parts, or the complete hierarchy of the stop point/stop place if known.
   [#96](https://github.com/VDVde/OJP/pull/96)
@@ -140,16 +97,35 @@ Currently active is [1.0.2]
 
 ### Changed
 
-* Renamed `Location` to `Place`:
-  According to TRANSMODEL a "location" is only a geographical position, while a "place" consists of a location and other attributes. 
-  This change distinguishes the two terms properly, which were used inconsistently in OJP. In most cases the term "location" was 
-  replaced by the term "place". This applies to type and element names but also to annotations.
-  [#82](https://github.com/VDVde/OJP/pull/82) [#99](https://github.com/VDVde/OJP/pull/99)
-* Renamed `PrivateCode` to `DomainCode`.
+* **[breaking]** Replaced `TravelClass` with `siri:FareClass` which uses the NeTEx enumeration values. [#354](https://github.com/VDVde/OJP/pull/354)
+* Reorganised `BaseTripPolicyGroup` so as to align the parameters in `MultiPointTripPolicyGroup` with `TripPolicyGroup` [#333](https://github.com/VDVde/OJP/pull/333)
+* **[breaking]** Updated to SIRI 2.1 using a copy and adapted imports. [#330](https://github.com/VDVde/OJP/pull/330)
+* Done and then largely undone. First change: Renamed `Location` to `Place`: According to TRANSMODEL a "location" is only a geographical position, while a "place" consists of a location and other attributes. This change distinguishes the two terms properly, which were used inconsistently in OJP. In most cases the term "location" was 
+  replaced by the term "place". This applies to type and element names but also to annotations. [#82](https://github.com/VDVde/OJP/pull/82) [#99](https://github.com/VDVde/OJP/pull/99). Second change: Renamed `OJP_Places.xsd` to `OJP_Location.xsd`, `OJP_PlaceSupport.xsd` to `OJP_LocationSupport.xsd`, `OJPPlaceInformationRequest` to `OJPLocationInformationRequest`, as well as the related Delivery, structures and groups; renamed `Place` to `Location` in the StopEvent service and `TripPlace` to `TripLocation`. [#231](https://github.com/VDVde/OJP/pull/231)
+* Corrected several typos. [#320](https://github.com/VDVde/OJP/pull/320),  [#343](https://github.com/VDVde/OJP/pull/343)
+* **[breaking]** Renamed elements in `ExchangePointsResponseGroup`: `ExchangePointResponseContext` to `ExchangePointsResponseContext`, `Place` to `ExchangePointsResult`. [#295](https://github.com/VDVde/OJP/pull/295)
+* Removed obsolete code in *OJPRequestSupport.xsd*. [#294](https://github.com/VDVde/OJP/pull/294)
+* `WaitDuration`: changed to standard order of attributes. [#286](https://github.com/VDVde/OJP/pull/286)
+* **[breaking]** Renamed \*`TripLeg`\* to \*`Leg`\*. [#230](https://github.com/VDVde/OJP/pull/230) 
+* **[breaking]** Replaced `EntitlementProductRef`s with a `EntitlementProductListStructure`, allowing for data like `EntitlementProductName` or `ValidityPeriod` for each `EntitlementProduct` in the list. [#229](https://github.com/VDVde/OJP/pull/229)
+* **[breaking]** Redefined `VatRate` as a percentage instead of an enumeration. [#228](https://github.com/VDVde/OJP/pull/228)
+* **[breaking]** Replaced `coord` with `location` in `PlaceTypeEnumeration`. [#218](https://github.com/VDVde/OJP/pull/218)
+* **[breaking]** Renamed `PointOfInterestCode` and `AddressCode` to `PublicCode`, `PointOfInterestName` and `AddressName` to `Name`. [#217](https://github.com/VDVde/OJP/pull/217)
+* **[breaking]** Renamed `ResultId`s in `ResultStructure`s to `Id`, as well as `LegId` in `LegStructure` and `TripId` in `TripStructure`. [#215](https://github.com/VDVde/OJP/pull/215)
+* Corrected `schemaLocation` for *siri_reference-v2.0.xsd*. [#211](https://github.com/VDVde/OJP/pull/211)
+* **[breaking]** Renamed `ErrorMessage` to `Problem`, `Code` to `Type`, `Text` to `Title` and added `Details` and `LogData`; added dedicated \*`ProblemStructure`s for each request, enumerating the possible types, some of which were previously only defined in the documentation, some not defined at all; added the `Problem` element to the \*`ResultStructure`s. Renamed some problem types, e.g., `FARES_`\* to `FARE_`\*, `MULTIPOINTTRIP_TOOMANYPOINTS` to `TRIP_MULTIPOINT_TOOMANYPOINTS`. [#203](https://github.com/VDVde/OJP/pull/203)
+* Bug fix: renamed `MinimumBookingPeriod.` to `MinimumBookingPeriod`. [#163](https://github.com/VDVde/OJP/pull/163)
+* Introduced more specific ObjectIdTypes for NeTEx objects: `FareResultObjectIdType`, `StopEventResultObjectIdType`, `TripResultObjectIdType`, `MultiPointTripResultObjectIdType`, `TripObjectIdType`, `LegObjectIdType`, `PlaceObjectIdType`. [#316](https://github.com/VDVde/OJP/pull/316),  [#348](https://github.com/VDVde/OJP/pull/348)
+* New OJP.spp (XML Spy project file). [#297](https://github.com/VDVde/OJP/pull/297)
+* Changed location of automatically generated documentation. [#279](https://github.com/VDVde/OJP/pull/279)
+* Migrated from *Travis* to *GitHub Actions*. [#274](https://github.com/VDVde/OJP/pull/274)
+* Renamed `FareProductCodeType` to `FareProductIdType`. [#267](https://github.com/VDVde/OJP/pull/267)
+* Improved *title* attribute and cardinality in generated HTML documentation. [#233](https://github.com/VDVde/OJP/pull/233)
+* **[breaking]** Renamed `PrivateCode` to `DomainCode`.
   [#94](https://github.com/VDVde/OJP/pull/94)
-* Renamed `PublishedLineName` to `PublishedServiceName`.
+* **[breaking]** Renamed `PublishedLineName` to `PublishedServiceName`.
   [#89](https://github.com/VDVde/OJP/pull/89)
-* Replaced `AcceptDeferredDelivery` in `TripPolicyFilterGroup` by `TripSummaryOnly` in `TripContentFilterGroup` as the parameter to control 
+* **[breaking]** Replaced `AcceptDeferredDelivery` in `TripPolicyFilterGroup` by `TripSummaryOnly` in `TripContentFilterGroup` as the parameter to control 
   whether to deliver complete trips or only trip summaries. The concept of a deferred delivery has been removed. Additionally, replaced 
   `MultiPointTripContentFilterGroup` in `MultiPointTripParamStructure` by `TripContentFilterGroup` as legs are mandatory within trip results.
   [#109](https://github.com/VDVde/OJP/pull/109)
@@ -157,9 +133,9 @@ Currently active is [1.0.2]
   [#32](https://github.com/VDVde/OJP/pull/32)
 * Simplified all ResponseContexts to use a single `ResponseContextStructure`.
   [#39](https://github.com/VDVde/OJP/pull/39)
-* Renamed `InfoURL` to `InfoUrl`.
+* **[breaking]** Renamed `InfoURL` to `InfoUrl`.
   [#31](https://github.com/VDVde/OJP/pull/31)
-* Changed `BookingUrl` and `InfoUrl` in `BookingArrangementStructure` to contain a `Label` and a `Url` instead of only referring to `xs:anyURI`,
+* **[breaking]** Changed `BookingUrl` and `InfoUrl` in `BookingArrangementStructure` to contain a `Label` and a `Url` instead of only referring to `xs:anyURI`,
   changed `InfoUrl` in `GeneralAttributeStructure` to `Url`.
   [#123](https://github.com/VDVde/OJP/pull/123)
 * Set the default value `anyPoint` for `MultiPointType` in `MultiPointTripPolicyGroup` so the default response does not have to contain a trip
@@ -183,22 +159,18 @@ Currently active is [1.0.2]
   [#155](https://github.com/VDVde/OJP/pull/155)
 * Changed `CallAtStopStructure`, `LegBoardStructure`, `LegAlightStructure` and `LegIntermediateStructure` to new types
   `ServiceArrivalStructure` and `ServiceDepartureStructure`.
-  [#156](https://github.com/VDVde/OJP/pull/156)  
+  [#156](https://github.com/VDVde/OJP/pull/156) 
+* Allowed `TransferLimit` to be `0` to allow requesting a trip without transfers.
+  [#7](https://github.com/VDVde/OJP/pull/7)
+* Allowed `NumberOfResultsBefore` and `NumberOfResultsAfter` to be `0` to allow requesting trips only before or after a given time.
+  [#3](https://github.com/VDVde/OJP/pull/3)
+ 
 
 ### Removed
 * Omit unused requests and responses.
   [#76](https://github.com/VDVde/OJP/pull/76)
 * Removed unused structures.
   [#55](https://github.com/VDVde/OJP/pull/55)
-
-
-## [1.0.1] - 2019-02-26
-
-### Changed
-* Allowed `TransferLimit` to be `0` to allow requesting a trip without transfers.
-  [#7](https://github.com/VDVde/OJP/pull/7)
-* Allowed `NumberOfResultsBefore` and `NumberOfResultsAfter` to be `0` to allow requesting trips only before or after a given time.
-  [#3](https://github.com/VDVde/OJP/pull/3)
 
 
 ## [1.0.0] - 2018-06-08
