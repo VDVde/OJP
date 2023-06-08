@@ -151,7 +151,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
   [#110](https://github.com/VDVde/OJP/pull/110)
 * Optimized formatting of the files.
   [#74](https://github.com/VDVde/OJP/pull/74)
-* Allow `TransferLimit` to be 0 in `MultiPointTripRequest` as well (like done for `TripRequest` in v1.0.1).
+* Allow `TransferLimit` to be 0 in `MultiPointTripRequest` as well (like done for c in v1.0.1).
   [#129](https://github.com/VDVde/OJP/pull/129)
 * Changed `Places` to new type `PlacesStructure` in `ResponseContextStructure`.
   [#150](https://github.com/VDVde/OJP/pull/150)
@@ -167,6 +167,8 @@ The releases can be found at https://github.com/VDVde/OJP/releases
  
 
 ### Removed
+* Removed annotations in `choice` constructs.
+  [#157](https://github.com/VDVde/OJP/pull/157)
 * Omit unused requests and responses.
   [#76](https://github.com/VDVde/OJP/pull/76)
 * Removed unused structures.
