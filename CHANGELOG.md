@@ -19,6 +19,8 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### Added
 
+* **[breaking]** Additional optimisation methods and filter options for passengers with sensory or mobility restrictions. Modified / clarified behaviour of `NoSingleStep`. Abandoned the option to specify multiple optimisation methods. [#353](https://github.com/VDVde/OJP/pull/353) 
+* **[breaking]** Added formation information from SIRI. It can be requested in `TripInformationRequest`. SIRI data structures to transmit the information: `siri:JourneyFormationGroup`, `siri:DepartureFormationAssignment`, `siri:ArrivalFormationAssignment`, `siri:ServiceInfoGroup`. [#328](https://github.com/VDVde/OJP/pull/328)
 * Added `AreaGeometry` to `LineResultStructure`.  [#337](https://github.com/VDVde/OJP/pull/337)
 * New `OJPErrorStructure` both at the level of the `xDelivery` and at the level of the `xResult`. [#336](https://github.com/VDVde/OJP/pull/336)
 * Added `IsAlternativeOption` to `TripResultStructure`.  [#326](https://github.com/VDVde/OJP/pull/326)
@@ -96,6 +98,9 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### Changed
 
+* **[breaking]** Made `MultiPointType` a required parameter in `OJPMultiPointTripRequest`. [#353](https://github.com/VDVde/OJP/pull/353)
+* **[breaking]** Changed main namespace from `SIRI` to `OJP`. [#347](https://github.com/VDVde/OJP/pull/347)
+* Updated all examples to new request and response structures, added to GitHub. [#334](https://github.com/VDVde/OJP/pull/334)
 * **[breaking]** Replaced `TravelClass` with `siri:FareClass` which uses the NeTEx enumeration values. [#354](https://github.com/VDVde/OJP/pull/354)
 * Reorganised `BaseTripPolicyGroup` so as to align the parameters in `MultiPointTripPolicyGroup` with `TripPolicyGroup` [#333](https://github.com/VDVde/OJP/pull/333)
 * **[breaking]** Updated to SIRI 2.1 using a copy and adapted imports. [#330](https://github.com/VDVde/OJP/pull/330)
