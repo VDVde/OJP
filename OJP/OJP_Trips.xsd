@@ -128,7 +128,7 @@
 			<xs:element name="BikeTransport" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The user wants to carry a bike on public transport (could be extended in future to transporting big luggage/animals/etc).</xs:documentation>
-				</xs:annotation>
+			</xs:annotation>
 			</xs:element>
 			<xs:element name="WalkSpeed" type="OpenPercentType" minOccurs="0">
 				<xs:annotation>
