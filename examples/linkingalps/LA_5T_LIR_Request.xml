@@ -6,9 +6,9 @@
 			<siri:RequestorRef>SBB-SoapUI-Tests</siri:RequestorRef>
 			<OJPLocationInformationRequest>
 				<siri:RequestTimestamp>2022-01-31T13:45:09.541Z</siri:RequestTimestamp>
-				<InitialInput></InitialInput>
+				<InitialInput/>
 				<Restrictions>
-					<Type>stop</Type>					
+					<Type>stop</Type>
 					<NumberOfResults>100</NumberOfResults>
 					<ContinueAt>0</ContinueAt>
 				</Restrictions>

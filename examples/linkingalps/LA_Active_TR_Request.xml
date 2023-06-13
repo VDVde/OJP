@@ -10,8 +10,8 @@
 					<PlaceRef>
 						<StopPlaceRef>STOP:SBB:8579511|Delsbergerstrasse</StopPlaceRef>
 						<Name>
-                       			<Text>Origin</Text>
-                       		</Name>
+							<Text>Origin</Text>
+						</Name>
 					</PlaceRef>
 					<DepArrTime>2023-06-13T16:27:19Z</DepArrTime>
 				</Origin>
@@ -19,8 +19,8 @@
 					<PlaceRef>
 						<StopPlaceRef>STOP:STA:it:22021:81|Gomagoi</StopPlaceRef>
 						<Name>
-                       			<Text>Destination</Text>
-                       		</Name>
+							<Text>Destination</Text>
+						</Name>
 					</PlaceRef>
 				</Destination>
 				<Params>
