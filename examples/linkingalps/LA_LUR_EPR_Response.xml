@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+   <OJPResponse>
+      <siri:ServiceDelivery>
+         <siri:ResponseTimestamp>2023-06-13T14:31:28.0275519Z</siri:ResponseTimestamp>
+         <OJPExchangePointsDelivery>
+            <siri:ResponseTimestamp>2023-06-13T14:31:28.0275953Z</siri:ResponseTimestamp>
+            <siri:RequestMessageRef>SI:ATOB:8f4e1f0e-ea81-4003-bb3f-eb6aa83ea1bb</siri:RequestMessageRef>
+            <siri:Status>true</siri:Status>
+            <CalcTime>0</CalcTime>
+            <ExchangePointsResult>
+               <Place>
+                  <StopPlace>
+                     <StopPlaceRef>SI:01:1_1122782_sp</StopPlaceRef>
+                     <StopPlaceName>
+                        <Text xml:lang="sl">Dobova</Text>
+                     </StopPlaceName>
+                     <PrivateCode>
+                        <System>LA-ExchangePoint-ID</System>
+                        <Value>SI:SI036:StopPlace:1122782:</Value>
+                     </PrivateCode>
+                  </StopPlace>
+                  <Name>
+                     <Text xml:lang="sl">Dobova</Text>
+                  </Name>
+                  <GeoPosition>
+                     <siri:Longitude>15.654863</siri:Longitude>
+                     <siri:Latitude>45.898647</siri:Latitude>
+                  </GeoPosition>
+               </Place>
+               <Mode>
+                  <PtMode>rail</PtMode>
+               </Mode>
+            </ExchangePointsResult>
+         </OJPExchangePointsDelivery>
+      </siri:ServiceDelivery>
+   </OJPResponse>
+</OJP>

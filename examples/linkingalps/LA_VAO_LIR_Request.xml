@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2023-06-13T16:41:52+02:00</siri:RequestTimestamp>
+			<siri:RequestorRef>SBB-SKI-CH-2022</siri:RequestorRef>
+			<OJPLocationInformationRequest>
+				<siri:RequestTimestamp>2023-06-13T16:41:52+02:00</siri:RequestTimestamp>
+				<InitialInput>
+					<Name>Villach Hbf</Name>
+				</InitialInput>
+				<Restrictions>
+					<Type>stop</Type>
+					<NumberOfResults>1</NumberOfResults>
+					<IncludePtModes>false</IncludePtModes>
+				</Restrictions>
+			</OJPLocationInformationRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>

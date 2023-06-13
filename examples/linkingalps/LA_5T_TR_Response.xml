@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2023-06-13T14:20:01.790Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPOpenMoveMiddleware</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<OJPTripDelivery>
+				<siri:ResponseTimestamp>2023-06-13T14:20:02.461Z</siri:ResponseTimestamp>
+				<siri:Status>true</siri:Status>
+				<CalcTime>671</CalcTime>
+				<TripResponseContext>
+					<Places>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>trepie:ITRP-ST0031069001</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Stazione NOVARA</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Stazione NOVARA</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>8.62497</siri:Longitude>
+								<siri:Latitude>45.45114</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>trepie:ITRP-ST0012729029</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Stazione TORINO PORTA SUSA</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Stazione TORINO PORTA SUSA</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>7.66537</siri:Longitude>
+								<siri:Latitude>45.07175</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>trepie:ITRP-ST0151469002</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Stazione MILANO PORTA GARIBALDI</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Stazione MILANO PORTA GARIBALDI</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>9.18748</siri:Longitude>
+								<siri:Latitude>45.4838</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>trepie:ITRP-ST0012729010</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Stazione TORINO PORTA NUOVA</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Stazione TORINO PORTA NUOVA</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>7.67752</siri:Longitude>
+								<siri:Latitude>45.0609</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>gtt:8221</StopPlaceRef>
+								<StopPlaceName>
+									<Text>METRO PORTA SUSA</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>METRO PORTA SUSA</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>7.66477</siri:Longitude>
+								<siri:Latitude>45.06987</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>gtt:8214</StopPlaceRef>
+								<StopPlaceName>
+									<Text>METRO POZZO STRADA</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>METRO POZZO STRADA</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>7.62893</siri:Longitude>
+								<siri:Latitude>45.07493</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>gtt:8233</StopPlaceRef>
+								<StopPlaceName>
+									<Text>METRO BENGASI</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>METRO BENGASI</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>7.66122</siri:Longitude>
+								<siri:Latitude>45.01663</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>gtt:8210</StopPlaceRef>
+								<StopPlaceName>
+									<Text>METRO FERMI</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>METRO FERMI</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>7.59139</siri:Longitude>
+								<siri:Latitude>45.07605</siri:Latitude>
+							</GeoPosition>
+						</Place>
+					</Places>
+				</TripResponseContext>
+				<TripResult>
+					<Id>52e6027a-84b3-4936-b3aa-890982c09cc8</Id>
+					<Trip>
+						<Id>52e6027a-84b3-4936-b3aa-890982c09cc8</Id>
+						<Duration>PT1H16M43S</Duration>
+						<StartTime>2023-06-13T16:44:16.000Z</StartTime>
+						<EndTime>2023-06-13T18:00:59.000Z</EndTime>
+						<Transfers>1</Transfers>
+						<Distance>91595</Distance>
+						<Leg>
+							<Id>1</Id>
+							<TransferLeg>
+								<TransferMode>walk</TransferMode>
+								<LegStart>
+									<siri:StopPointRef>23:1917</siri:StopPointRef>
+									<Name>
+										<Text>NOVARA</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<siri:StopPointRef>trepie:ITRP-ST0031069001</siri:StopPointRef>
+									<Name>
+										<Text>Stazione NOVARA</Text>
+									</Name>
+								</LegEnd>
+								<TimeWindowStart>2023-06-13T16:44:16.000Z</TimeWindowStart>
+								<TimeWindowEnd>2023-06-13T16:47:00.000Z</TimeWindowEnd>
+								<Duration>PT2M44S</Duration>
+								<WalkDuration>PT2M44S</WalkDuration>
+							</TransferLeg>
+						</Leg>
+						<Leg>
+							<Id>2</Id>
+							<TimedLeg>
+								<LegBoard>
+									<siri:StopPointRef>trepie:ITRP-ST0031069001</siri:StopPointRef>
+									<StopPointName>
+										<Text>Stazione NOVARA</Text>
+									</StopPointName>
+									<ServiceDeparture>
+										<TimetabledTime>2023-06-13T16:47:00.000Z</TimetabledTime>
+										<EstimatedTime>2023-06-13T16:47:00.000Z</EstimatedTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegAlight>
+									<siri:StopPointRef>trepie:ITRP-ST0012729029</siri:StopPointRef>
+									<StopPointName>
+										<Text>Stazione TORINO PORTA SUSA</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-06-13T17:38:00.000Z</TimetabledTime>
+										<EstimatedTime>2023-06-13T17:38:00.000Z</EstimatedTime>
+									</ServiceArrival>
+									<Order>3</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>2023-06-13</OperatingDayRef>
+									<JourneyRef>trepie:ITRP-TR200_6381_62859</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>trepie:ITRP-RO200_6381_20221211_20231209</siri:LineRef>
+										<Mode>
+											<PtMode>rail</PtMode>
+										</Mode>
+										<PublishedServiceName>
+											<Text>mi.p.garibaldi - torino p.nuova</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>ITRP-AG000174</OperatorRef>
+										</OperatorRefs>
+									</ServiceSection>
+									<OriginStopPointRef>trepie:ITRP-ST0151469002</OriginStopPointRef>
+									<OriginText>
+										<Text>Stazione MILANO PORTA GARIBALDI</Text>
+									</OriginText>
+									<DestinationStopPointRef>trepie:ITRP-ST0012729010</DestinationStopPointRef>
+									<DestinationText>
+										<Text>Stazione TORINO PORTA NUOVA</Text>
+									</DestinationText>
+								</Service>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<Id>3</Id>
+							<TransferLeg>
+								<TransferMode>walk</TransferMode>
+								<LegStart>
+									<siri:StopPointRef>trepie:ITRP-ST0012729029</siri:StopPointRef>
+									<Name>
+										<Text>Stazione TORINO PORTA SUSA</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<siri:StopPointRef>gtt:8221</siri:StopPointRef>
+									<Name>
+										<Text>METRO PORTA SUSA</Text>
+									</Name>
+								</LegEnd>
+								<TimeWindowStart>2023-06-13T17:38:00.000Z</TimeWindowStart>
+								<TimeWindowEnd>2023-06-13T17:41:19.000Z</TimeWindowEnd>
+								<Duration>PT3M19S</Duration>
+								<WalkDuration>PT3M19S</WalkDuration>
+							</TransferLeg>
+						</Leg>
+						<Leg>
+							<Id>4</Id>
+							<TimedLeg>
+								<LegBoard>
+									<siri:StopPointRef>gtt:8221</siri:StopPointRef>
+									<StopPointName>
+										<Text>METRO PORTA SUSA</Text>
+									</StopPointName>
+									<ServiceDeparture>
+										<TimetabledTime>2023-06-13T17:43:00.000Z</TimetabledTime>
+										<EstimatedTime>2023-06-13T17:43:00.000Z</EstimatedTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegAlight>
+									<siri:StopPointRef>gtt:8214</siri:StopPointRef>
+									<StopPointName>
+										<Text>METRO POZZO STRADA</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-06-13T17:53:00.000Z</TimetabledTime>
+										<EstimatedTime>2023-06-13T17:53:00.000Z</EstimatedTime>
+									</ServiceArrival>
+									<Order>8</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>2023-06-13</OperatingDayRef>
+									<JourneyRef>gtt:22853509U</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>gtt:METROU</siri:LineRef>
+										<Mode>
+											<PtMode>underground</PtMode>
+										</Mode>
+										<PublishedServiceName>
+											<Text>M1 metropolitana, stazione fermi (collegno) - stazione bengasi</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>U</OperatorRef>
+										</OperatorRefs>
+									</ServiceSection>
+									<OriginStopPointRef>gtt:8233</OriginStopPointRef>
+									<OriginText>
+										<Text>METRO BENGASI</Text>
+									</OriginText>
+									<DestinationStopPointRef>gtt:8210</DestinationStopPointRef>
+									<DestinationText>
+										<Text>METRO FERMI</Text>
+									</DestinationText>
+								</Service>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<Id>5</Id>
+							<TransferLeg>
+								<TransferMode>walk</TransferMode>
+								<LegStart>
+									<siri:StopPointRef>gtt:8214</siri:StopPointRef>
+									<Name>
+										<Text>METRO POZZO STRADA</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<siri:StopPointRef>gtt:1992</siri:StopPointRef>
+									<Name>
+										<Text>RE</Text>
+									</Name>
+								</LegEnd>
+								<TimeWindowStart>2023-06-13T17:53:00.000Z</TimeWindowStart>
+								<TimeWindowEnd>2023-06-13T18:00:59.000Z</TimeWindowEnd>
+								<Duration>PT7M59S</Duration>
+								<WalkDuration>PT7M59S</WalkDuration>
+							</TransferLeg>
+						</Leg>
+					</Trip>
+				</TripResult>
+			</OJPTripDelivery>
+		</siri:ServiceDelivery>
+	</OJPResponse>
+</OJP>

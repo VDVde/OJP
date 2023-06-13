@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+   <OJPResponse>
+      <siri:ServiceDelivery>
+         <siri:ResponseTimestamp>2023-06-13T17:46:24+02:00</siri:ResponseTimestamp>
+         <siri:ProducerRef>ARIA_LinkingAlps_HCN_OJP_PSA.PUB.1.0.3</siri:ProducerRef>
+         <siri:RequestMessageRef>85e70b38-88da-46ef-88fb-b6cfe1ddb0f7</siri:RequestMessageRef>
+         <OJPTripDelivery>
+            <siri:ResponseTimestamp>2023-06-13T17:46:24+02:00</siri:ResponseTimestamp>
+            <siri:Status>false</siri:Status>
+            <ErrorCondition>
+				<TripProblemType>TRIP_DATEOUTOFRANGE</TripProblemType>
+				<Details>
+					<Text>HCI service error: H9360 HAFAS Kernel: Date outside of the timetable period.</Text>
+				</Details>
+            </ErrorCondition>
+         </OJPTripDelivery>
+      </siri:ServiceDelivery>
+   </OJPResponse>
+</OJP>
