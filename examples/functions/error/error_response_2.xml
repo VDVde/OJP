@@ -72,18 +72,18 @@
 					</Service>
 					<JourneyTrack>
 						<TrackSection>
-							<TrackStart>
+							<TrackSectionStart>
 								<siri:StopPointRef>8591315</siri:StopPointRef>
 								<Name>
 									<Text xml:lang="de">Zürich, Rehalp</Text>
 								</Name>
-							</TrackStart>
-							<TrackEnd>
+							</TrackSectionStart>
+							<TrackSectionEnd>
 								<siri:StopPointRef>8591049</siri:StopPointRef>
 								<Name>
 									<Text xml:lang="de">Zürich, Auzelg</Text>
 								</Name>
-							</TrackEnd>
+							</TrackSectionEnd>
 							<Length>55032</Length>
 						</TrackSection>
 					</JourneyTrack>
