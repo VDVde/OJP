@@ -263,18 +263,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8503000</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich HB</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8503424</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Schaffhausen</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT1H2M</Duration>
 										<Length>61908</Length>
 									</TrackSection>
@@ -397,18 +397,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8503000</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich HB</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8506000</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Winterthur</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT22M</Duration>
 										<Length>25266</Length>
 									</TrackSection>
@@ -555,18 +555,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8506000</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Winterthur</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8503424</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Schaffhausen</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT27M</Duration>
 										<Length>30158</Length>
 									</TrackSection>

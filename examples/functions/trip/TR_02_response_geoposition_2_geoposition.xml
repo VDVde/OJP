@@ -85,7 +85,7 @@
 								<Length>330</Length>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<GeoPosition>
 												<siri:Longitude>8.48399</siri:Longitude>
 												<siri:Latitude>47.38614</siri:Latitude>
@@ -93,13 +93,13 @@
 											<Name>
 												<Text xml:lang="de">Altstetten</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591258</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Lindenplatz</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT5M</Duration>
 										<Length>330</Length>
 									</TrackSection>
@@ -442,18 +442,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8591258</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Lindenplatz</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8576193</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Bellevue</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT22M</Duration>
 									</TrackSection>
 								</LegTrack>
@@ -581,18 +581,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8576193</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Bellevue</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591364</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Signaustrasse</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT5M</Duration>
 										<Length>4550</Length>
 									</TrackSection>
@@ -634,13 +634,13 @@
 								<Length>438</Length>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8591364</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Signaustrasse</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<GeoPosition>
 												<siri:Longitude>8.56005</siri:Longitude>
 												<siri:Latitude>47.36462</siri:Latitude>
@@ -648,7 +648,7 @@
 											<Name>
 												<Text xml:lang="de">Hirslanden</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT7M</Duration>
 										<Length>438</Length>
 									</TrackSection>
@@ -798,7 +798,7 @@
 								<Length>330</Length>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<GeoPosition>
 												<siri:Longitude>8.48399</siri:Longitude>
 												<siri:Latitude>47.38614</siri:Latitude>
@@ -806,13 +806,13 @@
 											<Name>
 												<Text xml:lang="de">Altstetten</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591258</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Lindenplatz</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT5M</Duration>
 										<Length>330</Length>
 									</TrackSection>
@@ -973,18 +973,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8591258</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Lindenplatz</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591056</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich Altstetten, Bahnhof</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT3M</Duration>
 										<Length>669</Length>
 									</TrackSection>
@@ -1199,18 +1199,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8503001</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich Altstetten</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8503003</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich Stadelhofen</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT10M</Duration>
 										<Length>6381</Length>
 									</TrackSection>
@@ -1440,18 +1440,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8503059</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich Stadelhofen FB</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591364</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Signaustrasse</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT3M</Duration>
 										<Length>4208</Length>
 									</TrackSection>
@@ -1493,13 +1493,13 @@
 								<Length>438</Length>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8591364</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Zürich, Signaustrasse</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<GeoPosition>
 												<siri:Longitude>8.56005</siri:Longitude>
 												<siri:Latitude>47.36462</siri:Latitude>
@@ -1507,7 +1507,7 @@
 											<Name>
 												<Text xml:lang="de">Hirslanden</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>PT7M</Duration>
 										<Length>438</Length>
 									</TrackSection>
