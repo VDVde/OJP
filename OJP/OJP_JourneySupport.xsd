@@ -829,14 +829,14 @@
 			<xs:documentation>SECTION of a LEG TRACK on the infrastructure network of the LEG together with time information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TrackStart" type="PlaceRefStructure" minOccurs="0">
+			<xs:element name="TrackSectionStart" type="PlaceRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Start place of this track (Start of a SECTION of a LEG.TRACK).</xs:documentation>
+					<xs:documentation>Start place of this track section (Start of a SECTION of a LEG.TRACK).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TrackEnd" type="PlaceRefStructure" minOccurs="0">
+			<xs:element name="TrackSectionEnd" type="PlaceRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>End place of this track (End of a SECTION of a LEG.TRACK).</xs:documentation>
+					<xs:documentation>End place of this track section (End of a SECTION of a LEG.TRACK).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LinkProjection" type="LinearShapeStructure" minOccurs="0">
