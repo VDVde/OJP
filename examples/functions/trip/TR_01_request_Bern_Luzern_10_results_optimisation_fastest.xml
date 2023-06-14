@@ -13,6 +13,8 @@
 							<Text>Bern</Text>
 						</Name>
 					</PlaceRef>
+					<FlexibilityWindowBefore>PT60M</FlexibilityWindowBefore>
+					<FlexibilityWindowAfter>PT60M</FlexibilityWindowAfter>
 				</Origin>
 				<Destination>
 					<PlaceRef>

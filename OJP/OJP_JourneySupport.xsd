@@ -588,6 +588,16 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
+			<xs:element name="FlexibilityWindowBefore" type="xs:duration" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>If earlier arrival/departure is acceptable, this can be indicated as a duration here (TRIP REQUEST.FlexibilityWindow).</xs:documentation>
+					</xs:annotation>			
+			</xs:element>
+			<xs:element name="FlexibilityWindowAfter" type="xs:duration" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>If later arrival/departure is acceptable, this can be indicated here as a duration (TRIP REQUEST.FlexibilityWindow).</xs:documentation>
+					</xs:annotation>			
+			</xs:element>			
 			<xs:element name="IndividualTransportOptions" type="IndividualTransportOptionsStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Options how to access/leave the place by individual transport.</xs:documentation>
