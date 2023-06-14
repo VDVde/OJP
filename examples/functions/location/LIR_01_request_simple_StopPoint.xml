@@ -26,7 +26,7 @@
 					<Extension>
 						<AnotherExtension>defined by users</AnotherExtension>
 					</Extension>
-				</Restrictions>	
+				</Restrictions>
 			</OJPLocationInformationRequest>
 		</siri:ServiceRequest>
 	</OJPRequest>
