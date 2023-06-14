@@ -84,7 +84,7 @@
 			<xs:group ref="PlaceDataFilterGroup"/>
 			<xs:group ref="PlacePolicyGroup"/>
 			<xs:group ref="PlaceSortingGroup"/>
-			<xs:element name="ParamExtension" type="xs:anyType" minOccurs="0"/>			
+			<xs:element name="ParamExtension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="GeoRestrictionsStructure">
