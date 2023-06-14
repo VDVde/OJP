@@ -253,7 +253,6 @@
 					<xs:documentation>Filter to narrow down POI searches.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="PlaceSortingGroup">

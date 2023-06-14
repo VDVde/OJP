@@ -446,7 +446,7 @@
 					<xs:documentation>URL for booking.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BookingNote" type="InternationalTextStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="BookingNote" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Note about booking the FLEXIBLE LINE.</xs:documentation>
 				</xs:annotation>
