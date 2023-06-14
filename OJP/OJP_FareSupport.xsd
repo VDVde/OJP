@@ -555,12 +555,12 @@
 					<xs:documentation>Is this product a proto product? Default is false. If true, it should not be shown to the user. In a distributed environment (e.g. EU-Spirit) partial systems may generate incomplete product information (proto product), which has to be processed further and combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="FareProductPriceGroup"/>		
+			<xs:group ref="FareProductPriceGroup"/>
 			<xs:element name="AvailableTicketsAtPrice" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Available tickets at the given price. When absent, the number of remaining tickets is unknown or it is not limited.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:group ref="FareProductValidityGroup"/>
 			<xs:group ref="FareProductBookingGroup"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
