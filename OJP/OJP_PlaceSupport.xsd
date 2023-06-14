@@ -478,7 +478,7 @@
 			</xs:element>
 			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Attribute associated with this place.</xs:documentation>
+					<xs:documentation>Attributes associated with this place. This is used, e.g., for details, OSM attributes oder key/value descriptions. Most of them will be implementation dependend (except OSM). From Transmodel, TYPE OF POINT might be a possible attribute.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>

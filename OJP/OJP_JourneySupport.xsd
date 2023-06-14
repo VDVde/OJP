@@ -144,7 +144,7 @@
 			</xs:element>
 			<xs:element name="Via" type="ServiceViaPointStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Via points of the service that may help identify the vehicle to the public.</xs:documentation>
+					<xs:documentation>Via points of the service that may help identify the vehicle to the public (In Transmodel modeled as TRIP REQUEST PLACE.TRIP VIA PLACE.GoVia; it will also most probably be detailed as a VIA and associated DESTINATION DISPLAY in the ROUTE description).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
@@ -156,7 +156,7 @@
 	</xs:group>
 	<xs:group name="ServiceOriginGroup">
 		<xs:annotation>
-			<xs:documentation>First serviced stop of a vehicle journey.</xs:documentation>
+			<xs:documentation>First serviced stop of a vehicle journey (also VEHICLE MEETING POINT or ADDRESSABLE PLACE).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OriginStopPointRef" type="siri:StopPointRefStructure" minOccurs="0">
@@ -173,7 +173,7 @@
 	</xs:group>
 	<xs:group name="ServiceDestinationGroup">
 		<xs:annotation>
-			<xs:documentation>Last serviced stop of a vehicle journey.</xs:documentation>
+			<xs:documentation>Last serviced stop of a vehicle journey (also VEHICLE MEETING POINT or ADDRESSABLE PLACE).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DestinationStopPointRef" type="siri:StopPointRefStructure" minOccurs="0">
@@ -306,7 +306,7 @@
 	</xs:annotation>
 	<xs:group name="TimeWindowGroup">
 		<xs:annotation>
-			<xs:documentation>The window of opportunity that the traveller has to perform this leg of the journey.</xs:documentation>
+			<xs:documentation>The window of opportunity that the traveller has to perform this leg of the journey (e.g. a bridge is only open during a given interval).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TimeWindowStart" type="xs:dateTime" minOccurs="0">
@@ -363,7 +363,7 @@
 	</xs:group>
 	<xs:complexType name="ServiceArrivalStructure">
 		<xs:annotation>
-			<xs:documentation>Arrival times of a service at a stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
+			<xs:documentation>Arrival times of a service at a stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME, equals MONITORED LEG ARRIVAL).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="ServiceTimeGroup"/>
@@ -374,7 +374,7 @@
 	</xs:complexType>
 	<xs:complexType name="ServiceDepartureStructure">
 		<xs:annotation>
-			<xs:documentation>Departure times of a service at a stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
+			<xs:documentation>Departure times of a service at a stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME, equals MONITORED LEG DEPARTURE).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="ServiceTimeGroup"/>
@@ -549,7 +549,7 @@
 			</xs:element>
 			<xs:element name="Bearing" type="siri:AbsoluteBearingType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Bearing in compass degrees in which vehicle is heading.</xs:documentation>
+					<xs:documentation>Bearing in compass degrees in which vehicle is heading (expected to be consistent with Transmodel ROUTE -or LEG TRACK- and PATH GUIDANCE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProgressBetweenStops" type="siri:ProgressBetweenStopsStructure" minOccurs="0">
@@ -584,7 +584,7 @@
 				</xs:element>
 				<xs:element name="TimeAllowance" type="xs:duration" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Extra time needed before reaching/after leaving this location.</xs:documentation>
+						<xs:documentation>Extra time needed before reaching/after leaving this location (an example of a TRIP ACCESS CONSTRAINT. In Transmodel it is modeled more extensively and could relate to ACCESS MODE e.g. walk max 5 mintues, but cycle 10 minutes).</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -619,7 +619,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="full">
 				<xs:annotation>
-					<xs:documentation>Full use of real-time information, including removal of SERVICE JOURNEYS.</xs:documentation>
+					<xs:documentation>Full use of real-time information, including removal of SERVICE JOURNEYS (TRIP REQUEST POLICY.UseRealTime is only a boolean in Transmodel).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="explanatory">
@@ -642,7 +642,7 @@
 			<xs:choice minOccurs="0">
 				<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>The number of trip results that the user wants to see at least.</xs:documentation>
+						<xs:documentation>The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementatins will deliver one of the TripResults before the indicated departure time. This means one always has to check the results against the parameters before using them.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:group ref="NumberOfResultsGroup" minOccurs="0"/>
@@ -819,24 +819,24 @@
 		<xs:sequence>
 			<xs:element name="TrackSection" type="TrackSectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>LINK PROJECTION on the infrastructure network of the leg section together with time information.</xs:documentation>
+					<xs:documentation>A geographical view of a Transmodel LEG TRACK together with duration and length that can be used for representing the leg on a map. The points may be STOP PLACE, SCHEDULED STOP POINT, coordinates or ADDRESSes. Specialisation of SECTION.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TrackSectionStructure">
 		<xs:annotation>
-			<xs:documentation>LINK PROJECTION on the infrastructure network of the LEG together with time information</xs:documentation>
+			<xs:documentation>SECTION of a LEG TRACK on the infrastructure network of the LEG together with time information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TrackStart" type="PlaceRefStructure" minOccurs="0">
+			<xs:element name="TrackSectionStart" type="PlaceRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Start place of this track.</xs:documentation>
+					<xs:documentation>Start place of this track section (Start of a SECTION of a LEG.TRACK).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TrackEnd" type="PlaceRefStructure" minOccurs="0">
+			<xs:element name="TrackSectionEnd" type="PlaceRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>End place of this track.</xs:documentation>
+					<xs:documentation>End place of this track section (End of a SECTION of a LEG.TRACK).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LinkProjection" type="LinearShapeStructure" minOccurs="0">
@@ -846,7 +846,7 @@
 			</xs:element>
 			<xs:element name="RoadName" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Name of the road this track section is attached to.</xs:documentation>
+					<xs:documentation>Name of the road this track section is attached to (LEG TRACK.SECTION NAME, may also be something like "bicycle line along Tellstrasse").</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Duration" type="xs:duration" minOccurs="0">
