@@ -19,7 +19,7 @@
 	<xs:complexType name="BookingNoteType">
 		<xs:annotation>
 			<xs:documentation>An element of the BookingNotes or as a single BookingNote.</xs:documentation>
-		</xs:annotation>	
+		</xs:annotation>
 		<xs:attribute name="order" type="xs:positiveInteger"/>
 	</xs:complexType>
 	<xs:simpleType name="FareAuthorityCodeType">
@@ -465,14 +465,13 @@
 					<xs:annotation>
 						<xs:documentation>Note about booking the (FLEXIBLE) LINE (depreciated).</xs:documentation>
 					</xs:annotation>
-				</xs:element>				
+				</xs:element>
 				<xs:element name="BookingNotes" type="BookingNoteStructure" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Notes about booking the (FLEXIBLE) LINE.</xs:documentation>
 					</xs:annotation>
-				</xs:element>		
+				</xs:element>
 			</xs:choice>
-
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
