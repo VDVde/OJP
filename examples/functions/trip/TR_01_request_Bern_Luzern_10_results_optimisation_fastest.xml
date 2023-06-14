@@ -25,6 +25,10 @@
 				<Params>
 					<NumberOfResults>10</NumberOfResults>
 					<OptimisationMethod>fastest</OptimisationMethod>
+					<BikeTransport>true</BikeTransport>
+					<Extension>
+						<ExtensionDemo/>
+					</Extension>
 				</Params>
 			</OJPTripRequest>
 		</siri:ServiceRequest>

@@ -16,7 +16,17 @@
 				<Restrictions>
 					<Type>stop</Type>
 					<IncludePtModes>true</IncludePtModes>
-				</Restrictions>
+					<IncludeOperators>true</IncludeOperators>
+					<SortingMethod>fastChanges</SortingMethod>
+					<GeoPosition>
+						<siri:Longitude>0.0000</siri:Longitude>
+						<siri:Latitude>0.0000</siri:Latitude>
+					</GeoPosition>
+					<MinimalProbability>0.7</MinimalProbability>
+					<Extension>
+						<AnotherExtension>defined by users</AnotherExtension>
+					</Extension>
+				</Restrictions>	
 			</OJPLocationInformationRequest>
 		</siri:ServiceRequest>
 	</OJPRequest>
