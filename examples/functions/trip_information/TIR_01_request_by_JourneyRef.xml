@@ -15,6 +15,12 @@
 					<IncludeService>true</IncludeService>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeTrackProjection>true</IncludeTrackProjection>
+					<IncludePlacesContext>true</IncludePlacesContext>
+					<IncludeFormation>vehiclefeature</IncludeFormation>
+					<IncludeSituationsContext>true</IncludeSituationsContext>
+					<Extension>
+						<ExtensionDemo>whatever</ExtensionDemo>
+					</Extension>
 				</Params>
 			</OJPTripInfoRequest>
 		</siri:ServiceRequest>

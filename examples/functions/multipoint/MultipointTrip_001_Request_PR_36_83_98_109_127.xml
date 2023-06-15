@@ -51,6 +51,17 @@
 					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
 					<TripSummaryOnly>false</TripSummaryOnly>
 					<!-- V1.1, PR #109 - TripSummaryOnly -->
+					<FareParam>
+						<FareAuthorityFilter>NOVA</FareAuthorityFilter>
+						<PassengerCategory>Adult</PassengerCategory>
+						<FareClass>businessClass</FareClass>
+						<Traveller>
+							<Age>21</Age>
+						</Traveller>
+						<Extension>
+							<AnExtension>0.001</AnExtension>
+						</Extension>
+					</FareParam>
 				</Params>
 			</OJPMultiPointTripRequest>
 		</siri:ServiceRequest>

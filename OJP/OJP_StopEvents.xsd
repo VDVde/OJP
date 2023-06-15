@@ -33,6 +33,7 @@
 			<xs:group ref="StopEventDataFilterGroup"/>
 			<xs:group ref="StopEventPolicyGroup"/>
 			<xs:group ref="StopEventContentFilterGroup"/>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="StopEventDataFilterGroup">

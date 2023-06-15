@@ -38,7 +38,7 @@
 	</xs:simpleType>
 	<xs:complexType name="IndividualTransportOptionsStructure">
 		<xs:annotation>
-			<xs:documentation>Individual modes and their usage limits as stated by the passenger</xs:documentation>
+			<xs:documentation>Individual modes and their usage limits as stated by the passenger (TRIP ACCESS CONSTRAINT).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Mode" type="IndividualModesEnumeration">

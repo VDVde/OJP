@@ -102,18 +102,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<siri:StopPointRef>8504376</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">St. Petersinsel Nord</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8504375</siri:StopPointRef>
 											<Name>
 												<Text xml:lang="de">Ligerz (Schiff)</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<LinkProjection>
 											<Position>
 												<siri:Longitude>7.13561</siri:Longitude>
@@ -160,6 +160,16 @@
 						</Leg>
 					</Trip>
 				</TripFareRequest>
+				<Params>
+					<FareAuthorityFilter>OEBB</FareAuthorityFilter>
+					<PassengerCategory>Disabled</PassengerCategory>
+					<Traveller>
+						<Age>16</Age>
+					</Traveller>
+					<Extension>
+						<MyExtension/>
+					</Extension>
+				</Params>
 			</OJPFareRequest>
 		</siri:ServiceRequest>
 	</OJPRequest>
