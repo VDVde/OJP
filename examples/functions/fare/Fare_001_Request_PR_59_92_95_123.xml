@@ -160,6 +160,16 @@
 						</Leg>
 					</Trip>
 				</TripFareRequest>
+				<Params>
+					<FareAuthorityFilter>OEBB</FareAuthorityFilter>
+					<PassengerCategory>Disabled</PassengerCategory>
+					<Traveller>
+						<Age>16</Age>
+					</Traveller>
+					<Extension>
+						<MyExtension/>
+					</Extension>
+				</Params>
 			</OJPFareRequest>
 		</siri:ServiceRequest>
 	</OJPRequest>

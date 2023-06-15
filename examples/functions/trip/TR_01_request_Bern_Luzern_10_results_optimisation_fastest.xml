@@ -23,8 +23,12 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
+					<BikeTransport>true</BikeTransport>
 					<NumberOfResults>10</NumberOfResults>
 					<OptimisationMethod>fastest</OptimisationMethod>
+					<Extension>
+						<ExtensionDemo/>
+					</Extension>
 				</Params>
 			</OJPTripRequest>
 		</siri:ServiceRequest>

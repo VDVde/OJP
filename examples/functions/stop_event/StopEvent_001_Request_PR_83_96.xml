@@ -31,6 +31,9 @@
 					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
 					<IncludeStopHierarchy>all</IncludeStopHierarchy>
 					<!-- V1.1, PR #96 - Illustrative use of optional parameter, possible values "local", "no", "down", "all" -->
+					<Extension>
+						<AddParameterExtensionHere>true</AddParameterExtensionHere>
+					</Extension>
 				</Params>
 			</OJPStopEventRequest>
 		</siri:ServiceRequest>
