@@ -122,18 +122,18 @@
 								<Length>168</Length>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<StopPlaceRef>U3xBPTFATz1NSUxBTk8sIFN0YXppb25lIENlbnRyYWxlQFg9OTIwMjk2N0BZPTQ1NDg0OTIzQFU9ODNATD04MDAwMDAwQHxNSUxBTk8sIFN0YXppb25lIENlbnRyYWxlfDkuMjAyOTY3fDQ1LjQ4NDkyM3x0cnVl</StopPlaceRef>
 											<Name>
 												<Text>MILANO, Stazione Centrale</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<StopPlaceRef>U3xBPTFATz1NSUxBTk8sIFN0YXppb25lIENlbnRyYWxlQFg9OTIwNDE5OUBZPTQ1NDg2MTY0QFU9ODNATD0yOTUwNEB8TUlMQU5PLCBTdGF6aW9uZSBDZW50cmFsZXw5LjIwNDE5OXw0NS40ODYxNjR8ZmFsc2U-</StopPlaceRef>
 											<Name>
 												<Text>MILANO, Stazione Centrale</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<LinkProjection>
 											<Position>
 												<siri:Longitude>9.20297</siri:Longitude>
@@ -199,18 +199,18 @@
 								</Service>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<StopPlaceRef>U3xBPTFATz1NSUxBTk8sIFN0YXppb25lIENlbnRyYWxlQFg9OTIwNDE5OUBZPTQ1NDg2MTY0QFU9ODNATD0yOTUwNEB8TUlMQU5PLCBTdGF6aW9uZSBDZW50cmFsZXw5LjIwNDE5OXw0NS40ODYxNjR8ZmFsc2U-</StopPlaceRef>
 											<Name>
 												<Text>MILANO, Stazione Centrale</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<StopPlaceRef>U3xBPTFATz1DT01PLCBTLiBHaW92YW5uaSwgU3RhemlvbmVAWD05MDczMDE5QFk9NDU4MDg4MTNAVT04M0BMPTk1NjNAfENPTU8sIFMuIEdpb3Zhbm5pLCBTdGF6aW9uZXw5LjA3MzAxOXw0NS44MDg4MTN8ZmFsc2U-</StopPlaceRef>
 											<Name>
 												<Text>COMO, S. Giovanni, Stazione</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<LinkProjection>
 											<Position>
 												<siri:Longitude>9.20420</siri:Longitude>
@@ -250,18 +250,18 @@
 								<Length>0</Length>
 								<LegTrack>
 									<TrackSection>
-										<TrackStart>
+										<TrackSectionStart>
 											<StopPlaceRef>U3xBPTFATz1DT01PLCBTLiBHaW92YW5uaSwgU3RhemlvbmVAWD05MDczMDE5QFk9NDU4MDg4MTNAVT04M0BMPTk1NjNAfENPTU8sIFMuIEdpb3Zhbm5pLCBTdGF6aW9uZXw5LjA3MzAxOXw0NS44MDg4MTN8ZmFsc2U-</StopPlaceRef>
 											<Name>
 												<Text>COMO, S. Giovanni, Stazione</Text>
 											</Name>
-										</TrackStart>
-										<TrackEnd>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<StopPlaceRef>U3xBPTFATz1DT01PLCBTLiBHaW92YW5uaSwgU3RhemlvbmVAWD05MDczMDE5QFk9NDU4MDg4MTNAVT04M0BMPTgwMDAwMDJAfENPTU8sIFMuIEdpb3Zhbm5pLCBTdGF6aW9uZXw5LjA3MzAxOXw0NS44MDg4MTN8dHJ1ZQ--</StopPlaceRef>
 											<Name>
 												<Text>COMO, S. Giovanni, Stazione</Text>
 											</Name>
-										</TrackEnd>
+										</TrackSectionEnd>
 										<Duration>P0Y0M0DT0H0M0S</Duration>
 										<Length>0</Length>
 									</TrackSection>

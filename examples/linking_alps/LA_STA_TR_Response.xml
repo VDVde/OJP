@@ -534,18 +534,18 @@
 								<PathGuidance>
 									<PathGuidanceSection>
 										<TrackSection>
-											<TrackStart>
+											<TrackSectionStart>
 												<siri:StopPointRef>it:22021:210:1</siri:StopPointRef>
 												<Name>
 													<Text xml:lang="it">Stazione di Merano</Text>
 												</Name>
-											</TrackStart>
-											<TrackEnd>
+											</TrackSectionStart>
+											<TrackSectionEnd>
 												<siri:StopPointRef>it:22021:210:51</siri:StopPointRef>
 												<Name>
 													<Text xml:lang="it">Stazione di Merano</Text>
 												</Name>
-											</TrackEnd>
+											</TrackSectionEnd>
 											<Extension>
 												<GeoReferenceFrom>1004444221:0:APBV:100</GeoReferenceFrom>
 												<GeoReferenceTo>503330355:92:APBV:100</GeoReferenceTo>
@@ -560,18 +560,18 @@
 									</PathGuidanceSection>
 									<PathGuidanceSection>
 										<TrackSection>
-											<TrackStart>
+											<TrackSectionStart>
 												<siri:StopPointRef>it:22021:210:51</siri:StopPointRef>
 												<Name>
 													<Text xml:lang="it">Stazione di Merano</Text>
 												</Name>
-											</TrackStart>
-											<TrackEnd>
+											</TrackSectionStart>
+											<TrackSectionEnd>
 												<siri:StopPointRef>it:22021:210:80</siri:StopPointRef>
 												<Name>
 													<Text xml:lang="it">Stazione di Merano</Text>
 												</Name>
-											</TrackEnd>
+											</TrackSectionEnd>
 											<Extension>
 												<GeoReferenceFrom>503330355:92:APBV:100</GeoReferenceFrom>
 												<GeoReferenceTo>0:0::100</GeoReferenceTo>
@@ -586,18 +586,18 @@
 									</PathGuidanceSection>
 									<PathGuidanceSection>
 										<TrackSection>
-											<TrackStart>
+											<TrackSectionStart>
 												<siri:StopPointRef>it:22021:210:80</siri:StopPointRef>
 												<Name>
 													<Text xml:lang="it">Stazione di Merano</Text>
 												</Name>
-											</TrackStart>
-											<TrackEnd>
+											</TrackSectionStart>
+											<TrackSectionEnd>
 												<siri:StopPointRef>it:22021:210:52</siri:StopPointRef>
 												<Name>
 													<Text xml:lang="it">Stazione di Merano</Text>
 												</Name>
-											</TrackEnd>
+											</TrackSectionEnd>
 											<Extension>
 												<GeoReferenceFrom>0:0::100</GeoReferenceFrom>
 												<GeoReferenceTo>505089594:14:APBV:100</GeoReferenceTo>
