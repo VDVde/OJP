@@ -74,7 +74,7 @@
 								<LegAlight>
 									<siri:StopPointRef>SI:01:1_1122795_sp</siri:StopPointRef>
 									<StopPointName>
-										<Text>Desitination</Text>
+										<Text>Destination</Text>
 									</StopPointName>
 									<ServiceArrival>
 										<TimetabledTime>2023-06-13T21:19:00+02:00</TimetabledTime>
