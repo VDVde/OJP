@@ -36,8 +36,8 @@
 				</Destination>
 				<Params>
 					<NumberOfResults>5</NumberOfResults>
+					<MultiPointType>eachOriginDestination</MultiPointType>
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
-					<IncludeLegs>true</IncludeLegs>
 				</Params>
 			</OJPMultiPointTripRequest>
 		</siri:ServiceRequest>
