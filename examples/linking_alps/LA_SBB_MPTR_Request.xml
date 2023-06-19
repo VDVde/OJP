@@ -5,7 +5,7 @@
 			<siri:RequestTimestamp>2023-06-19T11:01:03Z</siri:RequestTimestamp>
 			<siri:RequestorRef>SoapUI-Test</siri:RequestorRef>
 			<OJPMultiPointTripRequest>
-			     <siri:RequestTimestamp>2023-06-19T11:01:03Z</siri:RequestTimestamp>
+				<siri:RequestTimestamp>2023-06-19T11:01:03Z</siri:RequestTimestamp>
 				<Origin>
 					<PlaceRef>
 						<siri:StopPointRef>8507000</siri:StopPointRef>

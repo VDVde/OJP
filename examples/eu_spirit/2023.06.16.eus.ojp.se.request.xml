@@ -9,7 +9,7 @@
 				<siri:RequestTimestamp>2023-06-16T16:11:42+02:00</siri:RequestTimestamp>
 				<Location>
 					<PlaceRef>
-						<siri:StopPointRef >U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA0OTg3NEBZPTUyNDE0MjQwQFU9ODZATD0xMDAxMzY0NkBCPTFAcD0xNjg2NzMxNDE4QHxQb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGV8MTMuMDQ5ODc0fDUyLjQxNDI0fGZhbHNl</siri:StopPointRef>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA0OTg3NEBZPTUyNDE0MjQwQFU9ODZATD0xMDAxMzY0NkBCPTFAcD0xNjg2NzMxNDE4QHxQb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGV8MTMuMDQ5ODc0fDUyLjQxNDI0fGZhbHNl</siri:StopPointRef>
 						<Name>
 							<Text>unused</Text>
 						</Name>
