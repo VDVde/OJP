@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2023-06-19T11:01:03Z</siri:RequestTimestamp>
+			<siri:RequestorRef>SoapUI-Test</siri:RequestorRef>
+			<OJPMultiPointTripRequest>
+			     <siri:RequestTimestamp>2023-06-19T11:01:03Z</siri:RequestTimestamp>
+				<Origin>
+					<PlaceRef>
+						<siri:StopPointRef>8507000</siri:StopPointRef>
+						<Name>
+							<Text>Bern</Text>
+						</Name>
+					</PlaceRef>
+					<DepArrTime>2023-06-19T11:01:03Z</DepArrTime>
+				</Origin>
+				<Destination>
+					<PlaceRef>
+						<siri:StopPointRef>8102336</siri:StopPointRef>
+						<Name>
+							<Text>Bregenz</Text>
+						</Name>
+					</PlaceRef>
+				</Destination>
+				<Destination>
+					<PlaceRef>
+						<siri:StopPointRef>8506314</siri:StopPointRef>
+						<Name>
+							<Text>St. Margrethen SG</Text>
+						</Name>
+					</PlaceRef>
+				</Destination>
+				<Destination>
+					<PlaceRef>
+						<siri:StopPointRef>8509404</siri:StopPointRef>
+						<Name>
+							<Text>Buchs SG</Text>
+						</Name>
+					</PlaceRef>
+				</Destination>
+				<Params>
+					<NumberOfResults>3</NumberOfResults>
+					<MultiPointType>eachDestination</MultiPointType>
+					<IncludeTrackSections>false</IncludeTrackSections>
+					<IncludeLegProjection>false</IncludeLegProjection>
+					<IncludeTurnDescription>false</IncludeTurnDescription>
+					<IncludeIntermediateStops>true</IncludeIntermediateStops>
+				</Params>
+			</OJPMultiPointTripRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>
