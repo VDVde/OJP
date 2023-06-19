@@ -604,11 +604,11 @@
 						<xs:documentation>Extra time needed before reaching/after leaving this location (an example of a TRIP ACCESS CONSTRAINT. In Transmodel it is modeled more extensively and could relate to ACCESS MODE e.g. walk max 5 mintues, but cycle 10 minutes).</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-<xs:element name="DepArrTimeRange" type="DepArrTimeRangeStructure" minOccurs="0">
+				<xs:element name="DepArrTimeRange" type="DepArrTimeRangeStructure" minOccurs="0">
 					<xs:annotation>
-					<xs:documentation>The acceptable time range for the arrival or departure. Implements TRIP REQUEST.FlexibilityWindow. It is assumed thatthe implementation delivers all possible arrivals and departures in the interval. E.g. for airplane with +/- 3 days.</xs:documentation>
+						<xs:documentation>The acceptable time range for the arrival or departure. Implements TRIP REQUEST.FlexibilityWindow. It is assumed thatthe implementation delivers all possible arrivals and departures in the interval. E.g. for airplane with +/- 3 days.</xs:documentation>
 					</xs:annotation>
-				</xs:element>				
+				</xs:element>
 			</xs:choice>
 			<xs:element name="IndividualTransportOptions" type="IndividualTransportOptionsStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
