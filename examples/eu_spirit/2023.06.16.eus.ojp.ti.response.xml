@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2023-06-16T16:17:09+02:00</siri:ResponseTimestamp>
+			<siri:ProducerRef>DELFI_HCN_OJP_PSA.PUB.1.0.3-SNAPSHOT</siri:ProducerRef>
+			<siri:RequestMessageRef>def</siri:RequestMessageRef>
+			<OJPTripInfoDelivery>
+				<siri:ResponseTimestamp>2023-06-16T16:17:09+02:00</siri:ResponseTimestamp>
+				<TripInfoResponseContext>
+					<Places>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBCaXNhbWtpZXpAWD0xMzEwMDgyNUBZPTUyMzczMzM5QFU9ODZATD0yMzAwMzQwMUB8UG90c2RhbSwgQmlzYW1raWV6fDEzLjEwMDgyNXw1Mi4zNzMzMzl8ZmFsc2U-</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Bisamkiez</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Bisamkiez</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.100825</siri:Longitude>
+								<siri:Latitude>52.373339</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBTcG9ydGhhbGxlQFg9MTMwNzUzNjhAWT01MjM4MjU5OEBVPTg2QEw9MjMwMDY2MDFAfFBvdHNkYW0sIFNwb3J0aGFsbGV8MTMuMDc1MzY4fDUyLjM4MjU5OHxmYWxzZQ--</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Sporthalle</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Sporthalle</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.075368</siri:Longitude>
+								<siri:Latitude>52.382598</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBLdW5lcnNkb3JmZXIgU3RyLkBYPTEzMDc4NTE0QFk9NTIzODA0ODVAVT04NkBMPTIzMDA2NzAxQHxQb3RzZGFtLCBLdW5lcnNkb3JmZXIgU3RyLnwxMy4wNzg1MTR8NTIuMzgwNDg1fGZhbHNl</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Kunersdorfer Str.</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Kunersdorfer Str.</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.078514</siri:Longitude>
+								<siri:Latitude>52.380485</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBBbSBTY2hyYWdlbkBYPTEzMDU0NDg2QFk9NTI0MTMxMDdAVT04NkBMPTIzMDE1NzAyQHxQb3RzZGFtLCBBbSBTY2hyYWdlbnwxMy4wNTQ0ODZ8NTIuNDEzMTA3fGZhbHNl</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Am Schragen</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Am Schragen</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.054486</siri:Longitude>
+								<siri:Latitude>52.413107</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBOYXVlbmVyIFRvckBYPTEzMDU3ODM5QFk9NTI0MDI4MjRAVT04NkBMPTIzMDAyMjAxQHxQb3RzZGFtLCBOYXVlbmVyIFRvcnwxMy4wNTc4Mzl8NTIuNDAyODI0fGZhbHNl</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Nauener Tor</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Nauener Tor</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.057839</siri:Longitude>
+								<siri:Latitude>52.402824</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBKb2hhbi1Cb3VtYW4tUGxhdHpAWD0xMzAzODY0N0BZPTUyNDEzNTU3QFU9ODZATD0yMzAyMDgwMUB8UG90c2RhbSwgSm9oYW4tQm91bWFuLVBsYXR6fDEzLjAzODY0N3w1Mi40MTM1NTd8ZmFsc2U-</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Johan-Bouman-Platz</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Johan-Bouman-Platz</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.038647</siri:Longitude>
+								<siri:Latitude>52.413557</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBXYWxkc3RyLi9Ib3JzdHdlZ0BYPTEzMDgyMDU2QFk9NTIzNzgwNThAVT04NkBMPTMwMDg2NDAwMUB8UG90c2RhbSwgV2FsZHN0ci4vSG9yc3R3ZWd8MTMuMDgyMDU2fDUyLjM3ODA1OHxmYWxzZQ--</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Waldstr./Horstweg</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Waldstr./Horstweg</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.082056</siri:Longitude>
+								<siri:Latitude>52.378058</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1TIFBvdHNkYW0gSGF1cHRiYWhuaG9mQFg9MTMwNjYzNjlAWT01MjM5MDkzMUBVPTg2QEw9MjMwOTk5MDFAfFMgUG90c2RhbSBIYXVwdGJhaG5ob2Z8MTMuMDY2MzY5fDUyLjM5MDkzMXx0cnVl</StopPlaceRef>
+								<StopPlaceName>
+									<Text>S Potsdam Hauptbahnhof</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EU-Spirit-Exchange-Point-ID</System>
+									<Value>8003479</Value>
+								</PrivateCode>
+							</StopPlace>
+							<Name>
+								<Text>S Potsdam Hauptbahnhof</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.066369</siri:Longitude>
+								<siri:Latitude>52.390931</siri:Latitude>
+							</GeoPosition>
+							<Extension>
+								<ExchangePoint>
+									<WaitingTime>P0Y0M0DT0H10M0.000S</WaitingTime>
+								</ExchangePoint>
+							</Extension>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBSYXRoYXVzQFg9MTMwNTgwMDlAWT01MjQwNTIyNEBVPTg2QEw9MzAxMDQyMDAxQHxQb3RzZGFtLCBSYXRoYXVzfDEzLjA1ODAwOXw1Mi40MDUyMjR8ZmFsc2U-</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Rathaus</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Rathaus</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.058009</siri:Longitude>
+								<siri:Latitude>52.405224</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBIYW5uZXMtTWV5ZXItU3RyLkBYPTEzMDQwNDUzQFk9NTI0MTU0MDlAVT04NkBMPTIzMDIwNzAxQHxQb3RzZGFtLCBIYW5uZXMtTWV5ZXItU3RyLnwxMy4wNDA0NTN8NTIuNDE1NDA5fGZhbHNl</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Hannes-Meyer-Str.</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Hannes-Meyer-Str.</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.040453</siri:Longitude>
+								<siri:Latitude>52.415409</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBLaXJzY2hhbGxlZUBYPTEzMDMzNTUwQFk9NTI0MTM4ODBAVT04NkBMPTMwMTA1MTAwMUB8UG90c2RhbSwgS2lyc2NoYWxsZWV8MTMuMDMzNTV8NTIuNDEzODh8ZmFsc2U-</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Kirschallee</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Kirschallee</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.03355</siri:Longitude>
+								<siri:Latitude>52.41388</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBSZWl0ZXJ3ZWcvQWxsZWVzdHIuQFg9MTMwNTg1MzFAWT01MjQwODM5N0BVPTg2QEw9MjMwMDI0MDFAfFBvdHNkYW0sIFJlaXRlcndlZy9BbGxlZXN0ci58MTMuMDU4NTMxfDUyLjQwODM5N3xmYWxzZQ--</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Reiterweg/Alleestr.</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Reiterweg/Alleestr.</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.058531</siri:Longitude>
+								<siri:Latitude>52.408397</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBCcmFuZGVuYnVyZ2VyIFN0ci5AWD0xMzA1NzY5NUBZPTUyNDAwOTU0QFU9ODZATD0yMzAyMDUwMUB8UG90c2RhbSwgQnJhbmRlbmJ1cmdlciBTdHIufDEzLjA1NzY5NXw1Mi40MDA5NTR8ZmFsc2U-</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Brandenburger Str.</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Brandenburger Str.</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.057695</siri:Longitude>
+								<siri:Latitude>52.400954</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA1MDcyOEBZPTUyNDE0MDUxQFU9ODZATD0yMzAyMDYwMUB8UG90c2RhbSwgQ2FtcHVzIEZhY2hob2Noc2NodWxlfDEzLjA1MDcyOHw1Mi40MTQwNTF8ZmFsc2U-</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Campus Fachhochschule</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Campus Fachhochschule</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.050728</siri:Longitude>
+								<siri:Latitude>52.414051</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBBbHRlciBNYXJrdC9MYW5kdGFnQFg9MTMwNTkyMzJAWT01MjM5NDg0MUBVPTg2QEw9MjMwMDE4MDFAfFBvdHNkYW0sIEFsdGVyIE1hcmt0L0xhbmR0YWd8MTMuMDU5MjMyfDUyLjM5NDg0MXxmYWxzZQ--</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Alter Markt/Landtag</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Alter Markt/Landtag</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.059232</siri:Longitude>
+								<siri:Latitude>52.394841</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBQdXNjaGtpbmFsbGVlQFg9MTMwNTkwMDdAWT01MjQxMTY5NkBVPTg2QEw9MjMwMDc2MDFAfFBvdHNkYW0sIFB1c2Noa2luYWxsZWV8MTMuMDU5MDA3fDUyLjQxMTY5NnxmYWxzZQ--</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Puschkinallee</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Puschkinallee</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.059007</siri:Longitude>
+								<siri:Latitude>52.411696</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBQbGF0eiBkZXIgRWluaGVpdC9XZXN0QFg9MTMwNTc5NzNAWT01MjM5ODU3MkBVPTg2QEw9MjMwMDE0MDFAfFBvdHNkYW0sIFBsYXR6IGRlciBFaW5oZWl0L1dlc3R8MTMuMDU3OTczfDUyLjM5ODU3MnxmYWxzZQ--</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Platz der Einheit/West</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Platz der Einheit/West</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.057973</siri:Longitude>
+								<siri:Latitude>52.398572</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBGcmllZGjDtmZlQFg9MTMwNzE5NTJAWT01MjM4NTc2MkBVPTg2QEw9MjMwMDY1MDFAfFBvdHNkYW0sIEZyaWVkaMO2ZmV8MTMuMDcxOTUyfDUyLjM4NTc2MnxmYWxzZQ--</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Friedhöfe</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Friedhöfe</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.071952</siri:Longitude>
+								<siri:Latitude>52.385762</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBMYW5nZSBCcsO8Y2tlQFg9MTMwNjM3MjdAWT01MjM5MjAzN0BVPTg2QEw9MjMwMDk3MDJAfFBvdHNkYW0sIExhbmdlIEJyw7xja2V8MTMuMDYzNzI3fDUyLjM5MjAzN3xmYWxzZQ--</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Lange Brücke</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Lange Brücke</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.063727</siri:Longitude>
+								<siri:Latitude>52.392037</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBNYWdudXMtWmVsbGVyLVBsYXR6QFg9MTMwOTE1NzVAWT01MjM3NTAyMEBVPTg2QEw9MjMwMDMxMDFAfFBvdHNkYW0sIE1hZ251cy1aZWxsZXItUGxhdHp8MTMuMDkxNTc1fDUyLjM3NTAyfGZhbHNl</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Potsdam, Magnus-Zeller-Platz</Text>
+								</StopPlaceName>
+							</StopPlace>
+							<Name>
+								<Text>Potsdam, Magnus-Zeller-Platz</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>13.091575</siri:Longitude>
+								<siri:Latitude>52.37502</siri:Latitude>
+							</GeoPosition>
+						</Place>
+					</Places>
+				</TripInfoResponseContext>
+				<TripInfoResult>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBLaXJzY2hhbGxlZUBYPTEzMDMzNTUwQFk9NTI0MTM4ODBAVT04NkBMPTMwMTA1MTAwMUB8UG90c2RhbSwgS2lyc2NoYWxsZWV8MTMuMDMzNTV8NTIuNDEzODh8ZmFsc2U-</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Kirschallee</Text>
+						</StopPointName>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:10:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBKb2hhbi1Cb3VtYW4tUGxhdHpAWD0xMzAzODY0N0BZPTUyNDEzNTU3QFU9ODZATD0yMzAyMDgwMUB8UG90c2RhbSwgSm9oYW4tQm91bWFuLVBsYXR6fDEzLjAzODY0N3w1Mi40MTM1NTd8ZmFsc2U-</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Johan-Bouman-Platz</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:11:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:11:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBIYW5uZXMtTWV5ZXItU3RyLkBYPTEzMDQwNDUzQFk9NTI0MTU0MDlAVT04NkBMPTIzMDIwNzAxQHxQb3RzZGFtLCBIYW5uZXMtTWV5ZXItU3RyLnwxMy4wNDA0NTN8NTIuNDE1NDA5fGZhbHNl</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Hannes-Meyer-Str.</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:12:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:12:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA1MDcyOEBZPTUyNDE0MDUxQFU9ODZATD0yMzAyMDYwMUB8UG90c2RhbSwgQ2FtcHVzIEZhY2hob2Noc2NodWxlfDEzLjA1MDcyOHw1Mi40MTQwNTF8ZmFsc2U-</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Campus Fachhochschule</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:14:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:14:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBBbSBTY2hyYWdlbkBYPTEzMDU0NDg2QFk9NTI0MTMxMDdAVT04NkBMPTIzMDE1NzAyQHxQb3RzZGFtLCBBbSBTY2hyYWdlbnwxMy4wNTQ0ODZ8NTIuNDEzMTA3fGZhbHNl</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Am Schragen</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text>1</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:15:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:15:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBQdXNjaGtpbmFsbGVlQFg9MTMwNTkwMDdAWT01MjQxMTY5NkBVPTg2QEw9MjMwMDc2MDFAfFBvdHNkYW0sIFB1c2Noa2luYWxsZWV8MTMuMDU5MDA3fDUyLjQxMTY5NnxmYWxzZQ--</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Puschkinallee</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:16:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:16:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBSZWl0ZXJ3ZWcvQWxsZWVzdHIuQFg9MTMwNTg1MzFAWT01MjQwODM5N0BVPTg2QEw9MjMwMDI0MDFAfFBvdHNkYW0sIFJlaXRlcndlZy9BbGxlZXN0ci58MTMuMDU4NTMxfDUyLjQwODM5N3xmYWxzZQ--</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Reiterweg/Alleestr.</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:17:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:17:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBSYXRoYXVzQFg9MTMwNTgwMDlAWT01MjQwNTIyNEBVPTg2QEw9MzAxMDQyMDAxQHxQb3RzZGFtLCBSYXRoYXVzfDEzLjA1ODAwOXw1Mi40MDUyMjR8ZmFsc2U-</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Rathaus</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:18:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:18:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBOYXVlbmVyIFRvckBYPTEzMDU3ODM5QFk9NTI0MDI4MjRAVT04NkBMPTIzMDAyMjAxQHxQb3RzZGFtLCBOYXVlbmVyIFRvcnwxMy4wNTc4Mzl8NTIuNDAyODI0fGZhbHNl</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Nauener Tor</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:19:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:19:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBCcmFuZGVuYnVyZ2VyIFN0ci5AWD0xMzA1NzY5NUBZPTUyNDAwOTU0QFU9ODZATD0yMzAyMDUwMUB8UG90c2RhbSwgQnJhbmRlbmJ1cmdlciBTdHIufDEzLjA1NzY5NXw1Mi40MDA5NTR8ZmFsc2U-</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Brandenburger Str.</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:20:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:20:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBQbGF0eiBkZXIgRWluaGVpdC9XZXN0QFg9MTMwNTc5NzNAWT01MjM5ODU3MkBVPTg2QEw9MjMwMDE0MDFAfFBvdHNkYW0sIFBsYXR6IGRlciBFaW5oZWl0L1dlc3R8MTMuMDU3OTczfDUyLjM5ODU3MnxmYWxzZQ--</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Platz der Einheit/West</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:22:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:22:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBBbHRlciBNYXJrdC9MYW5kdGFnQFg9MTMwNTkyMzJAWT01MjM5NDg0MUBVPTg2QEw9MjMwMDE4MDFAfFBvdHNkYW0sIEFsdGVyIE1hcmt0L0xhbmR0YWd8MTMuMDU5MjMyfDUyLjM5NDg0MXxmYWxzZQ--</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Alter Markt/Landtag</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:23:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:23:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBMYW5nZSBCcsO8Y2tlQFg9MTMwNjM3MjdAWT01MjM5MjAzN0BVPTg2QEw9MjMwMDk3MDJAfFBvdHNkYW0sIExhbmdlIEJyw7xja2V8MTMuMDYzNzI3fDUyLjM5MjAzN3xmYWxzZQ--</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Lange Brücke</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:24:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:24:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1TIFBvdHNkYW0gSGF1cHRiYWhuaG9mQFg9MTMwNjYzNjlAWT01MjM5MDkzMUBVPTg2QEw9MjMwOTk5MDFAfFMgUG90c2RhbSBIYXVwdGJhaG5ob2Z8MTMuMDY2MzY5fDUyLjM5MDkzMXx0cnVl</siri:StopPointRef>
+						<StopPointName>
+							<Text>S Potsdam Hauptbahnhof</Text>
+						</StopPointName>
+						<PlannedQuay>
+							<Text>1</Text>
+						</PlannedQuay>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:27:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:27:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBGcmllZGjDtmZlQFg9MTMwNzE5NTJAWT01MjM4NTc2MkBVPTg2QEw9MjMwMDY1MDFAfFBvdHNkYW0sIEZyaWVkaMO2ZmV8MTMuMDcxOTUyfDUyLjM4NTc2MnxmYWxzZQ--</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Friedhöfe</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:29:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:29:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBTcG9ydGhhbGxlQFg9MTMwNzUzNjhAWT01MjM4MjU5OEBVPTg2QEw9MjMwMDY2MDFAfFBvdHNkYW0sIFNwb3J0aGFsbGV8MTMuMDc1MzY4fDUyLjM4MjU5OHxmYWxzZQ--</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Sporthalle</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:30:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:30:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBLdW5lcnNkb3JmZXIgU3RyLkBYPTEzMDc4NTE0QFk9NTIzODA0ODVAVT04NkBMPTIzMDA2NzAxQHxQb3RzZGFtLCBLdW5lcnNkb3JmZXIgU3RyLnwxMy4wNzg1MTR8NTIuMzgwNDg1fGZhbHNl</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Kunersdorfer Str.</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:31:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:31:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBXYWxkc3RyLi9Ib3JzdHdlZ0BYPTEzMDgyMDU2QFk9NTIzNzgwNThAVT04NkBMPTMwMDg2NDAwMUB8UG90c2RhbSwgV2FsZHN0ci4vSG9yc3R3ZWd8MTMuMDgyMDU2fDUyLjM3ODA1OHxmYWxzZQ--</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Waldstr./Horstweg</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:32:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:32:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBNYWdudXMtWmVsbGVyLVBsYXR6QFg9MTMwOTE1NzVAWT01MjM3NTAyMEBVPTg2QEw9MjMwMDMxMDFAfFBvdHNkYW0sIE1hZ251cy1aZWxsZXItUGxhdHp8MTMuMDkxNTc1fDUyLjM3NTAyfGZhbHNl</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Magnus-Zeller-Platz</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:33:00+02:00</TimetabledTime>
+						</ServiceArrival>
+						<ServiceDeparture>
+							<TimetabledTime>2023-06-22T12:33:00+02:00</TimetabledTime>
+						</ServiceDeparture>
+					</OnwardCall>
+					<OnwardCall>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBCaXNhbWtpZXpAWD0xMzEwMDgyNUBZPTUyMzczMzM5QFU9ODZATD0yMzAwMzQwMUB8UG90c2RhbSwgQmlzYW1raWV6fDEzLjEwMDgyNXw1Mi4zNzMzMzl8ZmFsc2U-</siri:StopPointRef>
+						<StopPointName>
+							<Text>Potsdam, Bisamkiez</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2023-06-22T12:35:00+02:00</TimetabledTime>
+						</ServiceArrival>
+					</OnwardCall>
+					<Service>
+						<OperatingDayRef>2023-06-22</OperatingDayRef>
+						<siri:VehicleRef>3178</siri:VehicleRef>
+						<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
+						<ServiceSection>
+							<siri:LineRef>92</siri:LineRef>
+							<siri:DirectionRef>1</siri:DirectionRef>
+							<Mode>
+								<PtMode>tramService</PtMode>
+							</Mode>
+							<PublishedServiceName>
+								<Text>92</Text>
+							</PublishedServiceName>
+							<OperatorRefs>
+								<OperatorRef>ViP</OperatorRef>
+							</OperatorRefs>
+						</ServiceSection>
+						<OriginStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBLaXJzY2hhbGxlZUBYPTEzMDMzNTUwQFk9NTI0MTM4ODBAVT04NkBMPTMwMTA1MTAwMUB8UG90c2RhbSwgS2lyc2NoYWxsZWV8MTMuMDMzNTV8NTIuNDEzODh8ZmFsc2U-</OriginStopPointRef>
+						<OriginText>
+							<Text>Potsdam, Kirschallee</Text>
+						</OriginText>
+						<DestinationStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBCaXNhbWtpZXpAWD0xMzEwMDgyNUBZPTUyMzczMzM5QFU9ODZATD0yMzAwMzQwMUB8UG90c2RhbSwgQmlzYW1raWV6fDEzLjEwMDgyNXw1Mi4zNzMzMzl8ZmFsc2U-</DestinationStopPointRef>
+						<DestinationText>
+							<Text>Potsdam, Bisamkiez</Text>
+						</DestinationText>
+					</Service>
+				</TripInfoResult>
+			</OJPTripInfoDelivery>
+		</siri:ServiceDelivery>
+	</OJPResponse>
+</OJP>

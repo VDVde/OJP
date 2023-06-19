@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2023-06-16T16:06:26+02:00</siri:ResponseTimestamp>
+			<siri:ProducerRef>DELFI_HCN_OJP_PSA.PUB.1.0.3-SNAPSHOT</siri:ProducerRef>
+			<siri:RequestMessageRef>4B8F81B7-A66A-45A6-833E-370DA81025C8-2bb9ed65-f382-47a7-9296-61f248193dbc</siri:RequestMessageRef>
+			<OJPExchangePointsDelivery>
+				<siri:ResponseTimestamp>2023-06-16T16:06:26+02:00</siri:ResponseTimestamp>
+				<ExchangePointsResult>
+					<Place>
+						<StopPlace>
+							<StopPlaceRef>U3xBPTFATz1CYWhuaG9mLCBOZW5uaWcgUGVybEBYPTYzNzYzNDVAWT00OTUzOTA2N0BVPTg2QEw9MTAzNDA1OThAfEJhaG5ob2YsIE5lbm5pZyBQZXJsfDYuMzc2MzQ1fDQ5LjUzOTA2N3x0cnVl</StopPlaceRef>
+							<StopPlaceName>
+								<Text>Bahnhof, Nennig Perl</Text>
+							</StopPlaceName>
+							<PrivateCode>
+								<System>EU-Spirit-Exchange-Point-ID</System>
+								<Value>8099875</Value>
+							</PrivateCode>
+						</StopPlace>
+						<Name>
+							<Text>Bahnhof, Nennig Perl</Text>
+						</Name>
+						<GeoPosition>
+							<siri:Longitude>6.376345</siri:Longitude>
+							<siri:Latitude>49.539067</siri:Latitude>
+						</GeoPosition>
+						<Extension>
+							<ExchangePoint>
+								<WaitingTime>P0Y0M0DT0H0M0.000S</WaitingTime>
+							</ExchangePoint>
+						</Extension>
+					</Place>
+					<BorderPoint>true</BorderPoint>
+					<Mode>
+						<PtMode>busService</PtMode>
+					</Mode>
+					<Mode>
+						<PtMode>taxiService</PtMode>
+					</Mode>
+				</ExchangePointsResult>
+			</OJPExchangePointsDelivery>
+		</siri:ServiceDelivery>
+	</OJPResponse>
+</OJP>
