@@ -38,7 +38,7 @@
 							<FareAuthorityText>Mybuxi</FareAuthorityText>
 							<NetPrice>15</NetPrice>
 							<Currency>CHF</Currency>
-							<AvailableTicketsAtPrice>20</AvailableTicketsAtPrice>
+							<FareQuota>20</FareQuota>
 							<FareClass>economyClass</FareClass>
 							<SaleUrl>
 								<Label>
