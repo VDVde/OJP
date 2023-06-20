@@ -47,10 +47,55 @@
 							</SaleUrl>
 							<BookingArrangements>
 								<BookingArrangement>
+									<BookingContact>
+										<ContactPerson>
+											<Text>Hans Muster</Text>
+										</ContactPerson>
+										<Email>info@bookingsystems.com</Email>
+										<Phone>+41 0800 31 31</Phone>
+										<Fax>+41 23 1231 123112</Fax>
+										<Url>
+											<Label>
+												<Text>Booking Systems</Text>
+											</Label>
+											<Url>https://www.bookingsystems.com</Url>
+										</Url>
+										<FurtherDetails>
+											<Text>Opening hours 07:00-23:00 on work days.</Text>
+										</FurtherDetails>
+									</BookingContact>
+									<BookingMethods>
+										<BookingMethod>mobileApp</BookingMethod>
+										<BookingMethod>online</BookingMethod>
+										<BookingMethod>atOffice</BookingMethod>
+										<BookingMethod>other</BookingMethod>
+									</BookingMethods>
+									<BookingAccess>public</BookingAccess>
+									<BookWhen>untilPreviousDay</BookWhen>
 									<BuyWhen>
 										<PurchaseMoment>onReservation</PurchaseMoment>
 									</BuyWhen>
+									<LatestBookingTime>23:00:00</LatestBookingTime>
 									<MinimumBookingPeriod>PT10M</MinimumBookingPeriod>
+									<MaximumBookingPeriod>P30D</MaximumBookingPeriod>
+									<BookingUrl>
+										<Label>
+											<Text>BookingSystem</Text>
+										</Label>
+										<Url>https://www.bookingsystems.com/12312/de</Url>
+									</BookingUrl>
+									<BookingNotes>
+										<BookingNote>
+											<Text>Special conditions may apply.</Text>
+										</BookingNote>
+										<BookingNote>
+											<Text>No more than one suitcase.</Text>
+											<TextId>1239121</TextId>
+										</BookingNote>
+									</BookingNotes>
+									<Extension>
+										<MyExtension/>
+									</Extension>
 								</BookingArrangement>
 							</BookingArrangements>
 						</FareProduct>
