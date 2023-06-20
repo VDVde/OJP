@@ -556,6 +556,11 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="FareProductPriceGroup"/>
+			<xs:element name="FareQuota" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Remaining offered tickets in this FARE PRODUCT. When absent, the number of remaining tickets is unknown or it is not limited. In most cases if the FareQuota is zero then the FareProduct is not shown.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:group ref="FareProductValidityGroup"/>
 			<xs:group ref="FareProductBookingGroup"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
