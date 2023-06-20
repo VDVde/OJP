@@ -69,7 +69,7 @@
 			</xs:element>
 			<xs:element name="DepArrTimeRangeEnd" type="xs:dateTime" minOccurs="1">
 				<xs:annotation>
-					<xs:documentation>End of the interval.</xs:documentation>
+					<xs:documentation>End of the time range.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
