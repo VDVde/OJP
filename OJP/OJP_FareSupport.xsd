@@ -556,7 +556,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="FareProductPriceGroup"/>
-			<xs:element name="AvailableTicketsAtPrice" type="xs:positiveInteger" minOccurs="0">
+			<xs:element name="FareQuota" type="xs:integer" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Remaining offered tickets in this FARE PRODUCT. When absent, the number of remaining tickets is unknown or it is not limited.</xs:documentation>
 				</xs:annotation>
