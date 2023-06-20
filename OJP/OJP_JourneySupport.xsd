@@ -606,7 +606,7 @@
 				</xs:element>
 				<xs:element name="DepArrTimeRange" type="DepArrTimeRangeStructure" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>The acceptable time range for the arrival or departure. Implements TRIP REQUEST.FlexibilityWindow. It is assumed thatthe implementation delivers all possible arrivals and departures in the interval. E.g. for airplane with +/- 3 days.</xs:documentation>
+						<xs:documentation>The acceptable time range for the arrival or departure. Implements TRIP REQUEST.FlexibilityWindow. It is assumed that the implementation delivers all possible arrivals or departures in the time range. E.g. for airplane with +/- 3 days.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
