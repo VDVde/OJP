@@ -14,9 +14,9 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="BookingNote" type="InternationalTextStructure" minOccurs="1" maxOccurs="unbounded">
-			<xs:annotation>
-			  <xs:documentation>The BookingNote should be treated as ordered.</xs:documentation>
-			</xs:annotation>
+				<xs:annotation>
+					<xs:documentation>The BookingNote should be treated as ordered.</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
