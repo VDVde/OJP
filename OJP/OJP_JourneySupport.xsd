@@ -64,7 +64,7 @@
 		<xs:sequence>
 			<xs:element name="DepArrTimeRangeBegin" type="xs:dateTime" minOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Begin of the interval.</xs:documentation>
+					<xs:documentation>Begin of the time range.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DepArrTimeRangeEnd" type="xs:dateTime" minOccurs="1">
