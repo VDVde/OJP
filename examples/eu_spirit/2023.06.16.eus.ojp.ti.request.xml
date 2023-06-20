@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2023-06-16T16:16:50+02:00</siri:RequestTimestamp>
+			<siri:RequestorRef>HACON</siri:RequestorRef>
+			<siri:MessageIdentifier>def</siri:MessageIdentifier>
+			<OJPTripInfoRequest>
+				<siri:RequestTimestamp>2023-06-16T16:16:50+02:00</siri:RequestTimestamp>
+				<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
+				<OperatingDayRef>x</OperatingDayRef>
+			</OJPTripInfoRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>
