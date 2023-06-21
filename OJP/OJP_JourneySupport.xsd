@@ -367,7 +367,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="ServiceTimeGroup"/>
-			<xs:element ref="siri:ArrivalFormationAssignment" minOccurs="0"/>
+			<xs:element ref="siri:ArrivalFormationAssignment" minOccurs="0" maxOccurs="unbounded"/>
 			<!-- comes with SIRI 2.1 -->
 			<!-- TODO the quays should be moved here, too -->
 		</xs:sequence>
