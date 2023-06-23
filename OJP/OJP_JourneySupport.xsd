@@ -587,7 +587,7 @@
 						<xs:documentation>Extra time needed before reaching/after leaving this location (an example of a TRIP ACCESS CONSTRAINT. In Transmodel it is modeled more extensively and could relate to ACCESS MODE e.g. walk max 5 mintues, but cycle 10 minutes).</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-			</xs:choice>	
+			</xs:choice>
 			<xs:element name="IndividualTransportOptions" type="IndividualTransportOptionsStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Options how to access/leave the place by individual transport.</xs:documentation>
@@ -651,7 +651,7 @@
 				<xs:annotation>
 					<xs:documentation>Time window trips should lie within. Starting from time given in PlaceContext. Implements TRIP REQUEST.FlexibilityWindow. All trips in the window should be provided by the implmentation.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The way real-time data should be used in the calculation of the trip.</xs:documentation>
