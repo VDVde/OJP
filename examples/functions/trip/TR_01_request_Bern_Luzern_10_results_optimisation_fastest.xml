@@ -13,10 +13,7 @@
 							<Text>Bern</Text>
 						</Name>
 					</PlaceRef>
-					<DepArrTimeRange>
-						<DepArrTimeRangeBegin>2020-01-30T12:30:00Z</DepArrTimeRangeBegin>
-						<DepArrTimeRangeEnd>2020-01-31T12:30:00Z</DepArrTimeRangeEnd>
-					</DepArrTimeRange>
+						<DepArrTime>2020-01-30T12:30:00Z</DepArrTime>
 				</Origin>
 				<Destination>
 					<PlaceRef>
@@ -29,6 +26,7 @@
 				<Params>
 					<BikeTransport>true</BikeTransport>
 					<NumberOfResults>10</NumberOfResults>
+					<TimeWindow>PT60M</TimeWindow> <!-- Use a 60 minutes time range.-->
 					<OptimisationMethod>fastest</OptimisationMethod>
 					<Extension>
 						<ExtensionDemo/>

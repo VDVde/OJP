@@ -1656,11 +1656,6 @@
 					<xs:documentation>The requested date and/or time do not make sense.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="TRIP_DATETIMERANGEERROR">
-				<xs:annotation>
-					<xs:documentation>The requested date and/or time range do not make sense.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="TRIP_DATETIMERANGETOOLARGEERROR">
 				<xs:annotation>
 					<xs:documentation>The requested date and/or time range is too large.</xs:documentation>

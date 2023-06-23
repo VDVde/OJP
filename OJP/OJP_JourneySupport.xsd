@@ -57,23 +57,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="DepArrTimeRangeStructure">
-		<xs:annotation>
-			<xs:documentation>The acceptable time range for the arrival or departure. Implements TRIP REQUEST.FlexibilityWindow. It is assumed that the implementation delivers all possible arrivals or departures in the time range. E.g. for airplane with +/- 3 days.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="DepArrTimeRangeBegin" type="xs:dateTime" minOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Begin of the time range.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DepArrTimeRangeEnd" type="xs:dateTime" minOccurs="1">
-				<xs:annotation>
-					<xs:documentation>End of the time range.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="ServiceSectionStructure">
 		<xs:annotation>
 			<xs:documentation>Properties of a service combined with a stop sequence interval. In many cases the elements about VEHICLE JOURNEY etc that are bundled in a service in OJP are enough for the whole Leg. However, in some cases enough of these element change within a single leg (usually a PT RIDE LEG), that e.g. the LINE, OPERATOR, FARE SECTION, COMMON SECTION changes. Possible cases are splitting/joining of trains, international trains at the border. Then it becomes necessary to tell at a StopPoint that the information has changed and this results in multiple ServiceSections. This implementation of ServiceSection is a view of some parts of JOURNEY PARTs.</xs:documentation>
@@ -604,12 +587,7 @@
 						<xs:documentation>Extra time needed before reaching/after leaving this location (an example of a TRIP ACCESS CONSTRAINT. In Transmodel it is modeled more extensively and could relate to ACCESS MODE e.g. walk max 5 mintues, but cycle 10 minutes).</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="DepArrTimeRange" type="DepArrTimeRangeStructure" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>The acceptable time range for the arrival or departure. Implements TRIP REQUEST.FlexibilityWindow. It is assumed that the implementation delivers all possible arrivals or departures in the time range. E.g. for airplane with +/- 3 days.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:choice>
+			</xs:choice>	
 			<xs:element name="IndividualTransportOptions" type="IndividualTransportOptionsStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Options how to access/leave the place by individual transport.</xs:documentation>
@@ -669,6 +647,11 @@
 				</xs:element>
 				<xs:group ref="NumberOfResultsGroup" minOccurs="0"/>
 			</xs:choice>
+			<xs:element name="TimeWindow" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Time window trips should lie within. Starting from time given in PlaceContext. Implements TRIP REQUEST.FlexibilityWindow. All trips in the window should be provided by the implmentation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The way real-time data should be used in the calculation of the trip.</xs:documentation>
