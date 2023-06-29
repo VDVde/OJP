@@ -8,6 +8,18 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Fare Authority ==========================================</xs:documentation>
 	</xs:annotation>
+	<xs:complexType name="BookingNotesStructure">
+		<xs:annotation>
+			<xs:documentation>A structure for an ordered list of booking notes.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="BookingNote" type="InternationalTextStructure" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Note about booking the LINE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:simpleType name="FareAuthorityCodeType">
 		<xs:annotation>
 			<xs:documentation>Identifier of a Fare Authority.</xs:documentation>
@@ -182,7 +194,7 @@
 	<!-- ======================================================================= -->
 	<xs:simpleType name="BookingMethodEnumeration">
 		<xs:annotation>
-			<xs:documentation>Allowed values for Flexible Booking method.</xs:documentation>
+			<xs:documentation>Allowed values for a booking method.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="callDriver"/>
@@ -198,12 +210,12 @@
 	</xs:simpleType>
 	<xs:complexType name="BookingMethodListOfEnumerations">
 		<xs:annotation>
-			<xs:documentation>List of values for Flexible Booking values.</xs:documentation>
+			<xs:documentation>List of values for booking values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="BookingMethod" type="BookingMethodEnumeration" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Flexible booking methods.</xs:documentation>
+					<xs:documentation>Booking methods.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -446,9 +458,9 @@
 					<xs:documentation>URL for booking.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BookingNote" type="InternationalTextStructure" minOccurs="0">
+			<xs:element name="BookingNotes" type="BookingNotesStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Note about booking the FLEXIBLE LINE.</xs:documentation>
+					<xs:documentation>Notes about booking the LINE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
