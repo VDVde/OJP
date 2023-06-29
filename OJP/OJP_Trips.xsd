@@ -1656,6 +1656,11 @@
 					<xs:documentation>The requested date and/or time do not make sense.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="TRIP_TIMEWINDOWTOOLARGE">
+				<xs:annotation>
+					<xs:documentation>The requested time window is too large.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="TRIP_DEPARTUREAFTERARRIVAL">
 				<xs:annotation>
 					<xs:documentation>The requested departure time at each origin is after the requested arrival time at any destination.</xs:documentation>

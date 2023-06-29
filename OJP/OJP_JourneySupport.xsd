@@ -647,6 +647,11 @@
 				</xs:element>
 				<xs:group ref="NumberOfResultsGroup" minOccurs="0"/>
 			</xs:choice>
+			<xs:element name="TimeWindow" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Time window in which the trips should be, starting from the time specified in PlaceContext. Implements TRIP REQUEST.FlexibilityWindow. All trips within the window should be provided by the implementation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The way real-time data should be used in the calculation of the trip.</xs:documentation>
