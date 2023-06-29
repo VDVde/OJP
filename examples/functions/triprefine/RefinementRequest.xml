@@ -7,13 +7,12 @@
 			<OJPTripRefineRequest>
 				<siri:RequestTimestamp>2022-12-19T12:00:00Z</siri:RequestTimestamp>
 				<siri:MessageIdentifier>4711</siri:MessageIdentifier>
-				<RefineParams>
+				<RefineParams>			
 					<RefineLegRef>1</RefineLegRef>
 					<RefineLegRef>3</RefineLegRef>
 					<SystemId>SBB:prod</SystemId>
 					<UseRealtimeData>full</UseRealtimeData>
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
-					<IncludeAlternativeOptions>true</IncludeAlternativeOptions>
 					<IncludeFare>true</IncludeFare>
 					<HikingProfile>difficult</HikingProfile>
 					<CyclingProfile>comfortable</CyclingProfile>
