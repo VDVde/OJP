@@ -8,6 +8,7 @@
 				<siri:RequestTimestamp>2020-01-20T12:00:00Z</siri:RequestTimestamp>
 				<siri:MessageIdentifier>756</siri:MessageIdentifier>
 				<TrainNumber>1511</TrainNumber>
+				<OperatorRef>ch:1:Operator:33</OperatorRef>
 				<OperatingDayRef xmlns:siri="http://www.siri.org.uk/siri">Unknown</OperatingDayRef>
 				<Params>
 					<IncludeCalls>true</IncludeCalls>
