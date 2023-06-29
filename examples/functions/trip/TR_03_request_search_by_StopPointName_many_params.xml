@@ -32,6 +32,13 @@
 					</ViaPoint>
 				</Via>
 				<Params>
+					<IncludePrivateLines>true</IncludePrivateLines>
+					<PassengerCategory>Adult</PassengerCategory>
+					<MainTravelMode>foot</MainTravelMode>
+					<AccessModeList>
+						<AccessMode>foot</AccessMode>
+						<AccessMode>bicycle</AccessMode>
+					</AccessModeList>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>
 					<IncludeTurnDescription>true</IncludeTurnDescription>
