@@ -31,8 +31,6 @@
 				</Destination>
 				<Params>
 					<IncludeAlternativeOptions>false</IncludeAlternativeOptions>
-					<IncludeTouristicOffers>false</IncludeTouristicOffers>
-					<MainTravelMode>foot</MainTravelMode>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>
 					<IncludeTurnDescription>true</IncludeTurnDescription>

@@ -34,7 +34,7 @@
 				<Params>
 					<IncludePrivateLines>true</IncludePrivateLines>
 					<PassengerCategory>Adult</PassengerCategory>
-					<MainTravelMode>foot</MainTravelMode>
+					<MainTravelMode>motorcycle</MainTravelMode>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>
 					<IncludeTurnDescription>true</IncludeTurnDescription>
