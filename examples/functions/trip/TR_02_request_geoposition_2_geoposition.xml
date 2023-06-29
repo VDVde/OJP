@@ -30,7 +30,7 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
-					<IncludeAlternativeOptions>false</IncludeAlternativeOptions>			
+					<IncludeAlternativeOptions>false</IncludeAlternativeOptions>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>
 					<IncludeTurnDescription>true</IncludeTurnDescription>
