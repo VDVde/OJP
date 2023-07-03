@@ -19,12 +19,12 @@
 			<xs:enumeration value="others-drive-car"/>
 			<xs:enumeration value="vehicleHire">
 				<xs:annotation>
-					<xs:documentation>One of the MODES OF OPERATIOn from NeTEX rental.</xs:documentation>
+					<xs:documentation>One of the MODES OF OPERATION from NeTEX rental.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="vehicleLease">
 				<xs:annotation>
-					<xs:documentation>One of the MODES OF OPERATIOn from NeTEX rental.</xs:documentation>
+					<xs:documentation>One of the MODES OF OPERATION from NeTEX rental.</xs:documentation>
 				</xs:annotation>			
 			</xs:enumeration>			
 			<xs:enumeration value="motorcycle"/>
@@ -32,17 +32,17 @@
 			<xs:enumeration value="scooter"/>
 			<xs:enumeration value="carSharingClub">
 				<xs:annotation>
-					<xs:documentation>Car sharing club. MODES OF OPERATIOn from NeTEx sharing.</xs:documentation>
+					<xs:documentation>Car sharing club. MODES OF OPERATION from NeTEx sharing.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="peerToPeerCarSharing">
 				<xs:annotation>
-					<xs:documentation>Sharing between peers. MODES OF OPERATIOn from NeTEx sharing.</xs:documentation>
+					<xs:documentation>Sharing between peers. MODES OF OPERATION from NeTEx sharing.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="vehicleSharing">
 				<xs:annotation>
-					<xs:documentation>Non-car (bicycles, scooters and the like) sharing. MODES OF OPERATIOn from NeTEx sharing.</xs:documentation>
+					<xs:documentation>Non-car (bicycles, scooters and the like) sharing. MODES OF OPERATION from NeTEx sharing.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="ride-pool-car"/>
@@ -115,7 +115,7 @@
 	</xs:complexType>
 	<xs:simpleType name="ContinuousModesOfOperationEnumeration">
 		<xs:annotation>
-			<xs:documentation>Types of MODES OF OPERATION  that  run at any time without a timetable and that are not classic flexible services.</xs:documentation>
+			<xs:documentation>Types of MODES OF OPERATION that run at any time without a timetable and that are not classic flexible services.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="walk"/>
