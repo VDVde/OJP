@@ -36,7 +36,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>demandResponsive</ContinuousMode>
+									<ContinuousMode>commuterCarPooling</ContinuousMode>
 									<OperatingDayRef>2023-12-24</OperatingDayRef>
 									<siri:VehicleRef>ch:1:vehicle:31231:12311</siri:VehicleRef>
 									<JourneyRef>ch:1:jyid:12931231</JourneyRef>

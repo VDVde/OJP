@@ -211,7 +211,7 @@
 			<xs:documentation>Vehicle journey that runs at a specific date.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-				<xs:element name="TimedMode" type="TimedModesOfOperationEnumeration">
+				<xs:element name="TimedMode" type="TimedModesOfOperationEnumeration" minOccurs="0" default="scheduledService">
 					<xs:annotation>
 						<xs:documentation>MODE OF OPERATION for scheduled and flexible services (NeTEx).</xs:documentation>
 					</xs:annotation>
