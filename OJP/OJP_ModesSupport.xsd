@@ -8,19 +8,43 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Individual Modes ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:simpleType name="IndividualModesEnumeration">
+	<xs:simpleType name="IndividualModesOfOperationEnumeration">
 		<xs:annotation>
 			<xs:documentation>modes which an individual powers themselves (such as walk, cycle)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="walk"/>
 			<xs:enumeration value="cycle"/>
-			<xs:enumeration value="taxi"/>
 			<xs:enumeration value="self-drive-car"/>
 			<xs:enumeration value="others-drive-car"/>
+			<xs:enumeration value="vehicleHire">
+				<xs:annotation>
+					<xs:documentation>One of the MODES OF OPERATIOn from NeTEX rental.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="vehicleLease">
+				<xs:annotation>
+					<xs:documentation>One of the MODES OF OPERATIOn from NeTEX rental.</xs:documentation>
+				</xs:annotation>			
+			</xs:enumeration>			
 			<xs:enumeration value="motorcycle"/>
 			<xs:enumeration value="truck"/>
 			<xs:enumeration value="scooter"/>
+			<xs:enumeration value="carSharingClub">
+				<xs:annotation>
+					<xs:documentation>Car sharing club. MODES OF OPERATIOn from NeTEx sharing.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="peerToPeerCarSharing">
+				<xs:annotation>
+					<xs:documentation>Sharing between peers. MODES OF OPERATIOn from NeTEx sharing.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="vehicleSharing">
+				<xs:annotation>
+					<xs:documentation>Non-car (bicycles, scooters and the like) sharing. MODES OF OPERATIOn from NeTEx sharing.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="ride-pool-car"/>
 			<xs:enumeration value="car-sharing"/>
 			<xs:enumeration value="cycle-sharing"/>
@@ -30,9 +54,16 @@
 	</xs:simpleType>
 	<xs:simpleType name="PrivateModesEnumeration">
 		<xs:annotation>
-			<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals (or companies or closed communities).</xs:documentation>
+			<xs:documentation>MODE OF OPERATION offered by private individuals (contains the values as defined by NeTEx). In the end these are all different forms of car pooling</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="taxi"/>
+			<xs:enumeration value="appBookedTaxi"/>
+			<xs:enumeration value="sharedTaxi"/>
+			<xs:enumeration value="prebookedTaxi"/>
+			<xs:enumeration value="chauffeuredVehicle"/>
+			<xs:enumeration value="dynamicCarPooling"/>
+			<xs:enumeration value="longDistanceCarPooling"/>
 			<xs:enumeration value="vehiclePooling"/>
 			<xs:enumeration value="schoolBus"/>
 			<xs:enumeration value="companyShuttle"/>
@@ -45,7 +76,7 @@
 			<xs:documentation>Individual modes and their usage limits as stated by the passenger (TRIP ACCESS CONSTRAINT).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Mode" type="IndividualModesEnumeration">
+			<xs:element name="Mode" type="IndividualModesOfOperationEnumeration">
 				<xs:annotation>
 					<xs:documentation>Mode of individual transport.	When mode self-drive-car is used the connection to another mode will need a parking space for the car. Thus, this mode is a generalisation of all park and ride use cases. The mode others-drive-car, however, only needs a place to let a person be set down from a car.</xs:documentation>
 				</xs:annotation>
@@ -82,16 +113,41 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="ContinuousModesEnumeration">
+	<xs:simpleType name="ContinuousModesOfOperationEnumeration">
 		<xs:annotation>
-			<xs:documentation>Types of cmodes that  run at any time without a timetable.</xs:documentation>
+			<xs:documentation>Types of MODES OF OPERATION  that  run at any time without a timetable and that are not classic flexible services.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="walk"/>
-			<xs:enumeration value="demandResponsive"/>
-			<xs:enumeration value="replacementService"/>
+			<xs:enumeration value="commuterCarPooling">
+				<xs:annotation>
+					<xs:documentation>MODE OF OPERATION from NeTEX personal.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ownCar">
+				<xs:annotation>
+					<xs:documentation>MODE OF OPERATION from NeTEX personal.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="privateLift">
+				<xs:annotation>
+					<xs:documentation>MODE OF OPERATION from NeTEX personal.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="TimedModesOfOperationEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of MODES OF OPERATION  are scheduled, classic and also flexible. From NeTEx.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="scheduledService"/>
+			<xs:enumeration value="eventBasedService"/>
+			<xs:enumeration value="flexibleRoute"/>
+			<xs:enumeration value="flexibleArea"/> 
+			<xs:enumeration value="demandResponsive"/> 			
+		</xs:restriction>
+	</xs:simpleType>	
 	<xs:annotation>
 		<xs:documentation>========================================== Interchange Modes ==========================================</xs:documentation>
 	</xs:annotation>

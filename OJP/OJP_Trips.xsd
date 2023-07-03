@@ -13,7 +13,7 @@
 		<xs:annotation>
 			<xs:documentation>Trip request structure.</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
+		<xs:sequence><
 			<xs:element name="Origin" type="PlaceContextStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Specifies the origin situation from where the user wants to start.</xs:documentation>
@@ -679,7 +679,7 @@
 						<xs:documentation>Mode that is used for this interchange between public services.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="ContinuousMode" type="ContinuousModesEnumeration">
+				<xs:element name="ContinuousMode" type="ContinuousModesOfOperationEnumeration">
 					<xs:annotation>
 						<xs:documentation>Mode that is used for this interchange between public services.</xs:documentation>
 					</xs:annotation>

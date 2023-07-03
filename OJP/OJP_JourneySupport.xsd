@@ -211,6 +211,11 @@
 			<xs:documentation>Vehicle journey that runs at a specific date.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+				<xs:element name="TimedMode" type="TimedModesOfOperationEnumeration">
+					<xs:annotation>
+						<xs:documentation>MODE OF OPERATION for scheduled and flexible services (NeTEx).</xs:documentation>
+					</xs:annotation>
+				</xs:element>		
 			<xs:element ref="OperatingDayRef">
 				<xs:annotation>
 					<xs:documentation>Reference to an Operating Day.</xs:documentation>
@@ -509,12 +514,12 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:element name="ContinuousMode" type="ContinuousModesEnumeration">
+				<xs:element name="ContinuousMode" type="ContinuousModesOfOperationEnumeration">
 					<xs:annotation>
 						<xs:documentation>Continuous transport options.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="IndividualMode" type="IndividualModesEnumeration">
+				<xs:element name="IndividualMode" type="IndividualModesOfOperationEnumeration">
 					<xs:annotation>
 						<xs:documentation>Individual transport options.</xs:documentation>
 					</xs:annotation>
