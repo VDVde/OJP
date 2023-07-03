@@ -145,7 +145,8 @@
 			<xs:enumeration value="eventBasedService"/>
 			<xs:enumeration value="flexibleRoute"/>
 			<xs:enumeration value="flexibleArea"/> 
-			<xs:enumeration value="demandResponsive"/> 			
+			<xs:enumeration value="demandResponsive"/> 		
+			<xs:enumeration value="replacementService"/>	
 		</xs:restriction>
 	</xs:simpleType>	
 	<xs:annotation>

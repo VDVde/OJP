@@ -161,7 +161,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>demandResponsive</ContinuousMode>
+									<ContinuousMode>ownCar</ContinuousMode>
 									<SharingService>
 										<OperatorRef>ch:1:sboid:12391912</OperatorRef>
 									</SharingService>
