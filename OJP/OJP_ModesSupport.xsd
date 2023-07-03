@@ -25,8 +25,8 @@
 			<xs:enumeration value="vehicleLease">
 				<xs:annotation>
 					<xs:documentation>One of the MODES OF OPERATION from NeTEX rental.</xs:documentation>
-				</xs:annotation>			
-			</xs:enumeration>			
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="motorcycle"/>
 			<xs:enumeration value="truck"/>
 			<xs:enumeration value="scooter"/>
@@ -133,7 +133,7 @@
 				<xs:annotation>
 					<xs:documentation>MODE OF OPERATION from NeTEX personal.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TimedModesOfOperationEnumeration">
@@ -144,11 +144,11 @@
 			<xs:enumeration value="scheduledService"/>
 			<xs:enumeration value="eventBasedService"/>
 			<xs:enumeration value="flexibleRoute"/>
-			<xs:enumeration value="flexibleArea"/> 
-			<xs:enumeration value="demandResponsive"/> 		
-			<xs:enumeration value="replacementService"/>	
+			<xs:enumeration value="flexibleArea"/>
+			<xs:enumeration value="demandResponsive"/>
+			<xs:enumeration value="replacementService"/>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Interchange Modes ==========================================</xs:documentation>
 	</xs:annotation>
