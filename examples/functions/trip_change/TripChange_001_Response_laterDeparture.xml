@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri file:///D:/Schnittstellen/OJP/OJP.xsd">
-	<siri:OJPResponse>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2023-07-04T10:37:08Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJP-SBB-passiv-TEST</siri:ProducerRef>
@@ -55,7 +55,8 @@
 								<Service>
 									<OperatingDayRef>2023-07-04</OperatingDayRef>
 									<JourneyRef>91008:E:H:j23:206:815</JourneyRef>
-									<siri:LineRef>91008:E</siri:LineRef>
+									<ServiceSection>
+																		<siri:LineRef>91008:E</siri:LineRef>
 									<siri:DirectionRef>H</siri:DirectionRef>
 									<Mode>
 										<PtMode>rail</PtMode>
@@ -119,6 +120,8 @@
 										</Text>
 										<Code>ojp91008EH_InfoCall206_111055_1</Code>
 									</Attribute>
+									</ServiceSection>
+
 									<DestinationStopPointRef>8506121</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Romanshorn</Text>
@@ -197,7 +200,8 @@
                                 <Service>
                                     <OperatingDayRef>2023-07-04</OperatingDayRef>
                                     <JourneyRef>91037:Y:H:j23:204:4924</JourneyRef>
-                                    <siri:LineRef>91037:Y</siri:LineRef>
+                                    <ServiceSection>
+                                         <siri:LineRef>91037:Y</siri:LineRef>
                                     <siri:DirectionRef>H</siri:DirectionRef>
                                     <Mode>
                                         <PtMode>rail</PtMode>
@@ -232,7 +236,9 @@
                                             <Text xml:lang="de">Aussteigeseite: Rechts</Text>
                                         </Text>
                                         <Code>ojp91037YH_InfoCall204_108594_1</Code>
-                                    </Attribute>
+                                    </Attribute>                               
+                                    </ServiceSection>
+
                                     <DestinationStopPointRef>8503424</DestinationStopPointRef>
                                     <DestinationText>
                                         <Text xml:lang="de">Schaffhausen</Text>
@@ -259,5 +265,5 @@
 				</TripResult>
 			</OJPTripChangeDelivery>
 		</siri:ServiceDelivery>
-	</siri:OJPResponse>
-</siri:OJP>
+	</OJPResponse>
+</OJP>
