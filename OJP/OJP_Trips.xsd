@@ -147,7 +147,7 @@
 			</xs:element>
 			<xs:element name="MainTravelMode" type="ifopt:AccessModesEnumeration" default="foot" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The MainTravelMode defines whether the trip planner works in PT mode or includes carTransportRail and the like. The only mode that activates the inclusion of this is "car". </xs:documentation>
+					<xs:documentation>The MainTravelMode defines whether the trip planner works in PT mode or includes carTransportRail and the like. The only mode that activates the inclusion of this is "car".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccessModeList" type="AccessModesListOfEnumerations" minOccurs="0">
