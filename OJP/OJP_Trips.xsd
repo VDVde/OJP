@@ -1781,6 +1781,11 @@
 					<xs:documentation>Whether the requested journey leg of the passed trip should arrive earlier or depart later to give the passenger more time to make the interchange.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AdditionalWaitingTime" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Absolute time in minutes the passenger wants additionally to make the interchange. If another TransferLeg is needed (e.g. since another quay is used for the found arrival/departure) this is taken into account. If not passed, the next best arrival/departure is requested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
 				<xs:annotation>
