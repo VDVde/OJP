@@ -1777,4 +1777,45 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="TripChangeProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to TRIPCHANGE requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TRIPCHANGE_NOLATERTRIPFOUND">
+				<xs:annotation>
+					<xs:documentation>No later option for the requested part of the TRIP could be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_NOEARLIERTRIPFOUND">
+				<xs:annotation>
+					<xs:documentation>No earlier option for the requested part of the TRIP could be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_INVALIDLEGREF">
+				<xs:annotation>
+					<xs:documentation>Requested leg ref is invalid.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_INVALIDOPERATOR">
+				<xs:annotation>
+					<xs:documentation>Requested operator is invalid.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_NOVEHICLEAVAILABLE">
+				<xs:annotation>
+					<xs:documentation>No vehicle is available for the requested leg.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="TripChangeProblemType" type="TripChangeProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>
