@@ -596,6 +596,11 @@
 				</xs:element>
 			</xs:choice>
 			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
+			<xs:element name="Changed" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>TRUE if leg got changed by TripChange-Request.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TimedLegStructure">
