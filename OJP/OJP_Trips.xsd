@@ -1526,18 +1526,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:group name="TripRefinementDataFilterGroup">
-		<xs:annotation>
-			<xs:documentation>Request data filters for Refinement</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
 	<xs:complexType name="TripRefineParamStructure">
 		<xs:annotation>
 			<xs:documentation>Trip refinement request parameter structure.</xs:documentation>
@@ -1563,7 +1551,6 @@
 					<xs:documentation>Usage of real-time data in refinement. Default is "full".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="TripRefinementDataFilterGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
 				<xs:annotation>
