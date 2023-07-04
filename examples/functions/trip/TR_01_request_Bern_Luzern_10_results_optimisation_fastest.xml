@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
 	<OJPRequest>
-		<siri:ServiceRequest> 
+		<siri:ServiceRequest>
 			<siri:RequestTimestamp>2020-01-31T12:30:00Z</siri:RequestTimestamp>
 			<siri:RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7</siri:RequestorRef>
 			<OJPTripRequest>
