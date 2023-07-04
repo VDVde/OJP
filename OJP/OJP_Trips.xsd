@@ -1737,12 +1737,12 @@
 					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="EarlierArrivalLaterDepartureType">
