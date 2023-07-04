@@ -1774,9 +1774,11 @@
 			<xs:documentation>Trip change request parameter structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ChangeLegRef" type="LegObjectIdType">
+			<xs:element name="ChangeLegRef" type="LegObjectIdType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Refers to the leg to be changed by the server.</xs:documentation>
+					<xs:documentation>Refers to the legs to be changed by the server. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
