@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
 	<OJPRequest>
-		<siri:ServiceRequest>
-			<siri:RequestTimestamp>2020-01-20T12:00:00Z</siri:RequestTimestamp>
-			<siri:RequestorRef>IRMA</siri:RequestorRef>
-			<OJPStopEventRequest>
-				<siri:RequestTimestamp>2020-01-20T12:00:00Z</siri:RequestTimestamp>
-				<siri:MessageIdentifier>756</siri:MessageIdentifier>
-				<Location xmlns:siri="http://www.siri.org.uk/siri">
-					<PlaceRef>
-						<StopPlaceRef>8530813</StopPlaceRef>
-						<Name>
-							<Text>Zürich Kreuzplatz</Text>
-						</Name>
-					</PlaceRef>
-					<DepArrTime>2020-12-01T12:00:00Z</DepArrTime>
-				</Location>
-				<Params>
-					<StopEventType>both</StopEventType>
-					<IncludePreviousCalls>true</IncludePreviousCalls>
-					<IncludeOnwardCalls>true</IncludeOnwardCalls>
-					<IncludeOperatingDays>true</IncludeOperatingDays>
-					<UseRealtimeData>full</UseRealtimeData>
-				</Params>
-			</OJPStopEventRequest>
-		</siri:ServiceRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPStopEventRequest>
+				<RequestTimestamp>2020-01-20T12:00:00Z</RequestTimestamp>
+				<MessageIdentifier>756</MessageIdentifier>
+				<ojp:Location xmlns:siri="http://www.siri.org.uk/siri">
+					<ojp:PlaceRef>
+						<ojp:StopPlaceRef>8530813</ojp:StopPlaceRef>
+						<ojp:Name>
+							<ojp:Text>Zürich Kreuzplatz</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+					<ojp:DepArrTime>2020-12-01T12:00:00Z</ojp:DepArrTime>
+				</ojp:Location>
+				<ojp:Params>
+					<ojp:StopEventType>both</ojp:StopEventType>
+					<ojp:IncludePreviousCalls>true</ojp:IncludePreviousCalls>
+					<ojp:IncludeOnwardCalls>true</ojp:IncludeOnwardCalls>
+					<ojp:IncludeOperatingDays>true</ojp:IncludeOperatingDays>
+					<ojp:UseRealtimeData>full</ojp:UseRealtimeData>
+				</ojp:Params>
+			</ojp:OJPStopEventRequest>
+		</ServiceRequest>
 	</OJPRequest>
 </OJP>

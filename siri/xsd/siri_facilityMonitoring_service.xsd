@@ -75,19 +75,13 @@ Rail transport, Roads and road transport
 	</xsd:annotation>
 	<!-- ===Global import of all IFOPT namespace elements used in SIRI needed to work around XERCES limitation=====-->
 	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
-	<!--
-		OJP Change:
-		additional import of namespace="http://www.ifopt.org.uk/ifopt" has been removed
-		because several XML tools fail to validate the XSD if different files are defined to provide the same namespace
-	 -->
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_stop.xsd"/>
 	<!--.....See facility for the actual dependencies...-->
 	<!-- ===Global import of all ACSB namespace elements needed to work around XERCES limitation This needs to be after ifopt=====-->
 	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all.xsd"/>
-	<!--
-		OJP Change:
-		additional imports of namespace="http://www.ifopt.org.uk/acsb" have been removed
-		because several XML tools fail to validate the XSD if different files are defined to provide the same namespace
-	 -->
+	<!--.....These are the actual dependencies...-->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_accessibility.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="siri_model/siri_facility.xsd"/>
 	<xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>

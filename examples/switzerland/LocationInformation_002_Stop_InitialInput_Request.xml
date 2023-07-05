@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
 	<OJPRequest>
-		<siri:ServiceRequest>
-			<siri:RequestTimestamp>2020-01-19T12:00:00Z</siri:RequestTimestamp>
-			<siri:RequestorRef>IRMA</siri:RequestorRef>
-			<OJPLocationInformationRequest>
-				<siri:RequestTimestamp>2020-01-19T12:00:00Z</siri:RequestTimestamp>
-				<siri:MessageIdentifier>4712</siri:MessageIdentifier>
-				<InitialInput>
-					<Name>Bern</Name>
-				</InitialInput>
-				<Restrictions>
-					<Type>stop</Type>
-					<IncludePtModes>true</IncludePtModes>
-				</Restrictions>
-			</OJPLocationInformationRequest>
-		</siri:ServiceRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2020-01-19T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPLocationInformationRequest>
+				<RequestTimestamp>2020-01-19T12:00:00Z</RequestTimestamp>
+				<MessageIdentifier>4712</MessageIdentifier>
+				<ojp:InitialInput>
+					<ojp:Name>Bern</ojp:Name>
+				</ojp:InitialInput>
+				<ojp:Restrictions>
+					<ojp:Type>stop</ojp:Type>
+					<ojp:IncludePtModes>true</ojp:IncludePtModes>
+				</ojp:Restrictions>
+			</ojp:OJPLocationInformationRequest>
+		</ServiceRequest>
 	</OJPRequest>
 </OJP>

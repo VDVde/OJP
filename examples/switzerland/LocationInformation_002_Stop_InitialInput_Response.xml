@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
-	<OJPResponse>
+<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
+	<siri:OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-10-10T15:57:12Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<OJPLocationInformationDelivery>
+			<ojp:OJPLocationInformationDelivery>
 				<siri:ResponseTimestamp>2020-10-10T15:57:12Z</siri:ResponseTimestamp>
 				<siri:RequestMessageRef>4712</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
-				<CalcTime>83</CalcTime>
-				<PlaceResult>
-					<Place>
-						<StopPlace>
-							<StopPlaceRef>8507000</StopPlaceRef>
-							<StopPlaceName>
-								<Text>Bern</Text>
-							</StopPlaceName>
-							<TopographicPlaceRef>23006351:1</TopographicPlaceRef>
-						</StopPlace>
-						<Name>
-							<Text xml:lang="de">Bern (Bern)</Text>
-						</Name>
-						<GeoPosition>
+				<ojp:CalcTime>83</ojp:CalcTime>
+				<ojp:PlaceResult>
+					<ojp:Place>
+						<ojp:StopPlace>
+							<ojp:StopPlaceRef>8507000</ojp:StopPlaceRef>
+							<ojp:StopPlaceName>
+								<ojp:Text>Bern</ojp:Text>
+							</ojp:StopPlaceName>
+							<ojp:TopographicPlaceRef>23006351:1</ojp:TopographicPlaceRef>
+						</ojp:StopPlace>
+						<ojp:Name>
+							<ojp:Text xml:lang="de">Bern (Bern)</ojp:Text>
+						</ojp:Name>
+						<ojp:GeoPosition>
 							<siri:Longitude>7.43913</siri:Longitude>
 							<siri:Latitude>46.94883</siri:Latitude>
-						</GeoPosition>
-					</Place>
-					<Complete>true</Complete>
-					<Probability>1</Probability>
-					<Mode>
-						<PtMode>rail</PtMode>
+						</ojp:GeoPosition>
+					</ojp:Place>
+					<ojp:Complete>true</ojp:Complete>
+					<ojp:Probability>1</ojp:Probability>
+					<ojp:Mode>
+						<ojp:PtMode>rail</ojp:PtMode>
 						<siri:RailSubmode>unknown</siri:RailSubmode>
-					</Mode>
-					<Mode>
-						<PtMode>bus</PtMode>
+					</ojp:Mode>
+					<ojp:Mode>
+						<ojp:PtMode>bus</ojp:PtMode>
 						<siri:BusSubmode>localBusService</siri:BusSubmode>
-					</Mode>
-				</PlaceResult>
-				<PlaceResult>
-					<Place>
-						<StopPlace>
-							<StopPlaceRef>8577001</StopPlaceRef>
-							<StopPlaceName>
-								<Text>Bern, Zent</Text>
-							</StopPlaceName>
-							<TopographicPlaceRef>23006351:1</TopographicPlaceRef>
-						</StopPlace>
-						<Name>
-							<Text xml:lang="de">Bern, Zent (Bern)</Text>
-						</Name>
-						<GeoPosition>
+					</ojp:Mode>
+				</ojp:PlaceResult>
+				<ojp:PlaceResult>
+					<ojp:Place>
+						<ojp:StopPlace>
+							<ojp:StopPlaceRef>8577001</ojp:StopPlaceRef>
+							<ojp:StopPlaceName>
+								<ojp:Text>Bern, Zent</ojp:Text>
+							</ojp:StopPlaceName>
+							<ojp:TopographicPlaceRef>23006351:1</ojp:TopographicPlaceRef>
+						</ojp:StopPlace>
+						<ojp:Name>
+							<ojp:Text xml:lang="de">Bern, Zent (Bern)</ojp:Text>
+						</ojp:Name>
+						<ojp:GeoPosition>
 							<siri:Longitude>7.47534</siri:Longitude>
 							<siri:Latitude>46.95745</siri:Latitude>
-						</GeoPosition>
-					</Place>
-					<Complete>true</Complete>
-					<Probability>0.949999988</Probability>
-					<Mode>
-						<PtMode>bus</PtMode>
+						</ojp:GeoPosition>
+					</ojp:Place>
+					<ojp:Complete>true</ojp:Complete>
+					<ojp:Probability>0.949999988</ojp:Probability>
+					<ojp:Mode>
+						<ojp:PtMode>bus</ojp:PtMode>
 						<siri:BusSubmode>localBusService</siri:BusSubmode>
-					</Mode>
-				</PlaceResult>
-				<PlaceResult>
-					<Place>
-						<StopPlace>
-							<StopPlaceRef>8587483</StopPlaceRef>
-							<StopPlaceName>
-								<Text>Bern, Salem</Text>
-							</StopPlaceName>
-							<TopographicPlaceRef>23006351:1</TopographicPlaceRef>
-						</StopPlace>
-						<Name>
-							<Text xml:lang="de">Bern, Salem (Bern)</Text>
-						</Name>
-						<GeoPosition>
+					</ojp:Mode>
+				</ojp:PlaceResult>
+				<ojp:PlaceResult>
+					<ojp:Place>
+						<ojp:StopPlace>
+							<ojp:StopPlaceRef>8587483</ojp:StopPlaceRef>
+							<ojp:StopPlaceName>
+								<ojp:Text>Bern, Salem</ojp:Text>
+							</ojp:StopPlaceName>
+							<ojp:TopographicPlaceRef>23006351:1</ojp:TopographicPlaceRef>
+						</ojp:StopPlace>
+						<ojp:Name>
+							<ojp:Text xml:lang="de">Bern, Salem (Bern)</ojp:Text>
+						</ojp:Name>
+						<ojp:GeoPosition>
 							<siri:Longitude>7.45441</siri:Longitude>
 							<siri:Latitude>46.95390</siri:Latitude>
-						</GeoPosition>
-					</Place>
-					<Complete>true</Complete>
-					<Probability>0.947000027</Probability>
-					<Mode>
-						<PtMode>bus</PtMode>
+						</ojp:GeoPosition>
+					</ojp:Place>
+					<ojp:Complete>true</ojp:Complete>
+					<ojp:Probability>0.947000027</ojp:Probability>
+					<ojp:Mode>
+						<ojp:PtMode>bus</ojp:PtMode>
 						<siri:BusSubmode>localBusService</siri:BusSubmode>
-					</Mode>
-				</PlaceResult>
-			</OJPLocationInformationDelivery>
+					</ojp:Mode>
+				</ojp:PlaceResult>
+			</ojp:OJPLocationInformationDelivery>
 		</siri:ServiceDelivery>
-	</OJPResponse>
-</OJP>
+	</siri:OJPResponse>
+</siri:OJP>

@@ -8,18 +8,6 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Fare Authority ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:complexType name="BookingNotesStructure">
-		<xs:annotation>
-			<xs:documentation>A structure for an ordered list of booking notes.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="BookingNote" type="InternationalTextStructure" minOccurs="1" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Note about booking the LINE.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:simpleType name="FareAuthorityCodeType">
 		<xs:annotation>
 			<xs:documentation>Identifier of a Fare Authority.</xs:documentation>
@@ -194,7 +182,7 @@
 	<!-- ======================================================================= -->
 	<xs:simpleType name="BookingMethodEnumeration">
 		<xs:annotation>
-			<xs:documentation>Allowed values for a booking method.</xs:documentation>
+			<xs:documentation>Allowed values for Flexible Booking method.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="callDriver"/>
@@ -210,12 +198,12 @@
 	</xs:simpleType>
 	<xs:complexType name="BookingMethodListOfEnumerations">
 		<xs:annotation>
-			<xs:documentation>List of values for booking values.</xs:documentation>
+			<xs:documentation>List of values for Flexible Booking values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="BookingMethod" type="BookingMethodEnumeration" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Booking methods.</xs:documentation>
+					<xs:documentation>Flexible booking methods.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -458,9 +446,9 @@
 					<xs:documentation>URL for booking.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BookingNotes" type="BookingNotesStructure" minOccurs="0">
+			<xs:element name="BookingNote" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Notes about booking the LINE.</xs:documentation>
+					<xs:documentation>Note about booking the FLEXIBLE LINE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
@@ -568,11 +556,6 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="FareProductPriceGroup"/>
-			<xs:element name="FareQuota" type="xs:integer" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Remaining offered tickets in this FARE PRODUCT. When absent, the number of remaining tickets is unknown or it is not limited. In most cases if the FareQuota is zero then the FareProduct is not shown.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:group ref="FareProductValidityGroup"/>
 			<xs:group ref="FareProductBookingGroup"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
@@ -789,7 +772,6 @@
 					<xs:documentation>Number of travellers that will make the journey and for which Fare information needs to be gathered.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:annotation>

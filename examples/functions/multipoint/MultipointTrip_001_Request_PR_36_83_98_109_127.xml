@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+<OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
 	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
 	- PR #83 - IncludePlacesContext and IncludeSituationsContext
 	- PR #109 - TripSummaryOnly
@@ -8,62 +8,51 @@
 	- PR #127 - additionally available private modes: scooter, ride-pool-car, car-sharing, cycle-sharing, scooter-sharing
 -->
 	<OJPRequest>
-		<siri:ServiceRequest>
-			<siri:RequestTimestamp>2020-09-01T19:33:23Z</siri:RequestTimestamp>
-			<siri:RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7_test</siri:RequestorRef>
-			<OJPMultiPointTripRequest>
-				<siri:RequestTimestamp>2020-09-01T19:33:23Z</siri:RequestTimestamp>
-				<Origin>
-					<PlaceRef>
-						<StopPlaceRef>8506302</StopPlaceRef>
-						<Name>
-							<Text>Name, but can be ignored as the id usually is the only thing interpreted by the router</Text>
-						</Name>
-					</PlaceRef>
-					<DepArrTime>2020-09-30T11:00:00Z</DepArrTime>
+		<ServiceRequest>
+			<RequestTimestamp>2020-09-01T19:33:23Z</RequestTimestamp>
+			<RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7_test</RequestorRef>
+			<ojp:OJPMultiPointTripRequest>
+				<RequestTimestamp>2020-09-01T19:33:23Z</RequestTimestamp>
+				<ojp:Origin>
+					<ojp:PlaceRef>
+						<ojp:StopPlaceRef>8506302</ojp:StopPlaceRef>
+						<ojp:Name>
+							<ojp:Text>Name, but can be ignored as the id usually is the only thing interpreted by the router</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+					<ojp:DepArrTime>2020-09-30T11:00:00Z</ojp:DepArrTime>
 					<!-- with seconds -->
-				</Origin>
-				<Destination>
-					<PlaceRef>
-						<StopPlaceRef>8505000</StopPlaceRef>
-						<Name>
-							<Text>Luzern</Text>
-						</Name>
-					</PlaceRef>
-					<IndividualTransportOptions>
-						<Mode>scooter</Mode>
+				</ojp:Origin>
+				<ojp:Destination>
+					<ojp:PlaceRef>
+						<ojp:StopPlaceRef>8505000</ojp:StopPlaceRef>
+						<ojp:Name>
+							<ojp:Text>Luzern</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+					<ojp:IndividualTransportOptions>
+						<ojp:Mode>scooter</ojp:Mode>
 						<!-- V1.1, PR #127 - additionally available private modes -->
-						<MaxDistance>5000</MaxDistance>
-						<MaxDuration>PT1H</MaxDuration>
-						<Speed>120</Speed>
-					</IndividualTransportOptions>
-				</Destination>
-				<Params>
-					<NoSight>false</NoSight>
+						<ojp:MaxDistance>5000</ojp:MaxDistance>
+						<ojp:MaxDuration>PT1H</ojp:MaxDuration>
+						<ojp:Speed>120</ojp:Speed>
+					</ojp:IndividualTransportOptions>
+				</ojp:Destination>
+				<ojp:Params>
+					<ojp:NoSight>false</ojp:NoSight>
 					<!-- V1.1, PR #36 - NoSight -->
-					<NumberOfResults>5</NumberOfResults>
-					<OptimisationMethod>fastest</OptimisationMethod>
-					<MultiPointType>anyPoint</MultiPointType>
+					<ojp:NumberOfResults>5</ojp:NumberOfResults>
+					<ojp:OptimisationMethod>fastest</ojp:OptimisationMethod>
+					<ojp:MultiPointType>anyPoint</ojp:MultiPointType>
 					<!-- V1.1, PR #98 - anyPoint is default; other values are: eachOrigin, eachDestination -->
-					<IncludePlacesContext>false</IncludePlacesContext>
+					<ojp:IncludePlacesContext>false</ojp:IncludePlacesContext>
 					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
-					<IncludeSituationsContext>false</IncludeSituationsContext>
+					<ojp:IncludeSituationsContext>false</ojp:IncludeSituationsContext>
 					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
-					<TripSummaryOnly>false</TripSummaryOnly>
+					<ojp:TripSummaryOnly>false</ojp:TripSummaryOnly>
 					<!-- V1.1, PR #109 - TripSummaryOnly -->
-					<FareParam>
-						<FareAuthorityFilter>NOVA</FareAuthorityFilter>
-						<PassengerCategory>Adult</PassengerCategory>
-						<FareClass>businessClass</FareClass>
-						<Traveller>
-							<Age>21</Age>
-						</Traveller>
-						<Extension>
-							<AnExtension>0.001</AnExtension>
-						</Extension>
-					</FareParam>
-				</Params>
-			</OJPMultiPointTripRequest>
-		</siri:ServiceRequest>
+				</ojp:Params>
+			</ojp:OJPMultiPointTripRequest>
+		</ServiceRequest>
 	</OJPRequest>
 </OJP>

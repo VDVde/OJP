@@ -119,7 +119,7 @@
 	</xs:complexType>
 	<xs:complexType name="ResponseContextStructure">
 		<xs:annotation>
-			<xs:documentation>Structure providing response contexts related to journeys, containing collections of places and situations (from Transmodel "view" these are all implementation related aspects of the physical model).</xs:documentation>
+			<xs:documentation>Structure providing response contexts related to journeys, containing collections of places and situations.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Operators" type="Operators_RelStructure" minOccurs="0">
