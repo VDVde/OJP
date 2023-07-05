@@ -150,7 +150,7 @@
 			</xs:element>
 			<xs:element name="FareEstimated" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether the fare is only estimated by the service. Estimated can mean different things: For example, the fare may vary depending on age, PassengerCategory, TravelClass, EntitlementProducts. It can also mean that the fare structure used by the service is not entirely accurate or that other factors, such as the time a shared vehicle is used, need to be factored into the price. As a rule, the price should then be given as an approximate and probably lower limit of the actual price. Default is TRUE.</xs:documentation>
+					<xs:documentation>Whether the fare is only estimated by the service. Estimated can mean different things: For example, the fare may vary depending on age, PassengerCategory, FareClass, EntitlementProducts. It can also mean that the fare structure used by the service is not entirely accurate or that other factors, such as the time a shared vehicle is used, need to be factored into the price. As a rule, the price should then be given as an approximate and probably lower limit of the actual price. Default is TRUE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>

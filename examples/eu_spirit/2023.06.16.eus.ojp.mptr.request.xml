@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2023-06-16T16:21:15+02:00</siri:RequestTimestamp>
+			<siri:RequestorRef>HACON</siri:RequestorRef>
+			<siri:MessageIdentifier>mptr</siri:MessageIdentifier>
+			<OJPMultiPointTripRequest>
+				<siri:RequestTimestamp>2023-06-16T16:21:15+02:00</siri:RequestTimestamp>
+				<Origin>
+					<PlaceRef>
+						<StopPlaceRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA0OTg3NEBZPTUyNDE0MjQwQFU9ODZATD0xMDAxMzY0NkBCPTFAcD0xNjg2NzMxNDE4QHxQb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGV8MTMuMDQ5ODc0fDUyLjQxNDI0fGZhbHNl</StopPlaceRef>
+						<Name>
+							<Text>unused</Text>
+						</Name>
+					</PlaceRef>
+					<DepArrTime>2023-06-17T10:00:00Z</DepArrTime>
+				</Origin>
+				<Destination>
+					<PlaceRef>
+						<StopPlaceRef>U3xBPTFATz1GcmFua2Z1cnQgKE1haW4pIEhhdXB0YmFobmhvZkBYPTg2NjI5NDBAWT01MDEwNjI1OUBVPTg2QEw9MzIwMDAxMDAyQHxGcmFua2Z1cnQgKE1haW4pIEhhdXB0YmFobmhvZnw4LjY2Mjk0fDUwLjEwNjI1OXx0cnVl</StopPlaceRef>
+						<Name>
+							<Text>unused</Text>
+						</Name>
+					</PlaceRef>
+					<TimeAllowance>P0Y0M0DT0H35M0.000S</TimeAllowance>
+				</Destination>
+				<Destination>
+					<PlaceRef>
+						<StopPlaceRef>U3xBPTFATz1CcmVtZW4gRmx1Z2hhZmVuQFg9ODc4NjI3MkBZPTUzMDUyOTIzQFU9ODZATD0xMDQyMDMyNkB8QnJlbWVuIEZsdWdoYWZlbnw4Ljc4NjI3Mnw1My4wNTI5MjN8dHJ1ZQ--</StopPlaceRef>
+						<Name>
+							<Text>unused</Text>
+						</Name>
+					</PlaceRef>
+					<TimeAllowance>P0Y0M0DT0H49M0.000S</TimeAllowance>
+				</Destination>
+				<Params>
+					<NumberOfResults>5</NumberOfResults>
+					<MultiPointType>eachOriginDestination</MultiPointType>
+					<IncludeIntermediateStops>true</IncludeIntermediateStops>
+				</Params>
+			</OJPMultiPointTripRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2023-06-13T17:53:00.000Z</siri:RequestTimestamp>
+			<siri:RequestorRef>SBB-SoapUI-Tests</siri:RequestorRef>
+			<OJPTripRequest>
+				<siri:RequestTimestamp>2023-06-13T17:53:00.000Z</siri:RequestTimestamp>
+				<Origin>
+					<PlaceRef>
+						<StopPlaceRef>23:1917</StopPlaceRef>
+						<Name>
+							<Text>Origin</Text>
+						</Name>
+					</PlaceRef>
+					<DepArrTime>2023-06-13T17:53:00.000Z</DepArrTime>
+				</Origin>
+				<Destination>
+					<PlaceRef>
+						<StopPlaceRef>gtt:1992</StopPlaceRef>
+						<Name>
+							<Text>Destination</Text>
+						</Name>
+					</PlaceRef>
+				</Destination>
+				<Params>
+					<NumberOfResults>5</NumberOfResults>
+					<IncludeTrackSections>false</IncludeTrackSections>
+					<IncludeLegProjection>false</IncludeLegProjection>
+					<IncludeTurnDescription>false</IncludeTurnDescription>
+					<IncludeIntermediateStops>false</IncludeIntermediateStops>
+				</Params>
+			</OJPTripRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>

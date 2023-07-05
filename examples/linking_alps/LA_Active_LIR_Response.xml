@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2023-06-13T16:26:36Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJP-SBB-LA-aktiv-PROD</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<OJPLocationInformationDelivery>
+				<siri:ResponseTimestamp>2023-06-13T16:26:36Z</siri:ResponseTimestamp>
+				<siri:Status>true</siri:Status>
+				<CalcTime>62</CalcTime>
+				<PlaceResult>
+					<Place>
+						<StopPlace>
+							<StopPlaceRef>STOP:STA:it:22021:2424|Stazione di Vilpiano - Nalles</StopPlaceRef>
+							<StopPlaceName>
+								<Text xml:lang="de">Stazione di Vilpiano - Nalles</Text>
+							</StopPlaceName>
+							<TopographicPlaceRef>0:-1</TopographicPlaceRef>
+						</StopPlace>
+						<Name>
+							<Text xml:lang="de">Stazione di Vilpiano - Nalles (Vilpiano (Terlano))</Text>
+						</Name>
+						<GeoPosition>
+							<siri:Longitude>11.22038</siri:Longitude>
+							<siri:Latitude>46.55428</siri:Latitude>
+						</GeoPosition>
+					</Place>
+					<Complete>true</Complete>
+					<Probability>0.975000024</Probability>
+					<Mode>
+						<PtMode>bus</PtMode>
+					</Mode>
+					<Mode>
+						<PtMode>rail</PtMode>
+					</Mode>
+				</PlaceResult>
+			</OJPLocationInformationDelivery>
+		</siri:ServiceDelivery>
+	</OJPResponse>
+</OJP>

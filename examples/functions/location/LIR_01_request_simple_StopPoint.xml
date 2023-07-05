@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
 	<OJPRequest>
-		<ServiceRequest>
-			<RequestTimestamp>2020-01-19T12:00:00Z</RequestTimestamp>
-			<RequestorRef>IRMA</RequestorRef>
-			<ojp:OJPLocationInformationRequest>
-				<RequestTimestamp>2020-01-19T12:00:00Z</RequestTimestamp>
-				<MessageIdentifier>4711</MessageIdentifier>
-				<ojp:PlaceRef>
-					<StopPointRef>8530813</StopPointRef>
-					<ojp:Name>
-						<ojp:Text>Zürich Kreuzplatz</ojp:Text>
-					</ojp:Name>
-				</ojp:PlaceRef>
-				<ojp:Restrictions>
-					<ojp:Type>stop</ojp:Type>
-					<ojp:IncludePtModes>true</ojp:IncludePtModes>
-				</ojp:Restrictions>
-			</ojp:OJPLocationInformationRequest>
-		</ServiceRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2020-01-19T12:00:00Z</siri:RequestTimestamp>
+			<siri:RequestorRef>IRMA</siri:RequestorRef>
+			<OJPLocationInformationRequest>
+				<siri:RequestTimestamp>2020-01-19T12:00:00Z</siri:RequestTimestamp>
+				<siri:MessageIdentifier>4711</siri:MessageIdentifier>
+				<PlaceRef>
+					<siri:StopPointRef>8530813</siri:StopPointRef>
+					<Name>
+						<Text>Zürich Kreuzplatz</Text>
+					</Name>
+				</PlaceRef>
+				<Restrictions>
+					<Type>stop</Type>
+					<IncludePtModes>true</IncludePtModes>
+					<IncludeOperators>true</IncludeOperators>
+					<SortingMethod>fastChanges</SortingMethod>
+					<GeoPosition>
+						<siri:Longitude>0.0000</siri:Longitude>
+						<siri:Latitude>0.0000</siri:Latitude>
+					</GeoPosition>
+					<MinimalProbability>0.7</MinimalProbability>
+					<Extension>
+						<AnotherExtension>defined by users</AnotherExtension>
+					</Extension>
+				</Restrictions>
+			</OJPLocationInformationRequest>
+		</siri:ServiceRequest>
 	</OJPRequest>
 </OJP>

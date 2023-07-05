@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2023-06-16T16:11:42+02:00</siri:RequestTimestamp>
+			<siri:RequestorRef>HACON</siri:RequestorRef>
+			<siri:MessageIdentifier>756</siri:MessageIdentifier>
+			<OJPStopEventRequest>
+				<siri:RequestTimestamp>2023-06-16T16:11:42+02:00</siri:RequestTimestamp>
+				<Location>
+					<PlaceRef>
+						<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA0OTg3NEBZPTUyNDE0MjQwQFU9ODZATD0xMDAxMzY0NkBCPTFAcD0xNjg2NzMxNDE4QHxQb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGV8MTMuMDQ5ODc0fDUyLjQxNDI0fGZhbHNl</siri:StopPointRef>
+						<Name>
+							<Text>unused</Text>
+						</Name>
+					</PlaceRef>
+				</Location>
+				<Params>
+					<NumberOfResults>10</NumberOfResults>
+					<StopEventType>departure</StopEventType>
+					<UseRealtimeData>full</UseRealtimeData>
+				</Params>
+			</OJPStopEventRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>

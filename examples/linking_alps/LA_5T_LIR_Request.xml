@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2022-01-31T13:45:09.541Z</siri:RequestTimestamp>
+			<siri:RequestorRef>SBB-SoapUI-Tests</siri:RequestorRef>
+			<OJPLocationInformationRequest>
+				<siri:RequestTimestamp>2022-01-31T13:45:09.541Z</siri:RequestTimestamp>
+				<InitialInput/>
+				<Restrictions>
+					<Type>stop</Type>
+					<NumberOfResults>100</NumberOfResults>
+					<ContinueAt>0</ContinueAt>
+				</Restrictions>
+			</OJPLocationInformationRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>

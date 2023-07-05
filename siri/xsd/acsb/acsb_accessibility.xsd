@@ -56,7 +56,12 @@ Rail transport, Roads and road transport
 	</xsd:annotation>
 	<xsd:include schemaLocation="acsb_limitations.xsd"/>
 	<xsd:include schemaLocation="acsb_passengerMobility.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_time.xsd"/>
+	<!--
+		OJP Change:
+		import of namespace="http://www.ifopt.org.uk/ifopt" has been replaced by ifopt_allStopPlace.xsd
+		because several XML tools fail to validate the XSD if different files are defined to provide the same namespace
+	 -->
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
 	<!--===========================================================================================-->
 	<xsd:simpleType name="LimitationIdType">
 		<xsd:annotation>
