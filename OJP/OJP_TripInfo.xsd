@@ -14,6 +14,7 @@
 		<xs:sequence>
 			<xs:choice>
 				<xs:group ref="DatedJourneyRefGroup"/>
+				<xs:group ref="DatedTrainNumberRefGroup"/>
 				<xs:group ref="TimedVehicleRefGroup"/>
 			</xs:choice>
 			<xs:element name="Params" type="TripInfoParamStructure" minOccurs="0">

@@ -194,10 +194,20 @@
 	</xs:element>
 	<xs:group name="DatedJourneyRefGroup">
 		<xs:annotation>
-			<xs:documentation>Reference to a DATED VEHICLE JOURNEY (Reference to a journey on a specific operating day)</xs:documentation>
+			<xs:documentation>Reference to a DATED VEHICLE JOURNEY (Reference to a journey on a specific operating day).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element ref="JourneyRef"/>
+			<xs:element ref="JourneyRef" minOccurs="0"/>
+			<xs:element ref="OperatingDayRef"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="DatedTrainNumberRefGroup">
+		<xs:annotation>
+			<xs:documentation>Reference to a TRAIN NUMBER of an OPERATOR at a given OPERATING DAY.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TrainNumber" type="xs:normalizedString"/>
+			<xs:element name="OperatorRef" type="siri:OperatorRefStructure"/>
 			<xs:element ref="OperatingDayRef"/>
 		</xs:sequence>
 	</xs:group>
