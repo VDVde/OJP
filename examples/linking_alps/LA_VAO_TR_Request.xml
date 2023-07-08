@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2023-05-10T16:41:53+02:00</siri:RequestTimestamp>
+			<siri:RequestorRef>SBB-SKI-CH-2022</siri:RequestorRef>
+			<OJPTripRequest>
+				<siri:RequestTimestamp>2023-05-10T16:41:53+02:00</siri:RequestTimestamp>
+				<Origin>
+					<PlaceRef>
+						<StopPlaceRef>U3xBPTFATz1CaXNjaG9mc2hvZmVuIEJhaG5ob2ZAWD0xMzIxOTYzNUBZPTQ3NDE3ODAyQFU9ODFATD00NTUyMDk5MDBAQj0xQHA9MTY3MzkxMjc4MEBpPUHDl2F0OjQ1OjUyMDk5QHxCaXNjaG9mc2hvZmVuIEJhaG5ob2Z8MTMuMjE5NjM1fDQ3LjQxNzgwMnxmYWxzZQ--</StopPlaceRef>
+						<Name>
+							<Text>Origin</Text>
+						</Name>
+					</PlaceRef>
+					<DepArrTime>2023-05-10T16:41:53+02:00</DepArrTime>
+				</Origin>
+				<Destination>
+					<PlaceRef>
+						<StopPlaceRef>U3xBPTFATz3DlnR6dGFsLUJhaG5ob2ZAWD0xMDg1OTI3NUBZPTQ3MjM4Mjg3QFU9ODFATD00NzAxMjA0MDBAQj0xQHA9MTY3MzkxMjc4MEBpPUHDl2F0OjQ3OjEyMDRAfMOWdHp0YWwtQmFobmhvZnwxMC44NTkyNzV8NDcuMjM4Mjg3fHRydWU-</StopPlaceRef>
+						<Name>
+							<Text>Destination</Text>
+						</Name>
+					</PlaceRef>
+				</Destination>
+				<Params>
+					<NumberOfResults>5</NumberOfResults>
+					<IncludeTrackSections>false</IncludeTrackSections>
+					<IncludeLegProjection>false</IncludeLegProjection>
+					<IncludeTurnDescription>false</IncludeTurnDescription>
+					<IncludeIntermediateStops>false</IncludeIntermediateStops>
+				</Params>
+			</OJPTripRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>

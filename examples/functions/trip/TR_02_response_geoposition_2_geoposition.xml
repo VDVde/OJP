@@ -1,1619 +1,1627 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
-	<siri:OJPResponse>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-11-30T10:30:33Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<ojp:OJPTripDelivery>
+			<OJPTripDelivery>
 				<siri:ResponseTimestamp>2020-11-30T10:30:32Z</siri:ResponseTimestamp>
 				<siri:Status>true</siri:Status>
-				<ojp:CalcTime>529</ojp:CalcTime>
-				<ojp:TripResponseContext>
-					<ojp:Places>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8591258</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Zürich, Lindenplatz</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>126303:0:</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Zürich, Lindenplatz</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+				<CalcTime>529</CalcTime>
+				<TripResponseContext>
+					<Places>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8591258</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Zürich, Lindenplatz</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>126303:0:</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23026261:27</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Zürich, Lindenplatz</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.48611</siri:Longitude>
 								<siri:Latitude>47.38782</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:TopographicPlace>
-								<ojp:TopographicPlaceCode>23026261:27</ojp:TopographicPlaceCode>
-								<ojp:TopographicPlaceName>
-									<ojp:Text>Unknown</ojp:Text>
-								</ojp:TopographicPlaceName>
-							</ojp:TopographicPlace>
-							<ojp:Name>
-								<ojp:Text>Zürich</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<TopographicPlace>
+								<TopographicPlaceCode>23026261:27</TopographicPlaceCode>
+								<TopographicPlaceName>
+									<Text>Unknown</Text>
+								</TopographicPlaceName>
+							</TopographicPlace>
+							<Name>
+								<Text>Zürich</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.48611</siri:Longitude>
 								<siri:Latitude>47.38782</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
+							</GeoPosition>
+						</Place>
 						<!-- a lot of other Place -->
-					</ojp:Places>
-				</ojp:TripResponseContext>
-				<ojp:TripResult>
-					<ojp:Id>ID-847240F3-270A-4821-A566-131E5E949366</ojp:Id>
-					<ojp:Trip>
-						<ojp:Id>ID-847240F3-270A-4821-A566-131E5E949366</ojp:Id>
-						<ojp:Duration>PT41M</ojp:Duration>
-						<ojp:StartTime>2020-12-01T11:55:00Z</ojp:StartTime>
-						<ojp:EndTime>2020-12-01T12:36:00Z</ojp:EndTime>
-						<ojp:Transfers>1</ojp:Transfers>
-						<ojp:Distance>5318</ojp:Distance>
-						<ojp:Leg>
-							<ojp:Id>1</ojp:Id>
-							<ojp:ContinuousLeg>
-								<ojp:LegStart>
-									<ojp:GeoPosition>
+					</Places>
+				</TripResponseContext>
+				<TripResult>
+					<Id>ID-847240F3-270A-4821-A566-131E5E949366</Id>
+					<Trip>
+						<Id>ID-847240F3-270A-4821-A566-131E5E949366</Id>
+						<Duration>PT41M</Duration>
+						<StartTime>2020-12-01T11:55:00Z</StartTime>
+						<EndTime>2020-12-01T12:36:00Z</EndTime>
+						<Transfers>1</Transfers>
+						<Distance>5318</Distance>
+						<Leg>
+							<Id>1</Id>
+							<ContinuousLeg>
+								<LegStart>
+									<GeoPosition>
 										<siri:Longitude>8.48399</siri:Longitude>
 										<siri:Latitude>47.38614</siri:Latitude>
-									</ojp:GeoPosition>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Altstetten</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
+									</GeoPosition>
+									<Name>
+										<Text xml:lang="de">Altstetten</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
 									<siri:StopPointRef>8591258</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich, Lindenplatz</ojp:Text>
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:Service>
-									<ojp:IndividualMode>walk</ojp:IndividualMode>
-								</ojp:Service>
-								<ojp:TimeWindowStart>2020-12-01T11:55:00Z</ojp:TimeWindowStart>
-								<ojp:TimeWindowEnd>2020-12-01T12:00:00Z</ojp:TimeWindowEnd>
-								<ojp:Duration>PT5M</ojp:Duration>
-								<ojp:Length>330</ojp:Length>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
-											<ojp:GeoPosition>
+									<Name>
+										<Text xml:lang="de">Zürich, Lindenplatz</Text>
+									</Name>
+								</LegEnd>
+								<Service>
+									<IndividualMode>walk</IndividualMode>
+								</Service>
+								<TimeWindowStart>2020-12-01T11:55:00Z</TimeWindowStart>
+								<TimeWindowEnd>2020-12-01T12:00:00Z</TimeWindowEnd>
+								<Duration>PT5M</Duration>
+								<Length>330</Length>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
+											<GeoPosition>
 												<siri:Longitude>8.48399</siri:Longitude>
 												<siri:Latitude>47.38614</siri:Latitude>
-											</ojp:GeoPosition>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Altstetten</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											</GeoPosition>
+											<Name>
+												<Text xml:lang="de">Altstetten</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591258</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Lindenplatz</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT5M</ojp:Duration>
-										<ojp:Length>330</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:PathGuidance>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+											<Name>
+												<Text xml:lang="de">Zürich, Lindenplatz</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT5M</Duration>
+										<Length>330</Length>
+									</TrackSection>
+								</LegTrack>
+								<PathGuidance>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.48399</siri:Longitude>
 													<siri:Latitude>47.38614</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48340</siri:Longitude>
 													<siri:Latitude>47.38621</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName/>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>origin</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName/>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>origin</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.48340</siri:Longitude>
 													<siri:Latitude>47.38621</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48341</siri:Longitude>
 													<siri:Latitude>47.38622</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48338</siri:Longitude>
 													<siri:Latitude>47.38633</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48327</siri:Longitude>
 													<siri:Latitude>47.38658</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48324</siri:Longitude>
 													<siri:Latitude>47.38661</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Wirtschaftsweg</ojp:RoadName>
-											<ojp:Duration>PT0M40S</ojp:Duration>
-											<ojp:Length>45</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>keep</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Wirtschaftsweg</ojp:RoadName>
-											<ojp:Duration>PT0H3M40S</ojp:Duration>
-											<ojp:Length>245</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M9S</ojp:Duration>
-											<ojp:Length>11</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Bahnsteig</ojp:RoadName>
-											<ojp:Duration>PT0M26S</ojp:Duration>
-											<ojp:Length>29</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Einstieg Straßenbahn</ojp:RoadName>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>enter</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-								</ojp:PathGuidance>
-							</ojp:ContinuousLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>2</ojp:Id>
-							<ojp:TimedLeg>
-								<ojp:LegBoard>
+												</Position>
+											</LinkProjection>
+											<RoadName>Wirtschaftsweg</RoadName>
+											<Duration>PT0M40S</Duration>
+											<Length>45</Length>
+										</TrackSection>
+										<GuidanceAdvice>keep</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Wirtschaftsweg</RoadName>
+											<Duration>PT0H3M40S</Duration>
+											<Length>245</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M9S</Duration>
+											<Length>11</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Bahnsteig</RoadName>
+											<Duration>PT0M26S</Duration>
+											<Length>29</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Einstieg Straßenbahn</RoadName>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>enter</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+								</PathGuidance>
+							</ContinuousLeg>
+						</Leg>
+						<Leg>
+							<Id>2</Id>
+							<TimedLeg>
+								<LegBoard>
 									<siri:StopPointRef>8591258</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Lindenplatz</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:00:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>1</ojp:Order>
-								</ojp:LegBoard>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Lindenplatz</Text>
+									</StopPointName>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:00:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediates>
 									<siri:StopPointRef>8591165</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Grimselstrasse</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:01:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:01:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>2</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Grimselstrasse</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:01:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:01:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591222</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Kappeli</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:03:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:03:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>3</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Kappeli</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:03:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:03:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>3</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591138</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Freihofstrasse</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:04:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:04:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>4</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Freihofstrasse</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:04:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:04:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>4</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591252</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Letzigrund</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:05:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:05:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>5</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Letzigrund</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:05:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:05:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>5</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591038</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Albisriederplatz</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:06:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:06:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>6</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Albisriederplatz</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:06:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:06:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>6</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591448</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Zypressenstrasse</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:08:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:08:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>7</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Zypressenstrasse</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:08:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:08:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>7</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591259</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Lochergut</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:09:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:09:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>8</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Lochergut</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:09:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:09:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>8</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591218</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich,Kalkbreite/Bhf.Wiedikon</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:10:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:10:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>9</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich,Kalkbreite/Bhf.Wiedikon</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:10:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:10:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>9</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591079</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Bezirksgebäude</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:11:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:11:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>10</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Bezirksgebäude</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:11:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:11:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>10</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591381</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Stauffacher</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:13:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:14:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>11</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Stauffacher</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:13:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:14:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>11</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591369</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Sihlstrasse</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:16:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:16:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>12</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Sihlstrasse</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:16:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:16:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>12</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591299</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Paradeplatz</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:18:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:18:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>13</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Paradeplatz</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:18:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:18:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>13</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591093</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Kantonalbank</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:19:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:19:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>14</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Kantonalbank</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:19:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:19:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>14</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8591105</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Bürkliplatz</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:21:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:21:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>15</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegAlight>
+									<StopPointName>
+										<Text>Zürich, Bürkliplatz</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:21:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:21:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>15</Order>
+								</LegIntermediates>
+								<LegAlight>
 									<siri:StopPointRef>8576193</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Bellevue</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:22:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:Order>16</ojp:Order>
-								</ojp:LegAlight>
-								<ojp:Service>
+									<StopPointName>
+										<Text>Zürich, Bellevue</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:22:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>16</Order>
+								</LegAlight>
+								<Service>
 									<!--XXXERRORXXX-->
-									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-									<ojp:JourneyRef>ojp:91002::H:j20:660</ojp:JourneyRef>
-									<siri:LineRef>ojp:91002:</siri:LineRef>
-									<siri:DirectionRef>H</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>tram</ojp:PtMode>
-										<siri:TramSubmode>cityTram</siri:TramSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Tram</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">T</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>2</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Niederflureinstieg</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__NF</ojp:Code>
-									</ojp:Attribute>
-									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-									<ojp:DestinationText>
-										<ojp:Text xml:lang="de">Zürich Tiefenbrunnen, Bahnhof</ojp:Text>
-									</ojp:DestinationText>
-								</ojp:Service>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									<OperatingDayRef>Unknown</OperatingDayRef>
+									<JourneyRef>91002::H:j20:660</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>91002:</siri:LineRef>
+										<siri:DirectionRef>H</siri:DirectionRef>
+										<Mode>
+											<PtMode>tram</PtMode>
+											<siri:TramSubmode>cityTram</siri:TramSubmode>
+											<Name>
+												<Text xml:lang="de">Tram</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">T</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>2</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>3849</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+											</Text>
+											<Code>A__OM</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Niederflureinstieg</Text>
+											</Text>
+											<Code>A__NF</Code>
+										</Attribute>
+									</ServiceSection>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Zürich Tiefenbrunnen, Bahnhof</Text>
+									</DestinationText>
+								</Service>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8591258</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Lindenplatz</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											<Name>
+												<Text xml:lang="de">Zürich, Lindenplatz</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8576193</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Bellevue</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT22M</ojp:Duration>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:Extension>
-									<ojp:TransportTypeName>
-										<ojp:Text xml:lang="de">Tram</ojp:Text>
-									</ojp:TransportTypeName>
-									<ojp:PublishedJourneyNumber>
-										<ojp:Text xml:lang="de">5488</ojp:Text>
-									</ojp:PublishedJourneyNumber>
-								</ojp:Extension>
-							</ojp:TimedLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>3</ojp:Id>
-							<ojp:TransferLeg>
-								<ojp:TransferMode>walk</ojp:TransferMode>
-								<ojp:LegStart>
+											<Name>
+												<Text xml:lang="de">Zürich, Bellevue</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT22M</Duration>
+									</TrackSection>
+								</LegTrack>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">Tram</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">5488</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<Id>3</Id>
+							<TransferLeg>
+								<TransferMode>walk</TransferMode>
+								<LegStart>
 									<siri:StopPointRef>8576193</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich, Bellevue</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
+									<Name>
+										<Text xml:lang="de">Zürich, Bellevue</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
 									<siri:StopPointRef>8576193</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich, Bellevue</ojp:Text>
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:TimeWindowStart>2020-12-01T12:22:00Z</ojp:TimeWindowStart>
-								<ojp:TimeWindowEnd>2020-12-01T12:24:00Z</ojp:TimeWindowEnd>
-								<ojp:Duration>PT2M</ojp:Duration>
-								<ojp:WalkDuration>PT2M</ojp:WalkDuration>
-								<ojp:BufferTime>PT0M</ojp:BufferTime>
-							</ojp:TransferLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>4</ojp:Id>
-							<ojp:TimedLeg>
-								<ojp:LegBoard>
+									<Name>
+										<Text xml:lang="de">Zürich, Bellevue</Text>
+									</Name>
+								</LegEnd>
+								<TimeWindowStart>2020-12-01T12:22:00Z</TimeWindowStart>
+								<TimeWindowEnd>2020-12-01T12:24:00Z</TimeWindowEnd>
+								<Duration>PT2M</Duration>
+								<WalkDuration>PT2M</WalkDuration>
+								<BufferTime>PT0M</BufferTime>
+							</TransferLeg>
+						</Leg>
+						<Leg>
+							<Id>4</Id>
+							<TimedLeg>
+								<LegBoard>
 									<siri:StopPointRef>8576193</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Bellevue</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:24:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>1</ojp:Order>
-								</ojp:LegBoard>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich, Bellevue</Text>
+									</StopPointName>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:24:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediates>
 									<siri:StopPointRef>8503059</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Stadelhofen FB</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:26:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:26:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>2</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich Stadelhofen FB</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:26:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:26:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8530813</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Kreuzplatz</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:28:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:28:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>3</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegAlight>
+									<StopPointName>
+										<Text>Zürich Kreuzplatz</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>3</Order>
+								</LegIntermediates>
+								<LegAlight>
 									<siri:StopPointRef>8591364</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Signaustrasse</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:29:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:Order>4</ojp:Order>
-								</ojp:LegAlight>
-								<ojp:Service>
-									<!--XXXERRORXXX-->
-									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-									<ojp:JourneyRef>ojp:91011:A:H:j20:255</ojp:JourneyRef>
-									<siri:LineRef>ojp:91011:A</siri:LineRef>
-									<siri:DirectionRef>H</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>tram</ojp:PtMode>
-										<siri:TramSubmode>cityTram</siri:TramSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Tram</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">T</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>11</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Niederflureinstieg</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__NF</ojp:Code>
-									</ojp:Attribute>
-									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-									<ojp:DestinationText>
-										<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
-									</ojp:DestinationText>
-								</ojp:Service>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									<StopPointName>
+										<Text>Zürich, Signaustrasse</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:29:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>4</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>2023-03-03</OperatingDayRef>
+									<JourneyRef>91011:A:H:j20:255</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>91011:A</siri:LineRef>
+										<siri:DirectionRef>H</siri:DirectionRef>
+										<Mode>
+											<PtMode>tram</PtMode>
+											<siri:TramSubmode>cityTram</siri:TramSubmode>
+											<Name>
+												<Text xml:lang="de">Tram</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">T</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>11</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>3849</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+											</Text>
+											<Code>A__OM</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Niederflureinstieg</Text>
+											</Text>
+											<Code>A__NF</Code>
+										</Attribute>
+									</ServiceSection>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Zürich, Rehalp</Text>
+									</DestinationText>
+								</Service>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8576193</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Bellevue</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											<Name>
+												<Text xml:lang="de">Zürich, Bellevue</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591364</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Signaustrasse</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT5M</ojp:Duration>
-										<ojp:Length>4550</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:Extension>
-									<ojp:TransportTypeName>
-										<ojp:Text xml:lang="de">Tram</ojp:Text>
-									</ojp:TransportTypeName>
-									<ojp:PublishedJourneyNumber>
-										<ojp:Text xml:lang="de">3953</ojp:Text>
-									</ojp:PublishedJourneyNumber>
-								</ojp:Extension>
-							</ojp:TimedLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>5</ojp:Id>
-							<ojp:ContinuousLeg>
-								<ojp:LegStart>
+											<Name>
+												<Text xml:lang="de">Zürich, Signaustrasse</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT5M</Duration>
+										<Length>4550</Length>
+									</TrackSection>
+								</LegTrack>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">Tram</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">3953</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<Id>5</Id>
+							<ContinuousLeg>
+								<LegStart>
 									<siri:StopPointRef>8591364</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich, Signaustrasse</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
-									<ojp:GeoPosition>
+									<Name>
+										<Text xml:lang="de">Zürich, Signaustrasse</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<GeoPosition>
 										<siri:Longitude>8.56005</siri:Longitude>
 										<siri:Latitude>47.36462</siri:Latitude>
-									</ojp:GeoPosition>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Hirslanden</ojp:Text>
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:Service>
-									<ojp:IndividualMode>walk</ojp:IndividualMode>
-								</ojp:Service>
-								<ojp:TimeWindowStart>2020-12-01T12:29:00Z</ojp:TimeWindowStart>
-								<ojp:TimeWindowEnd>2020-12-01T12:36:00Z</ojp:TimeWindowEnd>
-								<ojp:Duration>PT7M</ojp:Duration>
-								<ojp:Length>438</ojp:Length>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									</GeoPosition>
+									<Name>
+										<Text xml:lang="de">Hirslanden</Text>
+									</Name>
+								</LegEnd>
+								<Service>
+									<IndividualMode>walk</IndividualMode>
+								</Service>
+								<TimeWindowStart>2020-12-01T12:29:00Z</TimeWindowStart>
+								<TimeWindowEnd>2020-12-01T12:36:00Z</TimeWindowEnd>
+								<Duration>PT7M</Duration>
+								<Length>438</Length>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8591364</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Signaustrasse</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
-											<ojp:GeoPosition>
+											<Name>
+												<Text xml:lang="de">Zürich, Signaustrasse</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
+											<GeoPosition>
 												<siri:Longitude>8.56005</siri:Longitude>
 												<siri:Latitude>47.36462</siri:Latitude>
-											</ojp:GeoPosition>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Hirslanden</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT7M</ojp:Duration>
-										<ojp:Length>438</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:PathGuidance>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
+											</GeoPosition>
+											<Name>
+												<Text xml:lang="de">Hirslanden</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT7M</Duration>
+										<Length>438</Length>
+									</TrackSection>
+								</LegTrack>
+								<PathGuidance>
+									<PathGuidanceSection>
+										<TrackSection>
 											<!--XXXERRORXXX-->
-											<ojp:LinkProjection>
-												<ojp:Position>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.55763</siri:Longitude>
 													<siri:Latitude>47.36323</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.55763</siri:Longitude>
 													<siri:Latitude>47.36323</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Ausstieg Straßenbahn rechts</ojp:RoadName>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>leave</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName>Ausstieg Straßenbahn rechts</RoadName>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>leave</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.55763</siri:Longitude>
 													<siri:Latitude>47.36323</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.55749</siri:Longitude>
 													<siri:Latitude>47.36334</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Signaustrasse</ojp:RoadName>
-											<ojp:Duration>PT0M15S</ojp:Duration>
-											<ojp:Length>16</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>keep</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName>Signaustrasse</RoadName>
+											<Duration>PT0M15S</Duration>
+											<Length>16</Length>
+										</TrackSection>
+										<GuidanceAdvice>keep</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.55749</siri:Longitude>
 													<siri:Latitude>47.36334</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.55751</siri:Longitude>
 													<siri:Latitude>47.36336</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Bahnsteig</ojp:RoadName>
-											<ojp:Duration>PT0M2S</ojp:Duration>
-											<ojp:Length>2</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Forchstrasse</ojp:RoadName>
-											<ojp:Duration>PT0H1M38S</ojp:Duration>
-											<ojp:Length>109</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M15S</ojp:Duration>
-											<ojp:Length>17</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Eidmattstrasse</ojp:RoadName>
-											<ojp:Duration>PT0H3M33S</ojp:Duration>
-											<ojp:Length>238</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>B�cklinstrasse</ojp:RoadName>
-											<ojp:Duration>PT0M36S</ojp:Duration>
-											<ojp:Length>40</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>B�cklinstrasse</ojp:RoadName>
-											<ojp:Duration>PT0M11S</ojp:Duration>
-											<ojp:Length>13</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>continue</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-								</ojp:PathGuidance>
-							</ojp:ContinuousLeg>
-						</ojp:Leg>
-					</ojp:Trip>
-				</ojp:TripResult>
-				<ojp:TripResult>
-					<ojp:Id>ID-CB3278AE-9854-40E7-8FB5-B6132DE80D84</ojp:Id>
-					<ojp:Trip>
-						<ojp:Id>ID-CB3278AE-9854-40E7-8FB5-B6132DE80D84</ojp:Id>
-						<ojp:Duration>PT39M</ojp:Duration>
-						<ojp:StartTime>2020-12-01T11:57:00Z</ojp:StartTime>
-						<ojp:EndTime>2020-12-01T12:36:00Z</ojp:EndTime>
-						<ojp:Transfers>2</ojp:Transfers>
-						<ojp:Distance>12026</ojp:Distance>
-						<ojp:Leg>
-							<ojp:Id>1</ojp:Id>
-							<ojp:ContinuousLeg>
-								<ojp:LegStart>
-									<ojp:GeoPosition>
+												</Position>
+											</LinkProjection>
+											<RoadName>Bahnsteig</RoadName>
+											<Duration>PT0M2S</Duration>
+											<Length>2</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Forchstrasse</RoadName>
+											<Duration>PT0H1M38S</Duration>
+											<Length>109</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M15S</Duration>
+											<Length>17</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Eidmattstrasse</RoadName>
+											<Duration>PT0H3M33S</Duration>
+											<Length>238</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>B�cklinstrasse</RoadName>
+											<Duration>PT0M36S</Duration>
+											<Length>40</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>B�cklinstrasse</RoadName>
+											<Duration>PT0M11S</Duration>
+											<Length>13</Length>
+										</TrackSection>
+										<GuidanceAdvice>continue</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+								</PathGuidance>
+							</ContinuousLeg>
+						</Leg>
+					</Trip>
+				</TripResult>
+				<TripResult>
+					<Id>ID-CB3278AE-9854-40E7-8FB5-B6132DE80D84</Id>
+					<Trip>
+						<Id>ID-CB3278AE-9854-40E7-8FB5-B6132DE80D84</Id>
+						<Duration>PT39M</Duration>
+						<StartTime>2020-12-01T11:57:00Z</StartTime>
+						<EndTime>2020-12-01T12:36:00Z</EndTime>
+						<Transfers>2</Transfers>
+						<Distance>12026</Distance>
+						<Leg>
+							<Id>1</Id>
+							<ContinuousLeg>
+								<LegStart>
+									<GeoPosition>
 										<siri:Longitude>8.48399</siri:Longitude>
 										<siri:Latitude>47.38614</siri:Latitude>
-									</ojp:GeoPosition>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Altstetten</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
+									</GeoPosition>
+									<Name>
+										<Text xml:lang="de">Altstetten</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
 									<siri:StopPointRef>8591258</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich, Lindenplatz</ojp:Text>
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:Service>
-									<ojp:IndividualMode>walk</ojp:IndividualMode>
-								</ojp:Service>
-								<ojp:TimeWindowStart>2020-12-01T11:57:00Z</ojp:TimeWindowStart>
-								<ojp:TimeWindowEnd>2020-12-01T12:02:00Z</ojp:TimeWindowEnd>
-								<ojp:Duration>PT5M</ojp:Duration>
-								<ojp:Length>330</ojp:Length>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
-											<ojp:GeoPosition>
+									<Name>
+										<Text xml:lang="de">Zürich, Lindenplatz</Text>
+									</Name>
+								</LegEnd>
+								<Service>
+									<IndividualMode>walk</IndividualMode>
+								</Service>
+								<TimeWindowStart>2020-12-01T11:57:00Z</TimeWindowStart>
+								<TimeWindowEnd>2020-12-01T12:02:00Z</TimeWindowEnd>
+								<Duration>PT5M</Duration>
+								<Length>330</Length>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
+											<GeoPosition>
 												<siri:Longitude>8.48399</siri:Longitude>
 												<siri:Latitude>47.38614</siri:Latitude>
-											</ojp:GeoPosition>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Altstetten</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											</GeoPosition>
+											<Name>
+												<Text xml:lang="de">Altstetten</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591258</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Lindenplatz</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT5M</ojp:Duration>
-										<ojp:Length>330</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:PathGuidance>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+											<Name>
+												<Text xml:lang="de">Zürich, Lindenplatz</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT5M</Duration>
+										<Length>330</Length>
+									</TrackSection>
+								</LegTrack>
+								<PathGuidance>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.48399</siri:Longitude>
 													<siri:Latitude>47.38614</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48340</siri:Longitude>
 													<siri:Latitude>47.38621</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName/>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>origin</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName/>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>origin</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.48340</siri:Longitude>
 													<siri:Latitude>47.38621</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48341</siri:Longitude>
 													<siri:Latitude>47.38622</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48338</siri:Longitude>
 													<siri:Latitude>47.38633</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48327</siri:Longitude>
 													<siri:Latitude>47.38658</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48324</siri:Longitude>
 													<siri:Latitude>47.38661</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Wirtschaftsweg</ojp:RoadName>
-											<ojp:Duration>PT0M40S</ojp:Duration>
-											<ojp:Length>45</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>keep</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Wirtschaftsweg</ojp:RoadName>
-											<ojp:Duration>PT0H3M40S</ojp:Duration>
-											<ojp:Length>245</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M9S</ojp:Duration>
-											<ojp:Length>11</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Bahnsteig</ojp:RoadName>
-											<ojp:Duration>PT0M26S</ojp:Duration>
-											<ojp:Length>29</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Einstieg Bus</ojp:RoadName>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>enter</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-								</ojp:PathGuidance>
-							</ojp:ContinuousLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>2</ojp:Id>
-							<ojp:TimedLeg>
-								<ojp:LegBoard>
+												</Position>
+											</LinkProjection>
+											<RoadName>Wirtschaftsweg</RoadName>
+											<Duration>PT0M40S</Duration>
+											<Length>45</Length>
+										</TrackSection>
+										<GuidanceAdvice>keep</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Wirtschaftsweg</RoadName>
+											<Duration>PT0H3M40S</Duration>
+											<Length>245</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M9S</Duration>
+											<Length>11</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Bahnsteig</RoadName>
+											<Duration>PT0M26S</Duration>
+											<Length>29</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Einstieg Bus</RoadName>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>enter</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+								</PathGuidance>
+							</ContinuousLeg>
+						</Leg>
+						<Leg>
+							<Id>2</Id>
+							<TimedLeg>
+								<LegBoard>
 									<siri:StopPointRef>8591258</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Lindenplatz</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:02:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>1</ojp:Order>
-								</ojp:LegBoard>
-								<ojp:LegAlight>
+									<StopPointName>
+										<Text>Zürich, Lindenplatz</Text>
+									</StopPointName>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:02:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegAlight>
 									<siri:StopPointRef>8591056</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Altstetten, Bahnhof</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:05:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:Order>2</ojp:Order>
-								</ojp:LegAlight>
-								<ojp:Service>
+									<StopPointName>
+										<Text>Zürich Altstetten, Bahnhof</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:05:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>2</Order>
+								</LegAlight>
+								<Service>
 									<!--XXXERRORXXX-->
-									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-									<ojp:JourneyRef>ojp:92080::R:j20:1384</ojp:JourneyRef>
-									<siri:LineRef>ojp:92080:</siri:LineRef>
-									<siri:DirectionRef>R</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>bus</ojp:PtMode>
-										<siri:BusSubmode>localBusService</siri:BusSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Bus</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">B</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>80</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:849</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Niederflureinstieg</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__NF</ojp:Code>
-									</ojp:Attribute>
-									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-									<ojp:DestinationText>
-										<ojp:Text xml:lang="de">Zürich Oerlikon, Bahnhof Nord</ojp:Text>
-									</ojp:DestinationText>
-								</ojp:Service>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									<OperatingDayRef>Unknown</OperatingDayRef>
+									<JourneyRef>92080::R:j20:1384</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>92080:</siri:LineRef>
+										<siri:DirectionRef>R</siri:DirectionRef>
+										<Mode>
+											<PtMode>bus</PtMode>
+											<siri:BusSubmode>localBusService</siri:BusSubmode>
+											<Name>
+												<Text xml:lang="de">Bus</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">B</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>80</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>849</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+											</Text>
+											<Code>A__OM</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Niederflureinstieg</Text>
+											</Text>
+											<Code>A__NF</Code>
+										</Attribute>
+									</ServiceSection>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Zürich Oerlikon, Bahnhof Nord</Text>
+									</DestinationText>
+								</Service>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8591258</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Lindenplatz</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											<Name>
+												<Text xml:lang="de">Zürich, Lindenplatz</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591056</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich Altstetten, Bahnhof</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT3M</ojp:Duration>
-										<ojp:Length>669</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:Extension>
-									<ojp:TransportTypeName>
-										<ojp:Text xml:lang="de">Bus</ojp:Text>
-									</ojp:TransportTypeName>
-									<ojp:PublishedJourneyNumber>
-										<ojp:Text xml:lang="de">8411</ojp:Text>
-									</ojp:PublishedJourneyNumber>
-								</ojp:Extension>
-							</ojp:TimedLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>3</ojp:Id>
-							<ojp:TransferLeg>
-								<ojp:TransferMode>walk</ojp:TransferMode>
-								<ojp:LegStart>
+											<Name>
+												<Text xml:lang="de">Zürich Altstetten, Bahnhof</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT3M</Duration>
+										<Length>669</Length>
+									</TrackSection>
+								</LegTrack>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">Bus</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">8411</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<Id>3</Id>
+							<TransferLeg>
+								<TransferMode>walk</TransferMode>
+								<LegStart>
 									<siri:StopPointRef>8591056</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich Altstetten, Bahnhof</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
+									<Name>
+										<Text xml:lang="de">Zürich Altstetten, Bahnhof</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
 									<siri:StopPointRef>8503001</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich Altstetten</ojp:Text>
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:TimeWindowStart>2020-12-01T12:05:00Z</ojp:TimeWindowStart>
-								<ojp:TimeWindowEnd>2020-12-01T12:09:00Z</ojp:TimeWindowEnd>
-								<ojp:Duration>PT4M</ojp:Duration>
-								<ojp:WalkDuration>PT4M</ojp:WalkDuration>
-								<ojp:BufferTime>PT0M</ojp:BufferTime>
-								<ojp:PathGuidance>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+									<Name>
+										<Text xml:lang="de">Zürich Altstetten</Text>
+									</Name>
+								</LegEnd>
+								<TimeWindowStart>2020-12-01T12:05:00Z</TimeWindowStart>
+								<TimeWindowEnd>2020-12-01T12:09:00Z</TimeWindowEnd>
+								<Duration>PT4M</Duration>
+								<WalkDuration>PT4M</WalkDuration>
+								<BufferTime>PT0M</BufferTime>
+								<PathGuidance>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.48835</siri:Longitude>
 													<siri:Latitude>47.39107</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48835</siri:Longitude>
 													<siri:Latitude>47.39106</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Ausstieg Bus rechts</ojp:RoadName>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>leave</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName>Ausstieg Bus rechts</RoadName>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>leave</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.48835</siri:Longitude>
 													<siri:Latitude>47.39106</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.48867</siri:Longitude>
 													<siri:Latitude>47.39099</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M22S</ojp:Duration>
-											<ojp:Length>25</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>keep</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M42S</ojp:Duration>
-											<ojp:Length>47</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M11S</ojp:Duration>
-											<ojp:Length>13</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>half_right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Einstieg Zug</ojp:RoadName>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>enter</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-								</ojp:PathGuidance>
-							</ojp:TransferLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>4</ojp:Id>
-							<ojp:TimedLeg>
-								<ojp:LegBoard>
+												</Position>
+											</LinkProjection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M22S</Duration>
+											<Length>25</Length>
+										</TrackSection>
+										<GuidanceAdvice>keep</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M42S</Duration>
+											<Length>47</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M11S</Duration>
+											<Length>13</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>half_right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Einstieg Zug</RoadName>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>enter</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+								</PathGuidance>
+							</TransferLeg>
+						</Leg>
+						<Leg>
+							<Id>4</Id>
+							<TimedLeg>
+								<LegBoard>
 									<siri:StopPointRef>8503001</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Altstetten</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">4</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:09:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>1</ojp:Order>
-								</ojp:LegBoard>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich Altstetten</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">4</Text>
+									</PlannedQuay>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:09:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediates>
 									<siri:StopPointRef>8503020</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Hardbrücke</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">1</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:11:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:11:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>2</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich Hardbrücke</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">1</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:11:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:11:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8503000</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich HB</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">43/44</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:15:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:16:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>3</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegAlight>
+									<StopPointName>
+										<Text>Zürich HB</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">43/44</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:15:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:16:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>3</Order>
+								</LegIntermediates>
+								<LegAlight>
 									<siri:StopPointRef>8503003</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Stadelhofen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">3</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:19:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:Order>4</ojp:Order>
-								</ojp:LegAlight>
-								<ojp:Service>
+									<StopPointName>
+										<Text>Zürich Stadelhofen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">3</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:19:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>4</Order>
+								</LegAlight>
+								<Service>
 									<!--XXXERRORXXX-->
-									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-									<ojp:JourneyRef>ojp:91S12:Z:H:j20:77</ojp:JourneyRef>
-									<siri:LineRef>ojp:91S12:Z</siri:LineRef>
-									<siri:DirectionRef>H</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>rail</ojp:PtMode>
-										<siri:RailSubmode>local</siri:RailSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Zug</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">S</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>S12</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Rechts</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S12ZH_InfoCall77_106219_1</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Rechts</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S12ZH_InfoCall77_106220_1</ojp:Code>
-									</ojp:Attribute>
-									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-									<ojp:DestinationText>
-										<ojp:Text xml:lang="de">Schaffhausen</ojp:Text>
-									</ojp:DestinationText>
-								</ojp:Service>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									<OperatingDayRef>Unknown</OperatingDayRef>
+									<JourneyRef>91S12:Z:H:j20:77</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>91S12:Z</siri:LineRef>
+										<siri:DirectionRef>H</siri:DirectionRef>
+										<Mode>
+											<PtMode>rail</PtMode>
+											<siri:RailSubmode>local</siri:RailSubmode>
+											<Name>
+												<Text xml:lang="de">Zug</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">S</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>S12</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>11</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+											</Text>
+											<Code>A__OM</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Rechts</Text>
+											</Text>
+											<Code>ojp91S12ZH_InfoCall77_106219_1</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Rechts</Text>
+											</Text>
+											<Code>ojp91S12ZH_InfoCall77_106220_1</Code>
+										</Attribute>
+									</ServiceSection>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Schaffhausen</Text>
+									</DestinationText>
+								</Service>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8503001</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich Altstetten</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											<Name>
+												<Text xml:lang="de">Zürich Altstetten</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8503003</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich Stadelhofen</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT10M</ojp:Duration>
-										<ojp:Length>6381</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:Extension>
-									<ojp:TransportTypeName>
-										<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
-									</ojp:TransportTypeName>
-									<ojp:PublishedJourneyNumber>
-										<ojp:Text xml:lang="de">19249</ojp:Text>
-									</ojp:PublishedJourneyNumber>
-								</ojp:Extension>
-							</ojp:TimedLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>5</ojp:Id>
-							<ojp:TransferLeg>
-								<ojp:TransferMode>walk</ojp:TransferMode>
-								<ojp:LegStart>
+											<Name>
+												<Text xml:lang="de">Zürich Stadelhofen</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT10M</Duration>
+										<Length>6381</Length>
+									</TrackSection>
+								</LegTrack>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">S-Bahn</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">19249</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<Id>5</Id>
+							<TransferLeg>
+								<TransferMode>walk</TransferMode>
+								<LegStart>
 									<siri:StopPointRef>8503003</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich Stadelhofen</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
+									<Name>
+										<Text xml:lang="de">Zürich Stadelhofen</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
 									<siri:StopPointRef>8503059</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich Stadelhofen FB</ojp:Text>
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:TimeWindowStart>2020-12-01T12:19:00Z</ojp:TimeWindowStart>
-								<ojp:TimeWindowEnd>2020-12-01T12:26:00Z</ojp:TimeWindowEnd>
-								<ojp:Duration>PT7M</ojp:Duration>
-								<ojp:WalkDuration>PT4M</ojp:WalkDuration>
-								<ojp:BufferTime>PT3M</ojp:BufferTime>
-								<ojp:PathGuidance>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+									<Name>
+										<Text xml:lang="de">Zürich Stadelhofen FB</Text>
+									</Name>
+								</LegEnd>
+								<TimeWindowStart>2020-12-01T12:19:00Z</TimeWindowStart>
+								<TimeWindowEnd>2020-12-01T12:26:00Z</TimeWindowEnd>
+								<Duration>PT7M</Duration>
+								<WalkDuration>PT4M</WalkDuration>
+								<BufferTime>PT3M</BufferTime>
+								<PathGuidance>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.54848</siri:Longitude>
 													<siri:Latitude>47.36661</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.54848</siri:Longitude>
 													<siri:Latitude>47.36661</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Ausstieg Zug rechts</ojp:RoadName>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>leave</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName>Ausstieg Zug rechts</RoadName>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>leave</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.54848</siri:Longitude>
 													<siri:Latitude>47.36661</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.54851</siri:Longitude>
 													<siri:Latitude>47.36663</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M2S</ojp:Duration>
-											<ojp:Length>3</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>keep</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M2S</Duration>
+											<Length>3</Length>
+										</TrackSection>
+										<GuidanceAdvice>keep</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.54851</siri:Longitude>
 													<siri:Latitude>47.36663</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.54845</siri:Longitude>
 													<siri:Latitude>47.36668</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M6S</ojp:Duration>
-											<ojp:Length>7</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M6S</Duration>
+											<Length>7</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.54845</siri:Longitude>
 													<siri:Latitude>47.36668</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.54832</siri:Longitude>
 													<siri:Latitude>47.36678</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Außentreppe</ojp:RoadName>
-											<ojp:Duration>PT0M13S</ojp:Duration>
-											<ojp:Length>14</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>continue</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M40S</ojp:Duration>
-											<ojp:Length>45</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M12S</ojp:Duration>
-											<ojp:Length>13</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M1S</ojp:Duration>
-											<ojp:Length>1</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>continue</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Einstieg Straßenbahn</ojp:RoadName>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>enter</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-								</ojp:PathGuidance>
-							</ojp:TransferLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>6</ojp:Id>
-							<ojp:TimedLeg>
-								<ojp:LegBoard>
+												</Position>
+											</LinkProjection>
+											<RoadName>Außentreppe</RoadName>
+											<Duration>PT0M13S</Duration>
+											<Length>14</Length>
+										</TrackSection>
+										<GuidanceAdvice>continue</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M40S</Duration>
+											<Length>45</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M12S</Duration>
+											<Length>13</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M1S</Duration>
+											<Length>1</Length>
+										</TrackSection>
+										<GuidanceAdvice>continue</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Einstieg Straßenbahn</RoadName>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>enter</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+								</PathGuidance>
+							</TransferLeg>
+						</Leg>
+						<Leg>
+							<Id>6</Id>
+							<TimedLeg>
+								<LegBoard>
 									<siri:StopPointRef>8503059</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Stadelhofen FB</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:26:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>1</ojp:Order>
-								</ojp:LegBoard>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich Stadelhofen FB</Text>
+									</StopPointName>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:26:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediates>
 									<siri:StopPointRef>8530813</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Kreuzplatz</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:28:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:28:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>2</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegAlight>
+									<StopPointName>
+										<Text>Zürich Kreuzplatz</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediates>
+								<LegAlight>
 									<siri:StopPointRef>8591364</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich, Signaustrasse</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:29:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:Order>3</ojp:Order>
-								</ojp:LegAlight>
-								<ojp:Service>
-									<!--XXXERRORXXX-->
-									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-									<ojp:JourneyRef>ojp:91011:A:H:j20:255</ojp:JourneyRef>
-									<siri:LineRef>ojp:91011:A</siri:LineRef>
-									<siri:DirectionRef>H</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>tram</ojp:PtMode>
-										<siri:TramSubmode>cityTram</siri:TramSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Tram</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">T</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>11</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Niederflureinstieg</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__NF</ojp:Code>
-									</ojp:Attribute>
-									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-									<ojp:DestinationText>
-										<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
-									</ojp:DestinationText>
-								</ojp:Service>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									<StopPointName>
+										<Text>Zürich, Signaustrasse</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:29:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>3</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>2023-03-03</OperatingDayRef>
+									<JourneyRef>91011:A:H:j20:255</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>91011:A</siri:LineRef>
+										<siri:DirectionRef>H</siri:DirectionRef>
+										<Mode>
+											<PtMode>tram</PtMode>
+											<siri:TramSubmode>cityTram</siri:TramSubmode>
+											<Name>
+												<Text xml:lang="de">Tram</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">T</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>11</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>3849</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+											</Text>
+											<Code>A__OM</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Niederflureinstieg</Text>
+											</Text>
+											<Code>A__NF</Code>
+										</Attribute>
+									</ServiceSection>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Zürich, Rehalp</Text>
+									</DestinationText>
+								</Service>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8503059</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich Stadelhofen FB</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											<Name>
+												<Text xml:lang="de">Zürich Stadelhofen FB</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8591364</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Signaustrasse</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT3M</ojp:Duration>
-										<ojp:Length>4208</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:Extension>
-									<ojp:TransportTypeName>
-										<ojp:Text xml:lang="de">Tram</ojp:Text>
-									</ojp:TransportTypeName>
-									<ojp:PublishedJourneyNumber>
-										<ojp:Text xml:lang="de">3953</ojp:Text>
-									</ojp:PublishedJourneyNumber>
-								</ojp:Extension>
-							</ojp:TimedLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>7</ojp:Id>
-							<ojp:ContinuousLeg>
-								<ojp:LegStart>
+											<Name>
+												<Text xml:lang="de">Zürich, Signaustrasse</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT3M</Duration>
+										<Length>4208</Length>
+									</TrackSection>
+								</LegTrack>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">Tram</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">3953</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<Id>7</Id>
+							<ContinuousLeg>
+								<LegStart>
 									<siri:StopPointRef>8591364</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Zürich, Signaustrasse</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
-									<ojp:GeoPosition>
+									<Name>
+										<Text xml:lang="de">Zürich, Signaustrasse</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<GeoPosition>
 										<siri:Longitude>8.56005</siri:Longitude>
 										<siri:Latitude>47.36462</siri:Latitude>
-									</ojp:GeoPosition>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Hirslanden</ojp:Text>
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:Service>
-									<ojp:IndividualMode>walk</ojp:IndividualMode>
-								</ojp:Service>
-								<ojp:TimeWindowStart>2020-12-01T12:29:00Z</ojp:TimeWindowStart>
-								<ojp:TimeWindowEnd>2020-12-01T12:36:00Z</ojp:TimeWindowEnd>
-								<ojp:Duration>PT7M</ojp:Duration>
-								<ojp:Length>438</ojp:Length>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									</GeoPosition>
+									<Name>
+										<Text xml:lang="de">Hirslanden</Text>
+									</Name>
+								</LegEnd>
+								<Service>
+									<IndividualMode>walk</IndividualMode>
+								</Service>
+								<TimeWindowStart>2020-12-01T12:29:00Z</TimeWindowStart>
+								<TimeWindowEnd>2020-12-01T12:36:00Z</TimeWindowEnd>
+								<Duration>PT7M</Duration>
+								<Length>438</Length>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8591364</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich, Signaustrasse</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
-											<ojp:GeoPosition>
+											<Name>
+												<Text xml:lang="de">Zürich, Signaustrasse</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
+											<GeoPosition>
 												<siri:Longitude>8.56005</siri:Longitude>
 												<siri:Latitude>47.36462</siri:Latitude>
-											</ojp:GeoPosition>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Hirslanden</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT7M</ojp:Duration>
-										<ojp:Length>438</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:PathGuidance>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
+											</GeoPosition>
+											<Name>
+												<Text xml:lang="de">Hirslanden</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT7M</Duration>
+										<Length>438</Length>
+									</TrackSection>
+								</LegTrack>
+								<PathGuidance>
+									<PathGuidanceSection>
+										<TrackSection>
 											<!--XXXERRORXXX-->
-											<ojp:LinkProjection>
-												<ojp:Position>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.55763</siri:Longitude>
 													<siri:Latitude>47.36323</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.55763</siri:Longitude>
 													<siri:Latitude>47.36323</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Ausstieg Straßenbahn rechts</ojp:RoadName>
-											<ojp:Duration>PT0M0S</ojp:Duration>
-											<ojp:Length>0</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>leave</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName>Ausstieg Straßenbahn rechts</RoadName>
+											<Duration>PT0M0S</Duration>
+											<Length>0</Length>
+										</TrackSection>
+										<GuidanceAdvice>leave</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.55763</siri:Longitude>
 													<siri:Latitude>47.36323</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.55749</siri:Longitude>
 													<siri:Latitude>47.36334</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Signaustrasse</ojp:RoadName>
-											<ojp:Duration>PT0M15S</ojp:Duration>
-											<ojp:Length>16</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>keep</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:LinkProjection>
-												<ojp:Position>
+												</Position>
+											</LinkProjection>
+											<RoadName>Signaustrasse</RoadName>
+											<Duration>PT0M15S</Duration>
+											<Length>16</Length>
+										</TrackSection>
+										<GuidanceAdvice>keep</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<LinkProjection>
+												<Position>
 													<siri:Longitude>8.55749</siri:Longitude>
 													<siri:Latitude>47.36334</siri:Latitude>
-												</ojp:Position>
-												<ojp:Position>
+												</Position>
+												<Position>
 													<siri:Longitude>8.55751</siri:Longitude>
 													<siri:Latitude>47.36336</siri:Latitude>
-												</ojp:Position>
-											</ojp:LinkProjection>
-											<ojp:RoadName>Bahnsteig</ojp:RoadName>
-											<ojp:Duration>PT0M2S</ojp:Duration>
-											<ojp:Length>2</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Forchstrasse</ojp:RoadName>
-											<ojp:Duration>PT0H1M38S</ojp:Duration>
-											<ojp:Length>109</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>left</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Fußweg</ojp:RoadName>
-											<ojp:Duration>PT0M15S</ojp:Duration>
-											<ojp:Length>17</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>Eidmattstrasse</ojp:RoadName>
-											<ojp:Duration>PT0H3M33S</ojp:Duration>
-											<ojp:Length>238</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>B�cklinstrasse</ojp:RoadName>
-											<ojp:Duration>PT0M36S</ojp:Duration>
-											<ojp:Length>40</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>turn</ojp:GuidanceAdvice>
-										<ojp:TurnAction>right</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-									<ojp:PathGuidanceSection>
-										<ojp:TrackSection>
-											<ojp:RoadName>B�cklinstrasse</ojp:RoadName>
-											<ojp:Duration>PT0M11S</ojp:Duration>
-											<ojp:Length>13</ojp:Length>
-										</ojp:TrackSection>
-										<ojp:GuidanceAdvice>continue</ojp:GuidanceAdvice>
-										<ojp:TurnAction>straight_on</ojp:TurnAction>
-									</ojp:PathGuidanceSection>
-								</ojp:PathGuidance>
-							</ojp:ContinuousLeg>
-						</ojp:Leg>
-					</ojp:Trip>
-				</ojp:TripResult>
-			</ojp:OJPTripDelivery>
+												</Position>
+											</LinkProjection>
+											<RoadName>Bahnsteig</RoadName>
+											<Duration>PT0M2S</Duration>
+											<Length>2</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Forchstrasse</RoadName>
+											<Duration>PT0H1M38S</Duration>
+											<Length>109</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>left</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Fußweg</RoadName>
+											<Duration>PT0M15S</Duration>
+											<Length>17</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>Eidmattstrasse</RoadName>
+											<Duration>PT0H3M33S</Duration>
+											<Length>238</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>B�cklinstrasse</RoadName>
+											<Duration>PT0M36S</Duration>
+											<Length>40</Length>
+										</TrackSection>
+										<GuidanceAdvice>turn</GuidanceAdvice>
+										<TurnAction>right</TurnAction>
+									</PathGuidanceSection>
+									<PathGuidanceSection>
+										<TrackSection>
+											<RoadName>B�cklinstrasse</RoadName>
+											<Duration>PT0M11S</Duration>
+											<Length>13</Length>
+										</TrackSection>
+										<GuidanceAdvice>continue</GuidanceAdvice>
+										<TurnAction>straight_on</TurnAction>
+									</PathGuidanceSection>
+								</PathGuidance>
+							</ContinuousLeg>
+						</Leg>
+					</Trip>
+				</TripResult>
+			</OJPTripDelivery>
 		</siri:ServiceDelivery>
-	</siri:OJPResponse>
-</siri:OJP>
+	</OJPResponse>
+</OJP>

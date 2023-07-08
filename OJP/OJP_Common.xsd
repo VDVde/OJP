@@ -275,7 +275,7 @@
 	</xs:group>
 	<xs:complexType name="SharingServiceStructure">
 		<xs:annotation>
-			<xs:documentation>Service that provides shared vehicles.</xs:documentation>
+			<xs:documentation>Service that provides shared vehicles (The Transmodel MODE OF OPERATION is VEHICLE SHARING; other related Transmodel concepts: ALTERNATIVE MODE LEG.SINGLE JOURNEY.COMMON.VEHICLE SERVICE.TRANSPORT ORGANISATION).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
@@ -347,7 +347,7 @@
 	</xs:element>
 	<xs:complexType name="OperatingDaysStructure">
 		<xs:annotation>
-			<xs:documentation> [TMv6] day of public transport operation of which the characteristics are defined in a specific SERVICE CALENDAR and which may last more than 24 hours.</xs:documentation>
+			<xs:documentation> [TMv6] day of public transport operation of which the characteristics are defined in a specific SERVICE CALENDAR and which may last more than 24 hours. This is useful, when the trip can be made during several days. Often users search in "general" withouth setting a date and then refine with the actual date. By using OperatingDaysStructure the result can directly be reused without an additional OJPTripRequest.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="From" type="xs:date">

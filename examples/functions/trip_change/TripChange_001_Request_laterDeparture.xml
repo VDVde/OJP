@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri file:///D:/Schnittstellen/OJP/OJP.xsd">
-	<siri:OJPRequest>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPRequest>
 		<siri:ServiceRequest>
-			<siri:RequestTimestamp>2020-06-16T10:00:00Z</siri:RequestTimestamp>
-			<siri:RequestorRef>IRMA</siri:RequestorRef>
+			<siri:RequestTimestamp>2020-01-31T12:30:00Z</siri:RequestTimestamp>
+			<siri:RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7</siri:RequestorRef>
 			<OJPTripChangeRequest>
 				<siri:RequestTimestamp>2020-06-16T10:00:00Z</siri:RequestTimestamp>
 				<ChangeParams>
@@ -56,70 +56,72 @@
 								<Service>
 									<OperatingDayRef>2023-07-04</OperatingDayRef>
 									<JourneyRef>91008:E:H:j23:206:815</JourneyRef>
-									<siri:LineRef>91008:E</siri:LineRef>
-									<siri:DirectionRef>H</siri:DirectionRef>
-									<Mode>
-										<PtMode>rail</PtMode>
-										<siri:RailSubmode>interRegionalRailService</siri:RailSubmode>
-										<Name>
-											<Text xml:lang="de">Zug</Text>
-										</Name>
-										<ShortName>
-											<Text xml:lang="de">IC</Text>
-										</ShortName>
-									</Mode>
-									<PublishedServiceName>
-										<Text xml:lang="de">IC8</Text>
-									</PublishedServiceName>
-									<OperatorRefs>
-										<OperatorRef>11</OperatorRef>
-									</OperatorRefs>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Gratis-Internet mit der App SBB FreeSurf</Text>
-										</Text>
-										<Code>A__FS</Code>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Businesszone in 1. Klasse</Text>
-										</Text>
-										<Code>A__BZ</Code>
-										<siri:FareClassFacility>firstClass</siri:FareClassFacility>
-										<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
-										</Text>
-										<Code>A__RZ</Code>
-										<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Familienwagen mit Spielplatz</Text>
-										</Text>
-										<Code>A__FA</Code>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Platzreservierung möglich</Text>
-										</Text>
-										<Code>A___R</Code>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Restaurant</Text>
-										</Text>
-										<Code>A__WR</Code>
-										<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
-									</Attribute>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
-										<Code>ojp91008EH_InfoCall206_111055_1</Code>
-									</Attribute>
+									<ServiceSection>
+										<siri:LineRef>91008:E</siri:LineRef>
+										<siri:DirectionRef>H</siri:DirectionRef>
+										<Mode>
+											<PtMode>rail</PtMode>
+											<siri:RailSubmode>interRegionalRailService</siri:RailSubmode>
+											<Name>
+												<Text xml:lang="de">Zug</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">IC</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text xml:lang="de">IC8</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>11</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Gratis-Internet mit der App SBB FreeSurf</Text>
+											</Text>
+											<Code>A__FS</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Businesszone in 1. Klasse</Text>
+											</Text>
+											<Code>A__BZ</Code>
+											<siri:FareClassFacility>firstClass</siri:FareClassFacility>
+											<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
+											</Text>
+											<Code>A__RZ</Code>
+											<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Familienwagen mit Spielplatz</Text>
+											</Text>
+											<Code>A__FA</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Platzreservierung möglich</Text>
+											</Text>
+											<Code>A___R</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Restaurant</Text>
+											</Text>
+											<Code>A__WR</Code>
+											<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Links</Text>
+											</Text>
+											<Code>ojp91008EH_InfoCall206_111055_1</Code>
+										</Attribute>
+									</ServiceSection>
 									<DestinationStopPointRef>8506121</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Romanshorn</Text>
@@ -198,30 +200,32 @@
 								<Service>
 									<OperatingDayRef>2023-07-04</OperatingDayRef>
 									<JourneyRef>91009:E:R:j23:164:18944</JourneyRef>
-									<siri:LineRef>91009:E</siri:LineRef>
-									<siri:DirectionRef>R</siri:DirectionRef>
-									<Mode>
-										<PtMode>rail</PtMode>
-										<siri:RailSubmode>regionalRail</siri:RailSubmode>
-										<Name>
-											<Text xml:lang="de">Zug</Text>
-										</Name>
-										<ShortName>
-											<Text xml:lang="de">S</Text>
-										</ShortName>
-									</Mode>
-									<PublishedServiceName>
-										<Text xml:lang="de">S9</Text>
-									</PublishedServiceName>
-									<OperatorRefs>
-										<OperatorRef>11</OperatorRef>
-									</OperatorRefs>
-									<Attribute>
-										<Text>
-											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
-										<Code>ojp91009ER_InfoCall164_108594_1</Code>
-									</Attribute>
+									<ServiceSection>
+										<siri:LineRef>91009:E</siri:LineRef>
+										<siri:DirectionRef>R</siri:DirectionRef>
+										<Mode>
+											<PtMode>rail</PtMode>
+											<siri:RailSubmode>regionalRail</siri:RailSubmode>
+											<Name>
+												<Text xml:lang="de">Zug</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">S</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text xml:lang="de">S9</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>11</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Links</Text>
+											</Text>
+											<Code>ojp91009ER_InfoCall164_108594_1</Code>
+										</Attribute>
+									</ServiceSection>
 									<DestinationStopPointRef>8503424</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Schaffhausen</Text>
@@ -247,5 +251,5 @@
 				</TripResult>
 			</OJPTripChangeRequest>
 		</siri:ServiceRequest>
-	</siri:OJPRequest>
-</siri:OJP>
+	</OJPRequest>
+</OJP>

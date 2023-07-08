@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
 	<OJPRequest>
-		<ServiceRequest>
-			<RequestTimestamp>2022-01-19T12:00:00Z</RequestTimestamp>
-			<RequestorRef>IRMA</RequestorRef>
-			<ojp:OJPExchangePointsRequest>
-				<RequestTimestamp>2022-01-19T12:00:00Z</RequestTimestamp>
-				<MessageIdentifier>4712</MessageIdentifier>
-				<ojp:PlaceRef>
-					<ojp:GeoPosition>
-						<Longitude>7.589563</Longitude>
-						<Latitude>47.547412</Latitude>
-					</ojp:GeoPosition>
-					<ojp:Name>
-						<ojp:Text>Basel SBB</ojp:Text>
-					</ojp:Name>
-				</ojp:PlaceRef>
-			</ojp:OJPExchangePointsRequest>
-		</ServiceRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2022-01-19T12:00:00Z</siri:RequestTimestamp>
+			<siri:RequestorRef>IRMA</siri:RequestorRef>
+			<OJPExchangePointsRequest>
+				<siri:RequestTimestamp>2022-01-19T12:00:00Z</siri:RequestTimestamp>
+				<siri:MessageIdentifier>4712</siri:MessageIdentifier>
+				<PlaceRef>
+					<GeoPosition>
+						<siri:Longitude>7.589563</siri:Longitude>
+						<siri:Latitude>47.547412</siri:Latitude>
+					</GeoPosition>
+					<Name>
+						<Text>Basel SBB</Text>
+					</Name>
+				</PlaceRef>
+				<Params>
+					<Type>stop</Type>
+					<Usage>via</Usage>
+					<AdjacentSystem>SBB</AdjacentSystem>
+					<NumberOfResults>20</NumberOfResults>
+					<ContinueAt>40</ContinueAt>
+					<Extension>
+						<ExtendTheParameters/>
+					</Extension>
+				</Params>
+			</OJPExchangePointsRequest>
+		</siri:ServiceRequest>
 	</OJPRequest>
 </OJP>

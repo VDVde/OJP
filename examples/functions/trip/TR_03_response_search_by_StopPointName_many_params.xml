@@ -1,583 +1,589 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
-	<siri:OJPResponse>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-11-30T10:43:20Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<ojp:OJPTripDelivery>
+			<OJPTripDelivery>
 				<siri:ResponseTimestamp>2020-11-30T10:43:20Z</siri:ResponseTimestamp>
 				<siri:Status>true</siri:Status>
-				<ojp:CalcTime>192</ojp:CalcTime>
-				<ojp:TripResponseContext>
-					<ojp:Places>
-						<ojp:Place>
-							<ojp:StopPlace>
-								<ojp:StopPlaceRef>8503000</ojp:StopPlaceRef>
-								<ojp:StopPlaceName>
-									<ojp:Text>Zürich HB</ojp:Text>
-								</ojp:StopPlaceName>
-								<ojp:PrivateCode>
-									<ojp:System>EFA</ojp:System>
-									<ojp:Value>106218:0:3</ojp:Value>
-								</ojp:PrivateCode>
-								<ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
-							</ojp:StopPlace>
-							<ojp:Name>
-								<ojp:Text xml:lang="de">Zürich HB</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+				<CalcTime>192</CalcTime>
+				<TripResponseContext>
+					<Places>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8503000</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Zürich HB</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>106218:0:3</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23026261:27</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Zürich HB</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.54021</siri:Longitude>
 								<siri:Latitude>47.37818</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
-						<ojp:Place>
-							<ojp:TopographicPlace>
-								<ojp:TopographicPlaceCode>23026261:27</ojp:TopographicPlaceCode>
-								<ojp:TopographicPlaceName>
-									<ojp:Text>Unknown</ojp:Text>
-								</ojp:TopographicPlaceName>
-							</ojp:TopographicPlace>
-							<ojp:Name>
-								<ojp:Text>Zürich</ojp:Text>
-							</ojp:Name>
-							<ojp:GeoPosition>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<TopographicPlace>
+								<TopographicPlaceCode>23026261:27</TopographicPlaceCode>
+								<TopographicPlaceName>
+									<Text>Unknown</Text>
+								</TopographicPlaceName>
+							</TopographicPlace>
+							<Name>
+								<Text>Zürich</Text>
+							</Name>
+							<GeoPosition>
 								<siri:Longitude>8.54021</siri:Longitude>
 								<siri:Latitude>47.37818</siri:Latitude>
-							</ojp:GeoPosition>
-						</ojp:Place>
+							</GeoPosition>
+						</Place>
 						<!-- many other Place -->
-					</ojp:Places>
-				</ojp:TripResponseContext>
-				<ojp:TripResult>
-					<ojp:Id>ID-EA404A3F-B6CC-470E-86E0-F78957504AF4</ojp:Id>
-					<ojp:Trip>
-						<ojp:Id>ID-EA404A3F-B6CC-470E-86E0-F78957504AF4</ojp:Id>
-						<ojp:Duration>PT1H2M</ojp:Duration>
-						<ojp:StartTime>2020-12-01T11:44:00Z</ojp:StartTime>
-						<ojp:EndTime>2020-12-01T12:46:00Z</ojp:EndTime>
-						<ojp:Transfers>0</ojp:Transfers>
-						<ojp:Distance>61908</ojp:Distance>
-						<ojp:Leg>
-							<ojp:Id>1</ojp:Id>
-							<ojp:TimedLeg>
-								<ojp:LegBoard>
+					</Places>
+				</TripResponseContext>
+				<TripResult>
+					<Id>ID-EA404A3F-B6CC-470E-86E0-F78957504AF4</Id>
+					<Trip>
+						<Id>ID-EA404A3F-B6CC-470E-86E0-F78957504AF4</Id>
+						<Duration>PT1H2M</Duration>
+						<StartTime>2020-12-01T11:44:00Z</StartTime>
+						<EndTime>2020-12-01T12:46:00Z</EndTime>
+						<Transfers>0</Transfers>
+						<Distance>61908</Distance>
+						<Leg>
+							<Id>1</Id>
+							<TimedLeg>
+								<LegBoard>
 									<siri:StopPointRef>8503000</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich HB</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">3</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T11:44:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>1</ojp:Order>
-								</ojp:LegBoard>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich HB</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">3</Text>
+									</PlannedQuay>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T11:44:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediates>
 									<siri:StopPointRef>8503015</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Wipkingen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">1</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T11:47:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T11:47:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>2</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich Wipkingen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">1</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T11:47:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T11:47:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8503006</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Oerlikon</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">5</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T11:51:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T11:52:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>3</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich Oerlikon</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">5</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T11:51:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T11:52:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>3</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8503016</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Flughafen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">2</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T11:56:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T11:57:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>4</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich Flughafen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T11:56:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T11:57:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>4</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8503307</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Bassersdorf</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">2</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:01:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:01:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>5</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Bassersdorf</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:01:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:01:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>5</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8503305</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Effretikon</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">2</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:06:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:08:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>6</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Effretikon</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:06:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:08:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>6</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8506000</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Winterthur</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">8</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:16:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:19:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>7</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Winterthur</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">8</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:16:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:19:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>7</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8506047</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Andelfingen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">2</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:30:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:30:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>8</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Andelfingen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:30:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:30:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>8</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8503423</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Neuhausen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">3</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:42:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:42:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>9</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegAlight>
+									<StopPointName>
+										<Text>Neuhausen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">3</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:42:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:42:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>9</Order>
+								</LegIntermediates>
+								<LegAlight>
 									<siri:StopPointRef>8503424</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Schaffhausen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">2AB</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:46:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:Order>10</ojp:Order>
-								</ojp:LegAlight>
-								<ojp:Service>
-									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-									<ojp:JourneyRef>ojp:91S24:Z:R:j20:259</ojp:JourneyRef>
-									<siri:LineRef>ojp:91S24:Z</siri:LineRef>
-									<siri:DirectionRef>R</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>rail</ojp:PtMode>
-										<siri:RailSubmode>local</siri:RailSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Zug</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">S</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>S24</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Rechts</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S24ZR_InfoCall259_106218_1</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Links</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S24ZR_InfoCall259_106536_1</ojp:Code>
-									</ojp:Attribute>
-									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-									<ojp:DestinationText>
-										<ojp:Text xml:lang="de">Schaffhausen</ojp:Text>
-									</ojp:DestinationText>
-								</ojp:Service>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									<StopPointName>
+										<Text>Schaffhausen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2AB</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:46:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>10</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>Unknown</OperatingDayRef>
+									<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>91S24:Z</siri:LineRef>
+										<siri:DirectionRef>R</siri:DirectionRef>
+										<Mode>
+											<PtMode>rail</PtMode>
+											<siri:RailSubmode>local</siri:RailSubmode>
+											<Name>
+												<Text xml:lang="de">Zug</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">S</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>S24</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>11</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+											</Text>
+											<Code>A__OM</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Rechts</Text>
+											</Text>
+											<Code>ojp91S24ZR_InfoCall259_106218_1</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Links</Text>
+											</Text>
+											<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
+										</Attribute>
+									</ServiceSection>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Schaffhausen</Text>
+									</DestinationText>
+								</Service>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8503000</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich HB</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											<Name>
+												<Text xml:lang="de">Zürich HB</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8503424</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Schaffhausen</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT1H2M</ojp:Duration>
-										<ojp:Length>61908</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:Extension>
-									<ojp:TransportTypeName>
-										<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
-									</ojp:TransportTypeName>
-									<ojp:PublishedJourneyNumber>
-										<ojp:Text xml:lang="de">20446</ojp:Text>
-									</ojp:PublishedJourneyNumber>
-								</ojp:Extension>
-							</ojp:TimedLeg>
-						</ojp:Leg>
-					</ojp:Trip>
-				</ojp:TripResult>
-				<ojp:TripResult>
-					<ojp:Id>ID-5E7914C0-EC31-4FF9-ABE1-99E6FC55EE4B</ojp:Id>
-					<ojp:Trip>
-						<ojp:Id>ID-5E7914C0-EC31-4FF9-ABE1-99E6FC55EE4B</ojp:Id>
-						<ojp:Duration>PT60M</ojp:Duration>
-						<ojp:StartTime>2020-12-01T11:46:00Z</ojp:StartTime>
-						<ojp:EndTime>2020-12-01T12:46:00Z</ojp:EndTime>
-						<ojp:Transfers>1</ojp:Transfers>
-						<ojp:Distance>55424</ojp:Distance>
-						<ojp:Leg>
-							<ojp:Id>1</ojp:Id>
-							<ojp:TimedLeg>
-								<ojp:LegBoard>
+											<Name>
+												<Text xml:lang="de">Schaffhausen</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT1H2M</Duration>
+										<Length>61908</Length>
+									</TrackSection>
+								</LegTrack>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">S-Bahn</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">20446</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+					</Trip>
+				</TripResult>
+				<TripResult>
+					<Id>ID-5E7914C0-EC31-4FF9-ABE1-99E6FC55EE4B</Id>
+					<Trip>
+						<Id>ID-5E7914C0-EC31-4FF9-ABE1-99E6FC55EE4B</Id>
+						<Duration>PT60M</Duration>
+						<StartTime>2020-12-01T11:46:00Z</StartTime>
+						<EndTime>2020-12-01T12:46:00Z</EndTime>
+						<Transfers>1</Transfers>
+						<Distance>55424</Distance>
+						<Leg>
+							<Id>1</Id>
+							<TimedLeg>
+								<LegBoard>
 									<siri:StopPointRef>8503000</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich HB</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">43/44</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T11:46:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>1</ojp:Order>
-								</ojp:LegBoard>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich HB</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">43/44</Text>
+									</PlannedQuay>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T11:46:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediates>
 									<siri:StopPointRef>8503003</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Zürich Stadelhofen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">3</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T11:49:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T11:50:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>2</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Zürich Stadelhofen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">3</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T11:49:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T11:50:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8503147</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Stettbach</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">2</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T11:55:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T11:56:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>3</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegAlight>
+									<StopPointName>
+										<Text>Stettbach</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T11:55:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T11:56:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>3</Order>
+								</LegIntermediates>
+								<LegAlight>
 									<siri:StopPointRef>8506000</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Winterthur</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">4</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:08:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:Order>4</ojp:Order>
-								</ojp:LegAlight>
-								<ojp:Service>
-									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-									<ojp:JourneyRef>ojp:91S12:Z:H:j20:73</ojp:JourneyRef>
-									<siri:LineRef>ojp:91S12:Z</siri:LineRef>
-									<siri:DirectionRef>H</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>rail</ojp:PtMode>
-										<siri:RailSubmode>local</siri:RailSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Zug</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">S</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>S12</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-									<ojp:DestinationText>
-										<ojp:Text xml:lang="de">Wil SG</ojp:Text>
-									</ojp:DestinationText>
-								</ojp:Service>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									<StopPointName>
+										<Text>Winterthur</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">4</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:08:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>4</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>Unknown</OperatingDayRef>
+									<JourneyRef>91S12:Z:H:j20:73</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>91S12:Z</siri:LineRef>
+										<siri:DirectionRef>H</siri:DirectionRef>
+										<Mode>
+											<PtMode>rail</PtMode>
+											<siri:RailSubmode>local</siri:RailSubmode>
+											<Name>
+												<Text xml:lang="de">Zug</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">S</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>S12</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>11</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+											</Text>
+											<Code>A__OM</Code>
+										</Attribute>
+									</ServiceSection>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Wil SG</Text>
+									</DestinationText>
+								</Service>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8503000</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Zürich HB</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											<Name>
+												<Text xml:lang="de">Zürich HB</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8506000</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Winterthur</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT22M</ojp:Duration>
-										<ojp:Length>25266</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:Extension>
-									<ojp:TransportTypeName>
-										<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
-									</ojp:TransportTypeName>
-									<ojp:PublishedJourneyNumber>
-										<ojp:Text xml:lang="de">19247</ojp:Text>
-									</ojp:PublishedJourneyNumber>
-								</ojp:Extension>
-							</ojp:TimedLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>2</ojp:Id>
-							<ojp:TransferLeg>
-								<ojp:TransferMode>walk</ojp:TransferMode>
-								<ojp:LegStart>
+											<Name>
+												<Text xml:lang="de">Winterthur</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT22M</Duration>
+										<Length>25266</Length>
+									</TrackSection>
+								</LegTrack>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">S-Bahn</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">19247</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<Id>2</Id>
+							<TransferLeg>
+								<TransferMode>walk</TransferMode>
+								<LegStart>
 									<siri:StopPointRef>8506000</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Winterthur</ojp:Text>
-									</ojp:Name>
-								</ojp:LegStart>
-								<ojp:LegEnd>
+									<Name>
+										<Text xml:lang="de">Winterthur</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
 									<siri:StopPointRef>8506000</siri:StopPointRef>
-									<ojp:Name>
-										<ojp:Text xml:lang="de">Winterthur</ojp:Text>
-									</ojp:Name>
-								</ojp:LegEnd>
-								<ojp:TimeWindowStart>2020-12-01T12:08:00Z</ojp:TimeWindowStart>
-								<ojp:TimeWindowEnd>2020-12-01T12:19:00Z</ojp:TimeWindowEnd>
-								<ojp:Duration>PT11M</ojp:Duration>
-								<ojp:WalkDuration>PT3M</ojp:WalkDuration>
-								<ojp:BufferTime>PT8M</ojp:BufferTime>
-							</ojp:TransferLeg>
-						</ojp:Leg>
-						<ojp:Leg>
-							<ojp:Id>3</ojp:Id>
-							<ojp:TimedLeg>
-								<ojp:LegBoard>
+									<Name>
+										<Text xml:lang="de">Winterthur</Text>
+									</Name>
+								</LegEnd>
+								<TimeWindowStart>2020-12-01T12:08:00Z</TimeWindowStart>
+								<TimeWindowEnd>2020-12-01T12:19:00Z</TimeWindowEnd>
+								<Duration>PT11M</Duration>
+								<WalkDuration>PT3M</WalkDuration>
+								<BufferTime>PT8M</BufferTime>
+							</TransferLeg>
+						</Leg>
+						<Leg>
+							<Id>3</Id>
+							<TimedLeg>
+								<LegBoard>
 									<siri:StopPointRef>8506000</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Winterthur</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">8</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:19:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>1</ojp:Order>
-								</ojp:LegBoard>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Winterthur</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">8</Text>
+									</PlannedQuay>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:19:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediates>
 									<siri:StopPointRef>8506047</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Andelfingen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">2</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:30:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:30:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>2</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegIntermediates>
+									<StopPointName>
+										<Text>Andelfingen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:30:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:30:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediates>
+								<LegIntermediates>
 									<siri:StopPointRef>8503423</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Neuhausen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">3</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:42:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:ServiceDeparture>
-										<ojp:TimetabledTime>2020-12-01T12:42:00Z</ojp:TimetabledTime>
-									</ojp:ServiceDeparture>
-									<ojp:Order>3</ojp:Order>
-								</ojp:LegIntermediates>
-								<ojp:LegAlight>
+									<StopPointName>
+										<Text>Neuhausen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">3</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:42:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2020-12-01T12:42:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>3</Order>
+								</LegIntermediates>
+								<LegAlight>
 									<siri:StopPointRef>8503424</siri:StopPointRef>
-									<ojp:StopPointName>
-										<ojp:Text>Schaffhausen</ojp:Text>
-									</ojp:StopPointName>
-									<ojp:PlannedQuay>
-										<ojp:Text xml:lang="de">2AB</ojp:Text>
-									</ojp:PlannedQuay>
-									<ojp:ServiceArrival>
-										<ojp:TimetabledTime>2020-12-01T12:46:00Z</ojp:TimetabledTime>
-									</ojp:ServiceArrival>
-									<ojp:Order>4</ojp:Order>
-								</ojp:LegAlight>
-								<ojp:Service>
-									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
-									<ojp:JourneyRef>ojp:91S24:Z:R:j20:259</ojp:JourneyRef>
-									<siri:LineRef>ojp:91S24:Z</siri:LineRef>
-									<siri:DirectionRef>R</siri:DirectionRef>
-									<ojp:Mode>
-										<ojp:PtMode>rail</ojp:PtMode>
-										<siri:RailSubmode>local</siri:RailSubmode>
-										<ojp:Name>
-											<ojp:Text xml:lang="de">Zug</ojp:Text>
-										</ojp:Name>
-										<ojp:ShortName>
-											<ojp:Text xml:lang="de">S</ojp:Text>
-										</ojp:ShortName>
-									</ojp:Mode>
-									<ojp:PublishedServiceName>
-										<ojp:Text>S24</ojp:Text>
-									</ojp:PublishedServiceName>
-									<ojp:OperatorRefs>
-										<ojp:OperatorRef>ojp:11</ojp:OperatorRef>
-									</ojp:OperatorRefs>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>A__OM</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Links</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S24ZR_InfoCall259_108328_1</ojp:Code>
-									</ojp:Attribute>
-									<ojp:Attribute>
-										<ojp:Text>
-											<ojp:Text xml:lang="de">Aussteigeseite: Links</ojp:Text>
-										</ojp:Text>
-										<ojp:Code>ojp91S24ZR_InfoCall259_106536_1</ojp:Code>
-									</ojp:Attribute>
-									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
-									<ojp:DestinationText>
-										<ojp:Text xml:lang="de">Schaffhausen</ojp:Text>
-									</ojp:DestinationText>
-								</ojp:Service>
-								<ojp:LegTrack>
-									<ojp:TrackSection>
-										<ojp:TrackStart>
+									<StopPointName>
+										<Text>Schaffhausen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2AB</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2020-12-01T12:46:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>4</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>Unknown</OperatingDayRef>
+									<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
+									<ServiceSection>
+										<siri:LineRef>91S24:Z</siri:LineRef>
+										<siri:DirectionRef>R</siri:DirectionRef>
+										<Mode>
+											<PtMode>rail</PtMode>
+											<siri:RailSubmode>local</siri:RailSubmode>
+											<Name>
+												<Text xml:lang="de">Zug</Text>
+											</Name>
+											<ShortName>
+												<Text xml:lang="de">S</Text>
+											</ShortName>
+										</Mode>
+										<PublishedServiceName>
+											<Text>S24</Text>
+										</PublishedServiceName>
+										<OperatorRefs>
+											<OperatorRef>11</OperatorRef>
+										</OperatorRefs>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+											</Text>
+											<Code>A__OM</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Links</Text>
+											</Text>
+											<Code>ojp91S24ZR_InfoCall259_108328_1</Code>
+										</Attribute>
+										<Attribute>
+											<Text>
+												<Text xml:lang="de">Aussteigeseite: Links</Text>
+											</Text>
+											<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
+										</Attribute>
+									</ServiceSection>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Schaffhausen</Text>
+									</DestinationText>
+								</Service>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
 											<siri:StopPointRef>8506000</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Winterthur</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackStart>
-										<ojp:TrackEnd>
+											<Name>
+												<Text xml:lang="de">Winterthur</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
 											<siri:StopPointRef>8503424</siri:StopPointRef>
-											<ojp:Name>
-												<ojp:Text xml:lang="de">Schaffhausen</ojp:Text>
-											</ojp:Name>
-										</ojp:TrackEnd>
-										<ojp:Duration>PT27M</ojp:Duration>
-										<ojp:Length>30158</ojp:Length>
-									</ojp:TrackSection>
-								</ojp:LegTrack>
-								<ojp:Extension>
-									<ojp:TransportTypeName>
-										<ojp:Text xml:lang="de">S-Bahn</ojp:Text>
-									</ojp:TransportTypeName>
-									<ojp:PublishedJourneyNumber>
-										<ojp:Text xml:lang="de">20446</ojp:Text>
-									</ojp:PublishedJourneyNumber>
-								</ojp:Extension>
-							</ojp:TimedLeg>
-						</ojp:Leg>
-					</ojp:Trip>
-				</ojp:TripResult>
-			</ojp:OJPTripDelivery>
+											<Name>
+												<Text xml:lang="de">Schaffhausen</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT27M</Duration>
+										<Length>30158</Length>
+									</TrackSection>
+								</LegTrack>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">S-Bahn</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">20446</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+					</Trip>
+				</TripResult>
+			</OJPTripDelivery>
 		</siri:ServiceDelivery>
-	</siri:OJPResponse>
-</siri:OJP>
+	</OJPResponse>
+</OJP>
