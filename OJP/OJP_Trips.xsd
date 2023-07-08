@@ -140,6 +140,11 @@
 					<xs:documentation>There might exist lines that have special restrictions and are not available to the public. E.g. school buses, company shuttles. If this flag is set, then the private lines are considered by the router. The results are marked as private with a hint to the restriction.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="IncludeTouristicOffers" type="xs:boolean" minOccurs="0" default="false">
+				<xs:annotation>
+					<xs:documentation>With this option set, legs with ACCESS MODE like ski are also searched. If this is not set, then skiLift are not accessible. The OptimisationMethod scenic is more about the view and other aspects.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Sequence of all passenger categories, for which this search shall be conducted. In rare cases additional offerings may be available (e.g., demand responsive service with certain areas being reserved for seniors).</xs:documentation>
@@ -148,11 +153,6 @@
 			<xs:element name="MainTravelMode" type="ifopt:AccessModesEnumeration" default="foot" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The MainTravelMode defines whether the trip planner works in PT mode or includes carTransportRail and the like. The only mode that activates the inclusion of this is "car".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AccessModeList" type="AccessModesListOfEnumerations" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Access modes that are available to the traveller for the trip. The requester can tell the system what he might use as an access mode (e.g., car, motorcycle, ski) and it's the system's responsibility to know which access modes are supported or required by each service. E.g., if one goes by car, then only ferry and carTransportRail may be possible for public transport. If the traveller has skis or a snowboard with him, then dragLifts can show up in the results to a search. When nothing is provided in the time table, then foot and bicycle should be assumed by the trip planner. The resulting trips satisfy the following conditions: (a) the PT legs of the trip are possible for all access modes in the list, (b) the non-PT legs are possible by foot or any of the access modes in the list. In the end the provision of the list does not guarantee valid results in all circumstances. E.g. the traveller may have left the car, went with the skis up the hill in a dragLift and can't access the car on the other side of the mountain for the next leg with carTransportRail. So the enquirer always needs to study the trip results to see what AccessMode and/or are provided there. The implementation might also have an internal mapping which AccessMode can "carry" another one (e.g. a car can carry skis).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
