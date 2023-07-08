@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
-	<OJPResponse>
+<siri:OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
+	<siri:OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-11-30T10:30:33Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<OJPTripDelivery>
+			<ojp:OJPTripDelivery>
 				<siri:ResponseTimestamp>2020-11-30T10:30:32Z</siri:ResponseTimestamp>
 				<siri:Status>true</siri:Status>
-				<CalcTime>529</CalcTime>
-				<TripResponseContext>
-					<Places>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8591258</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Zürich, Lindenplatz</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>126303:0:</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23026261:27</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Zürich, Lindenplatz</Text>
-							</Name>
-							<GeoPosition>
+				<ojp:CalcTime>529</ojp:CalcTime>
+				<ojp:TripResponseContext>
+					<ojp:Places>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8591258</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Zürich, Lindenplatz</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>126303:0:</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23026261:27</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Zürich, Lindenplatz</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.48611</siri:Longitude>
 								<siri:Latitude>47.38782</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23026261:27</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Unknown</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Zürich</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23026261:27</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Unknown</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Zürich</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.48611</siri:Longitude>
 								<siri:Latitude>47.38782</siri:Latitude>
-							</GeoPosition>
-						</Place>
+							</ojp:GeoPosition>
+						</ojp:Place>
 						<!-- a lot of other Place -->
-					</Places>
-				</TripResponseContext>
-				<TripResult>
-					<Id>ID-847240F3-270A-4821-A566-131E5E949366</Id>
-					<Trip>
-						<Id>ID-847240F3-270A-4821-A566-131E5E949366</Id>
-						<Duration>PT41M</Duration>
-						<StartTime>2020-12-01T11:55:00Z</StartTime>
-						<EndTime>2020-12-01T12:36:00Z</EndTime>
-						<Transfers>0</Transfers>
-						<Distance>5318</Distance>
-						<Leg>
-							<Id>1</Id>
-							<TimedLeg>
-								<LegBoard>
+					</ojp:Places>
+				</ojp:TripResponseContext>
+				<ojp:TripResult>
+					<ojp:Id>ID-847240F3-270A-4821-A566-131E5E949366</ojp:Id>
+					<ojp:Trip>
+						<ojp:Id>ID-847240F3-270A-4821-A566-131E5E949366</ojp:Id>
+						<ojp:Duration>PT41M</ojp:Duration>
+						<ojp:StartTime>2020-12-01T11:55:00Z</ojp:StartTime>
+						<ojp:EndTime>2020-12-01T12:36:00Z</ojp:EndTime>
+						<ojp:Transfers>0</ojp:Transfers>
+						<ojp:Distance>5318</ojp:Distance>
+						<ojp:Leg>
+							<ojp:Id>1</ojp:Id>
+							<ojp:TimedLeg>
+								<ojp:LegBoard>
 									<siri:StopPointRef>8576193</siri:StopPointRef>
-									<StopPointName>
-										<Text>Zürich, Bellevue</Text>
-									</StopPointName>
-									<ServiceDeparture>
-										<TimetabledTime>2020-12-01T12:24:00Z</TimetabledTime>
-									</ServiceDeparture>
-									<Order>1</Order>
+									<ojp:StopPointName>
+										<ojp:Text>Zürich, Bellevue</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:ServiceDeparture>
+										<ojp:TimetabledTime>2020-12-01T12:24:00Z</ojp:TimetabledTime>
+									</ojp:ServiceDeparture>
+									<ojp:Order>1</ojp:Order>
 									<siri:ExpectedDepartureOccupancy>
 										<!-- here for the whole tram  and not split up by TrainRef or TrainElementRef -->
 										<siri:FareClass>economyClass</siri:FareClass>
@@ -92,70 +92,68 @@
 										<siri:StandingCapacity>20</siri:StandingCapacity>
 										<siri:BicycleRackCapacity>2</siri:BicycleRackCapacity>
 									</siri:ExpectedDepartureCapacities>
-								</LegBoard>
-								<LegAlight>
+								</ojp:LegBoard>
+								<ojp:LegAlight>
 									<siri:StopPointRef>8591364</siri:StopPointRef>
-									<StopPointName>
-										<Text>Zürich, Signaustrasse</Text>
-									</StopPointName>
-									<ServiceArrival>
-										<TimetabledTime>2020-12-01T12:29:00Z</TimetabledTime>
-									</ServiceArrival>
-									<Order>4</Order>
-								</LegAlight>
-								<Service>
-									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>91011:A:H:j20:255</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>91011:A</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>tram</PtMode>
-											<siri:TramSubmode>cityTram</siri:TramSubmode>
-											<Name>
-												<Text xml:lang="de">Tram</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">T</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>11</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>3849</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Niederflureinstieg</Text>
-											</Text>
-											<Code>A__NF</Code>
-										</Attribute>
-									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Zürich, Rehalp</Text>
-									</DestinationText>
-								</Service>
-								<Extension>
-									<TransportTypeName>
-										<Text xml:lang="de">Tram</Text>
-									</TransportTypeName>
-									<PublishedJourneyNumber>
-										<Text xml:lang="de">3953</Text>
-									</PublishedJourneyNumber>
-								</Extension>
-							</TimedLeg>
-						</Leg>
-					</Trip>
-				</TripResult>
-			</OJPTripDelivery>
+									<ojp:StopPointName>
+										<ojp:Text>Zürich, Signaustrasse</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:ServiceArrival>
+										<ojp:TimetabledTime>2020-12-01T12:29:00Z</ojp:TimetabledTime>
+									</ojp:ServiceArrival>
+									<ojp:Order>4</ojp:Order>
+								</ojp:LegAlight>
+								<ojp:Service>
+									<ojp:OperatingDayRef>Unknown</ojp:OperatingDayRef>
+									<ojp:JourneyRef>ojp:91011:A:H:j20:255</ojp:JourneyRef>
+									<siri:LineRef>ojp:91011:A</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<ojp:Mode>
+										<ojp:PtMode>tram</ojp:PtMode>
+										<siri:TramSubmode>cityTram</siri:TramSubmode>
+										<ojp:Name>
+											<ojp:Text xml:lang="de">Tram</ojp:Text>
+										</ojp:Name>
+										<ojp:ShortName>
+											<ojp:Text xml:lang="de">T</ojp:Text>
+										</ojp:ShortName>
+									</ojp:Mode>
+									<ojp:PublishedServiceName>
+										<ojp:Text>11</ojp:Text>
+									</ojp:PublishedServiceName>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:3849</ojp:OperatorRef>
+									</ojp:OperatorRefs>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A__OM</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Niederflureinstieg</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A__NF</ojp:Code>
+									</ojp:Attribute>
+									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
+									<ojp:DestinationText>
+										<ojp:Text xml:lang="de">Zürich, Rehalp</ojp:Text>
+									</ojp:DestinationText>
+								</ojp:Service>
+								<ojp:Extension>
+									<ojp:TransportTypeName>
+										<ojp:Text xml:lang="de">Tram</ojp:Text>
+									</ojp:TransportTypeName>
+									<ojp:PublishedJourneyNumber>
+										<ojp:Text xml:lang="de">3953</ojp:Text>
+									</ojp:PublishedJourneyNumber>
+								</ojp:Extension>
+							</ojp:TimedLeg>
+						</ojp:Leg>
+					</ojp:Trip>
+				</ojp:TripResult>
+			</ojp:OJPTripDelivery>
 		</siri:ServiceDelivery>
-	</OJPResponse>
-</OJP>
+	</siri:OJPResponse>
+</siri:OJP>

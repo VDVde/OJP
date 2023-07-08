@@ -1,41 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+<OJP xmlns:ojp="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
 	<!-- This (hypothetical) example includes illustrations of the following changes for V1.1:
 	- PR #83 - IncludePlacesContext and IncludeSituationsContext
 	- PR #96 - IncludeStopHierarchy
 -->
 	<OJPRequest>
-		<siri:ServiceRequest>
-			<siri:RequestTimestamp>2022-01-20T12:00:00Z</siri:RequestTimestamp>
-			<siri:RequestorRef>IRMA</siri:RequestorRef>
-			<OJPStopEventRequest>
-				<siri:RequestTimestamp>2022-01-20T12:00:00Z</siri:RequestTimestamp>
-				<siri:MessageIdentifier>756</siri:MessageIdentifier>
-				<Location>
-					<PlaceRef>
-						<siri:StopPointRef>8504375</siri:StopPointRef>
-						<Name>
-							<Text> Ligerz (Schiff)(Text is ignored)</Text>
-						</Name>
-					</PlaceRef>
-				</Location>
-				<Params>
-					<StopEventType>departure</StopEventType>
-					<IncludePreviousCalls>false</IncludePreviousCalls>
-					<IncludeOnwardCalls>false</IncludeOnwardCalls>
-					<IncludeOperatingDays>false</IncludeOperatingDays>
-					<UseRealtimeData>explanatory</UseRealtimeData>
-					<IncludePlacesContext>true</IncludePlacesContext>
+		<ServiceRequest>
+			<RequestTimestamp>2022-01-20T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPStopEventRequest>
+				<RequestTimestamp>2022-01-20T12:00:00Z</RequestTimestamp>
+				<MessageIdentifier>756</MessageIdentifier>
+				<ojp:Location>
+					<ojp:PlaceRef>
+						<StopPointRef>8504375</StopPointRef>
+						<ojp:Name>
+							<ojp:Text> Ligerz (Schiff)(Text is ignored)</ojp:Text>
+						</ojp:Name>
+					</ojp:PlaceRef>
+				</ojp:Location>
+				<ojp:Params>
+					<ojp:StopEventType>departure</ojp:StopEventType>
+					<ojp:IncludePreviousCalls>false</ojp:IncludePreviousCalls>
+					<ojp:IncludeOnwardCalls>false</ojp:IncludeOnwardCalls>
+					<ojp:IncludeOperatingDays>false</ojp:IncludeOperatingDays>
+					<ojp:UseRealtimeData>explanatory</ojp:UseRealtimeData>
+					<ojp:IncludePlacesContext>true</ojp:IncludePlacesContext>
 					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
-					<IncludeSituationsContext>true</IncludeSituationsContext>
+					<ojp:IncludeSituationsContext>true</ojp:IncludeSituationsContext>
 					<!-- V1.1, PR #83 - Illustrative use of optional parameter -->
-					<IncludeStopHierarchy>all</IncludeStopHierarchy>
+					<ojp:IncludeStopHierarchy>all</ojp:IncludeStopHierarchy>
 					<!-- V1.1, PR #96 - Illustrative use of optional parameter, possible values "local", "no", "down", "all" -->
-					<Extension>
-						<AddParameterExtensionHere>true</AddParameterExtensionHere>
-					</Extension>
-				</Params>
-			</OJPStopEventRequest>
-		</siri:ServiceRequest>
+				</ojp:Params>
+			</ojp:OJPStopEventRequest>
+		</ServiceRequest>
 	</OJPRequest>
 </OJP>

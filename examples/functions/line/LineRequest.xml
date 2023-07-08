@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp  ../../../OJP.xsd">
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../OJP.xsd">
 	<OJPRequest>
-		<siri:ServiceRequest>
-			<siri:RequestTimestamp>2022-12-19T12:00:00Z</siri:RequestTimestamp>
-			<siri:RequestorRef>IRMA</siri:RequestorRef>
-			<OJPLineInformationRequest>
-				<siri:RequestTimestamp>2022-12-19T12:00:00Z</siri:RequestTimestamp>
-				<siri:MessageIdentifier>4711</siri:MessageIdentifier>
-				<LineDirectionFilter>
-					<Line>
-						<siri:LineRef>ch:1:slnid:129312</siri:LineRef>
-						<siri:DirectionRef>ch:1:Direction:H</siri:DirectionRef>
-					</Line>
-					<Exclude>false</Exclude>
-				</LineDirectionFilter>
-			</OJPLineInformationRequest>
-		</siri:ServiceRequest>
+		<ServiceRequest>
+			<RequestTimestamp>2022-12-19T12:00:00Z</RequestTimestamp>
+			<RequestorRef>IRMA</RequestorRef>
+			<ojp:OJPLineInformationRequest>
+				<RequestTimestamp>2022-12-19T12:00:00Z</RequestTimestamp>
+				<MessageIdentifier>4711</MessageIdentifier>
+				<ojp:LineDirectionFilter>
+					<ojp:Line>
+						<LineRef>ch:1:slnid:129312</LineRef>
+						<DirectionRef>ch:1:Direction:H</DirectionRef>
+					</ojp:Line>
+					<ojp:Exclude>false</ojp:Exclude>
+				</ojp:LineDirectionFilter>
+			</ojp:OJPLineInformationRequest>
+		</ServiceRequest>
 	</OJPRequest>
 </OJP>

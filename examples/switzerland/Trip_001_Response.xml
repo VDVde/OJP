@@ -1,1009 +1,999 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
-	<OJPResponse>
+<siri:OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ojp="http://www.vdv.de/ojp" version="1.1-dev" xsi:schemaLocation="http://www.siri.org.uk/siri ../../OJP.xsd">
+	<siri:OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2020-10-01T17:36:49Z</siri:ResponseTimestamp>
 			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
-			<OJPTripDelivery>
+			<ojp:OJPTripDelivery>
 				<siri:ResponseTimestamp>2020-10-01T17:36:49Z</siri:ResponseTimestamp>
 				<siri:Status>true</siri:Status>
-				<CalcTime>213</CalcTime>
-				<TripResponseContext>
-					<Places>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8506302</StopPlaceRef>
-								<StopPlaceName>
-									<Text>St. Gallen</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>140437:0:4</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23016203:13</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">St. Gallen</Text>
-							</Name>
-							<GeoPosition>
+				<ojp:CalcTime>213</ojp:CalcTime>
+				<ojp:TripResponseContext>
+					<ojp:Places>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8506302</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>St. Gallen</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>140437:0:4</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23016203:13</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">St. Gallen</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>9.36990</siri:Longitude>
 								<siri:Latitude>47.42318</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23016203:13</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>St. Gallen</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>St. Gallen</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23016203:13</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>St. Gallen</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>St. Gallen</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>9.36990</siri:Longitude>
 								<siri:Latitude>47.42318</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8506290</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Herisau</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>140427:0:3</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23002001:1</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Herisau</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8506290</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Herisau</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>140427:0:3</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23002001:1</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Herisau</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>9.27680</siri:Longitude>
 								<siri:Latitude>47.39017</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23002001:1</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Herisau</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Herisau</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23002001:1</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Herisau</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Herisau</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>9.27680</siri:Longitude>
 								<siri:Latitude>47.39017</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8506200</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Wattwil</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>140364:0:4</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23016379:7</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Wattwil</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8506200</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Wattwil</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>140364:0:4</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23016379:7</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Wattwil</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>9.08646</siri:Longitude>
 								<siri:Latitude>47.29948</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23016379:7</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Wattwil</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Wattwil</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23016379:7</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Wattwil</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Wattwil</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>9.08646</siri:Longitude>
 								<siri:Latitude>47.29948</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8503116</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Uznach</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>138203:0:1</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23016339:2</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Uznach</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8503116</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Uznach</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>138203:0:1</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23016339:2</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Uznach</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.98069</siri:Longitude>
 								<siri:Latitude>47.22428</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23016339:2</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Uznach</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Uznach</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23016339:2</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Uznach</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Uznach</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.98069</siri:Longitude>
 								<siri:Latitude>47.22428</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8503115</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Schmerikon</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>138202:0:1</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23016338:2</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Schmerikon</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8503115</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Schmerikon</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>138202:0:1</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23016338:2</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Schmerikon</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.94338</siri:Longitude>
 								<siri:Latitude>47.22516</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23016338:2</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Schmerikon</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Schmerikon</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23016338:2</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Schmerikon</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Schmerikon</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.94338</siri:Longitude>
 								<siri:Latitude>47.22516</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8503110</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Rapperswil</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>138198:0:5</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23016340:22</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Rapperswil</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8503110</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Rapperswil</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>138198:0:5</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23016340:22</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Rapperswil</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.81674</siri:Longitude>
 								<siri:Latitude>47.22489</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23016340:22</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Rapperswil SG</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Rapperswil SG</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23016340:22</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Rapperswil SG</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Rapperswil SG</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.81674</siri:Longitude>
 								<siri:Latitude>47.22489</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>139</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Damm</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>132193:0:</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23018322:6</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Damm</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>139</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Damm</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>132193:0:</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23018322:6</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Damm</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.80506</siri:Longitude>
 								<siri:Latitude>47.21733</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23018322:6</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Hurden</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Hurden</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23018322:6</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Hurden</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Hurden</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.80506</siri:Longitude>
 								<siri:Latitude>47.21733</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8503209</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Pfäffikon SZ</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>138281:0:6</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23018322:8</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Pfäffikon SZ</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8503209</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Pfäffikon SZ</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>138281:0:6</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23018322:8</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Pfäffikon SZ</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.77813</siri:Longitude>
 								<siri:Latitude>47.20300</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23018322:8</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Pfäffikon SZ</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Pfäffikon SZ</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23018322:8</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Pfäffikon SZ</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Pfäffikon SZ</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.77813</siri:Longitude>
 								<siri:Latitude>47.20300</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8503284</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Biberbrugg</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>138342:0:4</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23018321:3</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Biberbrugg</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8503284</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Biberbrugg</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>138342:0:4</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23018321:3</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Biberbrugg</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.72270</siri:Longitude>
 								<siri:Latitude>47.15637</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23018321:3</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Feusisberg</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Feusisberg</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23018321:3</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Feusisberg</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Feusisberg</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.72270</siri:Longitude>
 								<siri:Latitude>47.15637</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8503282</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Rothenthurm</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>138340:0:2</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23018370:3</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Rothenthurm</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8503282</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Rothenthurm</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>138340:0:2</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23018370:3</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Rothenthurm</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.67466</siri:Longitude>
 								<siri:Latitude>47.10579</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23018370:3</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Rothenthurm (CH)</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Rothenthurm (CH)</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23018370:3</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Rothenthurm (CH)</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Rothenthurm (CH)</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.67466</siri:Longitude>
 								<siri:Latitude>47.10579</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8505004</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Arth-Goldau</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>139591:0:6</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23018362:3</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Arth-Goldau</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8505004</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Arth-Goldau</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>139591:0:6</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23018362:3</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Arth-Goldau</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.54945</siri:Longitude>
 								<siri:Latitude>47.04904</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23018362:3</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Goldau (CH)</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Goldau (CH)</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23018362:3</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Goldau (CH)</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Goldau (CH)</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.54945</siri:Longitude>
 								<siri:Latitude>47.04904</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8505002</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Küssnacht am Rigi</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>139589:0:1</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23018331:3</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Küssnacht am Rigi</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8505002</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Küssnacht am Rigi</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>139589:0:1</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23018331:3</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Küssnacht am Rigi</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.43352</siri:Longitude>
 								<siri:Latitude>47.08359</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23018331:3</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Küssnacht am Rigi</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Küssnacht am Rigi</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23018331:3</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Küssnacht am Rigi</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Küssnacht am Rigi</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.43352</siri:Longitude>
 								<siri:Latitude>47.08359</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8505018</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Meggen Zentrum</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>139596:0:1</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23012063:1</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Meggen Zentrum</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8505018</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Meggen Zentrum</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>139596:0:1</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23012063:1</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Meggen Zentrum</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.37439</siri:Longitude>
 								<siri:Latitude>47.04519</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23012063:1</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Meggen (CH)</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Meggen (CH)</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23012063:1</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Meggen (CH)</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Meggen (CH)</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.37439</siri:Longitude>
 								<siri:Latitude>47.04519</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8517336</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Luzern Verkehrshaus</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>142378:0:2</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23012061:4</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Luzern Verkehrshaus</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8517336</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Luzern Verkehrshaus</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>142378:0:2</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23012061:4</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Luzern Verkehrshaus</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.33730</siri:Longitude>
 								<siri:Latitude>47.05393</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<TopographicPlace>
-								<TopographicPlaceCode>23012061:4</TopographicPlaceCode>
-								<TopographicPlaceName>
-									<Text>Luzern</Text>
-								</TopographicPlaceName>
-							</TopographicPlace>
-							<Name>
-								<Text>Luzern</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:TopographicPlace>
+								<ojp:TopographicPlaceCode>23012061:4</ojp:TopographicPlaceCode>
+								<ojp:TopographicPlaceName>
+									<ojp:Text>Luzern</ojp:Text>
+								</ojp:TopographicPlaceName>
+							</ojp:TopographicPlace>
+							<ojp:Name>
+								<ojp:Text>Luzern</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.33730</siri:Longitude>
 								<siri:Latitude>47.05393</siri:Latitude>
-							</GeoPosition>
-						</Place>
-						<Place>
-							<StopPlace>
-								<StopPlaceRef>8505000</StopPlaceRef>
-								<StopPlaceName>
-									<Text>Luzern</Text>
-								</StopPlaceName>
-								<PrivateCode>
-									<System>EFA</System>
-									<Value>139587:0:3</Value>
-								</PrivateCode>
-								<TopographicPlaceRef>23012061:4</TopographicPlaceRef>
-							</StopPlace>
-							<Name>
-								<Text xml:lang="de">Luzern</Text>
-							</Name>
-							<GeoPosition>
+							</ojp:GeoPosition>
+						</ojp:Place>
+						<ojp:Place>
+							<ojp:StopPlace>
+								<ojp:StopPlaceRef>8505000</ojp:StopPlaceRef>
+								<ojp:StopPlaceName>
+									<ojp:Text>Luzern</ojp:Text>
+								</ojp:StopPlaceName>
+								<ojp:PrivateCode>
+									<ojp:System>EFA</ojp:System>
+									<ojp:Value>139587:0:3</ojp:Value>
+								</ojp:PrivateCode>
+								<ojp:TopographicPlaceRef>23012061:4</ojp:TopographicPlaceRef>
+							</ojp:StopPlace>
+							<ojp:Name>
+								<ojp:Text xml:lang="de">Luzern</ojp:Text>
+							</ojp:Name>
+							<ojp:GeoPosition>
 								<siri:Longitude>8.31018</siri:Longitude>
 								<siri:Latitude>47.05018</siri:Latitude>
-							</GeoPosition>
-						</Place>
-					</Places>
-				</TripResponseContext>
-				<TripResult>
-					<Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</Id>
-					<Trip>
-						<Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</Id>
-						<Duration>PT2H18M</Duration>
-						<StartTime>2020-09-30T10:03:00Z</StartTime>
-						<EndTime>2020-09-30T12:21:00Z</EndTime>
-						<Transfers>0</Transfers>
-						<Distance>125484</Distance>
-						<Leg>
-							<Id>1</Id>
-							<TimedLeg>
-								<LegBoard>
+							</ojp:GeoPosition>
+						</ojp:Place>
+					</ojp:Places>
+				</ojp:TripResponseContext>
+				<ojp:TripResult>
+					<ojp:Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:Id>
+					<ojp:Trip>
+						<ojp:Id>ID-5A9D01A0-CF49-41E7-A674-D37167E33AEF</ojp:Id>
+						<ojp:Duration>PT2H18M</ojp:Duration>
+						<ojp:StartTime>2020-09-30T10:03:00Z</ojp:StartTime>
+						<ojp:EndTime>2020-09-30T12:21:00Z</ojp:EndTime>
+						<ojp:Transfers>0</ojp:Transfers>
+						<ojp:Distance>125484</ojp:Distance>
+						<ojp:Leg>
+							<ojp:Id>1</ojp:Id>
+							<ojp:TimedLeg>
+								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
-									<StopPointName>
-										<Text>St. Gallen</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">4</Text>
-									</PlannedQuay>
-									<ServiceDeparture>
-										<TimetabledTime>2020-09-30T10:03:00Z</TimetabledTime>
-									</ServiceDeparture>
-									<Order>1</Order>
-								</LegBoard>
-								<LegAlight>
+									<ojp:StopPointName>
+										<ojp:Text>St. Gallen</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">4</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceDeparture>
+										<ojp:TimetabledTime>2020-09-30T10:03:00Z</ojp:TimetabledTime>
+									</ojp:ServiceDeparture>
+									<ojp:Order>1</ojp:Order>
+								</ojp:LegBoard>
+								<ojp:LegAlight>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
-									<StopPointName>
-										<Text>Luzern</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">3</Text>
-									</PlannedQuay>
-									<ServiceArrival>
-										<TimetabledTime>2020-09-30T12:21:00Z</TimetabledTime>
-									</ServiceArrival>
-									<Order>15</Order>
-								</LegAlight>
-								<Service>
-									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:210</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>910DG:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">IR</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>empty</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>82</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Reservierung möglich</Text>
-											</Text>
-											<Code>A___R</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Bar</Text>
-											</Text>
-											<Code>A___B</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
-								</Service>
-								<Extension>
-									<TransportTypeName>
-										<Text xml:lang="de">Voralpen-Express</Text>
-									</TransportTypeName>
-									<PublishedJourneyNumber>
-										<Text xml:lang="de">2020</Text>
-									</PublishedJourneyNumber>
-								</Extension>
-							</TimedLeg>
-						</Leg>
-					</Trip>
-				</TripResult>
-				<TripResult>
-					<Id>ID-D7BC624B-01C1-4710-BD57-66EF30D84FD4</Id>
-					<Trip>
-						<Id>ID-D7BC624B-01C1-4710-BD57-66EF30D84FD4</Id>
-						<Duration>PT2H18M</Duration>
-						<StartTime>2020-09-30T11:03:00Z</StartTime>
-						<EndTime>2020-09-30T13:21:00Z</EndTime>
-						<Transfers>0</Transfers>
-						<Distance>125484</Distance>
-						<Leg>
-							<Id>2</Id>
-							<TimedLeg>
-								<LegBoard>
+									<ojp:StopPointName>
+										<ojp:Text>Luzern</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">3</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceArrival>
+										<ojp:TimetabledTime>2020-09-30T12:21:00Z</ojp:TimetabledTime>
+									</ojp:ServiceArrival>
+									<ojp:Order>15</ojp:Order>
+								</ojp:LegAlight>
+								<ojp:Service>
+									<ojp:OperatingDayRef>2020-09-30</ojp:OperatingDayRef>
+									<ojp:JourneyRef>ojp:910DG:Y:R:j20:210</ojp:JourneyRef>
+									<siri:LineRef>ojp:910DG:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<ojp:Mode>
+										<ojp:PtMode>rail</ojp:PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<ojp:Name>
+											<ojp:Text xml:lang="de">Zug</ojp:Text>
+										</ojp:Name>
+										<ojp:ShortName>
+											<ojp:Text xml:lang="de">IR</ojp:Text>
+										</ojp:ShortName>
+									</ojp:Mode>
+									<ojp:PublishedServiceName>
+										<ojp:Text>empty</ojp:Text>
+									</ojp:PublishedServiceName>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___R</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Bar</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___B</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A__OM</ojp:Code>
+									</ojp:Attribute>
+									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
+									<ojp:DestinationText>
+										<ojp:Text xml:lang="de">Luzern</ojp:Text>
+									</ojp:DestinationText>
+								</ojp:Service>
+								<ojp:Extension>
+									<ojp:TransportTypeName>
+										<ojp:Text xml:lang="de">Voralpen-Express</ojp:Text>
+									</ojp:TransportTypeName>
+									<ojp:PublishedJourneyNumber>
+										<ojp:Text xml:lang="de">2020</ojp:Text>
+									</ojp:PublishedJourneyNumber>
+								</ojp:Extension>
+							</ojp:TimedLeg>
+						</ojp:Leg>
+					</ojp:Trip>
+				</ojp:TripResult>
+				<ojp:TripResult>
+					<ojp:Id>ID-D7BC624B-01C1-4710-BD57-66EF30D84FD4</ojp:Id>
+					<ojp:Trip>
+						<ojp:Id>ID-D7BC624B-01C1-4710-BD57-66EF30D84FD4</ojp:Id>
+						<ojp:Duration>PT2H18M</ojp:Duration>
+						<ojp:StartTime>2020-09-30T11:03:00Z</ojp:StartTime>
+						<ojp:EndTime>2020-09-30T13:21:00Z</ojp:EndTime>
+						<ojp:Transfers>0</ojp:Transfers>
+						<ojp:Distance>125484</ojp:Distance>
+						<ojp:Leg>
+							<ojp:Id>2</ojp:Id>
+							<ojp:TimedLeg>
+								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
-									<StopPointName>
-										<Text>St. Gallen</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">4</Text>
-									</PlannedQuay>
-									<ServiceDeparture>
-										<TimetabledTime>2020-09-30T11:03:00Z</TimetabledTime>
-									</ServiceDeparture>
-									<Order>1</Order>
-								</LegBoard>
-								<LegAlight>
+									<ojp:StopPointName>
+										<ojp:Text>St. Gallen</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">4</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceDeparture>
+										<ojp:TimetabledTime>2020-09-30T11:03:00Z</ojp:TimetabledTime>
+									</ojp:ServiceDeparture>
+									<ojp:Order>1</ojp:Order>
+								</ojp:LegBoard>
+								<ojp:LegAlight>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
-									<StopPointName>
-										<Text>Luzern</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">2</Text>
-									</PlannedQuay>
-									<ServiceArrival>
-										<TimetabledTime>2020-09-30T13:21:00Z</TimetabledTime>
-									</ServiceArrival>
-									<Order>15</Order>
-								</LegAlight>
-								<Service>
-									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:144</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>910DG:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">IR</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>empty</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>82</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Reservierung möglich</Text>
-											</Text>
-											<Code>A___R</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Bar</Text>
-											</Text>
-											<Code>A___B</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
-								</Service>
-								<Extension>
-									<TransportTypeName>
-										<Text xml:lang="de">Voralpen-Express</Text>
-									</TransportTypeName>
-									<PublishedJourneyNumber>
-										<Text xml:lang="de">2022</Text>
-									</PublishedJourneyNumber>
-								</Extension>
-							</TimedLeg>
-						</Leg>
-					</Trip>
-				</TripResult>
-				<TripResult>
-					<Id>ID-9258B3C7-13F8-42A3-94E4-AF1EE8691B30</Id>
-					<Trip>
-						<Id>ID-9258B3C7-13F8-42A3-94E4-AF1EE8691B30</Id>
-						<Duration>PT2H18M</Duration>
-						<StartTime>2020-09-30T12:03:00Z</StartTime>
-						<EndTime>2020-09-30T14:21:00Z</EndTime>
-						<Transfers>0</Transfers>
-						<Distance>125484</Distance>
-						<Leg>
-							<Id>3</Id>
-							<TimedLeg>
-								<LegBoard>
+									<ojp:StopPointName>
+										<ojp:Text>Luzern</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">2</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceArrival>
+										<ojp:TimetabledTime>2020-09-30T13:21:00Z</ojp:TimetabledTime>
+									</ojp:ServiceArrival>
+									<ojp:Order>15</ojp:Order>
+								</ojp:LegAlight>
+								<ojp:Service>
+									<ojp:OperatingDayRef>2020-09-30</ojp:OperatingDayRef>
+									<ojp:JourneyRef>ojp:910DG:Y:R:j20:144</ojp:JourneyRef>
+									<siri:LineRef>ojp:910DG:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<ojp:Mode>
+										<ojp:PtMode>rail</ojp:PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<ojp:Name>
+											<ojp:Text xml:lang="de">Zug</ojp:Text>
+										</ojp:Name>
+										<ojp:ShortName>
+											<ojp:Text xml:lang="de">IR</ojp:Text>
+										</ojp:ShortName>
+									</ojp:Mode>
+									<ojp:PublishedServiceName>
+										<ojp:Text>empty</ojp:Text>
+									</ojp:PublishedServiceName>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___R</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Bar</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___B</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A__OM</ojp:Code>
+									</ojp:Attribute>
+									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
+									<ojp:DestinationText>
+										<ojp:Text xml:lang="de">Luzern</ojp:Text>
+									</ojp:DestinationText>
+								</ojp:Service>
+								<ojp:Extension>
+									<ojp:TransportTypeName>
+										<ojp:Text xml:lang="de">Voralpen-Express</ojp:Text>
+									</ojp:TransportTypeName>
+									<ojp:PublishedJourneyNumber>
+										<ojp:Text xml:lang="de">2022</ojp:Text>
+									</ojp:PublishedJourneyNumber>
+								</ojp:Extension>
+							</ojp:TimedLeg>
+						</ojp:Leg>
+					</ojp:Trip>
+				</ojp:TripResult>
+				<ojp:TripResult>
+					<ojp:Id>ID-9258B3C7-13F8-42A3-94E4-AF1EE8691B30</ojp:Id>
+					<ojp:Trip>
+						<ojp:Id>ID-9258B3C7-13F8-42A3-94E4-AF1EE8691B30</ojp:Id>
+						<ojp:Duration>PT2H18M</ojp:Duration>
+						<ojp:StartTime>2020-09-30T12:03:00Z</ojp:StartTime>
+						<ojp:EndTime>2020-09-30T14:21:00Z</ojp:EndTime>
+						<ojp:Transfers>0</ojp:Transfers>
+						<ojp:Distance>125484</ojp:Distance>
+						<ojp:Leg>
+							<ojp:Id>3</ojp:Id>
+							<ojp:TimedLeg>
+								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
-									<StopPointName>
-										<Text>St. Gallen</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">4</Text>
-									</PlannedQuay>
-									<ServiceDeparture>
-										<TimetabledTime>2020-09-30T12:03:00Z</TimetabledTime>
-									</ServiceDeparture>
-									<Order>1</Order>
-								</LegBoard>
-								<LegAlight>
+									<ojp:StopPointName>
+										<ojp:Text>St. Gallen</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">4</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceDeparture>
+										<ojp:TimetabledTime>2020-09-30T12:03:00Z</ojp:TimetabledTime>
+									</ojp:ServiceDeparture>
+									<ojp:Order>1</ojp:Order>
+								</ojp:LegBoard>
+								<ojp:LegAlight>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
-									<StopPointName>
-										<Text>Luzern</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">3</Text>
-									</PlannedQuay>
-									<ServiceArrival>
-										<TimetabledTime>2020-09-30T14:21:00Z</TimetabledTime>
-									</ServiceArrival>
-									<Order>15</Order>
-								</LegAlight>
-								<Service>
-									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:149</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>910DG:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">IR</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>empty</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>82</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Reservierung möglich</Text>
-											</Text>
-											<Code>A___R</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Bar</Text>
-											</Text>
-											<Code>A___B</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
-								</Service>
-								<Extension>
-									<TransportTypeName>
-										<Text xml:lang="de">Voralpen-Express</Text>
-									</TransportTypeName>
-									<PublishedJourneyNumber>
-										<Text xml:lang="de">2024</Text>
-									</PublishedJourneyNumber>
-								</Extension>
-							</TimedLeg>
-						</Leg>
-					</Trip>
-				</TripResult>
-				<TripResult>
-					<Id>ID-88422412-857D-40E2-9479-7181EEBFCD79</Id>
-					<Trip>
-						<Id>ID-88422412-857D-40E2-9479-7181EEBFCD79</Id>
-						<Duration>PT2H18M</Duration>
-						<StartTime>2020-09-30T13:03:00Z</StartTime>
-						<EndTime>2020-09-30T15:21:00Z</EndTime>
-						<Transfers>0</Transfers>
-						<Distance>125484</Distance>
-						<Leg>
-							<Id>4</Id>
-							<TimedLeg>
-								<LegBoard>
+									<ojp:StopPointName>
+										<ojp:Text>Luzern</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">3</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceArrival>
+										<ojp:TimetabledTime>2020-09-30T14:21:00Z</ojp:TimetabledTime>
+									</ojp:ServiceArrival>
+									<ojp:Order>15</ojp:Order>
+								</ojp:LegAlight>
+								<ojp:Service>
+									<ojp:OperatingDayRef>2020-09-30</ojp:OperatingDayRef>
+									<ojp:JourneyRef>ojp:910DG:Y:R:j20:149</ojp:JourneyRef>
+									<siri:LineRef>ojp:910DG:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<ojp:Mode>
+										<ojp:PtMode>rail</ojp:PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<ojp:Name>
+											<ojp:Text xml:lang="de">Zug</ojp:Text>
+										</ojp:Name>
+										<ojp:ShortName>
+											<ojp:Text xml:lang="de">IR</ojp:Text>
+										</ojp:ShortName>
+									</ojp:Mode>
+									<ojp:PublishedServiceName>
+										<ojp:Text>empty</ojp:Text>
+									</ojp:PublishedServiceName>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___R</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Bar</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___B</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A__OM</ojp:Code>
+									</ojp:Attribute>
+									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
+									<ojp:DestinationText>
+										<ojp:Text xml:lang="de">Luzern</ojp:Text>
+									</ojp:DestinationText>
+								</ojp:Service>
+								<ojp:Extension>
+									<ojp:TransportTypeName>
+										<ojp:Text xml:lang="de">Voralpen-Express</ojp:Text>
+									</ojp:TransportTypeName>
+									<ojp:PublishedJourneyNumber>
+										<ojp:Text xml:lang="de">2024</ojp:Text>
+									</ojp:PublishedJourneyNumber>
+								</ojp:Extension>
+							</ojp:TimedLeg>
+						</ojp:Leg>
+					</ojp:Trip>
+				</ojp:TripResult>
+				<ojp:TripResult>
+					<ojp:Id>ID-88422412-857D-40E2-9479-7181EEBFCD79</ojp:Id>
+					<ojp:Trip>
+						<ojp:Id>ID-88422412-857D-40E2-9479-7181EEBFCD79</ojp:Id>
+						<ojp:Duration>PT2H18M</ojp:Duration>
+						<ojp:StartTime>2020-09-30T13:03:00Z</ojp:StartTime>
+						<ojp:EndTime>2020-09-30T15:21:00Z</ojp:EndTime>
+						<ojp:Transfers>0</ojp:Transfers>
+						<ojp:Distance>125484</ojp:Distance>
+						<ojp:Leg>
+							<ojp:Id>4</ojp:Id>
+							<ojp:TimedLeg>
+								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
-									<StopPointName>
-										<Text>St. Gallen</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">4</Text>
-									</PlannedQuay>
-									<ServiceDeparture>
-										<TimetabledTime>2020-09-30T13:03:00Z</TimetabledTime>
-									</ServiceDeparture>
-									<Order>1</Order>
-								</LegBoard>
-								<LegAlight>
+									<ojp:StopPointName>
+										<ojp:Text>St. Gallen</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">4</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceDeparture>
+										<ojp:TimetabledTime>2020-09-30T13:03:00Z</ojp:TimetabledTime>
+									</ojp:ServiceDeparture>
+									<ojp:Order>1</ojp:Order>
+								</ojp:LegBoard>
+								<ojp:LegAlight>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
-									<StopPointName>
-										<Text>Luzern</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">3</Text>
-									</PlannedQuay>
-									<ServiceArrival>
-										<TimetabledTime>2020-09-30T15:21:00Z</TimetabledTime>
-									</ServiceArrival>
-									<Order>15</Order>
-								</LegAlight>
-								<Service>
-									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:157</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>910DG:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">IR</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>empty</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>82</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Reservierung möglich</Text>
-											</Text>
-											<Code>A___R</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Bar</Text>
-											</Text>
-											<Code>A___B</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
-								</Service>
-								<Extension>
-									<TransportTypeName>
-										<Text xml:lang="de">Voralpen-Express</Text>
-									</TransportTypeName>
-									<PublishedJourneyNumber>
-										<Text xml:lang="de">2026</Text>
-									</PublishedJourneyNumber>
-								</Extension>
-							</TimedLeg>
-						</Leg>
-					</Trip>
-				</TripResult>
-				<TripResult>
-					<Id>ID-69ED1607-3F2A-4A5B-8ED4-A7EE3FA99FE6</Id>
-					<Trip>
-						<Id>ID-69ED1607-3F2A-4A5B-8ED4-A7EE3FA99FE6</Id>
-						<Duration>PT2H18M</Duration>
-						<StartTime>2020-09-30T14:03:00Z</StartTime>
-						<EndTime>2020-09-30T16:21:00Z</EndTime>
-						<Transfers>0</Transfers>
-						<Distance>125484</Distance>
-						<Leg>
-							<Id>5</Id>
-							<TimedLeg>
-								<LegBoard>
+									<ojp:StopPointName>
+										<ojp:Text>Luzern</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">3</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceArrival>
+										<ojp:TimetabledTime>2020-09-30T15:21:00Z</ojp:TimetabledTime>
+									</ojp:ServiceArrival>
+									<ojp:Order>15</ojp:Order>
+								</ojp:LegAlight>
+								<ojp:Service>
+									<ojp:OperatingDayRef>2020-09-30</ojp:OperatingDayRef>
+									<ojp:JourneyRef>ojp:910DG:Y:R:j20:157</ojp:JourneyRef>
+									<siri:LineRef>ojp:910DG:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<ojp:Mode>
+										<ojp:PtMode>rail</ojp:PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<ojp:Name>
+											<ojp:Text xml:lang="de">Zug</ojp:Text>
+										</ojp:Name>
+										<ojp:ShortName>
+											<ojp:Text xml:lang="de">IR</ojp:Text>
+										</ojp:ShortName>
+									</ojp:Mode>
+									<ojp:PublishedServiceName>
+										<ojp:Text>empty</ojp:Text>
+									</ojp:PublishedServiceName>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___R</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Bar</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___B</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A__OM</ojp:Code>
+									</ojp:Attribute>
+									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
+									<ojp:DestinationText>
+										<ojp:Text xml:lang="de">Luzern</ojp:Text>
+									</ojp:DestinationText>
+								</ojp:Service>
+								<ojp:Extension>
+									<ojp:TransportTypeName>
+										<ojp:Text xml:lang="de">Voralpen-Express</ojp:Text>
+									</ojp:TransportTypeName>
+									<ojp:PublishedJourneyNumber>
+										<ojp:Text xml:lang="de">2026</ojp:Text>
+									</ojp:PublishedJourneyNumber>
+								</ojp:Extension>
+							</ojp:TimedLeg>
+						</ojp:Leg>
+					</ojp:Trip>
+				</ojp:TripResult>
+				<ojp:TripResult>
+					<ojp:Id>ID-69ED1607-3F2A-4A5B-8ED4-A7EE3FA99FE6</ojp:Id>
+					<ojp:Trip>
+						<ojp:Id>ID-69ED1607-3F2A-4A5B-8ED4-A7EE3FA99FE6</ojp:Id>
+						<ojp:Duration>PT2H18M</ojp:Duration>
+						<ojp:StartTime>2020-09-30T14:03:00Z</ojp:StartTime>
+						<ojp:EndTime>2020-09-30T16:21:00Z</ojp:EndTime>
+						<ojp:Transfers>0</ojp:Transfers>
+						<ojp:Distance>125484</ojp:Distance>
+						<ojp:Leg>
+							<ojp:Id>5</ojp:Id>
+							<ojp:TimedLeg>
+								<ojp:LegBoard>
 									<siri:StopPointRef>8506302</siri:StopPointRef>
-									<StopPointName>
-										<Text>St. Gallen</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">4</Text>
-									</PlannedQuay>
-									<ServiceDeparture>
-										<TimetabledTime>2020-09-30T14:03:00Z</TimetabledTime>
-									</ServiceDeparture>
-									<Order>1</Order>
-								</LegBoard>
-								<LegAlight>
+									<ojp:StopPointName>
+										<ojp:Text>St. Gallen</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">4</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceDeparture>
+										<ojp:TimetabledTime>2020-09-30T14:03:00Z</ojp:TimetabledTime>
+									</ojp:ServiceDeparture>
+									<ojp:Order>1</ojp:Order>
+								</ojp:LegBoard>
+								<ojp:LegAlight>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
-									<StopPointName>
-										<Text>Luzern</Text>
-									</StopPointName>
-									<PlannedQuay>
-										<Text xml:lang="de">3</Text>
-									</PlannedQuay>
-									<ServiceArrival>
-										<TimetabledTime>2020-09-30T16:21:00Z</TimetabledTime>
-									</ServiceArrival>
-									<Order>15</Order>
-								</LegAlight>
-								<Service>
-									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:167</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>910DG:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">IR</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>empty</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>82</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Reservierung möglich</Text>
-											</Text>
-											<Code>A___R</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Bar</Text>
-											</Text>
-											<Code>A___B</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
-								</Service>
-								<Extension>
-									<TransportTypeName>
-										<Text xml:lang="de">Voralpen-Express</Text>
-									</TransportTypeName>
-									<PublishedJourneyNumber>
-										<Text xml:lang="de">2028</Text>
-									</PublishedJourneyNumber>
-								</Extension>
-							</TimedLeg>
-						</Leg>
-					</Trip>
-				</TripResult>
-			</OJPTripDelivery>
+									<ojp:StopPointName>
+										<ojp:Text>Luzern</ojp:Text>
+									</ojp:StopPointName>
+									<ojp:PlannedQuay>
+										<ojp:Text xml:lang="de">3</ojp:Text>
+									</ojp:PlannedQuay>
+									<ojp:ServiceArrival>
+										<ojp:TimetabledTime>2020-09-30T16:21:00Z</ojp:TimetabledTime>
+									</ojp:ServiceArrival>
+									<ojp:Order>15</ojp:Order>
+								</ojp:LegAlight>
+								<ojp:Service>
+									<ojp:OperatingDayRef>2020-09-30</ojp:OperatingDayRef>
+									<ojp:JourneyRef>ojp:910DG:Y:R:j20:167</ojp:JourneyRef>
+									<siri:LineRef>ojp:910DG:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<ojp:Mode>
+										<ojp:PtMode>rail</ojp:PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<ojp:Name>
+											<ojp:Text xml:lang="de">Zug</ojp:Text>
+										</ojp:Name>
+										<ojp:ShortName>
+											<ojp:Text xml:lang="de">IR</ojp:Text>
+										</ojp:ShortName>
+									</ojp:Mode>
+									<ojp:PublishedServiceName>
+										<ojp:Text>empty</ojp:Text>
+									</ojp:PublishedServiceName>
+									<ojp:OperatorRefs>
+										<ojp:OperatorRef>ojp:82</ojp:OperatorRef>
+									</ojp:OperatorRefs>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Reservierung möglich</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___R</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Bar</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A___B</ojp:Code>
+									</ojp:Attribute>
+									<ojp:Attribute>
+										<ojp:Text>
+											<ojp:Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</ojp:Text>
+										</ojp:Text>
+										<ojp:Code>A__OM</ojp:Code>
+									</ojp:Attribute>
+									<ojp:DestinationStopPointRef>de:00000:-1</ojp:DestinationStopPointRef>
+									<ojp:DestinationText>
+										<ojp:Text xml:lang="de">Luzern</ojp:Text>
+									</ojp:DestinationText>
+								</ojp:Service>
+								<ojp:Extension>
+									<ojp:TransportTypeName>
+										<ojp:Text xml:lang="de">Voralpen-Express</ojp:Text>
+									</ojp:TransportTypeName>
+									<ojp:PublishedJourneyNumber>
+										<ojp:Text xml:lang="de">2028</ojp:Text>
+									</ojp:PublishedJourneyNumber>
+								</ojp:Extension>
+							</ojp:TimedLeg>
+						</ojp:Leg>
+					</ojp:Trip>
+				</ojp:TripResult>
+			</ojp:OJPTripDelivery>
 		</siri:ServiceDelivery>
-	</OJPResponse>
-</OJP>
+	</siri:OJPResponse>
+</siri:OJP>

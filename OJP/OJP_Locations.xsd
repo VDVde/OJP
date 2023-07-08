@@ -84,7 +84,6 @@
 			<xs:group ref="PlaceDataFilterGroup"/>
 			<xs:group ref="PlacePolicyGroup"/>
 			<xs:group ref="PlaceSortingGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="GeoRestrictionsStructure">
@@ -253,6 +252,7 @@
 					<xs:documentation>Filter to narrow down POI searches.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="PlaceSortingGroup">
@@ -324,7 +324,6 @@
 		<xs:sequence>
 			<xs:group ref="ExchangePointsDataFilterGroup"/>
 			<xs:group ref="ExchangePointsPolicyGroup"/>
-			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="ExchangePointsDataFilterGroup">
