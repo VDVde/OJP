@@ -125,36 +125,40 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
-			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether alternative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second-best route. Should be optimised for the user expectance (see. e.g https://theses.hal.science/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludePrivateLines" type="xs:boolean" minOccurs="0" default="false">
-				<xs:annotation>
-					<xs:documentation>There might exist lines that have special restrictions and are not available to the public. E.g. school buses, company shuttles. If this flag is set, then the private lines are considered by the router. The results are marked as private with a hint to the restriction.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeTouristicOffers" type="xs:boolean" minOccurs="0" default="false">
-				<xs:annotation>
-					<xs:documentation>With this option set, legs with ACCESS MODE like ski are also searched. If this is not set, then skiLift are not accessible. The OptimisationMethod scenic is more about the view and other aspects.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Sequence of all passenger categories, for which this search shall be conducted. In rare cases additional offerings may be available (e.g., demand responsive service with certain areas being reserved for seniors).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MainTravelMode" type="ifopt:AccessModesEnumeration" default="foot" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>The MainTravelMode defines whether the trip planner works in PT mode or includes carTransportRail and the like. The only mode that activates the inclusion of this is "car".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:choice>
+				<xs:element name="MotorizedMainTravelMode" type="xs:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The MotorizedMainTravelMode defines whether the trip planner works in PT mode (or pure IT mode) or includes carTransportRail and the like. If set to true (e.g. because one travels by car, truck or motorcycle), then carTransportRail, ferry are used together with roads.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:sequence>
+					<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Whether alternative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second-best route. Should be optimised for the user expectance (see. e.g https://theses.hal.science/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IncludePrivateLines" type="xs:boolean" minOccurs="0" default="false">
+						<xs:annotation>
+							<xs:documentation>There might exist lines that have special restrictions and are not available to the public. E.g. school buses, company shuttles. If this flag is set, then the private lines are considered by the router. The results are marked as private with a hint to the restriction.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IncludeTouristicOffers" type="xs:boolean" minOccurs="0" default="false">
+						<xs:annotation>
+							<xs:documentation>With this option set, legs with ACCESS MODE like ski are also searched. If this is not set, then skiLift are not accessible. The OptimisationMethod scenic is more about the view and other aspects.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Sequence of all passenger categories, for which this search shall be conducted. In rare cases additional offerings may be available (e.g., demand responsive service with certain areas being reserved for seniors).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:choice>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripMobilityFilterGroup">
@@ -1928,3 +1932,4 @@ Can only be used when both participants recognise the same schedule version. If 
 	</xs:simpleType>
 	<xs:element name="TripChangeProblemType" type="TripChangeProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>
+
