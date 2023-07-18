@@ -128,7 +128,7 @@
 			<xs:choice>
 				<xs:element name="MotorisedMainTravelMode" type="xs:boolean" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>The MotorizedMainTravelMode defines whether the trip planner works in PT mode (or pure IT mode) or includes carTransportRail and the like. If set to true (e.g. because one travels by car, truck or motorcycle), then carTransportRail, ferry are used together with roads.</xs:documentation>
+						<xs:documentation>The MotorisedMainTravelMode defines whether the trip planner works in PT mode (or pure IT mode) or includes carTransportRail and the like. If set to true (e.g. because one travels by car, truck or motorcycle), then carTransportRail, ferry are used together with roads.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:sequence>
