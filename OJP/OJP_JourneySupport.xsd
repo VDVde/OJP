@@ -143,6 +143,11 @@
 					<xs:documentation>Via points of the service that may help identify the vehicle to the public (In Transmodel modeled as TRIP REQUEST PLACE.TRIP VIA PLACE.GoVia; it will also most probably be detailed as a VIA and associated DESTINATION DISPLAY in the ROUTE description).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This flag is set, when the Service has restricted usage. E.g. a certain ACCESS MODE is required (e.g. dragLift) or if the LINE is provided only to special sets of passengers (e.g. school buses, hotel shuttles) as defined in PrivateMode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Note or service attribute.</xs:documentation>

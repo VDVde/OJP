@@ -142,14 +142,9 @@
 							<xs:documentation>Whether alternative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second-best route. Should be optimised for the user expectance (see. e.g https://theses.hal.science/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="IncludePrivateLines" type="xs:boolean" minOccurs="0" default="false">
+					<xs:element name="IncludeRestrictedLines" type="xs:boolean" minOccurs="0" default="false">
 						<xs:annotation>
-							<xs:documentation>There might exist lines that have special restrictions and are not available to the public. E.g. school buses, company shuttles. If this flag is set, then the private lines are considered by the router. The results are marked as private with a hint to the restriction.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="IncludeTouristicOffers" type="xs:boolean" minOccurs="0" default="false">
-						<xs:annotation>
-							<xs:documentation>With this option set, legs with ACCESS MODE like ski are also searched. If this is not set, then skiLift are not accessible. The OptimisationMethod scenic is more about the view and other aspects.</xs:documentation>
+							<xs:documentation>There might exist lines that have special restrictions and are not generally available to the public. E.g. school buses, company shuttles. dragLifts need to have an AccessMode ski. If this flag is set, then existing restricted lines are considered by the router. The results are marked as restricted in the ServiceSection. The restriction can be seen from: ACCESS MODE or PrivatMode. The usage could also detailed with Attribute elements.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
