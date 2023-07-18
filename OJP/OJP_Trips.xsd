@@ -596,6 +596,11 @@
 				</xs:element>
 			</xs:choice>
 			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
+			<xs:element name="Changed" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>TRUE if leg got changed by TripChange-Request.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TimedLegStructure">
@@ -1526,18 +1531,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:group name="TripRefinementDataFilterGroup">
-		<xs:annotation>
-			<xs:documentation>Request data filters for Refinement</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group>
 	<xs:complexType name="TripRefineParamStructure">
 		<xs:annotation>
 			<xs:documentation>Trip refinement request parameter structure.</xs:documentation>
@@ -1563,7 +1556,6 @@
 					<xs:documentation>Usage of real-time data in refinement. Default is "full".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="TripRefinementDataFilterGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
 				<xs:annotation>
@@ -1744,4 +1736,138 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="TripProblemType" type="TripProblemTypeEnumeration" substitutionGroup="ErrorType"/>
+	<xs:annotation>
+		<xs:documentation>========================================== TripChangeRequest definitions ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="TripChangeRequestGroup">
+		<xs:annotation>
+			<xs:documentation>Trip change request structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ChangeParams" type="TripChangeParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Options to control the change.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripResult" type="TripResultStructure">
+				<xs:annotation>
+					<xs:documentation>The trip result to be changed by the server.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold objects, which are referenced within the response.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="TripChangeParamStructure">
+		<xs:annotation>
+			<xs:documentation>Trip change request parameter structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ChangeLegRef" type="LegObjectIdType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Refers to the legs to be changed by the server. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EarlierArrivalLaterDeparture" type="EarlierArrivalLaterDepartureType" default="laterDeparture" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Whether the requested journey leg of the passed trip should arrive earlier or depart later to give the passenger more time to make the interchange.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalWaitingTime" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Absolute time in minutes the passenger wants additionally to make the interchange. If another TransferLeg is needed (e.g. since another quay is used for the found arrival/departure) this is taken into account. If not passed, the next best arrival/departure is requested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="TripContentFilterGroup"/>
+			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="EarlierArrivalLaterDepartureType">
+		<xs:annotation>
+			<xs:documentation>Prefer earlier arrival or later departure</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="laterDeparture"/>
+			<xs:enumeration value="earlierArrival"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:annotation>
+		<xs:documentation>========================================== TripChangeResponse definitions ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="TripChangeResponseGroup">
+		<xs:annotation>
+			<xs:documentation>Trip change response structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TripResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold trip response objects that occur frequently.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripResult" type="TripResultStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The trip results refined by the server.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="TripChangeProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to TRIPCHANGE requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TRIPCHANGE_NOLATERTRIPFOUND">
+				<xs:annotation>
+					<xs:documentation>No later option for the requested part of the TRIP could be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_NOEARLIERTRIPFOUND">
+				<xs:annotation>
+					<xs:documentation>No earlier option for the requested part of the TRIP could be found.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_INVALIDLEGREF">
+				<xs:annotation>
+					<xs:documentation>Requested leg ref is invalid.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_INVALIDOPERATOR">
+				<xs:annotation>
+					<xs:documentation>Requested operator is invalid.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_NOVEHICLEAVAILABLE">
+				<xs:annotation>
+					<xs:documentation>No vehicle is available for the requested leg.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPCHANGE_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="TripChangeProblemType" type="TripChangeProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>
