@@ -32,7 +32,7 @@
 					</ViaPoint>
 				</Via>
 				<Params>
-					<MotorizedMainTravelMode>true</MotorizedMainTravelMode>
+					<MotorisedMainTravelMode>true</MotorisedMainTravelMode>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>
 					<IncludeTurnDescription>true</IncludeTurnDescription>
