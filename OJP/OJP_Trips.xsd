@@ -1746,7 +1746,7 @@
 		<xs:sequence>
 			<xs:element name="ChangeParams" type="TripChangeParamStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Options to control the change</xs:documentation>
+					<xs:documentation>Options to control the change.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TripResult" type="TripResultStructure">
