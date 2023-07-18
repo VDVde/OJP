@@ -1927,4 +1927,3 @@ Can only be used when both participants recognise the same schedule version. If 
 	</xs:simpleType>
 	<xs:element name="TripChangeProblemType" type="TripChangeProblemTypeEnumeration" substitutionGroup="ErrorType"/>
 </xs:schema>
-
