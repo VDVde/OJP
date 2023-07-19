@@ -1768,7 +1768,7 @@
 		<xs:sequence>
 			<xs:element name="ChangeLegRef" type="LegObjectIdType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Refers to the legs to be changed by the server. </xs:documentation>
+					<xs:documentation>Refers to the transfer legs to be changed by the server. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
@@ -1786,15 +1786,9 @@
 					<xs:documentation>Absolute time in minutes the passenger wants additionally to make the interchange. If another TransferLeg is needed (e.g. since another quay is used for the found arrival/departure) this is taken into account. If not passed, the next best arrival/departure is requested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="TripContentFilterGroup"/>
-			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
+			<xs:element name="TripParams" type="TripParamStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
+					<xs:documentation>Options to control the search behaviour and response contents. They should be largely the same as used as in the initial OJPTripRequest.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>

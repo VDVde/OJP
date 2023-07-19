@@ -7,8 +7,13 @@
 			<OJPTripChangeRequest>
 				<siri:RequestTimestamp>2020-06-16T10:00:00Z</siri:RequestTimestamp>
 				<ChangeParams>
-					<ChangeLegRef>3</ChangeLegRef>
+					<ChangeLegRef>2</ChangeLegRef>
 					<EarlierArrivalLaterDeparture>laterDeparture</EarlierArrivalLaterDeparture>
+					<TripParams>
+						<NoStairs>true</NoStairs>
+						<NumberOfResults>3</NumberOfResults>
+						<OptimisationMethod>fastest</OptimisationMethod>
+					</TripParams>
 				</ChangeParams>
 				<TripResult>
 					<Id>ID-83BFBC80-71F5-4287-9359-55F839207004</Id>
