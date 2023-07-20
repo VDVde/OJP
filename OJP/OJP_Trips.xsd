@@ -1768,11 +1768,7 @@
 		<xs:sequence>
 			<xs:element name="ChangeLegRef" type="LegObjectIdType" maxOccurs="unbounded">
 				<xs:annotation>
-<<<<<<< HEAD
 					<xs:documentation>Refers to the transfer legs to be changed by the server. Typical usage: either a transfer leg representing an interchange that is considered too short or sharing legs for which the exact times shall be retrieved for a specific operator.</xs:documentation>
-=======
-					<xs:documentation>Refers to the legs to be changed by the server. </xs:documentation>
->>>>>>> e842792996b2b5ad0e328ca595e065eb7103f034
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
