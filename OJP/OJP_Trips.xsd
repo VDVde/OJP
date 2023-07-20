@@ -1768,7 +1768,11 @@
 		<xs:sequence>
 			<xs:element name="ChangeLegRef" type="LegObjectIdType" maxOccurs="unbounded">
 				<xs:annotation>
+<<<<<<< HEAD
+					<xs:documentation>Refers to the transfer legs to be changed by the server. Typical usage: either a transfer leg representing an interchange that is considered too short or sharing legs for which the exact times shall be retrieved for a specific operator.</xs:documentation>
+=======
 					<xs:documentation>Refers to the legs to be changed by the server. </xs:documentation>
+>>>>>>> e842792996b2b5ad0e328ca595e065eb7103f034
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
@@ -1776,9 +1780,9 @@
 					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EarlierArrivalLaterDeparture" type="EarlierArrivalLaterDepartureType" default="laterDeparture" minOccurs="0" maxOccurs="1">
+			<xs:element name="ExtendToFrontOrBack" type="ExtendToFrontOrBackType" default="extendToFront" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Whether the requested journey leg of the passed trip should arrive earlier or depart later to give the passenger more time to make the interchange.</xs:documentation>
+					<xs:documentation>Whether to extend the initial time interval of the ChangeLeg towards the front or the back of the trip (earlier respectively later times).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AdditionalWaitingTime" type="xs:duration" minOccurs="0">
@@ -1794,13 +1798,13 @@
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="EarlierArrivalLaterDepartureType">
+	<xs:simpleType name="ExtendToFrontOrBackType">
 		<xs:annotation>
-			<xs:documentation>Prefer earlier arrival or later departure</xs:documentation>
+			<xs:documentation>Prefer earlier or later times.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="laterDeparture"/>
-			<xs:enumeration value="earlierArrival"/>
+			<xs:enumeration value="extendToFront"/>
+			<xs:enumeration value="extendToBack"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
