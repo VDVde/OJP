@@ -1768,7 +1768,7 @@
 		<xs:sequence>
 			<xs:element name="ChangeLegRef" type="LegObjectIdType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Refers to the transfer legs to be changed by the server. </xs:documentation>
+					<xs:documentation>Refers to the legs to be changed by the server. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
