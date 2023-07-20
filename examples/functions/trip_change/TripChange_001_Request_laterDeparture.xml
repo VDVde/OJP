@@ -11,7 +11,8 @@
 					<EarlierArrivalLaterDeparture>laterDeparture</EarlierArrivalLaterDeparture>
 					<TripParams>
 						<NoStairs>true</NoStairs>
-						<NumberOfResults>1</NumberOfResults> <!-- will be ignored as there is one trip that is changed -->
+						<NumberOfResults>1</NumberOfResults>
+						<!-- will be ignored as there is one trip that is changed -->
 						<OptimisationMethod>fastest</OptimisationMethod>
 					</TripParams>
 				</ChangeParams>
