@@ -11,6 +11,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### New Services
 
+* New `OJPTripChangeRequest`and `OJPTripChangeDelivery`. [#381](https://github.com/VDVde/OJP/pull/381), [#384](https://github.com/VDVde/OJP/pull/384)
 * New `OJPStatusRequest`and `OJPStatusDelivery`. [#216](https://github.com/VDVde/OJP/pull/216)
 * New `OJPLineInformationRequest` and `OJPLineInformationDelivery`. [#243](https://github.com/VDVde/OJP/pull/243), [#308](https://github.com/VDVde/OJP/pull/308)
 * New `OJPAvailabilityRequest` and `OJPAvailabilityDelivery`. [#262](https://github.com/VDVde/OJP/pull/262), [#241](https://github.com/VDVde/OJP/pull/241), [#322](https://github.com/VDVde/OJP/pull/322)
@@ -19,8 +20,8 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### Added
 
-* **[breaking]** Additional optimisation methods and filter options for passengers with sensory or mobility restrictions. Modified / clarified behaviour of `NoSingleStep`. Abandoned the option to specify multiple optimisation methods. [#353](https://github.com/VDVde/OJP/pull/353) 
-* **[breaking]** Added formation information from SIRI. It can be requested in `TripInformationRequest`. SIRI data structures to transmit the information: `siri:JourneyFormationGroup`, `siri:DepartureFormationAssignment`, `siri:ArrivalFormationAssignment`, `siri:ServiceInfoGroup`. [#328](https://github.com/VDVde/OJP/pull/328)
+* **[breaking]** Additional optimisation methods and filter options for passengers with sensory or mobility restrictions. Modified / clarified behaviour of `NoSingleStep`. Abandoned the option to specify multiple optimisation methods. [#353](https://github.com/VDVde/OJP/pull/353), [#368](https://github.com/VDVde/OJP/pull/368)
+* **[breaking]** Added formation information from SIRI. It can be requested in `TripInformationRequest`. SIRI data structures to transmit the information: `siri:JourneyFormationGroup`, `siri:DepartureFormationAssignment`, `siri:ArrivalFormationAssignment`, `siri:ServiceInfoGroup`. [#328](https://github.com/VDVde/OJP/pull/328), [#367](https://github.com/VDVde/OJP/pull/367)
 * Added `AreaGeometry` to `LineResultStructure`.  [#337](https://github.com/VDVde/OJP/pull/337)
 * New `OJPErrorStructure` both at the level of the `xDelivery` and at the level of the `xResult`. [#336](https://github.com/VDVde/OJP/pull/336)
 * Added `IsAlternativeOption` to `TripResultStructure`.  [#326](https://github.com/VDVde/OJP/pull/326)
@@ -101,7 +102,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 * **[breaking]** Made `MultiPointType` a required parameter in `OJPMultiPointTripRequest`. [#353](https://github.com/VDVde/OJP/pull/353)
 * **[breaking]** Changed main namespace from `SIRI` to `OJP`. [#347](https://github.com/VDVde/OJP/pull/347)
 * Updated all examples to new request and response structures, added to GitHub. [#334](https://github.com/VDVde/OJP/pull/334)
-* **[breaking]** Replaced `TravelClass` with `siri:FareClass` which uses the NeTEx enumeration values. [#354](https://github.com/VDVde/OJP/pull/354)
+* **[breaking]** Replaced `TravelClass` with `siri:FareClass` which uses the NeTEx enumeration values. [#354](https://github.com/VDVde/OJP/pull/354), [#359](https://github.com/VDVde/OJP/pull/359)
 * Reorganised `BaseTripPolicyGroup` so as to align the parameters in `MultiPointTripPolicyGroup` with `TripPolicyGroup` [#333](https://github.com/VDVde/OJP/pull/333)
 * **[breaking]** Updated to SIRI 2.1 using a copy and adapted imports. [#330](https://github.com/VDVde/OJP/pull/330)
 * Done and then largely undone. First change: Renamed `Location` to `Place`: According to TRANSMODEL a "location" is only a geographical position, while a "place" consists of a location and other attributes. This change distinguishes the two terms properly, which were used inconsistently in OJP. In most cases the term "location" was 
@@ -164,7 +165,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
   [#155](https://github.com/VDVde/OJP/pull/155)
 * Changed `CallAtStopStructure`, `LegBoardStructure`, `LegAlightStructure` and `LegIntermediateStructure` to new types
   `ServiceArrivalStructure` and `ServiceDepartureStructure`.
-  [#156](https://github.com/VDVde/OJP/pull/156) 
+  [#156](https://github.com/VDVde/OJP/pull/156), [#367](https://github.com/VDVde/OJP/pull/367)
 * Allowed `TransferLimit` to be `0` to allow requesting a trip without transfers.
   [#7](https://github.com/VDVde/OJP/pull/7)
 * Allowed `NumberOfResultsBefore` and `NumberOfResultsAfter` to be `0` to allow requesting trips only before or after a given time.
