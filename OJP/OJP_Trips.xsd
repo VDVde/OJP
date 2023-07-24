@@ -1766,9 +1766,9 @@
 			<xs:documentation>Trip change request parameter structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ChangeLegRef" type="LegObjectIdType" maxOccurs="unbounded">
+			<xs:element name="ChangeLegRef" type="LegObjectIdType">
 				<xs:annotation>
-					<xs:documentation>Refers to the transfer legs to be changed by the server. Typical usage: either a transfer leg representing an interchange that is considered too short or sharing legs for which the exact times shall be retrieved for a specific operator.</xs:documentation>
+					<xs:documentation>Refers to the leg to be adapted by the server. Typical usage: either a transfer leg representing an interchange that is considered too short or a sharing leg for which the exact times shall be retrieved for a specific operator.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
