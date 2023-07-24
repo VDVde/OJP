@@ -20,7 +20,13 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### Added
 
-* **[breaking]** Additional optimisation methods and filter options for passengers with sensory or mobility restrictions. Modified / clarified behaviour of `NoSingleStep`. Abandoned the option to specify multiple optimisation methods. [#353](https://github.com/VDVde/OJP/pull/353), [#368](https://github.com/VDVde/OJP/pull/368)
+* `OJPTripInfoRequest`: added parameters to search by train number and operator. [#378](https://github.com/VDVde/OJP/pull/378)
+* More examples. [#373](https://github.com/VDVde/OJP/pull/373), [#374](https://github.com/VDVde/OJP/pull/374), [#375](https://github.com/VDVde/OJP/pull/375), [#376](https://github.com/VDVde/OJP/pull/376)
+* Added `FareQuota` to indicate a limited number of remaining tickets. [#371](https://github.com/VDVde/OJP/pull/371)
+* Allow for multiple `BookingNote`s. [#370](https://github.com/VDVde/OJP/pull/370)
+* Added extension points for several parameter structures. [#369](https://github.com/VDVde/OJP/pull/369)
+* Improved mapping to Transmodel by textual descriptions in annotations and additional elements (`LegStructure.Duration`, `TimeWindow`). [#361](https://github.com/VDVde/OJP/pull/361), [#372](https://github.com/VDVde/OJP/pull/372)
+* **[breaking]** Additional optimisation methods and filter options for passengers with sensory or mobility restrictions. Modified / clarified behaviour of `NoSingleStep`. Abandoned the option to specify multiple optimisation methods. [#353](https://github.com/VDVde/OJP/pull/353), [#368](https://github.com/VDVde/OJP/pull/368), [#361](https://github.com/VDVde/OJP/pull/361)
 * **[breaking]** Added formation information from SIRI. It can be requested in `TripInformationRequest`. SIRI data structures to transmit the information: `siri:JourneyFormationGroup`, `siri:DepartureFormationAssignment`, `siri:ArrivalFormationAssignment`, `siri:ServiceInfoGroup`. [#328](https://github.com/VDVde/OJP/pull/328), [#367](https://github.com/VDVde/OJP/pull/367)
 * Added `AreaGeometry` to `LineResultStructure`.  [#337](https://github.com/VDVde/OJP/pull/337)
 * New `OJPErrorStructure` both at the level of the `xDelivery` and at the level of the `xResult`. [#336](https://github.com/VDVde/OJP/pull/336)
@@ -29,6 +35,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 * Added `TripContext` to `TripFareRequestStructure` and `MultiTripFareRequestStructure`.  [#323](https://github.com/VDVde/OJP/pull/323)
 * New `OperatorFilter`and `SystemId` in `TripRefineRequest` to indicate the system to be queried. [#298](https://github.com/VDVde/OJP/pull/298)
 * Added `ExpectedDepartureOccupancy` and `ExpectedDepartureCapacities` (from SIRI) to Legs.  [#264](https://github.com/VDVde/OJP/pull/264)
+* **[breaking]** Intoduced `ServiceSection`, removed `ServiceGroup` in `DatedJourneyStructure`, `ContinuousServiceStructure`. [#263](https://github.com/VDVde/OJP/pull/263)
 * Additional `OptimisationMethod`s for trip planning (`leastDistance`, `environmentalSafety`, `extraSafe`, `extraReliable`, `scenic`, `quietTravel`), new `HikingProfile` and `CyclingProfile`, support for mutiple `OptimisationMethod`s, new filter `IncludeAlternativeOptions` to show second-best routes. [#302](https://github.com/VDVde/OJP/pull/302), [#271](https://github.com/VDVde/OJP/pull/271), [#242](https://github.com/VDVde/OJP/pull/242)
 * New place sorting options (`PlaceSortingGroup`) for `OJPPlaceInformationRequest`. [#301](https://github.com/VDVde/OJP/pull/301), [#287](https://github.com/VDVde/OJP/pull/287)
 * Added switches to request accessibility information (`IncludeAccessFeatureStatus`, `IncludeAccessibilityDetails`) in `OJPTripRequest`. [#291](https://github.com/VDVde/OJP/pull/291)
