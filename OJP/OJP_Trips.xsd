@@ -4,6 +4,8 @@
 		<xs:documentation>OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_datedVehicleJourney.xsd"/>
+	
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
 		<xs:documentation>========================================== TripRequest definitions ==========================================</xs:documentation>
@@ -672,6 +674,7 @@
 			</xs:element>
 			<xs:group ref="TimeWindowGroup"/>
 			<xs:group ref="TransferDurationGroup"/>
+			<xs:group ref="InterchangeGroup"/>
 			<xs:element name="LegDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Text that describes this interchange.</xs:documentation>
@@ -1115,6 +1118,27 @@
 					<xs:documentation>Buffer time as part of the overall interchange duration. Buffer times, f.e. check in/out times, sometimes are mandatory for using certain services as f.e. airplanes, ferries or highspeed trains.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="InterchangeGroup">
+		<xs:annotation>
+			<xs:documentation>Adding interchange elements from SIRI to a transfer leg.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InterchangeCode" type="siri:InterchangeCodeType" minOccurs="0"/>
+			<xs:element name="InterchangeRef" type="siri:InterchangeRefStructure" minOccurs="0"/>
+			<xs:element name="ExtraInterchange" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether this interchange is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not an addition. (since SIRI 2.1)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InterchangeCancellation" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether this interchange is a cancellation of a previously announced interchange (or planned according to the long-term timetable. 
+Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not cancelled. (since SIRI 2.1)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="siri:InterchangePropertyGroup"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:simpleType name="AccessFeatureTypeEnumeration">

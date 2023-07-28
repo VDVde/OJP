@@ -444,6 +444,14 @@
 								<Duration>PT11M</Duration>
 								<WalkDuration>PT3M</WalkDuration>
 								<BufferTime>PT8M</BufferTime>
+								<InterchangeCode>BLS01231</InterchangeCode>
+								<InterchangeRef>1232:12312:11231:</InterchangeRef>
+								<ExtraInterchange>false</ExtraInterchange>
+								<InterchangeCancellation>false</InterchangeCancellation>
+								<siri:StaySeated>false</siri:StaySeated>
+								<siri:Guaranteed>true</siri:Guaranteed>
+								<siri:Advertised>false</siri:Advertised>
+								<Feasibility>seeSituations</Feasibility>
 							</TransferLeg>
 						</Leg>
 						<Leg>
