@@ -478,7 +478,7 @@
 				<xs:annotation>
 					<xs:documentation>Whether this trip may have an undefined delay. Default is false. More details could be provided in a PtSituation.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="Occupancy" type="siri:OccupancyEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>[equivalent to OCCUPANCY in SIRI] passenger load status of a VEHICLE. If omitted, not known.</xs:documentation>
