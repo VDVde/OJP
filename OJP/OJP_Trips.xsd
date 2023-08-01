@@ -1123,8 +1123,11 @@
 			<xs:documentation>Adding interchange elements from SIRI to a transfer leg.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="InterchangeCode" type="siri:InterchangeCodeType" minOccurs="0"/>
-			<xs:element name="InterchangeRef" type="siri:InterchangeRefStructure" minOccurs="0"/>
+			<xs:element name="InterchangeRef" type="siri:InterchangeRefStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Reference of an INTERCHANGE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ExtraInterchange" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether this interchange is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not an addition. (since SIRI 2.1)</xs:documentation>
