@@ -122,6 +122,12 @@
 			<xs:enumeration value="Senior"/>
 			<xs:enumeration value="Youth"/>
 			<xs:enumeration value="Disabled"/>
+			<xs:enumeration value="Dog"/>
+			<xs:enumeration value="Bicycle"/>
+			<xs:enumeration value="Motorcycle"/>
+			<xs:enumeration value="Car"/>
+			<xs:enumeration value="Truck"/>
+			<xs:enumeration value="Group"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
