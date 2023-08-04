@@ -1766,9 +1766,9 @@
 			<xs:documentation>Trip change request parameter structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="ChangeLegRef" type="LegObjectIdType" maxOccurs="unbounded">
+			<xs:element name="ChangeLegRef" type="LegObjectIdType">
 				<xs:annotation>
-					<xs:documentation>Refers to the legs to be changed by the server. </xs:documentation>
+					<xs:documentation>Refers to the leg to be adapted by the server. Typical usage: either a transfer leg representing an interchange that is considered too short or a sharing leg for which the exact times shall be retrieved for a specific operator.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
@@ -1776,9 +1776,9 @@
 					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EarlierArrivalLaterDeparture" type="EarlierArrivalLaterDepartureType" default="laterDeparture" minOccurs="0" maxOccurs="1">
+			<xs:element name="ExtendToFrontOrBack" type="ExtendToFrontOrBackType" default="extendToFront" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Whether the requested journey leg of the passed trip should arrive earlier or depart later to give the passenger more time to make the interchange.</xs:documentation>
+					<xs:documentation>Whether to extend the initial time interval of the ChangeLeg towards the front or the back of the trip (earlier respectively later times).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AdditionalWaitingTime" type="xs:duration" minOccurs="0">
@@ -1786,27 +1786,21 @@
 					<xs:documentation>Absolute time in minutes the passenger wants additionally to make the interchange. If another TransferLeg is needed (e.g. since another quay is used for the found arrival/departure) this is taken into account. If not passed, the next best arrival/departure is requested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="TripContentFilterGroup"/>
-			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
+			<xs:element name="TripParams" type="TripParamStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Parameters for fare calculation. Only used if IncludeFare is set (TripContentFilterGroup).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
+					<xs:documentation>Options to control the search behaviour and response contents. They should be largely the same as used as in the initial OJPTripRequest.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="EarlierArrivalLaterDepartureType">
+	<xs:simpleType name="ExtendToFrontOrBackType">
 		<xs:annotation>
-			<xs:documentation>Prefer earlier arrival or later departure</xs:documentation>
+			<xs:documentation>Prefer earlier or later times.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="laterDeparture"/>
-			<xs:enumeration value="earlierArrival"/>
+			<xs:enumeration value="extendToFront"/>
+			<xs:enumeration value="extendToBack"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
