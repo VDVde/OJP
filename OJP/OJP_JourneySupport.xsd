@@ -98,7 +98,7 @@
 		<xs:sequence>
 			<xs:element name="ServiceSection" type="ServiceSectionStructure" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Service, can be attributed with a sequence of stop sequence intervals with respective service properties (a view of some parts of JOURNEY PART). The standard case is exactly one Service. ServiceSection can be in parallel (e.g. in a COUPLED JOURNEY both VEHICLE NUMBERS can be shown when those are commercial.</xs:documentation>
+					<xs:documentation>Service, can be attributed with a sequence of stop sequence intervals with respective service properties (a view of some parts of JOURNEY PART). The standard case is exactly one Service. ServiceSection can be in parallel (e.g. in a COUPLED JOURNEY both VEHICLE NUMBERS can be shown when those are commercial).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
