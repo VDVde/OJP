@@ -564,8 +564,8 @@
 					<Service>
 						<OperatingDayRef>2023-06-22</OperatingDayRef>
 						<siri:VehicleRef>3178</siri:VehicleRef>
-						<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
 						<ServiceSection>
+							<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
 							<siri:LineRef>92</siri:LineRef>
 							<siri:DirectionRef>1</siri:DirectionRef>
 							<Mode>
@@ -577,6 +577,12 @@
 							<OperatorRefs>
 								<OperatorRef>ViP</OperatorRef>
 							</OperatorRefs>
+							<OriginText>
+								<Text>Potsdam, Kirschallee</Text>
+							</OriginText>
+							<DestinationText>
+								<Text>Potsdam, Bisamkiez</Text>
+							</DestinationText>
 						</ServiceSection>
 						<OriginStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBLaXJzY2hhbGxlZUBYPTEzMDMzNTUwQFk9NTI0MTM4ODBAVT04NkBMPTMwMTA1MTAwMUB8UG90c2RhbSwgS2lyc2NoYWxsZWV8MTMuMDMzNTV8NTIuNDEzODh8ZmFsc2U-</OriginStopPointRef>
 						<OriginText>

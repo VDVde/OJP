@@ -46,8 +46,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2021-08-20</OperatingDayRef>
-									<JourneyRef>9400B:Y:H:j21:14</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>9400B:Y:H:j21:14</JourneyRef>
 										<siri:LineRef>9400B:Y</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -85,6 +85,12 @@
 											<Code>A__WR</Code>
 											<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
 										</Attribute>
+										<OriginText>
+											<Text>St. Petersinsel Nord</Text>
+										</OriginText>
+										<DestinationText>
+											<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>
+										</DestinationText>
 									</ServiceSection>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
 									<DestinationText>

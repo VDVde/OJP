@@ -40,8 +40,8 @@
 					</OnwardCall>
 					<Service>
 						<OperatingDayRef>Unknown</OperatingDayRef>
-						<JourneyRef>91011:A:R:j20:719</JourneyRef>
 						<ServiceSection>
+							<JourneyRef>91011:A:R:j20:719</JourneyRef>
 							<siri:LineRef>91011:A</siri:LineRef>
 							<siri:DirectionRef>R</siri:DirectionRef>
 							<Mode>
@@ -60,6 +60,12 @@
 							<OperatorRefs>
 								<OperatorRef>3849</OperatorRef>
 							</OperatorRefs>
+							<OriginText>
+								<Text xml:lang="de">Zürich, Rehalp</Text>
+							</OriginText>
+							<DestinationText>
+								<Text xml:lang="de">Basel, St-Louis Grenze</Text>
+							</DestinationText>
 						</ServiceSection>
 						<OriginStopPointRef>8591315</OriginStopPointRef>
 						<OriginText>
