@@ -672,6 +672,7 @@
 			</xs:element>
 			<xs:group ref="TimeWindowGroup"/>
 			<xs:group ref="TransferDurationGroup"/>
+			<xs:group ref="InterchangeGroup"/>
 			<xs:element name="LegDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Text that describes this interchange.</xs:documentation>
@@ -1115,6 +1116,30 @@
 					<xs:documentation>Buffer time as part of the overall interchange duration. Buffer times, f.e. check in/out times, sometimes are mandatory for using certain services as f.e. airplanes, ferries or highspeed trains.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="InterchangeGroup">
+		<xs:annotation>
+			<xs:documentation>Adding interchange elements from SIRI to a transfer leg.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InterchangeRef" type="siri:InterchangeRefStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Reference of an INTERCHANGE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtraInterchange" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether this interchange is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not an addition. (since SIRI 2.1)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InterchangeCancellation" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether this interchange is a cancellation of a previously announced interchange (or planned according to the long-term timetable. 
+Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not cancelled. (since SIRI 2.1)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="siri:InterchangePropertyGroup"/>
 		</xs:sequence>
 	</xs:group>
 	<xs:simpleType name="AccessFeatureTypeEnumeration">

@@ -117,6 +117,16 @@
 									<DestinationText>
 										<Text xml:lang="de">Luzern</Text>
 									</DestinationText>
+									<Deviation>false</Deviation>
+									<UndefinedDelay>true</UndefinedDelay>
+									<Occupancy>fewSeatsAvailable</Occupancy>
+									<ReservationNeeded>stop</ReservationNeeded>
+									<SituationFullRefs>
+										<SituationFullRef>
+											<siri:ParticipantRef>SBB</siri:ParticipantRef>
+											<siri:SituationNumber>ch:1:ssiid:11:12312311</siri:SituationNumber>
+										</SituationFullRef>
+									</SituationFullRefs>
 								</Service>
 								<Extension>
 									<TransportTypeName>
