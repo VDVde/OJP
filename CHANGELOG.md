@@ -20,6 +20,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### Added
 
+* New elements `InterchangeRef`, `ExtraInterchange`, `InterchangeCancellation`, `siri:InterchangePropertyGroup` in `TransferLegStructure` and `UndefinedDelay` in `DatedJourneyStructure. [#390](https://github.com/VDVde/OJP/pull/390)
 * `OJPTripInfoRequest`: added parameters to search by train number and operator. [#378](https://github.com/VDVde/OJP/pull/378)
 * More examples. [#373](https://github.com/VDVde/OJP/pull/373), [#374](https://github.com/VDVde/OJP/pull/374), [#375](https://github.com/VDVde/OJP/pull/375), [#376](https://github.com/VDVde/OJP/pull/376)
 * Added `FareQuota` to indicate a limited number of remaining tickets. [#371](https://github.com/VDVde/OJP/pull/371)
