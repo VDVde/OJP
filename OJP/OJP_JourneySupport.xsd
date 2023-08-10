@@ -62,16 +62,14 @@
 			<xs:documentation>Properties of a service combined with a stop sequence interval. In many cases the elements about VEHICLE JOURNEY etc that are bundled in a service in OJP are enough for the whole Leg. However, in some cases enough of these element change within a single leg (usually a PT RIDE LEG), that e.g. the LINE, OPERATOR, FARE SECTION, COMMON SECTION changes. Possible cases are splitting/joining of trains, international trains at the border. Then it becomes necessary to tell at a StopPoint that the information has changed and this results in multiple ServiceSections. This implementation of ServiceSection is a view of some parts of JOURNEY PARTs. Service Sections can exist in parallel (e.g. both coupled JOURNEYS from Bern to Kerzers, one part of the train then goes on to Murten the other to Neuenburg).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-
 			<xs:group ref="StopSequenceIntervalGroup"/>
 			<xs:element ref="JourneyRef"/>
 			<xs:element name="PublicCode" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Public code of the SERVICE JOURNEY (same meaning as in NeTEx). Examples: "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
 				</xs:annotation>
-			</xs:element>				
+			</xs:element>
 			<xs:group ref="ServiceGroup"/>
-
 		</xs:sequence>
 	</xs:complexType>
 	<xs:group name="StopSequenceIntervalGroup">

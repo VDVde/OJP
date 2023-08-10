@@ -1757,14 +1757,14 @@
 										<OperatorRefs>
 											<OperatorRef>ODE</OperatorRef>
 										</OperatorRefs>
-									<OriginStopPointRef>U3xBPTFATz1TIFBvdHNkYW0gSGF1cHRiYWhuaG9mQFg9MTMwNjY3NDdAWT01MjM5MTY2OEBVPTg2QEw9MjMwOTk5NTFAfFMgUG90c2RhbSBIYXVwdGJhaG5ob2Z8MTMuMDY2NzQ3fDUyLjM5MTY2OHx0cnVl</OriginStopPointRef>
-									<OriginText>
-										<Text>S Potsdam Hauptbahnhof</Text>
-									</OriginText>
-									<DestinationStopPointRef>U3xBPTFATz1NYWdkZWJ1cmcgSGJmQFg9MTE2MjY4OTFAWT01MjEzMDM1MkBVPTg2QEw9MTAwODkyMDdAfE1hZ2RlYnVyZyBIYmZ8MTEuNjI2ODkxfDUyLjEzMDM1Mnx0cnVl</DestinationStopPointRef>
-									<DestinationText>
-										<Text>Magdeburg Hbf</Text>
-									</DestinationText>
+										<OriginStopPointRef>U3xBPTFATz1TIFBvdHNkYW0gSGF1cHRiYWhuaG9mQFg9MTMwNjY3NDdAWT01MjM5MTY2OEBVPTg2QEw9MjMwOTk5NTFAfFMgUG90c2RhbSBIYXVwdGJhaG5ob2Z8MTMuMDY2NzQ3fDUyLjM5MTY2OHx0cnVl</OriginStopPointRef>
+										<OriginText>
+											<Text>S Potsdam Hauptbahnhof</Text>
+										</OriginText>
+										<DestinationStopPointRef>U3xBPTFATz1NYWdkZWJ1cmcgSGJmQFg9MTE2MjY4OTFAWT01MjEzMDM1MkBVPTg2QEw9MTAwODkyMDdAfE1hZ2RlYnVyZyBIYmZ8MTEuNjI2ODkxfDUyLjEzMDM1Mnx0cnVl</DestinationStopPointRef>
+										<DestinationText>
+											<Text>Magdeburg Hbf</Text>
+										</DestinationText>
 									</ServiceSection>
 								</Service>
 							</TimedLeg>
