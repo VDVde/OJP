@@ -61,8 +61,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-07-04</OperatingDayRef>
-									<JourneyRef>91008:E:H:j23:206:815</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91008:E:H:j23:206:815</JourneyRef>
 										<siri:LineRef>91008:E</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -127,11 +127,11 @@
 											</Text>
 											<Code>ojp91008EH_InfoCall206_111055_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>8506121</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Romanshorn</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8506121</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Romanshorn</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -205,8 +205,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-07-04</OperatingDayRef>
-									<JourneyRef>91009:E:R:j23:164:18944</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91009:E:R:j23:164:18944</JourneyRef>
 										<siri:LineRef>91009:E</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -231,11 +231,11 @@
 											</Text>
 											<Code>ojp91009ER_InfoCall164_108594_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>8503424</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Schaffhausen</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8503424</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Schaffhausen</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>

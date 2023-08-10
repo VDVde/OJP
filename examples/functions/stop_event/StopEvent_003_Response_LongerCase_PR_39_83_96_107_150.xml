@@ -145,8 +145,8 @@
 						</ThisCall>
 						<Service>
 							<OperatingDayRef>2021-08-17</OperatingDayRef>
-							<JourneyRef>9400B:Y:R:j21:12</JourneyRef>
 							<ServiceSection>
+								<JourneyRef>9400B:Y:R:j21:12</JourneyRef>
 								<siri:LineRef>9400B:Y</siri:LineRef>
 								<siri:DirectionRef>R</siri:DirectionRef>
 								<Mode>
@@ -165,15 +165,15 @@
 								<OperatorRefs>
 									<OperatorRef>182</OperatorRef>
 								</OperatorRefs>
+								<OriginStopPointRef>8504371</OriginStopPointRef>
+								<OriginText>
+									<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>
+								</OriginText>
+								<DestinationStopPointRef>8504577</DestinationStopPointRef>
+								<DestinationText>
+									<Text xml:lang="de">Murten/Morat (Schiff/bateau)</Text>
+								</DestinationText>
 							</ServiceSection>
-							<OriginStopPointRef>8504371</OriginStopPointRef>
-							<OriginText>
-								<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>
-							</OriginText>
-							<DestinationStopPointRef>8504577</DestinationStopPointRef>
-							<DestinationText>
-								<Text xml:lang="de">Murten/Morat (Schiff/bateau)</Text>
-							</DestinationText>
 						</Service>
 						<Extension>
 							<TransportTypeName>
@@ -202,8 +202,8 @@
 						</ThisCall>
 						<Service>
 							<OperatingDayRef>2021-08-17</OperatingDayRef>
-							<JourneyRef>93201:6:H:j21:24</JourneyRef>
 							<ServiceSection>
+								<JourneyRef>93201:6:H:j21:24</JourneyRef>
 								<siri:LineRef>93201:6</siri:LineRef>
 								<siri:DirectionRef>H</siri:DirectionRef>
 								<Mode>
@@ -228,15 +228,15 @@
 									</Text>
 									<Code>A__OM</Code>
 								</Attribute>
+								<OriginStopPointRef>8504356</OriginStopPointRef>
+								<OriginText>
+									<Text xml:lang="de">Ligerz (Talstation)</Text>
+								</OriginText>
+								<DestinationStopPointRef>8504359</DestinationStopPointRef>
+								<DestinationText>
+									<Text xml:lang="de">PrÃªles</Text>
+								</DestinationText>
 							</ServiceSection>
-							<OriginStopPointRef>8504356</OriginStopPointRef>
-							<OriginText>
-								<Text xml:lang="de">Ligerz (Talstation)</Text>
-							</OriginText>
-							<DestinationStopPointRef>8504359</DestinationStopPointRef>
-							<DestinationText>
-								<Text xml:lang="de">PrÃªles</Text>
-							</DestinationText>
 						</Service>
 						<Extension>
 							<TransportTypeName>

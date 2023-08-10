@@ -73,8 +73,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>91013:Y:R:j20:65511</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91013:Y:R:j20:65511</JourneyRef>
 										<siri:LineRef>91013:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -102,11 +102,11 @@
 											</Text>
 											<Code>ojp91013YR_InfoCall65511_105764_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Lugano</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Lugano</Text>
-									</DestinationText>
 									<Unplanned>true</Unplanned>
 								</Service>
 								<Extension>
@@ -175,8 +175,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>910S1:N:H:j20:179</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>910S1:N:H:j20:179</JourneyRef>
 										<siri:LineRef>910S1:N</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -213,11 +213,11 @@
 											</Text>
 											<Code>ojp910S1NH_InfoCall179_107680_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Sursee</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Sursee</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -270,8 +270,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>91IR7:5:R:j20:161</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91IR7:5:R:j20:161</JourneyRef>
 										<siri:LineRef>91IR7:5</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -329,11 +329,11 @@
 											</Text>
 											<Code>ojp91IR75R_InfoCall161_107680_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Luzern</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>

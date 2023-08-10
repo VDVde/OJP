@@ -7651,7 +7651,8 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_250B_20221211.pdf">Orari linea ferroviaria 250 Malles - Tel e servizio sostitutivo autobus B250 fino al 5 giugno</a></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_250B_20221211.pdf">Orari linea ferroviaria 250 Malles - Tel e servizio sostitutivo autobus B250 fino al 5 giugno</a></p>
 <p><strong>Attenzione:</strong> L&rsquo;orario dei bus sostitutivi potr&agrave; variare a seconda delle condizioni del traffico. I tempi di percorrenza possono essere pi&ugrave; lunghi, pertanto i collegamenti non possono essere garantiti!</p>
 <p>La partenza degli autobus avverr&agrave; dalla banchina Z della stazione di Merano (vicino al sottopassaggio).&nbsp;&nbsp;</p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/net/net_me_bhf.pdf">Planimetria marciapiede Z&nbsp;</a></p>
@@ -7663,7 +7664,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 						<PtSituation>
 							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
@@ -7683,7 +7685,8 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
 <p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
 <p>Per maggiori informazioni:</p>
 <p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
@@ -7703,7 +7706,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 						<PtSituation>
 							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
@@ -7723,7 +7727,8 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
 <p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
 <p>Per maggiori informazioni:</p>
 <p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
@@ -7743,7 +7748,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 						<PtSituation>
 							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
@@ -7763,7 +7769,8 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
 <p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
 <p>Per maggiori informazioni:</p>
 <p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
@@ -7783,7 +7790,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 						<PtSituation>
 							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
@@ -7803,7 +7811,8 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
 <p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
 <p>Per maggiori informazioni:</p>
 <p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
@@ -7823,7 +7832,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 						<PtSituation>
 							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
@@ -7843,7 +7853,49 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[ Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
+<p>Per maggiori informazioni:</p>
+<p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
+<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_B250_20230605.pdf">Orario treni dal 5 giugno</a>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Chiusura tratta parziale Merano - Tel fino ad ottobre</strong></p>
+<p>A causa di lavori di adeguamento strutturale delle gallerie ferroviarie di Monte S. Giuseppe e Tel, il tratto ferroviario tra Merano e Tel rimane interrotto. La conclusione dei lavori &egrave; prevista per ottobre 2023.&nbsp;</p>
+<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_250B_20221211.pdf">Orari linea ferroviaria 250 Malles - Tel e servizio sostitutivo autobus B250 fino al 5 giugno</a></p>
+<p><strong>Attenzione:</strong> L&rsquo;orario dei bus sostitutivi potr&agrave; variare a seconda delle condizioni del traffico. I tempi di percorrenza possono essere pi&ugrave; lunghi, pertanto i collegamenti non possono essere garantiti!</p>
+<p>La partenza degli autobus avverr&agrave; dalla banchina Z della stazione di Merano (vicino al sottopassaggio).&nbsp;&nbsp;</p>
+<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/net/net_me_bhf.pdf">Planimetria marciapiede Z&nbsp;</a></p>
+<p><strong>Obliteratrici</strong>&nbsp;</p>
+<p>Sugli autobus sostitutivi non possono essere acquistati o convalidati i biglietti.&nbsp;Per la convalida dei viaggi sono presenti delle obliteratrici sul marciapiede Z della stazione di Merano nonch&eacute; alla stazione di Tel.&nbsp;</p>
+<p><strong>Non &egrave; possibile trasportare le biciclette sugli autobus sostitutivi.&nbsp;</strong></p>
+<p><strong>Trasporto bici</strong> <strong>separato</strong></p>
+<p>&Egrave; a disposizione un trasporto separato per le biciclette (dal 5 giugno nei fine settimana solo su prenotazione).</p>
+<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
+<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
+<p>&nbsp;</p>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
+						</PtSituation>
+						<PtSituation>
+							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
+							<siri:ParticipantRef>STA</siri:ParticipantRef>
+							<siri:SituationNumber>11897_STA</siri:SituationNumber>
+							<siri:Version>55</siri:Version>
+							<siri:Source>
+								<siri:SourceType>other</siri:SourceType>
+							</siri:Source>
+							<siri:ValidityPeriod>
+								<siri:StartTime>2022-10-27T15:00:00Z</siri:StartTime>
+								<siri:EndTime>2023-12-09T22:50:59Z</siri:EndTime>
+							</siri:ValidityPeriod>
+							<siri:UnknownReason>unknown</siri:UnknownReason>
+							<siri:Priority>1</siri:Priority>
+							<siri:ScopeType>line</siri:ScopeType>
+							<siri:Language>it</siri:Language>
+							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
+							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
+							<siri:Detail xml:lang="it">
+								<![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
 <p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
 <p>Per maggiori informazioni:</p>
 <p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
@@ -7863,7 +7915,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 						<PtSituation>
 							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
@@ -7883,7 +7936,8 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
 <p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
 <p>Per maggiori informazioni:</p>
 <p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
@@ -7903,7 +7957,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 						<PtSituation>
 							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
@@ -7923,7 +7978,49 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[iaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
+<p>Per maggiori informazioni:</p>
+<p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
+<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_B250_20230605.pdf">Orario treni dal 5 giugno</a>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Chiusura tratta parziale Merano - Tel fino ad ottobre</strong></p>
+<p>A causa di lavori di adeguamento strutturale delle gallerie ferroviarie di Monte S. Giuseppe e Tel, il tratto ferroviario tra Merano e Tel rimane interrotto. La conclusione dei lavori &egrave; prevista per ottobre 2023.&nbsp;</p>
+<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_250B_20221211.pdf">Orari linea ferroviaria 250 Malles - Tel e servizio sostitutivo autobus B250 fino al 5 giugno</a></p>
+<p><strong>Attenzione:</strong> L&rsquo;orario dei bus sostitutivi potr&agrave; variare a seconda delle condizioni del traffico. I tempi di percorrenza possono essere pi&ugrave; lunghi, pertanto i collegamenti non possono essere garantiti!</p>
+<p>La partenza degli autobus avverr&agrave; dalla banchina Z della stazione di Merano (vicino al sottopassaggio).&nbsp;&nbsp;</p>
+<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/net/net_me_bhf.pdf">Planimetria marciapiede Z&nbsp;</a></p>
+<p><strong>Obliteratrici</strong>&nbsp;</p>
+<p>Sugli autobus sostitutivi non possono essere acquistati o convalidati i biglietti.&nbsp;Per la convalida dei viaggi sono presenti delle obliteratrici sul marciapiede Z della stazione di Merano nonch&eacute; alla stazione di Tel.&nbsp;</p>
+<p><strong>Non &egrave; possibile trasportare le biciclette sugli autobus sostitutivi.&nbsp;</strong></p>
+<p><strong>Trasporto bici</strong> <strong>separato</strong></p>
+<p>&Egrave; a disposizione un trasporto separato per le biciclette (dal 5 giugno nei fine settimana solo su prenotazione).</p>
+<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
+<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
+<p>&nbsp;</p>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
+						</PtSituation>
+						<PtSituation>
+							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
+							<siri:ParticipantRef>STA</siri:ParticipantRef>
+							<siri:SituationNumber>11897_STA</siri:SituationNumber>
+							<siri:Version>55</siri:Version>
+							<siri:Source>
+								<siri:SourceType>other</siri:SourceType>
+							</siri:Source>
+							<siri:ValidityPeriod>
+								<siri:StartTime>2022-10-27T15:00:00Z</siri:StartTime>
+								<siri:EndTime>2023-12-09T22:50:59Z</siri:EndTime>
+							</siri:ValidityPeriod>
+							<siri:UnknownReason>unknown</siri:UnknownReason>
+							<siri:Priority>1</siri:Priority>
+							<siri:ScopeType>line</siri:ScopeType>
+							<siri:Language>it</siri:Language>
+							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
+							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
+							<siri:Detail xml:lang="it">
+								<![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
 <p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
 <p>Per maggiori informazioni:</p>
 <p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
@@ -7943,7 +8040,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 						<PtSituation>
 							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
@@ -7963,46 +8061,8 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[iaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
-<p>Per maggiori informazioni:</p>
-<p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_B250_20230605.pdf">Orario treni dal 5 giugno</a>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>Chiusura tratta parziale Merano - Tel fino ad ottobre</strong></p>
-<p>A causa di lavori di adeguamento strutturale delle gallerie ferroviarie di Monte S. Giuseppe e Tel, il tratto ferroviario tra Merano e Tel rimane interrotto. La conclusione dei lavori &egrave; prevista per ottobre 2023.&nbsp;</p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_250B_20221211.pdf">Orari linea ferroviaria 250 Malles - Tel e servizio sostitutivo autobus B250 fino al 5 giugno</a></p>
-<p><strong>Attenzione:</strong> L&rsquo;orario dei bus sostitutivi potr&agrave; variare a seconda delle condizioni del traffico. I tempi di percorrenza possono essere pi&ugrave; lunghi, pertanto i collegamenti non possono essere garantiti!</p>
-<p>La partenza degli autobus avverr&agrave; dalla banchina Z della stazione di Merano (vicino al sottopassaggio).&nbsp;&nbsp;</p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/net/net_me_bhf.pdf">Planimetria marciapiede Z&nbsp;</a></p>
-<p><strong>Obliteratrici</strong>&nbsp;</p>
-<p>Sugli autobus sostitutivi non possono essere acquistati o convalidati i biglietti.&nbsp;Per la convalida dei viaggi sono presenti delle obliteratrici sul marciapiede Z della stazione di Merano nonch&eacute; alla stazione di Tel.&nbsp;</p>
-<p><strong>Non &egrave; possibile trasportare le biciclette sugli autobus sostitutivi.&nbsp;</strong></p>
-<p><strong>Trasporto bici</strong> <strong>separato</strong></p>
-<p>&Egrave; a disposizione un trasporto separato per le biciclette (dal 5 giugno nei fine settimana solo su prenotazione).</p>
-<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
-<p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
-						</PtSituation>
-						<PtSituation>
-							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
-							<siri:ParticipantRef>STA</siri:ParticipantRef>
-							<siri:SituationNumber>11897_STA</siri:SituationNumber>
-							<siri:Version>55</siri:Version>
-							<siri:Source>
-								<siri:SourceType>other</siri:SourceType>
-							</siri:Source>
-							<siri:ValidityPeriod>
-								<siri:StartTime>2022-10-27T15:00:00Z</siri:StartTime>
-								<siri:EndTime>2023-12-09T22:50:59Z</siri:EndTime>
-							</siri:ValidityPeriod>
-							<siri:UnknownReason>unknown</siri:UnknownReason>
-							<siri:Priority>1</siri:Priority>
-							<siri:ScopeType>line</siri:ScopeType>
-							<siri:Language>it</siri:Language>
-							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
-							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
 <p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
 <p>Per maggiori informazioni:</p>
 <p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
@@ -8022,7 +8082,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 						<PtSituation>
 							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
@@ -8042,7 +8103,8 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
+							<siri:Detail xml:lang="it">
+								<![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
 <p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
 <p>Per maggiori informazioni:</p>
 <p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
@@ -8062,47 +8124,8 @@
 <p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
 <p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
-						</PtSituation>
-						<PtSituation>
-							<siri:CreationTime>2022-10-18T08:20:00Z</siri:CreationTime>
-							<siri:ParticipantRef>STA</siri:ParticipantRef>
-							<siri:SituationNumber>11897_STA</siri:SituationNumber>
-							<siri:Version>55</siri:Version>
-							<siri:Source>
-								<siri:SourceType>other</siri:SourceType>
-							</siri:Source>
-							<siri:ValidityPeriod>
-								<siri:StartTime>2022-10-27T15:00:00Z</siri:StartTime>
-								<siri:EndTime>2023-12-09T22:50:59Z</siri:EndTime>
-							</siri:ValidityPeriod>
-							<siri:UnknownReason>unknown</siri:UnknownReason>
-							<siri:Priority>1</siri:Priority>
-							<siri:ScopeType>line</siri:ScopeType>
-							<siri:Language>it</siri:Language>
-							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
-							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
-<p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
-<p>Per maggiori informazioni:</p>
-<p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_B250_20230605.pdf">Orario treni dal 5 giugno</a>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>Chiusura tratta parziale Merano - Tel fino ad ottobre</strong></p>
-<p>A causa di lavori di adeguamento strutturale delle gallerie ferroviarie di Monte S. Giuseppe e Tel, il tratto ferroviario tra Merano e Tel rimane interrotto. La conclusione dei lavori &egrave; prevista per ottobre 2023.&nbsp;</p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_250B_20221211.pdf">Orari linea ferroviaria 250 Malles - Tel e servizio sostitutivo autobus B250 fino al 5 giugno</a></p>
-<p><strong>Attenzione:</strong> L&rsquo;orario dei bus sostitutivi potr&agrave; variare a seconda delle condizioni del traffico. I tempi di percorrenza possono essere pi&ugrave; lunghi, pertanto i collegamenti non possono essere garantiti!</p>
-<p>La partenza degli autobus avverr&agrave; dalla banchina Z della stazione di Merano (vicino al sottopassaggio).&nbsp;&nbsp;</p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/net/net_me_bhf.pdf">Planimetria marciapiede Z&nbsp;</a></p>
-<p><strong>Obliteratrici</strong>&nbsp;</p>
-<p>Sugli autobus sostitutivi non possono essere acquistati o convalidati i biglietti.&nbsp;Per la convalida dei viaggi sono presenti delle obliteratrici sul marciapiede Z della stazione di Merano nonch&eacute; alla stazione di Tel.&nbsp;</p>
-<p><strong>Non &egrave; possibile trasportare le biciclette sugli autobus sostitutivi.&nbsp;</strong></p>
-<p><strong>Trasporto bici</strong> <strong>separato</strong></p>
-<p>&Egrave; a disposizione un trasporto separato per le biciclette (dal 5 giugno nei fine settimana solo su prenotazione).</p>
-<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Maggiori Info: </span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/20230509_Trasporto_biciclette-estate_2023.pdf">Trasporto biciclette-estate 2023.pdf</a></p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/20230207ridottamobilita_IT.pdf">Avviso per persone a mobilit&agrave; ridotta</a></p>
-<p>&nbsp;</p>
-<p>Ultimo aggiornamento: 30/05/2023</p>]]></siri:Detail>
+<p>Ultimo aggiornamento: 30/05/2023</p>]]>
+							</siri:Detail>
 						</PtSituation>
 					</Situations>
 				</TripResponseContext>
@@ -8143,8 +8166,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
-									<JourneyRef>96131:8:R:j23:60:18060</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>96131:8:R:j23:60:18060</JourneyRef>
 										<siri:LineRef>96131:8</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -8170,11 +8193,11 @@
 											<Code>A__NF</Code>
 											<siri:AccessFacility>palletAccess_lowFloor</siri:AccessFacility>
 										</Attribute>
+										<DestinationStopPointRef>8572113</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Laufen, Bahnhof</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8572113</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Laufen, Bahnhof</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -8243,8 +8266,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
-									<JourneyRef>91003:B:H:j23:253:17379</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91003:B:H:j23:253:17379</JourneyRef>
 										<siri:LineRef>91003:B</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -8269,11 +8292,11 @@
 											</Text>
 											<Code>ojp91003BH_InfoCall253_106576_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>8500218</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Olten</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8500218</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Olten</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -8344,8 +8367,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
-									<JourneyRef>9102N:Y:R:j23:96:9223</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>9102N:Y:R:j23:96:9223</JourneyRef>
 										<siri:LineRef>9102N:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -8389,12 +8412,12 @@
 											</Text>
 											<Code>ojp9102NYR_InfoCall96_106514_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>8503000</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Zürich HB</Text>
+										</DestinationText>
+										<Deviation>true</Deviation>
 									</ServiceSection>
-									<DestinationStopPointRef>8503000</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Zürich HB</Text>
-									</DestinationText>
-									<Deviation>true</Deviation>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -8463,8 +8486,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
-									<JourneyRef>91003:C:R:j23:491:589</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91003:C:R:j23:491:589</JourneyRef>
 										<siri:LineRef>91003:C</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -8516,11 +8539,11 @@
 											</Text>
 											<Code>ojp91003CR_InfoCall491_112214_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>8509000</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Chur</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8509000</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Chur</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -8586,8 +8609,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
-									<JourneyRef>91025:Y:R:j23:33:4307</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91025:Y:R:j23:33:4307</JourneyRef>
 										<siri:LineRef>91025:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -8606,11 +8629,11 @@
 										<OperatorRefs>
 											<OperatorRef>72</OperatorRef>
 										</OperatorRefs>
+										<DestinationStopPointRef>8509253</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">St. Moritz</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8509253</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">St. Moritz</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -8676,8 +8699,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
-									<JourneyRef>9100Z:Y:R:j23:48:1912</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>9100Z:Y:R:j23:48:1912</JourneyRef>
 										<siri:LineRef>9100Z:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -8696,11 +8719,11 @@
 										<OperatorRefs>
 											<OperatorRef>72</OperatorRef>
 										</OperatorRefs>
+										<DestinationStopPointRef>8509268</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Scuol-Tarasp</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8509268</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Scuol-Tarasp</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -8764,8 +8787,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
-									<JourneyRef>96300:4:H:j23:1:92101</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>96300:4:H:j23:1:92101</JourneyRef>
 										<siri:LineRef>96300:4</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -8784,11 +8807,11 @@
 										<OperatorRefs>
 											<OperatorRef>801</OperatorRef>
 										</OperatorRefs>
+										<DestinationStopPointRef>8509873</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Samnaun-Dorf, Post</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8509873</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Samnaun-Dorf, Post</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -9073,8 +9096,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
-									<JourneyRef>apb:84273::H:23a:6</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>apb:84273::H:23a:6</JourneyRef>
 										<siri:LineRef>apb:84273:</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -9090,11 +9113,11 @@
 										<OperatorRefs>
 											<OperatorRef>apb:069</OperatorRef>
 										</OperatorRefs>
+										<DestinationStopPointRef>it:22021:36</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="it">Malles Stazione</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>it:22021:36</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="it">Malles Stazione</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<LineSymbol>
@@ -9209,8 +9232,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
-									<JourneyRef>apb:84272::H:23a:4</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>apb:84272::H:23a:4</JourneyRef>
 										<siri:LineRef>apb:84272:</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -9226,11 +9249,11 @@
 										<OperatorRefs>
 											<OperatorRef>apb:069</OperatorRef>
 										</OperatorRefs>
+										<DestinationStopPointRef>it:22021:75</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="it">Glorenza - Prato</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>it:22021:75</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="it">Glorenza - Prato</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<LineSymbol>
@@ -9371,8 +9394,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
-									<JourneyRef>apb:84271::R:23a:17</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>apb:84271::R:23a:17</JourneyRef>
 										<siri:LineRef>apb:84271:</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -9388,11 +9411,11 @@
 										<OperatorRefs>
 											<OperatorRef>apb:069</OperatorRef>
 										</OperatorRefs>
+										<DestinationStopPointRef>it:22021:2544</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="it">Trafoi</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>it:22021:2544</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="it">Trafoi</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<LineSymbol>

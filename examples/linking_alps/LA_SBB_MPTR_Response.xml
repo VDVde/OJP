@@ -2520,8 +2520,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-19</OperatingDayRef>
-									<JourneyRef>91001:C:H:j23:231:717</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91001:C:H:j23:231:717</JourneyRef>
 										<siri:LineRef>91001:C</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -2586,11 +2586,11 @@
 											</Text>
 											<Code>ojp91001CH_InfoCall231_111055_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>8506302</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">St. Gallen</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8506302</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">St. Gallen</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -2664,8 +2664,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-19</OperatingDayRef>
-									<JourneyRef>91003:F:R:j23:764:571</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91003:F:R:j23:764:571</JourneyRef>
 										<siri:LineRef>91003:F</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -2730,11 +2730,11 @@
 											</Text>
 											<Code>ojp91003FR_InfoCall764_112401_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>8509000</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Chur</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8509000</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Chur</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -2808,8 +2808,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-19</OperatingDayRef>
-									<JourneyRef>91013:A:R:j23:492:3474</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91013:A:R:j23:492:3474</JourneyRef>
 										<siri:LineRef>91013:A</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -2848,11 +2848,11 @@
 											</Text>
 											<Code>ojp91013AR_InfoCall492_112401_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>8509404</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Buchs SG</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>8509404</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Buchs SG</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>

@@ -37,8 +37,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
-									<JourneyRef>1:1161_1:52212_1:313100_</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>1:1161_1:52212_1:313100_</JourneyRef>
 										<siri:LineRef>1:52212</siri:LineRef>
 										<Mode>
 											<PtMode>rail</PtMode>
@@ -46,13 +46,13 @@
 										<PublishedServiceName>
 											<Text>SŽ Z01 15061414 0 (52212)</Text>
 										</PublishedServiceName>
+										<OriginText>
+											<Text>Dobova P1</Text>
+										</OriginText>
+										<DestinationText>
+											<Text>Zidani Most P1</Text>
+										</DestinationText>
 									</ServiceSection>
-									<OriginText>
-										<Text>Dobova P1</Text>
-									</OriginText>
-									<DestinationText>
-										<Text>Zidani Most P1</Text>
-									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>
@@ -82,8 +82,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
-									<JourneyRef>1:1161_1:50337_1:305106_</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>1:1161_1:50337_1:305106_</JourneyRef>
 										<siri:LineRef>1:50337</siri:LineRef>
 										<Mode>
 											<PtMode>rail</PtMode>
@@ -91,13 +91,13 @@
 										<PublishedServiceName>
 											<Text>SŽ Z01 149042278 0 (50337)</Text>
 										</PublishedServiceName>
+										<OriginText>
+											<Text>Zidani Most P1</Text>
+										</OriginText>
+										<DestinationText>
+											<Text>Zagorje</Text>
+										</DestinationText>
 									</ServiceSection>
-									<OriginText>
-										<Text>Zidani Most P1</Text>
-									</OriginText>
-									<DestinationText>
-										<Text>Zagorje</Text>
-									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>

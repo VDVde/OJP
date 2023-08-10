@@ -400,10 +400,9 @@
 									<Order>16</Order>
 								</LegAlight>
 								<Service>
-									<!--XXXERRORXXX-->
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>91002::H:j20:660</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91002::H:j20:660</JourneyRef>
 										<siri:LineRef>91002:</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -434,11 +433,11 @@
 											</Text>
 											<Code>A__NF</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Zürich Tiefenbrunnen, Bahnhof</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Zürich Tiefenbrunnen, Bahnhof</Text>
-									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>
@@ -541,8 +540,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-03-03</OperatingDayRef>
-									<JourneyRef>91011:A:H:j20:255</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91011:A:H:j20:255</JourneyRef>
 										<siri:LineRef>91011:A</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -573,11 +572,11 @@
 											</Text>
 											<Code>A__NF</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Zürich, Rehalp</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Zürich, Rehalp</Text>
-									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>
@@ -931,10 +930,9 @@
 									<Order>2</Order>
 								</LegAlight>
 								<Service>
-									<!--XXXERRORXXX-->
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>92080::R:j20:1384</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>92080::R:j20:1384</JourneyRef>
 										<siri:LineRef>92080:</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -965,11 +963,11 @@
 											</Text>
 											<Code>A__NF</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Zürich Oerlikon, Bahnhof Nord</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Zürich Oerlikon, Bahnhof Nord</Text>
-									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>
@@ -1153,8 +1151,8 @@
 								<Service>
 									<!--XXXERRORXXX-->
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>91S12:Z:H:j20:77</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91S12:Z:H:j20:77</JourneyRef>
 										<siri:LineRef>91S12:Z</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -1191,11 +1189,11 @@
 											</Text>
 											<Code>ojp91S12ZH_InfoCall77_106220_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Schaffhausen</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Schaffhausen</Text>
-									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>
@@ -1400,8 +1398,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-03-03</OperatingDayRef>
-									<JourneyRef>91011:A:H:j20:255</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91011:A:H:j20:255</JourneyRef>
 										<siri:LineRef>91011:A</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -1432,11 +1430,11 @@
 											</Text>
 											<Code>A__NF</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Zürich, Rehalp</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Zürich, Rehalp</Text>
-									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>

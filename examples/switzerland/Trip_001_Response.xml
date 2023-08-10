@@ -563,8 +563,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:210</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>910DG:Y:R:j20:210</JourneyRef>
 										<siri:LineRef>910DG:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -601,11 +601,11 @@
 											</Text>
 											<Code>A__OM</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Luzern</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -659,8 +659,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:144</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>910DG:Y:R:j20:144</JourneyRef>
 										<siri:LineRef>910DG:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -697,11 +697,11 @@
 											</Text>
 											<Code>A__OM</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Luzern</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -755,8 +755,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:149</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>910DG:Y:R:j20:149</JourneyRef>
 										<siri:LineRef>910DG:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -793,11 +793,11 @@
 											</Text>
 											<Code>A__OM</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Luzern</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -851,8 +851,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:157</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>910DG:Y:R:j20:157</JourneyRef>
 										<siri:LineRef>910DG:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -889,11 +889,11 @@
 											</Text>
 											<Code>A__OM</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Luzern</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -947,8 +947,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2020-09-30</OperatingDayRef>
-									<JourneyRef>910DG:Y:R:j20:167</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>910DG:Y:R:j20:167</JourneyRef>
 										<siri:LineRef>910DG:Y</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -985,11 +985,11 @@
 											</Text>
 											<Code>A__OM</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Luzern</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Luzern</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>

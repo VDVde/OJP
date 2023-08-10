@@ -174,8 +174,8 @@
 								<Service>
 									<OperatingDayRef>2023-05-01</OperatingDayRef>
 									<siri:VehicleRef>462</siri:VehicleRef>
-									<JourneyRef>MXw0MzE2MXwwfDgzfDEwNTIwMjM-</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>MXw0MzE2MXwwfDgzfDEwNTIwMjM-</JourneyRef>
 										<siri:LineRef>unknown</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -187,15 +187,15 @@
 										<OperatorRefs>
 											<OperatorRef>TRE</OperatorRef>
 										</OperatorRefs>
+										<OriginStopPointRef>U3xBPTFATz1NSUxBTk8sIFN0YXppb25lIENlbnRyYWxlQFg9OTIwNDE5OUBZPTQ1NDg2MTY0QFU9ODNATD0yOTUwNEB8TUlMQU5PLCBTdGF6aW9uZSBDZW50cmFsZXw5LjIwNDE5OXw0NS40ODYxNjR8ZmFsc2U-</OriginStopPointRef>
+										<OriginText>
+											<Text>MILANO, Stazione Centrale</Text>
+										</OriginText>
+										<DestinationStopPointRef>U3xBPTFATz1DT01PLCBTLiBHaW92YW5uaSwgU3RhemlvbmVAWD05MDczMDE5QFk9NDU4MDg4MTNAVT04M0BMPTk1NjNAfENPTU8sIFMuIEdpb3Zhbm5pLCBTdGF6aW9uZXw5LjA3MzAxOXw0NS44MDg4MTN8ZmFsc2U-</DestinationStopPointRef>
+										<DestinationText>
+											<Text>COMO, S. Giovanni, Stazione</Text>
+										</DestinationText>
 									</ServiceSection>
-									<OriginStopPointRef>U3xBPTFATz1NSUxBTk8sIFN0YXppb25lIENlbnRyYWxlQFg9OTIwNDE5OUBZPTQ1NDg2MTY0QFU9ODNATD0yOTUwNEB8TUlMQU5PLCBTdGF6aW9uZSBDZW50cmFsZXw5LjIwNDE5OXw0NS40ODYxNjR8ZmFsc2U-</OriginStopPointRef>
-									<OriginText>
-										<Text>MILANO, Stazione Centrale</Text>
-									</OriginText>
-									<DestinationStopPointRef>U3xBPTFATz1DT01PLCBTLiBHaW92YW5uaSwgU3RhemlvbmVAWD05MDczMDE5QFk9NDU4MDg4MTNAVT04M0BMPTk1NjNAfENPTU8sIFMuIEdpb3Zhbm5pLCBTdGF6aW9uZXw5LjA3MzAxOXw0NS44MDg4MTN8ZmFsc2U-</DestinationStopPointRef>
-									<DestinationText>
-										<Text>COMO, S. Giovanni, Stazione</Text>
-									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>

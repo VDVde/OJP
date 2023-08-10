@@ -210,8 +210,8 @@
 						</OnwardCall>
 						<Service>
 							<OperatingDayRef>Unknown</OperatingDayRef>
-							<JourneyRef>91A01:D:R:j20:39</JourneyRef>
 							<ServiceSection>
+								<JourneyRef>91A01:D:R:j20:39</JourneyRef>
 								<siri:LineRef>91A01:D</siri:LineRef>
 								<siri:DirectionRef>R</siri:DirectionRef>
 								<Mode>
@@ -236,15 +236,15 @@
 									</Text>
 									<Code>A__MO</Code>
 								</Attribute>
+								<OriginStopPointRef>8721202</OriginStopPointRef>
+								<OriginText>
+									<Text xml:lang="de">Strasbourg</Text>
+								</OriginText>
+								<DestinationStopPointRef>8721457</DestinationStopPointRef>
+								<DestinationText>
+									<Text xml:lang="de">Molsheim</Text>
+								</DestinationText>
 							</ServiceSection>
-							<OriginStopPointRef>8721202</OriginStopPointRef>
-							<OriginText>
-								<Text xml:lang="de">Strasbourg</Text>
-							</OriginText>
-							<DestinationStopPointRef>8721457</DestinationStopPointRef>
-							<DestinationText>
-								<Text xml:lang="de">Molsheim</Text>
-							</DestinationText>
 						</Service>
 						<Extension>
 							<TransportTypeName>
@@ -345,8 +345,8 @@
 						</ThisCall>
 						<Service>
 							<OperatingDayRef>Unknown</OperatingDayRef>
-							<JourneyRef>9117.::R:j20:79</JourneyRef>
 							<ServiceSection>
+								<JourneyRef>9117.::R:j20:79</JourneyRef>
 								<siri:LineRef>9117.:</siri:LineRef>
 								<siri:DirectionRef>R</siri:DirectionRef>
 								<Mode>
@@ -371,15 +371,15 @@
 									</Text>
 									<Code>A__MO</Code>
 								</Attribute>
+								<OriginStopPointRef>8721428</OriginStopPointRef>
+								<OriginText>
+									<Text xml:lang="de">Obernai</Text>
+								</OriginText>
+								<DestinationStopPointRef>8721202</DestinationStopPointRef>
+								<DestinationText>
+									<Text xml:lang="de">Strasbourg</Text>
+								</DestinationText>
 							</ServiceSection>
-							<OriginStopPointRef>8721428</OriginStopPointRef>
-							<OriginText>
-								<Text xml:lang="de">Obernai</Text>
-							</OriginText>
-							<DestinationStopPointRef>8721202</DestinationStopPointRef>
-							<DestinationText>
-								<Text xml:lang="de">Strasbourg</Text>
-							</DestinationText>
 						</Service>
 						<Extension>
 							<TransportTypeName>

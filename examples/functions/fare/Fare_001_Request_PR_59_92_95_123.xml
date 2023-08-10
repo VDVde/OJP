@@ -88,14 +88,11 @@
 										<OriginText>
 											<Text>St. Petersinsel Nord</Text>
 										</OriginText>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
 										<DestinationText>
 											<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>
 										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>
-									</DestinationText>
 									<Extension>
 										<!-- V1.1, PR #92 - Illustration of new Extension -->
 										<TransportTypeName>

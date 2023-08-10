@@ -217,8 +217,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
 										<siri:LineRef>91S24:Z</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -255,11 +255,11 @@
 											</Text>
 											<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Schaffhausen</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Schaffhausen</Text>
-									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>
@@ -363,8 +363,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>91S12:Z:H:j20:73</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91S12:Z:H:j20:73</JourneyRef>
 										<siri:LineRef>91S12:Z</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -389,11 +389,11 @@
 											</Text>
 											<Code>A__OM</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Wil SG</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Wil SG</Text>
-									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>
@@ -516,8 +516,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
 										<siri:LineRef>91S24:Z</siri:LineRef>
 										<siri:DirectionRef>R</siri:DirectionRef>
 										<Mode>
@@ -554,11 +554,11 @@
 											</Text>
 											<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Schaffhausen</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Schaffhausen</Text>
-									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>

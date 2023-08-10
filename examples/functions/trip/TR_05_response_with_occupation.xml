@@ -105,8 +105,8 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<JourneyRef>91011:A:H:j20:255</JourneyRef>
 									<ServiceSection>
+										<JourneyRef>91011:A:H:j20:255</JourneyRef>
 										<siri:LineRef>91011:A</siri:LineRef>
 										<siri:DirectionRef>H</siri:DirectionRef>
 										<Mode>
@@ -137,11 +137,11 @@
 											</Text>
 											<Code>A__NF</Code>
 										</Attribute>
+										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+										<DestinationText>
+											<Text xml:lang="de">Zürich, Rehalp</Text>
+										</DestinationText>
 									</ServiceSection>
-									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-									<DestinationText>
-										<Text xml:lang="de">Zürich, Rehalp</Text>
-									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>

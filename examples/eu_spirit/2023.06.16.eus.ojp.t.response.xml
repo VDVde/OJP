@@ -1578,14 +1578,6 @@
 											<Text>S Potsdam Hauptbahnhof</Text>
 										</DestinationText>
 									</ServiceSection>
-									<OriginStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA1MDcyOEBZPTUyNDE0MDUxQFU9ODZATD0yMzAyMDYwMUB8UG90c2RhbSwgQ2FtcHVzIEZhY2hob2Noc2NodWxlfDEzLjA1MDcyOHw1Mi40MTQwNTF8ZmFsc2U-</OriginStopPointRef>
-									<OriginText>
-										<Text>Potsdam, Campus Fachhochschule</Text>
-									</OriginText>
-									<DestinationStopPointRef>U3xBPTFATz1TIFBvdHNkYW0gSGF1cHRiYWhuaG9mQFg9MTMwNjYzNjlAWT01MjM5MDkzMUBVPTg2QEw9MjMwOTk5MDFAfFMgUG90c2RhbSBIYXVwdGJhaG5ob2Z8MTMuMDY2MzY5fDUyLjM5MDkzMXx0cnVl</DestinationStopPointRef>
-									<DestinationText>
-										<Text>S Potsdam Hauptbahnhof</Text>
-									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>
@@ -1765,13 +1757,6 @@
 										<OperatorRefs>
 											<OperatorRef>ODE</OperatorRef>
 										</OperatorRefs>
-										<OriginText>
-											<Text>S Potsdam Hauptbahnhof</Text>
-										</OriginText>
-										<DestinationText>
-											<Text>Magdeburg Hbf</Text>
-										</DestinationText>
-									</ServiceSection>
 									<OriginStopPointRef>U3xBPTFATz1TIFBvdHNkYW0gSGF1cHRiYWhuaG9mQFg9MTMwNjY3NDdAWT01MjM5MTY2OEBVPTg2QEw9MjMwOTk5NTFAfFMgUG90c2RhbSBIYXVwdGJhaG5ob2Z8MTMuMDY2NzQ3fDUyLjM5MTY2OHx0cnVl</OriginStopPointRef>
 									<OriginText>
 										<Text>S Potsdam Hauptbahnhof</Text>
@@ -1780,6 +1765,7 @@
 									<DestinationText>
 										<Text>Magdeburg Hbf</Text>
 									</DestinationText>
+									</ServiceSection>
 								</Service>
 							</TimedLeg>
 						</Leg>

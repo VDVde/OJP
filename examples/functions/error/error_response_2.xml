@@ -60,21 +60,15 @@
 							<OperatorRefs>
 								<OperatorRef>3849</OperatorRef>
 							</OperatorRefs>
+							<OriginStopPointRef>8591315</OriginStopPointRef>
 							<OriginText>
 								<Text xml:lang="de">Zürich, Rehalp</Text>
 							</OriginText>
+							<DestinationStopPointRef>8591049</DestinationStopPointRef>
 							<DestinationText>
 								<Text xml:lang="de">Basel, St-Louis Grenze</Text>
 							</DestinationText>
 						</ServiceSection>
-						<OriginStopPointRef>8591315</OriginStopPointRef>
-						<OriginText>
-							<Text xml:lang="de">Zürich, Rehalp</Text>
-						</OriginText>
-						<DestinationStopPointRef>8591049</DestinationStopPointRef>
-						<DestinationText>
-							<Text xml:lang="de">Basel, St-Louis Grenze</Text>
-						</DestinationText>
 					</Service>
 					<JourneyTrack>
 						<TrackSection>

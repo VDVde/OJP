@@ -323,21 +323,15 @@
 								<OperatorRefs>
 									<OperatorRef>ViP</OperatorRef>
 								</OperatorRefs>
+								<OriginStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA1MDcyOEBZPTUyNDE0MDUxQFU9ODZATD0yMzAyMDYwMUB8UG90c2RhbSwgQ2FtcHVzIEZhY2hob2Noc2NodWxlfDEzLjA1MDcyOHw1Mi40MTQwNTF8ZmFsc2U-</OriginStopPointRef>
 								<OriginText>
 									<Text>Potsdam, Campus Fachhochschule</Text>
 								</OriginText>
+								<DestinationStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBCaXNhbWtpZXpAWD0xMzEwMDgyNUBZPTUyMzczMzM5QFU9ODZATD0yMzAwMzQwMUB8UG90c2RhbSwgQmlzYW1raWV6fDEzLjEwMDgyNXw1Mi4zNzMzMzl8ZmFsc2U-</DestinationStopPointRef>
 								<DestinationText>
 									<Text>Potsdam, Bisamkiez</Text>
 								</DestinationText>
 							</ServiceSection>
-							<OriginStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA1MDcyOEBZPTUyNDE0MDUxQFU9ODZATD0yMzAyMDYwMUB8UG90c2RhbSwgQ2FtcHVzIEZhY2hob2Noc2NodWxlfDEzLjA1MDcyOHw1Mi40MTQwNTF8ZmFsc2U-</OriginStopPointRef>
-							<OriginText>
-								<Text>Potsdam, Campus Fachhochschule</Text>
-							</OriginText>
-							<DestinationStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBCaXNhbWtpZXpAWD0xMzEwMDgyNUBZPTUyMzczMzM5QFU9ODZATD0yMzAwMzQwMUB8UG90c2RhbSwgQmlzYW1raWV6fDEzLjEwMDgyNXw1Mi4zNzMzMzl8ZmFsc2U-</DestinationStopPointRef>
-							<DestinationText>
-								<Text>Potsdam, Bisamkiez</Text>
-							</DestinationText>
 						</Service>
 					</StopEvent>
 				</StopEventResult>

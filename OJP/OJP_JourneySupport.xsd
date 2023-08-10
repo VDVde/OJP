@@ -154,9 +154,9 @@
 					<xs:documentation>Note or service attribute.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="ServiceOriginGroup"/>
+			<xs:group ref="ServiceOriginGroup" minOccurs="0"/>
 			<xs:group ref="siri:ServiceInfoGroup"/>
-			<xs:group ref="ServiceDestinationGroup"/>
+			<xs:group ref="ServiceDestinationGroup" minOccurs="0"/>
 			<xs:group ref="ServiceStatusGroup"/>
 		</xs:sequence>
 	</xs:group>
