@@ -187,9 +187,9 @@
 					<xs:documentation>Last stop of vehicle journey; destination stop point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DestinationText" type="InternationalTextStructure">
+			<xs:element name="DestinationText" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Label for last stop.</xs:documentation>
+					<xs:documentation>Label for last stop. Should be set for classic public transport. Demand responsive and newer modes of operation will often not have a destination text.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -266,13 +266,11 @@
 				<xs:group ref="DatedJourneyGroup"/>
 				<xs:group ref="PrivateServiceGroup"/>
 			</xs:choice>
-			<xs:group ref="ServiceOriginGroup" minOccurs="0"/>
 			<xs:group ref="siri:ServiceInfoGroup" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The group contains the VehicleFeatureRef from SIRI that are used to describe some characteristics of vehicles and don't rely on FORMATION.</xs:documentation>
 				</xs:annotation>
 			</xs:group>
-			<xs:group ref="ServiceDestinationGroup"/>
 			<xs:group ref="ServiceStatusGroup"/>
 			<xs:group ref="siri:JourneyFormationGroup">
 				<xs:annotation>
