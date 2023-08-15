@@ -29,6 +29,7 @@
 				<FareResult>
 					<Id>1231231112231</Id>
 					<TripFareResult>
+						<TripId>192391231</TripId>
 						<FromLegIdRef>1</FromLegIdRef>
 						<ToLegIdRef>1</ToLegIdRef>
 						<FareProduct>
@@ -105,6 +106,7 @@
 				<FareResult>
 					<Id>123123123</Id>
 					<TripFareResult>
+						<TripId>192391231</TripId>
 						<FromLegIdRef>2</FromLegIdRef>
 						<ToLegIdRef>2</ToLegIdRef>
 						<FareProduct>

@@ -697,7 +697,7 @@
 	</xs:group>
 	<xs:complexType name="TripFareResultStructure">
 		<xs:annotation>
-			<xs:documentation>Structure of a Single Trip Fare Request result</xs:documentation>
+			<xs:documentation>Structure of a Single Trip Fare Request result. This may cover the whole trip or only the part the service can answer. If only partial answers can be delivered, then this must be indicated in the error condition (as a warning). For a given trip multiple FareResults may need to be combined to get the whole tariff. A typical example may be classic public transport and a sharing leg. The client must understand that some legs: e.g. TransferLegs and a walking ContinuousLeg will never have a price. The service may include them in one of the tickets. If the whole trip is for free, then a TripFareResult with a price of 0 is expected. It is possible to have combined FareResults (e.g. for a bundle) and in addition price each leg individually.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
@@ -705,7 +705,12 @@
 					<xs:documentation>Result-specific error messages.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="LegRangeGroup" minOccurs="0"/>
+			<xs:element name="TripId" type="TripObjectIdType" minOccurs="0"/>
+			<xs:group ref="LegRangeGroup" minOccurs="0"  maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>A ticket may be valid for multiple non-consequtive legs. TransferLegs and ContinuousLegs without a tariff may be either included or ignored. If the tariff depends on not having a ContinuousLeg e.g. with sharing in the middle, then the server must decide, if it wants to provide more than one TripFareResult.</xs:documentation>
+				</xs:annotation>
+			</xs:group>
 			<xs:element name="PassedZones" type="TariffZoneListInAreaStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The sequence of passed fare zones.</xs:documentation>
