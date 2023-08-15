@@ -25,15 +25,15 @@
 							<siri:Longitude>11.22038</siri:Longitude>
 							<siri:Latitude>46.55428</siri:Latitude>
 						</GeoPosition>
+						<Mode>
+							<PtMode>bus</PtMode>
+						</Mode>
+						<Mode>
+							<PtMode>rail</PtMode>
+						</Mode>
 					</Place>
 					<Complete>true</Complete>
 					<Probability>0.975000024</Probability>
-					<Mode>
-						<PtMode>bus</PtMode>
-					</Mode>
-					<Mode>
-						<PtMode>rail</PtMode>
-					</Mode>
 				</PlaceResult>
 			</OJPLocationInformationDelivery>
 		</siri:ServiceDelivery>
