@@ -26,21 +26,21 @@
 							<siri:Longitude>8.55408</siri:Longitude>
 							<siri:Latitude>47.36488</siri:Latitude>
 						</GeoPosition>
+						<Mode>
+							<PtMode>rail</PtMode>
+							<siri:RailSubmode>unknown</siri:RailSubmode>
+						</Mode>
+						<Mode>
+							<PtMode>tram</PtMode>
+							<siri:TramSubmode>cityTram</siri:TramSubmode>
+						</Mode>
+						<Mode>
+							<PtMode>bus</PtMode>
+							<siri:BusSubmode>localBusService</siri:BusSubmode>
+						</Mode>
 					</Place>
 					<Complete>true</Complete>
 					<Probability>1</Probability>
-					<Mode>
-						<PtMode>rail</PtMode>
-						<siri:RailSubmode>unknown</siri:RailSubmode>
-					</Mode>
-					<Mode>
-						<PtMode>tram</PtMode>
-						<siri:TramSubmode>cityTram</siri:TramSubmode>
-					</Mode>
-					<Mode>
-						<PtMode>bus</PtMode>
-						<siri:BusSubmode>localBusService</siri:BusSubmode>
-					</Mode>
 				</PlaceResult>
 			</OJPLocationInformationDelivery>
 		</siri:ServiceDelivery>
