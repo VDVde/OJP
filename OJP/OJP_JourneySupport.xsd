@@ -101,7 +101,7 @@
 				<xs:annotation>
 					<xs:documentation>Public code of the SERVICE JOURNEY (same meaning as in NeTEx). Examples: "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 			<xs:group ref="siri:LineDirectionGroup"/>
 			<xs:element name="Mode" type="ModeStructure">
 				<xs:annotation>

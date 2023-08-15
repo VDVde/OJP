@@ -1558,24 +1558,24 @@
 								<Service>
 									<OperatingDayRef>2023-06-22</OperatingDayRef>
 									<siri:VehicleRef>3178</siri:VehicleRef>
-										<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
-										<siri:LineRef>92</siri:LineRef>
-										<siri:DirectionRef>1</siri:DirectionRef>
-										<Mode>
-											<PtMode>tramService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>92</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>ViP</OperatorRef>
-										</OperatorRefs>
-										<OriginText>
-											<Text>Potsdam, Campus Fachhochschule</Text>
-										</OriginText>
-										<DestinationText>
-											<Text>S Potsdam Hauptbahnhof</Text>
-										</DestinationText>
+									<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
+									<siri:LineRef>92</siri:LineRef>
+									<siri:DirectionRef>1</siri:DirectionRef>
+									<Mode>
+										<PtMode>tramService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>92</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>ViP</OperatorRef>
+									</OperatorRefs>
+									<OriginText>
+										<Text>Potsdam, Campus Fachhochschule</Text>
+									</OriginText>
+									<DestinationText>
+										<Text>S Potsdam Hauptbahnhof</Text>
+									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>
@@ -1742,26 +1742,26 @@
 								<Service>
 									<OperatingDayRef>2023-06-22</OperatingDayRef>
 									<siri:VehicleRef>333</siri:VehicleRef>
-										<JourneyRef>MXw3MTQ5MDN8Mnw4NnwyMjA2MjAyMw--</JourneyRef>
-										<siri:LineRef>RE1</siri:LineRef>
-										<siri:DirectionRef>2</siri:DirectionRef>
-										<Mode>
-											<PtMode>railwayService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>RE1</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>ODE</OperatorRef>
-										</OperatorRefs>
-										<OriginStopPointRef>U3xBPTFATz1TIFBvdHNkYW0gSGF1cHRiYWhuaG9mQFg9MTMwNjY3NDdAWT01MjM5MTY2OEBVPTg2QEw9MjMwOTk5NTFAfFMgUG90c2RhbSBIYXVwdGJhaG5ob2Z8MTMuMDY2NzQ3fDUyLjM5MTY2OHx0cnVl</OriginStopPointRef>
-										<OriginText>
-											<Text>S Potsdam Hauptbahnhof</Text>
-										</OriginText>
-										<DestinationStopPointRef>U3xBPTFATz1NYWdkZWJ1cmcgSGJmQFg9MTE2MjY4OTFAWT01MjEzMDM1MkBVPTg2QEw9MTAwODkyMDdAfE1hZ2RlYnVyZyBIYmZ8MTEuNjI2ODkxfDUyLjEzMDM1Mnx0cnVl</DestinationStopPointRef>
-										<DestinationText>
-											<Text>Magdeburg Hbf</Text>
-										</DestinationText>
+									<JourneyRef>MXw3MTQ5MDN8Mnw4NnwyMjA2MjAyMw--</JourneyRef>
+									<siri:LineRef>RE1</siri:LineRef>
+									<siri:DirectionRef>2</siri:DirectionRef>
+									<Mode>
+										<PtMode>railwayService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>RE1</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>ODE</OperatorRef>
+									</OperatorRefs>
+									<OriginStopPointRef>U3xBPTFATz1TIFBvdHNkYW0gSGF1cHRiYWhuaG9mQFg9MTMwNjY3NDdAWT01MjM5MTY2OEBVPTg2QEw9MjMwOTk5NTFAfFMgUG90c2RhbSBIYXVwdGJhaG5ob2Z8MTMuMDY2NzQ3fDUyLjM5MTY2OHx0cnVl</OriginStopPointRef>
+									<OriginText>
+										<Text>S Potsdam Hauptbahnhof</Text>
+									</OriginText>
+									<DestinationStopPointRef>U3xBPTFATz1NYWdkZWJ1cmcgSGJmQFg9MTE2MjY4OTFAWT01MjEzMDM1MkBVPTg2QEw9MTAwODkyMDdAfE1hZ2RlYnVyZyBIYmZ8MTEuNjI2ODkxfDUyLjEzMDM1Mnx0cnVl</DestinationStopPointRef>
+									<DestinationText>
+										<Text>Magdeburg Hbf</Text>
+									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>
