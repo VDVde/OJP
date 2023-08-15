@@ -1558,7 +1558,6 @@
 								<Service>
 									<OperatingDayRef>2023-06-22</OperatingDayRef>
 									<siri:VehicleRef>3178</siri:VehicleRef>
-									<ServiceSection>
 										<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
 										<siri:LineRef>92</siri:LineRef>
 										<siri:DirectionRef>1</siri:DirectionRef>
@@ -1577,7 +1576,6 @@
 										<DestinationText>
 											<Text>S Potsdam Hauptbahnhof</Text>
 										</DestinationText>
-									</ServiceSection>
 								</Service>
 							</TimedLeg>
 						</Leg>
@@ -1744,7 +1742,6 @@
 								<Service>
 									<OperatingDayRef>2023-06-22</OperatingDayRef>
 									<siri:VehicleRef>333</siri:VehicleRef>
-									<ServiceSection>
 										<JourneyRef>MXw3MTQ5MDN8Mnw4NnwyMjA2MjAyMw--</JourneyRef>
 										<siri:LineRef>RE1</siri:LineRef>
 										<siri:DirectionRef>2</siri:DirectionRef>
@@ -1765,7 +1762,6 @@
 										<DestinationText>
 											<Text>Magdeburg Hbf</Text>
 										</DestinationText>
-									</ServiceSection>
 								</Service>
 							</TimedLeg>
 						</Leg>

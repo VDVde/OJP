@@ -105,43 +105,41 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<ServiceSection>
-										<JourneyRef>91011:A:H:j20:255</JourneyRef>
-										<siri:LineRef>91011:A</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>tram</PtMode>
-											<siri:TramSubmode>cityTram</siri:TramSubmode>
-											<Name>
-												<Text xml:lang="de">Tram</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">T</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>11</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>3849</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Niederflureinstieg</Text>
-											</Text>
-											<Code>A__NF</Code>
-										</Attribute>
-										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-										<DestinationText>
-											<Text xml:lang="de">Zürich, Rehalp</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>91011:A:H:j20:255</JourneyRef>
+									<siri:LineRef>91011:A</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>tram</PtMode>
+										<siri:TramSubmode>cityTram</siri:TramSubmode>
+										<Name>
+											<Text xml:lang="de">Tram</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">T</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text>11</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>3849</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+										</Text>
+										<Code>A__OM</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Niederflureinstieg</Text>
+										</Text>
+										<Code>A__NF</Code>
+									</Attribute>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Zürich, Rehalp</Text>
+									</DestinationText>
 								</Service>
 								<Extension>
 									<TransportTypeName>

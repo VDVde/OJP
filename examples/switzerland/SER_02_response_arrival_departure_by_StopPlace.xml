@@ -409,7 +409,6 @@
 						</OnwardCall>
 						<Service>
 							<OperatingDayRef>Unknown</OperatingDayRef>
-							<ServiceSection>
 								<JourneyRef>91008::H:j20:42</JourneyRef>
 								<siri:LineRef>91008:</siri:LineRef>
 								<siri:DirectionRef>H</siri:DirectionRef>
@@ -443,7 +442,6 @@
 								<DestinationText>
 									<Text xml:lang="de">Zürich, Klusplatz</Text>
 								</DestinationText>
-							</ServiceSection>
 						</Service>
 						<Extension>
 							<TransportTypeName>
@@ -964,7 +962,6 @@
 						</OnwardCall>
 						<Service>
 							<OperatingDayRef>Unknown</OperatingDayRef>
-							<ServiceSection>
 								<JourneyRef>91011:A:R:j20:507</JourneyRef>
 								<siri:LineRef>91011:A</siri:LineRef>
 								<siri:DirectionRef>R</siri:DirectionRef>
@@ -998,7 +995,6 @@
 								<DestinationText>
 									<Text xml:lang="de">Zürich, Auzelg</Text>
 								</DestinationText>
-							</ServiceSection>
 						</Service>
 						<Extension>
 							<TransportTypeName>

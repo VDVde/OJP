@@ -46,53 +46,51 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2021-08-20</OperatingDayRef>
-									<ServiceSection>
-										<JourneyRef>9400B:Y:H:j21:14</JourneyRef>
-										<siri:LineRef>9400B:Y</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>water</PtMode>
-											<siri:WaterSubmode>unknown</siri:WaterSubmode>
-											<Name>
-												<Text xml:lang="de">Schiff</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">BAT</Text>
-											</ShortName>
-										</Mode>
-										<ProductCategory>
-											<!-- V1.1, PR #95 - Illustration of ProductCategory -->
-											<Name>
-												<Text>Dampfschiff</Text>
-											</Name>
-										</ProductCategory>
-										<PublishedServiceName>
-											<Text>BAT</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>182</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Nur 2. Klasse</Text>
-											</Text>
-											<Code>A___2</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Restaurant</Text>
-											</Text>
-											<Code>A__WR</Code>
-											<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
-										</Attribute>
-										<OriginText>
-											<Text>St. Petersinsel Nord</Text>
-										</OriginText>
-										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-										<DestinationText>
-											<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>9400B:Y:H:j21:14</JourneyRef>
+									<siri:LineRef>9400B:Y</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>water</PtMode>
+										<siri:WaterSubmode>unknown</siri:WaterSubmode>
+										<Name>
+											<Text xml:lang="de">Schiff</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">BAT</Text>
+										</ShortName>
+									</Mode>
+									<ProductCategory>
+										<!-- V1.1, PR #95 - Illustration of ProductCategory -->
+										<Name>
+											<Text>Dampfschiff</Text>
+										</Name>
+									</ProductCategory>
+									<PublishedServiceName>
+										<Text>BAT</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>182</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Nur 2. Klasse</Text>
+										</Text>
+										<Code>A___2</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Restaurant</Text>
+										</Text>
+										<Code>A__WR</Code>
+										<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+									</Attribute>
+									<OriginText>
+										<Text>St. Petersinsel Nord</Text>
+									</OriginText>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>
+									</DestinationText>
 									<Extension>
 										<!-- V1.1, PR #92 - Illustration of new Extension -->
 										<TransportTypeName>

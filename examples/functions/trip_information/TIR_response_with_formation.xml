@@ -92,40 +92,38 @@
 					</OnwardCall>
 					<Service>
 						<OperatingDayRef>Unknown</OperatingDayRef>
-						<ServiceSection>
-							<JourneyRef>91011:A:R:j20:719</JourneyRef>
-							<siri:LineRef>91011:A</siri:LineRef>
-							<siri:DirectionRef>R</siri:DirectionRef>
-							<Mode>
-								<PtMode>tram</PtMode>
-								<siri:TramSubmode>cityTram</siri:TramSubmode>
-								<Name>
-									<Text xml:lang="de">Tram</Text>
-								</Name>
-								<ShortName>
-									<Text xml:lang="de">T</Text>
-								</ShortName>
-							</Mode>
-							<PublishedServiceName>
-								<Text>11</Text>
-							</PublishedServiceName>
-							<OperatorRefs>
-								<OperatorRef>3849</OperatorRef>
-							</OperatorRefs>
-							<OriginStopPointRef>8591315</OriginStopPointRef>
-							<OriginText>
-								<Text xml:lang="de">Zürich, Rehalp</Text>
-							</OriginText>
-							<DestinationStopPointRef>8591049</DestinationStopPointRef>
-							<DestinationText>
-								<Text xml:lang="de">Basel, St-Louis Grenze</Text>
-							</DestinationText>
-						</ServiceSection>
+						<JourneyRef>91011:A:R:j20:719</JourneyRef>
+						<siri:LineRef>91011:A</siri:LineRef>
+						<siri:DirectionRef>R</siri:DirectionRef>
+						<Mode>
+							<PtMode>tram</PtMode>
+							<siri:TramSubmode>cityTram</siri:TramSubmode>
+							<Name>
+								<Text xml:lang="de">Tram</Text>
+							</Name>
+							<ShortName>
+								<Text xml:lang="de">T</Text>
+							</ShortName>
+						</Mode>
+						<PublishedServiceName>
+							<Text>11</Text>
+						</PublishedServiceName>
+						<OperatorRefs>
+							<OperatorRef>3849</OperatorRef>
+						</OperatorRefs>
+						<OriginStopPointRef>8591315</OriginStopPointRef>
+						<OriginText>
+							<Text xml:lang="de">Zürich, Rehalp</Text>
+						</OriginText>
 						<!-- use VehicleFeatureRef with fixed values from SIRI (facilities) to express basic formation information. Especially for non-train vehicles -->
 						<siri:VehicleFeatureRef>highFloor</siri:VehicleFeatureRef>
 						<siri:VehicleFeatureRef>foldableRampAvailable</siri:VehicleFeatureRef>
 						<siri:VehicleFeatureRef>wheelchairAssistanceAvailableIfBooked</siri:VehicleFeatureRef>
 						<siri:VehicleFeatureRef>noWheelchairAcccessToilet</siri:VehicleFeatureRef>
+						<DestinationStopPointRef>8591049</DestinationStopPointRef>
+						<DestinationText>
+							<Text xml:lang="de">Basel, St-Louis Grenze</Text>
+						</DestinationText>
 						<siri:TrainElements>
 							<siri:TrainElement>
 								<siri:TrainElementCode>cen:TrainElement:fz-f749fcec-2e65-426c-a8e1-45abc89d816c</siri:TrainElementCode>

@@ -3074,28 +3074,26 @@
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
 									<siri:VehicleRef>3807</siri:VehicleRef>
-									<ServiceSection>
-										<JourneyRef>MXwyOTk2OTh8MHw4NnwxNzA2MjAyMw--</JourneyRef>
-										<siri:LineRef>96</siri:LineRef>
-										<siri:DirectionRef>2</siri:DirectionRef>
-										<Mode>
-											<PtMode>tramService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>96</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>ViP</OperatorRef>
-										</OperatorRefs>
-										<OriginStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA1MDc2NEBZPTUyNDE0MTE0QFU9ODZATD0yMzAyMDYwMkB8UG90c2RhbSwgQ2FtcHVzIEZhY2hob2Noc2NodWxlfDEzLjA1MDc2NHw1Mi40MTQxMTR8ZmFsc2U-</OriginStopPointRef>
-										<OriginText>
-											<Text>Potsdam, Campus Fachhochschule</Text>
-										</OriginText>
-										<DestinationStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgSnVuZ2Zlcm5zZWVAWD0xMzA1NDU1OEBZPTUyNDMyNDQzQFU9ODZATD0yMzAyMDAwMkB8UG90c2RhbSwgQ2FtcHVzIEp1bmdmZXJuc2VlfDEzLjA1NDU1OHw1Mi40MzI0NDN8ZmFsc2U-</DestinationStopPointRef>
-										<DestinationText>
-											<Text>Potsdam, Campus Jungfernsee</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>MXwyOTk2OTh8MHw4NnwxNzA2MjAyMw--</JourneyRef>
+									<siri:LineRef>96</siri:LineRef>
+									<siri:DirectionRef>2</siri:DirectionRef>
+									<Mode>
+										<PtMode>tramService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>96</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>ViP</OperatorRef>
+									</OperatorRefs>
+									<OriginStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA1MDc2NEBZPTUyNDE0MTE0QFU9ODZATD0yMzAyMDYwMkB8UG90c2RhbSwgQ2FtcHVzIEZhY2hob2Noc2NodWxlfDEzLjA1MDc2NHw1Mi40MTQxMTR8ZmFsc2U-</OriginStopPointRef>
+									<OriginText>
+										<Text>Potsdam, Campus Fachhochschule</Text>
+									</OriginText>
+									<DestinationStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgSnVuZ2Zlcm5zZWVAWD0xMzA1NDU1OEBZPTUyNDMyNDQzQFU9ODZATD0yMzAyMDAwMkB8UG90c2RhbSwgQ2FtcHVzIEp1bmdmZXJuc2VlfDEzLjA1NDU1OHw1Mi40MzI0NDN8ZmFsc2U-</DestinationStopPointRef>
+									<DestinationText>
+										<Text>Potsdam, Campus Jungfernsee</Text>
+									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>
@@ -3487,26 +3485,24 @@
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
 									<siri:VehicleRef>6359</siri:VehicleRef>
-									<ServiceSection>
-										<JourneyRef>MXwzMDMyNTZ8MXw4NnwxNzA2MjAyMw--</JourneyRef>
-										<siri:LineRef>638</siri:LineRef>
-										<siri:DirectionRef>2</siri:DirectionRef>
-										<Mode>
-											<PtMode>busService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>638</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>ViP</OperatorRef>
-										</OperatorRefs>
-										<OriginText>
-											<Text>Potsdam, Campus Jungfernsee</Text>
-										</OriginText>
-										<DestinationText>
-											<Text>S+U Rathaus Spandau (Berlin)</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>MXwzMDMyNTZ8MXw4NnwxNzA2MjAyMw--</JourneyRef>
+									<siri:LineRef>638</siri:LineRef>
+									<siri:DirectionRef>2</siri:DirectionRef>
+									<Mode>
+										<PtMode>busService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>638</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>ViP</OperatorRef>
+									</OperatorRefs>
+									<OriginText>
+										<Text>Potsdam, Campus Jungfernsee</Text>
+									</OriginText>
+									<DestinationText>
+										<Text>S+U Rathaus Spandau (Berlin)</Text>
+									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>
@@ -3603,28 +3599,26 @@
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
 									<siri:VehicleRef>176</siri:VehicleRef>
-									<ServiceSection>
-										<JourneyRef>MXw3NzQyMzh8MHw4NnwxNzA2MjAyMw--</JourneyRef>
-										<siri:LineRef>176</siri:LineRef>
-										<siri:DirectionRef>2</siri:DirectionRef>
-										<Mode>
-											<PtMode>railwayService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>EC 176</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>D4</OperatorRef>
-										</OperatorRefs>
-										<OriginStopPointRef>U3xBPTFATz1TIFNwYW5kYXUgQmhmIChCZXJsaW4pQFg9MTMxOTcxODlAWT01MjUzNDY2OEBVPTg2QEw9MTA0MDg3ODZAfFMgU3BhbmRhdSBCaGYgKEJlcmxpbil8MTMuMTk3MTg5fDUyLjUzNDY2OHx0cnVl</OriginStopPointRef>
-										<OriginText>
-											<Text>S Spandau Bhf (Berlin)</Text>
-										</OriginText>
-										<DestinationStopPointRef>U3xBPTFATz1IYW1idXJnIEhiZkBYPTEwMDA3NDkzQFk9NTM1NTIzODJAVT04NkBMPTExMDk1MDAzQHxIYW1idXJnIEhiZnwxMC4wMDc0OTN8NTMuNTUyMzgyfGZhbHNl</DestinationStopPointRef>
-										<DestinationText>
-											<Text>Hamburg Hbf</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>MXw3NzQyMzh8MHw4NnwxNzA2MjAyMw--</JourneyRef>
+									<siri:LineRef>176</siri:LineRef>
+									<siri:DirectionRef>2</siri:DirectionRef>
+									<Mode>
+										<PtMode>railwayService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>EC 176</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>D4</OperatorRef>
+									</OperatorRefs>
+									<OriginStopPointRef>U3xBPTFATz1TIFNwYW5kYXUgQmhmIChCZXJsaW4pQFg9MTMxOTcxODlAWT01MjUzNDY2OEBVPTg2QEw9MTA0MDg3ODZAfFMgU3BhbmRhdSBCaGYgKEJlcmxpbil8MTMuMTk3MTg5fDUyLjUzNDY2OHx0cnVl</OriginStopPointRef>
+									<OriginText>
+										<Text>S Spandau Bhf (Berlin)</Text>
+									</OriginText>
+									<DestinationStopPointRef>U3xBPTFATz1IYW1idXJnIEhiZkBYPTEwMDA3NDkzQFk9NTM1NTIzODJAVT04NkBMPTExMDk1MDAzQHxIYW1idXJnIEhiZnwxMC4wMDc0OTN8NTMuNTUyMzgyfGZhbHNl</DestinationStopPointRef>
+									<DestinationText>
+										<Text>Hamburg Hbf</Text>
+									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>
@@ -3735,28 +3729,26 @@
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
 									<siri:VehicleRef>589</siri:VehicleRef>
-									<ServiceSection>
-										<JourneyRef>MXw1MTc1MTR8MXw4NnwxNzA2MjAyMw--</JourneyRef>
-										<siri:LineRef>RE4</siri:LineRef>
-										<siri:DirectionRef>1</siri:DirectionRef>
-										<Mode>
-											<PtMode>railwayService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>RE4</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>ME2</OperatorRef>
-										</OperatorRefs>
-										<OriginStopPointRef>U3xBPTFATz1IYW1idXJnIEhiZkBYPTEwMDA2NjQ4QFk9NTM1NTE3MjZAVT04NkBMPTExMDk1MDIwQHxIYW1idXJnIEhiZnwxMC4wMDY2NDh8NTMuNTUxNzI2fGZhbHNl</OriginStopPointRef>
-										<OriginText>
-											<Text>Hamburg Hbf</Text>
-										</OriginText>
-										<DestinationStopPointRef>U3xBPTFATz1CcmVtZW4gSGJmQFg9ODgxMzcxN0BZPTUzMDgzNDYwQFU9ODZATD0xMDQ5MjY4NUB8QnJlbWVuIEhiZnw4LjgxMzcxN3w1My4wODM0Nnx0cnVl</DestinationStopPointRef>
-										<DestinationText>
-											<Text>Bremen Hbf</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>MXw1MTc1MTR8MXw4NnwxNzA2MjAyMw--</JourneyRef>
+									<siri:LineRef>RE4</siri:LineRef>
+									<siri:DirectionRef>1</siri:DirectionRef>
+									<Mode>
+										<PtMode>railwayService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>RE4</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>ME2</OperatorRef>
+									</OperatorRefs>
+									<OriginStopPointRef>U3xBPTFATz1IYW1idXJnIEhiZkBYPTEwMDA2NjQ4QFk9NTM1NTE3MjZAVT04NkBMPTExMDk1MDIwQHxIYW1idXJnIEhiZnwxMC4wMDY2NDh8NTMuNTUxNzI2fGZhbHNl</OriginStopPointRef>
+									<OriginText>
+										<Text>Hamburg Hbf</Text>
+									</OriginText>
+									<DestinationStopPointRef>U3xBPTFATz1CcmVtZW4gSGJmQFg9ODgxMzcxN0BZPTUzMDgzNDYwQFU9ODZATD0xMDQ5MjY4NUB8QnJlbWVuIEhiZnw4LjgxMzcxN3w1My4wODM0Nnx0cnVl</DestinationStopPointRef>
+									<DestinationText>
+										<Text>Bremen Hbf</Text>
+									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>
@@ -3937,26 +3929,24 @@
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
 									<siri:VehicleRef>11262</siri:VehicleRef>
-									<ServiceSection>
-										<JourneyRef>MXw1NjU3MTV8MjF8ODZ8MTcwNjIwMjM-</JourneyRef>
-										<siri:LineRef>6</siri:LineRef>
-										<siri:DirectionRef>2</siri:DirectionRef>
-										<Mode>
-											<PtMode>tramService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>6</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>BSA</OperatorRef>
-										</OperatorRefs>
-										<OriginText>
-											<Text>Bremen Hauptbahnhof</Text>
-										</OriginText>
-										<DestinationText>
-											<Text>Bremen Flughafen</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>MXw1NjU3MTV8MjF8ODZ8MTcwNjIwMjM-</JourneyRef>
+									<siri:LineRef>6</siri:LineRef>
+									<siri:DirectionRef>2</siri:DirectionRef>
+									<Mode>
+										<PtMode>tramService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>6</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>BSA</OperatorRef>
+									</OperatorRefs>
+									<OriginText>
+										<Text>Bremen Hauptbahnhof</Text>
+									</OriginText>
+									<DestinationText>
+										<Text>Bremen Flughafen</Text>
+									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>

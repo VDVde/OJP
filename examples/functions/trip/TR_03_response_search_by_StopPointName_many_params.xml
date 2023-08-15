@@ -217,49 +217,47 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<ServiceSection>
-										<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
-										<siri:LineRef>91S24:Z</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">S</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>S24</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>11</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Aussteigeseite: Rechts</Text>
-											</Text>
-											<Code>ojp91S24ZR_InfoCall259_106218_1</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Aussteigeseite: Links</Text>
-											</Text>
-											<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
-										</Attribute>
-										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-										<DestinationText>
-											<Text xml:lang="de">Schaffhausen</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
+									<siri:LineRef>91S24:Z</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">S</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text>S24</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>11</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+										</Text>
+										<Code>A__OM</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Aussteigeseite: Rechts</Text>
+										</Text>
+										<Code>ojp91S24ZR_InfoCall259_106218_1</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Aussteigeseite: Links</Text>
+										</Text>
+										<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
+									</Attribute>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Schaffhausen</Text>
+									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>
@@ -363,37 +361,35 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<ServiceSection>
-										<JourneyRef>91S12:Z:H:j20:73</JourneyRef>
-										<siri:LineRef>91S12:Z</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">S</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>S12</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>11</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-										<DestinationText>
-											<Text xml:lang="de">Wil SG</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>91S12:Z:H:j20:73</JourneyRef>
+									<siri:LineRef>91S12:Z</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">S</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text>S12</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>11</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+										</Text>
+										<Code>A__OM</Code>
+									</Attribute>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Wil SG</Text>
+									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>
@@ -516,49 +512,47 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>Unknown</OperatingDayRef>
-									<ServiceSection>
-										<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
-										<siri:LineRef>91S24:Z</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">S</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>S24</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>11</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Aussteigeseite: Links</Text>
-											</Text>
-											<Code>ojp91S24ZR_InfoCall259_108328_1</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Aussteigeseite: Links</Text>
-											</Text>
-											<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
-										</Attribute>
-										<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
-										<DestinationText>
-											<Text xml:lang="de">Schaffhausen</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>91S24:Z:R:j20:259</JourneyRef>
+									<siri:LineRef>91S24:Z</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">S</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text>S24</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>11</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+										</Text>
+										<Code>A__OM</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Aussteigeseite: Links</Text>
+										</Text>
+										<Code>ojp91S24ZR_InfoCall259_108328_1</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Aussteigeseite: Links</Text>
+										</Text>
+										<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
+									</Attribute>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Schaffhausen</Text>
+									</DestinationText>
 								</Service>
 								<LegTrack>
 									<TrackSection>

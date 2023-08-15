@@ -415,38 +415,36 @@
 					</OnwardCall>
 					<Service>
 						<OperatingDayRef>2021-09-22</OperatingDayRef>
-						<ServiceSection>
-							<JourneyRef>910A3:Y:R:j21:174</JourneyRef>
-							<siri:LineRef>910A3:Y</siri:LineRef>
-							<siri:DirectionRef>R</siri:DirectionRef>
-							<Mode>
-								<PtMode>rail</PtMode>
-								<siri:RailSubmode>regionalRail</siri:RailSubmode>
-								<Name>
-									<Text xml:lang="de">Zug</Text>
-								</Name>
-							</Mode>
-							<ProductCategory>
-								<!-- V1.1, PR #95 - Illustration of ProductCategory -->
-								<Name>
-									<Text>Panoramawagen</Text>
-								</Name>
-							</ProductCategory>
-							<PublishedServiceName>
-								<Text>RE</Text>
-							</PublishedServiceName>
-							<OperatorRefs>
-								<OperatorRef>11</OperatorRef>
-							</OperatorRefs>
-							<OriginStopPointRef>8509000</OriginStopPointRef>
-							<OriginText>
-								<Text xml:lang="de">Chur</Text>
-							</OriginText>
-							<DestinationStopPointRef>8503000</DestinationStopPointRef>
-							<DestinationText>
-								<Text xml:lang="de">ZÃ¼rich HB</Text>
-							</DestinationText>
-						</ServiceSection>
+						<JourneyRef>910A3:Y:R:j21:174</JourneyRef>
+						<siri:LineRef>910A3:Y</siri:LineRef>
+						<siri:DirectionRef>R</siri:DirectionRef>
+						<Mode>
+							<PtMode>rail</PtMode>
+							<siri:RailSubmode>regionalRail</siri:RailSubmode>
+							<Name>
+								<Text xml:lang="de">Zug</Text>
+							</Name>
+						</Mode>
+						<ProductCategory>
+							<!-- V1.1, PR #95 - Illustration of ProductCategory -->
+							<Name>
+								<Text>Panoramawagen</Text>
+							</Name>
+						</ProductCategory>
+						<PublishedServiceName>
+							<Text>RE</Text>
+						</PublishedServiceName>
+						<OperatorRefs>
+							<OperatorRef>11</OperatorRef>
+						</OperatorRefs>
+						<OriginStopPointRef>8509000</OriginStopPointRef>
+						<OriginText>
+							<Text xml:lang="de">Chur</Text>
+						</OriginText>
+						<DestinationStopPointRef>8503000</DestinationStopPointRef>
+						<DestinationText>
+							<Text xml:lang="de">ZÃ¼rich HB</Text>
+						</DestinationText>
 						<Extension>
 							<!-- V1.1, PR #92 - Illustration of new Extension (only for the first of two changes of the PR, DatedJourneyStructure)-->
 							<TransportTypeName>

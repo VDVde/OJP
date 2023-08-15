@@ -564,26 +564,24 @@
 					<Service>
 						<OperatingDayRef>2023-06-22</OperatingDayRef>
 						<siri:VehicleRef>3178</siri:VehicleRef>
-						<ServiceSection>
-							<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
-							<siri:LineRef>92</siri:LineRef>
-							<siri:DirectionRef>1</siri:DirectionRef>
-							<Mode>
-								<PtMode>tramService</PtMode>
-							</Mode>
-							<PublishedServiceName>
-								<Text>92</Text>
-							</PublishedServiceName>
-							<OperatorRefs>
-								<OperatorRef>ViP</OperatorRef>
-							</OperatorRefs>
-							<OriginText>
-								<Text>Potsdam, Kirschallee</Text>
-							</OriginText>
-							<DestinationText>
-								<Text>Potsdam, Bisamkiez</Text>
-							</DestinationText>
-						</ServiceSection>
+						<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
+						<siri:LineRef>92</siri:LineRef>
+						<siri:DirectionRef>1</siri:DirectionRef>
+						<Mode>
+							<PtMode>tramService</PtMode>
+						</Mode>
+						<PublishedServiceName>
+							<Text>92</Text>
+						</PublishedServiceName>
+						<OperatorRefs>
+							<OperatorRef>ViP</OperatorRef>
+						</OperatorRefs>
+						<OriginText>
+							<Text>Potsdam, Kirschallee</Text>
+						</OriginText>
+						<DestinationText>
+							<Text>Potsdam, Bisamkiez</Text>
+						</DestinationText>
 					</Service>
 				</TripInfoResult>
 			</OJPTripInfoDelivery>

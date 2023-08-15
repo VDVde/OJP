@@ -78,35 +78,33 @@
 					</OnwardCall>
 					<Service>
 						<OperatingDayRef>Unknown</OperatingDayRef>
-						<ServiceSection>
-							<JourneyRef>ojp:91011:A:R:j20:719</JourneyRef>
-							<siri:LineRef>ojp:91011:A</siri:LineRef>
-							<siri:DirectionRef>R</siri:DirectionRef>
-							<Mode>
-								<PtMode>tram</PtMode>
-								<siri:TramSubmode>cityTram</siri:TramSubmode>
-								<Name>
-									<Text xml:lang="de">Tram</Text>
-								</Name>
-								<ShortName>
-									<Text xml:lang="de">T</Text>
-								</ShortName>
-							</Mode>
-							<PublishedServiceName>
-								<Text>11</Text>
-							</PublishedServiceName>
-							<OperatorRefs>
-								<OperatorRef>ojp:3849</OperatorRef>
-							</OperatorRefs>
-							<OriginStopPointRef>8591315</OriginStopPointRef>
-							<OriginText>
-								<Text xml:lang="de">Zürich, Rehalp</Text>
-							</OriginText>
-							<DestinationStopPointRef>8591049</DestinationStopPointRef>
-							<DestinationText>
-								<Text xml:lang="de">Basel, St-Louis Grenze</Text>
-							</DestinationText>
-						</ServiceSection>
+						<JourneyRef>ojp:91011:A:R:j20:719</JourneyRef>
+						<siri:LineRef>ojp:91011:A</siri:LineRef>
+						<siri:DirectionRef>R</siri:DirectionRef>
+						<Mode>
+							<PtMode>tram</PtMode>
+							<siri:TramSubmode>cityTram</siri:TramSubmode>
+							<Name>
+								<Text xml:lang="de">Tram</Text>
+							</Name>
+							<ShortName>
+								<Text xml:lang="de">T</Text>
+							</ShortName>
+						</Mode>
+						<PublishedServiceName>
+							<Text>11</Text>
+						</PublishedServiceName>
+						<OperatorRefs>
+							<OperatorRef>ojp:3849</OperatorRef>
+						</OperatorRefs>
+						<OriginStopPointRef>8591315</OriginStopPointRef>
+						<OriginText>
+							<Text xml:lang="de">Zürich, Rehalp</Text>
+						</OriginText>
+						<DestinationStopPointRef>8591049</DestinationStopPointRef>
+						<DestinationText>
+							<Text xml:lang="de">Basel, St-Louis Grenze</Text>
+						</DestinationText>
 					</Service>
 					<JourneyTrack>
 						<TrackSection>

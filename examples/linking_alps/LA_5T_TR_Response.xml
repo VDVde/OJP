@@ -191,27 +191,25 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
-									<ServiceSection>
-										<JourneyRef>trepie:ITRP-TR200_6381_62859</JourneyRef>
-										<siri:LineRef>trepie:ITRP-RO200_6381_20221211_20231209</siri:LineRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>mi.p.garibaldi - torino p.nuova</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>ITRP-AG000174</OperatorRef>
-										</OperatorRefs>
-										<OriginStopPointRef>trepie:ITRP-ST0151469002</OriginStopPointRef>
-										<OriginText>
-											<Text>Stazione MILANO PORTA GARIBALDI</Text>
-										</OriginText>
-										<DestinationStopPointRef>trepie:ITRP-ST0012729010</DestinationStopPointRef>
-										<DestinationText>
-											<Text>Stazione TORINO PORTA NUOVA</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>trepie:ITRP-TR200_6381_62859</JourneyRef>
+									<siri:LineRef>trepie:ITRP-RO200_6381_20221211_20231209</siri:LineRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>mi.p.garibaldi - torino p.nuova</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>ITRP-AG000174</OperatorRef>
+									</OperatorRefs>
+									<OriginStopPointRef>trepie:ITRP-ST0151469002</OriginStopPointRef>
+									<OriginText>
+										<Text>Stazione MILANO PORTA GARIBALDI</Text>
+									</OriginText>
+									<DestinationStopPointRef>trepie:ITRP-ST0012729010</DestinationStopPointRef>
+									<DestinationText>
+										<Text>Stazione TORINO PORTA NUOVA</Text>
+									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>
@@ -264,27 +262,25 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
-									<ServiceSection>
-										<JourneyRef>gtt:22853509U</JourneyRef>
-										<siri:LineRef>gtt:METROU</siri:LineRef>
-										<Mode>
-											<PtMode>underground</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>M1 metropolitana, stazione fermi (collegno) - stazione bengasi</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>U</OperatorRef>
-										</OperatorRefs>
-										<OriginStopPointRef>gtt:8233</OriginStopPointRef>
-										<OriginText>
-											<Text>METRO BENGASI</Text>
-										</OriginText>
-										<DestinationStopPointRef>gtt:8210</DestinationStopPointRef>
-										<DestinationText>
-											<Text>METRO FERMI</Text>
-										</DestinationText>
-									</ServiceSection>
+									<JourneyRef>gtt:22853509U</JourneyRef>
+									<siri:LineRef>gtt:METROU</siri:LineRef>
+									<Mode>
+										<PtMode>underground</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>M1 metropolitana, stazione fermi (collegno) - stazione bengasi</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>U</OperatorRef>
+									</OperatorRefs>
+									<OriginStopPointRef>gtt:8233</OriginStopPointRef>
+									<OriginText>
+										<Text>METRO BENGASI</Text>
+									</OriginText>
+									<DestinationStopPointRef>gtt:8210</DestinationStopPointRef>
+									<DestinationText>
+										<Text>METRO FERMI</Text>
+									</DestinationText>
 								</Service>
 							</TimedLeg>
 						</Leg>

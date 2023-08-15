@@ -310,7 +310,6 @@
 						<Service>
 							<OperatingDayRef>2023-06-16</OperatingDayRef>
 							<siri:VehicleRef>3181</siri:VehicleRef>
-							<ServiceSection>
 								<JourneyRef>MXwyOTg4Nzh8M3w4NnwxNjA2MjAyMw--</JourneyRef>
 								<siri:LineRef>92</siri:LineRef>
 								<siri:DirectionRef>1</siri:DirectionRef>
@@ -331,7 +330,6 @@
 								<DestinationText>
 									<Text>Potsdam, Bisamkiez</Text>
 								</DestinationText>
-							</ServiceSection>
 						</Service>
 					</StopEvent>
 				</StopEventResult>

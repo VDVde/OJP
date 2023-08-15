@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2023-08-15T20:09:36Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>EFAController10.5.23.52-OJP-EFA01-P</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<OJPTripDelivery>
+				<siri:ResponseTimestamp>2023-08-15T20:09:35Z</siri:ResponseTimestamp>
+				<siri:Status>true</siri:Status>
+				<CalcTime>762</CalcTime>
+				<TripResponseContext>
+					<Places>
+						<Place>
+							<StopPoint>
+								<siri:StopPointRef>8507000</siri:StopPointRef>
+								<StopPointName>
+									<Text xml:lang="de">Bern</Text>
+								</StopPointName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>111055:0:13AB</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23006351:1</TopographicPlaceRef>
+							</StopPoint>
+							<Name>
+								<Text xml:lang="de">Bern</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>7.43913</siri:Longitude>
+								<siri:Latitude>46.94883</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPoint>
+								<siri:StopPointRef>8504400</siri:StopPointRef>
+								<StopPointName>
+									<Text xml:lang="de">Kerzers</Text>
+								</StopPointName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>109254:0:6B</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23008265:2</TopographicPlaceRef>
+							</StopPoint>
+							<Name>
+								<Text xml:lang="de">Kerzers</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>7.19281</siri:Longitude>
+								<siri:Latitude>46.97508</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPoint>
+								<siri:StopPointRef>8504221</siri:StopPointRef>
+								<StopPointName>
+									<Text xml:lang="de">Neuchâtel</Text>
+								</StopPointName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>109111:0:1</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23013458:3</TopographicPlaceRef>
+							</StopPoint>
+							<Name>
+								<Text xml:lang="de">Neuchâtel</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>6.93570</siri:Longitude>
+								<siri:Latitude>46.99673</siri:Latitude>
+							</GeoPosition>
+						</Place>
+					</Places>
+				</TripResponseContext>
+				<TripResult>
+					<Id>ID-48D1A6A7-2659-4433-9795-F0A0840A4938</Id>
+					<Trip>
+						<Id>ID-48D1A6A7-2659-4433-9795-F0A0840A4938</Id>
+						<Duration>PT48M</Duration>
+						<StartTime>2023-08-15T18:08:00Z</StartTime>
+						<EndTime>2023-08-15T18:56:00Z</EndTime>
+						<Transfers>0</Transfers>
+						<Distance>0</Distance>
+						<Leg>
+							<Id>1</Id>
+							<TimedLeg>
+								<LegBoard>
+									<siri:StopPointRef>8507000</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Bern</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">13AB</Text>
+									</PlannedQuay>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:08:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediates>
+									<siri:StopPointRef>8504489</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Bern Bümpliz Nord</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">4</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:12:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:12:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8516154</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Bern Brünnen Westside</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:14:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:14:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>3</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8504487</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Rosshäusern</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:19:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:19:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>4</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8504486</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Gümmenen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">1</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:24:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:24:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>5</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8504400</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Kerzers</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">6B</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:30:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:31:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>6</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8504484</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Müntschemier</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">1</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:34:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:34:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>7</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8504483</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Ins</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">4</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:37:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:40:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>8</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8504482</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Gampelen</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">2</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:42:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:42:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>9</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8504490</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Zihlbrücke</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:44:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:44:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>10</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8504481</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Marin-Epagnier</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">3</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:47:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:47:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>11</Order>
+								</LegIntermediates>
+								<LegIntermediates>
+									<siri:StopPointRef>8504480</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">St-Blaise-Lac</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:49:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T18:49:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>12</Order>
+								</LegIntermediates>
+								<LegAlight>
+									<siri:StopPointRef>8504221</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Neuchâtel</Text>
+									</StopPointName>
+									<PlannedQuay>
+										<Text xml:lang="de">1</Text>
+									</PlannedQuay>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T18:56:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>13</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>2023-08-15</OperatingDayRef>
+									<JourneyRef>91005::R:j23:201:15576</JourneyRef>
+									<siri:LineRef>91005:</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>regionalRail</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">S</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">S5</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>33</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Zug mit mehreren Zielen: Bitte Anschriften am Zug beachten</Text>
+										</Text>
+										<Code>A__FL</Code>
+									</Attribute>
+									<DestinationStopPointRef>8504221</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Neuchâtel</Text>
+									</DestinationText>
+								</Service>
+								<ParallelService>
+									<FromStopSequenceNumber>1</FromStopSequenceNumber>
+									<ToStopSequenceNumber>5</ToStopSequenceNumber>
+									<JourneyRef>15588</JourneyRef>
+									<siri:LineRef>91006:</siri:LineRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>S5</Text>
+									</PublishedServiceName>
+									<DestinationText>
+										<Text>Payerne</Text>
+									</DestinationText>
+								</ParallelService>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">InterRegio</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">3377</Text>
+									</PublishedJourneyNumber>
+									<OperatorName>
+										<Text xml:lang="de">BLS AG (bls)</Text>
+									</OperatorName>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+					</Trip>
+				</TripResult>
+			</OJPTripDelivery>
+		</siri:ServiceDelivery>
+	</OJPResponse>
+</OJP>
