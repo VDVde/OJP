@@ -25,29 +25,29 @@
 							<siri:Longitude>11.65001</siri:Longitude>
 							<siri:Latitude>46.70999</siri:Latitude>
 						</GeoPosition>
+						<Mode>
+							<PtMode>rail</PtMode>
+							<siri:RailSubmode>unknown</siri:RailSubmode>
+						</Mode>
+						<Mode>
+							<PtMode>bus</PtMode>
+							<siri:BusSubmode>localBusService</siri:BusSubmode>
+						</Mode>
+						<Mode>
+							<PtMode>bus</PtMode>
+							<siri:BusSubmode>regionalBus</siri:BusSubmode>
+						</Mode>
+						<Mode>
+							<PtMode>bus</PtMode>
+							<siri:BusSubmode>expressBus</siri:BusSubmode>
+						</Mode>
+						<Mode>
+							<PtMode>rail</PtMode>
+							<siri:RailSubmode>replacementRailService</siri:RailSubmode>
+						</Mode>
 					</Place>
 					<Complete>true</Complete>
 					<Probability>0.832000017</Probability>
-					<Mode>
-						<PtMode>rail</PtMode>
-						<siri:RailSubmode>unknown</siri:RailSubmode>
-					</Mode>
-					<Mode>
-						<PtMode>bus</PtMode>
-						<siri:BusSubmode>localBusService</siri:BusSubmode>
-					</Mode>
-					<Mode>
-						<PtMode>bus</PtMode>
-						<siri:BusSubmode>regionalBus</siri:BusSubmode>
-					</Mode>
-					<Mode>
-						<PtMode>bus</PtMode>
-						<siri:BusSubmode>expressBus</siri:BusSubmode>
-					</Mode>
-					<Mode>
-						<PtMode>rail</PtMode>
-						<siri:RailSubmode>replacementRailService</siri:RailSubmode>
-					</Mode>
 				</PlaceResult>
 			</OJPLocationInformationDelivery>
 		</siri:ServiceDelivery>
