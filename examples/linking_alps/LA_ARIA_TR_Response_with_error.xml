@@ -175,19 +175,17 @@
 									<OperatingDayRef>2023-05-01</OperatingDayRef>
 									<siri:VehicleRef>462</siri:VehicleRef>
 									<JourneyRef>MXw0MzE2MXwwfDgzfDEwNTIwMjM-</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>unknown</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>railwayService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>EC 47_46</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>TRE</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+									<siri:LineRef>unknown</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>railwayService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>EC 47_46</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>TRE</OperatorRef>
+									</OperatorRefs>
 									<OriginStopPointRef>U3xBPTFATz1NSUxBTk8sIFN0YXppb25lIENlbnRyYWxlQFg9OTIwNDE5OUBZPTQ1NDg2MTY0QFU9ODNATD0yOTUwNEB8TUlMQU5PLCBTdGF6aW9uZSBDZW50cmFsZXw5LjIwNDE5OXw0NS40ODYxNjR8ZmFsc2U-</OriginStopPointRef>
 									<OriginText>
 										<Text>MILANO, Stazione Centrale</Text>

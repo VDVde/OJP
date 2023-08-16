@@ -471,26 +471,24 @@
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
 									<JourneyRef>apb:01213::H:23a:20</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>apb:01213:</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>bus</PtMode>
-											<siri:BusSubmode>localBusService</siri:BusSubmode>
-											<Name>
-												<Text xml:lang="it">Bus</Text>
-											</Name>
-										</Mode>
-										<PublishedServiceName>
-											<Text xml:lang="it">213</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>apb:004</OperatorRef>
-										</OperatorRefs>
-										<RouteDescription>
-											<Text xml:lang="it">Merano - Parcheggio</Text>
-										</RouteDescription>
-									</ServiceSection>
+									<siri:LineRef>apb:01213:</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>localBusService</siri:BusSubmode>
+										<Name>
+											<Text xml:lang="it">Bus</Text>
+										</Name>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="it">213</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>apb:004</OperatorRef>
+									</OperatorRefs>
+									<RouteDescription>
+										<Text xml:lang="it">Merano - Parcheggio</Text>
+									</RouteDescription>
 									<DestinationStopPointRef>it:22021:211</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="it">Merano Stazione</Text>
@@ -644,26 +642,24 @@
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
 									<JourneyRef>apb:03102:T:R:23a:39</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>apb:03102:T</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>regionalRail</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="it">Treno regionale</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="it">R</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text xml:lang="it">REG</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>apb:099</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+									<siri:LineRef>apb:03102:T</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>regionalRail</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="it">Treno regionale</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="it">R</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="it">REG</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>apb:099</OperatorRef>
+									</OperatorRefs>
 									<DestinationStopPointRef>it:22021:1389</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="it">Brennero</Text>

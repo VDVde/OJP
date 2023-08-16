@@ -211,32 +211,30 @@
 						<Service>
 							<OperatingDayRef>Unknown</OperatingDayRef>
 							<JourneyRef>91A01:D:R:j20:39</JourneyRef>
-							<ServiceSection>
-								<siri:LineRef>91A01:D</siri:LineRef>
-								<siri:DirectionRef>R</siri:DirectionRef>
-								<Mode>
-									<PtMode>rail</PtMode>
-									<siri:RailSubmode>local</siri:RailSubmode>
-									<Name>
-										<Text xml:lang="de">Zug</Text>
-									</Name>
-									<ShortName>
-										<Text xml:lang="de">TER</Text>
-									</ShortName>
-								</Mode>
-								<PublishedServiceName>
-									<Text>17.18</Text>
-								</PublishedServiceName>
-								<OperatorRefs>
-									<OperatorRef>87_LEX</OperatorRef>
-								</OperatorRefs>
-								<Attribute>
-									<Text>
-										<Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</Text>
-									</Text>
-									<Code>A__MO</Code>
-								</Attribute>
-							</ServiceSection>
+							<siri:LineRef>91A01:D</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<Mode>
+								<PtMode>rail</PtMode>
+								<siri:RailSubmode>local</siri:RailSubmode>
+								<Name>
+									<Text xml:lang="de">Zug</Text>
+								</Name>
+								<ShortName>
+									<Text xml:lang="de">TER</Text>
+								</ShortName>
+							</Mode>
+							<PublishedServiceName>
+								<Text>17.18</Text>
+							</PublishedServiceName>
+							<OperatorRefs>
+								<OperatorRef>87_LEX</OperatorRef>
+							</OperatorRefs>
+							<Attribute>
+								<Text>
+									<Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</Text>
+								</Text>
+								<Code>A__MO</Code>
+							</Attribute>
 							<OriginStopPointRef>8721202</OriginStopPointRef>
 							<OriginText>
 								<Text xml:lang="de">Strasbourg</Text>
@@ -346,32 +344,30 @@
 						<Service>
 							<OperatingDayRef>Unknown</OperatingDayRef>
 							<JourneyRef>9117.::R:j20:79</JourneyRef>
-							<ServiceSection>
-								<siri:LineRef>9117.:</siri:LineRef>
-								<siri:DirectionRef>R</siri:DirectionRef>
-								<Mode>
-									<PtMode>rail</PtMode>
-									<siri:RailSubmode>local</siri:RailSubmode>
-									<Name>
-										<Text xml:lang="de">Zug</Text>
-									</Name>
-									<ShortName>
-										<Text xml:lang="de">TER</Text>
-									</ShortName>
-								</Mode>
-								<PublishedServiceName>
-									<Text>17.</Text>
-								</PublishedServiceName>
-								<OperatorRefs>
-									<OperatorRef>87_LEX</OperatorRef>
-								</OperatorRefs>
-								<Attribute>
-									<Text>
-										<Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</Text>
-									</Text>
-									<Code>A__MO</Code>
-								</Attribute>
-							</ServiceSection>
+							<siri:LineRef>9117.:</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<Mode>
+								<PtMode>rail</PtMode>
+								<siri:RailSubmode>local</siri:RailSubmode>
+								<Name>
+									<Text xml:lang="de">Zug</Text>
+								</Name>
+								<ShortName>
+									<Text xml:lang="de">TER</Text>
+								</ShortName>
+							</Mode>
+							<PublishedServiceName>
+								<Text>17.</Text>
+							</PublishedServiceName>
+							<OperatorRefs>
+								<OperatorRef>87_LEX</OperatorRef>
+							</OperatorRefs>
+							<Attribute>
+								<Text>
+									<Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</Text>
+								</Text>
+								<Code>A__MO</Code>
+							</Attribute>
 							<OriginStopPointRef>8721428</OriginStopPointRef>
 							<OriginText>
 								<Text xml:lang="de">Obernai</Text>

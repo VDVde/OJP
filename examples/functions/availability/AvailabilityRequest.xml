@@ -39,6 +39,7 @@
 						<UnplannedStop>false</UnplannedStop>
 						<NotServicedStop>false</NotServicedStop>
 					</SetDownLocation>
+					<JourneyRef>dfd123123123:1112</JourneyRef>
 					<siri:LineRef>ch:1:slnid:102301231</siri:LineRef>
 					<Mode>
 						<PtMode>bus</PtMode>

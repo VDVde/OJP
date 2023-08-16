@@ -75,58 +75,46 @@
 								<Service>
 									<OperatingDayRef>2020-09-30</OperatingDayRef>
 									<JourneyRef>910DG:Y:R:j20:210</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>910DG:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">IR</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>empty</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>82</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Reservierung möglich</Text>
-											</Text>
-											<Code>A___R</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Bar</Text>
-											</Text>
-											<Code>A___B</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-									</ServiceSection>
+									<siri:LineRef>910DG:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">IR</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text>empty</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>82</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Reservierung möglich</Text>
+										</Text>
+										<Code>A___R</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Bar</Text>
+										</Text>
+										<Code>A___B</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+										</Text>
+										<Code>A__OM</Code>
+									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Luzern</Text>
 									</DestinationText>
-									<Deviation>false</Deviation>
-									<UndefinedDelay>true</UndefinedDelay>
-									<Occupancy>fewSeatsAvailable</Occupancy>
-									<ReservationNeeded>stop</ReservationNeeded>
-									<SituationFullRefs>
-										<SituationFullRef>
-											<siri:ParticipantRef>SBB</siri:ParticipantRef>
-											<siri:SituationNumber>ch:1:ssiid:11:12312311</siri:SituationNumber>
-										</SituationFullRef>
-									</SituationFullRefs>
 								</Service>
 								<Extension>
 									<TransportTypeName>
@@ -181,46 +169,44 @@
 								<Service>
 									<OperatingDayRef>2020-09-30</OperatingDayRef>
 									<JourneyRef>910DG:Y:R:j20:144</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>910DG:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>local</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">IR</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text>empty</Text>
-										</PublishedServiceName>
-										<TrainNumber>123123</TrainNumber>
-										<siri:VehicleRef>19239191233-1231</siri:VehicleRef>
-										<OperatorRefs>
-											<OperatorRef>82</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Reservierung möglich</Text>
-											</Text>
-											<Code>A___R</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Bar</Text>
-											</Text>
-											<Code>A___B</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-											</Text>
-											<Code>A__OM</Code>
-										</Attribute>
-									</ServiceSection>
+									<siri:LineRef>910DG:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>local</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">IR</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text>empty</Text>
+									</PublishedServiceName>
+									<TrainNumber>123123</TrainNumber>
+									<siri:VehicleRef>19239191233-1231</siri:VehicleRef>
+									<OperatorRefs>
+										<OperatorRef>82</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Reservierung möglich</Text>
+										</Text>
+										<Code>A___R</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Bar</Text>
+										</Text>
+										<Code>A___B</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
+										</Text>
+										<Code>A__OM</Code>
+									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Luzern</Text>

@@ -36,29 +36,27 @@
 						<Service>
 							<OperatingDayRef>2021-08-17</OperatingDayRef>
 							<JourneyRef>9400B:Y:R:j21:12</JourneyRef>
-							<ServiceSection>
-								<siri:LineRef>9400B:Y</siri:LineRef>
-								<siri:DirectionRef>R</siri:DirectionRef>
-								<Mode>
-									<PtMode>water</PtMode>
-									<siri:WaterSubmode>unknown</siri:WaterSubmode>
-									<Name>
-										<Text xml:lang="de">Schiff</Text>
-									</Name>
-									<ShortName>
-										<Text xml:lang="de">BAT</Text>
-									</ShortName>
-								</Mode>
-								<ProductCategory>
-									<!-- V1.1, PR #95 - Illustration of ProductCategory -->
-									<Name>
-										<Text>Dampfschiff</Text>
-									</Name>
-								</ProductCategory>
-								<PublishedServiceName>
-									<Text>BAT</Text>
-								</PublishedServiceName>
-							</ServiceSection>
+							<siri:LineRef>9400B:Y</siri:LineRef>
+							<siri:DirectionRef>R</siri:DirectionRef>
+							<Mode>
+								<PtMode>water</PtMode>
+								<siri:WaterSubmode>unknown</siri:WaterSubmode>
+								<Name>
+									<Text xml:lang="de">Schiff</Text>
+								</Name>
+								<ShortName>
+									<Text xml:lang="de">BAT</Text>
+								</ShortName>
+							</Mode>
+							<ProductCategory>
+								<!-- V1.1, PR #95 - Illustration of ProductCategory -->
+								<Name>
+									<Text>Dampfschiff</Text>
+								</Name>
+							</ProductCategory>
+							<PublishedServiceName>
+								<Text>BAT</Text>
+							</PublishedServiceName>
 							<OriginStopPointRef>8504371</OriginStopPointRef>
 							<OriginText>
 								<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>

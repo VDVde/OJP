@@ -7843,16 +7843,7 @@
 							<siri:Language>it</siri:Language>
 							<siri:Summary xml:lang="it">Linea ferroviaria 250 Val Venosta</siri:Summary>
 							<siri:Description xml:lang="it">Dal 5 giugno chiusura totale di sera e nei fine settimana / Tratta parziale Merano-Tel chiusa per lavori</siri:Description>
-							<siri:Detail xml:lang="it"><![CDATA[<p><strong>Merano - Malles: Chiusura totale dal 5 giugno</strong></p>
-<p>A causa di lavori di elettrificazione della ferrovia della Val Venosta, l'intera linea ferroviaria Merano - Malles sar&agrave; chiusa di sera e nei fine settimana dal 5 giugno 2023 fino alla fine dell'anno. Sar&agrave; attivo un servizio sostitutivo autobus.</p>
-<p>Per maggiori informazioni:</p>
-<p><a href="https://www.suedtirolmobil.info/it/notizie/details/ferrovia-della-val-venosta-2">News Ferrovia della Val Venosta</a></p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_B250_20230605.pdf">Orario treni dal 5 giugno</a>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>Chiusura tratta parziale Merano - Tel fino ad ottobre</strong></p>
-<p>A causa di lavori di adeguamento strutturale delle gallerie ferroviarie di Monte S. Giuseppe e Tel, il tratto ferroviario tra Merano e Tel rimane interrotto. La conclusione dei lavori &egrave; prevista per ottobre 2023.&nbsp;</p>
-<p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/2023/250_250B_20221211.pdf">Orari linea ferroviaria 250 Malles - Tel e servizio sostitutivo autobus B250 fino al 5 giugno</a></p>
-<p><strong>Attenzione:</strong> L&rsquo;orario dei bus sostitutivi potr&agrave; variare a seconda delle condizioni del traffico. I tempi di percorrenza possono essere pi&ugrave; lunghi, pertanto i collegamenti non possono essere garantiti!</p>
+							<siri:Detail xml:lang="it"><![CDATA[ossono essere garantiti!</p>
 <p>La partenza degli autobus avverr&agrave; dalla banchina Z della stazione di Merano (vicino al sottopassaggio).&nbsp;&nbsp;</p>
 <p><a href="https://www.suedtirolmobil.info/fileadmin/pdf/net/net_me_bhf.pdf">Planimetria marciapiede Z&nbsp;</a></p>
 <p><strong>Obliteratrici</strong>&nbsp;</p>
@@ -8144,33 +8135,31 @@
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
 									<JourneyRef>96131:8:R:j23:60:18060</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>96131:8</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>bus</PtMode>
-											<siri:BusSubmode>localBusService</siri:BusSubmode>
-											<Name>
-												<Text xml:lang="de">Bus</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">B</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text xml:lang="de">118</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>801</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Niederflureinstieg</Text>
-											</Text>
-											<Code>A__NF</Code>
-											<siri:AccessFacility>palletAccess_lowFloor</siri:AccessFacility>
-										</Attribute>
-									</ServiceSection>
+									<siri:LineRef>96131:8</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>localBusService</siri:BusSubmode>
+										<Name>
+											<Text xml:lang="de">Bus</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">B</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">118</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>801</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Niederflureinstieg</Text>
+										</Text>
+										<Code>A__NF</Code>
+										<siri:AccessFacility>palletAccess_lowFloor</siri:AccessFacility>
+									</Attribute>
 									<DestinationStopPointRef>8572113</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Laufen, Bahnhof</Text>
@@ -8244,32 +8233,30 @@
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
 									<JourneyRef>91003:B:H:j23:253:17379</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>91003:B</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>regionalRail</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">S</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text xml:lang="de">S3</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>11</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Aussteigeseite: Links</Text>
-											</Text>
-											<Code>ojp91003BH_InfoCall253_106576_1</Code>
-										</Attribute>
-									</ServiceSection>
+									<siri:LineRef>91003:B</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>regionalRail</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">S</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">S3</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>11</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Aussteigeseite: Links</Text>
+										</Text>
+										<Code>ojp91003BH_InfoCall253_106576_1</Code>
+									</Attribute>
 									<DestinationStopPointRef>8500218</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Olten</Text>
@@ -8345,51 +8332,49 @@
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
 									<JourneyRef>9102N:Y:R:j23:96:9223</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>9102N:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>highSpeedRailService</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">TGV</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
+									<siri:LineRef>9102N:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>highSpeedRailService</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
 											<Text xml:lang="de">TGV</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>11</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Weitere Infos: www.tgv-lyria.com</Text>
-											</Text>
-											<Code>I_1sG</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">VELOS: Keine Beförderung möglich</Text>
-											</Text>
-											<Code>A__VN</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Restaurant</Text>
-											</Text>
-											<Code>A__WR</Code>
-											<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Aussteigeseite: Links</Text>
-											</Text>
-											<Code>ojp9102NYR_InfoCall96_106514_1</Code>
-										</Attribute>
-									</ServiceSection>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">TGV</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>11</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Weitere Infos: www.tgv-lyria.com</Text>
+										</Text>
+										<Code>I_1sG</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">VELOS: Keine Beförderung möglich</Text>
+										</Text>
+										<Code>A__VN</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Restaurant</Text>
+										</Text>
+										<Code>A__WR</Code>
+										<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Aussteigeseite: Links</Text>
+										</Text>
+										<Code>ojp9102NYR_InfoCall96_106514_1</Code>
+									</Attribute>
 									<DestinationStopPointRef>8503000</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Zürich HB</Text>
@@ -8464,59 +8449,57 @@
 								<Service>
 									<OperatingDayRef>2023-06-13</OperatingDayRef>
 									<JourneyRef>91003:C:R:j23:491:589</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>91003:C</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>interRegionalRailService</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">IC</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text xml:lang="de">IC3</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>11</OperatorRef>
-										</OperatorRefs>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Gratis-Internet mit der App SBB FreeSurf</Text>
-											</Text>
-											<Code>A__FS</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
-											</Text>
-											<Code>A__RZ</Code>
-											<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Businesszone in 1. Klasse</Text>
-											</Text>
-											<Code>A__BZ</Code>
-											<siri:FareClassFacility>firstClass</siri:FareClassFacility>
-											<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Familienwagen mit Spielplatz</Text>
-											</Text>
-											<Code>A__FA</Code>
-										</Attribute>
-										<Attribute>
-											<Text>
-												<Text xml:lang="de">Aussteigeseite: Rechts</Text>
-											</Text>
-											<Code>ojp91003CR_InfoCall491_112214_1</Code>
-										</Attribute>
-									</ServiceSection>
+									<siri:LineRef>91003:C</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>interRegionalRailService</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">IC</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">IC3</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>11</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Gratis-Internet mit der App SBB FreeSurf</Text>
+										</Text>
+										<Code>A__FS</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
+										</Text>
+										<Code>A__RZ</Code>
+										<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Businesszone in 1. Klasse</Text>
+										</Text>
+										<Code>A__BZ</Code>
+										<siri:FareClassFacility>firstClass</siri:FareClassFacility>
+										<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Familienwagen mit Spielplatz</Text>
+										</Text>
+										<Code>A__FA</Code>
+									</Attribute>
+									<Attribute>
+										<Text>
+											<Text xml:lang="de">Aussteigeseite: Rechts</Text>
+										</Text>
+										<Code>ojp91003CR_InfoCall491_112214_1</Code>
+									</Attribute>
 									<DestinationStopPointRef>8509000</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Chur</Text>
@@ -8587,26 +8570,24 @@
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
 									<JourneyRef>91025:Y:R:j23:33:4307</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>91025:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>regionalRail</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">RE</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
+									<siri:LineRef>91025:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>regionalRail</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
 											<Text xml:lang="de">RE</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>72</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">RE</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>72</OperatorRef>
+									</OperatorRefs>
 									<DestinationStopPointRef>8509253</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">St. Moritz</Text>
@@ -8677,26 +8658,24 @@
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
 									<JourneyRef>9100Z:Y:R:j23:48:1912</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>9100Z:Y</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>rail</PtMode>
-											<siri:RailSubmode>regionalRail</siri:RailSubmode>
-											<Name>
-												<Text xml:lang="de">Zug</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">R</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
+									<siri:LineRef>9100Z:Y</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>regionalRail</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
 											<Text xml:lang="de">R</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>72</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">R</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>72</OperatorRef>
+									</OperatorRefs>
 									<DestinationStopPointRef>8509268</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Scuol-Tarasp</Text>
@@ -8765,26 +8744,24 @@
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
 									<JourneyRef>96300:4:H:j23:1:92101</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>96300:4</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>bus</PtMode>
-											<siri:BusSubmode>localBusService</siri:BusSubmode>
-											<Name>
-												<Text xml:lang="de">Bus</Text>
-											</Name>
-											<ShortName>
-												<Text xml:lang="de">B</Text>
-											</ShortName>
-										</Mode>
-										<PublishedServiceName>
-											<Text xml:lang="de">921</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>801</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+									<siri:LineRef>96300:4</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>localBusService</siri:BusSubmode>
+										<Name>
+											<Text xml:lang="de">Bus</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">B</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">921</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>801</OperatorRef>
+									</OperatorRefs>
 									<DestinationStopPointRef>8509873</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="de">Samnaun-Dorf, Post</Text>
@@ -9074,23 +9051,21 @@
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
 									<JourneyRef>apb:84273::H:23a:6</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>apb:84273:</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>bus</PtMode>
-											<siri:BusSubmode>regionalBus</siri:BusSubmode>
-											<Name>
-												<Text xml:lang="it">Bus</Text>
-											</Name>
-										</Mode>
-										<PublishedServiceName>
-											<Text xml:lang="it">273</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>apb:069</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+									<siri:LineRef>apb:84273:</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>regionalBus</siri:BusSubmode>
+										<Name>
+											<Text xml:lang="it">Bus</Text>
+										</Name>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="it">273</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>apb:069</OperatorRef>
+									</OperatorRefs>
 									<DestinationStopPointRef>it:22021:36</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="it">Malles Stazione</Text>
@@ -9210,23 +9185,21 @@
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
 									<JourneyRef>apb:84272::H:23a:4</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>apb:84272:</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>bus</PtMode>
-											<siri:BusSubmode>regionalBus</siri:BusSubmode>
-											<Name>
-												<Text xml:lang="it">Bus</Text>
-											</Name>
-										</Mode>
-										<PublishedServiceName>
-											<Text xml:lang="it">272</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>apb:069</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+									<siri:LineRef>apb:84272:</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>regionalBus</siri:BusSubmode>
+										<Name>
+											<Text xml:lang="it">Bus</Text>
+										</Name>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="it">272</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>apb:069</OperatorRef>
+									</OperatorRefs>
 									<DestinationStopPointRef>it:22021:75</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="it">Glorenza - Prato</Text>
@@ -9372,23 +9345,21 @@
 								<Service>
 									<OperatingDayRef>2023-06-14</OperatingDayRef>
 									<JourneyRef>apb:84271::R:23a:17</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>apb:84271:</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>bus</PtMode>
-											<siri:BusSubmode>regionalBus</siri:BusSubmode>
-											<Name>
-												<Text xml:lang="it">Bus</Text>
-											</Name>
-										</Mode>
-										<PublishedServiceName>
-											<Text xml:lang="it">271</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>apb:069</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+									<siri:LineRef>apb:84271:</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>regionalBus</siri:BusSubmode>
+										<Name>
+											<Text xml:lang="it">Bus</Text>
+										</Name>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="it">271</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>apb:069</OperatorRef>
+									</OperatorRefs>
 									<DestinationStopPointRef>it:22021:2544</DestinationStopPointRef>
 									<DestinationText>
 										<Text xml:lang="it">Trafoi</Text>

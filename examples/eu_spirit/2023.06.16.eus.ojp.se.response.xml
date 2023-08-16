@@ -311,19 +311,17 @@
 							<OperatingDayRef>2023-06-16</OperatingDayRef>
 							<siri:VehicleRef>3181</siri:VehicleRef>
 							<JourneyRef>MXwyOTg4Nzh8M3w4NnwxNjA2MjAyMw--</JourneyRef>
-							<ServiceSection>
-								<siri:LineRef>92</siri:LineRef>
-								<siri:DirectionRef>1</siri:DirectionRef>
-								<Mode>
-									<PtMode>tramService</PtMode>
-								</Mode>
-								<PublishedServiceName>
-									<Text>92</Text>
-								</PublishedServiceName>
-								<OperatorRefs>
-									<OperatorRef>ViP</OperatorRef>
-								</OperatorRefs>
-							</ServiceSection>
+							<siri:LineRef>92</siri:LineRef>
+							<siri:DirectionRef>1</siri:DirectionRef>
+							<Mode>
+								<PtMode>tramService</PtMode>
+							</Mode>
+							<PublishedServiceName>
+								<Text>92</Text>
+							</PublishedServiceName>
+							<OperatorRefs>
+								<OperatorRef>ViP</OperatorRef>
+							</OperatorRefs>
 							<OriginStopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgRmFjaGhvY2hzY2h1bGVAWD0xMzA1MDcyOEBZPTUyNDE0MDUxQFU9ODZATD0yMzAyMDYwMUB8UG90c2RhbSwgQ2FtcHVzIEZhY2hob2Noc2NodWxlfDEzLjA1MDcyOHw1Mi40MTQwNTF8ZmFsc2U-</OriginStopPointRef>
 							<OriginText>
 								<Text>Potsdam, Campus Fachhochschule</Text>

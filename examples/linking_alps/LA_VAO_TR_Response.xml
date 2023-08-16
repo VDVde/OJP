@@ -401,19 +401,17 @@
 									<OperatingDayRef>2023-05-10</OperatingDayRef>
 									<siri:VehicleRef>797</siri:VehicleRef>
 									<JourneyRef>MnwjVk4jMSNTVCMxNjczOTEyNzgwI1BJIzAjWkkjMjg0NzUjVEEjMCNEQSMxMDA1MjMjMVMjNDIwMzY0MjA3IzFUIzE0NDUjTFMjNDMwNDcwODA0I0xUIzIxMjcjUFUjODEjUlQjMSNDQSNSSiNaRSM3OTcjWkIjUkogICA3OTcjUEMjMCNGUiM0MjAzNjQyMDcjRlQjMTQ0NSNUTyM0MzA0NzA4MDQjVFQjMjEyNyM-</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>xxx</siri:LineRef>
-										<siri:DirectionRef>R</siri:DirectionRef>
-										<Mode>
-											<PtMode>railwayService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>RJ 797</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>01</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+									<siri:LineRef>xxx</siri:LineRef>
+									<siri:DirectionRef>R</siri:DirectionRef>
+									<Mode>
+										<PtMode>railwayService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>RJ 797</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>01</OperatorRef>
+									</OperatorRefs>
 									<OriginStopPointRef>U3xBPTFATz1CaXNjaG9mc2hvZmVuQFg9MTMyMjAwMDRAWT00NzQxNzgwMkBVPTgxQEw9NDU1MjA5OTAzQGk9QcOXYXQ6NDU6NTIwOTk6MDozQHxCaXNjaG9mc2hvZmVufDEzLjIyMDAwNHw0Ny40MTc4MDJ8ZmFsc2U-</OriginStopPointRef>
 									<OriginText>
 										<Text>Bischofshofen</Text>
@@ -474,19 +472,17 @@
 									<OperatingDayRef>2023-05-10</OperatingDayRef>
 									<siri:VehicleRef>168</siri:VehicleRef>
 									<JourneyRef>MnwjVk4jMSNTVCMxNjczOTEyNzgwI1BJIzAjWkkjMTg0NDA0I1RBIzAjREEjMTAwNTIzIzFTIzQzMDQ3MDgwMSMxVCMxNTAzI0xTIzE2MTUwMDMwMyNMVCMyMzIyI1BVIzgxI1JUIzEjQ0EjUkpYI1pFIzE2OCNaQiNSSlggIDE2OCNQQyMwI0ZSIzQzMDQ3MDgwMSNGVCMxNTAzI1RPIzE2MTUwMDMwMyNUVCMyMzIyIw--</JourneyRef>
-									<ServiceSection>
-										<siri:LineRef>xxx</siri:LineRef>
-										<siri:DirectionRef>H</siri:DirectionRef>
-										<Mode>
-											<PtMode>railwayService</PtMode>
-										</Mode>
-										<PublishedServiceName>
-											<Text>RJX 168</Text>
-										</PublishedServiceName>
-										<OperatorRefs>
-											<OperatorRef>01</OperatorRef>
-										</OperatorRefs>
-									</ServiceSection>
+									<siri:LineRef>xxx</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>railwayService</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>RJX 168</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>01</OperatorRef>
+									</OperatorRefs>
 									<OriginStopPointRef>U3xBPTFATz1TYWx6YnVyZyBIYXVwdGJhaG5ob2ZAWD0xMzA0NTU5NUBZPTQ3ODEyOTk0QFU9ODFATD00NTUwMDAyMDZAaT1Bw5dhdDo0NTo1MDAwMjowOjZAfFNhbHpidXJnIEhhdXB0YmFobmhvZnwxMy4wNDU1OTV8NDcuODEyOTk0fHRydWU-</OriginStopPointRef>
 									<OriginText>
 										<Text>Salzburg Hauptbahnhof</Text>
