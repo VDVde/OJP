@@ -503,8 +503,6 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
-			<!--<xs:group ref="ServiceOriginGroup" minOccurs="0"/>
-			<xs:group ref="ServiceDestinationGroup" minOccurs="0"/> REMOVE -->
 			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Container with information on booking possibilities for this service.</xs:documentation>
