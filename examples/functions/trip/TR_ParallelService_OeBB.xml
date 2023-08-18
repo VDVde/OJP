@@ -148,12 +148,12 @@ All the rest of the information is minimalized and is not necessary accurate.
 									<OperatorRefs>
 										<OperatorRef>at:oebb</OperatorRef>
 									</OperatorRefs>
-
 									<DestinationText>
 										<Text>Hamburg Altona</Text>
 									</DestinationText>
 								</Service>
-								<ParallelService> <!-- the other train component going to Amsterdam, AT part -->
+								<ParallelService>
+									<!-- the other train component going to Amsterdam, AT part -->
 									<FromStopSequenceNumber>1</FromStopSequenceNumber>
 									<ToStopSequenceNumber>5</ToStopSequenceNumber>
 									<JourneyRef>NJ-OeBB-120123-123112</JourneyRef>
@@ -170,7 +170,8 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<Text>Amsterdam</Text>
 									</DestinationText>
 								</ParallelService>
-								<ParallelService> <!-- the German part of the train to Hamburg -->
+								<ParallelService>
+									<!-- the German part of the train to Hamburg -->
 									<FromStopSequenceNumber>5</FromStopSequenceNumber>
 									<ToStopSequenceNumber>12</ToStopSequenceNumber>
 									<JourneyRef>NJ-OeBB-120123-1231122</JourneyRef>
@@ -186,8 +187,9 @@ All the rest of the information is minimalized and is not necessary accurate.
 									<DestinationText>
 										<Text>Hamburg Altona</Text>
 									</DestinationText>
-								</ParallelService>								
-								<ParallelService>  <!-- the German part of the train to Amsterdam, only to Nürberg afterwards separated -->
+								</ParallelService>
+								<ParallelService>
+									<!-- the German part of the train to Amsterdam, only to Nürberg afterwards separated -->
 									<FromStopSequenceNumber>5</FromStopSequenceNumber>
 									<ToStopSequenceNumber>7</ToStopSequenceNumber>
 									<JourneyRef>DB:123111-12388</JourneyRef>
@@ -198,11 +200,11 @@ All the rest of the information is minimalized and is not necessary accurate.
 									<PublishedServiceName>
 										<Text>NJ 50490</Text>
 									</PublishedServiceName>
-									<TrainNumber>1231012</TrainNumber>									
+									<TrainNumber>1231012</TrainNumber>
 									<DestinationText>
 										<Text>Amsterdam</Text>
 									</DestinationText>
-								</ParallelService>								
+								</ParallelService>
 							</TimedLeg>
 						</Leg>
 					</Trip>
