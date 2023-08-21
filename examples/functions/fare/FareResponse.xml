@@ -30,6 +30,7 @@
 					<Id>1231231112231</Id>
 					<TripFareResult>
 						<TripId>192391231</TripId>
+						<BookingId>NOVA-12311-1231-1231-2345</BookingId>
 						<FromLegIdRef>1</FromLegIdRef>
 						<ToLegIdRef>1</ToLegIdRef>
 						<FareProduct>

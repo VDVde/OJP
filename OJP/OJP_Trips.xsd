@@ -493,7 +493,7 @@
 	</xs:complexType>
 	<xs:simpleType name="TripObjectIdType">
 		<xs:annotation>
-			<xs:documentation>Type for identifier of a NeTEx Object.</xs:documentation>
+			<xs:documentation>Type for identifier of a TRIP Object.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="ObjectIdType"/>
 	</xs:simpleType>
