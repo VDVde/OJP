@@ -20,6 +20,8 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### Added
 
+* Extended`TripFareResult`to contain `TripId` and `BookingId`, and to handle `FareProduct`s covering non-consecutive legs of a trip. [#395](https://github.com/VDVde/OJP/pull/395), [#400](https://github.com/VDVde/OJP/pull/400)
+* **[breaking]** New`ParallelService`in `TimedLegService`to describe, for instance, coupled trains with different destinations. Abandoned `ServiceSection`. [#396](https://github.com/VDVde/OJP/pull/396)
 * New elements `InterchangeRef`, `ExtraInterchange`, `InterchangeCancellation`, `siri:InterchangePropertyGroup` in `TransferLegStructure` and `UndefinedDelay` in `DatedJourneyStructure. [#390](https://github.com/VDVde/OJP/pull/390)
 * `OJPTripInfoRequest`: added parameters to search by train number and operator. [#378](https://github.com/VDVde/OJP/pull/378)
 * More examples. [#373](https://github.com/VDVde/OJP/pull/373), [#374](https://github.com/VDVde/OJP/pull/374), [#375](https://github.com/VDVde/OJP/pull/375), [#376](https://github.com/VDVde/OJP/pull/376)
@@ -36,7 +38,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 * Added `TripContext` to `TripFareRequestStructure` and `MultiTripFareRequestStructure`.  [#323](https://github.com/VDVde/OJP/pull/323)
 * New `OperatorFilter`and `SystemId` in `TripRefineRequest` to indicate the system to be queried. [#298](https://github.com/VDVde/OJP/pull/298)
 * Added `ExpectedDepartureOccupancy` and `ExpectedDepartureCapacities` (from SIRI) to Legs.  [#264](https://github.com/VDVde/OJP/pull/264)
-* **[breaking]** Intoduced `ServiceSection`, removed `ServiceGroup` in `DatedJourneyStructure`, `ContinuousServiceStructure`. [#263](https://github.com/VDVde/OJP/pull/263)
+* **[breaking]** Intoduced `ServiceSection`, removed `ServiceGroup` in `DatedJourneyStructure`, `ContinuousServiceStructure`. [#263](https://github.com/VDVde/OJP/pull/263); see also [#396](https://github.com/VDVde/OJP/pull/396)
 * Additional `OptimisationMethod`s for trip planning (`leastDistance`, `environmentalSafety`, `extraSafe`, `extraReliable`, `scenic`, `quietTravel`), new `HikingProfile` and `CyclingProfile`, support for mutiple `OptimisationMethod`s, new filter `IncludeAlternativeOptions` to show second-best routes. [#302](https://github.com/VDVde/OJP/pull/302), [#271](https://github.com/VDVde/OJP/pull/271), [#242](https://github.com/VDVde/OJP/pull/242)
 * New place sorting options (`PlaceSortingGroup`) for `OJPPlaceInformationRequest`. [#301](https://github.com/VDVde/OJP/pull/301), [#287](https://github.com/VDVde/OJP/pull/287)
 * Added switches to request accessibility information (`IncludeAccessFeatureStatus`, `IncludeAccessibilityDetails`) in `OJPTripRequest`. [#291](https://github.com/VDVde/OJP/pull/291)
