@@ -7,7 +7,7 @@
 # The -e flag causes the script to exit as soon as one command returns a non-zero exit code
 set -e
 
-base_dir="$(dirname "${0}")/.."
+base_dir="$(readlink -f $(dirname "$0")/..)"
 xsl_dir=$base_dir/docs
 generated_dir="${base_dir}/docs/generated"
 basex="/tmp/basex.jar"
@@ -24,7 +24,7 @@ echo "Generating documentation tables ..."
 mkdir -p "${generated_dir}"
 rm -f "${generated_dir}"/contab/*.html
 cd ${xsl_dir}
-java -cp /tmp/basex.jar org.basex.BaseX -b report=contab -b dir=".." -b odir=generated -b custom=custom-ojp.xml -b dnamesExcluded=".git .github" xcore.xq
+java -cp /tmp/basex.jar org.basex.BaseX -b report=contab -b dir=${base_dir} -b odir=${generated_dir} -b custom=custom-ojp.xml -b dnamesExcluded=".git .github" xcore.xq
 rm -fr "${generated_dir}"/edesc
 
 echo -e '\033[0;32mFinished generating documentation tables\033[0m'
