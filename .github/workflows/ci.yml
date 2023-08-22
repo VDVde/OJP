@@ -35,8 +35,8 @@ jobs:
       - name: Validate OJP XML examples
         run: ./.github/scripts/validate-examples.sh
 
-      # - name: Check schema structure for generation for documentation tables
-      #   run: ./docs/validate-schema-conventions.sh
+      - name: Check schema structure for generation for documentation tables
+        run: ./docs/validate-schema-conventions.sh
 
       - name: Generate documentation tables
         run: ./docs/generate-tables.sh

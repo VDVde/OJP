@@ -23,7 +23,8 @@ echo "Generating documentation tables ..."
 # prepare generated_dir
 mkdir -p "${generated_dir}"
 rm -f "${generated_dir}"/contab/*.html
-java -cp /tmp/basex.jar org.basex.BaseX -b report=contab -b dir=${base_dir} -b odir=${generated_dir} -b custom=${xsl_dir}/custom-ojp.xml -b dnamesExcluded=".git .github" xcore.xq
+cd ${xsl_dir}
+java -cp /tmp/basex.jar org.basex.BaseX -b report=contab -b dir=".." -b odir=generated -b custom=custom-ojp.xml -b dnamesExcluded=".git .github" xcore.xq
 rm -fr "${generated_dir}"/edesc
 
 echo -e '\033[0;32mFinished generating documentation tables\033[0m'
