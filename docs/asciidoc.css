@@ -1,6 +1,15 @@
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 /* Remove comment around @import statement below when using as a custom stylesheet */
 /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+.announceBase {color:purple; background:#FFFDED; font-family: Montserrat;}
+.boldgreen {font-weight:bold;color:green;}
+.darkbrown {color:Maroon;}
+.anno-text {color:Maroon;}
+.monospace {font-family:Courier New;}
+.enum-dict {font-style: italic; color: A0A0A0;}
+.dir {font-size: 70%; color: #A0A0A0; font-family: Montserrat;}
+.tocsubtitle {font-size: 110%; font-style: italic;}
+
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
