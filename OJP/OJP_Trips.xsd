@@ -144,7 +144,7 @@
 					</xs:element>
 					<xs:element name="IncludeRestrictedLines" type="xs:boolean" minOccurs="0" default="false">
 						<xs:annotation>
-							<xs:documentation>There might exist lines that have special restrictions and are not generally available to the public. E.g. school buses, company shuttles. dragLifts need to have an AccessMode ski. Lines with ACCESS MODE bicycle will be included as well. If this flag is set, then existing restricted lines are considered by the router. The results are marked as restricted in the ServiceSection. The restriction can be seen from: ACCESS MODE or PrivatMode. The usage could also be detailed with Attribute elements.</xs:documentation>
+							<xs:documentation>There might exist lines that have special restrictions and are not generally available to the public. E.g. school buses, company shuttles. dragLifts need to have an ACCESS MODE ski. Lines with ACCESS MODE bicycle will be included as well. If this flag is set, then existing restricted lines are considered by the router. The results are marked as restricted in the ServiceGroup. The restriction can be seen from: ACCESS MODE or PrivateMode. The usage could also be detailed with Attribute elements.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
