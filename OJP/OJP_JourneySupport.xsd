@@ -230,6 +230,11 @@
 					<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals </xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element ref="siri:VehicleRef" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be the VEHICLE Id.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="Description" type="siri:NaturalLanguageStringStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Description of the private service.</xs:documentation>
