@@ -12,9 +12,8 @@
 					<RefineLegRef>3</RefineLegRef>
 					<SystemId>SBB:prod</SystemId>
 					<UseRealtimeData>full</UseRealtimeData>
-					<IncludeAlternativeOptions>true</IncludeAlternativeOptions>			
+					<IncludeAlternativeOptions>true</IncludeAlternativeOptions>
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
-
 					<IncludeFare>true</IncludeFare>
 					<HikingProfile>difficult</HikingProfile>
 					<CyclingProfile>comfortable</CyclingProfile>
