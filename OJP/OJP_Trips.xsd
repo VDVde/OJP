@@ -1613,11 +1613,7 @@ Can only be used when both participants recognise the same schedule version. If 
 					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Usage of real-time data in refinement. Default is "full".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:group ref="TripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
 				<xs:annotation>
