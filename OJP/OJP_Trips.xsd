@@ -796,7 +796,10 @@
 			<xs:documentation>Describes the the situation at a stop or station at which the passenger boards a Leg of a trip including time-related information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:group ref="StopPointGroup"/>
+			<xs:choice>
+				<xs:group ref="StopPointGroup"/>
+				<xs:element name="GeoPosition" type="siri:LocationStructure"/>
+			</xs:choice>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
@@ -825,7 +828,10 @@
 			<xs:documentation>Describes the situation at a stop or station at which the passenger alights from a Leg of a trip including time-related information</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:group ref="StopPointGroup"/>
+			<xs:choice>
+				<xs:group ref="StopPointGroup"/>
+				<xs:element name="GeoPosition" type="siri:LocationStructure"/>
+			</xs:choice>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure">
 				<xs:annotation>
 					<xs:documentation>describes the arrival situation at the leg alight stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
@@ -854,7 +860,10 @@
 			<xs:documentation>Describes the situation at a stop or station that lies between the LegBoard and LegAlight stop or station including time-related information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:group ref="StopPointGroup"/>
+			<xs:choice>
+				<xs:group ref="StopPointGroup"/>
+				<xs:element name="GeoPosition" type="siri:LocationStructure"/>
+			</xs:choice>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure">
 				<xs:annotation>
 					<xs:documentation>describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>

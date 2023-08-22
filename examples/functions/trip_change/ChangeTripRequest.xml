@@ -142,30 +142,44 @@
 						</Leg>
 						<Leg>
 							<Id>3</Id>
-							<ContinuousLeg>
-								<LegStart>
+							<TimedLeg>
+								<LegBoard>
 									<GeoPosition>
 										<siri:Longitude>47.042666496</siri:Longitude>
 										<siri:Latitude>8.306332108</siri:Latitude>
 									</GeoPosition>
-									<Name>
-										<Text>Taxiplatz Luzern</Text>
-									</Name>
-								</LegStart>
-								<LegEnd>
+									<ServiceArrival>
+										<TimetabledTime>20203-02-08T08:02:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-02-08T08:03:00Z</TimetabledTime>
+									</ServiceDeparture>
+								</LegBoard>
+								<LegAlight>
 									<GeoPosition>
 										<siri:Longitude>47.06</siri:Longitude>
 										<siri:Latitude>8.32</siri:Latitude>
 									</GeoPosition>
-									<Name>
-										<Text>Destination</Text>
-									</Name>
-								</LegEnd>
+									<ServiceArrival>
+										<TimetabledTime>2023-02-08T08:20:00Z</TimetabledTime>
+									</ServiceArrival>
+								</LegAlight>
 								<Service>
-									<ContinuousMode>demandResponsive</ContinuousMode>
-									<SharingService>
-										<OperatorRef>ch:1:sboid:12391912</OperatorRef>
-									</SharingService>
+									<TimedMode>demandResponsive</TimedMode>
+									<OperatingDayRef>2023-02-18</OperatingDayRef>
+									<siri:VehicleRef>12391923-1123</siri:VehicleRef>
+									<JourneyRef>1230.1.1.231</JourneyRef>
+									<siri:LineRef>mybux1:001</siri:LineRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>demandAndResponseBus</siri:BusSubmode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>Mybuxi</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>ch:2:sboid:mybuxi</OperatorRef>
+									</OperatorRefs>
 									<BookingArrangements>
 										<BookingArrangement>
 											<BuyWhen>
@@ -174,8 +188,7 @@
 										</BookingArrangement>
 									</BookingArrangements>
 								</Service>
-								<Duration>PT13M</Duration>
-							</ContinuousLeg>
+							</TimedLeg>
 						</Leg>
 					</Trip>
 				</TripResult>
