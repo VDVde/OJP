@@ -209,7 +209,6 @@ All the rest of the information is minimalized and is not necessary accurate.
 									</PublishedServiceName>
 									<TrainNumber>123123</TrainNumber>
 									<siri:VehicleRef>A</siri:VehicleRef>
-
 									<DestinationText>
 										<Text>Hamburg Altona</Text>
 									</DestinationText>
@@ -223,12 +222,11 @@ All the rest of the information is minimalized and is not necessary accurate.
 									<Mode>
 										<PtMode>rail</PtMode>
 									</Mode>
-									
 									<PublishedServiceName>
 										<Text>NJ 50490</Text>
 									</PublishedServiceName>
 									<TrainNumber>1231012</TrainNumber>
-									<siri:VehicleRef>B</siri:VehicleRef>									
+									<siri:VehicleRef>B</siri:VehicleRef>
 									<DestinationText>
 										<Text>Amsterdam</Text>
 									</DestinationText>
