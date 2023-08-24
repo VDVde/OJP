@@ -145,6 +145,7 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<Text xml:lang="de">NJ 490</Text>
 									</PublishedServiceName>
 									<TrainNumber>123123</TrainNumber>
+									<siri:VehicleRef>A</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>at:oebb</OperatorRef>
 									</OperatorRefs>
@@ -152,6 +153,28 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<Text>Hamburg Altona</Text>
 									</DestinationText>
 								</Service>
+								<ParallelService>
+									<FromStopSequenceNumber>1</FromStopSequenceNumber>
+									<ToStopSequenceNumber>5</ToStopSequenceNumber>
+									<JourneyRef>NJ-OeBB-1230123-123111</JourneyRef>
+									<siri:LineRef>OeBB:NJ12311</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>nightRail</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">NJ</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">NJ 490</Text>
+									</PublishedServiceName>
+									<TrainNumber>123123</TrainNumber>
+									<siri:VehicleRef>A</siri:VehicleRef>
+								</ParallelService>
 								<ParallelService>
 									<!-- the other train component going to Amsterdam, AT part -->
 									<FromStopSequenceNumber>1</FromStopSequenceNumber>
@@ -166,6 +189,7 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<Text>NJ 40490</Text>
 									</PublishedServiceName>
 									<TrainNumber>1231012</TrainNumber>
+									<siri:VehicleRef>B</siri:VehicleRef>
 									<DestinationText>
 										<Text>Amsterdam</Text>
 									</DestinationText>
@@ -184,6 +208,8 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<Text>NJ 590</Text>
 									</PublishedServiceName>
 									<TrainNumber>123123</TrainNumber>
+									<siri:VehicleRef>A</siri:VehicleRef>
+
 									<DestinationText>
 										<Text>Hamburg Altona</Text>
 									</DestinationText>
@@ -197,10 +223,12 @@ All the rest of the information is minimalized and is not necessary accurate.
 									<Mode>
 										<PtMode>rail</PtMode>
 									</Mode>
+									
 									<PublishedServiceName>
 										<Text>NJ 50490</Text>
 									</PublishedServiceName>
 									<TrainNumber>1231012</TrainNumber>
+									<siri:VehicleRef>B</siri:VehicleRef>									
 									<DestinationText>
 										<Text>Amsterdam</Text>
 									</DestinationText>
