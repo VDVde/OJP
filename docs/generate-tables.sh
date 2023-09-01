@@ -12,10 +12,10 @@ xsl_dir=$base_dir/docs
 generated_dir="${base_dir}/docs/generated"
 basex="/tmp/basex.jar"
 
-echo "Download BaseX ..."
 
 if [ ! -e ${basex} ]; then
-	wget --output-document=${basex} https://files.basex.org/releases/10.6/BaseX106.jar
+	echo "Download BaseX ..."
+	wget --output-document=${basex} https://files.basex.org/releases/10.6/BaseX106.jar	
 fi
 
 echo "Generating documentation tables ..."
