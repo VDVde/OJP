@@ -2,7 +2,7 @@
 # Generate the documentation tables as docs/generated/OJP.html from the .xsd schema files
 #
 # You need the binary `java`
-# apt-get install xsltproc
+# apt-get install default-jre
 
 # The -e flag causes the script to exit as soon as one command returns a non-zero exit code
 set -e
