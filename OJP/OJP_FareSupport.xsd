@@ -170,7 +170,7 @@
 					<xs:documentation>Name of contact person.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EMail" type="EMailAddressType" minOccurs="0">
+			<xs:element name="Email" type="EmailAddressType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The email address of the contact.</xs:documentation>
 				</xs:annotation>
