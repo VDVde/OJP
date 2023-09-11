@@ -10,7 +10,7 @@
 	</xs:annotation>
 	<xs:simpleType name="IndividualModesOfOperationEnumeration">
 		<xs:annotation>
-			<xs:documentation>modes which an individual powers themselves (such as walk, cycle)</xs:documentation>
+			<xs:documentation>modes which an individual "drives"  themselves and walk (such as walk, cycle)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="walk"/>
