@@ -235,7 +235,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="JourneyRef" minOccurs="0"/>
-			<xs:element name="PrivateMode" type="PrivateModesEnumeration">
+			<xs:element name="PrivateMode" type="PrivateModesOfOperationEnumeration">
 				<xs:annotation>
 					<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals.</xs:documentation>
 				</xs:annotation>

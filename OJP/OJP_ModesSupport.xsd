@@ -52,7 +52,7 @@
 			<xs:enumeration value="park-ride-car"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="PrivateModesEnumeration">
+	<xs:simpleType name="PrivateModesOfOperationEnumeration">
 		<xs:annotation>
 			<xs:documentation>MODE OF OPERATION offered by private individuals (contains the values as defined by NeTEx). In the end these are all different forms of car pooling</xs:documentation>
 		</xs:annotation>
@@ -240,7 +240,7 @@
 					<xs:documentation>Whether modes in list are to include or exclude from search. Default is exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateMode" type="PrivateModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="PrivateMode" type="PrivateModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>List of private mobility offers to include/exclude.</xs:documentation>
 				</xs:annotation>
