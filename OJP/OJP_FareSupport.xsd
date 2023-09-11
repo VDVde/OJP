@@ -160,12 +160,6 @@
 		</xs:annotation>
 		<xs:restriction base="xs:normalizedString"/>
 	</xs:simpleType>
-	<xs:simpleType name="EmailAddressType">
-		<xs:annotation>
-			<xs:documentation>Email address type a@b.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:normalizedString"/>
-	</xs:simpleType>
 	<xs:complexType name="ContactDetailsStructure" abstract="false">
 		<xs:annotation>
 			<xs:documentation>Type for contact details.</xs:documentation>
