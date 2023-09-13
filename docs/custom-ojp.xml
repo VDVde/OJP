@@ -66,8 +66,7 @@
 				<targetNamespace>http://www.opengis.net/gml/3.2</targetNamespace>
 			</content>
 			<processing>
-				<title>OJP - <strong>O</strong>pen API for distributed 
-                    <strong>J</strong>ourney <strong>P</strong>lanning (GML)</title>
+				<title>OJP - <strong>O</strong>pen API for distributed <strong>J</strong>ourney <strong>P</strong>lanning (GML)</title>
 				<titleEnumDict>OJP Enumeration Dictionary - OJP</titleEnumDict>
 				<reportFileBaseName>gml</reportFileBaseName>
 				<reportTypes/>
@@ -78,8 +77,7 @@
 				<targetNamespace>http://www.siri.org.uk/siri</targetNamespace>
 			</content>
 			<processing>
-				<title>OJP - <strong>O</strong>pen API for distributed 
-                    <strong>J</strong>ourney <strong>P</strong>lanning (SIRI)</title>
+				<title>OJP - <strong>O</strong>pen API for distributed <strong>J</strong>ourney <strong>P</strong>lanning (SIRI)</title>
 				<reportFileBaseName>siri</reportFileBaseName>
 				<reportTypes/>
 			</processing>
@@ -90,8 +88,7 @@
 				<files dir="ojp" name="ojp.xsd"/>
 			</content>
 			<processing>
-				<title>OJP - <strong>O</strong>pen API for distributed 
-                    <strong>J</strong>ourney <strong>P</strong>lanning</title>
+				<title>OJP - <strong>O</strong>pen API for distributed <strong>J</strong>ourney <strong>P</strong>lanning</title>
 				<reportFileBaseName>ojp</reportFileBaseName>
 				<order>
 					<first>
