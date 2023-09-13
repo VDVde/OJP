@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <custom>
 	<!-- Title appearing on the entry page -->
-	<systemTitle><strong>Ne</strong>twork <strong>T</strong>imetable 
-        <strong>EX</strong>change</systemTitle>
+	<systemTitle><strong>Ne</strong>twork <strong>T</strong>imetable <strong>EX</strong>change</systemTitle>
 	<!-- Standardized namespace bindings -->
 	<namespaces>
 		<namespace prefix="orc" uri="http://datex2.eu/schema/2_0RC1/2_0"/>

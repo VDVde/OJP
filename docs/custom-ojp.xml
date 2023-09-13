@@ -22,8 +22,7 @@
 				<targetNamespace>http://datex2.eu/schema/2_0RC1/2_0</targetNamespace>
 			</content>
 			<processing>
-				<title>OJP - <strong>O</strong>pen API for distributed 
-                    <strong>J</strong>ourney <strong>P</strong>lanning (datex2)</title>
+				<title>OJP - <strong>O</strong>pen API for distributed <strong>J</strong>ourney <strong>P</strong>lanning (datex2)</title>
 				<titleEnumDict>OJP Enumeration Dictionary - DATEX2</titleEnumDict>
 				<reportFileBaseName>datex2</reportFileBaseName>
 				<reportTypes/>
@@ -34,8 +33,7 @@
 				<targetNamespace>http://wsdl.siri.org.uk</targetNamespace>
 			</content>
 			<processing>
-				<title>OJP - <strong>O</strong>pen API for distributed 
-                    <strong>J</strong>ourney <strong>P</strong>lanning (wsdl)</title>
+				<title>OJP - <strong>O</strong>pen API for distributed <strong>J</strong>ourney <strong>P</strong>lanning (wsdl)</title>
 				<titleEnumDict>OJP Enumeration Dictionary - WSDL</titleEnumDict>
 				<reportFileBaseName>siri-wsdl</reportFileBaseName>
 				<reportTypes/>
@@ -46,8 +44,7 @@
 				<targetNamespace>http://www.ifopt.org.uk/acsb</targetNamespace>
 			</content>
 			<processing>
-				<title>OJP - <strong>O</strong>pen API for distributed 
-                    <strong>J</strong>ourney <strong>P</strong>lanning (ACSB)</title>
+				<title>OJP - <strong>O</strong>pen API for distributed <strong>J</strong>ourney <strong>P</strong>lanning (ACSB)</title>
 				<titleEnumDict>OJP Enumeration Dictionary - ACSB</titleEnumDict>
 				<reportFileBaseName>acsb</reportFileBaseName>
 				<reportTypes/>
@@ -58,8 +55,7 @@
 				<targetNamespace>http://www.ifopt.org.uk/ifopt</targetNamespace>
 			</content>
 			<processing>
-				<title>OJP - <strong>O</strong>pen API for distributed 
-                    <strong>J</strong>ourney <strong>P</strong>lanning (IFOPT)</title>
+				<title>OJP - <strong>O</strong>pen API for distributed <strong>J</strong>ourney <strong>P</strong>lanning (IFOPT)</title>
 				<titleEnumDict>OJP Enumeration Dictionary - IFOPT</titleEnumDict>
 				<reportFileBaseName>ifopt</reportFileBaseName>
 				<reportTypes/>
