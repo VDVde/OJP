@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+  <OJPResponse>
+    <siri:ServiceDelivery>
+      <siri:ResponseTimestamp>2023-09-13T14:02:49Z</siri:ResponseTimestamp>
+      <siri:ProducerRef>EFAController10.5.23.58-OJP-EFA01-P</siri:ProducerRef>
+      <siri:Status>true</siri:Status>
+      <OJPTripDelivery>
+        <siri:ResponseTimestamp>2023-09-13T14:02:48Z</siri:ResponseTimestamp>
+        <siri:Status>true</siri:Status>
+        <CalcTime>1169</CalcTime>
+        <TripResult>
+          <Id>ID-C88D8F6C-CBEE-476C-843D-1644D7258B47</Id>
+          <Trip>
+            <Id>ID-C88D8F6C-CBEE-476C-843D-1644D7258B47</Id>
+            <Duration>PT31M</Duration>
+            <StartTime>2023-09-13T14:02:00Z</StartTime>
+            <EndTime>2023-09-13T14:33:00Z</EndTime>
+            <Transfers>1</Transfers>
+            <Distance>4345</Distance>
+            <Leg>
+              <Id>1</Id>
+              <ContinuousLeg>
+                <LegStart>
+                  <GeoPosition>
+                    <siri:Longitude>7.32829</siri:Longitude>
+                    <siri:Latitude>47.36604</siri:Latitude>
+                  </GeoPosition>
+                  <Name>
+                    <Text xml:lang="de">Delémont, 47.366034,7.328287</Text>
+                  </Name>
+                </LegStart>
+                <LegEnd>
+                  <siri:StopPointRef>8581235</siri:StopPointRef>
+                  <Name>
+                    <Text xml:lang="de">Delémont, rue du Poujet</Text>
+                  </Name>
+                </LegEnd>
+                <Service>
+                  <IndividualMode>walk</IndividualMode>
+                </Service>
+                <TimeWindowStart>2023-09-13T14:02:00Z</TimeWindowStart>
+                <TimeWindowEnd>2023-09-13T14:11:00Z</TimeWindowEnd>
+                <Duration>PT9M</Duration>
+                <Length>654</Length>
+              </ContinuousLeg>
+            </Leg>
+            <Leg>
+              <Id>2</Id>
+              <TimedLeg>
+                <LegBoard>
+                  <siri:StopPointRef>8581235</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, rue du Poujet</Text>
+                  </StopPointName>
+                  <ServiceDeparture>
+                    <TimetabledTime>2023-09-13T14:11:00Z</TimetabledTime>
+                  </ServiceDeparture>
+                  <Order>1</Order>
+                </LegBoard>
+                <LegIntermediates>
+                  <siri:StopPointRef>8581218</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, La Promenade</Text>
+                  </StopPointName>
+                  <ServiceArrival>
+                    <TimetabledTime>2023-09-13T14:12:00Z</TimetabledTime>
+                  </ServiceArrival>
+                  <ServiceDeparture>
+                    <TimetabledTime>2023-09-13T14:12:00Z</TimetabledTime>
+                  </ServiceDeparture>
+                  <Order>2</Order>
+                </LegIntermediates>
+                <LegIntermediates>
+                  <siri:StopPointRef>8510379</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, Château-Musée</Text>
+                  </StopPointName>
+                  <ServiceArrival>
+                    <TimetabledTime>2023-09-13T14:12:00Z</TimetabledTime>
+                  </ServiceArrival>
+                  <ServiceDeparture>
+                    <TimetabledTime>2023-09-13T14:12:00Z</TimetabledTime>
+                  </ServiceDeparture>
+                  <Order>3</Order>
+                </LegIntermediates>
+                <LegIntermediates>
+                  <siri:StopPointRef>8510378</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, Hôtel de Ville</Text>
+                  </StopPointName>
+                  <ServiceArrival>
+                    <TimetabledTime>2023-09-13T14:13:00Z</TimetabledTime>
+                  </ServiceArrival>
+                  <ServiceDeparture>
+                    <TimetabledTime>2023-09-13T14:13:00Z</TimetabledTime>
+                  </ServiceDeparture>
+                  <Order>4</Order>
+                </LegIntermediates>
+                <LegIntermediates>
+                  <siri:StopPointRef>8583087</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, Théâtre</Text>
+                  </StopPointName>
+                  <ServiceArrival>
+                    <TimetabledTime>2023-09-13T14:14:00Z</TimetabledTime>
+                  </ServiceArrival>
+                  <ServiceDeparture>
+                    <TimetabledTime>2023-09-13T14:14:00Z</TimetabledTime>
+                  </ServiceDeparture>
+                  <Order>5</Order>
+                </LegIntermediates>
+                <LegIntermediates>
+                  <siri:StopPointRef>8571983</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, Le Ticle</Text>
+                  </StopPointName>
+                  <ServiceArrival>
+                    <TimetabledTime>2023-09-13T14:15:00Z</TimetabledTime>
+                  </ServiceArrival>
+                  <ServiceDeparture>
+                    <TimetabledTime>2023-09-13T14:15:00Z</TimetabledTime>
+                  </ServiceDeparture>
+                  <Order>6</Order>
+                </LegIntermediates>
+                <LegIntermediates>
+                  <siri:StopPointRef>8571982</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, Av. de la gare</Text>
+                  </StopPointName>
+                  <ServiceArrival>
+                    <TimetabledTime>2023-09-13T14:16:00Z</TimetabledTime>
+                  </ServiceArrival>
+                  <ServiceDeparture>
+                    <TimetabledTime>2023-09-13T14:16:00Z</TimetabledTime>
+                  </ServiceDeparture>
+                  <Order>7</Order>
+                </LegIntermediates>
+                <LegAlight>
+                  <siri:StopPointRef>8571965</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, gare</Text>
+                  </StopPointName>
+                  <PlannedQuay>
+                    <Text xml:lang="de">F</Text>
+                  </PlannedQuay>
+                  <ServiceArrival>
+                    <TimetabledTime>2023-09-13T14:18:00Z</TimetabledTime>
+                  </ServiceArrival>
+                  <Order>8</Order>
+                </LegAlight>
+                <Service>
+                  <OperatingDayRef>2023-09-13</OperatingDayRef>
+                  <JourneyRef>96120:1:R:j23:109:1064</JourneyRef>
+                  <siri:LineRef>96120:1</siri:LineRef>
+                  <siri:DirectionRef>R</siri:DirectionRef>
+                  <Mode>
+                    <PtMode>bus</PtMode>
+                    <siri:BusSubmode>localBusService</siri:BusSubmode>
+                    <Name>
+                      <Text xml:lang="de">Bus</Text>
+                    </Name>
+                    <ShortName>
+                      <Text xml:lang="de">B</Text>
+                    </ShortName>
+                  </Mode>
+                  <PublishedServiceName>
+                    <Text xml:lang="de">1</Text>
+                  </PublishedServiceName>
+                  <OperatorRefs>
+                  <OperatorRef>801</OperatorRef>
+
+																		</OperatorRefs>
+                  <DestinationStopPointRef>8571965</DestinationStopPointRef>
+                  <DestinationText>
+                    <Text xml:lang="de">Delémont, gare</Text>
+                  </DestinationText>
+                </Service>
+                <Extension>
+                  <TransportTypeName>
+                    <Text xml:lang="de">Bus</Text>
+                  </TransportTypeName>
+                  <PublishedJourneyNumber>
+                    <Text xml:lang="de">1064</Text>
+                  </PublishedJourneyNumber>
+                  <OperatorName>
+                    <Text xml:lang="de">PostAuto AG</Text>
+                  </OperatorName>
+                </Extension>
+              </TimedLeg>
+            </Leg>
+            <Leg>
+              <Id>3</Id>
+              <TransferLeg>
+                <TransferMode>walk</TransferMode>
+                <LegStart>
+                  <siri:StopPointRef>8571965</siri:StopPointRef>
+                  <Name>
+                    <Text xml:lang="de">Delémont, gare</Text>
+                  </Name>
+                </LegStart>
+                <LegEnd>
+                  <siri:StopPointRef>8571965</siri:StopPointRef>
+                  <Name>
+                    <Text xml:lang="de">Delémont, gare</Text>
+                  </Name>
+                </LegEnd>
+                <TimeWindowStart>2023-09-13T14:18:00Z</TimeWindowStart>
+                <TimeWindowEnd>2023-09-13T14:22:00Z</TimeWindowEnd>
+                <Duration>PT4M</Duration>
+                <WalkDuration>PT1M</WalkDuration>
+                <BufferTime>PT3M</BufferTime>
+              </TransferLeg>
+            </Leg>
+            <Leg>
+              <Id>4</Id>
+              <TimedLeg>
+                <LegBoard>
+                  <siri:StopPointRef>8571965</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, gare</Text>
+                  </StopPointName>
+                  <PlannedQuay>
+                    <Text xml:lang="de">E</Text>
+                  </PlannedQuay>
+                  <ServiceDeparture>
+                    <TimetabledTime>2023-09-13T14:22:00Z</TimetabledTime>
+                  </ServiceDeparture>
+                  <Order>1</Order>
+                </LegBoard>
+                <LegIntermediates>
+                  <siri:StopPointRef>8571996</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, ch. du Puits</Text>
+                  </StopPointName>
+                  <ServiceArrival>
+                    <TimetabledTime>2023-09-13T14:23:00Z</TimetabledTime>
+                  </ServiceArrival>
+                  <ServiceDeparture>
+                    <TimetabledTime>2023-09-13T14:23:00Z</TimetabledTime>
+                  </ServiceDeparture>
+                  <Order>2</Order>
+                </LegIntermediates>
+                <LegAlight>
+                  <siri:StopPointRef>8510185</siri:StopPointRef>
+                  <StopPointName>
+                    <Text xml:lang="de">Delémont, centre sportif</Text>
+                  </StopPointName>
+                  <ServiceArrival>
+                    <TimetabledTime>2023-09-13T14:24:00Z</TimetabledTime>
+                  </ServiceArrival>
+                  <Order>3</Order>
+                </LegAlight>
+                <Service>
+                  <OperatingDayRef>2023-09-13</OperatingDayRef>
+                  <JourneyRef>96120:8:H:j23:70:8131</JourneyRef>
+                  <siri:LineRef>96120:8</siri:LineRef>
+                  <siri:DirectionRef>H</siri:DirectionRef>
+                  <Mode>
+                    <PtMode>bus</PtMode>
+                    <siri:BusSubmode>localBusService</siri:BusSubmode>
+                    <Name>
+                      <Text xml:lang="de">Bus</Text>
+                    </Name>
+                    <ShortName>
+                      <Text xml:lang="de">B</Text>
+                    </ShortName>
+                  </Mode>
+                  <PublishedServiceName>
+                    <Text xml:lang="de">8</Text>
+                  </PublishedServiceName>
+                  <OperatorRefs>
+                  <OperatorRef>801</OperatorRef>
+																		</OperatorRefs>
+                  <DestinationStopPointRef>8500671</DestinationStopPointRef>
+                  <DestinationText>
+                    <Text xml:lang="de">Develier, Sur Cré</Text>
+                  </DestinationText>
+                </Service>
+<Extension>
+                  <TransportTypeName>
+                    <Text xml:lang="de">Bus</Text>
+                  </TransportTypeName>
+                  <PublishedJourneyNumber>
+                    <Text xml:lang="de">8131</Text>
+                  </PublishedJourneyNumber>
+                  <OperatorName>
+                    <Text xml:lang="de">PostAuto AG</Text>
+                  </OperatorName>
+                </Extension>
+              </TimedLeg>
+            </Leg>
+            <Leg>
+              <Id>5</Id>
+              <ContinuousLeg>
+                <LegStart>
+                  <siri:StopPointRef>8510185</siri:StopPointRef>
+                  <Name>
+                    <Text xml:lang="de">Delémont, centre sportif</Text>
+                  </Name>
+                </LegStart>
+                <LegEnd>
+                  <GeoPosition>
+                    <siri:Longitude>7.34049</siri:Longitude>
+                    <siri:Latitude>47.35752</siri:Latitude>
+                  </GeoPosition>
+                  <Name>
+                    <Text xml:lang="de">Delémont, 47.357518,7.340502</Text>
+                  </Name>
+                </LegEnd>
+                <Service>
+                  <IndividualMode>walk</IndividualMode>
+                </Service>
+                <TimeWindowStart>2023-09-13T14:24:00Z</TimeWindowStart>
+                <TimeWindowEnd>2023-09-13T14:33:00Z</TimeWindowEnd>
+                <Duration>PT9M</Duration>
+                <Length>614</Length>
+              </ContinuousLeg>
+            </Leg>
+          </Trip>
+        </TripResult>
+      </OJPTripDelivery>
+    </siri:ServiceDelivery>
+  </OJPResponse>
+</OJP>
