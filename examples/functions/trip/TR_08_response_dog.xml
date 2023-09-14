@@ -7,9 +7,9 @@
 			<siri:ProducerRef>EFAController10.5.23.58-OJP-EFA01-P</siri:ProducerRef>
 			<siri:Status>true</siri:Status>
 			<siri:ErrorCondition>
-					<OJPError>
-						<TripProblemType>TRIP_RESTRICTEDRESULTSDROPPED</TripProblemType>
-					</OJPError>
+				<OJPError>
+					<TripProblemType>TRIP_RESTRICTEDRESULTSDROPPED</TripProblemType>
+				</OJPError>
 			</siri:ErrorCondition>
 			<OJPTripDelivery>
 				<siri:ResponseTimestamp>2023-09-13T14:02:48Z</siri:ResponseTimestamp>
@@ -17,7 +17,6 @@
 				<CalcTime>1169</CalcTime>
 				<TripResult>
 					<Id>ID-C88D8F6C-CBEE-476C-843D-1644D7258B47</Id>
-
 					<Trip>
 						<Id>ID-C88D8F6C-CBEE-476C-843D-1644D7258B47</Id>
 						<Duration>PT31M</Duration>
