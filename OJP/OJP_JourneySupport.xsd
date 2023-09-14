@@ -145,7 +145,7 @@
 			</xs:element>
 			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This flag is set, when the Service has restricted usage. E.g. a certain ACCESS MODE is required (e.g. dragLift) or if the LINE is provided only to special sets of passengers (e.g. school buses, hotel shuttles) as defined in PrivateMode. Restricted trumps e.g. PassengerCategory. If Restricted is set to true all Service are shown.</xs:documentation>
+					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g. dragLift) or the LINE is only made available to certain passenger groups (e.g. school buses, hotel shuttles), as defined in PrivateMode. Restricted trumps PassengerCategory, for example. If Restricted is set to true, all services are displayed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RestrictionNote" type="InternationalTextStructure" minOccurs="0">
@@ -226,7 +226,7 @@
 	</xs:group>
 	<xs:group name="PrivateServiceGroup">
 		<xs:annotation>
-			<xs:documentation>specific service operated by a Private Mode. May also be a school bus, a company shuttle or some other transport opportunity for a (normally) closed community.</xs:documentation>
+			<xs:documentation>Specialized service operated by a Private Mode, e.g. a school bus, corporate shuttle, or other transportation for a (usually) closed community.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="JourneyRef" minOccurs="0"/>
