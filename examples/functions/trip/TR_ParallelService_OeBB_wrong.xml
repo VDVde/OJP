@@ -142,7 +142,8 @@ All the rest of the information is minimalized and is not necessary accurate.
 										</ShortName>
 									</Mode>
 									<PublishedServiceName>
-										<Text xml:lang="de">NJ 490</Text> <!-- the PublishedService changes in the middle, therefore having this PublishedServiceName and the train number
+										<Text xml:lang="de">NJ 490</Text>
+										<!-- the PublishedService changes in the middle, therefore having this PublishedServiceName and the train number
 										for the whole Leg would be misleading. See correct example -->
 									</PublishedServiceName>
 									<TrainNumber>123123</TrainNumber>
