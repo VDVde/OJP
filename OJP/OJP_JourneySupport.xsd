@@ -221,7 +221,7 @@
 	</xs:group>
 	<xs:group name="PrivateServiceGroup">
 		<xs:annotation>
-			<xs:documentation>specific service operated by a Private Mode. May also be a school bus, a company shuttle or some other transport opportunity for a (normally) closed community.</xs:documentation>
+			<xs:documentation>Specialized service operated by a Private Mode, e.g. a school bus, corporate shuttle, or other transportation for a (usually) closed community.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="JourneyRef" minOccurs="0"/>
