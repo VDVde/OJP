@@ -1756,6 +1756,11 @@ Can only be used when both participants recognise the same schedule version. If 
 					<xs:documentation>The trip plan in this trip result contains a long waiting time.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="TRIP_RESTRICTEDRESULTSDROPPED">
+				<xs:annotation>
+					<xs:documentation>Used for warnings, when there where possible/better results that were dropped, because of the criteria were not used (e.g. private services, offer only available for seniors).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="TRIP_MULTIPOINT_NOTALLPOINTSCOVERED">
 				<xs:annotation>
 					<xs:documentation>No trip solution was found covering each of the requested points.</xs:documentation>

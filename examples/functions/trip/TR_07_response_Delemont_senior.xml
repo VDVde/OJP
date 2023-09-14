@@ -56,6 +56,19 @@
 									<OperatorRefs>
 										<OperatorRef>ch:1:Organisation:Postauto</OperatorRef>
 									</OperatorRefs>
+									<Restricted>true</Restricted>
+									<RestrictionNote>
+										<Text>Service available only to seniors.</Text>
+									</RestrictionNote>
+									<BookingArrangements>
+										<BookingArrangement>
+											<BookingNotes>
+												<BookingNote>
+													<Text>Can only be booked by seniors.</Text>
+												</BookingNote>
+											</BookingNotes>
+										</BookingArrangement>
+									</BookingArrangements>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:24:00Z</TimeWindowStart>
 								<TimeWindowEnd>2023-09-13T14:33:00Z</TimeWindowEnd>
