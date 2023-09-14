@@ -387,7 +387,7 @@
 							</ContinuousLeg>
 						</Leg>
 					</Trip>
-				</TripResult>				
+				</TripResult>
 			</OJPTripDelivery>
 		</siri:ServiceDelivery>
 	</OJPResponse>
