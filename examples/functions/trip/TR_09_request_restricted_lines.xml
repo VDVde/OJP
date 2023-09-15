@@ -30,7 +30,7 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
-					<IncludeRestrictedLines>true</IncludeRestrictedLines>
+					<IncludeAllRestrictedLines>true</IncludeAllRestrictedLines>
 					<IncludeTrackSections>false</IncludeTrackSections>
 					<IncludeLegProjection>false</IncludeLegProjection>
 					<IncludeTurnDescription>false</IncludeTurnDescription>

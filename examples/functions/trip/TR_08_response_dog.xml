@@ -8,7 +8,10 @@
 			<siri:Status>true</siri:Status>
 			<siri:ErrorCondition>
 				<OJPError>
-					<TripProblemType>TRIP_RESTRICTEDRESULTSDROPPED</TripProblemType>
+					<TripProblemType>TRIP_RESTRICTEDRESULTSDROPPED</TripProblemType> <!-- In our example the Publicar was removed, because it is not available to dogs (only fictive). -->
+					<Details>
+						<Text>There exists SERVICE JOURNEYS that would fit the profile, but they are only accessible to special PassengerCategories and/or special groups.</Text>
+					</Details>
 				</OJPError>
 			</siri:ErrorCondition>
 			<OJPTripDelivery>

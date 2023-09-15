@@ -388,6 +388,63 @@
 						</Leg>
 					</Trip>
 				</TripResult>
+				<TripResult>
+					<!-- a hypothetical company shuttle service that does the trick as well -->
+					<Id>ID-C88D8F6C-CBEE-476C-843D-1644D7258B47</Id>
+					<Trip>
+						<Id>ID-C88D8F6C-CBEE-476C-843D-1644D7258B47</Id>
+						<Duration>PT31M</Duration>
+						<StartTime>2023-09-13T14:02:00Z</StartTime>
+						<EndTime>2023-09-13T14:33:00Z</EndTime>
+						<Transfers>1</Transfers>
+						<Distance>4345</Distance>
+						<Leg>
+							<Id>1</Id>
+							<ContinuousLeg>
+								<LegStart>
+									<GeoPosition>
+										<siri:Longitude>7.32829</siri:Longitude>
+										<siri:Latitude>47.36604</siri:Latitude>
+									</GeoPosition>
+									<Name>
+										<Text xml:lang="de">Delémont, 47.366034,7.328287</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<GeoPosition>
+										<siri:Longitude>7.34049</siri:Longitude>
+										<siri:Latitude>47.35752</siri:Latitude>
+									</GeoPosition>
+									<Name>
+										<Text xml:lang="de">Delémont, 47.357518,7.340502</Text>
+									</Name>
+								</LegEnd>
+								<Service>
+									<IndividualMode>ride-pool-car</IndividualMode>
+									<OperatingDayRef>2023-09-13</OperatingDayRef>
+									<siri:VehicleRef>ch:2:mobility:12319129391</siri:VehicleRef>
+									<JourneyRef>mobilty:12131231</JourneyRef>
+									<PublicCode>mobility</PublicCode>
+									<siri:LineRef>mobiltiy:123123</siri:LineRef>
+									<Mode>
+										<PtMode>selfDrive</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>Mobility Company shuttle</Text>
+									</PublishedServiceName>
+									<Restricted>true</Restricted>
+									<RestrictionNote>
+										<Text>Service available only to people working for the city of Délémont.</Text>
+									</RestrictionNote>
+								</Service>
+								<TimeWindowStart>2023-09-13T14:24:00Z</TimeWindowStart>
+								<TimeWindowEnd>2023-09-13T14:33:00Z</TimeWindowEnd>
+								<Duration>PT9M</Duration>
+								<Length>614</Length>
+							</ContinuousLeg>
+						</Leg>
+					</Trip>
+				</TripResult>
 			</OJPTripDelivery>
 		</siri:ServiceDelivery>
 	</OJPResponse>
