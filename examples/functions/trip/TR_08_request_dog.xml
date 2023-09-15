@@ -30,7 +30,6 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
-					<PassengerCategory>Senior</PassengerCategory>
 					<PassengerCategory>Dog</PassengerCategory>
 					<!-- hypothesis: dog is not allowed on the publicar (not true in reality, but for the examples sake). -->
 					<IncludeTrackSections>false</IncludeTrackSections>
