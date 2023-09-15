@@ -145,7 +145,7 @@
 			</xs:element>
 			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g. dragLift) or the LINE is only made available to certain passenger groups (e.g. school buses, hotel shuttles), as defined in PrivateMode. Restricted trumps PassengerCategory, for example. If Restricted is set to true, all services are displayed.</xs:documentation>
+					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g. dragLift) or the LINE is only made available to certain passenger groups (e.g. school buses, hotel shuttles), as defined in PrivateMode.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RestrictionNote" type="InternationalTextStructure" minOccurs="0">
