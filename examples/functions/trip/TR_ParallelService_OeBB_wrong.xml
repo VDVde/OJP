@@ -218,7 +218,7 @@ All the rest of the information is minimalized and is not necessary accurate.
 									</DestinationText>
 								</ParallelService>
 								<ParallelService>
-									<!-- the German part of the train to Amsterdam, only to Nürberg afterwards separated -->
+									<!-- the German part of the train to Amsterdam. It is connected only up to Nürberg with the relevant vehicle of this TimedLeg. As it has its own, separated JOURNEY afterwards, it is modeled in ParallelService only to Nürnberg. -->
 									<FromStopSequenceNumber>5</FromStopSequenceNumber>
 									<ToStopSequenceNumber>7</ToStopSequenceNumber>
 									<JourneyRef>DB:123111-12388</JourneyRef>
