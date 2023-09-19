@@ -120,7 +120,7 @@
 					</xs:annotation>
 				</xs:element>
 				<xs:sequence>
-					<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="ItModesToCover" type="IndividualModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
 						</xs:annotation>
