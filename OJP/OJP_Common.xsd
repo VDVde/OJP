@@ -197,7 +197,7 @@
 			<xs:documentation>Reference to a DATED VEHICLE JOURNEY (Reference to a journey on a specific operating day).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element ref="JourneyRef" minOccurs="0"/>
+			<xs:element ref="JourneyRef"/>
 			<xs:element ref="OperatingDayRef"/>
 		</xs:sequence>
 	</xs:group>

@@ -143,6 +143,16 @@
 					<xs:documentation>Via points of the service that may help identify the vehicle to the public (In Transmodel modeled as TRIP REQUEST PLACE.TRIP VIA PLACE.GoVia; it will also most probably be detailed as a VIA and associated DESTINATION DISPLAY in the ROUTE description).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g. dragLift) or the LINE is only made available to certain passenger groups (e.g. school buses, hotel shuttles), as defined in PrivateMode.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RestrictionNote" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Information about the restriction.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Note or service attribute.</xs:documentation>
@@ -216,13 +226,23 @@
 	</xs:group>
 	<xs:group name="PrivateServiceGroup">
 		<xs:annotation>
-			<xs:documentation>specific service operated by a Private Mode</xs:documentation>
+			<xs:documentation>Specialized service operated by a Private Mode, e.g. a school bus, corporate shuttle, or other transportation for a (usually) closed community.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="JourneyRef" minOccurs="0"/>
 			<xs:element name="PrivateMode" type="PrivateModesEnumeration">
 				<xs:annotation>
-					<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals </xs:documentation>
+					<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="siri:VehicleRef" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be the VEHICLE Id.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="siri:NaturalLanguageStringStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Description of the private service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganisationRef" type="siri:OperatorRefStructure" minOccurs="0"/>

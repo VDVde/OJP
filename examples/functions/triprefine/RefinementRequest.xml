@@ -13,7 +13,6 @@
 					<SystemId>SBB:prod</SystemId>
 					<UseRealtimeData>full</UseRealtimeData>
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
-					<IncludeAlternativeOptions>true</IncludeAlternativeOptions>
 					<IncludeFare>true</IncludeFare>
 					<HikingProfile>difficult</HikingProfile>
 					<CyclingProfile>comfortable</CyclingProfile>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning</xs:documentation>
 	</xs:annotation>
+	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../siri/xsd/ifopt/ifopt_allStopPlace.xsd"/>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
@@ -112,11 +113,35 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="BaseTripPolicyGroup"/>
-			<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:choice>
+				<xs:element name="MotorisedMainTravelMode" type="xs:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The MotorisedMainTravelMode defines whether the trip planner works in PT mode (or pure IT mode) or includes carTransportRail and the like. If set to true (e.g. because one travels by car, truck or motorcycle), then carTransportRail, ferry are used together with roads.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:sequence>
+					<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Whether alternative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second-best route. Should be optimised for the user expectance (see. e.g https://theses.hal.science/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IncludeAllRestrictedLines" type="xs:boolean" minOccurs="0" default="false">
+						<xs:annotation>
+							<xs:documentation>There might exist lines that have special restrictions and are not generally available to the public. E.g. school buses, company shuttles. dragLifts need to have an ACCESS MODE ski. Lines with ACCESS MODE bicycle will be included as well. If this flag is set, then existing restricted lines are considered by the router, irrespective of the selected passenger categories or the MotorisedMainTravelMode. The results are marked as restricted in the ServiceGroup. The restriction can be seen from: ACCESS MODE or PrivateMode. The usage could also be detailed with Attribute elements. Restricted trumps PassengerCategory, for example. If Restricted is set to true, all services are displayed.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Sequence of all passenger categories, for which this search shall be conducted. In rare cases additional offerings may be available (e.g., demand responsive service with certain areas being reserved for seniors). If multiple PassengerCategories are provided, then Services are shown when they are available for at least one PassengerCategory.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:choice>
 		</xs:sequence>
 	</xs:group>
 	<xs:group name="TripMobilityFilterGroup">
@@ -151,11 +176,6 @@
 			<xs:element name="IncludeIntermediateStops" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether the result should include intermediate stops (between the passenger's board and alight stops).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether alternative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second-best route. Should be optimised for the user expectance (see. e.g https://theses.hal.science/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludeFare" type="xs:boolean" default="false" minOccurs="0">
@@ -1581,11 +1601,7 @@ Can only be used when both participants recognise the same schedule version. If 
 					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UseRealtimeData" type="UseRealtimeDataEnumeration" default="full" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Usage of real-time data in refinement. Default is "full".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:group ref="TripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
 				<xs:annotation>
@@ -1726,6 +1742,11 @@ Can only be used when both participants recognise the same schedule version. If 
 			<xs:enumeration value="TRIP_INCONVENIENTWAITING">
 				<xs:annotation>
 					<xs:documentation>The trip plan in this trip result contains a long waiting time.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIP_RESTRICTEDRESULTSDROPPED">
+				<xs:annotation>
+					<xs:documentation>Used for warnings, when there where possible/better results that were dropped, because of the criteria were not used (e.g. private services, offer only available for seniors).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_MULTIPOINT_NOTALLPOINTSCOVERED">

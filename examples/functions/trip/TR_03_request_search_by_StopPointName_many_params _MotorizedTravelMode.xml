@@ -32,8 +32,7 @@
 					</ViaPoint>
 				</Via>
 				<Params>
-					<IncludeAllRestrictedLines>true</IncludeAllRestrictedLines>
-					<PassengerCategory>Adult</PassengerCategory>
+					<MotorisedMainTravelMode>true</MotorisedMainTravelMode>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>
 					<IncludeTurnDescription>true</IncludeTurnDescription>

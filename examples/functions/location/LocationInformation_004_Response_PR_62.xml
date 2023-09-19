@@ -30,8 +30,19 @@
 							<siri:Longitude>6.35332</siri:Longitude>
 							<siri:Latitude>46.90060</siri:Latitude>
 						</GeoPosition>
+						<Mode>
+							<PtMode>cableway</PtMode>
+						</Mode>
+						<AccessModeList>
+							<AccessMode>bicycle</AccessMode>
+							<AccessMode>foot</AccessMode>
+						</AccessModeList>
 					</Place>
 					<Complete>true</Complete>
+					<System>12312311</System>
+					<Operators>
+						<OperatorRef>11</OperatorRef>
+					</Operators>
 				</PlaceResult>
 				<PlaceResult>
 					<Place>
@@ -49,17 +60,17 @@
 							<siri:Longitude>6.35332</siri:Longitude>
 							<siri:Latitude>46.90060</siri:Latitude>
 						</GeoPosition>
+						<Mode>
+							<PtMode>rail</PtMode>
+							<siri:RailSubmode>unknown</siri:RailSubmode>
+						</Mode>
+						<Mode>
+							<PtMode>bus</PtMode>
+							<siri:BusSubmode>localBusService</siri:BusSubmode>
+						</Mode>
 					</Place>
 					<Complete>true</Complete>
 					<Probability>1</Probability>
-					<Mode>
-						<PtMode>rail</PtMode>
-						<siri:RailSubmode>unknown</siri:RailSubmode>
-					</Mode>
-					<Mode>
-						<PtMode>bus</PtMode>
-						<siri:BusSubmode>localBusService</siri:BusSubmode>
-					</Mode>
 				</PlaceResult>
 				<PlaceResult>
 					<Place>
@@ -77,13 +88,13 @@
 							<siri:Longitude>6.35145</siri:Longitude>
 							<siri:Latitude>46.90125</siri:Latitude>
 						</GeoPosition>
+						<Mode>
+							<PtMode>bus</PtMode>
+							<siri:BusSubmode>localBusService</siri:BusSubmode>
+						</Mode>
 					</Place>
 					<Complete>true</Complete>
 					<Probability>0.964999974</Probability>
-					<Mode>
-						<PtMode>bus</PtMode>
-						<siri:BusSubmode>localBusService</siri:BusSubmode>
-					</Mode>
 				</PlaceResult>
 			</OJPLocationInformationDelivery>
 		</siri:ServiceDelivery>

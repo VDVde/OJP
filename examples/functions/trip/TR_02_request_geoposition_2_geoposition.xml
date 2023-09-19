@@ -30,6 +30,7 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
+					<IncludeAlternativeOptions>false</IncludeAlternativeOptions>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>
 					<IncludeTurnDescription>true</IncludeTurnDescription>
@@ -39,7 +40,6 @@
 					<IncludeAccessibilityDetails>auditoryImpairment</IncludeAccessibilityDetails>
 					<IncludePlacesContext>true</IncludePlacesContext>
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
-					<IncludeAlternativeOptions>false</IncludeAlternativeOptions>
 					<IncludeFare>true</IncludeFare>
 					<IncludeOperatingDays>true</IncludeOperatingDays>
 					<HikingProfile>easy</HikingProfile>
