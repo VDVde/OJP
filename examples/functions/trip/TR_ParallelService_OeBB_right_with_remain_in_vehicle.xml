@@ -225,7 +225,7 @@ All the rest of the information is minimalized and is not necessary accurate.
 								<ParallelService>
 									<!-- the German part of the train to Amsterdam, only to Nürberg afterwards separated -->
 									<FromStopSequenceNumber>1</FromStopSequenceNumber>
-									<ToStopSequenceNumber>4</ToStopSequenceNumber>
+									<ToStopSequenceNumber>3</ToStopSequenceNumber>
 									<JourneyRef>DB:123111-12388</JourneyRef>
 									<siri:LineRef>DB:123112311-123</siri:LineRef>
 									<Mode>
