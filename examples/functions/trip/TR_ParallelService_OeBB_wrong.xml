@@ -37,7 +37,7 @@ All the rest of the information is minimalized and is not necessary accurate.
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>2</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Wien Meidling</Text>
@@ -49,8 +49,8 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<TimetabledTime>2023-08-15T20:21:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>3</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Linz Hbf</Text>
@@ -62,8 +62,8 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<TimetabledTime>2023-08-15T21:36:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>4</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Wels</Text>
@@ -75,8 +75,8 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<TimetabledTime>2023-08-15T21:50:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>4</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>5</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Passau Hbf</Text>
@@ -88,8 +88,8 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<TimetabledTime>2023-08-15T22:53:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>5</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>6</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Regensburg Hbf</Text>
@@ -101,8 +101,8 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<TimetabledTime>2023-08-15T23:56:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>6</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>7</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Nürnberg Hbf</Text>
@@ -114,7 +114,7 @@ All the rest of the information is minimalized and is not necessary accurate.
 										<TimetabledTime>2023-08-15T01:51:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>7</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<!-- some stops omitted -->
 								<LegAlight>
 									<siri:StopPointRef>20</siri:StopPointRef>

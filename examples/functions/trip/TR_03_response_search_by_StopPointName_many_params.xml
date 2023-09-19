@@ -74,7 +74,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8503015</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich Wipkingen</Text>
@@ -89,8 +89,8 @@
 										<TimetabledTime>2020-12-01T11:47:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8503006</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich Oerlikon</Text>
@@ -105,8 +105,8 @@
 										<TimetabledTime>2020-12-01T11:52:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8503016</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich Flughafen</Text>
@@ -121,8 +121,8 @@
 										<TimetabledTime>2020-12-01T11:57:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>4</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8503307</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bassersdorf</Text>
@@ -137,8 +137,8 @@
 										<TimetabledTime>2020-12-01T12:01:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>5</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8503305</siri:StopPointRef>
 									<StopPointName>
 										<Text>Effretikon</Text>
@@ -153,8 +153,8 @@
 										<TimetabledTime>2020-12-01T12:08:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>6</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8506000</siri:StopPointRef>
 									<StopPointName>
 										<Text>Winterthur</Text>
@@ -169,8 +169,8 @@
 										<TimetabledTime>2020-12-01T12:19:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>7</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8506047</siri:StopPointRef>
 									<StopPointName>
 										<Text>Andelfingen</Text>
@@ -185,8 +185,8 @@
 										<TimetabledTime>2020-12-01T12:30:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>8</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8503423</siri:StopPointRef>
 									<StopPointName>
 										<Text>Neuhausen</Text>
@@ -201,7 +201,7 @@
 										<TimetabledTime>2020-12-01T12:42:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>9</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8503424</siri:StopPointRef>
 									<StopPointName>
@@ -314,7 +314,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8503003</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich Stadelhofen</Text>
@@ -329,8 +329,8 @@
 										<TimetabledTime>2020-12-01T11:50:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8503147</siri:StopPointRef>
 									<StopPointName>
 										<Text>Stettbach</Text>
@@ -345,7 +345,7 @@
 										<TimetabledTime>2020-12-01T11:56:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8506000</siri:StopPointRef>
 									<StopPointName>
@@ -465,7 +465,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8506047</siri:StopPointRef>
 									<StopPointName>
 										<Text>Andelfingen</Text>
@@ -480,8 +480,8 @@
 										<TimetabledTime>2020-12-01T12:30:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8503423</siri:StopPointRef>
 									<StopPointName>
 										<Text>Neuhausen</Text>
@@ -496,7 +496,7 @@
 										<TimetabledTime>2020-12-01T12:42:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8503424</siri:StopPointRef>
 									<StopPointName>

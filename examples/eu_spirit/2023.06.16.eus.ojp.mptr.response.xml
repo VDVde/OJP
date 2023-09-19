@@ -3020,7 +3020,7 @@
 										<TimetabledTime>2023-06-17T12:15:00+02:00</TimetabledTime>
 									</ServiceDeparture>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBWb2xrc3BhcmtAWD0xMzA1MDQ3NkBZPTUyNDE4OTMyQFU9ODZATD0yMzAyMTQwMkB8UG90c2RhbSwgVm9sa3NwYXJrfDEzLjA1MDQ3Nnw1Mi40MTg5MzJ8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Volkspark</Text>
@@ -3033,8 +3033,8 @@
 									</ServiceDeparture>
 									<Order>27</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBFcmljaC1BcmVuZHQtU3RyLkBYPTEzMDUwNjI5QFk9NTI0MjI3ODBAVT04NkBMPTIzMDIxMjAyQHxQb3RzZGFtLCBFcmljaC1BcmVuZHQtU3RyLnwxMy4wNTA2Mjl8NTIuNDIyNzh8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Erich-Arendt-Str.</Text>
@@ -3047,8 +3047,8 @@
 									</ServiceDeparture>
 									<Order>28</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBSb3RlIEthc2VybmVAWD0xMzA1Mzc3NUBZPTUyNDI0OTE5QFU9ODZATD0yMzAxNTkwMUB8UG90c2RhbSwgUm90ZSBLYXNlcm5lfDEzLjA1Mzc3NXw1Mi40MjQ5MTl8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Rote Kaserne</Text>
@@ -3061,7 +3061,7 @@
 									</ServiceDeparture>
 									<Order>29</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBDYW1wdXMgSnVuZ2Zlcm5zZWVAWD0xMzA1NDU1OEBZPTUyNDMyNDQzQFU9ODZATD0yMzAyMDAwMkB8UG90c2RhbSwgQ2FtcHVzIEp1bmdmZXJuc2VlfDEzLjA1NDU1OHw1Mi40MzI0NDN8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
@@ -3109,7 +3109,7 @@
 										<TimetabledTime>2023-06-17T12:23:00+02:00</TimetabledTime>
 									</ServiceDeparture>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBBbXVuZHNlbnN0ci4vTmVkbGl0emVyIFN0ci5AWD0xMzA1MjE0OEBZPTUyNDM1MzgzQFU9ODZATD0yMzAxNzEwMkB8UG90c2RhbSwgQW11bmRzZW5zdHIuL05lZGxpdHplciBTdHIufDEzLjA1MjE0OHw1Mi40MzUzODN8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Amundsenstr./Nedlitzer Str.</Text>
@@ -3122,8 +3122,8 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBSw7ZtZXJzY2hhbnplQFg9MTMwNTAyMTZAWT01MjQzODY3M0BVPTg2QEw9MjIwMzAwMDJAfFBvdHNkYW0sIFLDtm1lcnNjaGFuemV8MTMuMDUwMjE2fDUyLjQzODY3M3xmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Römerschanze</Text>
@@ -3136,8 +3136,8 @@
 									</ServiceDeparture>
 									<Order>2</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBIZWlucmljaC1IZWluZS1XZWdAWD0xMzA0Njg2M0BZPTUyNDQzMzc0QFU9ODZATD0yMjAzMDEwMkB8UG90c2RhbSwgSGVpbnJpY2gtSGVpbmUtV2VnfDEzLjA0Njg2M3w1Mi40NDMzNzR8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Heinrich-Heine-Weg</Text>
@@ -3150,8 +3150,8 @@
 									</ServiceDeparture>
 									<Order>3</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBCYXNzZXdpdHpAWD0xMzA0NjEyNkBZPTUyNDQ4MzE4QFU9ODZATD0yMjAzMDIwMkB8UG90c2RhbSwgQmFzc2V3aXR6fDEzLjA0NjEyNnw1Mi40NDgzMTh8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Bassewitz</Text>
@@ -3164,8 +3164,8 @@
 									</ServiceDeparture>
 									<Order>4</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBLcmFtcG5pdHpzZWVAWD0xMzA1MTQ0N0BZPTUyNDU4ODQ0QFU9ODZATD0yMjAzMTQwMkB8UG90c2RhbSwgS3JhbXBuaXR6c2VlfDEzLjA1MTQ0N3w1Mi40NTg4NDR8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Krampnitzsee</Text>
@@ -3178,8 +3178,8 @@
 									</ServiceDeparture>
 									<Order>5</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBCdWxsZW53aW5rZWxAWD0xMzA4MDA3OEBZPTUyNDYzMjEzQFU9ODZATD0yMjAzMzEwMkB8UG90c2RhbSwgQnVsbGVud2lua2VsfDEzLjA4MDA3OHw1Mi40NjMyMTN8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Bullenwinkel</Text>
@@ -3192,8 +3192,8 @@
 									</ServiceDeparture>
 									<Order>6</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBBbSBTY2hsYWhuQFg9MTMwOTQyNzJAWT01MjQ2NzkwNkBVPTg2QEw9MjIwMzMyMDJAfFBvdHNkYW0sIEFtIFNjaGxhaG58MTMuMDk0MjcyfDUyLjQ2NzkwNnxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Am Schlahn</Text>
@@ -3206,8 +3206,8 @@
 									</ServiceDeparture>
 									<Order>7</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBCaXJrZW53ZWdAWD0xMzEwMTc3OEBZPTUyNDY5NjQwQFU9ODZATD0yMjAzMzMwMkB8UG90c2RhbSwgQmlya2Vud2VnfDEzLjEwMTc3OHw1Mi40Njk2NHxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Birkenweg</Text>
@@ -3220,8 +3220,8 @@
 									</ServiceDeparture>
 									<Order>8</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBIZWNodHNwcnVuZ0BYPTEzMTAxNTA4QFk9NTI0NjU5NzNAVT04NkBMPTIyMDMzOTAyQHxQb3RzZGFtLCBIZWNodHNwcnVuZ3wxMy4xMDE1MDh8NTIuNDY1OTczfGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Hechtsprung</Text>
@@ -3234,8 +3234,8 @@
 									</ServiceDeparture>
 									<Order>9</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBTYWNyb3dlciBBbGxlZS9SLi1XYWduZXItU3RyLkBYPTEzMTAxNjA3QFk9NTI0NjE1NjhAVT04NkBMPTIxMDMzNDAyQHxQb3RzZGFtLCBTYWNyb3dlciBBbGxlZS9SLi1XYWduZXItU3RyLnwxMy4xMDE2MDd8NTIuNDYxNTY4fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Sacrower Allee/R.-Wagner-Str.</Text>
@@ -3248,8 +3248,8 @@
 									</ServiceDeparture>
 									<Order>10</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBGLi1Hw7xudGhlci1QYXJrQFg9MTMxMDY0NTJAWT01MjQ2MTkyOEBVPTg2QEw9MjIwMzM1MDJAfFBvdHNkYW0sIEYuLUfDvG50aGVyLVBhcmt8MTMuMTA2NDUyfDUyLjQ2MTkyOHxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, F.-Günther-Park</Text>
@@ -3262,8 +3262,8 @@
 									</ServiceDeparture>
 									<Order>11</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBBbSBBbmdlckBYPTEzMTA3MDk5QFk9NTI0NjYyMTZAVT04NkBMPTIyMDM0MjAyQHxQb3RzZGFtLCBBbSBBbmdlcnwxMy4xMDcwOTl8NTIuNDY2MjE2fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Am Anger</Text>
@@ -3276,8 +3276,8 @@
 									</ServiceDeparture>
 									<Order>12</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBLaXJjaGUgR3Jvw58gR2xpZW5pY2tlQFg9MTMxMDg3MjdAWT01MjQ2OTI5OUBVPTg2QEw9MjIwMzM3MDJAfFBvdHNkYW0sIEtpcmNoZSBHcm.DnyBHbGllbmlja2V8MTMuMTA4NzI3fDUyLjQ2OTI5OXxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Kirche Groß Glienicke</Text>
@@ -3290,8 +3290,8 @@
 									</ServiceDeparture>
 									<Order>13</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBBbSBQYXJrQFg9MTMxMTE2ODRAWT01MjQ3MzgyOUBVPTg2QEw9MjIwMzM4MDJAfFBvdHNkYW0sIEFtIFBhcmt8MTMuMTExNjg0fDUyLjQ3MzgyOXxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Am Park</Text>
@@ -3304,8 +3304,8 @@
 									</ServiceDeparture>
 									<Order>14</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1SaXR0ZXJmZWxkZGFtbS9Qb3RzZGFtZXIgQ2hhdXNzZWUgKEJlcmxpbilAWD0xMzEyMDE3MEBZPTUyNDc3NTQyQFU9ODZATD0zMDY5NTYwMDJAfFJpdHRlcmZlbGRkYW1tL1BvdHNkYW1lciBDaGF1c3NlZSAoQmVybGluKXwxMy4xMjAxN3w1Mi40Nzc1NDJ8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Ritterfelddamm/Potsdamer Chaussee (Berlin)</Text>
@@ -3318,8 +3318,8 @@
 									</ServiceDeparture>
 									<Order>15</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1BdcOfZW53ZWcgKEJlcmxpbilAWD0xMzEzNTU0MUBZPTUyNDg1MjI4QFU9ODZATD0zMDUxMTkwMDJAfEF1w59lbndlZyAoQmVybGluKXwxMy4xMzU1NDF8NTIuNDg1MjI4fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Außenweg (Berlin)</Text>
@@ -3332,8 +3332,8 @@
 									</ServiceDeparture>
 									<Order>16</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1MYW5kc2NoYWZ0c2ZyaWVkaG9mIEdhdG93IChCZXJsaW4pQFg9MTMxNTI4OTFAWT01MjQ5ODI5OEBVPTg2QEw9MzA2Njk3MDAyQHxMYW5kc2NoYWZ0c2ZyaWVkaG9mIEdhdG93IChCZXJsaW4pfDEzLjE1Mjg5MXw1Mi40OTgyOTh8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Landschaftsfriedhof Gatow (Berlin)</Text>
@@ -3346,8 +3346,8 @@
 									</ServiceDeparture>
 									<Order>17</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1LYXJvbGluZW5ow7ZoZSAoQmVybGluKUBYPTEzMTY4MTk5QFk9NTI1MDg3MjZAVT04NkBMPTMwNjUyNjAwMkB8S2Fyb2xpbmVuaMO2aGUgKEJlcmxpbil8MTMuMTY4MTk5fDUyLjUwODcyNnxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Karolinenhöhe (Berlin)</Text>
@@ -3360,8 +3360,8 @@
 									</ServiceDeparture>
 									<Order>18</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1XZWlubWVpc3Rlcmhvcm53ZWcgKEJlcmxpbilAWD0xMzE3MTk5M0BZPTUyNTExMzMyQFU9ODZATD0zMDU5NzEwMDFAfFdlaW5tZWlzdGVyaG9ybndlZyAoQmVybGluKXwxMy4xNzE5OTN8NTIuNTExMzMyfGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Weinmeisterhornweg (Berlin)</Text>
@@ -3374,8 +3374,8 @@
 									</ServiceDeparture>
 									<Order>19</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Sb2RlbnN0ZWluc3RyLiAoQmVybGluKUBYPTEzMTc0NzcwQFk9NTI1MTM2MzRAVT04NkBMPTMwNjk2NzAwMkB8Um9kZW5zdGVpbnN0ci4gKEJlcmxpbil8MTMuMTc0Nzd8NTIuNTEzNjM0fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Rodensteinstr. (Berlin)</Text>
@@ -3388,8 +3388,8 @@
 									</ServiceDeparture>
 									<Order>20</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1IZWVyc3RyLi9XaWxoZWxtc3RyLiAoQmVybGluKUBYPTEzMTc4NTM3QFk9NTI1MTYyMzJAVT04NkBMPTMwMDQwNDAwMkB8SGVlcnN0ci4vV2lsaGVsbXN0ci4gKEJlcmxpbil8MTMuMTc4NTM3fDUyLjUxNjIzMnxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Heerstr./Wilhelmstr. (Berlin)</Text>
@@ -3402,8 +3402,8 @@
 									</ServiceDeparture>
 									<Order>21</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1BbSBPbW5pYnVzaG9mIChCZXJsaW4pQFg9MTMxODU3MzdAWT01MjUxNzcyNEBVPTg2QEw9MzAwMzkxMDAzQHxBbSBPbW5pYnVzaG9mIChCZXJsaW4pfDEzLjE4NTczN3w1Mi41MTc3MjR8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Am Omnibushof (Berlin)</Text>
@@ -3416,8 +3416,8 @@
 									</ServiceDeparture>
 									<Order>22</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1NZWxhbmNodGhvbnBsYXR6IChCZXJsaW4pQFg9MTMxODk2MTFAWT01MjUyMTkyMkBVPTg2QEw9MzAwMzg5MDAzQHxNZWxhbmNodGhvbnBsYXR6IChCZXJsaW4pfDEzLjE4OTYxMXw1Mi41MjE5MjJ8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Melanchthonplatz (Berlin)</Text>
@@ -3430,8 +3430,8 @@
 									</ServiceDeparture>
 									<Order>23</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1NZXR6ZXIgU3RyLiAoQmVybGluKUBYPTEzMTkzODAwQFk9NTI1MjUyMDNAVT04NkBMPTMwNjc2ODAwMUB8TWV0emVyIFN0ci4gKEJlcmxpbil8MTMuMTkzOHw1Mi41MjUyMDN8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Metzer Str. (Berlin)</Text>
@@ -3444,8 +3444,8 @@
 									</ServiceDeparture>
 									<Order>24</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1aaWVnZWxob2YgKEJlcmxpbilAWD0xMzE5NTcwNkBZPTUyNTI4Nzk4QFU9ODZATD0zMDAzODYwMDNAfFppZWdlbGhvZiAoQmVybGluKXwxMy4xOTU3MDZ8NTIuNTI4Nzk4fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Ziegelhof (Berlin)</Text>
@@ -3458,8 +3458,8 @@
 									</ServiceDeparture>
 									<Order>25</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcnVuc2LDvHR0ZWxlciBEYW1tL1J1aGxlYmVuZXIgU3RyLiAoQmVybGluKUBYPTEzMTk4MjU5QFk9NTI1MzI0MzlAVT04NkBMPTMwMDM3NjAwNEB8QnJ1bnNiw7x0dGVsZXIgRGFtbS9SdWhsZWJlbmVyIFN0ci4gKEJlcmxpbil8MTMuMTk4MjU5fDUyLjUzMjQzOXxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Brunsbütteler Damm/Ruhlebener Str. (Berlin)</Text>
@@ -3472,7 +3472,7 @@
 									</ServiceDeparture>
 									<Order>26</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>U3xBPTFATz1TK1UgUmF0aGF1cyBTcGFuZGF1IChCZXJsaW4pQFg9MTMyMDAwNTdAWT01MjUzNTEwMEBVPTg2QEw9MzAwMTY0MDEzQHxTK1UgUmF0aGF1cyBTcGFuZGF1IChCZXJsaW4pfDEzLjIwMDA1N3w1Mi41MzUxfGZhbHNl</siri:StopPointRef>
 									<StopPointName>
@@ -3545,7 +3545,7 @@
 										<TimetabledTime>2023-06-17T13:17:00+02:00</TimetabledTime>
 									</ServiceDeparture>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1XaXR0ZW5iZXJnZSwgQmFobmhvZiAoQnVzKUBYPTExNzYyMTY5QFk9NTMwMDAwMDRAVT04NkBMPTEwMjQ3MjM2QHxXaXR0ZW5iZXJnZSwgQmFobmhvZiAoQnVzKXwxMS43NjIxNjl8NTMuMDAwMDA0fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Wittenberge, Bahnhof (Bus)</Text>
@@ -3558,8 +3558,8 @@
 									</ServiceDeparture>
 									<Order>11</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1MdWR3aWdzbHVzdCBCYWhuaG9mQFg9MTE0OTQwMzBAWT01MzMzNDkxNUBVPTg2QEw9MTA0NzgyMDNAfEx1ZHdpZ3NsdXN0IEJhaG5ob2Z8MTEuNDk0MDN8NTMuMzM0OTE1fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Ludwigslust Bahnhof</Text>
@@ -3572,8 +3572,8 @@
 									</ServiceDeparture>
 									<Order>12</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Cw7xjaGVuQFg9MTA2MjI5MzBAWT01MzQ3NTIzN0BVPTg2QEw9MTA0OTI1NTVAfELDvGNoZW58MTAuNjIyOTN8NTMuNDc1MjM3fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Büchen</Text>
@@ -3586,7 +3586,7 @@
 									</ServiceDeparture>
 									<Order>13</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>U3xBPTFATz1IYW1idXJnIEhiZkBYPTEwMDA3NDkzQFk9NTM1NTIzODJAVT04NkBMPTExMDk1MDAzQHxIYW1idXJnIEhiZnwxMC4wMDc0OTN8NTMuNTUyMzgyfGZhbHNl</siri:StopPointRef>
 									<StopPointName>
@@ -3661,7 +3661,7 @@
 										<TimetabledTime>2023-06-17T15:15:00+02:00</TimetabledTime>
 									</ServiceDeparture>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1IYW1idXJnLUhhcmJ1cmdAWD05OTkwOTUzQFk9NTM0NTYzODZAVT04NkBMPTEwNDk0MDgxQHxIYW1idXJnLUhhcmJ1cmd8OS45OTA5NTN8NTMuNDU2Mzg2fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Hamburg-Harburg</Text>
@@ -3674,8 +3674,8 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CdWNoaG9seiAoTm9yZGhlaWRlKUBYPTk4NzU3MDJAWT01MzMyNDczOUBVPTg2QEw9MTAwMDA3MDRAfEJ1Y2hob2x6IChOb3JkaGVpZGUpfDkuODc1NzAyfDUzLjMyNDczOXxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Buchholz (Nordheide)</Text>
@@ -3688,8 +3688,8 @@
 									</ServiceDeparture>
 									<Order>2</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Ub3N0ZWR0QFg9OTczMTYwNUBZPTUzMjcxODgzQFU9ODZATD0xMDAwODEwMUB8VG9zdGVkdHw5LjczMTYwNXw1My4yNzE4ODN8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Tostedt</Text>
@@ -3702,8 +3702,8 @@
 									</ServiceDeparture>
 									<Order>3</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Sb3RlbmJ1cmcoV8O8bW1lKUBYPTkzOTA2ODBAWT01MzExMjUwNEBVPTg2QEw9MTA0OTQwNzlAfFJvdGVuYnVyZyhXw7xtbWUpfDkuMzkwNjh8NTMuMTEyNTA0fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Rotenburg(Wümme)</Text>
@@ -3716,7 +3716,7 @@
 									</ServiceDeparture>
 									<Order>4</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gSGJmQFg9ODgxMzcxN0BZPTUzMDgzNDYwQFU9ODZATD0xMDQ5MjY4NUB8QnJlbWVuIEhiZnw4LjgxMzcxN3w1My4wODM0Nnx0cnVl</siri:StopPointRef>
 									<StopPointName>
@@ -3791,7 +3791,7 @@
 										<TimetabledTime>2023-06-17T16:36:00+02:00</TimetabledTime>
 									</ServiceDeparture>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gSGVyZGVudG9yQFg9ODgwOTg0MkBZPTUzMDc5NTUwQFU9ODZATD0xMDQyMDU4N0B8QnJlbWVuIEhlcmRlbnRvcnw4LjgwOTg0Mnw1My4wNzk1NXxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bremen Herdentor</Text>
@@ -3804,8 +3804,8 @@
 									</ServiceDeparture>
 									<Order>14</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gU2Now7xzc2Vsa29yYkBYPTg4MDk0NTZAWT01MzA3NzI1N0BVPTg2QEw9MTA0MjEyNTRAfEJyZW1lbiBTY2jDvHNzZWxrb3JifDguODA5NDU2fDUzLjA3NzI1N3xmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bremen Schüsselkorb</Text>
@@ -3818,8 +3818,8 @@
 									</ServiceDeparture>
 									<Order>15</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gRG9tc2hlaWRlQFg9ODgwNzkzNkBZPTUzMDc0MzgxQFU9ODZATD0xMDQyMDE4OEB8QnJlbWVuIERvbXNoZWlkZXw4LjgwNzkzNnw1My4wNzQzODF8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bremen Domsheide</Text>
@@ -3832,8 +3832,8 @@
 									</ServiceDeparture>
 									<Order>16</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gV2lsaGVsbS1LYWlzZW4tQnLDvGNrZUBYPTg4MDMzMDdAWT01MzA3MjEyNEBVPTg2QEw9MTA0MjE2MTVAfEJyZW1lbiBXaWxoZWxtLUthaXNlbi1CcsO8Y2tlfDguODAzMzA3fDUzLjA3MjEyNHxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bremen Wilhelm-Kaisen-Brücke</Text>
@@ -3846,8 +3846,8 @@
 									</ServiceDeparture>
 									<Order>17</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gVGhlYXRlciBhbSBMZWlibml6cGxhdHpAWD04Nzk5MTkwQFk9NTMwNjk3NDJAVT04NkBMPTEwNDIxNDI4QHxCcmVtZW4gVGhlYXRlciBhbSBMZWlibml6cGxhdHp8OC43OTkxOXw1My4wNjk3NDJ8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bremen Theater am Leibnizplatz</Text>
@@ -3860,8 +3860,8 @@
 									</ServiceDeparture>
 									<Order>18</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gR2FzdGZlbGRzdHJhw59lQFg9ODc5NDI0NkBZPTUzMDY2Nzk0QFU9ODZATD0xMDQyMDM4NUB8QnJlbWVuIEdhc3RmZWxkc3RyYcOfZXw4Ljc5NDI0Nnw1My4wNjY3OTR8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bremen Gastfeldstraße</Text>
@@ -3874,8 +3874,8 @@
 									</ServiceDeparture>
 									<Order>19</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gU2NobGVpZXJtYWNoZXJzdHJhw59lQFg9ODc4OTI2NkBZPTUzMDYzNjY2QFU9ODZATD0xMDQyMTIyMUB8QnJlbWVuIFNjaGxlaWVybWFjaGVyc3RyYcOfZXw4Ljc4OTI2Nnw1My4wNjM2NjZ8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bremen Schleiermacherstraße</Text>
@@ -3888,8 +3888,8 @@
 									</ServiceDeparture>
 									<Order>20</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gQlNBRy1aZW50cnVtQFg9ODc4NTI3NUBZPTUzMDYxMDk1QFU9ODZATD0xMDQxOTg4OUB8QnJlbWVuIEJTQUctWmVudHJ1bXw4Ljc4NTI3NXw1My4wNjEwOTV8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bremen BSAG-Zentrum</Text>
@@ -3902,8 +3902,8 @@
 									</ServiceDeparture>
 									<Order>21</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gTmV1ZW5sYW5kZXIgS8OkbXBlQFg9ODc4NDEwNkBZPTUzMDU2NTE5QFU9ODZATD0xMDQyMDk4M0B8QnJlbWVuIE5ldWVubGFuZGVyIEvDpG1wZXw4Ljc4NDEwNnw1My4wNTY1MTl8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Bremen Neuenlander Kämpe</Text>
@@ -3916,7 +3916,7 @@
 									</ServiceDeparture>
 									<Order>22</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>U3xBPTFATz1CcmVtZW4gRmx1Z2hhZmVuQFg9ODc4NjQzNEBZPTUzMDUyNzI2QFU9ODZATD0xMDQyMDMyOEB8QnJlbWVuIEZsdWdoYWZlbnw4Ljc4NjQzNHw1My4wNTI3MjZ8dHJ1ZQ--</siri:StopPointRef>
 									<StopPointName>

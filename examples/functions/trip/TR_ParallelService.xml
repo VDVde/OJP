@@ -98,7 +98,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8504489</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Bern Bümpliz Nord</Text>
@@ -113,8 +113,8 @@
 										<TimetabledTime>2023-08-15T18:12:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8516154</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Bern Brünnen Westside</Text>
@@ -129,8 +129,8 @@
 										<TimetabledTime>2023-08-15T18:14:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8504487</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Rosshäusern</Text>
@@ -145,8 +145,8 @@
 										<TimetabledTime>2023-08-15T18:19:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>4</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8504486</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Gümmenen</Text>
@@ -161,8 +161,8 @@
 										<TimetabledTime>2023-08-15T18:24:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>5</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8504400</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Kerzers</Text>
@@ -177,8 +177,8 @@
 										<TimetabledTime>2023-08-15T18:31:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>6</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8504484</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Müntschemier</Text>
@@ -193,8 +193,8 @@
 										<TimetabledTime>2023-08-15T18:34:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>7</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8504483</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Ins</Text>
@@ -209,8 +209,8 @@
 										<TimetabledTime>2023-08-15T18:40:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>8</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8504482</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Gampelen</Text>
@@ -225,8 +225,8 @@
 										<TimetabledTime>2023-08-15T18:42:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>9</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8504490</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Zihlbrücke</Text>
@@ -238,8 +238,8 @@
 										<TimetabledTime>2023-08-15T18:44:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>10</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8504481</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Marin-Epagnier</Text>
@@ -254,8 +254,8 @@
 										<TimetabledTime>2023-08-15T18:47:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>11</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8504480</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">St-Blaise-Lac</Text>
@@ -267,7 +267,7 @@
 										<TimetabledTime>2023-08-15T18:49:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>12</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8504221</siri:StopPointRef>
 									<StopPointName>
