@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
 	<!--
-We have a parallel train NJ 490 and NJ 40490
-Changement of NJ 490 to NJ590 at the border to Germany. This should be modeled with ParallelService.
+		We have a parallel train NJ 490 and NJ 40490
+		Changement of NJ 490 to NJ590 at the border to Germany. This should be modeled with ParallelService.
 
-This example is not modeled in a good way as the Service (NJ490) is not really going all the way. Also it needed  to be duplicated into ParallelService, where it is accuractely modeled. It is always better to model such a constellation by using two TimedLegs with a TransferLeg with the TransferType "remainInVehicle"
+		This example is not well modeled because the service (NJ490) is not really going all the way.
+		Also, it had to be duplicated in ParallelService where it is accurately modeled.
+		It is always better to model such a constellation by using two TimedLegs with a TransferLeg with the TransferType "remainInVehicle".
 
-All the rest of the information is minimalized and is not necessary accurate.
--->
+		All the rest of the information is minimalized and is not necessary accurate.
+	-->
 	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2023-08-15T20:09:36Z</siri:ResponseTimestamp>
@@ -218,7 +220,10 @@ All the rest of the information is minimalized and is not necessary accurate.
 									</DestinationText>
 								</ParallelService>
 								<ParallelService>
-									<!-- the German part of the train to Amsterdam. It is connected only up to Nürberg with the relevant vehicle of this TimedLeg. As it has its own, separated JOURNEY afterwards, it is modeled in ParallelService only to Nürnberg. -->
+									<!--
+										the German part of the train to Amsterdam. It is only connected up to Nürnberg with the relevant vehicle of this TimedLeg.
+										Since it has its own, separate JOURNEY afterwards, it is modeled in the ParallelService only up to Nürnberg.
+									-->
 									<FromStopSequenceNumber>5</FromStopSequenceNumber>
 									<ToStopSequenceNumber>7</ToStopSequenceNumber>
 									<JourneyRef>DB:123111-12388</JourneyRef>
