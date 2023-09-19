@@ -146,7 +146,7 @@ All the rest of the information is minimalized and is not necessary accurate.
 									<PublishedServiceName>
 										<Text xml:lang="de">NJ 490</Text>
 										<!-- the PublishedService changes in the middle, therefore having this PublishedServiceName and the train number
-										for the whole Leg would be misleading. See correct example -->
+										for the whole Leg would be misleading. See correct example in the folder. -->
 									</PublishedServiceName>
 									<TrainNumber>123123</TrainNumber>
 									<siri:VehicleRef>A</siri:VehicleRef>
