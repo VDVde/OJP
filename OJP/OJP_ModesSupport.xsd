@@ -124,6 +124,11 @@
 					<xs:documentation>MODE OF OPERATION from NeTEX personal.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="demandResponsive">
+				<xs:annotation>
+					<xs:documentation>area based demand responsive service (without SCHEDULED STOP POINTs.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
 			<xs:enumeration value="ownCar">
 				<xs:annotation>
 					<xs:documentation>MODE OF OPERATION from NeTEX personal.</xs:documentation>

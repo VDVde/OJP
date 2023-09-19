@@ -40,7 +40,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>commuterCarPooling</ContinuousMode>
+									<ContinuousMode>demandResponsive</ContinuousMode>
 									<OperatingDayRef>2023-09-13</OperatingDayRef>
 									<siri:VehicleRef>ch:1:publicar:delement:1_1231</siri:VehicleRef>
 									<JourneyRef>ch:1:ServiceJourney:publicar:1293919293919929391-12331</JourneyRef>
