@@ -156,9 +156,8 @@
 									</ServiceArrival>
 									<ServiceDeparture>
 										<TimetabledTime>2023-02-08T08:03:00Z</TimetabledTime>
-									</ServiceDeparture>									
-								</LegStart>								
-
+									</ServiceDeparture>
+								</LegStart>
 								<LegEnd>
 									<GeoPosition>
 										<siri:Longitude>47.06</siri:Longitude>

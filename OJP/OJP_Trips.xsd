@@ -736,16 +736,16 @@
 			<xs:documentation>[relates to a specific type of RIDE in TM and NeTEx] leg of a journey that is not bound to a timetable </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-				<xs:element name="LegStart" type="LegOriginDestinationtStructure">
-					<xs:annotation>
-						<xs:documentation>PLACE where the leg starts (can be a PLACE, SCHEDULED STOP POINT or a VEHICLE MEETING POINT) with time information.</xs:documentation>
-					</xs:annotation>
-				</xs:element>	
+			<xs:element name="LegStart" type="LegOriginDestinationtStructure">
+				<xs:annotation>
+					<xs:documentation>PLACE where the leg starts (can be a PLACE, SCHEDULED STOP POINT or a VEHICLE MEETING POINT) with time information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="LegEnd" type="LegOriginDestinationtStructure">
 				<xs:annotation>
 					<xs:documentation>PLACE to alight (can be a SCHEDULED STOP POINT or a VEHICLE MEETING POINT) with time information.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="Service" type="ContinuousServiceStructure">
 				<xs:annotation>
 					<xs:documentation>Service of this leg.</xs:documentation>
@@ -894,7 +894,7 @@
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup"/>
 		</xs:sequence>
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:complexType name="PathGuidanceStructure">
 		<xs:annotation>
 			<xs:documentation>Description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>
