@@ -136,7 +136,7 @@ All the rest of the information is minimalized and is not necessary accurate.
 							</TimedLeg>
 						</Leg>
 						<Leg>
-							<!-- the TransferLeg with remaininVehicle -->
+							<!-- the TransferLeg with remainInVehicle -->
 							<Id>2</Id>
 							<TransferLeg>
 								<TransferMode>remainInVehicle</TransferMode>
