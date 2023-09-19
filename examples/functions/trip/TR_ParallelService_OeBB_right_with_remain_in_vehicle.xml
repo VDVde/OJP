@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
 	<!--
-We have a parallel train NJ 490 and NJ 40490
-Changement of NJ 490 to NJ590 at the border to Germany. This should be modeled with ParallelService
+		We have a parallel train NJ 490 and NJ 40490
+		Changement of NJ 490 to NJ590 at the border to Germany. This should be modeled with ParallelService.
 
-All the rest of the information is minimalized and is not necessary accurate.
--->
+		All the rest of the information is minimalized and is not necessary accurate.
+	-->
 	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2023-08-15T20:09:36Z</siri:ResponseTimestamp>
@@ -223,7 +223,10 @@ All the rest of the information is minimalized and is not necessary accurate.
 									</DestinationText>
 								</Service>
 								<ParallelService>
-									<!-- the German part of the train to Amsterdam, only to Nürberg afterwards separated -->
+									<!--
+										the German part of the train to Amsterdam. It is only connected up to Nürnberg with the relevant vehicle of this TimedLeg.
+										Since it has its own, separate JOURNEY afterwards, it is modeled in the ParallelService only up to Nürnberg.
+									-->
 									<FromStopSequenceNumber>1</FromStopSequenceNumber>
 									<ToStopSequenceNumber>3</ToStopSequenceNumber>
 									<JourneyRef>DB:123111-12388</JourneyRef>
