@@ -736,19 +736,19 @@
 			<xs:documentation>[relates to a specific type of RIDE in TM and NeTEx] leg of a journey that is not bound to a timetable </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="LegStart" type="PlaceRefStructure">
+				<xs:element name="LegStart" type="LegOriginDestinationtStructure">
+					<xs:annotation>
+						<xs:documentation>PLACE where the leg starts (can be a PLACE, SCHEDULED STOP POINT or a VEHICLE MEETING POINT) with time information.</xs:documentation>
+					</xs:annotation>
+				</xs:element>	
+			<xs:element name="LegEnd" type="LegOriginDestinationtStructure">
 				<xs:annotation>
-					<xs:documentation>Stop/Station where boarding is done (can be a SCHEDULED STOP POINT or a VEHICLE MEETING POINT).</xs:documentation>
+					<xs:documentation>PLACE to alight (can be a SCHEDULED STOP POINT or a VEHICLE MEETING POINT) with time information.</xs:documentation>
 				</xs:annotation>
-			</xs:element>
-			<xs:element name="LegEnd" type="PlaceRefStructure">
-				<xs:annotation>
-					<xs:documentation>Stop/Station to alight (can be a SCHEDULED STOP POINT or a VEHICLE MEETING POINT).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			</xs:element>			
 			<xs:element name="Service" type="ContinuousServiceStructure">
 				<xs:annotation>
-					<xs:documentation>Service of this leg. May be "walk" in most cases, but also cycling or taxi etc.</xs:documentation>
+					<xs:documentation>Service of this leg.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TimeWindowGroup"/>
@@ -828,10 +828,7 @@
 			<xs:documentation>Describes the situation at a stop or station at which the passenger alights from a Leg of a trip including time-related information</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:choice>
-				<xs:group ref="StopPointGroup"/>
-				<xs:element name="GeoPosition" type="siri:LocationStructure"/>
-			</xs:choice>
+			<xs:group ref="StopPointGroup"/>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure">
 				<xs:annotation>
 					<xs:documentation>describes the arrival situation at the leg alight stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
@@ -860,10 +857,7 @@
 			<xs:documentation>Describes the situation at a stop or station that lies between the LegBoard and LegAlight stop or station including time-related information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:choice>
-				<xs:group ref="StopPointGroup"/>
-				<xs:element name="GeoPosition" type="siri:LocationStructure"/>
-			</xs:choice>
+			<xs:group ref="StopPointGroup"/>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure">
 				<xs:annotation>
 					<xs:documentation>describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
@@ -882,6 +876,25 @@
 			<xs:group ref="StopCallStatusGroup"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="LegOriginDestinationtStructure">
+		<xs:annotation>
+			<xs:documentation>Describes the situation at a stop or place that is needed at the origin or destination of a ContinuousLeg</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="PlaceRefGroup"/>
+			<xs:element name="ServiceArrival" type="ServiceArrivalStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>describes the arrival situation at the leg alight stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>describes the departure situation at this leg alight stop point (empty for last leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="StopCallStatusGroup"/>
+		</xs:sequence>
+	</xs:complexType>	
 	<xs:complexType name="PathGuidanceStructure">
 		<xs:annotation>
 			<xs:documentation>Description of a piece of a TRIP. May include geographic information, turn instructions and accessibility information.</xs:documentation>

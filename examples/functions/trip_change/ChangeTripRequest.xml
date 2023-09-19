@@ -142,30 +142,37 @@
 						</Leg>
 						<Leg>
 							<Id>3</Id>
-							<TimedLeg>
-								<LegBoard>
+							<ContinuousLeg>
+								<LegStart>
 									<GeoPosition>
 										<siri:Longitude>47.042666496</siri:Longitude>
 										<siri:Latitude>8.306332108</siri:Latitude>
 									</GeoPosition>
+									<Name>
+										<Text>Origin</Text>
+									</Name>
 									<ServiceArrival>
 										<TimetabledTime>20203-02-08T08:02:00Z</TimetabledTime>
 									</ServiceArrival>
 									<ServiceDeparture>
 										<TimetabledTime>2023-02-08T08:03:00Z</TimetabledTime>
-									</ServiceDeparture>
-								</LegBoard>
-								<LegAlight>
+									</ServiceDeparture>									
+								</LegStart>								
+
+								<LegEnd>
 									<GeoPosition>
 										<siri:Longitude>47.06</siri:Longitude>
 										<siri:Latitude>8.32</siri:Latitude>
 									</GeoPosition>
+									<Name>
+										<Text>Destination</Text>
+									</Name>
 									<ServiceArrival>
 										<TimetabledTime>2023-02-08T08:20:00Z</TimetabledTime>
 									</ServiceArrival>
-								</LegAlight>
+								</LegEnd>
 								<Service>
-									<TimedMode>demandResponsive</TimedMode>
+									<ContinuousMode>ownCar</ContinuousMode>
 									<OperatingDayRef>2023-02-18</OperatingDayRef>
 									<siri:VehicleRef>12391923-1123</siri:VehicleRef>
 									<JourneyRef>1230.1.1.231</JourneyRef>
@@ -188,7 +195,8 @@
 										</BookingArrangement>
 									</BookingArrangements>
 								</Service>
-							</TimedLeg>
+								<Duration>PT15M</Duration>
+							</ContinuousLeg>
 						</Leg>
 					</Trip>
 				</TripResult>
