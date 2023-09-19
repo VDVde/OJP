@@ -2,7 +2,9 @@
 <OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
 	<!--
 We have a parallel train NJ 490 and NJ 40490
-Changement of NJ 490 to NJ590 at the border to Germany. This should be modeled with ParallelService
+Changement of NJ 490 to NJ590 at the border to Germany. This should be modeled with ParallelService.
+
+This example is not modeled in a good way as the Service (NJ490) is not really going all the way. Also it needed  to be duplicated into ParallelService, where it is accuractely modeled. It is always better to model such a constellation by using two TimedLegs with a TransferLeg with the TransferType "remainInVehicle"
 
 All the rest of the information is minimalized and is not necessary accurate.
 -->
