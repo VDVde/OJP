@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<!--
+		We have a parallel train NJ 490 and NJ 40490
+		Changement of NJ 490 to NJ590 at the border to Germany. This should be modeled with ParallelService.
+
+		All the rest of the information is minimalized and is not necessary accurate.
+	-->
+	<OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2023-08-15T20:09:36Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>EFAController10.5.23.52-OJP-EFA01-P</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<OJPTripDelivery>
+				<siri:ResponseTimestamp>2023-08-15T20:09:35Z</siri:ResponseTimestamp>
+				<siri:Status>true</siri:Status>
+				<CalcTime>762</CalcTime>
+				<TripResult>
+					<Id>ID-48D1A6A7-2659-4433-9795-F0A0840A4938</Id>
+					<Trip>
+						<Id>ID-48D1A6A7-2659-4433-9795-F0A0840A4938</Id>
+						<Duration>PT48M</Duration>
+						<StartTime>2023-08-15T18:08:00Z</StartTime>
+						<EndTime>2023-08-15T18:56:00Z</EndTime>
+						<Transfers>0</Transfers>
+						<!-- TransferLegs with remainInVehicle are NOT counted.  -->
+						<Leg>
+							<!-- the NJ490 part -->
+							<Id>1</Id>
+							<TimedLeg>
+								<LegBoard>
+									<siri:StopPointRef>spp:1</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Wien Hbf</Text>
+									</StopPointName>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T20:13:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediate>
+									<siri:StopPointRef>spp:2</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Wien Meidling</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T20:18:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T20:21:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediate>
+								<LegIntermediate>
+									<siri:StopPointRef>spp:3</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Linz Hbf</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T21:34:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T21:36:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>3</Order>
+								</LegIntermediate>
+								<LegIntermediate>
+									<siri:StopPointRef>spp:4</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Wels</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T21:48:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T21:50:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>4</Order>
+								</LegIntermediate>
+								<LegAlight>
+									<siri:StopPointRef>spp:5</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Passau Hbf</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T22:35:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>5</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>2023-08-15</OperatingDayRef>
+									<JourneyRef>NJ-OeBB-1230123-123111</JourneyRef>
+									<siri:LineRef>OeBB:NJ12311</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+										<siri:RailSubmode>nightRail</siri:RailSubmode>
+										<Name>
+											<Text xml:lang="de">Zug</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">NJ</Text>
+										</ShortName>
+									</Mode>
+									<PublishedServiceName>
+										<Text xml:lang="de">NJ 490</Text>
+									</PublishedServiceName>
+									<TrainNumber>123123</TrainNumber>
+									<siri:VehicleRef>A</siri:VehicleRef>
+									<OperatorRefs>
+										<OperatorRef>at:oebb</OperatorRef>
+									</OperatorRefs>
+									<DestinationText>
+										<Text>Hamburg Altona</Text>
+									</DestinationText>
+								</Service>
+								<ParallelService>
+									<!-- the other train component going to Amsterdam, AT part -->
+									<FromStopSequenceNumber>1</FromStopSequenceNumber>
+									<ToStopSequenceNumber>5</ToStopSequenceNumber>
+									<JourneyRef>NJ-OeBB-120123-123112</JourneyRef>
+									<siri:LineRef>OeBB:NJ12312</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>NJ 40490</Text>
+									</PublishedServiceName>
+									<TrainNumber>1231012</TrainNumber>
+									<siri:VehicleRef>B</siri:VehicleRef>
+									<DestinationText>
+										<Text>Amsterdam</Text>
+									</DestinationText>
+								</ParallelService>
+							</TimedLeg>
+						</Leg>
+						<Leg>
+							<!-- the TransferLeg with remainInVehicle -->
+							<Id>2</Id>
+							<TransferLeg>
+								<TransferMode>remainInVehicle</TransferMode>
+								<LegStart>
+									<siri:StopPointRef>spp:5</siri:StopPointRef>
+									<Name>
+										<Text>Passau Hbf</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<siri:StopPointRef>spp5:</siri:StopPointRef>
+									<Name>
+										<Text>Passau Hbf</Text>
+									</Name>
+								</LegEnd>
+								<Duration>PT3M</Duration>
+							</TransferLeg>
+						</Leg>
+						<Leg>
+							<Id>3</Id>
+							<TimedLeg>
+								<LegBoard>
+									<siri:StopPointRef>spp:</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Passau Hbf</Text>
+									</StopPointName>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T22:53:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegIntermediate>
+									<siri:StopPointRef>spp:6</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Regensburg Hbf</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-15T23:54:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T23:56:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>2</Order>
+								</LegIntermediate>
+								<LegIntermediate>
+									<siri:StopPointRef>spp:7</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Nürnberg Hbf</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-16T00:56:00Z</TimetabledTime>
+									</ServiceArrival>
+									<ServiceDeparture>
+										<TimetabledTime>2023-08-15T01:51:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>3</Order>
+								</LegIntermediate>
+								<!-- some stops omitted -->
+								<LegAlight>
+									<siri:StopPointRef>spp:5</siri:StopPointRef>
+									<StopPointName>
+										<Text xml:lang="de">Hamburg Altona</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2023-08-16T09:03:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>12</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>2023-08-15</OperatingDayRef>
+									<JourneyRef>NJ-OeBB-120123-1231122</JourneyRef>
+									<siri:LineRef>OeBB:NJ12312</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>NJ 590</Text>
+									</PublishedServiceName>
+									<TrainNumber>123123</TrainNumber>
+									<siri:VehicleRef>A</siri:VehicleRef>
+									<DestinationText>
+										<Text>Hamburg Altona</Text>
+									</DestinationText>
+								</Service>
+								<ParallelService>
+									<!--
+										the German part of the train to Amsterdam. It is only connected up to Nürnberg with the relevant vehicle of this TimedLeg.
+										Since it has its own, separate JOURNEY afterwards, it is modeled in the ParallelService only up to Nürnberg.
+									-->
+									<FromStopSequenceNumber>1</FromStopSequenceNumber>
+									<ToStopSequenceNumber>3</ToStopSequenceNumber>
+									<JourneyRef>DB:123111-12388</JourneyRef>
+									<siri:LineRef>DB:123112311-123</siri:LineRef>
+									<Mode>
+										<PtMode>rail</PtMode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>NJ 50490</Text>
+									</PublishedServiceName>
+									<TrainNumber>1231012</TrainNumber>
+									<siri:VehicleRef>B</siri:VehicleRef>
+									<DestinationText>
+										<Text>Amsterdam</Text>
+									</DestinationText>
+								</ParallelService>
+							</TimedLeg>
+						</Leg>
+					</Trip>
+				</TripResult>
+			</OJPTripDelivery>
+		</siri:ServiceDelivery>
+	</OJPResponse>
+</OJP>

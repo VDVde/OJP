@@ -1420,7 +1420,7 @@
 										<TimetabledTime>2023-06-22T12:14:00+02:00</TimetabledTime>
 									</ServiceDeparture>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBBbSBTY2hyYWdlbkBYPTEzMDU0NDg2QFk9NTI0MTMxMDdAVT04NkBMPTIzMDE1NzAyQHxQb3RzZGFtLCBBbSBTY2hyYWdlbnwxMy4wNTQ0ODZ8NTIuNDEzMTA3fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Am Schragen</Text>
@@ -1433,8 +1433,8 @@
 									</ServiceDeparture>
 									<Order>4</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBQdXNjaGtpbmFsbGVlQFg9MTMwNTkwMDdAWT01MjQxMTY5NkBVPTg2QEw9MjMwMDc2MDFAfFBvdHNkYW0sIFB1c2Noa2luYWxsZWV8MTMuMDU5MDA3fDUyLjQxMTY5NnxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Puschkinallee</Text>
@@ -1447,8 +1447,8 @@
 									</ServiceDeparture>
 									<Order>5</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBSZWl0ZXJ3ZWcvQWxsZWVzdHIuQFg9MTMwNTg1MzFAWT01MjQwODM5N0BVPTg2QEw9MjMwMDI0MDFAfFBvdHNkYW0sIFJlaXRlcndlZy9BbGxlZXN0ci58MTMuMDU4NTMxfDUyLjQwODM5N3xmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Reiterweg/Alleestr.</Text>
@@ -1461,8 +1461,8 @@
 									</ServiceDeparture>
 									<Order>6</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBSYXRoYXVzQFg9MTMwNTgwMDlAWT01MjQwNTIyNEBVPTg2QEw9MzAxMDQyMDAxQHxQb3RzZGFtLCBSYXRoYXVzfDEzLjA1ODAwOXw1Mi40MDUyMjR8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Rathaus</Text>
@@ -1475,8 +1475,8 @@
 									</ServiceDeparture>
 									<Order>7</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBOYXVlbmVyIFRvckBYPTEzMDU3ODM5QFk9NTI0MDI4MjRAVT04NkBMPTIzMDAyMjAxQHxQb3RzZGFtLCBOYXVlbmVyIFRvcnwxMy4wNTc4Mzl8NTIuNDAyODI0fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Nauener Tor</Text>
@@ -1489,8 +1489,8 @@
 									</ServiceDeparture>
 									<Order>8</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBCcmFuZGVuYnVyZ2VyIFN0ci5AWD0xMzA1NzY5NUBZPTUyNDAwOTU0QFU9ODZATD0yMzAyMDUwMUB8UG90c2RhbSwgQnJhbmRlbmJ1cmdlciBTdHIufDEzLjA1NzY5NXw1Mi40MDA5NTR8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Brandenburger Str.</Text>
@@ -1503,8 +1503,8 @@
 									</ServiceDeparture>
 									<Order>9</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBQbGF0eiBkZXIgRWluaGVpdC9XZXN0QFg9MTMwNTc5NzNAWT01MjM5ODU3MkBVPTg2QEw9MjMwMDE0MDFAfFBvdHNkYW0sIFBsYXR6IGRlciBFaW5oZWl0L1dlc3R8MTMuMDU3OTczfDUyLjM5ODU3MnxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Platz der Einheit/West</Text>
@@ -1517,8 +1517,8 @@
 									</ServiceDeparture>
 									<Order>10</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBBbHRlciBNYXJrdC9MYW5kdGFnQFg9MTMwNTkyMzJAWT01MjM5NDg0MUBVPTg2QEw9MjMwMDE4MDFAfFBvdHNkYW0sIEFsdGVyIE1hcmt0L0xhbmR0YWd8MTMuMDU5MjMyfDUyLjM5NDg0MXxmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Alter Markt/Landtag</Text>
@@ -1531,8 +1531,8 @@
 									</ServiceDeparture>
 									<Order>11</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Qb3RzZGFtLCBMYW5nZSBCcsO8Y2tlQFg9MTMwNjM3MjdAWT01MjM5MjAzN0BVPTg2QEw9MjMwMDk3MDJAfFBvdHNkYW0sIExhbmdlIEJyw7xja2V8MTMuMDYzNzI3fDUyLjM5MjAzN3xmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Potsdam, Lange Brücke</Text>
@@ -1545,7 +1545,7 @@
 									</ServiceDeparture>
 									<Order>12</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>U3xBPTFATz1TIFBvdHNkYW0gSGF1cHRiYWhuaG9mQFg9MTMwNjYzNjlAWT01MjM5MDkzMUBVPTg2QEw9MjMwOTk5MDFAfFMgUG90c2RhbSBIYXVwdGJhaG5ob2Z8MTMuMDY2MzY5fDUyLjM5MDkzMXx0cnVl</siri:StopPointRef>
 									<StopPointName>
@@ -1618,7 +1618,7 @@
 										<TimetabledTime>2023-06-22T12:31:00+02:00</TimetabledTime>
 									</ServiceDeparture>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1XZXJkZXIgKEhhdmVsKSwgQmFobmhvZkBYPTEyOTI2ODMwQFk9NTIzOTI5OThAVT04NkBMPTMwMDU2NjAwMkB8V2VyZGVyIChIYXZlbCksIEJhaG5ob2Z8MTIuOTI2ODN8NTIuMzkyOTk4fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Werder (Havel), Bahnhof</Text>
@@ -1631,8 +1631,8 @@
 									</ServiceDeparture>
 									<Order>3</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmFuZGVuYnVyZywgSGF1cHRiYWhuaG9mQFg9MTI1NjUyNTdAWT01MjQwMDQzMkBVPTg2QEw9Mjc1MTEwNTBAfEJyYW5kZW5idXJnLCBIYXVwdGJhaG5ob2Z8MTIuNTY1MjU3fDUyLjQwMDQzMnx0cnVl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Brandenburg, Hauptbahnhof</Text>
@@ -1645,8 +1645,8 @@
 									</ServiceDeparture>
 									<Order>4</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CcmFuZGVuYnVyZywgS2lyY2htw7ZzZXIgQmhmQFg9MTI0MjE3ODlAWT01MjM3NTY0MEBVPTg2QEw9Mjc1NzE5NTBAfEJyYW5kZW5idXJnLCBLaXJjaG3DtnNlciBCaGZ8MTIuNDIxNzg5fDUyLjM3NTY0fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Brandenburg, Kirchmöser Bhf</Text>
@@ -1659,8 +1659,8 @@
 									</ServiceDeparture>
 									<Order>5</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1XdXN0ZXJ3aXR6LCBCYWhuaG9mQFg9MTIzNzEzMTRAWT01MjM4NTUzN0BVPTg2QEw9MjIwMjQ5NTFAfFd1c3RlcndpdHosIEJhaG5ob2Z8MTIuMzcxMzE0fDUyLjM4NTUzN3xmYWxzZQ--</siri:StopPointRef>
 									<StopPointName>
 										<Text>Wusterwitz, Bahnhof</Text>
@@ -1673,8 +1673,8 @@
 									</ServiceDeparture>
 									<Order>6</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1HZW50aGluQFg9MTIxNTcxMTBAWT01MjQwMzIxOUBVPTg2QEw9MTAwODkxNzRAfEdlbnRoaW58MTIuMTU3MTF8NTIuNDAzMjE5fGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Genthin</Text>
@@ -1687,8 +1687,8 @@
 									</ServiceDeparture>
 									<Order>7</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1Hw7xzZW4oYiBHZW50aGluKUBYPTExOTc3ODU3QFk9NTIzMzQ4OTJAVT04NkBMPTEwMDg5MTc5QHxHw7xzZW4oYiBHZW50aGluKXwxMS45Nzc4NTd8NTIuMzM0ODkyfGZhbHNl</siri:StopPointRef>
 									<StopPointName>
 										<Text>Güsen(b Genthin)</Text>
@@ -1701,8 +1701,8 @@
 									</ServiceDeparture>
 									<Order>8</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1CdXJnKE1hZ2RlYnVyZylAWD0xMTg0MDM0OUBZPTUyMjc0NDEzQFU9ODZATD0xMDA4OTMxMUB8QnVyZyhNYWdkZWJ1cmcpfDExLjg0MDM0OXw1Mi4yNzQ0MTN8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Burg(Magdeburg)</Text>
@@ -1715,8 +1715,8 @@
 									</ServiceDeparture>
 									<Order>9</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>U3xBPTFATz1NYWdkZWJ1cmctTmV1c3RhZHRAWD0xMTY0MTY5NkBZPTUyMTQ4ODQyQFU9ODZATD0xMDA4OTIwOEB8TWFnZGVidXJnLU5ldXN0YWR0fDExLjY0MTY5Nnw1Mi4xNDg4NDJ8ZmFsc2U-</siri:StopPointRef>
 									<StopPointName>
 										<Text>Magdeburg-Neustadt</Text>
@@ -1729,7 +1729,7 @@
 									</ServiceDeparture>
 									<Order>10</Order>
 									<NotServicedStop>false</NotServicedStop>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>U3xBPTFATz1NYWdkZWJ1cmcgSGJmQFg9MTE2MjY4OTFAWT01MjEzMDM1MkBVPTg2QEw9MTAwODkyMDdAfE1hZ2RlYnVyZyBIYmZ8MTEuNjI2ODkxfDUyLjEzMDM1Mnx0cnVl</siri:StopPointRef>
 									<StopPointName>

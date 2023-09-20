@@ -207,7 +207,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8591165</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Grimselstrasse</Text>
@@ -219,8 +219,8 @@
 										<TimetabledTime>2020-12-01T12:01:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591222</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Kappeli</Text>
@@ -232,8 +232,8 @@
 										<TimetabledTime>2020-12-01T12:03:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591138</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Freihofstrasse</Text>
@@ -245,8 +245,8 @@
 										<TimetabledTime>2020-12-01T12:04:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>4</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591252</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Letzigrund</Text>
@@ -258,8 +258,8 @@
 										<TimetabledTime>2020-12-01T12:05:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>5</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591038</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Albisriederplatz</Text>
@@ -271,8 +271,8 @@
 										<TimetabledTime>2020-12-01T12:06:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>6</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591448</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Zypressenstrasse</Text>
@@ -284,8 +284,8 @@
 										<TimetabledTime>2020-12-01T12:08:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>7</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591259</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Lochergut</Text>
@@ -297,8 +297,8 @@
 										<TimetabledTime>2020-12-01T12:09:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>8</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591218</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich,Kalkbreite/Bhf.Wiedikon</Text>
@@ -310,8 +310,8 @@
 										<TimetabledTime>2020-12-01T12:10:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>9</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591079</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Bezirksgebäude</Text>
@@ -323,8 +323,8 @@
 										<TimetabledTime>2020-12-01T12:11:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>10</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591381</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Stauffacher</Text>
@@ -336,8 +336,8 @@
 										<TimetabledTime>2020-12-01T12:14:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>11</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591369</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Sihlstrasse</Text>
@@ -349,8 +349,8 @@
 										<TimetabledTime>2020-12-01T12:16:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>12</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591299</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Paradeplatz</Text>
@@ -362,8 +362,8 @@
 										<TimetabledTime>2020-12-01T12:18:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>13</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591093</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Kantonalbank</Text>
@@ -375,8 +375,8 @@
 										<TimetabledTime>2020-12-01T12:19:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>14</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8591105</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich, Bürkliplatz</Text>
@@ -388,7 +388,7 @@
 										<TimetabledTime>2020-12-01T12:21:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>15</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8576193</siri:StopPointRef>
 									<StopPointName>
@@ -500,7 +500,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8503059</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich Stadelhofen FB</Text>
@@ -512,8 +512,8 @@
 										<TimetabledTime>2020-12-01T12:26:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8530813</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich Kreuzplatz</Text>
@@ -525,7 +525,7 @@
 										<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8591364</siri:StopPointRef>
 									<StopPointName>
@@ -1097,7 +1097,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8503020</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich Hardbrücke</Text>
@@ -1112,8 +1112,8 @@
 										<TimetabledTime>2020-12-01T12:11:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8503000</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich HB</Text>
@@ -1128,7 +1128,7 @@
 										<TimetabledTime>2020-12-01T12:16:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8503003</siri:StopPointRef>
 									<StopPointName>
@@ -1365,7 +1365,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8530813</siri:StopPointRef>
 									<StopPointName>
 										<Text>Zürich Kreuzplatz</Text>
@@ -1377,7 +1377,7 @@
 										<TimetabledTime>2020-12-01T12:28:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8591364</siri:StopPointRef>
 									<StopPointName>

@@ -8817,7 +8817,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>at:47:64809:0:1</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Nauders, Norbertshöhe</Text>
@@ -8829,8 +8829,8 @@
 										<TimetabledTime>2023-06-14T05:12:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>at:47:61112:0:2</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Nauders, Mühle</Text>
@@ -8842,8 +8842,8 @@
 										<TimetabledTime>2023-06-14T05:16:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>at:47:61095:0:2</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Bergkastel</Text>
@@ -8855,8 +8855,8 @@
 										<TimetabledTime>2023-06-14T05:18:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>4</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>at:47:61115:0:1</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Nauders, Reschenpass</Text>
@@ -8868,8 +8868,8 @@
 										<TimetabledTime>2023-06-14T05:19:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>5</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:5:0:59</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Passo Resia</Text>
@@ -8881,8 +8881,8 @@
 										<TimetabledTime>2023-06-14T05:20:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>6</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:6:0:1210</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Resia, Paese Vecchio</Text>
@@ -8894,8 +8894,8 @@
 										<TimetabledTime>2023-06-14T05:22:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>7</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:7:0:60</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Resia, Casa Culturale</Text>
@@ -8907,8 +8907,8 @@
 										<TimetabledTime>2023-06-14T05:23:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>8</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:8:0:61</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Arlund</Text>
@@ -8920,8 +8920,8 @@
 										<TimetabledTime>2023-06-14T05:25:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>9</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:9:0:62</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Curon, Lago</Text>
@@ -8933,8 +8933,8 @@
 										<TimetabledTime>2023-06-14T05:28:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>10</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:27:0:6905</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Zona Artigianale S. Valentino</Text>
@@ -8946,8 +8946,8 @@
 										<TimetabledTime>2023-06-14T05:31:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>11</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:28:0:6903</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">S. Valentino, Rauten</Text>
@@ -8959,8 +8959,8 @@
 										<TimetabledTime>2023-06-14T05:32:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>12</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:29:0:63</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">S. Valentino, Caserma Vigili del Fuoco</Text>
@@ -8972,8 +8972,8 @@
 										<TimetabledTime>2023-06-14T05:33:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>13</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:31:0:64</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">S. Valentino, Posta</Text>
@@ -8985,8 +8985,8 @@
 										<TimetabledTime>2023-06-14T05:33:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>14</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:32:0:65</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Case dei Pescatori</Text>
@@ -8998,8 +8998,8 @@
 										<TimetabledTime>2023-06-14T05:35:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>15</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:33:0:66</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Haidepark</Text>
@@ -9011,8 +9011,8 @@
 										<TimetabledTime>2023-06-14T05:40:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>16</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:34:0:43</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Burgusio, Rotatoria</Text>
@@ -9024,8 +9024,8 @@
 										<TimetabledTime>2023-06-14T05:42:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>17</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:164:0:1918</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Malles, Bivio Clusio</Text>
@@ -9037,7 +9037,7 @@
 										<TimetabledTime>2023-06-14T05:46:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>18</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>it:22021:36:1:40020</siri:StopPointRef>
 									<StopPointName>
@@ -9120,7 +9120,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:60:0:148</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Glorenza, Porta Tubre</Text>
@@ -9132,8 +9132,8 @@
 										<TimetabledTime>2023-06-14T06:25:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:69:0:149</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Montechiaro, Rotonda</Text>
@@ -9145,8 +9145,8 @@
 										<TimetabledTime>2023-06-14T06:30:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:70:0:190</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Agumes</Text>
@@ -9158,8 +9158,8 @@
 										<TimetabledTime>2023-06-14T06:33:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>4</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:3097:0:3018</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Prato allo Stelvio, Municipio</Text>
@@ -9171,7 +9171,7 @@
 										<TimetabledTime>2023-06-14T06:35:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>5</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>it:22021:71:0:151</siri:StopPointRef>
 									<StopPointName>
@@ -9254,7 +9254,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:2500:0:40885</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Prato allo Stelvio, Fonderia</Text>
@@ -9266,8 +9266,8 @@
 										<TimetabledTime>2023-06-14T06:44:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:1286:0:2047</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Geierhof</Text>
@@ -9279,8 +9279,8 @@
 										<TimetabledTime>2023-06-14T06:48:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:77:0:154</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Ponte Stelvio</Text>
@@ -9292,8 +9292,8 @@
 										<TimetabledTime>2023-06-14T06:50:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>4</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:78:0:6928</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Masutt</Text>
@@ -9305,8 +9305,8 @@
 										<TimetabledTime>2023-06-14T06:51:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>5</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:2634:0:6929</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Bivio Stelvio</Text>
@@ -9318,8 +9318,8 @@
 										<TimetabledTime>2023-06-14T06:54:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>6</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>it:22021:80:0:157</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="it">Stelvio, Paese</Text>
@@ -9331,7 +9331,7 @@
 										<TimetabledTime>2023-06-14T06:59:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>7</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>it:22021:81:0:158</siri:StopPointRef>
 									<StopPointName>

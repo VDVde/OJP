@@ -68,7 +68,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8581218</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, La Promenade</Text>
@@ -80,8 +80,8 @@
 										<TimetabledTime>2023-09-13T14:12:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8510379</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Château-Musée</Text>
@@ -93,8 +93,8 @@
 										<TimetabledTime>2023-09-13T14:12:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>3</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8510378</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Hôtel de Ville</Text>
@@ -106,8 +106,8 @@
 										<TimetabledTime>2023-09-13T14:13:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>4</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8583087</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Théâtre</Text>
@@ -119,8 +119,8 @@
 										<TimetabledTime>2023-09-13T14:14:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>5</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8571983</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Le Ticle</Text>
@@ -132,8 +132,8 @@
 										<TimetabledTime>2023-09-13T14:15:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>6</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8571982</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Av. de la gare</Text>
@@ -145,7 +145,7 @@
 										<TimetabledTime>2023-09-13T14:16:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>7</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8571965</siri:StopPointRef>
 									<StopPointName>
@@ -237,7 +237,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8571996</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, ch. du Puits</Text>
@@ -249,7 +249,7 @@
 										<TimetabledTime>2023-09-13T14:23:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegAlight>
 									<siri:StopPointRef>8510185</siri:StopPointRef>
 									<StopPointName>
