@@ -22,8 +22,8 @@
 						<Duration>PT48M</Duration>
 						<StartTime>2023-08-15T18:08:00Z</StartTime>
 						<EndTime>2023-08-15T18:56:00Z</EndTime>
-						<Transfers>1</Transfers>
-						<!-- is one even when it is a remain seated -->
+						<Transfers>0</Transfers>
+						<!-- TransferLegs with remainInVehicle are NOT counted.  -->
 						<Leg>
 							<!-- the NJ490 part -->
 							<Id>1</Id>
