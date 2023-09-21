@@ -211,7 +211,7 @@
 			<xs:documentation>Vehicle journey that runs at a specific date.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TimedMode" type="TimedModesOfOperationEnumeration" minOccurs="0" default="scheduledService">
+			<xs:element name="ConventionalModeOfOperation" type="ConventionalModesOfOperationEnumeration" minOccurs="0" default="scheduled">
 				<xs:annotation>
 					<xs:documentation>MODE OF OPERATION for scheduled and flexible services (NeTEx).</xs:documentation>
 				</xs:annotation>
@@ -235,7 +235,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="JourneyRef" minOccurs="0"/>
-			<xs:element name="PrivateMode" type="PrivateModesOfOperationEnumeration">
+			<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration">
 				<xs:annotation>
 					<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals.</xs:documentation>
 				</xs:annotation>
@@ -514,20 +514,21 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:element name="ContinuousMode" type="ContinuousModesOfOperationEnumeration">
+				<xs:element name="AlternativeModeOfOperation" type="AlternativeModesOfOperationEnumeration">
 					<xs:annotation>
-						<xs:documentation>Continuous transport options.</xs:documentation>
+						<xs:documentation>Alternative transport options.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="IndividualMode" type="IndividualModesOfOperationEnumeration">
+				<xs:element name="PersonalMode" type="PersonalModesOfOperationEnumeration">
 					<xs:annotation>
-						<xs:documentation>Individual transport options.</xs:documentation>
+						<xs:documentation>Personaltransport options.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
 			<xs:choice>
 				<xs:group ref="DatedJourneyGroup" minOccurs="0"/>
-				<xs:element name="SharingService" type="SharingServiceStructure" minOccurs="0">
+				<xs:element name="IndividualMode" type="IndividualModeEnumeration"/>
+				<xs:element name="AlternativeService" type="AlternativeServiceStructure" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Shared mobility offer.</xs:documentation>
 					</xs:annotation>

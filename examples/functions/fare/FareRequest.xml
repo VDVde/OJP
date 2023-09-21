@@ -36,7 +36,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>commuterCarPooling</ContinuousMode>
+									<AlternativeModeOfOperation>demandResponsive</AlternativeModeOfOperation>
 									<OperatingDayRef>2023-12-24</OperatingDayRef>
 									<siri:VehicleRef>ch:1:vehicle:31231:12311</siri:VehicleRef>
 									<JourneyRef>ch:1:jyid:12931231</JourneyRef>
@@ -69,7 +69,7 @@
 						<Leg>
 							<Id>2</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<GeoPosition>
 										<siri:Longitude>5.2</siri:Longitude>

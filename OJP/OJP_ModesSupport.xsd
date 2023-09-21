@@ -1,84 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_ModesSupport.xsd - Supporting definitions for the classification of modes of transport</xs:documentation>
 	</xs:annotation>
+	<xs:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../siri/xsd/ifopt/ifopt_allStopPlace.xsd"/>
 	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
 	<xs:include schemaLocation="OJP_All.xsd"/>
 	<xs:annotation>
-		<xs:documentation>========================================== Individual Modes ==========================================</xs:documentation>
+		<xs:documentation>========================================== Personal Modes of Operation ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:simpleType name="IndividualModesOfOperationEnumeration">
+	<xs:simpleType name="PersonalModesOfOperationEnumeration">
 		<xs:annotation>
-			<xs:documentation>modes which an individual "drives"  themselves and walk (such as walk, cycle)</xs:documentation>
+			<xs:documentation>PERSONAL MODE OF OPERATION</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="walk"/>
-			<xs:enumeration value="cycle"/>
-			<xs:enumeration value="self-drive-car"/>
-			<xs:enumeration value="others-drive-car"/>
-			<xs:enumeration value="vehicleHire">
+			<xs:enumeration value="self">
 				<xs:annotation>
-					<xs:documentation>One of the MODES OF OPERATION from NeTEX rental.</xs:documentation>
+					<xs:documentation>Without a VEHICLE.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="vehicleLease">
+			<xs:enumeration value="own">
 				<xs:annotation>
-					<xs:documentation>One of the MODES OF OPERATION from NeTEX rental.</xs:documentation>
+					<xs:documentation>Using an owned VEHICLE.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="motorcycle"/>
-			<xs:enumeration value="truck"/>
-			<xs:enumeration value="scooter"/>
-			<xs:enumeration value="carSharingClub">
+			<xs:enumeration value="otherOwned">
 				<xs:annotation>
-					<xs:documentation>Car sharing club. MODES OF OPERATION from NeTEx sharing.</xs:documentation>
+					<xs:documentation>Using a VEHICLE owned by a different private person without a commercial context.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="peerToPeerCarSharing">
+			<xs:enumeration value="lease">
 				<xs:annotation>
-					<xs:documentation>Sharing between peers. MODES OF OPERATION from NeTEx sharing.</xs:documentation>
+					<xs:documentation>Using a leased VEHICLE.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="vehicleSharing">
+			<xs:enumeration value="hire">
 				<xs:annotation>
-					<xs:documentation>Non-car (bicycles, scooters and the like) sharing. MODES OF OPERATION from NeTEx sharing.</xs:documentation>
+					<xs:documentation>Using a hired VEHICLE.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="ride-pool-car"/>
-			<xs:enumeration value="car-sharing"/>
-			<xs:enumeration value="cycle-sharing"/>
-			<xs:enumeration value="scooter-sharing"/>
-			<xs:enumeration value="park-ride-car"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="PrivateModesOfOperationEnumeration">
+	<xs:annotation>
+		<xs:documentation>========================================== Alternative Modes of Operation ==========================================</xs:documentation>
+	</xs:annotation>	
+	<xs:simpleType name="AlternativeModesOfOperationEnumeration">
 		<xs:annotation>
-			<xs:documentation>MODE OF OPERATION offered by private individuals (contains the values as defined by NeTEx). In the end these are all different forms of car pooling</xs:documentation>
+			<xs:documentation>ALTERNATIVE MODE OF OPERATION offered.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="taxi"/>
-			<xs:enumeration value="appBookedTaxi"/>
-			<xs:enumeration value="sharedTaxi"/>
-			<xs:enumeration value="prebookedTaxi"/>
-			<xs:enumeration value="chauffeuredVehicle"/>
-			<xs:enumeration value="dynamicCarPooling"/>
-			<xs:enumeration value="longDistanceCarPooling"/>
-			<xs:enumeration value="vehiclePooling"/>
-			<xs:enumeration value="schoolBus"/>
-			<xs:enumeration value="companyShuttle"/>
-			<xs:enumeration value="hotelShuttle"/>
-			<xs:enumeration value="other"/>
+			<xs:enumeration value="sharing">
+				<xs:annotation>
+					<xs:documentation>Using a sharing as an ALTERNATIVE MODE OF OPERATION. Only if one of the specialisations doesn't apply.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="stationLessSharing">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. station less sharing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="stationBasedSharing">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Based on fix stations (VEHICLE MEETING POINT)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="peerToPeerSharing">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Specialised sharing between people.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="parkAndRideSharing">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Spezialised sharing in the context of a park and ride situation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sharingClubSharing">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Sharing organised as a club.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="prM">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. In relation to a conventional SERVICE JOURNEY, but when pickup and dropoff are not associated with SCHEDULED STOP POINTs.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pooling">
+				<xs:annotation>
+					<xs:documentation>General pooling ALTERNATIVE MODE OF OPERATION. Only use this enum, when no specialsation applies.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="taxi">
+				<xs:annotation>
+					<xs:documentation>Taxi MODE OF OPERATION.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="shuttle">
+				<xs:annotation>
+					<xs:documentation>Shuttle MODE OF OPERATION, when not associated with SCHEDULED STOP POINTs.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="dynamicPooling">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. A pooling that is dynamic, usually local and not long-term planned.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="longDistancePooling">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. A pooling for long distances, mostly for a SINGLE JOURNEY.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="commuterPooling">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. A pooling to go to workplaces and related things. Usually in a regular interval with the same people.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="parkAndRidePooling">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. A pooling in relation to park and ride.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>	
+			<xs:enumeration value="chauffeured">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION for SINGLE JOURNEY with a paid driver. Often more than a single SINGLE JOURNEY.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="demandResponsive">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION demand responsive is used, when there are no SCHEDULED STOP POINTs involved and the timetable component is weak.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="flexibleArea">
+				<xs:annotation>
+					<xs:documentation>Specialisation of the demand responsive ALTERNATIVE MODE OF OPERATION for AREA related offers.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="school">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. To specifically state that it is school related. Specialisation of demand responsive.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="companyShuttle">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. To specifically state that it is a company related. Specialisation of demand responsive.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="hotelShuttle">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. To specifically state that it is hotel related. Specialisation of demand responsive.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>						
+			<xs:enumeration value="other">
+				<xs:annotation>
+					<xs:documentation>Only use this value, when no other applies.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+
+
+	<xs:annotation>
+		<xs:documentation>==========================================IndividualTransportOptionsStructure ==========================================</xs:documentation>
+	</xs:annotation>
+		
 	<xs:complexType name="IndividualTransportOptionsStructure">
 		<xs:annotation>
 			<xs:documentation>Individual modes and their usage limits as stated by the passenger (TRIP ACCESS CONSTRAINT).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Mode" type="IndividualModesOfOperationEnumeration">
+			<xs:element name="PersonalModeOFOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Mode of individual transport.	When mode self-drive-car is used the connection to another mode will need a parking space for the car. Thus, this mode is a generalisation of all park and ride use cases. The mode others-drive-car, however, only needs a place to let a person be set down from a car.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="AccessMode" type="ifopt:AccessModesEnumeration">
+				<xs:annotation>
+					<xs:documentation>Mode </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MaxDistance" type="siri:DistanceType" minOccurs="0">
@@ -113,68 +209,109 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="ContinuousModesOfOperationEnumeration">
-		<xs:annotation>
-			<xs:documentation>Types of MODES OF OPERATION that run at any time without a timetable and that are not classic flexible services.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="walk"/>
-			<xs:enumeration value="commuterCarPooling">
-				<xs:annotation>
-					<xs:documentation>MODE OF OPERATION from NeTEX personal.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="demandResponsive">
-				<xs:annotation>
-					<xs:documentation>area based demand responsive service (without SCHEDULED STOP POINTs.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ownCar">
-				<xs:annotation>
-					<xs:documentation>MODE OF OPERATION from NeTEX personal.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="privateLift">
-				<xs:annotation>
-					<xs:documentation>MODE OF OPERATION from NeTEX personal.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="TimedModesOfOperationEnumeration">
+	
+
+	<xs:annotation>
+		<xs:documentation>========================================== Conventional Modes of Operation ==========================================</xs:documentation>
+	</xs:annotation>	
+	<xs:simpleType name="ConventionalModesOfOperationEnumeration">
 		<xs:annotation>
 			<xs:documentation>Types of MODES OF OPERATION  are scheduled, classic and also flexible. From NeTEx.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="scheduledService"/>
-			<xs:enumeration value="eventBasedService"/>
-			<xs:enumeration value="flexibleRoute"/>
-			<xs:enumeration value="flexibleArea"/>
-			<xs:enumeration value="demandResponsive"/>
-			<xs:enumeration value="replacementService"/>
+			<xs:enumeration value="scheduled">
+				<xs:annotation>
+					<xs:documentation>Regular MODE OF OPERATION for CONVENTIONAL MODE OF OPERATION. Based on SCHEDULED STOP POINTs and timetables.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="demandResponsive">
+				<xs:annotation>
+					<xs:documentation>Demand responsive services. General term, when nothing else is known. Requires SCHEDULED STOP POINTs.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>	
+			<xs:enumeration value="flexibleRoute">
+				<xs:annotation>
+					<xs:documentation>Specialisation of demand responsive MODE OF OPERATION. The service is still based on a ROUTE.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="flexibleArea">
+				<xs:annotation>
+					<xs:documentation>Specialisation of demand responsive MODE OF OPERATION. The service is based on AREAs, but still SCHEDULED STOP POINTs are used.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="shuttle">
+				<xs:annotation>
+					<xs:documentation>If the service is provided as a form of shuttle.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="pooling">
+				<xs:annotation>
+					<xs:documentation>In some cases pooling is not an ALTERNATIVE MODE OF OPERATION, but is better served with a TimedLeg. Then this MODE OF OPERATION is to be used.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="replacement">
+				<xs:annotation>
+					<xs:documentation>The service is provided as a replacement of a SCHEDULED service.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="pRM">
+				<xs:annotation>
+					<xs:documentation>If for a scheduled, conventional servce a special additional vehicle is needed to provide for special PRM needs. This kind of MODE OF OPERATION is to be used.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>	
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Interchange Modes ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:simpleType name="TransferModesEnumeration">
+	<xs:simpleType name="TransferTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>MODEs dedicated to peform TRANSFERs</xs:documentation>
+			<xs:documentation>TYPE OF TRANSFER. It is a mix between MODE information, MODE OF OPERATION information and a more stringent TYPE OF TRANSFER.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="walk"/>
-			<xs:enumeration value="parkAndRide"/>
-			<xs:enumeration value="bikeAndRide"/>
-			<xs:enumeration value="carHire"/>
-			<xs:enumeration value="bikeHire"/>
+			<xs:enumeration value="shuttle"/>
+			<xs:enumeration value="taxi"/>
 			<xs:enumeration value="protectedConnection"/>
 			<xs:enumeration value="guaranteedConnection"/>
 			<xs:enumeration value="remainInVehicle"/>
 			<xs:enumeration value="changeWithinVehicle"/>
 			<xs:enumeration value="checkIn"/>
 			<xs:enumeration value="checkOut"/>
+			<xs:enumeration value="parkAndRide"/>
+			<xs:enumeration value="bikeAndRide"/>
+			<xs:enumeration value="carHire"/>
+			<xs:enumeration value="bikeHire"/>	
+			<xs:enumeration value="other">
+				<xs:annotation>
+					<xs:documentation>Only to be used, when no other type applies.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>		
 		</xs:restriction>
 	</xs:simpleType>
+	
+	<xs:annotation>
+		<xs:documentation>========================================== Individual Transport Modes ==========================================</xs:documentation>
+	</xs:annotation>
+	
+	<xs:simpleType name="IndividualModeEnumeration">
+		<xs:annotation>
+			<xs:documentation>TYPE OF MODE than can be used in an individual context.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="walk"/>
+			<xs:enumeration value="cycle"/>
+			<xs:enumeration value="car"/>
+			<xs:enumeration value="motorcycle"/>
+			<xs:enumeration value="truck"/>
+			<xs:enumeration value="scooter"/>
+			<xs:enumeration value="other">
+				<xs:annotation>
+					<xs:documentation>Only to be used, when no other type applies.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>		
+		</xs:restriction>
+	</xs:simpleType>	
 	<xs:annotation>
 		<xs:documentation>========================================== Public Transport Modes ==========================================</xs:documentation>
 	</xs:annotation>
@@ -201,6 +338,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	
+	
 	<xs:group name="ModeGroup">
 		<xs:annotation>
 			<xs:documentation>Elements for a Transport Mode</xs:documentation>
@@ -245,7 +384,7 @@
 					<xs:documentation>Whether modes in list are to include or exclude from search. Default is exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateMode" type="PrivateModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>List of private mobility offers to include/exclude.</xs:documentation>
 				</xs:annotation>

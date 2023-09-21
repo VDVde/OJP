@@ -266,7 +266,7 @@
 			<xs:enumeration value="nonStationBased"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:group name="SharingServiceUsageGroup">
+	<xs:group name="AlternativeServiceUsageGroup">
 		<xs:annotation>
 			<xs:documentation>Usage parameters of a sharing service.</xs:documentation>
 		</xs:annotation>
@@ -283,11 +283,12 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="SharingServiceStructure">
+	<xs:complexType name="AlternativeServiceStructure">
 		<xs:annotation>
 			<xs:documentation>Service that provides shared vehicles (The Transmodel MODE OF OPERATION is VEHICLE SHARING; other related Transmodel concepts: ALTERNATIVE MODE LEG.SINGLE JOURNEY.COMMON.VEHICLE SERVICE.TRANSPORT ORGANISATION).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="Mode" type="IndividualModeEnumeration"/>
 			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
 				<xs:annotation>
 					<xs:documentation>Identifier of the operator of the sharing service </xs:documentation>
@@ -303,7 +304,7 @@
 					<xs:documentation>Type of the sharing scheme.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="SharingServiceUsageGroup" minOccurs="0"/>
+			<xs:group ref="AlternativeServiceUsageGroup" minOccurs="0"/>
 			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Link to web page providing more details on service.</xs:documentation>

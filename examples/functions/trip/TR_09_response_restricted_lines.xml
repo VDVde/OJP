@@ -38,6 +38,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
+									<PersonalMode>self</PersonalMode>
 									<IndividualMode>walk</IndividualMode>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:02:00Z</TimeWindowStart>
@@ -192,7 +193,7 @@
 						<Leg>
 							<Id>3</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8571965</siri:StopPointRef>
 									<Name>
@@ -309,6 +310,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
+									<PersonalMode>self</PersonalMode>
 									<IndividualMode>walk</IndividualMode>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:24:00Z</TimeWindowStart>
@@ -350,7 +352,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>demandResponsive</ContinuousMode>
+									<AlternativeModeOfOperation>demandResponsive</AlternativeModeOfOperation>
 									<OperatingDayRef>2023-09-13</OperatingDayRef>
 									<siri:VehicleRef>ch:1:publicar:delement:1_1231</siri:VehicleRef>
 									<JourneyRef>ch:1:ServiceJourney:publicar:1293919293919929391-12331</JourneyRef>
@@ -420,22 +422,21 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>ride-pool-car</IndividualMode>
-									<OperatingDayRef>2023-09-13</OperatingDayRef>
-									<siri:VehicleRef>ch:2:mobility:12319129391</siri:VehicleRef>
-									<JourneyRef>mobilty:12131231</JourneyRef>
-									<PublicCode>mobility</PublicCode>
-									<siri:LineRef>mobiltiy:123123</siri:LineRef>
-									<Mode>
-										<PtMode>selfDrive</PtMode>
-									</Mode>
-									<PublishedServiceName>
-										<Text>Mobility Company shuttle</Text>
-									</PublishedServiceName>
-									<Restricted>true</Restricted>
-									<RestrictionNote>
-										<Text>Service available only to people working for the city of Délémont.</Text>
-									</RestrictionNote>
+									<AlternativeModeOfOperation>pooling</AlternativeModeOfOperation>
+									<AlternativeService>
+										<Mode>car</Mode>
+										<OperatorRef>ch:1:Operator:Mobility</OperatorRef>
+										<Name>Mobility</Name>
+										<SharingModel>multipleStationBased</SharingModel>
+										<TimeBufferBefore>PT30M</TimeBufferBefore>
+										<TimeBufferAfter>PT30M</TimeBufferAfter>
+										<InfoUrl>
+											<Label>
+												<Text>Info-URL Mobility</Text>
+											</Label>
+											<Url>https://www.mobility.ch</Url>
+										</InfoUrl>
+									</AlternativeService>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:24:00Z</TimeWindowStart>
 								<TimeWindowEnd>2023-09-13T14:33:00Z</TimeWindowEnd>

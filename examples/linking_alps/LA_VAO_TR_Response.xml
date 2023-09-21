@@ -426,7 +426,7 @@
 						<Leg>
 							<Id>1</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>U3xBPTFATz1TYWx6YnVyZyBIYXVwdGJhaG5ob2ZAWD0xMzA0NTkzN0BZPTQ3ODEyODk2QFU9ODFATD00NTUwMDAyMDlAaT1Bw5dhdDo0NTo1MDAwMjowOjlAfFNhbHpidXJnIEhhdXB0YmFobmhvZnwxMy4wNDU5Mzd8NDcuODEyODk2fHRydWU-</siri:StopPointRef>
 									<Name>

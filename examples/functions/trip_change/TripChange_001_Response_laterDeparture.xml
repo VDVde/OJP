@@ -151,7 +151,7 @@
 						<Leg>
 							<Id>2</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>ch:1:sloid:3000:501:34</siri:StopPointRef>
 									<Name>

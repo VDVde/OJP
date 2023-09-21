@@ -7951,7 +7951,7 @@
 						<Leg>
 							<Id>1</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8572113</siri:StopPointRef>
 									<Name>
@@ -8048,7 +8048,7 @@
 						<Leg>
 							<Id>3</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8500010</siri:StopPointRef>
 									<Name>
@@ -8169,7 +8169,7 @@
 						<Leg>
 							<Id>5</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8503000</siri:StopPointRef>
 									<Name>
@@ -8299,7 +8299,7 @@
 						<Leg>
 							<Id>7</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8509002</siri:StopPointRef>
 									<Name>
@@ -8387,7 +8387,7 @@
 						<Leg>
 							<Id>9</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8509263</siri:StopPointRef>
 									<Name>
@@ -8475,7 +8475,7 @@
 						<Leg>
 							<Id>11</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8509268</siri:StopPointRef>
 									<Name>
@@ -8561,7 +8561,7 @@
 						<Leg>
 							<Id>13</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8509795</siri:StopPointRef>
 									<Name>
@@ -8865,7 +8865,7 @@
 						<Leg>
 							<Id>15</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>it:22021:36:1:40020</siri:StopPointRef>
 									<Name>
@@ -8999,7 +8999,7 @@
 						<Leg>
 							<Id>17</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>it:22021:71:0:151</siri:StopPointRef>
 									<Name>

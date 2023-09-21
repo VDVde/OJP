@@ -120,7 +120,7 @@
 						<Leg>
 							<Id>2</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
 									<Name>
@@ -161,10 +161,11 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>ownCar</ContinuousMode>
-									<SharingService>
+									<AlternativeModeOfOperation>hotelShuttle</AlternativeModeOfOperation>
+									<AlternativeService>
+										<Mode>car</Mode>
 										<OperatorRef>ch:1:sboid:12391912</OperatorRef>
-									</SharingService>
+									</AlternativeService>
 									<BookingArrangements>
 										<BookingArrangement>
 											<BuyWhen>

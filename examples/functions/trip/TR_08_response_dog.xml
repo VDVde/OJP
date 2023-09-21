@@ -201,7 +201,7 @@
 						<Leg>
 							<Id>3</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8571965</siri:StopPointRef>
 									<Name>

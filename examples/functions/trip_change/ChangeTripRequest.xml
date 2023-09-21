@@ -121,7 +121,7 @@
 						<Leg>
 							<Id>2</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
 									<Name>
@@ -162,7 +162,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>ownCar</ContinuousMode>
+									<AlternativeModeOfOperation>flexibleArea</AlternativeModeOfOperation>
 									<OperatingDayRef>2023-02-18</OperatingDayRef>
 									<siri:VehicleRef>12391923-1123</siri:VehicleRef>
 									<JourneyRef>1230.1.1.231</JourneyRef>

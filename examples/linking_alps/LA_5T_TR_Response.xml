@@ -145,7 +145,7 @@
 						<Leg>
 							<Id>1</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>23:1917</siri:StopPointRef>
 									<Name>
@@ -216,7 +216,7 @@
 						<Leg>
 							<Id>3</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>trepie:ITRP-ST0012729029</siri:StopPointRef>
 									<Name>
@@ -287,7 +287,7 @@
 						<Leg>
 							<Id>5</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>gtt:8214</siri:StopPointRef>
 									<Name>

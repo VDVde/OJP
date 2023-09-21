@@ -400,6 +400,7 @@
 									<Order>16</Order>
 								</LegAlight>
 								<Service>
+									<ConventionalModeOfOperation>scheduled</ConventionalModeOfOperation>
 									<OperatingDayRef>Unknown</OperatingDayRef>
 									<JourneyRef>91002::H:j20:660</JourneyRef>
 									<siri:LineRef>91002:</siri:LineRef>
@@ -467,7 +468,7 @@
 						<Leg>
 							<Id>3</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8576193</siri:StopPointRef>
 									<Name>
@@ -994,7 +995,7 @@
 						<Leg>
 							<Id>3</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8591056</siri:StopPointRef>
 									<Name>
@@ -1218,7 +1219,7 @@
 						<Leg>
 							<Id>5</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8503003</siri:StopPointRef>
 									<Name>
