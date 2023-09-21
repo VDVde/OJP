@@ -151,12 +151,6 @@
 									<Name>
 										<Text>Origin</Text>
 									</Name>
-									<ServiceArrival>
-										<TimetabledTime>20203-02-08T08:02:00Z</TimetabledTime>
-									</ServiceArrival>
-									<ServiceDeparture>
-										<TimetabledTime>2023-02-08T08:03:00Z</TimetabledTime>
-									</ServiceDeparture>
 								</LegStart>
 								<LegEnd>
 									<GeoPosition>
@@ -166,9 +160,6 @@
 									<Name>
 										<Text>Destination</Text>
 									</Name>
-									<ServiceArrival>
-										<TimetabledTime>2023-02-08T08:20:00Z</TimetabledTime>
-									</ServiceArrival>
 								</LegEnd>
 								<Service>
 									<ContinuousMode>ownCar</ContinuousMode>
@@ -194,6 +185,8 @@
 										</BookingArrangement>
 									</BookingArrangements>
 								</Service>
+								<TimeWindowStart>20203-02-08T08:02:00Z</TimeWindowStart>
+								<TimeWindowEnd>2023-02-08T08:20:00Z</TimeWindowEnd>
 								<Duration>PT15M</Duration>
 							</ContinuousLeg>
 						</Leg>
