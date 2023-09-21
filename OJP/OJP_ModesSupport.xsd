@@ -43,7 +43,7 @@
 	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Alternative Modes of Operation ==========================================</xs:documentation>
-	</xs:annotation>	
+	</xs:annotation>
 	<xs:simpleType name="AlternativeModesOfOperationEnumeration">
 		<xs:annotation>
 			<xs:documentation>ALTERNATIVE MODE OF OPERATION offered.</xs:documentation>
@@ -118,7 +118,7 @@
 				<xs:annotation>
 					<xs:documentation>ALTERNATIVE MODE OF OPERATION. A pooling in relation to park and ride.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>	
+			</xs:enumeration>
 			<xs:enumeration value="chauffeured">
 				<xs:annotation>
 					<xs:documentation>ALTERNATIVE MODE OF OPERATION for SINGLE JOURNEY with a paid driver. Often more than a single SINGLE JOURNEY.</xs:documentation>
@@ -148,7 +148,7 @@
 				<xs:annotation>
 					<xs:documentation>ALTERNATIVE MODE OF OPERATION. To specifically state that it is hotel related. Specialisation of demand responsive.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>						
+			</xs:enumeration>
 			<xs:enumeration value="other">
 				<xs:annotation>
 					<xs:documentation>Only use this value, when no other applies.</xs:documentation>
@@ -156,12 +156,9 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-
-
 	<xs:annotation>
 		<xs:documentation>==========================================IndividualTransportOptionsStructure ==========================================</xs:documentation>
 	</xs:annotation>
-		
 	<xs:complexType name="IndividualTransportOptionsStructure">
 		<xs:annotation>
 			<xs:documentation>Individual modes and their usage limits as stated by the passenger (TRIP ACCESS CONSTRAINT).</xs:documentation>
@@ -171,7 +168,7 @@
 				<xs:annotation>
 					<xs:documentation>Mode of individual transport.	When mode self-drive-car is used the connection to another mode will need a parking space for the car. Thus, this mode is a generalisation of all park and ride use cases. The mode others-drive-car, however, only needs a place to let a person be set down from a car.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="IndividualMode" type="IndividualModeEnumeration">
 				<xs:annotation>
 					<xs:documentation>Mode </xs:documentation>
@@ -211,7 +208,7 @@
 	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== Conventional Modes of Operation ==========================================</xs:documentation>
-	</xs:annotation>	
+	</xs:annotation>
 	<xs:simpleType name="ConventionalModesOfOperationEnumeration">
 		<xs:annotation>
 			<xs:documentation>Types of MODES OF OPERATION  are scheduled, classic and also flexible. From NeTEx.</xs:documentation>
@@ -226,37 +223,37 @@
 				<xs:annotation>
 					<xs:documentation>Demand responsive services. General term, when nothing else is known. Requires SCHEDULED STOP POINTs.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>	
+			</xs:enumeration>
 			<xs:enumeration value="flexibleRoute">
 				<xs:annotation>
 					<xs:documentation>Specialisation of demand responsive MODE OF OPERATION. The service is still based on a ROUTE.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="flexibleArea">
 				<xs:annotation>
 					<xs:documentation>Specialisation of demand responsive MODE OF OPERATION. The service is based on AREAs, but still SCHEDULED STOP POINTs are used.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="shuttle">
 				<xs:annotation>
 					<xs:documentation>If the service is provided as a form of shuttle.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="pooling">
 				<xs:annotation>
 					<xs:documentation>In some cases pooling is not an ALTERNATIVE MODE OF OPERATION, but is better served with a TimedLeg. Then this MODE OF OPERATION is to be used.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="replacement">
 				<xs:annotation>
 					<xs:documentation>The service is provided as a replacement of a SCHEDULED service.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="pRM">
 				<xs:annotation>
 					<xs:documentation>If for a scheduled, conventional servce a special additional vehicle is needed to provide for special PRM needs. This kind of MODE OF OPERATION is to be used.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>	
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
@@ -279,19 +276,17 @@
 			<xs:enumeration value="parkAndRide"/>
 			<xs:enumeration value="bikeAndRide"/>
 			<xs:enumeration value="carHire"/>
-			<xs:enumeration value="bikeHire"/>	
+			<xs:enumeration value="bikeHire"/>
 			<xs:enumeration value="other">
 				<xs:annotation>
 					<xs:documentation>Only to be used, when no other type applies.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>		
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
 	<xs:annotation>
 		<xs:documentation>========================================== Individual Transport Modes ==========================================</xs:documentation>
 	</xs:annotation>
-	
 	<xs:simpleType name="IndividualModeEnumeration">
 		<xs:annotation>
 			<xs:documentation>TYPE OF MODE than can be used in an individual context.</xs:documentation>
@@ -307,9 +302,9 @@
 				<xs:annotation>
 					<xs:documentation>Only to be used, when no other type applies.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>		
+			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Public Transport Modes ==========================================</xs:documentation>
 	</xs:annotation>
@@ -336,8 +331,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	
-	
 	<xs:group name="ModeGroup">
 		<xs:annotation>
 			<xs:documentation>Elements for a Transport Mode</xs:documentation>
