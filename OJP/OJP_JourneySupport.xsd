@@ -519,7 +519,7 @@
 						<xs:documentation>Alternative transport options.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="PersonalMode" type="PersonalModesOfOperationEnumeration">
+				<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0" default="self">
 					<xs:annotation>
 						<xs:documentation>Personaltransport options.</xs:documentation>
 					</xs:annotation>

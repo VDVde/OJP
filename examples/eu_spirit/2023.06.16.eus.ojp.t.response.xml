@@ -1400,6 +1400,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
+									<PersonalModeOfOperation>self</PersonalModeOfOperation>
 									<IndividualMode>walk</IndividualMode>
 								</Service>
 								<TimeWindowStart>2023-06-22T12:13:00+02:00</TimeWindowStart>
@@ -1595,6 +1596,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
+									<PersonalModeOfOperation>own</PersonalModeOfOperation>
 									<IndividualMode>walk</IndividualMode>
 								</Service>
 								<TimeWindowStart>2023-06-22T12:27:00+02:00</TimeWindowStart>

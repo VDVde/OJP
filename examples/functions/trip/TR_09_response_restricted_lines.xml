@@ -38,7 +38,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<PersonalMode>self</PersonalMode>
+									<PersonalModeOfOperation>self</PersonalModeOfOperation>
 									<IndividualMode>walk</IndividualMode>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:02:00Z</TimeWindowStart>
@@ -310,7 +310,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<PersonalMode>self</PersonalMode>
+									<PersonalModeOfOperation>self</PersonalModeOfOperation>
 									<IndividualMode>walk</IndividualMode>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:24:00Z</TimeWindowStart>
