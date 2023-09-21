@@ -73,9 +73,18 @@
 									<Order>15</Order>
 								</LegAlight>
 								<Service>
+									<OperatingDayRef>2023-08-13</OperatingDayRef>
 									<JourneyRef>1231231231:1231:123123</JourneyRef>
-									<PrivateMode>schoolBus</PrivateMode>
+									<siri:LineRef>ch:2:Line:231:121</siri:LineRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>schoolBus</siri:BusSubmode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>St. Gallen School bus</Text>
+									</PublishedServiceName>
 									<siri:VehicleRef>13112:441</siri:VehicleRef>
+									<Restricted>true</Restricted>
 								</Service>
 								<Extension/>
 							</TimedLeg>

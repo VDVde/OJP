@@ -31,7 +31,7 @@
 						</Name>
 					</PlaceRef>
 					<IndividualTransportOptions>
-						<Mode>scooter</Mode>
+						<IndividualMode>scooter</IndividualMode>
 						<!-- V1.1, PR #127 - additionally available private modes -->
 						<MaxDistance>5000</MaxDistance>
 						<MaxDuration>PT1H</MaxDuration>
