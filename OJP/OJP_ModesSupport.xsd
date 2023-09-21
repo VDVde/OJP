@@ -209,8 +209,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	
-
 	<xs:annotation>
 		<xs:documentation>========================================== Conventional Modes of Operation ==========================================</xs:documentation>
 	</xs:annotation>	
