@@ -122,7 +122,7 @@
 				<xs:sequence>
 					<xs:element name="ItModesToCover" type="PersonalModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.XXXTODO </xs:documentation>
+							<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
