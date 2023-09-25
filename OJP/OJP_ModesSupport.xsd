@@ -384,7 +384,7 @@
 				<xs:annotation>
 					<xs:documentation>List of alternative mobility offers to include/exclude.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

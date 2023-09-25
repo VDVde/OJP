@@ -65,7 +65,7 @@
 					<NoRamp>true</NoRamp>
 					<NoSight>false</NoSight>
 					<NoTravelator>false</NoTravelator>
-					<LevelEntranceOrBoardingAid>false</LevelEntranceOrBoardingAid>				
+					<LevelEntranceOrBoardingAid>false</LevelEntranceOrBoardingAid>
 					<BikeTransport>true</BikeTransport>
 					<NumberOfResults>10</NumberOfResults>
 					<TimeWindow>PT60M</TimeWindow>
@@ -80,7 +80,7 @@
 					<IncludeFare>true</IncludeFare>
 					<IncludeOperatingDays>true</IncludeOperatingDays>
 					<HikingProfile>difficult</HikingProfile>
-					<CyclingProfile>fast</CyclingProfile>					
+					<CyclingProfile>fast</CyclingProfile>
 					<Extension>
 						<ExtensionDemo/>
 					</Extension>
