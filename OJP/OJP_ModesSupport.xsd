@@ -365,7 +365,7 @@
 			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="PrivateModeFilterStructure">
+	<xs:complexType name="PersonalModeFilterStructure">
 		<xs:annotation>
 			<xs:documentation>List of private mobility offers to include or exclude.</xs:documentation>
 		</xs:annotation>

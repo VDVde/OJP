@@ -90,7 +90,7 @@
 					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateModeFilter" type="PrivateModeFilterStructure" minOccurs="0">
+			<xs:element name="PersonalModeFilter" type="PersonalModeFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Private mobility options to include/exclude.</xs:documentation>
 				</xs:annotation>
