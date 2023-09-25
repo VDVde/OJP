@@ -365,9 +365,9 @@
 			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="PersonalModeFilterStructure">
+	<xs:complexType name="PersonalAndAlternativeModeFilterStructure">
 		<xs:annotation>
-			<xs:documentation>List of private mobility offers to include or exclude.</xs:documentation>
+			<xs:documentation>List of personal and alternative mobility offers to include or exclude.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
@@ -377,9 +377,14 @@
 			</xs:element>
 			<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>List of private mobility offers to include/exclude.</xs:documentation>
+					<xs:documentation>List of personal mobility offers to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AlternativeModeOfOperation" type="AlternativeModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of alternative mobility offers to include/exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
