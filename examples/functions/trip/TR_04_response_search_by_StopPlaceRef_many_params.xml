@@ -58,6 +58,17 @@
 										<TimetabledTime>2020-09-30T10:03:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>1</Order>
+									<NoAlightingAtStop>true</NoAlightingAtStop>
+									<siri:ExpectedDepartureCapacities>
+										<siri:WheelchairPlaceCapacity>2</siri:WheelchairPlaceCapacity>
+										<siri:BicycleRackCapacity>4</siri:BicycleRackCapacity>
+									</siri:ExpectedDepartureCapacities>
+									<Attribute>
+										<Text>
+											<Text>FULL</Text>
+										</Text>
+										<Code>SwissPRMMobilityCode</Code>
+									</Attribute>
 								</LegBoard>
 								<LegAlight>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
