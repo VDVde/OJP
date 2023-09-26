@@ -414,7 +414,7 @@
 				<xs:annotation>
 					<xs:documentation>Note or attributes.</xs:documentation>
 				</xs:annotation>
-			</xs:element>					
+			</xs:element>
 			<xs:element name="SituationFullRefs" type="SituationRefList" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>A list of references to SITUATIONs.</xs:documentation>
