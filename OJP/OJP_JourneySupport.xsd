@@ -229,7 +229,7 @@
 			<xs:group ref="ScheduledJourneyGroup"/>
 		</xs:sequence>
 	</xs:group>
-<!--	<xs:group name="PrivateServiceGroup">
+	<!--	<xs:group name="PrivateServiceGroup">
 		<xs:annotation>
 			<xs:documentation>Specialized service operated in a restricted way, e.g. a school bus, corporate shuttle, or other transportation for a (usually) closed community.</xs:documentation>
 		</xs:annotation>
@@ -283,7 +283,7 @@
 		<xs:sequence>
 			<xs:choice>
 				<xs:group ref="DatedJourneyGroup"/>
-<!--				<xs:group ref="PrivateServiceGroup"/>-->
+				<!--				<xs:group ref="PrivateServiceGroup"/>-->
 			</xs:choice>
 			<xs:group ref="siri:JourneyFormationGroup">
 				<xs:annotation>
