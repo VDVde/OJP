@@ -288,7 +288,7 @@
 			<xs:documentation>Service that provides shared vehicles (The Transmodel MODE OF OPERATION is VEHICLE SHARING; other related Transmodel concepts: ALTERNATIVE MODE LEG.SINGLE JOURNEY.COMMON.VEHICLE SERVICE.TRANSPORT ORGANISATION).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Mode" type="IndividualModeEnumeration"/>
+			<xs:element name="Mode" type="IndividualModesEnumeration"/>
 			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
 				<xs:annotation>
 					<xs:documentation>Identifier of the operator of the sharing service </xs:documentation>

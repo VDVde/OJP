@@ -527,7 +527,7 @@
 			</xs:choice>
 			<xs:choice>
 				<xs:group ref="DatedJourneyGroup" minOccurs="0"/>
-				<xs:element name="IndividualMode" type="IndividualModeEnumeration"/>
+				<xs:element name="IndividualMode" type="IndividualModesEnumeration"/>
 				<xs:element name="AlternativeService" type="AlternativeServiceStructure" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Shared mobility offer.</xs:documentation>
