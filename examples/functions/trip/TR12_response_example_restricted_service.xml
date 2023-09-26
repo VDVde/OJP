@@ -123,12 +123,31 @@
 									<Order>8</Order>
 								</LegAlight>
 								<Service>
-									<JourneyRef>96120:1:R:j23:109:1064</JourneyRef>
-									<PersonalModeOfOperation>otherOwned</PersonalModeOfOperation>
-									<siri:VehicleRef>ch:4:13123:1231</siri:VehicleRef>
-									<Description>School bus</Description>
-									<OrganisationRef>ch:1:Operator:800</OrganisationRef>
-									<ReservationNeeded>none</ReservationNeeded>
+									<ConventionalModeOfOperation>flexibleArea</ConventionalModeOfOperation>
+									<OperatingDayRef>2023-09-13</OperatingDayRef>
+									<siri:VehicleRef>ch:1:800:1231</siri:VehicleRef>
+									<JourneyRef>ch:800:1231-123123-123568</JourneyRef>
+									<PublicCode>Publicar831</PublicCode>
+									<siri:LineRef>ch:1:Line:P:831</siri:LineRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>demandAndResponseBus</siri:BusSubmode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>PubliCar 831</Text>
+									</PublishedServiceName>
+									<Restricted>true</Restricted>
+									<RestrictionNote>
+										<Text>Only for elderly.</Text>
+									</RestrictionNote>
+									<BookingArrangements>
+										<BookingArrangement>
+											<BookingMethods>
+												<BookingMethod>callOffice</BookingMethod>
+											</BookingMethods>
+										</BookingArrangement>
+									</BookingArrangements>
+								
 								</Service>
 							</TimedLeg>
 						</Leg>
