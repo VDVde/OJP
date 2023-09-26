@@ -34,7 +34,7 @@
 						<MinDuration>PT1M</MinDuration>
 						<Speed>150</Speed>
 						<AdditionalTime>PT3M</AdditionalTime>
-					</IndividualTransportOptions>					
+					</IndividualTransportOptions>
 				</Origin>
 				<Destination>
 					<PlaceRef>
