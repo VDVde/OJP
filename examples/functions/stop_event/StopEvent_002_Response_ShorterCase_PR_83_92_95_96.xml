@@ -31,6 +31,17 @@
 									<TimetabledTime>2021-08-17T08:25:00Z</TimetabledTime>
 								</ServiceDeparture>
 								<Order>5</Order>
+								<siri:ExpectedDepartureOccupancy>
+									<siri:OccupancyLevel>fewSeatsAvailable</siri:OccupancyLevel>
+									<siri:TotalNumberOfReservedSeats>10</siri:TotalNumberOfReservedSeats>
+								</siri:ExpectedDepartureOccupancy>
+								<Attribute>
+									<Text>
+										<Text>Boarding</Text>
+									</Text>
+									<Code>PRM</Code>
+									<siri:AssistanceFacility>boardingAssistance</siri:AssistanceFacility>
+								</Attribute>
 							</CallAtStop>
 						</ThisCall>
 						<Service>
