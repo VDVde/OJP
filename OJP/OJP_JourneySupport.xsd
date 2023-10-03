@@ -521,7 +521,7 @@
 				</xs:element>
 				<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0" default="self">
 					<xs:annotation>
-						<xs:documentation>Personaltransport options.</xs:documentation>
+						<xs:documentation>Personal transport options.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
