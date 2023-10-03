@@ -292,7 +292,7 @@
 			<xs:group ref="AlternativeServiceUsageGroup" minOccurs="0"/>
 			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Link to web page providing more details on service.</xs:documentation>
+					<xs:documentation>Link to the web page providing more details on the service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
