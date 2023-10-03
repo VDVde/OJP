@@ -229,35 +229,6 @@
 			<xs:group ref="ScheduledJourneyGroup"/>
 		</xs:sequence>
 	</xs:group>
-	<!--	<xs:group name="PrivateServiceGroup">
-		<xs:annotation>
-			<xs:documentation>Specialized service operated in a restricted way, e.g. a school bus, corporate shuttle, or other transportation for a (usually) closed community.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element ref="JourneyRef" minOccurs="0"/>
-			<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration">
-				<xs:annotation>
-					<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element ref="siri:VehicleRef" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be the VEHICLE Id.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Description" type="siri:NaturalLanguageStringStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Description of the private service.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OrganisationRef" type="siri:OperatorRefStructure" minOccurs="0"/>
-			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Link to web page providing more details on service.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:group> -->
 	<xs:simpleType name="ReservationNeededEnumeration">
 		<xs:annotation>
 			<xs:documentation>Possible types of reservation needed for services.</xs:documentation>
@@ -283,7 +254,6 @@
 		<xs:sequence>
 			<xs:choice>
 				<xs:group ref="DatedJourneyGroup"/>
-				<!--				<xs:group ref="PrivateServiceGroup"/>-->
 			</xs:choice>
 			<xs:group ref="siri:JourneyFormationGroup">
 				<xs:annotation>
