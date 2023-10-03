@@ -423,11 +423,10 @@
 								</LegEnd>
 								<Service>
 									<AlternativeModeOfOperation>pooling</AlternativeModeOfOperation>
+									<PersonalMode>car</PersonalMode>
 									<AlternativeService>
-										<PersonalMode>car</PersonalMode>
 										<OperatorRef>ch:1:Operator:Mobility</OperatorRef>
 										<Name>Mobility</Name>
-										<SharingModel>multipleStationBased</SharingModel>
 										<TimeBufferBefore>PT30M</TimeBufferBefore>
 										<TimeBufferAfter>PT30M</TimeBufferAfter>
 										<InfoUrl>

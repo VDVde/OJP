@@ -162,8 +162,8 @@
 								</LegEnd>
 								<Service>
 									<AlternativeModeOfOperation>hotelShuttle</AlternativeModeOfOperation>
+									<PersonalMode>car</PersonalMode>
 									<AlternativeService>
-										<PersonalMode>car</PersonalMode>
 										<OperatorRef>ch:1:sboid:12391912</OperatorRef>
 									</AlternativeService>
 									<BookingArrangements>

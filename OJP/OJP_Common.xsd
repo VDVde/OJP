@@ -256,16 +256,6 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Sharing Services ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:simpleType name="SharingModelEnumeration">
-		<xs:annotation>
-			<xs:documentation>Sharing service loan and return scheme.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:NMTOKEN">
-			<xs:enumeration value="singleStationBased"/>
-			<xs:enumeration value="multipleStationBased"/>
-			<xs:enumeration value="nonStationBased"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:group name="AlternativeServiceUsageGroup">
 		<xs:annotation>
 			<xs:documentation>Usage parameters of a sharing service.</xs:documentation>
@@ -288,7 +278,7 @@
 			<xs:documentation>Service that provides shared vehicles (The Transmodel MODE OF OPERATION is VEHICLE SHARING; other related Transmodel concepts: ALTERNATIVE MODE LEG.SINGLE JOURNEY.COMMON.VEHICLE SERVICE.TRANSPORT ORGANISATION).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PersonalMode" type="PersonalModesEnumeration"/>
+			<!-- the PERSONAL MODE on which the Service bases is already defined in the Service element -->
 			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
 				<xs:annotation>
 					<xs:documentation>Identifier of the operator of the sharing service </xs:documentation>
@@ -297,11 +287,6 @@
 			<xs:element name="Name" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Public name of the service.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SharingModel" type="SharingModelEnumeration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Type of the sharing scheme.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="AlternativeServiceUsageGroup" minOccurs="0"/>

@@ -56,12 +56,22 @@
 			</xs:enumeration>
 			<xs:enumeration value="stationLessSharing">
 				<xs:annotation>
-					<xs:documentation>ALTERNATIVE MODE OF OPERATION. station less sharing</xs:documentation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. station less sharing.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="stationBasedSharing">
 				<xs:annotation>
-					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Based on fix stations (VEHICLE MEETING POINT)</xs:documentation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Based on fix stations (VEHICLE MEETING POINT).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="singleStationBasedSharing">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Based on single fix station (VEHICLE MEETING POINT).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="multipleStationBasedSharing">
+				<xs:annotation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Based on multiple fix stations (VEHICLE MEETING POINT).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="peerToPeerSharing">
