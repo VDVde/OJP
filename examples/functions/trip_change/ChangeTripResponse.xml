@@ -160,7 +160,7 @@
 								</LegEnd>
 								<Service>
 									<AlternativeModeOfOperation>commuterPooling</AlternativeModeOfOperation>
-									<PersonalMode>car</PersonalMode>									
+									<PersonalMode>car</PersonalMode>
 									<AlternativeService>
 										<OperatorRef>ch:1:sboid:12391912</OperatorRef>
 									</AlternativeService>
