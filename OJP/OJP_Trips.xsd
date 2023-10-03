@@ -120,7 +120,7 @@
 					</xs:annotation>
 				</xs:element>
 				<xs:sequence>
-					<xs:element name="ItModeToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="ItModeToCover" type="PersonalModesEnumeration" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
 						</xs:annotation>
@@ -157,7 +157,7 @@
 			</xs:element>
 			<xs:element name="WalkSpeed" type="OpenPercentType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Deviation from average walk speed in percent. 100% percent is average speed. Less than 100 % slower, Greater than 150% faster.</xs:documentation>
+					<xs:documentation>Deviation from average walking speed in percent. 100% percent is average speed. Less than 100 % slower, Greater than 150% faster.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AdditionalTransferTime" type="xs:duration" minOccurs="0">
@@ -754,7 +754,7 @@
 			<xs:group ref="TimeWindowGroup"/>
 			<xs:element name="Duration" type="xs:duration">
 				<xs:annotation>
-					<xs:documentation>Duration of this leg according to user preferences like walk speed.</xs:documentation>
+					<xs:documentation>Duration of this leg according to user preferences like walking speed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LegDescription" type="InternationalTextStructure" minOccurs="0">

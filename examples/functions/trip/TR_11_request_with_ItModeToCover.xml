@@ -18,7 +18,7 @@
 					</PlaceRef>
 					<DepArrTime>2020-12-01T12:00:00Z</DepArrTime>
 					<IndividualTransportOptions>
-						<IndividualMode>motorcycle</IndividualMode>
+						<PersonalMode>motorcycle</PersonalMode>
 						<MaxDistance>240</MaxDistance>
 						<MaxDuration>PT20M</MaxDuration>
 						<MinDistance>100</MinDistance>
@@ -27,7 +27,7 @@
 						<AdditionalTime>PT3M</AdditionalTime>
 					</IndividualTransportOptions>
 					<IndividualTransportOptions>
-						<IndividualMode>car</IndividualMode>
+						<PersonalMode>car</PersonalMode>
 						<MaxDistance>240</MaxDistance>
 						<MaxDuration>PT20M</MaxDuration>
 						<MinDistance>100</MinDistance>

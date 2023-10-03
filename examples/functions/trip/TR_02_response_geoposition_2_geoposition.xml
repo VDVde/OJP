@@ -77,7 +77,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2020-12-01T11:55:00Z</TimeWindowStart>
 								<TimeWindowEnd>2020-12-01T12:00:00Z</TimeWindowEnd>
@@ -622,7 +622,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2020-12-01T12:29:00Z</TimeWindowStart>
 								<TimeWindowEnd>2020-12-01T12:36:00Z</TimeWindowEnd>
@@ -786,7 +786,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2020-12-01T11:57:00Z</TimeWindowStart>
 								<TimeWindowEnd>2020-12-01T12:02:00Z</TimeWindowEnd>
@@ -1474,7 +1474,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2020-12-01T12:29:00Z</TimeWindowStart>
 								<TimeWindowEnd>2020-12-01T12:36:00Z</TimeWindowEnd>

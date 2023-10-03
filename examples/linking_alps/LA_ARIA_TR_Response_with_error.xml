@@ -114,7 +114,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-05-01T18:10:00+02:00</TimeWindowStart>
 								<TimeWindowEnd>2023-05-01T18:10:00+02:00</TimeWindowEnd>
@@ -240,7 +240,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-05-01T18:47:00+02:00</TimeWindowStart>
 								<TimeWindowEnd>2023-05-01T18:47:00+02:00</TimeWindowEnd>

@@ -169,7 +169,7 @@
 					<xs:documentation>Mode of individual transport.	When mode self-drive-car is used the connection to another mode will need a parking space for the car. Thus, this mode is a generalisation of all park and ride use cases. The mode others-drive-car, however, only needs a place to let a person be set down from a car.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IndividualMode" type="IndividualModesEnumeration">
+			<xs:element name="PersonalMode" type="PersonalModesEnumeration">
 				<xs:annotation>
 					<xs:documentation>Mode </xs:documentation>
 				</xs:annotation>
@@ -287,12 +287,12 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Individual Transport Modes ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:simpleType name="IndividualModesEnumeration">
+	<xs:simpleType name="PersonalModesEnumeration">
 		<xs:annotation>
 			<xs:documentation>TYPE OF MODE than can be used in an individual context.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="walk"/>
+			<xs:enumeration value="foot"/>
 			<xs:enumeration value="cycle"/>
 			<xs:enumeration value="car"/>
 			<xs:enumeration value="motorcycle"/>

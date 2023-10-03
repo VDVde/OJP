@@ -3000,7 +3000,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-06-17T12:14:00+02:00</TimeWindowStart>
 								<TimeWindowEnd>2023-06-17T12:14:00+02:00</TimeWindowEnd>
@@ -3522,7 +3522,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-06-17T13:03:00+02:00</TimeWindowStart>
 								<TimeWindowEnd>2023-06-17T13:07:00+02:00</TimeWindowEnd>
@@ -3638,7 +3638,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-06-17T15:11:00+02:00</TimeWindowStart>
 								<TimeWindowEnd>2023-06-17T15:15:00+02:00</TimeWindowEnd>
@@ -3768,7 +3768,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-06-17T16:24:00+02:00</TimeWindowStart>
 								<TimeWindowEnd>2023-06-17T16:33:00+02:00</TimeWindowEnd>
@@ -3966,7 +3966,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-06-17T16:52:00+02:00</TimeWindowStart>
 								<TimeWindowEnd>2023-06-17T16:53:00+02:00</TimeWindowEnd>

@@ -39,7 +39,7 @@
 								</LegEnd>
 								<Service>
 									<PersonalModeOfOperation>self</PersonalModeOfOperation>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:02:00Z</TimeWindowStart>
 								<TimeWindowEnd>2023-09-13T14:11:00Z</TimeWindowEnd>
@@ -311,7 +311,7 @@
 								</LegEnd>
 								<Service>
 									<PersonalModeOfOperation>self</PersonalModeOfOperation>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:24:00Z</TimeWindowStart>
 								<TimeWindowEnd>2023-09-13T14:33:00Z</TimeWindowEnd>
@@ -424,7 +424,7 @@
 								<Service>
 									<AlternativeModeOfOperation>pooling</AlternativeModeOfOperation>
 									<AlternativeService>
-										<Mode>car</Mode>
+										<PersonalMode>car</PersonalMode>
 										<OperatorRef>ch:1:Operator:Mobility</OperatorRef>
 										<Name>Mobility</Name>
 										<SharingModel>multipleStationBased</SharingModel>

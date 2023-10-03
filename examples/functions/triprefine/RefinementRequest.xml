@@ -163,7 +163,7 @@
 								<Service>
 									<AlternativeModeOfOperation>hotelShuttle</AlternativeModeOfOperation>
 									<AlternativeService>
-										<Mode>car</Mode>
+										<PersonalMode>car</PersonalMode>
 										<OperatorRef>ch:1:sboid:12391912</OperatorRef>
 									</AlternativeService>
 									<BookingArrangements>

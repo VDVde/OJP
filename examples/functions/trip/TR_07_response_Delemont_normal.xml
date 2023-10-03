@@ -37,7 +37,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:02:00Z</TimeWindowStart>
 								<TimeWindowEnd>2023-09-13T14:11:00Z</TimeWindowEnd>
@@ -308,7 +308,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-09-13T14:24:00Z</TimeWindowStart>
 								<TimeWindowEnd>2023-09-13T14:33:00Z</TimeWindowEnd>
