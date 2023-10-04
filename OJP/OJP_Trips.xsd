@@ -818,11 +818,6 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup"/>
-			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Note or attribute.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="LegAlightStructure">
@@ -852,11 +847,6 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup"/>
-			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Note or attribute.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="LegIntermediateStructure">
@@ -881,11 +871,6 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup"/>
-			<xs:element name="Attribute" type="GeneralAttributeStructure" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Note or attribute.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PathGuidanceStructure">
