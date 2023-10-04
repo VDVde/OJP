@@ -449,7 +449,11 @@
 					<xs:documentation>Internal code of the attribute. Can be used for detection of double occurrences.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:group ref="AllFacilitiesGroup"/>
+			<xs:element	name="Facility" type="siri:AllFacilitiesFeatureStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Facilities associated with this attribute.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Mandatory" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Defines whether the attribute has to be shown to the user.</xs:documentation>
