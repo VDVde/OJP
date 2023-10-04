@@ -40,7 +40,9 @@
 										<Text>Boarding</Text>
 									</Text>
 									<Code>PRM</Code>
-									<siri:AssistanceFacility>boardingAssistance</siri:AssistanceFacility>
+									<Facility>
+										<siri:AssistanceFacility>boardingAssistance</siri:AssistanceFacility>
+									</Facility>
 								</Attribute>
 							</CallAtStop>
 						</ThisCall>

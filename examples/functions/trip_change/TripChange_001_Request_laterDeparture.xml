@@ -91,15 +91,21 @@
 											<Text xml:lang="de">Businesszone in 1. Klasse</Text>
 										</Text>
 										<Code>A__BZ</Code>
-										<siri:FareClassFacility>firstClass</siri:FareClassFacility>
-										<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
+										<Facility>
+											<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
+										</Facility>
+										<Facility>
+											<siri:FareClassFacility>firstClass</siri:FareClassFacility>
+										</Facility>
 									</Attribute>
 									<Attribute>
 										<Text>
 											<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
 										</Text>
 										<Code>A__RZ</Code>
-										<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
+										<Facility>
+											<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
+										</Facility>
 									</Attribute>
 									<Attribute>
 										<Text>
@@ -118,7 +124,9 @@
 											<Text xml:lang="de">Restaurant</Text>
 										</Text>
 										<Code>A__WR</Code>
-										<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+										<Facility>
+											<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+										</Facility>
 									</Attribute>
 									<Attribute>
 										<Text>

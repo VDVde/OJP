@@ -296,8 +296,12 @@
 											<Text xml:lang="de">Businesszone in 1. Klasse</Text>
 										</Text>
 										<Code>A__BZ</Code>
-										<siri:FareClassFacility>firstClass</siri:FareClassFacility>
-										<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
+										<Facility>
+											<siri:FareClassFacility>firstClass</siri:FareClassFacility>
+										</Facility>
+										<Facility>
+											<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
+										</Facility>
 									</Attribute>
 									<Attribute>
 										<Text>
@@ -310,7 +314,9 @@
 											<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
 										</Text>
 										<Code>A__RZ</Code>
-										<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
+										<Facility>
+											<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
+										</Facility>
 									</Attribute>
 									<Attribute>
 										<Text>

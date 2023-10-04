@@ -82,7 +82,9 @@
 											<Text xml:lang="de">Restaurant</Text>
 										</Text>
 										<Code>A__WR</Code>
-										<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+										<Facility>
+											<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+										</Facility>
 									</Attribute>
 									<OriginText>
 										<Text>St. Petersinsel Nord</Text>
