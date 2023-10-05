@@ -221,11 +221,6 @@
 					<xs:documentation>Reference to an Operating Day.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="siri:VehicleRef" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be the VEHICLE Id.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:group ref="ScheduledJourneyGroup"/>
 		</xs:sequence>
 	</xs:group>
