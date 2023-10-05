@@ -3073,7 +3073,6 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
-									<siri:VehicleRef>3807</siri:VehicleRef>
 									<JourneyRef>MXwyOTk2OTh8MHw4NnwxNzA2MjAyMw--</JourneyRef>
 									<siri:LineRef>96</siri:LineRef>
 									<siri:DirectionRef>2</siri:DirectionRef>
@@ -3083,6 +3082,7 @@
 									<PublishedServiceName>
 										<Text>96</Text>
 									</PublishedServiceName>
+									<siri:VehicleRef>3807</siri:VehicleRef>									
 									<OperatorRefs>
 										<OperatorRef>ViP</OperatorRef>
 									</OperatorRefs>
@@ -3484,7 +3484,6 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
-									<siri:VehicleRef>6359</siri:VehicleRef>
 									<JourneyRef>MXwzMDMyNTZ8MXw4NnwxNzA2MjAyMw--</JourneyRef>
 									<siri:LineRef>638</siri:LineRef>
 									<siri:DirectionRef>2</siri:DirectionRef>
@@ -3494,6 +3493,7 @@
 									<PublishedServiceName>
 										<Text>638</Text>
 									</PublishedServiceName>
+									<siri:VehicleRef>6359</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>ViP</OperatorRef>
 									</OperatorRefs>
@@ -3598,7 +3598,6 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
-									<siri:VehicleRef>176</siri:VehicleRef>
 									<JourneyRef>MXw3NzQyMzh8MHw4NnwxNzA2MjAyMw--</JourneyRef>
 									<siri:LineRef>176</siri:LineRef>
 									<siri:DirectionRef>2</siri:DirectionRef>
@@ -3608,6 +3607,7 @@
 									<PublishedServiceName>
 										<Text>EC 176</Text>
 									</PublishedServiceName>
+									<siri:VehicleRef>176</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>D4</OperatorRef>
 									</OperatorRefs>
@@ -3728,7 +3728,6 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
-									<siri:VehicleRef>589</siri:VehicleRef>
 									<JourneyRef>MXw1MTc1MTR8MXw4NnwxNzA2MjAyMw--</JourneyRef>
 									<siri:LineRef>RE4</siri:LineRef>
 									<siri:DirectionRef>1</siri:DirectionRef>
@@ -3738,6 +3737,7 @@
 									<PublishedServiceName>
 										<Text>RE4</Text>
 									</PublishedServiceName>
+									<siri:VehicleRef>589</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>ME2</OperatorRef>
 									</OperatorRefs>
@@ -3928,7 +3928,6 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-17</OperatingDayRef>
-									<siri:VehicleRef>11262</siri:VehicleRef>
 									<JourneyRef>MXw1NjU3MTV8MjF8ODZ8MTcwNjIwMjM-</JourneyRef>
 									<siri:LineRef>6</siri:LineRef>
 									<siri:DirectionRef>2</siri:DirectionRef>
@@ -3938,6 +3937,7 @@
 									<PublishedServiceName>
 										<Text>6</Text>
 									</PublishedServiceName>
+									<siri:VehicleRef>11262</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>BSA</OperatorRef>
 									</OperatorRefs>
