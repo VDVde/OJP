@@ -52,7 +52,7 @@
 									<PublishedServiceName>
 										<Text>Publicar</Text>
 									</PublishedServiceName>
-									<siri:VehicleRef>ch:1:publicar:delement:1_1231</siri:VehicleRef>								
+									<siri:VehicleRef>ch:1:publicar:delement:1_1231</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>ch:1:Organisation:Postauto</OperatorRef>
 									</OperatorRefs>

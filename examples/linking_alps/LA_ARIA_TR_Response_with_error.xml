@@ -182,7 +182,7 @@
 									<PublishedServiceName>
 										<Text>EC 47_46</Text>
 									</PublishedServiceName>
-									<siri:VehicleRef>462</siri:VehicleRef>									
+									<siri:VehicleRef>462</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>TRE</OperatorRef>
 									</OperatorRefs>

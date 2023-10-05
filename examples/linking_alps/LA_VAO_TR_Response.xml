@@ -408,7 +408,7 @@
 									<PublishedServiceName>
 										<Text>RJ 797</Text>
 									</PublishedServiceName>
-									<siri:VehicleRef>797</siri:VehicleRef>									
+									<siri:VehicleRef>797</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>01</OperatorRef>
 									</OperatorRefs>
@@ -479,7 +479,7 @@
 									<PublishedServiceName>
 										<Text>RJX 168</Text>
 									</PublishedServiceName>
-									<siri:VehicleRef>168</siri:VehicleRef>									
+									<siri:VehicleRef>168</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>01</OperatorRef>
 									</OperatorRefs>

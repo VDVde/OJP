@@ -318,7 +318,7 @@
 							<PublishedServiceName>
 								<Text>92</Text>
 							</PublishedServiceName>
-							<siri:VehicleRef>3181</siri:VehicleRef>							
+							<siri:VehicleRef>3181</siri:VehicleRef>
 							<OperatorRefs>
 								<OperatorRef>ViP</OperatorRef>
 							</OperatorRefs>

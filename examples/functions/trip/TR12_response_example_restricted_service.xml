@@ -135,7 +135,7 @@
 									<PublishedServiceName>
 										<Text>PubliCar 831</Text>
 									</PublishedServiceName>
-									<siri:VehicleRef>ch:1:800:1231</siri:VehicleRef>								
+									<siri:VehicleRef>ch:1:800:1231</siri:VehicleRef>
 									<Restricted>true</Restricted>
 									<RestrictionNote>
 										<Text>Only for elderly.</Text>

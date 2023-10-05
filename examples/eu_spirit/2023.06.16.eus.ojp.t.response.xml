@@ -1567,7 +1567,7 @@
 									<PublishedServiceName>
 										<Text>92</Text>
 									</PublishedServiceName>
-									<siri:VehicleRef>3178</siri:VehicleRef>									
+									<siri:VehicleRef>3178</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>ViP</OperatorRef>
 									</OperatorRefs>
@@ -1752,7 +1752,7 @@
 									<PublishedServiceName>
 										<Text>RE1</Text>
 									</PublishedServiceName>
-									<siri:VehicleRef>333</siri:VehicleRef>									
+									<siri:VehicleRef>333</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>ODE</OperatorRef>
 									</OperatorRefs>

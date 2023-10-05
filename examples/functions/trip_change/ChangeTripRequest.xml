@@ -173,7 +173,7 @@
 									<PublishedServiceName>
 										<Text>Mybuxi</Text>
 									</PublishedServiceName>
-									<siri:VehicleRef>12391923-1123</siri:VehicleRef>									
+									<siri:VehicleRef>12391923-1123</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>ch:2:sboid:mybuxi</OperatorRef>
 									</OperatorRefs>
