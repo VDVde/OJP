@@ -673,9 +673,9 @@
 			<xs:documentation>[a specialised type of NAVIGATION PATH in TMv6] description of a LEG which links other LEGs of a TRIP where a TRANSFER between different LOCATIONs is required</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TransferType" type="TransferTypeEnumeration">
+			<xs:element name="TransferType" type="TransferTypeEnumeration" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>TYPE that is used for this interchange between public services (TYPE OF TRANSFER, but also ACCESS MODE and PERSONAL MODE as far as a TRANSFER is concerned).</xs:documentation>
+					<xs:documentation>TYPE that is used for this interchange between public services (TYPE OF TRANSFER, but also ACCESS MODE and PERSONAL MODE as far as a TRANSFER is concerned). In some constellations multiple TransferType are possible.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LegStart" type="PlaceRefStructure">
