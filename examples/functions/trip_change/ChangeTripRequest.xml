@@ -164,7 +164,6 @@
 								<Service>
 									<AlternativeModeOfOperation>flexibleArea</AlternativeModeOfOperation>
 									<OperatingDayRef>2023-02-18</OperatingDayRef>
-									<siri:VehicleRef>12391923-1123</siri:VehicleRef>
 									<JourneyRef>1230.1.1.231</JourneyRef>
 									<siri:LineRef>mybux1:001</siri:LineRef>
 									<Mode>
@@ -174,6 +173,7 @@
 									<PublishedServiceName>
 										<Text>Mybuxi</Text>
 									</PublishedServiceName>
+									<siri:VehicleRef>12391923-1123</siri:VehicleRef>									
 									<OperatorRefs>
 										<OperatorRef>ch:2:sboid:mybuxi</OperatorRef>
 									</OperatorRefs>
