@@ -269,19 +269,71 @@
 			<xs:documentation>TYPE OF TRANSFER. It is a mix between MODE information, MODE OF OPERATION information and a more stringent TYPE OF TRANSFER.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="walk"/>
-			<xs:enumeration value="shuttle"/>
-			<xs:enumeration value="taxi"/>
-			<xs:enumeration value="protectedConnection"/>
-			<xs:enumeration value="guaranteedConnection"/>
-			<xs:enumeration value="remainInVehicle"/>
-			<xs:enumeration value="changeWithinVehicle"/>
-			<xs:enumeration value="checkIn"/>
-			<xs:enumeration value="checkOut"/>
-			<xs:enumeration value="parkAndRide"/>
-			<xs:enumeration value="bikeAndRide"/>
-			<xs:enumeration value="carHire"/>
-			<xs:enumeration value="bikeHire"/>
+			<xs:enumeration value="walk">
+				<xs:annotation>
+					<xs:documentation>The "normal" TransferType. Indicates that the traveler walks to the next LEG.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="shuttle">
+				<xs:annotation>
+					<xs:documentation>Indicates that a shuttle service is used for the TRANSFER LEG. E.g. between gates in an airport.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="taxi">
+				<xs:annotation>
+					<xs:documentation>Indicates that the trasfer is done by taxi. This type should be avoided and the taxi leg should be modeled as a ContinuousLeg.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="protectedConnection">
+				<xs:annotation>
+					<xs:documentation>Indicates that the connection to the next leg is specially monitored and usually kept (depending on agreements between the operators). Usually is used in combination with walk.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="guaranteedConnection">
+				<xs:annotation>
+					<xs:documentation>The connection is guaranteed. This doesn't apply very often, but e.g. a bus has to bring  people from the last train to a different destination. Then it will not depart, before the train has arrived and the passengers have changed. In some cases guaranteedConnection might be use with less strictness.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="remainInVehicle">
+				<xs:annotation>
+					<xs:documentation>The next leg is in the same VEHICLE and there is no need to change it.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="changeWithinVehicle">
+				<xs:annotation>
+					<xs:documentation>If namenly trains are split, it might be necessary to be in the right part. This is indicated with this value.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="checkIn">
+				<xs:annotation>
+					<xs:documentation>Means that a checkin operation is necessary. This usually results in a longer time that can't be justified by the length of the transfer leg.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="checkOut">
+				<xs:annotation>
+					<xs:documentation>Means that a checkout operation is necessary. This usually results in a longer time that can't be justified by the length of the transfer leg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="parkAndRide">
+				<xs:annotation>
+					<xs:documentation>Also here the transfer leg may be longer, because time lost in the PARKING.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="bikeAndRide">
+				<xs:annotation>
+					<xs:documentation>Additional time may be needed to get or stow a bike (e.g. because the BIKE PARKING is at a special place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="carHire">
+				<xs:annotation>
+					<xs:documentation>Time for a car hire is needed.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="bikeHire">
+				<xs:annotation>
+					<xs:documentation>Time for a bike hire is needed.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="other">
 				<xs:annotation>
 					<xs:documentation>Only to be used, when no other type applies.</xs:documentation>
