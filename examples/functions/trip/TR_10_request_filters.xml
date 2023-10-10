@@ -43,13 +43,13 @@
 						<OperatorRef>ch:1:Operator:12</OperatorRef>
 					</OperatorFilter>
 					<ModeOfOperationFilter>
-						<Exclude>true</Exclude>					
+						<Exclude>true</Exclude>
 						<PersonalModeOfOperation>own</PersonalModeOfOperation>
 						<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
-						<AlternativeModeOfOperation>peerToPeerSharing</AlternativeModeOfOperation>		
-						<ConventionalModeOfOperation>pRM</ConventionalModeOfOperation>	
+						<AlternativeModeOfOperation>peerToPeerSharing</AlternativeModeOfOperation>
+						<ConventionalModeOfOperation>pRM</ConventionalModeOfOperation>
 						<ConventionalModeOfOperation>scheduled</ConventionalModeOfOperation>
-					</ModeOfOperationFilter>					
+					</ModeOfOperationFilter>
 					<VehicleFilter>
 						<Exclude>true</Exclude>
 						<VehicleRef>ch:1:Vehicle:11:182318123-11</VehicleRef>
