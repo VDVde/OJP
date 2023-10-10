@@ -31,8 +31,10 @@
 						</Name>
 					</PlaceRef>
 					<IndividualTransportOptions>
-						<PersonalMode>scooter</PersonalMode>
-						<!-- V1.1, PR #127 - additionally available private modes -->
+						<ItModeAndModeOfOperation>
+							<PersonalMode>scooter</PersonalMode>
+							<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
+						</ItModeAndModeOfOperation>
 						<MaxDistance>5000</MaxDistance>
 						<MaxDuration>PT1H</MaxDuration>
 						<Speed>120</Speed>
