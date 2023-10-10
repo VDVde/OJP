@@ -228,7 +228,7 @@
 					<xs:documentation>Defines, whether location/place objects for origin, via, or destination are searched.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PtModes" type="PtModeFilterStructure" minOccurs="0">
+			<xs:element name="Modes" type="ModeFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned location/place objects. Applies only to stops.</xs:documentation>
 				</xs:annotation>
@@ -334,7 +334,7 @@
 					<xs:documentation>Defines, whether the location/place object of this request acts as origin, via or destination point of the passenger journey.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PtModes" type="PtModeFilterStructure" minOccurs="0">
+			<xs:element name="Modes" type="ModeFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Allowed public transport modes. Defines, which public transport modes must be available at the returned location/place objects. Applies only to stops.</xs:documentation>
 				</xs:annotation>

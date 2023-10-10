@@ -357,9 +357,9 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Filters ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:complexType name="PtModeFilterStructure">
+	<xs:complexType name="ModeFilterStructure">
 		<xs:annotation>
-			<xs:documentation>List of public transport modes ([from SIRI] mode of public transport service, corresponds to VEHICLE MODE) to exclude or include.</xs:documentation>
+			<xs:documentation>List of public transport modes ([from SIRI] mode of public transport service, corresponds to PUBLIC TRANSPORT MODE) to exclude or include. Also the necessary filter elements for PERSONAL MODE and MODE OF OPERATION.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
@@ -372,17 +372,22 @@
 					<xs:documentation>List of PT Transport modes to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="PersonalMode" type="PersonalModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of personal transport modes to include/exclude. Those are also used in many of the ALTERNATIVE MODES OF OPERATION.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="PersonalAndAlternativeModeFilterStructure">
+	<xs:complexType name="ModeOfOperationFilterStructure">
 		<xs:annotation>
-			<xs:documentation>List of personal and alternative mobility offers to include or exclude.</xs:documentation>
+			<xs:documentation>List of MODE OF OPERATION filter offers to include or exclude.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether modes in list are to include or exclude from search. Default is exclude.</xs:documentation>
+					<xs:documentation>Whether MODE OF OPERATION in list are to include or exclude from search. Default is exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -395,6 +400,11 @@
 					<xs:documentation>List of alternative mobility offers to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ConventionalModeOfOperation" type="ConventionalModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of conventional mobility offers to include/exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

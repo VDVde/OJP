@@ -75,7 +75,7 @@
 			<xs:documentation>Data to be included/excluded from search, f.e. modes, operators (Transmodel: TRIP REQUEST FILTER).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PtModeFilter" type="PtModeFilterStructure" minOccurs="0">
+			<xs:element name="ModeFilter" type="ModeFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Modes to be considered in trip calculation.</xs:documentation>
 				</xs:annotation>
@@ -90,7 +90,7 @@
 					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PersonalAndAlternativeModeFilter" type="PersonalAndAlternativeModeFilterStructure" minOccurs="0">
+			<xs:element name="ModeOfOperationFilter" type="ModeOfOperationFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Personal mobility options to include/exclude.</xs:documentation>
 				</xs:annotation>

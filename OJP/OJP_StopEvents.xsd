@@ -41,7 +41,7 @@
 			<xs:documentation>Request data filters</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PtModeFilter" type="PtModeFilterStructure" minOccurs="0">
+			<xs:element name="ModeFilter" type="ModeFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Modes (VEHICLE MODE) to be excluded or included in stop events.</xs:documentation>
 				</xs:annotation>

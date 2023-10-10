@@ -24,13 +24,15 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
-					<PtModeFilter>
+					<ModeFilter>
 						<Exclude>false</Exclude>
 						<PtMode>funicular</PtMode>
 						<PtMode>cableway</PtMode>
 						<PtMode>coach</PtMode>
+						<PersonalMode>car</PersonalMode>
+						<PersonalMode>cycle</PersonalMode>
 						<siri:FunicularSubmode>funicular</siri:FunicularSubmode>
-					</PtModeFilter>
+					</ModeFilter>
 					<LineFilter>
 						<Line>
 							<siri:LineRef>ch:1:Line:12:12031</siri:LineRef>
@@ -40,11 +42,14 @@
 						<Exclude>false</Exclude>
 						<OperatorRef>ch:1:Operator:12</OperatorRef>
 					</OperatorFilter>
-					<PersonalAndAlternativeModeFilter>
-						<Exclude>true</Exclude>
+					<ModeOfOperationFilter>
+						<Exclude>true</Exclude>					
 						<PersonalModeOfOperation>own</PersonalModeOfOperation>
-						<AlternativeModeOfOperation>peerToPeerSharing</AlternativeModeOfOperation>
-					</PersonalAndAlternativeModeFilter>
+						<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
+						<AlternativeModeOfOperation>peerToPeerSharing</AlternativeModeOfOperation>		
+						<ConventionalModeOfOperation>pRM</ConventionalModeOfOperation>	
+						<ConventionalModeOfOperation>scheduled</ConventionalModeOfOperation>
+					</ModeOfOperationFilter>					
 					<VehicleFilter>
 						<Exclude>true</Exclude>
 						<VehicleRef>ch:1:Vehicle:11:182318123-11</VehicleRef>
