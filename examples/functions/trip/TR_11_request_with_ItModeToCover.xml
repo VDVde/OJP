@@ -18,7 +18,11 @@
 					</PlaceRef>
 					<DepArrTime>2020-12-01T12:00:00Z</DepArrTime>
 					<IndividualTransportOptions>
-						<PersonalMode>motorcycle</PersonalMode>
+						<ItModeAndModeOfOperation>
+							<PersonalMode>cycle</PersonalMode>
+							<PersonalModeOfOperation>hire</PersonalModeOfOperation>
+							<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
+						</ItModeAndModeOfOperation>
 						<MaxDistance>240</MaxDistance>
 						<MaxDuration>PT20M</MaxDuration>
 						<MinDistance>100</MinDistance>
@@ -27,7 +31,9 @@
 						<AdditionalTime>PT3M</AdditionalTime>
 					</IndividualTransportOptions>
 					<IndividualTransportOptions>
-						<PersonalMode>car</PersonalMode>
+						<ItModeAndModeOfOperation>
+							<PersonalMode>car</PersonalMode>
+						</ItModeAndModeOfOperation>
 						<MaxDistance>240</MaxDistance>
 						<MaxDuration>PT20M</MaxDuration>
 						<MinDistance>100</MinDistance>
@@ -48,6 +54,14 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
+					<ItModeToCover>
+						<PersonalMode>car</PersonalMode>
+						<PersonalModeOfOperation>own</PersonalModeOfOperation>
+					</ItModeToCover>
+					<ItModeToCover>
+						<PersonalMode>cycle</PersonalMode>
+						<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
+					</ItModeToCover>
 					<IncludeAlternativeOptions>false</IncludeAlternativeOptions>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>

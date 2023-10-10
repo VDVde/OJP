@@ -174,14 +174,9 @@
 			<xs:documentation>Individual modes and their usage limits as stated by the passenger (TRIP ACCESS CONSTRAINT).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PersonalModeOFOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0">
+			<xs:element name="ItModeAndModeOfOperation" type="ItModesStructure">
 				<xs:annotation>
-					<xs:documentation>Mode of personal transport.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonalMode" type="PersonalModesEnumeration">
-				<xs:annotation>
-					<xs:documentation>Mode </xs:documentation>
+					<xs:documentation>Combinations of MODE and MODE OPERATION for ACCESS LEG. If no MODE OF OPERATION is given, then all can be used. Usually the result will be the own vehicle.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MaxDistance" type="siri:DistanceType" minOccurs="0">
@@ -407,4 +402,26 @@
 			</xs:element>			
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="ItModesStructure">
+		<xs:annotation>
+			<xs:documentation>Combinations of MODE and MODE OF OPERATION that should be covered as monomodal trips (or for the ACCESS LEGs). If no MODE OF OPERATION is added usually "own" is assumed. But the trip planner may add other relevant results (e.g. sharing, if sensible trips are possible).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PersonalMode" type="PersonalModesEnumeration">
+				<xs:annotation>
+					<xs:documentation>Relevant PERSONAL MODE to be used for the monomodal trip.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of personal mobility offers for this MODE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AlternativeModeOfOperation" type="AlternativeModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of alternative mobility offers for this MODE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>		
+		</xs:sequence>
+	</xs:complexType>	
 </xs:schema>
