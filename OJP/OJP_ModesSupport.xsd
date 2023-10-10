@@ -473,7 +473,7 @@
 				<xs:annotation>
 					<xs:documentation>List of alternative mobility offers for this MODE.</xs:documentation>
 				</xs:annotation>
-			</xs:element>		
+			</xs:element>
 		</xs:sequence>
-	</xs:complexType>	
+	</xs:complexType>
 </xs:schema>
