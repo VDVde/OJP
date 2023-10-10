@@ -20,7 +20,8 @@
 					<IndividualTransportOptions>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>car</PersonalMode>
-							<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation> <!-- indicates no parking, but does not make sure of it -->
+							<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
+							<!-- indicates no parking, but does not make sure of it -->
 						</ItModeAndModeOfOperation>
 						<MaxDistance>240</MaxDistance>
 						<MaxDuration>PT20M</MaxDuration>
@@ -48,9 +49,10 @@
 					<IndividualTransportOptions>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>cycle</PersonalMode>
-							<PersonalModeOfOperation>own</PersonalModeOfOperation> <!-- if a different stop that expected is used, then this might not be, what the person wants. Then a VIA might be indicated or the usage of two trip requests A to stop where bike is and then a second leg home.-->
+							<PersonalModeOfOperation>own</PersonalModeOfOperation>
+							<!-- if a different stop that expected is used, then this might not be, what the person wants. Then a VIA might be indicated or the usage of two trip requests A to stop where bike is and then a second leg home.-->
 						</ItModeAndModeOfOperation>
-					</IndividualTransportOptions>					
+					</IndividualTransportOptions>
 				</Destination>
 				<Params>
 				</Params>
