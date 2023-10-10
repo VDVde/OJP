@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2020-01-20T12:00:00Z</siri:RequestTimestamp>
+			<siri:RequestorRef>IRMA</siri:RequestorRef>
+			<OJPTripRequest>
+				<siri:RequestTimestamp>2020-01-20T12:00:00Z</siri:RequestTimestamp>
+				<Origin>
+					<PlaceRef>
+						<GeoPosition xmlns:siri="http://www.siri.org.uk/siri">
+							<siri:Longitude>8.484003</siri:Longitude>
+							<siri:Latitude>47.386135</siri:Latitude>
+						</GeoPosition>
+						<Name xmlns:siri="http://www.siri.org.uk/siri">
+							<Text>Altstetten</Text>
+						</Name>
+					</PlaceRef>
+					<DepArrTime>2020-12-01T12:00:00Z</DepArrTime>
+					<IndividualTransportOptions>
+						<ItModeAndModeOfOperation>
+							<PersonalMode>car</PersonalMode>
+						</ItModeAndModeOfOperation>
+						<MaxDistance>240</MaxDistance>
+						<MaxDuration>PT20M</MaxDuration>
+						<MinDistance>100</MinDistance>
+						<MinDuration>PT1M</MinDuration>
+						<Speed>150</Speed>
+						<AdditionalTime>PT3M</AdditionalTime>
+					</IndividualTransportOptions>
+				</Origin>
+				<Destination>
+					<PlaceRef>
+						<GeoPosition xmlns:siri="http://www.siri.org.uk/siri">
+							<siri:Longitude>8.560054</siri:Longitude>
+							<siri:Latitude>47.364618</siri:Latitude>
+						</GeoPosition>
+						<Name xmlns:siri="http://www.siri.org.uk/siri">
+							<Text>Hirslanden</Text>
+						</Name>
+					</PlaceRef>
+					<IndividualTransportOptions>
+						<ItModeAndModeOfOperation>
+							<PersonalMode>foot</PersonalMode>
+						</ItModeAndModeOfOperation>
+					</IndividualTransportOptions>
+					<IndividualTransportOptions>
+						<ItModeAndModeOfOperation>
+							<PersonalMode>car</PersonalMode>
+							<AlternativeModeOfOperation>taxi</AlternativeModeOfOperation>
+						</ItModeAndModeOfOperation>
+					</IndividualTransportOptions>					
+				</Destination>
+				<Params>
+				</Params>
+			</OJPTripRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>
