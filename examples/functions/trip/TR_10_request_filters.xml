@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
-<!-- this is a sort of nonsensical example that uses many filters to make sure they are in the right position -->
+	<!-- this is a sort of nonsensical example that uses many filters to make sure they are in the right position -->
 	<OJPRequest>
 		<siri:ServiceRequest>
 			<siri:RequestTimestamp>2020-01-31T12:30:00Z</siri:RequestTimestamp>
@@ -25,7 +25,8 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
-					<ModeAndModeOfOperationFilter>  <!-- nonsensical filter to check different elements. Better to pack things into MODE/MODE OF OPERATION pairs in multiple ModeAndModeOfOperationFilters -->
+					<ModeAndModeOfOperationFilter>
+						<!-- nonsensical filter to check different elements. Better to pack things into MODE/MODE OF OPERATION pairs in multiple ModeAndModeOfOperationFilters -->
 						<Exclude>false</Exclude>
 						<PtMode>funicular</PtMode>
 						<PtMode>cableway</PtMode>
@@ -37,7 +38,7 @@
 						<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
 						<AlternativeModeOfOperation>peerToPeerSharing</AlternativeModeOfOperation>
 						<ConventionalModeOfOperation>pRM</ConventionalModeOfOperation>
-						<ConventionalModeOfOperation>scheduled</ConventionalModeOfOperation>						
+						<ConventionalModeOfOperation>scheduled</ConventionalModeOfOperation>
 					</ModeAndModeOfOperationFilter>
 					<LineFilter>
 						<Line>

@@ -350,7 +350,8 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="foot"/>
-			<xs:enumeration value="bicycle"/> <!-- in SIRI 2.1 it is cycle -->
+			<xs:enumeration value="bicycle"/>
+			<!-- in SIRI 2.1 it is cycle -->
 			<xs:enumeration value="car"/>
 			<xs:enumeration value="motorcycle"/>
 			<xs:enumeration value="truck"/>
@@ -437,7 +438,7 @@
 					<xs:documentation>Whether MODE and MODE OF OPERATION combination in list are to include or exclude from search. Default is exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-						<xs:element name="PtMode" type="siri:VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="PtMode" type="siri:VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>List of PT Transport modes to include/exclude.</xs:documentation>
 				</xs:annotation>
