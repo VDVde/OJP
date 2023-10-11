@@ -21,7 +21,6 @@
 						<ItModeAndModeOfOperation>
 							<PersonalMode>bicycle</PersonalMode>
 							<PersonalModeOfOperation>hire</PersonalModeOfOperation>
-							<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
 						</ItModeAndModeOfOperation>
 						<MaxDistance>240</MaxDistance>
 						<MaxDuration>PT20M</MaxDuration>
