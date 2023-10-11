@@ -41,7 +41,7 @@
 						<PersonalModeOfOperation>hire</PersonalModeOfOperation>					
 					</ModeAndModeOfOperationFilter>
 					<ModeAndModeOfOperationFilter>
-						<PersonalMode>cycle</PersonalMode>
+						<PersonalMode>bicycle</PersonalMode>
 						<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
 					</ModeAndModeOfOperationFilter>								
 				</Params>

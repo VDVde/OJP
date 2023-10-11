@@ -48,7 +48,7 @@
 					</IndividualTransportOptions>
 					<IndividualTransportOptions>
 						<ItModeAndModeOfOperation>
-							<PersonalMode>cycle</PersonalMode>
+							<PersonalMode>bicycle</PersonalMode>
 							<PersonalModeOfOperation>own</PersonalModeOfOperation>
 							<!-- if a different stop that expected is used, then this might not be, what the person wants. Then a VIA might be indicated or the usage of two trip requests A to stop where bike is and then a second leg home.-->
 						</ItModeAndModeOfOperation>

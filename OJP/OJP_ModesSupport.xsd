@@ -350,7 +350,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="foot"/>
-			<xs:enumeration value="cycle"/>
+			<xs:enumeration value="bicycle"/> <!-- in SIRI 2.1 it is cycle -->
 			<xs:enumeration value="car"/>
 			<xs:enumeration value="motorcycle"/>
 			<xs:enumeration value="truck"/>

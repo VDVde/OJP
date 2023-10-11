@@ -31,7 +31,7 @@
 						<PtMode>cableway</PtMode>
 						<PtMode>coach</PtMode>
 						<PersonalMode>car</PersonalMode>
-						<PersonalMode>cycle</PersonalMode>
+						<PersonalMode>bicycle</PersonalMode>
 						<siri:FunicularSubmode>funicular</siri:FunicularSubmode>
 						<PersonalModeOfOperation>own</PersonalModeOfOperation>
 						<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>

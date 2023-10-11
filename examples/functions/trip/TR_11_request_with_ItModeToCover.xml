@@ -19,7 +19,7 @@
 					<DepArrTime>2020-12-01T12:00:00Z</DepArrTime>
 					<IndividualTransportOptions>
 						<ItModeAndModeOfOperation>
-							<PersonalMode>cycle</PersonalMode>
+							<PersonalMode>bicycle</PersonalMode>
 							<PersonalModeOfOperation>hire</PersonalModeOfOperation>
 							<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
 						</ItModeAndModeOfOperation>
@@ -59,7 +59,7 @@
 						<PersonalModeOfOperation>own</PersonalModeOfOperation>
 					</ItModeToCover>
 					<ItModeToCover>
-						<PersonalMode>cycle</PersonalMode>
+						<PersonalMode>bicycle</PersonalMode>
 						<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
 					</ItModeToCover>
 					<IncludeAlternativeOptions>false</IncludeAlternativeOptions>
