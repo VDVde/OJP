@@ -39,9 +39,10 @@
 							<siri:BusSubmode>localBusService</siri:BusSubmode>
 						</Mode>
 						<Attribute>
-							<Text>
-								<Text>Park and Ride Zürich Kreuzplatz</Text>
-							</Text>
+							<UserText>
+								<Text xml:lang="de">Park and Ride Zürich Kreuzplatz</Text>
+								<Text xml:lang="en">Park and Ride Zürich Kreuzplatz</Text>								
+							</UserText>
 							<Code>1231211-12311</Code>
 							<Key>PR_NOVA</Key>
 							<Value>12301</Value>

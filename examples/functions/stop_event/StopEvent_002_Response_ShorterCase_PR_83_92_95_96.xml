@@ -36,9 +36,9 @@
 									<siri:TotalNumberOfReservedSeats>10</siri:TotalNumberOfReservedSeats>
 								</siri:ExpectedDepartureOccupancy>
 								<Attribute>
-									<Text>
+									<UserText>
 										<Text>Boarding</Text>
-									</Text>
+									</UserText>
 									<Code>PRM</Code>
 									<Facility>
 										<siri:AssistanceFacility>boardingAssistance</siri:AssistanceFacility>

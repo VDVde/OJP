@@ -439,7 +439,7 @@
 			<xs:documentation>Structured attribute classification with associated text. If URL is given, it refers to the whole attribute text.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Text" type="InternationalTextStructure">
+			<xs:element name="UserText" type="InternationalTextStructure">
 				<xs:annotation>
 					<xs:documentation>Text of the attribute to be shown to the user.</xs:documentation>
 				</xs:annotation>
@@ -458,7 +458,7 @@
 				<xs:annotation>
 					<xs:documentation>Value if the attribute is used as a key/value pair.</xs:documentation>
 				</xs:annotation>
-			</xs:element>
+			</xs:element>						
 			<xs:element name="Facility" type="siri:AllFacilitiesFeatureStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Facilities associated with this attribute.</xs:documentation>

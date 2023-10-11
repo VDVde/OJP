@@ -230,9 +230,9 @@
 								<OperatorRef>87_LEX</OperatorRef>
 							</OperatorRefs>
 							<Attribute>
-								<Text>
+								<UserText>
 									<Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</Text>
-								</Text>
+								</UserText>
 								<Code>A__MO</Code>
 							</Attribute>
 							<OriginStopPointRef>8721202</OriginStopPointRef>
@@ -363,9 +363,9 @@
 								<OperatorRef>87_LEX</OperatorRef>
 							</OperatorRefs>
 							<Attribute>
-								<Text>
+								<UserText>
 									<Text xml:lang="de">Mund- und Nasenbedeckung obligatorisch</Text>
-								</Text>
+								</UserText>
 								<Code>A__MO</Code>
 							</Attribute>
 							<OriginStopPointRef>8721428</OriginStopPointRef>

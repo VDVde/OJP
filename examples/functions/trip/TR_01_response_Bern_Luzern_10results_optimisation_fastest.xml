@@ -96,9 +96,9 @@
 										<Text>Description of the route.</Text>
 									</RouteDescription>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp91013YR_InfoCall65511_105764_1</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
@@ -193,21 +193,21 @@
 										<OperatorRef>11</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp910S1NH_InfoCall179_105764_1</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp910S1NH_InfoCall179_107680_1</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
@@ -286,15 +286,15 @@
 										<OperatorRef>11</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Businesszone in 1. Klasse</Text>
-										</Text>
+										</UserText>
 										<Code>A__BZ</Code>
 										<Facility>
 											<siri:FareClassFacility>firstClass</siri:FareClassFacility>
@@ -304,30 +304,30 @@
 										</Facility>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Familienwagen mit Spielplatz</Text>
-										</Text>
+										</UserText>
 										<Code>A__FA</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
-										</Text>
+										</UserText>
 										<Code>A__RZ</Code>
 										<Facility>
 											<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
 										</Facility>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp91IR75R_InfoCall161_106218_1</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp91IR75R_InfoCall161_107680_1</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>

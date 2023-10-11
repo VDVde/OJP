@@ -72,15 +72,15 @@
 										<OperatorRef>182</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Nur 2. Klasse</Text>
-										</Text>
+										</UserText>
 										<Code>A___2</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Restaurant</Text>
-										</Text>
+										</UserText>
 										<Code>A__WR</Code>
 										<Facility>
 											<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>

@@ -78,15 +78,15 @@
 										<OperatorRef>82</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Reservierung möglich</Text>
-										</Text>
+										</UserText>
 										<Code>A___R</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Bar</Text>
-										</Text>
+										</UserText>
 										<Code>A___B</Code>
 									</Attribute>
 									<!-- Refine: Attribute gone 

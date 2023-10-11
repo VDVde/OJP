@@ -64,9 +64,9 @@
 										<siri:BicycleRackCapacity>4</siri:BicycleRackCapacity>
 									</siri:ExpectedDepartureCapacities>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text>FULL</Text>
-										</Text>
+										</UserText>
 										<Code>SwissPRMMobilityCode</Code>
 									</Attribute>
 								</LegBoard>
@@ -105,21 +105,21 @@
 										<OperatorRef>82</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Reservierung möglich</Text>
-										</Text>
+										</UserText>
 										<Code>A___R</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Bar</Text>
-										</Text>
+										</UserText>
 										<Code>A___B</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
@@ -201,21 +201,21 @@
 										<OperatorRef>82</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Reservierung möglich</Text>
-										</Text>
+										</UserText>
 										<Code>A___R</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Bar</Text>
-										</Text>
+										</UserText>
 										<Code>A___B</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>

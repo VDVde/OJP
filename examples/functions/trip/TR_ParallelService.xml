@@ -303,9 +303,9 @@
 										<OperatorRef>33</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Zug mit mehreren Zielen: Bitte Anschriften am Zug beachten</Text>
-										</Text>
+										</UserText>
 										<Code>A__FL</Code>
 									</Attribute>
 									<DestinationStopPointRef>8504221</DestinationStopPointRef>
