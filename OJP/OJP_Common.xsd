@@ -449,6 +449,16 @@
 					<xs:documentation>Internal code of the attribute. Can be used for detection of double occurrences.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Key" type="xs:NMTOKEN" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Key if the attribute is used as a key/value pair.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Value if the attribute is used as a key/value pair.</xs:documentation>
+				</xs:annotation>
+			</xs:element>						
 			<xs:element name="Facility" type="siri:AllFacilitiesFeatureStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Facilities associated with this attribute.</xs:documentation>
