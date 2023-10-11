@@ -316,22 +316,22 @@
 			</xs:enumeration>
 			<xs:enumeration value="parkAndRide">
 				<xs:annotation>
-					<xs:documentation>Also here the transfer leg may be longer, because time lost in the PARKING.</xs:documentation>
+					<xs:documentation>This does not model the car ride. But parking the car and getting to the stop may take way longer e.g. in a big parking garage. This is a special type of checkIn or checkOut.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="bikeAndRide">
 				<xs:annotation>
-					<xs:documentation>Additional time may be needed to get or stow a bike (e.g. because the BIKE PARKING is at a special place.</xs:documentation>
+					<xs:documentation>In the transfer leg additional time may be needed to get or stow a bike (e.g. because the BIKE PARKING is at a special place). this can be seen as a special type of checkIn or checkOut.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="carHire">
 				<xs:annotation>
-					<xs:documentation>Time for a car hire is needed.</xs:documentation>
+					<xs:documentation>Time for a car hire is needed. This will make the transfer leg to take longer than expected. Can be seen as a special case of checkIn.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="bikeHire">
 				<xs:annotation>
-					<xs:documentation>Time for a bike hire is needed.</xs:documentation>
+					<xs:documentation>Time for a bike hire is needed. This will make the transfer leg to take longer than expected. Can be seen as a special case of checkIn.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="other">
