@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+<!-- this is a sort of nonsensical example that uses many filters to make sure they are in the right position -->
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2020-01-31T12:30:00Z</siri:RequestTimestamp>
+			<siri:RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7</siri:RequestorRef>
+			<OJPTripRequest>
+				<siri:RequestTimestamp>2020-01-31T12:30:00Z</siri:RequestTimestamp>
+				<Origin>
+					<PlaceRef>
+						<StopPlaceRef>8503000</StopPlaceRef>
+						<Name xmlns:siri="http://www.siri.org.uk/siri">
+							<Text>Bern</Text>
+						</Name>
+					</PlaceRef>
+					<DepArrTime>2020-01-30T12:30:00Z</DepArrTime>
+				</Origin>
+				<Destination>
+					<PlaceRef>
+						<StopPlaceRef>8505000</StopPlaceRef>
+						<Name xmlns:siri="http://www.siri.org.uk/siri">
+							<Text>Luzern</Text>
+						</Name>
+					</PlaceRef>
+				</Destination>
+				<Params>
+					<!-- Mode and Mode of Operation filter doing the following
+					- exclude funicular and cableway 
+					- include self driven and rented car
+					- include shared cycle
+					-->
+					<ModeAndModeOfOperationFilter>
+						<Exclude>true</Exclude>
+						<PtMode>funicular</PtMode>
+						<PtMode>cableway</PtMode>
+					</ModeAndModeOfOperationFilter>
+					<ModeAndModeOfOperationFilter>
+						<PersonalMode>car</PersonalMode>
+						<PersonalModeOfOperation>own</PersonalModeOfOperation>
+						<PersonalModeOfOperation>hire</PersonalModeOfOperation>					
+					</ModeAndModeOfOperationFilter>
+					<ModeAndModeOfOperationFilter>
+						<PersonalMode>cycle</PersonalMode>
+						<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
+					</ModeAndModeOfOperationFilter>								
+				</Params>
+			</OJPTripRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>

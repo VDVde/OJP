@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+<!-- this is a sort of nonsensical example that uses many filters to make sure they are in the right position -->
 	<OJPRequest>
 		<siri:ServiceRequest>
 			<siri:RequestTimestamp>2020-01-31T12:30:00Z</siri:RequestTimestamp>
@@ -24,7 +25,7 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
-					<ModeFilter>
+					<ModeAndModeOfOperationFilter>  <!-- nonsensical filter to check different elements. Better to pack things into MODE/MODE OF OPERATION pairs in multiple ModeAndModeOfOperationFilters -->
 						<Exclude>false</Exclude>
 						<PtMode>funicular</PtMode>
 						<PtMode>cableway</PtMode>
@@ -32,7 +33,12 @@
 						<PersonalMode>car</PersonalMode>
 						<PersonalMode>cycle</PersonalMode>
 						<siri:FunicularSubmode>funicular</siri:FunicularSubmode>
-					</ModeFilter>
+						<PersonalModeOfOperation>own</PersonalModeOfOperation>
+						<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
+						<AlternativeModeOfOperation>peerToPeerSharing</AlternativeModeOfOperation>
+						<ConventionalModeOfOperation>pRM</ConventionalModeOfOperation>
+						<ConventionalModeOfOperation>scheduled</ConventionalModeOfOperation>						
+					</ModeAndModeOfOperationFilter>
 					<LineFilter>
 						<Line>
 							<siri:LineRef>ch:1:Line:12:12031</siri:LineRef>
@@ -42,14 +48,6 @@
 						<Exclude>false</Exclude>
 						<OperatorRef>ch:1:Operator:12</OperatorRef>
 					</OperatorFilter>
-					<ModeOfOperationFilter>
-						<Exclude>true</Exclude>
-						<PersonalModeOfOperation>own</PersonalModeOfOperation>
-						<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
-						<AlternativeModeOfOperation>peerToPeerSharing</AlternativeModeOfOperation>
-						<ConventionalModeOfOperation>pRM</ConventionalModeOfOperation>
-						<ConventionalModeOfOperation>scheduled</ConventionalModeOfOperation>
-					</ModeOfOperationFilter>
 					<VehicleFilter>
 						<Exclude>true</Exclude>
 						<VehicleRef>ch:1:Vehicle:11:182318123-11</VehicleRef>

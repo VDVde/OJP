@@ -427,16 +427,27 @@
 			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="ModeOfOperationFilterStructure">
+	<xs:complexType name="ModeAndModeAndOperationFilterStructure">
 		<xs:annotation>
-			<xs:documentation>List of MODE OF OPERATION filter offers to include or exclude.</xs:documentation>
+			<xs:documentation>List of MODE and MODE OF OPERATION filter offers to include or exclude.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether MODE OF OPERATION in list are to include or exclude from search. Default is exclude.</xs:documentation>
+					<xs:documentation>Whether MODE and MODE OF OPERATION combination in list are to include or exclude from search. Default is exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+						<xs:element name="PtMode" type="siri:VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of PT Transport modes to include/exclude.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PersonalMode" type="PersonalModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>List of personal transport modes to include/exclude. Those are also used in many of the ALTERNATIVE MODES OF OPERATION.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>List of personal mobility offers to include/exclude.</xs:documentation>
