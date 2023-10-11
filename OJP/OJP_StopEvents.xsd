@@ -15,7 +15,7 @@
 		<xs:sequence>
 			<xs:element name="Location" type="PlaceContextStructure">
 				<xs:annotation>
-					<xs:documentation>LOCATION / PLACE for which to obtain stop event information.</xs:documentation>
+					<xs:documentation>LOCATION / PLACE for which to obtain stop event information. If a coordinate or an address is used, then the result may depend on other parameters: at least the next stop must be shown. All stops in reasonable walking distance and stops that are within range of limitations of the IndividualTransportAptions should be shown.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Params" type="StopEventParamStructure" minOccurs="0">
