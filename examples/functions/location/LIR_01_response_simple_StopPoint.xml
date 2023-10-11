@@ -44,13 +44,14 @@
 							</Text>
 							<Code>1231211-12311</Code>
 							<Key>PR_NOVA</Key>
-							<Value>12301</Value> <!-- the key used by NOVA to identify this park and ride -->
+							<Value>12301</Value>
+							<!-- the key used by NOVA to identify this park and ride -->
 							<Facility>
 								<siri:ParkingFacility>parkAndRidePark</siri:ParkingFacility>
 							</Facility>
 							<Facility>
 								<siri:ParkingFacility>carPark</siri:ParkingFacility>
-							</Facility>							
+							</Facility>
 						</Attribute>
 					</Place>
 					<Complete>true</Complete>
