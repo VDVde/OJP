@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
-<!-- example fare request with a park and ride
+	<!-- example fare request with a park and ride
 -->
 	<OJPRequest>
 		<siri:ServiceRequest>
@@ -20,10 +20,10 @@
 							<Id>1</Id>
 							<ContinuousLeg>
 								<LegStart>
-								<GeoPosition>
-									<siri:Longitude>14.1</siri:Longitude>
-									<siri:Latitude>60.1</siri:Latitude>
-								</GeoPosition>
+									<GeoPosition>
+										<siri:Longitude>14.1</siri:Longitude>
+										<siri:Latitude>60.1</siri:Latitude>
+									</GeoPosition>
 									<Name>
 										<Text>Home</Text>
 									</Name>
@@ -58,7 +58,7 @@
 								</LegEnd>
 								<Duration>PT8M</Duration>
 							</TransferLeg>
-						</Leg>	
+						</Leg>
 						<Leg>
 							<Id>3</Id>
 							<TimedLeg>
