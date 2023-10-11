@@ -33,6 +33,7 @@
 					<IndividualTransportOptions>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>car</PersonalMode>
+							<!-- Mode of operation is not included on purpose. This means that any Mode of operation of the car can be used. However, most implementation will just assume "own" car. -->
 						</ItModeAndModeOfOperation>
 						<MaxDistance>240</MaxDistance>
 						<MaxDuration>PT20M</MaxDuration>
