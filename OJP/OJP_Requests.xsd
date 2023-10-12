@@ -25,7 +25,7 @@
 	</xs:complexType>
 	<xs:element name="OJPFareDelivery" type="OJPFareDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xs:annotation>
-			<xs:documentation>This service provides general, stop-specific and trip-specific fare information. This service implements PI Stop Fare Request, PI FQ Fare Product Request, PI FQ Single Trip Fare Request from TM6.</xs:documentation>
+			<xs:documentation>This service provides general, stop-specific and trip-specific fare information. This service implements the models PI Stop Fare Request, PI FQ Fare Product Request, PI FQ Single Trip Fare Request from TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPFareDeliveryStructure">
