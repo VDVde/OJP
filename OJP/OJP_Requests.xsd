@@ -336,7 +336,7 @@ System B, being confronted with external IDs, must try to recognise the relevant
 	</xs:annotation>
 	<xs:element name="OJPAvailabilityRequest" type="OJPAvailabilityRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
 		<xs:annotation>
-			<xs:documentation>The availability service informs about the availability of a MOBILITY SERVICE, a VEHICLE, SERVICE JOURNEY, or SINGLE JOURNEY. This service implements PI QR AM Vehicle Type Request and PI QR AM Mobility Service Request from TM 6.</xs:documentation>
+			<xs:documentation>The availability service informs about the availability of a MOBILITY SERVICE, a VEHICLE, SERVICE JOURNEY, or SINGLE JOURNEY. This service implements the models PI QR AM Vehicle Type Request and PI QR AM Mobility Service Request from TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPAvailabilityRequestStructure">
