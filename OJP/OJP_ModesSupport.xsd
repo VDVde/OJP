@@ -167,9 +167,9 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
-		<xs:documentation>==========================================IndividualTransportOptionsStructure ==========================================</xs:documentation>
+		<xs:documentation>==========================================IndividualTransportOptionStructure ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:complexType name="IndividualTransportOptionsStructure">
+	<xs:complexType name="IndividualTransportOptionStructure">
 		<xs:annotation>
 			<xs:documentation>Individual modes and their usage limits as stated by the passenger (TRIP ACCESS CONSTRAINT).</xs:documentation>
 		</xs:annotation>
