@@ -57,7 +57,7 @@
 									</ServiceDeparture>
 									<Order>3</Order>
 								</LegIntermediate>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8510378</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Hôtel de Ville</Text>
