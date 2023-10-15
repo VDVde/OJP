@@ -419,7 +419,7 @@ System B, being confronted with external IDs, must try to recognise the relevant
 	</xs:complexType>
 	<xs:element name="OJPTripChangeDelivery" type="OJPTripChangeDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xs:annotation>
-			<xs:documentation>A trip can be modified in a limited manner and specifying a longer time duration for a specific interchange or by specifying an estimated leg for which the exact time information shall be retrieved. In both cases, earlier or later legs of the trip may be recalculated as well.</xs:documentation>
+			<xs:documentation>A trip can be modified in a limited manner by specifying a longer time duration for a specific interchange or by specifying an estimated leg for which the exact time information shall be retrieved. In both cases, earlier or later legs of the trip may be recalculated as well.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPTripChangeDeliveryStructure">
