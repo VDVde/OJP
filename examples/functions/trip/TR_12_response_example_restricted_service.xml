@@ -96,7 +96,7 @@
 									</ServiceDeparture>
 									<Order>6</Order>
 								</LegIntermediate>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8571982</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Av. de la gare</Text>
