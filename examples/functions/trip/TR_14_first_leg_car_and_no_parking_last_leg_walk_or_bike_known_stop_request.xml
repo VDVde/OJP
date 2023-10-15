@@ -21,6 +21,7 @@
 						<ItModeAndModeOfOperation>
 							<PersonalMode>car</PersonalMode>
 							<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
+							<AlternativeModeOfOperation>privateLift</AlternativeModeOfOperation>
 							<!-- indicates no parking, but does not make sure of it -->
 						</ItModeAndModeOfOperation>
 						<MaxDistance>240</MaxDistance>

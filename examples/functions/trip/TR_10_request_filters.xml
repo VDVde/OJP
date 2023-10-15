@@ -36,6 +36,7 @@
 						<siri:FunicularSubmode>funicular</siri:FunicularSubmode>
 						<PersonalModeOfOperation>own</PersonalModeOfOperation>
 						<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
+						<AlternativeModeOfOperation>privateLift</AlternativeModeOfOperation>
 						<AlternativeModeOfOperation>peerToPeerSharing</AlternativeModeOfOperation>
 						<ConventionalModeOfOperation>pRM</ConventionalModeOfOperation>
 						<ConventionalModeOfOperation>scheduled</ConventionalModeOfOperation>
