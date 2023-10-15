@@ -208,7 +208,7 @@ The service also provides information about formation, occupancy and capacity. T
 	</xs:complexType>
 	<xs:element name="OJPTripDelivery" type="OJPTripDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xs:annotation>
-			<xs:documentation>This service provides intermodal trip information from an origin location to a destination taking various user preferences into account. In the case of OJPMultipointTripRequest it is a set of origins and destinations that are searched. This service implements PI QR Trip Request from TM6.</xs:documentation>
+			<xs:documentation>This service provides intermodal trip information from an origin location to a destination taking various user preferences into account. In the case of OJPTripRequest it is single origin and a single destination that are searched. This service implements the model PI QR Trip Request from TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPTripDeliveryStructure">
