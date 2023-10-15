@@ -69,8 +69,8 @@
 										<TimetabledTime>2023-09-13T14:13:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>4</Order>
-								</LegIntermediates>
-								<LegIntermediates>
+								</LegIntermediate>
+								<LegIntermediate>
 									<siri:StopPointRef>8583087</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Théâtre</Text>
