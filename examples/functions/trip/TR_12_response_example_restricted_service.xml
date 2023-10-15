@@ -83,7 +83,7 @@
 									</ServiceDeparture>
 									<Order>5</Order>
 								</LegIntermediate>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8571983</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Le Ticle</Text>
