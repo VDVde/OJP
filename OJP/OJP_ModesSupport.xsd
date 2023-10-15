@@ -138,7 +138,7 @@
 				<xs:annotation>
 					<xs:documentation>ALTERNATIVE MODE OF OPERATION for SINGLE JOURNEY with an unpaid driver. Typical case of being picked up or dropped off at a stop by a friend, relative, etc.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="demandResponsive">
 				<xs:annotation>
 					<xs:documentation>ALTERNATIVE MODE OF OPERATION demand responsive is used, when there are no SCHEDULED STOP POINTs involved and the timetable component is weak.</xs:documentation>
