@@ -44,7 +44,7 @@
 									</ServiceDeparture>
 									<Order>2</Order>
 								</LegIntermediate>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8510379</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, Château-Musée</Text>
