@@ -30,6 +30,11 @@
 						<Speed>150</Speed>
 						<AdditionalTime>PT3M</AdditionalTime>
 					</IndividualTransportOptions>
+					<IndividualTransportOptions>
+						<ItModeAndModeOfOperation>
+							<PersonalMode>foot</PersonalMode>
+						</ItModeAndModeOfOperation>
+					</IndividualTransportOptions>
 				</Origin>
 				<Destination>
 					<PlaceRef>
