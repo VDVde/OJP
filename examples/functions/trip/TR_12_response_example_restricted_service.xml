@@ -31,7 +31,7 @@
 									</ServiceDeparture>
 									<Order>1</Order>
 								</LegBoard>
-								<LegIntermediates>
+								<LegIntermediate>
 									<siri:StopPointRef>8581218</siri:StopPointRef>
 									<StopPointName>
 										<Text xml:lang="de">Delémont, La Promenade</Text>
