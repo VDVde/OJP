@@ -43,7 +43,7 @@
 										<TimetabledTime>2023-09-13T14:12:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>2</Order>
-								</LegIntermediates>
+								</LegIntermediate>
 								<LegIntermediates>
 									<siri:StopPointRef>8510379</siri:StopPointRef>
 									<StopPointName>
