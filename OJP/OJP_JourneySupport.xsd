@@ -585,7 +585,7 @@
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
-			<xs:element name="IndividualTransportOptions" type="IndividualTransportOptionStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="IndividualTransportOption" type="IndividualTransportOptionStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Options how to access/leave the place by individual transport.</xs:documentation>
 				</xs:annotation>
