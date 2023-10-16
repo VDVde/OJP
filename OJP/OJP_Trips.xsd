@@ -790,12 +790,12 @@
 			</xs:choice>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+					<xs:documentation>Contains ARRIVAL times (timetable, recorded, estimated, timing bands estimated) and the ARRIVAL formation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure">
 				<xs:annotation>
-					<xs:documentation>describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+					<xs:documentation>Contains DEPARTURE times (timetable, recorded, estimated, timing bands estimated) and the DEPARTURE formation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DistributorInterchangeId" type="xs:normalizedString" minOccurs="0">

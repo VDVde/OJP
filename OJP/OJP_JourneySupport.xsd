@@ -218,7 +218,7 @@
 			</xs:element>
 			<xs:element ref="OperatingDayRef">
 				<xs:annotation>
-					<xs:documentation>Reference to an Operating Day.</xs:documentation>
+					<xs:documentation>Reference to an OPERATING DAY.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="ScheduledJourneyGroup"/>
