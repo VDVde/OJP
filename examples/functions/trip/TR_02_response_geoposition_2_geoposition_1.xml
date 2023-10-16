@@ -86,7 +86,8 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalModeOfOperation>self</PersonalModeOfOperation>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2020-12-01T11:55:00Z</TimeWindowStart>
 								<TimeWindowEnd>2020-12-01T12:00:00Z</TimeWindowEnd>
@@ -488,7 +489,7 @@
 						<Leg>
 							<Id>3</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8576193</siri:StopPointRef>
 									<Name>
@@ -642,7 +643,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2020-12-01T12:29:00Z</TimeWindowStart>
 								<TimeWindowEnd>2020-12-01T12:36:00Z</TimeWindowEnd>
@@ -806,7 +807,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2020-12-01T11:57:00Z</TimeWindowStart>
 								<TimeWindowEnd>2020-12-01T12:02:00Z</TimeWindowEnd>
@@ -1015,7 +1016,7 @@
 						<Leg>
 							<Id>3</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8591056</siri:StopPointRef>
 									<Name>
@@ -1239,7 +1240,7 @@
 						<Leg>
 							<Id>5</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8503003</siri:StopPointRef>
 									<Name>
@@ -1494,7 +1495,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2020-12-01T12:29:00Z</TimeWindowStart>
 								<TimeWindowEnd>2020-12-01T12:36:00Z</TimeWindowEnd>
