@@ -125,15 +125,15 @@
 										<OperatorRef>3849</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Niederflureinstieg</Text>
-										</Text>
+										</UserText>
 										<Code>A__NF</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>

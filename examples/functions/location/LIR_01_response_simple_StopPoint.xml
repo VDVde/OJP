@@ -38,6 +38,22 @@
 							<PtMode>bus</PtMode>
 							<siri:BusSubmode>localBusService</siri:BusSubmode>
 						</Mode>
+						<Attribute>
+							<UserText>
+								<Text xml:lang="de">Park and Ride Zürich Kreuzplatz</Text>
+								<Text xml:lang="en">Park and Ride Zürich Kreuzplatz</Text>
+							</UserText>
+							<Code>1231211-12311</Code>
+							<Key>PR_NOVA</Key>
+							<Value>12301</Value>
+							<!-- the key used by NOVA to identify this park and ride -->
+							<Facility>
+								<siri:ParkingFacility>parkAndRidePark</siri:ParkingFacility>
+							</Facility>
+							<Facility>
+								<siri:ParkingFacility>carPark</siri:ParkingFacility>
+							</Facility>
+						</Attribute>
 					</Place>
 					<Complete>true</Complete>
 					<Probability>1</Probability>

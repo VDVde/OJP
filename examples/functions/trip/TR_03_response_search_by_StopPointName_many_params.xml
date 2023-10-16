@@ -237,21 +237,21 @@
 										<OperatorRef>11</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Rechts</Text>
-										</Text>
+										</UserText>
 										<Code>ojp91S24ZR_InfoCall259_106218_1</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
@@ -381,9 +381,9 @@
 										<OperatorRef>11</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
@@ -532,21 +532,21 @@
 										<OperatorRef>11</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp91S24ZR_InfoCall259_108328_1</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp91S24ZR_InfoCall259_106536_1</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>

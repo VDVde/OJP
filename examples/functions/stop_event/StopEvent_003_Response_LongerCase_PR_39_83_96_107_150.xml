@@ -220,9 +220,9 @@
 								<OperatorRef>128</OperatorRef>
 							</OperatorRefs>
 							<Attribute>
-								<Text>
+								<UserText>
 									<Text xml:lang="de">Maskenpflicht fÃ¼r Reisende ab 12 Jahren</Text>
-								</Text>
+								</UserText>
 								<Code>A__OM</Code>
 							</Attribute>
 							<OriginStopPointRef>8504356</OriginStopPointRef>

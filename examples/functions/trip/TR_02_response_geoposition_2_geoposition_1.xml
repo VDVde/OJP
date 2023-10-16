@@ -30,6 +30,15 @@
 								<siri:Longitude>8.48611</siri:Longitude>
 								<siri:Latitude>47.38782</siri:Latitude>
 							</GeoPosition>
+							<Attribute>
+								<UserText>
+									<Text>Park and Ride</Text>
+								</UserText>
+								<Code>P_R</Code>
+								<Facility>
+									<siri:ParkingFacility>carPark</siri:ParkingFacility>
+								</Facility>
+							</Attribute>
 						</Place>
 						<Place>
 							<TopographicPlace>
@@ -206,6 +215,18 @@
 										<TimetabledTime>2020-12-01T12:00:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>1</Order>
+									<Attribute>
+										<UserText>
+											<Text>Park and Ride</Text>
+										</UserText>
+										<Code>P_R</Code>
+										<Facility>
+											<siri:ParkingFacility>carPark</siri:ParkingFacility>
+										</Facility>
+										<Facility>
+											<siri:HireFacility>carHire</siri:HireFacility>
+										</Facility>
+									</Attribute>
 								</LegBoard>
 								<LegIntermediate>
 									<siri:StopPointRef>8591165</siri:StopPointRef>

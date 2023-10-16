@@ -7920,11 +7920,15 @@
 										<OperatorRef>801</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Niederflureinstieg</Text>
-										</Text>
+										</UserText>
 										<Code>A__NF</Code>
-										<siri:AccessFacility>palletAccess_lowFloor</siri:AccessFacility>
+										<Facility>
+											<siri:AccessFacility>palletAccess_lowFloor</siri:AccessFacility>
+										</Facility>
+										<Mandatory>true</Mandatory>
+										<Importance>1</Importance>
 									</Attribute>
 									<DestinationStopPointRef>8572113</DestinationStopPointRef>
 									<DestinationText>
@@ -8018,9 +8022,9 @@
 										<OperatorRef>11</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp91003BH_InfoCall253_106576_1</Code>
 									</Attribute>
 									<DestinationStopPointRef>8500218</DestinationStopPointRef>
@@ -8117,28 +8121,30 @@
 										<OperatorRef>11</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Weitere Infos: www.tgv-lyria.com</Text>
-										</Text>
+										</UserText>
 										<Code>I_1sG</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">VELOS: Keine Beförderung möglich</Text>
-										</Text>
+										</UserText>
 										<Code>A__VN</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Restaurant</Text>
-										</Text>
+										</UserText>
 										<Code>A__WR</Code>
-										<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+										<Facility>
+											<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+										</Facility>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Links</Text>
-										</Text>
+										</UserText>
 										<Code>ojp9102NYR_InfoCall96_106514_1</Code>
 									</Attribute>
 									<DestinationStopPointRef>8503000</DestinationStopPointRef>
@@ -8234,36 +8240,42 @@
 										<OperatorRef>11</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Gratis-Internet mit der App SBB FreeSurf</Text>
-										</Text>
+										</UserText>
 										<Code>A__FS</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Ruhezone in 1. Klasse</Text>
-										</Text>
+										</UserText>
 										<Code>A__RZ</Code>
-										<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
+										<Facility>
+											<siri:NuisanceFacility>mobilePhoneFreeZone</siri:NuisanceFacility>
+										</Facility>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Businesszone in 1. Klasse</Text>
-										</Text>
+										</UserText>
 										<Code>A__BZ</Code>
-										<siri:FareClassFacility>firstClass</siri:FareClassFacility>
-										<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
+										<Facility>
+											<siri:FareClassFacility>firstClass</siri:FareClassFacility>
+										</Facility>
+										<Facility>
+											<siri:PassengerCommsFacility>businessServices</siri:PassengerCommsFacility>
+										</Facility>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Familienwagen mit Spielplatz</Text>
-										</Text>
+										</UserText>
 										<Code>A__FA</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Aussteigeseite: Rechts</Text>
-										</Text>
+										</UserText>
 										<Code>ojp91003CR_InfoCall491_112214_1</Code>
 									</Attribute>
 									<DestinationStopPointRef>8509000</DestinationStopPointRef>

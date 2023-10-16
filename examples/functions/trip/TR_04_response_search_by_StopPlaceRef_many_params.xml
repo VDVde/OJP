@@ -58,6 +58,17 @@
 										<TimetabledTime>2020-09-30T10:03:00Z</TimetabledTime>
 									</ServiceDeparture>
 									<Order>1</Order>
+									<NoAlightingAtStop>true</NoAlightingAtStop>
+									<siri:ExpectedDepartureCapacities>
+										<siri:WheelchairPlaceCapacity>2</siri:WheelchairPlaceCapacity>
+										<siri:BicycleRackCapacity>4</siri:BicycleRackCapacity>
+									</siri:ExpectedDepartureCapacities>
+									<Attribute>
+										<UserText>
+											<Text>FULL</Text>
+										</UserText>
+										<Code>SwissPRMMobilityCode</Code>
+									</Attribute>
 								</LegBoard>
 								<LegAlight>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
@@ -94,21 +105,21 @@
 										<OperatorRef>82</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Reservierung möglich</Text>
-										</Text>
+										</UserText>
 										<Code>A___R</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Bar</Text>
-										</Text>
+										</UserText>
 										<Code>A___B</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
@@ -190,21 +201,21 @@
 										<OperatorRef>82</OperatorRef>
 									</OperatorRefs>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Reservierung möglich</Text>
-										</Text>
+										</UserText>
 										<Code>A___R</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Bar</Text>
-										</Text>
+										</UserText>
 										<Code>A___B</Code>
 									</Attribute>
 									<Attribute>
-										<Text>
+										<UserText>
 											<Text xml:lang="de">Maskenpflicht für Reisende ab 12 Jahren</Text>
-										</Text>
+										</UserText>
 										<Code>A__OM</Code>
 									</Attribute>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
