@@ -20,7 +20,7 @@
 					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>car</PersonalMode>
-							<PersonalModeOfOperation>privateLift</PersonalModeOfOperation>							
+							<PersonalModeOfOperation>privateLift</PersonalModeOfOperation>
 							<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
 							<!-- indicates no parking, but does not make sure of it -->
 						</ItModeAndModeOfOperation>

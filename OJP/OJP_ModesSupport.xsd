@@ -33,7 +33,7 @@
 				<xs:annotation>
 					<xs:documentation>Other driver without commercial interest is driving. Typical case of being picked up or dropped off at a stop by a friend, relative, etc.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="lease">
 				<xs:annotation>
 					<xs:documentation>Using a leased VEHICLE.</xs:documentation>
@@ -258,7 +258,7 @@
 				<xs:annotation>
 					<xs:documentation>MODE OF OPERATION that specifically states that it is school related. Specialisation of demand responsive or scheduled.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="pRM">
 				<xs:annotation>
 					<xs:documentation>If for a scheduled, conventional servce a special additional vehicle is needed to provide for special PRM needs. This kind of MODE OF OPERATION is to be used.</xs:documentation>
