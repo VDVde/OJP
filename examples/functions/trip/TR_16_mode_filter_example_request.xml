@@ -34,8 +34,10 @@
 						<Exclude>true</Exclude>
 						<PtMode>funicular</PtMode>
 						<PtMode>cableway</PtMode>
+						<!-- alle MODES OF OPERATION -->
 					</ModeAndModeOfOperationFilter>
 					<ModeAndModeOfOperationFilter>
+						<!-- always all combinations of MODE and MODE OF OPERATION are allowed -->
 						<PersonalMode>car</PersonalMode>
 						<PersonalModeOfOperation>own</PersonalModeOfOperation>
 						<PersonalModeOfOperation>hire</PersonalModeOfOperation>

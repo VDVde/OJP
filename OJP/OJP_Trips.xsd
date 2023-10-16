@@ -77,7 +77,7 @@
 		<xs:sequence>
 			<xs:element name="ModeAndModeOfOperationFilter" type="ModeAndModeAndOperationFilterStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>MODEs and MODEs OF OPERATION to be considered in trip calculation.</xs:documentation>
+					<xs:documentation>MODEs and MODEs OF OPERATION to be considered in trip calculation. If only MODE is used, then it is for all MODE OF OPERATION. If combinations of MODE and MODE OF OPERATION are used (multiples), then all combinations are to be considered.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LineFilter" type="LineDirectionFilterStructure" minOccurs="0">
