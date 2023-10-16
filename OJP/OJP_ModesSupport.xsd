@@ -29,6 +29,11 @@
 					<xs:documentation>Using a VEHICLE owned by a different private person without a commercial context.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="privateLift">
+				<xs:annotation>
+					<xs:documentation>Other driver without commercial interest is driving. Typical case of being picked up or dropped off at a stop by a friend, relative, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
 			<xs:enumeration value="lease">
 				<xs:annotation>
 					<xs:documentation>Using a leased VEHICLE.</xs:documentation>
@@ -96,7 +101,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="pooling">
 				<xs:annotation>
-					<xs:documentation>General pooling ALTERNATIVE MODE OF OPERATION. Only use this enum, when no specialsation applies.</xs:documentation>
+					<xs:documentation>General pooling ALTERNATIVE MODE OF OPERATION. Only use this enum, when no specialsation applies. In some cases where the pooling is very "scheduled" use the pooling in ConventionalModeOfOperation.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="taxi">
@@ -134,24 +139,14 @@
 					<xs:documentation>ALTERNATIVE MODE OF OPERATION for SINGLE JOURNEY with a paid driver. Often more than a single SINGLE JOURNEY.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="privateLift">
-				<xs:annotation>
-					<xs:documentation>ALTERNATIVE MODE OF OPERATION for SINGLE JOURNEY with an unpaid driver. Typical case of being picked up or dropped off at a stop by a friend, relative, etc.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="demandResponsive">
 				<xs:annotation>
-					<xs:documentation>ALTERNATIVE MODE OF OPERATION demand responsive is used, when there are no SCHEDULED STOP POINTs involved and the timetable component is weak.</xs:documentation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION demand responsive is used, when there are no SCHEDULED STOP POINTs involved and the timetable component is weak. Otherwise use the demandResponsive in ConventionalModeOfOperation.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="flexibleArea">
 				<xs:annotation>
-					<xs:documentation>Specialisation of the demand responsive ALTERNATIVE MODE OF OPERATION for AREA related offers.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="school">
-				<xs:annotation>
-					<xs:documentation>ALTERNATIVE MODE OF OPERATION. To specifically state that it is school related. Specialisation of demand responsive.</xs:documentation>
+					<xs:documentation>Specialisation of the demand responsive ALTERNATIVE MODE OF OPERATION for AREA related offers. Otherwise use the demandResponsive in ConventionalModeOfOperation.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="companyShuttle">
@@ -231,7 +226,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="demandResponsive">
 				<xs:annotation>
-					<xs:documentation>Demand responsive services. General term, when nothing else is known. Requires SCHEDULED STOP POINTs.</xs:documentation>
+					<xs:documentation>Demand responsive services. General term, when nothing else is known. Requires SCHEDULED STOP POINTs. The more taxi-like a demand responsive service becomes the more probable it is better to use ALTERNATIVE MODE OF OPERATION.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="flexibleRoute">
@@ -241,7 +236,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="flexibleArea">
 				<xs:annotation>
-					<xs:documentation>Specialisation of demand responsive MODE OF OPERATION. The service is based on AREAs, but still SCHEDULED STOP POINTs are used.</xs:documentation>
+					<xs:documentation>Specialisation of demand responsive MODE OF OPERATION. The service is based on AREAs, but still SCHEDULED STOP POINTs are used. Sometimes the characteristics of a given demand responsive service makes it mor of an ALTERNATIVE MODE OF OPERATION (e.g. pure area service). A conventional mode of operation is more indicated, when there are a limited list of stops within the area.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="shuttle">
@@ -259,6 +254,11 @@
 					<xs:documentation>The service is provided as a replacement of a SCHEDULED service.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="school">
+				<xs:annotation>
+					<xs:documentation>MODE OF OPERATION that specifically states that it is school related. Specialisation of demand responsive or scheduled.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
 			<xs:enumeration value="pRM">
 				<xs:annotation>
 					<xs:documentation>If for a scheduled, conventional servce a special additional vehicle is needed to provide for special PRM needs. This kind of MODE OF OPERATION is to be used.</xs:documentation>
@@ -433,7 +433,7 @@
 			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="ModeAndModeAndOperationFilterStructure">
+	<xs:complexType name="ModeAndModeOfOperationFilterStructure">
 		<xs:annotation>
 			<xs:documentation>List of MODE and MODE OF OPERATION filter offers to include or exclude.</xs:documentation>
 		</xs:annotation>

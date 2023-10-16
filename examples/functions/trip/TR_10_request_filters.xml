@@ -35,8 +35,8 @@
 						<PersonalMode>bicycle</PersonalMode>
 						<siri:FunicularSubmode>funicular</siri:FunicularSubmode>
 						<PersonalModeOfOperation>own</PersonalModeOfOperation>
+						<PersonalModeOfOperation>privateLift</PersonalModeOfOperation>						
 						<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
-						<AlternativeModeOfOperation>privateLift</AlternativeModeOfOperation>
 						<AlternativeModeOfOperation>peerToPeerSharing</AlternativeModeOfOperation>
 						<ConventionalModeOfOperation>pRM</ConventionalModeOfOperation>
 						<ConventionalModeOfOperation>scheduled</ConventionalModeOfOperation>
