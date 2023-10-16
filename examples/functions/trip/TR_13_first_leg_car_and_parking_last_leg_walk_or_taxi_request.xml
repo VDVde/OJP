@@ -17,7 +17,7 @@
 						</Name>
 					</PlaceRef>
 					<DepArrTime>2020-12-01T12:00:00Z</DepArrTime>
-					<IndividualTransportOptions>
+					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>car</PersonalMode>
 						</ItModeAndModeOfOperation>
@@ -27,7 +27,7 @@
 						<MinDuration>PT1M</MinDuration>
 						<Speed>150</Speed>
 						<AdditionalTime>PT3M</AdditionalTime>
-					</IndividualTransportOptions>
+					</IndividualTransportOption>
 				</Origin>
 				<Destination>
 					<PlaceRef>
@@ -39,17 +39,17 @@
 							<Text>Hirslanden</Text>
 						</Name>
 					</PlaceRef>
-					<IndividualTransportOptions>
+					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>foot</PersonalMode>
 						</ItModeAndModeOfOperation>
-					</IndividualTransportOptions>
-					<IndividualTransportOptions>
+					</IndividualTransportOption>
+					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>car</PersonalMode>
 							<AlternativeModeOfOperation>taxi</AlternativeModeOfOperation>
 						</ItModeAndModeOfOperation>
-					</IndividualTransportOptions>
+					</IndividualTransportOption>
 				</Destination>
 				<Params>
 				</Params>

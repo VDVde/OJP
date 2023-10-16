@@ -17,7 +17,7 @@
 						</Name>
 					</PlaceRef>
 					<DepArrTime>2020-12-01T12:00:00Z</DepArrTime>
-					<IndividualTransportOptions>
+					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>bicycle</PersonalMode>
 							<PersonalModeOfOperation>hire</PersonalModeOfOperation>
@@ -28,8 +28,8 @@
 						<MinDuration>PT1M</MinDuration>
 						<Speed>150</Speed>
 						<AdditionalTime>PT3M</AdditionalTime>
-					</IndividualTransportOptions>
-					<IndividualTransportOptions>
+					</IndividualTransportOption>
+					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>car</PersonalMode>
 							<!-- Mode of operation is not included on purpose. This means that any Mode of operation of the car can be used. However, most implementation will just assume "own" car. -->
@@ -40,7 +40,7 @@
 						<MinDuration>PT1M</MinDuration>
 						<Speed>150</Speed>
 						<AdditionalTime>PT3M</AdditionalTime>
-					</IndividualTransportOptions>
+					</IndividualTransportOption>
 				</Origin>
 				<Destination>
 					<PlaceRef>

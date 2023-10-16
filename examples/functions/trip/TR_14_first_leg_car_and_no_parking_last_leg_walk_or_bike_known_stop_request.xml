@@ -17,7 +17,7 @@
 						</Name>
 					</PlaceRef>
 					<DepArrTime>2020-12-01T12:00:00Z</DepArrTime>
-					<IndividualTransportOptions>
+					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>car</PersonalMode>
 							<AlternativeModeOfOperation>chauffeured</AlternativeModeOfOperation>
@@ -30,12 +30,12 @@
 						<MinDuration>PT1M</MinDuration>
 						<Speed>150</Speed>
 						<AdditionalTime>PT3M</AdditionalTime>
-					</IndividualTransportOptions>
-					<IndividualTransportOptions>
+					</IndividualTransportOption>
+					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>foot</PersonalMode>
 						</ItModeAndModeOfOperation>
-					</IndividualTransportOptions>
+					</IndividualTransportOption>
 				</Origin>
 				<Destination>
 					<PlaceRef>
@@ -47,13 +47,13 @@
 							<Text>Hirslanden</Text>
 						</Name>
 					</PlaceRef>
-					<IndividualTransportOptions>
+					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>bicycle</PersonalMode>
 							<PersonalModeOfOperation>own</PersonalModeOfOperation>
 							<!-- if a different stop that expected is used, then this might not be, what the person wants. Then a VIA might be indicated or the usage of two trip requests A to stop where bike is and then a second leg home.-->
 						</ItModeAndModeOfOperation>
-					</IndividualTransportOptions>
+					</IndividualTransportOption>
 				</Destination>
 				<Params>
 				</Params>

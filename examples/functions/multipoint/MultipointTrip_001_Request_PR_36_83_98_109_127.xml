@@ -30,7 +30,7 @@
 							<Text>Luzern</Text>
 						</Name>
 					</PlaceRef>
-					<IndividualTransportOptions>
+					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>scooter</PersonalMode>
 							<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
@@ -38,7 +38,7 @@
 						<MaxDistance>5000</MaxDistance>
 						<MaxDuration>PT1H</MaxDuration>
 						<Speed>120</Speed>
-					</IndividualTransportOptions>
+					</IndividualTransportOption>
 				</Destination>
 				<Params>
 					<NoSight>false</NoSight>
