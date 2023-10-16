@@ -549,7 +549,7 @@
 			</xs:element>
 			<xs:element name="Leg" type="LegStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Legs of the trip (Transmodel: LEG or MONITORED LEG).</xs:documentation>
+					<xs:documentation>Legs of the trip (Transmodel: LEG or MONITORED LEG). Note: There is always a TransferLeg between two TimedLegs. There can be a TransferLeg between two ContinuousLegs (e.g. because some special time consuming action is necessary like a car hire). There can be a TransferLeg between a ContinuousLeg and a TimedLeg for the same reason. There aren't two consecutive TransferLegs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
