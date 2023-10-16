@@ -8,7 +8,11 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Fare Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPFareRequest" type="OJPFareRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPFareRequest" type="OJPFareRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>This service provides general, stop-specific and trip-specific fare information. This service implements the models PI Stop Fare Request, PI FQ Fare Product Request, PI FQ Single Trip Fare Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPFareRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -19,7 +23,11 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPFareDelivery" type="OJPFareDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPFareDelivery" type="OJPFareDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>This service provides general, stop-specific and trip-specific fare information. This service implements the models PI Stop Fare Request, PI FQ Fare Product Request, PI FQ Single Trip Fare Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPFareDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -35,7 +43,13 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Location Information Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPLocationInformationRequest" type="OJPLocationInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPLocationInformationRequest" type="OJPLocationInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>The Location Information service comprises the following four base functions:
+matching text input against possible origin and destination locations, retrieval of all location objects (bunch delivery), geographical context service that provides location objects within a bounding box, reverse address resolution service that delivers the nearest address for a given coordinate.
+By means of abstraction these functions are assembled within one single service – the Location Information service. This way, even more possible applications have arisen, such as: finding the nearest stops/stations for a given coordinate, matching text input against the names of locations near a given coordinate. This service implements the model PI QR Location Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPLocationInformationRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -46,7 +60,13 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPLocationInformationDelivery" type="OJPLocationInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPLocationInformationDelivery" type="OJPLocationInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>The Location Information service comprises the following four base functions:
+matching text input against possible origin and destination locations, retrieval of all location objects (bunch delivery), geographical context service that provides location objects within a bounding box, reverse address resolution service that delivers the nearest address for a given coordinate.
+By means of abstraction these functions are assembled within one single service – the Location Information service. This way, even more possible applications have arisen, such as: finding the nearest stops/stations for a given coordinate, matching text input against the names of locations near a given coordinate. This service implements the model PI QR Location Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPLocationInformationDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -62,7 +82,12 @@
 	<xs:annotation>
 		<xs:documentation>========================================== ExchangePoints Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPExchangePointsRequest" type="OJPExchangePointsRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPExchangePointsRequest" type="OJPExchangePointsRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>Distributed journey planning requires several journey planning systems planning parts of the whole trip which shall be assembled. Each of the planners will therefore get a sub-query to plan: the first planner from the origin of the trip to its system boundaries, the next planner has to find trips from these boundaries to its boundaries with the next systems. This process will be continued until the final system where the destination of the user’s trip is located.
+The boundary points where the trip calculation is handed over to the next journey planning system are called exchange points. If they are not known in advance the exchange points can be looked up from a server by using the exchange points service. This service implements the model PI QR Location Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPExchangePointsRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -73,7 +98,12 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPExchangePointsDelivery" type="OJPExchangePointsDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPExchangePointsDelivery" type="OJPExchangePointsDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>Distributed journey planning requires several journey planning systems planning parts of the whole trip which shall be assembled. Each of the planners will therefore get a sub-query to plan: the first planner from the origin of the trip to its system boundaries, the next planner has to find trips from these boundaries to its boundaries with the next systems. This process will be continued until the final system where the destination of the user’s trip is located.
+The boundary points where the trip calculation is handed over to the next journey planning system are called exchange points. If they are not known in advance the exchange points can be looked up from a server by using the exchange points service. This service implements the model PI QR Location Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPExchangePointsDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -89,7 +119,11 @@
 	<xs:annotation>
 		<xs:documentation>========================================== StopEvent Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPStopEventRequest" type="OJPStopEventRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPStopEventRequest" type="OJPStopEventRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>This service provides information on arrivals and/or departures of public transport services from stops for a requested time or period of time. Restrictions can be set in the request parameters that filter the result contents accordingly. This service implements the model PI QR Stop Event Request from TM 6</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPStopEventRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -100,7 +134,11 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPStopEventDelivery" type="OJPStopEventDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPStopEventDelivery" type="OJPStopEventDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>This service provides information on arrivals and/or departures of public transport services from stops for a requested time or period of time. Restrictions can be set in the request parameters that filter the result contents accordingly. This service implements PI QR Stop Event Request from TM 6</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPStopEventDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -116,7 +154,12 @@
 	<xs:annotation>
 		<xs:documentation>========================================== TripInfo Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPTripInfoRequest" type="OJPTripInfoRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPTripInfoRequest" type="OJPTripInfoRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't provide directly information about a trip. When the response changes the conditions in a way that invalidates the trip (connection no longer possible, delays, cancellation) then a new TripRequest for the reminder of the trip is necessary for a replanning of the trip.
+The service also provides information about formation, occupancy and capacity. The full SIRI elements are used. Therefore a lot of things can be expressed. Some that go beyond what usually may be required. However, if accessibility is fully to be considered (with stop-vehicle interaction), then SIRI must be used in full. The relevant SIRI documentation should be considered. This service implements PI QR Service Journey Request and PI QR Single Journey Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPTripInfoRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -127,7 +170,12 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPTripInfoDelivery" type="OJPTripInfoDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPTripInfoDelivery" type="OJPTripInfoDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't provide directly information about a trip. When the response changes the conditions in a way that invalidates the trip (connection no longer possible, delays, cancellation) then a new TripRequest for the reminder of the trip is necessary for a replanning of the trip.
+The service also provides information about formation, occupancy and capacity. The full SIRI elements are used. Therefore a lot of things can be expressed. Some that go beyond what usually may be required. However, if accessibility is fully to be considered (with stop-vehicle interaction), then SIRI must be used in full. The relevant SIRI documentation should be considered. This service implements PI QR Service Journey Request and PI QR Single Journey Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPTripInfoDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -143,7 +191,11 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Trip Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPTripRequest" type="OJPTripRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPTripRequest" type="OJPTripRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>This service provides intermodal trip information from an origin location to a destination taking various user preferences into account. In the case of OJPMultipointTripRequest it is a set of origins and destinations that are searched. This service implements the model PI QR Trip Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPTripRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -154,7 +206,11 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPTripDelivery" type="OJPTripDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPTripDelivery" type="OJPTripDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>This service provides intermodal trip information from an origin location to a destination taking various user preferences into account. In the case of OJPTripRequest it is single origin and a single destination that are searched. This service implements the model PI QR Trip Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPTripDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -170,7 +226,11 @@
 	<xs:annotation>
 		<xs:documentation>========================================== MultiPointTrip Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPMultiPointTripRequest" type="OJPMultiPointTripRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPMultiPointTripRequest" type="OJPMultiPointTripRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>This service provides intermodal trip information from multiple origin location to multiple destination taking various user preferences into account. In the case of OJPMultipointTripRequest it is a set of origins and destinations that are searched. This service implements the model PI QR Trip Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPMultiPointTripRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -181,7 +241,11 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPMultiPointTripDelivery" type="OJPMultiPointTripDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPMultiPointTripDelivery" type="OJPMultiPointTripDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>This service provides intermodal trip information from multiple origin location to multiple destination taking various user preferences into account. In the case of OJPMultipointTripRequest it is a set of origins and destinations that are searched. This service implements the model PI QR Trip Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPMultiPointTripDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -197,7 +261,11 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Status Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPStatusRequest" type="OJPStatusRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPStatusRequest" type="OJPStatusRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>The status service provides basic information about the operational status of an OJP system.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPStatusRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -207,7 +275,11 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPStatusDelivery" type="OJPStatusDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPStatusDelivery" type="OJPStatusDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>The status service provides basic information about the operational status of an OJP system.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPStatusDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -223,7 +295,13 @@
 	<xs:annotation>
 		<xs:documentation>========================================== TripRefine Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPTripRefineRequest" type="OJPTripRefineRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPTripRefineRequest" type="OJPTripRefineRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>The trip refinement service retrieves additional or updated information (e.g., real-time data) about a given, previously retrieved trip. It does not depend on the assumption that the trip has been retrieved from the same server; it may, in fact, even stem from another source than a OJP system. 
+An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical objcet IDs, this is signalled by setting ExternalObjectRefs to true. 
+System B, being confronted with external IDs, must try to recognise the relevant objects in another way and retrieve them in its own database. In the response it will use its own object IDs. In order to maintain a consistent mapping, it is imperative that system B reflects the structure of the refine request precisely in its response (principle of structure maintenance).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPTripRefineRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -234,7 +312,13 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPTripRefineDelivery" type="OJPTripRefineDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPTripRefineDelivery" type="OJPTripRefineDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>The trip refinement service retrieves additional or updated information (e.g., real-time data) about a given, previously retrieved trip. It does not depend on the assumption that the trip has been retrieved from the same server; it may, in fact, even stem from another source than a OJP system. 
+An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical objcet IDs, this is signalled by setting ExternalObjectRefs to true. 
+System B, being confronted with external IDs, must try to recognise the relevant objects in another way and retrieve them in its own database. In the response it will use its own object IDs. In order to maintain a consistent mapping, it is imperative that system B reflects the structure of the refine request precisely in its response (principle of structure maintenance).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPTripRefineDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -250,7 +334,11 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Availability Request ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPAvailabilityRequest" type="OJPAvailabilityRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPAvailabilityRequest" type="OJPAvailabilityRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>The availability service informs about the availability of a MOBILITY SERVICE, a VEHICLE, SERVICE JOURNEY, or SINGLE JOURNEY. This service implements the models PI QR AM Vehicle Type Request and PI QR AM Mobility Service Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPAvailabilityRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -261,7 +349,11 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPAvailabilityDelivery" type="OJPAvailabilityDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPAvailabilityDelivery" type="OJPAvailabilityDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>The availability service informs about the availability of a MOBILITY SERVICE, a VEHICLE, SERVICE JOURNEY, or SINGLE JOURNEY. This service implements the models PI QR AM Vehicle Type Request and PI QR AM Mobility Service Request from TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPAvailabilityDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -276,7 +368,11 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Line Information Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPLineInformationRequest" type="OJPLineInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPLineInformationRequest" type="OJPLineInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>The service provides route information about a given LINE. This helps showing the LINE on maps. This implements a small part of model PI QR Schedule Request of TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPLineInformationRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -287,7 +383,11 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPLineInformationDelivery" type="OJPLineInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPLineInformationDelivery" type="OJPLineInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>The service provides route information about a given LINE. This helps showing the LINE on maps. This implements a small part of PI QR Schedule Request of TM 6.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPLineInformationDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
@@ -302,7 +402,11 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Trip Change Service ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:element name="OJPTripChangeRequest" type="OJPTripChangeRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest"/>
+	<xs:element name="OJPTripChangeRequest" type="OJPTripChangeRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
+		<xs:annotation>
+			<xs:documentation>A trip can be modified in a limited manner by specifying a longer time duration for a specific interchange or by specifying an estimated leg for which the exact time information shall be retrieved. In both cases, earlier or later legs of the trip may be recalculated as well.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPTripChangeRequestStructure">
 		<xs:complexContent>
 			<xs:extension base="AbstractOJPServiceRequestStructure">
@@ -313,7 +417,11 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="OJPTripChangeDelivery" type="OJPTripChangeDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:element name="OJPTripChangeDelivery" type="OJPTripChangeDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
+		<xs:annotation>
+			<xs:documentation>A trip can be modified in a limited manner by specifying a longer time duration for a specific interchange or by specifying an estimated leg for which the exact time information shall be retrieved. In both cases, earlier or later legs of the trip may be recalculated as well.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="OJPTripChangeDeliveryStructure">
 		<xs:complexContent>
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
