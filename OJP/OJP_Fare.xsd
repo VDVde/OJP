@@ -16,22 +16,26 @@
 			<xs:choice>
 				<xs:element name="StopFareRequest" type="StopFareRequestStructure">
 					<xs:annotation>
-						<xs:documentation>A request for stop-related Fare information.</xs:documentation>
+						<xs:documentation>A request for stop-related FARE information.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="StaticFareRequest" type="StaticFareRequestStructure">
+				<xs:element name="PlaceFareRequest" type="PlaceFareRequestStructure">
 					<xs:annotation>
-						<xs:documentation>A request for general/static Fare information.</xs:documentation>
+						<xs:documentation>A request for place-related FARE information.</xs:documentation>
+					</xs:annotation>
+				</xs:element>				<xs:element name="StaticFareRequest" type="StaticFareRequestStructure">
+					<xs:annotation>
+						<xs:documentation>A request for general/static FARE information.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="TripFareRequest" type="TripFareRequestStructure">
 					<xs:annotation>
-						<xs:documentation>A request to calculate the Fare information of a single trip</xs:documentation>
+						<xs:documentation>A request to calculate the FARE information of a single trip</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="MultiTripFareRequest" type="MultiTripFareRequestStructure">
 					<xs:annotation>
-						<xs:documentation>A request to calculate aggregated Fare information of multiple single trips</xs:documentation>
+						<xs:documentation>A request to calculate aggregated FARE information of multiple single trips</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -57,8 +61,31 @@
 					<xs:documentation>Date for which to retrieve Fare information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="PlaceFareRequestStructure">
+		<xs:annotation>
+			<xs:documentation>Sub-request: PLACE related fare information. This doesn't make a lot of sense for addresses, topographic place and coordinates. However, STOP PLACE, SCHEDULED STOP POINT and POINT OF INTERES>T are different.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Place" type="PlaceStructure">
+				<xs:annotation>
+					<xs:documentation>Place to get FAREs from (usually use only StopPoint, StopPlace and PointOfInterest).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Date" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Date for which to retrieve Fare information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="FareProductRef" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to a FareProduct. If no FareProductRef is specified the responding system should reply with information about all available fare products.</xs:documentation>
+				</xs:annotation>
+			</xs:element>									
+		</xs:sequence>
+	</xs:complexType>	
 	<xs:complexType name="StaticFareRequestStructure">
 		<xs:annotation>
 			<xs:documentation>General Fare information. May depend on date.</xs:documentation>
@@ -159,6 +186,11 @@
 						<xs:documentation>Stop-related Fare information.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
+				<xs:element name="PlaceFareResult" type="PlaceFareResultStructure">
+					<xs:annotation>
+						<xs:documentation>Place-related Fare information.</xs:documentation>
+					</xs:annotation>
+				</xs:element>				
 				<xs:element name="StaticFareResult" type="StaticFareResultStructure">
 					<xs:annotation>
 						<xs:documentation>Static Fare information.</xs:documentation>
@@ -190,6 +222,30 @@
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="PlaceFareResultStructure">
+		<xs:annotation>
+			<xs:documentation>PLACE-related Fare information.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Place" type="PlaceStructure">
+				<xs:annotation>
+					<xs:documentation>The involved PLACE. Usually a StopPoint, StopPlace or PointOfInterest.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FareProduct" type="FareProductStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>[related to FARE PRODUCT in TM and NeTEx] different FARE PRODUCTs that may be available with related information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StaticInfoUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>URL to information page on the web.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
+		</xs:sequence>
+
+	</xs:complexType>	
 	<xs:complexType name="StaticFareResultStructure">
 		<xs:annotation>
 			<xs:documentation>General Fare information.</xs:documentation>

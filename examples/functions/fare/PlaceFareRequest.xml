@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2020-01-19T12:00:00Z</siri:RequestTimestamp>
+			<siri:RequestorRef>MyClient</siri:RequestorRef>
+			<OJPFareRequest>
+				<siri:RequestTimestamp>2020-01-19T12:00:00Z</siri:RequestTimestamp>
+				<siri:MessageIdentifier>231231-231</siri:MessageIdentifier>
+				<PlaceFareRequest>
+					<Place>
+						<PointOfInterest>
+							<PublicCode>313</PublicCode>
+							<Name>
+								<Text>Park and Ride Wankdorf</Text>
+							</Name>
+						</PointOfInterest>
+						<Name>
+							<Text>Park and Ride Wankdorf</Text>
+						</Name>
+						<GeoPosition>
+							<siri:Longitude>7.1</siri:Longitude>
+							<siri:Latitude>26.2</siri:Latitude>
+						</GeoPosition>
+					</Place>
+					<Date>2023-10-17</Date>
+					<FareProductRef>PR_SBB_Day</FareProductRef>
+					<FareProductRef>PR_SBB_Hour</FareProductRef>
+				</PlaceFareRequest>
+				<Params>
+					<FareAuthorityFilter>ch:1:NOVA</FareAuthorityFilter>
+					<PassengerCategory>Adult</PassengerCategory>
+					<FareClass>secondClass</FareClass>
+					<Traveller>
+						<Age>25</Age>
+					</Traveller>
+				</Params>
+			</OJPFareRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>
