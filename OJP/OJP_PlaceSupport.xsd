@@ -512,7 +512,7 @@
 	</xs:complexType>
 	<xs:complexType name="PlaceRefStructure">
 		<xs:annotation>
-			<xs:documentation>Reference to a geographic PLACE of any type which may be specified as the origin or destination of a trip</xs:documentation>
+			<xs:documentation>Reference to a geographic PLACE of any type which may be specified as the origin or destination of a trip.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="PlaceRefGroup"/>
@@ -520,7 +520,7 @@
 	</xs:complexType>
 	<xs:group name="PlaceRefGroup">
 		<xs:annotation>
-			<xs:documentation>Group for reference to a geographic PLACE of any type which may be specified as the origin or destination of a trip</xs:documentation>
+			<xs:documentation>Group for reference to a geographic PLACE of any type which may be specified as the origin or destination of a trip.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>

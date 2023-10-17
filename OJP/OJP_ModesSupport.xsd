@@ -445,7 +445,7 @@
 			</xs:element>
 			<xs:element name="PtMode" type="siri:VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>List of PT Transport modes to include/exclude. We use the SIRI 2.1 element which allows for many values in the enumeration. In OJP we don't use the following enumeration values: "pti1_xxx", "xxxServices" when a value without the "Service" exists for the same MODE, "allServicesExcept", "selfDrive", "taxi". Also in cases where only a "xxxService" exists in the enumeration, it should be avoided. "other" or "unknown" should only be used, if no other value applies. </xs:documentation>
+					<xs:documentation>List of PT Transport modes to include/exclude. We use the SIRI 2.1 element which allows for many values in the enumeration. In OJP we don't use the following enumeration values: "pti1_xxx", "xxxServices" when a value without the "Service" exists for the same MODE, "allServicesExcept", "selfDrive", "taxi". Also in cases where only a "xxxService" exists in the enumeration, it should be avoided. "other" or "unknown" should only be used, if no other value applies.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonalMode" type="PersonalModesEnumeration" minOccurs="0" maxOccurs="unbounded">
