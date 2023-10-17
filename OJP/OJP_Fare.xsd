@@ -23,7 +23,8 @@
 					<xs:annotation>
 						<xs:documentation>A request for place-related FARE information.</xs:documentation>
 					</xs:annotation>
-				</xs:element>				<xs:element name="StaticFareRequest" type="StaticFareRequestStructure">
+				</xs:element>
+				<xs:element name="StaticFareRequest" type="StaticFareRequestStructure">
 					<xs:annotation>
 						<xs:documentation>A request for general/static FARE information.</xs:documentation>
 					</xs:annotation>
@@ -61,12 +62,11 @@
 					<xs:documentation>Date for which to retrieve Fare information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PlaceFareRequestStructure">
 		<xs:annotation>
-			<xs:documentation>Sub-request: PLACE related fare information. This doesn't make a lot of sense for addresses, topographic place and coordinates. However, STOP PLACE, SCHEDULED STOP POINT and POINT OF INTERES>T are different.</xs:documentation>
+			<xs:documentation>Sub-request: PLACE related fare information. This doesn't make a lot of sense for addresses, topographic place and coordinates. However, STOP PLACE, SCHEDULED STOP POINT and POINT OF INTERES&gt;T are different.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Place" type="PlaceStructure">
@@ -83,9 +83,9 @@
 				<xs:annotation>
 					<xs:documentation>Reference to a FareProduct. If no FareProductRef is specified the responding system should reply with information about all available fare products.</xs:documentation>
 				</xs:annotation>
-			</xs:element>									
+			</xs:element>
 		</xs:sequence>
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:complexType name="StaticFareRequestStructure">
 		<xs:annotation>
 			<xs:documentation>General Fare information. May depend on date.</xs:documentation>
@@ -190,7 +190,7 @@
 					<xs:annotation>
 						<xs:documentation>Place-related Fare information.</xs:documentation>
 					</xs:annotation>
-				</xs:element>				
+				</xs:element>
 				<xs:element name="StaticFareResult" type="StaticFareResultStructure">
 					<xs:annotation>
 						<xs:documentation>Static Fare information.</xs:documentation>
@@ -244,8 +244,7 @@
 			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
-
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:complexType name="StaticFareResultStructure">
 		<xs:annotation>
 			<xs:documentation>General Fare information.</xs:documentation>
