@@ -36,7 +36,7 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>motorcycle</IndividualMode>
+									<PersonalMode>motorcycle</PersonalMode>
 								</Service>
 								<Duration>PT15M</Duration>
 							</ContinuousLeg>
@@ -47,14 +47,14 @@
 						<Leg>
 							<Id>2</Id>
 							<TransferLeg>
-								<TransferMode>checkIn</TransferMode>
+								<TransferType>checkIn</TransferType>
 								<LegStart>
 									<GeoPosition>
 										<siri:Longitude>5.2</siri:Longitude>
 										<siri:Latitude>20.2</siri:Latitude>
 									</GeoPosition>
 									<Name>
-										<Text>Destination</Text>
+										<Text>Lötschberg car transport rail check in</Text>
 									</Name>
 								</LegStart>
 								<LegEnd>
