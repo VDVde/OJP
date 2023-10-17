@@ -590,23 +590,23 @@
 			</xs:element>
 			<xs:element name="Duration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The duration of the leg (e.g. from Transmodel PT RIDE LEG.Duration)</xs:documentation>
+					<xs:documentation>The duration of the LEG (e.g. from Transmodel PT RIDE LEG.Duration)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
 				<xs:element name="TimedLeg" type="TimedLegStructure">
 					<xs:annotation>
-						<xs:documentation>Timetabled Leg.</xs:documentation>
+						<xs:documentation>Corresponds to a RIDE or PT RIDE LEG in TM 6.2 with the attribute Timed (with related information). Passenger LEG with timetabled schedule.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="TransferLeg" type="TransferLegStructure">
 					<xs:annotation>
-						<xs:documentation>Leg to connect between different services or modes of transport (interchanges).</xs:documentation>
+						<xs:documentation>TRANSFER LEG or CONNECTION LEG according to TM 6.2. Description of a LEG which links other LEGs where a TRANSFER or CONNECTION between different LOCATIONs is required.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="ContinuousLeg" type="ContinuousLegStructure">
 					<xs:annotation>
-						<xs:documentation>Leg by a continuously available service or mode of transport.</xs:documentation>
+						<xs:documentation>A specialised type of RIDE LEG in with Timed=false, a PERSONAL LEG or an ACCESS LEG TM 6 and NeTEx. LEG of a TRIP that is not bound to a timetable.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -620,7 +620,7 @@
 	</xs:complexType>
 	<xs:complexType name="TimedLegStructure">
 		<xs:annotation>
-			<xs:documentation>passenger LEG with timetabled schedule.  Corresponds to a RIDE.</xs:documentation>
+			<xs:documentation>Corresponds to a RIDE or PT RIDE LEG in TM 6.2 with the attribute Timed (with related information). Passenger LEG with timetabled schedule.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="LegBoard" type="LegBoardStructure">
@@ -665,7 +665,7 @@
 	</xs:complexType>
 	<xs:complexType name="TransferLegStructure">
 		<xs:annotation>
-			<xs:documentation>[a specialised type of NAVIGATION PATH in TMv6] description of a LEG which links other LEGs of a TRIP where a TRANSFER between different LOCATIONs is required</xs:documentation>
+			<xs:documentation>TRANSFER LEG or CONNECTION LEG according to TM 6.2. Description of a LEG which links other LEGs where a TRANSFER or CONNECTION between different LOCATIONs is required.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TransferType" type="TransferTypeEnumeration" minOccurs="1" maxOccurs="unbounded">
@@ -721,7 +721,7 @@
 	</xs:complexType>
 	<xs:complexType name="ContinuousLegStructure">
 		<xs:annotation>
-			<xs:documentation>[relates to a specific type of RIDE in TM and NeTEx] leg of a journey that is not bound to a timetable </xs:documentation>
+			<xs:documentation>[relates to a specific type of RIDE LEG with Timed=false or an ACCESS LEG in TM and NeTEx] leg of a journey that is not bound to a timetable </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="LegStart" type="PlaceRefStructure">
