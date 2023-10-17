@@ -575,7 +575,7 @@
 	</xs:simpleType>
 	<xs:complexType name="LegStructure">
 		<xs:annotation>
-			<xs:documentation>a single stage of a TRIP that is made without change of MODE or service (ie: between each interchange)</xs:documentation>
+			<xs:documentation>A single stage of a TRIP that is made without change of MODE or service (ie: between each interchange). Implements LEG from TM 6.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Id" type="LegObjectIdType">
