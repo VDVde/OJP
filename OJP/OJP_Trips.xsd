@@ -75,9 +75,9 @@
 			<xs:documentation>Data to be included/excluded from search, f.e. modes, operators (Transmodel: TRIP REQUEST FILTER).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PtModeFilter" type="PtModeFilterStructure" minOccurs="0">
+			<xs:element name="ModeAndModeOfOperationFilter" type="ModeAndModeOfOperationFilterStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Modes to be considered in trip calculation.</xs:documentation>
+					<xs:documentation>MODEs and MODEs OF OPERATION to be considered in trip calculation. If only MODE is used, then it is for all MODE OF OPERATION. If combinations of MODE and MODE OF OPERATION are used (multiples), then all combinations are to be considered.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LineFilter" type="LineDirectionFilterStructure" minOccurs="0">
@@ -88,11 +88,6 @@
 			<xs:element name="OperatorFilter" type="OperatorFilterStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Transport operators to include/exclude.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PrivateModeFilter" type="PrivateModeFilterStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Private mobility options to include/exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VehicleFilter" type="VehicleFilterStructure" minOccurs="0">
@@ -120,9 +115,9 @@
 					</xs:annotation>
 				</xs:element>
 				<xs:sequence>
-					<xs:element name="ItModesToCover" type="IndividualModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="ItModeToCover" type="ItModesStructure" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>For each mode in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
+							<xs:documentation>For each MODE or MODE OF OPERATION combination in this list a separate monomodal trip shall be found - in addition to inter-modal solutions.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
@@ -132,7 +127,7 @@
 					</xs:element>
 					<xs:element name="IncludeAllRestrictedLines" type="xs:boolean" minOccurs="0" default="false">
 						<xs:annotation>
-							<xs:documentation>There might exist lines that have special restrictions and are not generally available to the public. E.g. school buses, company shuttles. dragLifts need to have an ACCESS MODE ski. Lines with ACCESS MODE bicycle will be included as well. If this flag is set, then existing restricted lines are considered by the router, irrespective of the selected passenger categories or the MotorisedMainTravelMode. The results are marked as restricted in the ServiceGroup. The restriction can be seen from: ACCESS MODE or PrivateMode. The usage could also be detailed with Attribute elements. Restricted trumps PassengerCategory, for example. If Restricted is set to true, all services are displayed.</xs:documentation>
+							<xs:documentation>There might exist lines that have special restrictions and are not generally available to the public. E.g. school buses, company shuttles. dragLifts need to have an ACCESS MODE ski. Lines with ACCESS MODE bicycle will be included as well. If this flag is set, then existing restricted lines are considered by the router, irrespective of the selected passenger categories or the MotorisedMainTravelMode. The results are marked as restricted in the ServiceGroup. The usage could also be detailed with Attribute elements. Restricted trumps PassengerCategory, for example. If Restricted is set to true, all services are displayed.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="PassengerCategory" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -157,7 +152,7 @@
 			</xs:element>
 			<xs:element name="WalkSpeed" type="OpenPercentType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Deviation from average walk speed in percent. 100% percent is average speed. Less than 100 % slower, Greater than 150% faster.</xs:documentation>
+					<xs:documentation>Deviation from average walking speed in percent. 100% percent is average speed. Less than 100 % slower, Greater than 150% faster.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AdditionalTransferTime" type="xs:duration" minOccurs="0">
@@ -554,7 +549,7 @@
 			</xs:element>
 			<xs:element name="Leg" type="LegStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Legs of the trip (Transmodel: LEG or MONITORED LEG).</xs:documentation>
+					<xs:documentation>Legs of the trip (Transmodel: LEG or MONITORED LEG). Note: There is always a TransferLeg between two TimedLegs. There can be a TransferLeg between two ContinuousLegs (e.g. because some special time consuming action is necessary like a car hire). There can be a TransferLeg between a ContinuousLeg and a TimedLeg for the same reason. There aren't two consecutive TransferLegs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
@@ -673,18 +668,11 @@
 			<xs:documentation>[a specialised type of NAVIGATION PATH in TMv6] description of a LEG which links other LEGs of a TRIP where a TRANSFER between different LOCATIONs is required</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:choice>
-				<xs:element name="TransferMode" type="TransferModesEnumeration">
-					<xs:annotation>
-						<xs:documentation>Mode that is used for this interchange between public services.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="ContinuousMode" type="ContinuousModesEnumeration">
-					<xs:annotation>
-						<xs:documentation>Mode that is used for this interchange between public services.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:choice>
+			<xs:element name="TransferType" type="TransferTypeEnumeration" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>TYPE that is used for this interchange between public services (TYPE OF TRANSFER, but also ACCESS MODE and PERSONAL MODE as far as a TRANSFER is concerned). In some constellations multiple TransferType are possible.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="LegStart" type="PlaceRefStructure">
 				<xs:annotation>
 					<xs:documentation>Stop/Station/Place where boarding is done (can be a PLACE, SCHEDULED STOP POINT or a VEHICLE MEETING POINT)</xs:documentation>
@@ -738,23 +726,23 @@
 		<xs:sequence>
 			<xs:element name="LegStart" type="PlaceRefStructure">
 				<xs:annotation>
-					<xs:documentation>Stop/Station where boarding is done (can be a SCHEDULED STOP POINT or a VEHICLE MEETING POINT).</xs:documentation>
+					<xs:documentation>PLACE where the leg starts (can be a PLACE, SCHEDULED STOP POINT or a VEHICLE MEETING POINT) with time information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LegEnd" type="PlaceRefStructure">
 				<xs:annotation>
-					<xs:documentation>Stop/Station to alight (can be a SCHEDULED STOP POINT or a VEHICLE MEETING POINT).</xs:documentation>
+					<xs:documentation>PLACE to alight (can be a SCHEDULED STOP POINT or a VEHICLE MEETING POINT) with time information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Service" type="ContinuousServiceStructure">
 				<xs:annotation>
-					<xs:documentation>Service of this leg. May be "walk" in most cases, but also cycling or taxi etc.</xs:documentation>
+					<xs:documentation>Service of this leg.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TimeWindowGroup"/>
 			<xs:element name="Duration" type="xs:duration">
 				<xs:annotation>
-					<xs:documentation>Duration of this leg according to user preferences like walk speed.</xs:documentation>
+					<xs:documentation>Duration of this leg according to user preferences like walking speed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LegDescription" type="InternationalTextStructure" minOccurs="0">
@@ -796,15 +784,18 @@
 			<xs:documentation>Describes the the situation at a stop or station at which the passenger boards a Leg of a trip including time-related information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:group ref="StopPointGroup"/>
+			<xs:choice>
+				<xs:group ref="StopPointGroup"/>
+				<xs:element name="GeoPosition" type="siri:LocationStructure"/>
+			</xs:choice>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+					<xs:documentation>Contains ARRIVAL times (timetable, recorded, estimated, timing bands estimated) and the ARRIVAL formation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure">
 				<xs:annotation>
-					<xs:documentation>describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+					<xs:documentation>Contains DEPARTURE times (timetable, recorded, estimated, timing bands estimated) and the DEPARTURE formation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DistributorInterchangeId" type="xs:normalizedString" minOccurs="0">

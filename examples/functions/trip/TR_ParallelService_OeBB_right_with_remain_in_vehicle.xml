@@ -139,7 +139,7 @@
 							<!-- the TransferLeg with remainInVehicle -->
 							<Id>2</Id>
 							<TransferLeg>
-								<TransferMode>remainInVehicle</TransferMode>
+								<TransferType>remainInVehicle</TransferType>
 								<LegStart>
 									<siri:StopPointRef>spp:5</siri:StopPointRef>
 									<Name>

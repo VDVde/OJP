@@ -256,17 +256,7 @@
 	<xs:annotation>
 		<xs:documentation>========================================== Sharing Services ==========================================</xs:documentation>
 	</xs:annotation>
-	<xs:simpleType name="SharingModelEnumeration">
-		<xs:annotation>
-			<xs:documentation>Sharing service loan and return scheme.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:NMTOKEN">
-			<xs:enumeration value="singleStationBased"/>
-			<xs:enumeration value="multipleStationBased"/>
-			<xs:enumeration value="nonStationBased"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:group name="SharingServiceUsageGroup">
+	<xs:group name="AlternativeServiceUsageGroup">
 		<xs:annotation>
 			<xs:documentation>Usage parameters of a sharing service.</xs:documentation>
 		</xs:annotation>
@@ -283,11 +273,12 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:complexType name="SharingServiceStructure">
+	<xs:complexType name="AlternativeServiceStructure">
 		<xs:annotation>
 			<xs:documentation>Service that provides shared vehicles (The Transmodel MODE OF OPERATION is VEHICLE SHARING; other related Transmodel concepts: ALTERNATIVE MODE LEG.SINGLE JOURNEY.COMMON.VEHICLE SERVICE.TRANSPORT ORGANISATION).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<!-- the PERSONAL MODE on which the Service bases is already defined in the Service element -->
 			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
 				<xs:annotation>
 					<xs:documentation>Identifier of the operator of the sharing service </xs:documentation>
@@ -298,15 +289,20 @@
 					<xs:documentation>Public name of the service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SharingModel" type="SharingModelEnumeration" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Type of the sharing scheme.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="SharingServiceUsageGroup" minOccurs="0"/>
+			<xs:group ref="AlternativeServiceUsageGroup" minOccurs="0"/>
 			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Link to web page providing more details on service.</xs:documentation>
+					<xs:documentation>Link to the web page providing more details on the service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g. dragLift) or the LINE is only made available to certain passenger groups (e.g. school buses, hotel shuttles).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RestrictionNote" type="InternationalTextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Information about the restriction.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

@@ -36,9 +36,8 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>demandResponsive</ContinuousMode>
+									<AlternativeModeOfOperation>demandResponsive</AlternativeModeOfOperation>
 									<OperatingDayRef>2023-12-24</OperatingDayRef>
-									<siri:VehicleRef>ch:1:vehicle:31231:12311</siri:VehicleRef>
 									<JourneyRef>ch:1:jyid:12931231</JourneyRef>
 									<siri:LineRef>ch:1:slnid:1231912</siri:LineRef>
 									<siri:DirectionRef>ch:1:direction:H</siri:DirectionRef>
@@ -49,6 +48,7 @@
 									<PublishedServiceName>
 										<Text>Mybuxi</Text>
 									</PublishedServiceName>
+									<siri:VehicleRef>ch:1:vehicle:31231:12311</siri:VehicleRef>
 									<BookingArrangements>
 										<BookingArrangement>
 											<BookingUrl>
@@ -69,7 +69,7 @@
 						<Leg>
 							<Id>2</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<GeoPosition>
 										<siri:Longitude>5.2</siri:Longitude>

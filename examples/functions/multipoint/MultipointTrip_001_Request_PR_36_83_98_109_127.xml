@@ -30,13 +30,15 @@
 							<Text>Luzern</Text>
 						</Name>
 					</PlaceRef>
-					<IndividualTransportOptions>
-						<Mode>scooter</Mode>
-						<!-- V1.1, PR #127 - additionally available private modes -->
+					<IndividualTransportOption>
+						<ItModeAndModeOfOperation>
+							<PersonalMode>scooter</PersonalMode>
+							<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
+						</ItModeAndModeOfOperation>
 						<MaxDistance>5000</MaxDistance>
 						<MaxDuration>PT1H</MaxDuration>
 						<Speed>120</Speed>
-					</IndividualTransportOptions>
+					</IndividualTransportOption>
 				</Destination>
 				<Params>
 					<NoSight>false</NoSight>

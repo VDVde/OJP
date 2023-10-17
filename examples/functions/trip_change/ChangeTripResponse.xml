@@ -115,7 +115,7 @@
 							<Id>2</Id>
 							<!-- Refinement: No change to this leg -->
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
 									<Name>
@@ -159,10 +159,11 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>demandResponsive</ContinuousMode>
-									<SharingService>
+									<AlternativeModeOfOperation>commuterPooling</AlternativeModeOfOperation>
+									<PersonalMode>car</PersonalMode>
+									<AlternativeService>
 										<OperatorRef>ch:1:sboid:12391912</OperatorRef>
-									</SharingService>
+									</AlternativeService>
 									<BookingArrangements>
 										<BookingArrangement>
 											<BuyWhen>

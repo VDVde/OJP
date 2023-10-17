@@ -145,7 +145,7 @@
 			</xs:element>
 			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g. dragLift) or the LINE is only made available to certain passenger groups (e.g. school buses, hotel shuttles), as defined in PrivateMode.</xs:documentation>
+					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g. dragLift) or the LINE is only made available to certain passenger groups (e.g. school buses, hotel shuttles).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RestrictionNote" type="InternationalTextStructure" minOccurs="0">
@@ -211,46 +211,17 @@
 			<xs:documentation>Vehicle journey that runs at a specific date.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element ref="OperatingDayRef">
+			<xs:element name="ConventionalModeOfOperation" type="ConventionalModesOfOperationEnumeration" minOccurs="0" default="scheduled">
 				<xs:annotation>
-					<xs:documentation>Reference to an Operating Day.</xs:documentation>
+					<xs:documentation>MODE OF OPERATION for scheduled and flexible services (NeTEx).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element ref="siri:VehicleRef" minOccurs="0">
+			<xs:element ref="OperatingDayRef">
 				<xs:annotation>
-					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be the VEHICLE Id.</xs:documentation>
+					<xs:documentation>Reference to an OPERATING DAY.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="ScheduledJourneyGroup"/>
-		</xs:sequence>
-	</xs:group>
-	<xs:group name="PrivateServiceGroup">
-		<xs:annotation>
-			<xs:documentation>Specialized service operated by a Private Mode, e.g. a school bus, corporate shuttle, or other transportation for a (usually) closed community.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element ref="JourneyRef" minOccurs="0"/>
-			<xs:element name="PrivateMode" type="PrivateModesEnumeration">
-				<xs:annotation>
-					<xs:documentation>[a category of MODE in TMv6] MODEs offered by private individuals.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element ref="siri:VehicleRef" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Contains the Vehicle reference of the vehicle. In Transmodel this may be the VEHICLE Id.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Description" type="siri:NaturalLanguageStringStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Description of the private service.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OrganisationRef" type="siri:OperatorRefStructure" minOccurs="0"/>
-			<xs:element name="InfoUrl" type="WebLinkStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Link to web page providing more details on service.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:simpleType name="ReservationNeededEnumeration">
@@ -278,7 +249,6 @@
 		<xs:sequence>
 			<xs:choice>
 				<xs:group ref="DatedJourneyGroup"/>
-				<xs:group ref="PrivateServiceGroup"/>
 			</xs:choice>
 			<xs:group ref="siri:JourneyFormationGroup">
 				<xs:annotation>
@@ -509,24 +479,31 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
-				<xs:element name="ContinuousMode" type="ContinuousModesEnumeration">
+				<xs:element name="AlternativeModeOfOperation" type="AlternativeModesOfOperationEnumeration">
 					<xs:annotation>
-						<xs:documentation>Continuous transport options.</xs:documentation>
+						<xs:documentation>Alternative transport options.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="IndividualMode" type="IndividualModesEnumeration">
+				<xs:element name="PersonalModeOfOperation" type="PersonalModesOfOperationEnumeration" minOccurs="0" default="self">
 					<xs:annotation>
-						<xs:documentation>Individual transport options.</xs:documentation>
+						<xs:documentation>Personal transport options.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
 			<xs:choice>
 				<xs:group ref="DatedJourneyGroup" minOccurs="0"/>
-				<xs:element name="SharingService" type="SharingServiceStructure" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>Shared mobility offer.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
+				<xs:sequence>
+					<xs:element name="PersonalMode" type="PersonalModesEnumeration">
+						<xs:annotation>
+							<xs:documentation>PERSONAL MODE used either for PERSONAL MODE OF OPERATION or in ALTERNATIVE MODE OF OPERATION.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AlternativeService" type="AlternativeServiceStructure" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Shared mobility offer.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
 			</xs:choice>
 			<xs:element name="BookingArrangements" type="BookingArrangementsContainerStructure" minOccurs="0">
 				<xs:annotation>
@@ -604,11 +581,11 @@
 				</xs:element>
 				<xs:element name="TimeAllowance" type="xs:duration" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Extra time needed before reaching/after leaving this location (an example of a TRIP ACCESS CONSTRAINT. In Transmodel it is modeled more extensively and could relate to ACCESS MODE e.g. walk max 5 mintues, but cycle 10 minutes).</xs:documentation>
+						<xs:documentation>Extra time needed before reaching/after leaving this location (an example of a TRIP ACCESS CONSTRAINT. In Transmodel it is modeled more extensively and could relate to ACCESS MODE e.g. walk max. 5 minutes, but cycle 10 minutes).</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
-			<xs:element name="IndividualTransportOptions" type="IndividualTransportOptionsStructure" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="IndividualTransportOption" type="IndividualTransportOptionStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Options how to access/leave the place by individual transport.</xs:documentation>
 				</xs:annotation>
@@ -694,7 +671,7 @@
 			</xs:element>
 			<xs:element name="ConsiderElevationData" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether the trip calculation should take elevation data into account (bike, walk). Default is FALSE.</xs:documentation>
+					<xs:documentation>Whether the trip calculation should take elevation data into account (bike, foot). Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

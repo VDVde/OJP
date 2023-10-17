@@ -68,7 +68,7 @@ Rail transport, Roads and road transport
 		</xsd:annotation>
 		<xsd:choice>
 			<xsd:group ref="PtModeChoiceGroup"/>
-			<xsd:group ref="PrivateModeChoiceGroup"/>
+			<xsd:group ref="PersonalModeChoiceGroup"/>
 		</xsd:choice>
 	</xsd:group>
 	<xsd:group name="PtModeChoiceGroup">
@@ -87,7 +87,7 @@ Rail transport, Roads and road transport
 			<xsd:element ref="WaterSubmode"/>
 		</xsd:choice>
 	</xsd:group>
-	<xsd:group name="PrivateModeChoiceGroup">
+	<xsd:group name="PersonalModeChoiceGroup">
 		<xsd:annotation>
 			<xsd:documentation>Non-PT Road Submodes.</xsd:documentation>
 		</xsd:annotation>

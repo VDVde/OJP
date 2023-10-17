@@ -1400,7 +1400,8 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalModeOfOperation>self</PersonalModeOfOperation>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-06-22T12:13:00+02:00</TimeWindowStart>
 								<TimeWindowEnd>2023-06-22T12:13:00+02:00</TimeWindowEnd>
@@ -1557,7 +1558,6 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-22</OperatingDayRef>
-									<siri:VehicleRef>3178</siri:VehicleRef>
 									<JourneyRef>MXwyOTg4Nzh8MHw4NnwyMjA2MjAyMw--</JourneyRef>
 									<siri:LineRef>92</siri:LineRef>
 									<siri:DirectionRef>1</siri:DirectionRef>
@@ -1567,6 +1567,7 @@
 									<PublishedServiceName>
 										<Text>92</Text>
 									</PublishedServiceName>
+									<siri:VehicleRef>3178</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>ViP</OperatorRef>
 									</OperatorRefs>
@@ -1595,7 +1596,8 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<IndividualMode>walk</IndividualMode>
+									<PersonalModeOfOperation>own</PersonalModeOfOperation>
+									<PersonalMode>foot</PersonalMode>
 								</Service>
 								<TimeWindowStart>2023-06-22T12:27:00+02:00</TimeWindowStart>
 								<TimeWindowEnd>2023-06-22T12:31:00+02:00</TimeWindowEnd>
@@ -1741,7 +1743,6 @@
 								</LegAlight>
 								<Service>
 									<OperatingDayRef>2023-06-22</OperatingDayRef>
-									<siri:VehicleRef>333</siri:VehicleRef>
 									<JourneyRef>MXw3MTQ5MDN8Mnw4NnwyMjA2MjAyMw--</JourneyRef>
 									<siri:LineRef>RE1</siri:LineRef>
 									<siri:DirectionRef>2</siri:DirectionRef>
@@ -1751,6 +1752,7 @@
 									<PublishedServiceName>
 										<Text>RE1</Text>
 									</PublishedServiceName>
+									<siri:VehicleRef>333</siri:VehicleRef>
 									<OperatorRefs>
 										<OperatorRef>ODE</OperatorRef>
 									</OperatorRefs>

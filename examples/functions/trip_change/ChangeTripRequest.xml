@@ -121,7 +121,7 @@
 						<Leg>
 							<Id>2</Id>
 							<TransferLeg>
-								<TransferMode>walk</TransferMode>
+								<TransferType>walk</TransferType>
 								<LegStart>
 									<siri:StopPointRef>8505000</siri:StopPointRef>
 									<Name>
@@ -149,7 +149,7 @@
 										<siri:Latitude>8.306332108</siri:Latitude>
 									</GeoPosition>
 									<Name>
-										<Text>Taxiplatz Luzern</Text>
+										<Text>Origin</Text>
 									</Name>
 								</LegStart>
 								<LegEnd>
@@ -162,10 +162,21 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<ContinuousMode>demandResponsive</ContinuousMode>
-									<SharingService>
-										<OperatorRef>ch:1:sboid:12391912</OperatorRef>
-									</SharingService>
+									<AlternativeModeOfOperation>flexibleArea</AlternativeModeOfOperation>
+									<OperatingDayRef>2023-02-18</OperatingDayRef>
+									<JourneyRef>1230.1.1.231</JourneyRef>
+									<siri:LineRef>mybux1:001</siri:LineRef>
+									<Mode>
+										<PtMode>bus</PtMode>
+										<siri:BusSubmode>demandAndResponseBus</siri:BusSubmode>
+									</Mode>
+									<PublishedServiceName>
+										<Text>Mybuxi</Text>
+									</PublishedServiceName>
+									<siri:VehicleRef>12391923-1123</siri:VehicleRef>
+									<OperatorRefs>
+										<OperatorRef>ch:2:sboid:mybuxi</OperatorRef>
+									</OperatorRefs>
 									<BookingArrangements>
 										<BookingArrangement>
 											<BuyWhen>
@@ -174,7 +185,9 @@
 										</BookingArrangement>
 									</BookingArrangements>
 								</Service>
-								<Duration>PT13M</Duration>
+								<TimeWindowStart>20203-02-08T08:02:00Z</TimeWindowStart>
+								<TimeWindowEnd>2023-02-08T08:20:00Z</TimeWindowEnd>
+								<Duration>PT15M</Duration>
 							</ContinuousLeg>
 						</Leg>
 					</Trip>
