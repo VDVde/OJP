@@ -13,7 +13,7 @@ The main services to request information are:
 * Stop events (arrival and departure boards)
 * Searching for trips
 * Information about a given trip
-* Information about Fares for trips
+* Information about fares for trips
 * Changing of trips
 * Refining of trips
 * Availability requests for trip legs
