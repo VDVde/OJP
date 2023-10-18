@@ -45,7 +45,7 @@ Download the XSD schema files and examples in the git repository found at https:
 * Development occurs currently in the changes_for_v1.1 branch.
 
 ### Wiki
-OJP uses the [wiki](https://github.com/VDVde/OJP/wiki) in github for some resources and examples.
+OJP uses the [wiki](https://github.com/VDVde/OJP/wiki) on github for some resources and examples.
 
 ### White papers
 The [white papers](https://github.com/VDVde/OJP/wiki/Whitepapers-on-OJP) are published in the wiki as well. 
