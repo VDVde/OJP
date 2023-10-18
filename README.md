@@ -16,7 +16,7 @@ The main services to request information are:
 * Information about fares for trips
 * Changing of trips
 * Refining of trips
-* Availability requests for trip legs
+* Availability for trip legs
 * Information about lines
 
 OJP systems interacting with each other additionally use:
