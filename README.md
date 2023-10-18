@@ -51,7 +51,7 @@ OJP uses the [wiki](https://github.com/VDVde/OJP/wiki) in github for some resour
 The [white papers](https://github.com/VDVde/OJP/wiki/Whitepapers-on-OJP) are published in the wiki as well. 
 
 ### Other sources
-The wiki also contains links to other sources  and [implementations](https://github.com/VDVde/OJP/wiki/Implementations-and-Tests).
+The wiki also contains links to other sources and [implementations](https://github.com/VDVde/OJP/wiki/Implementations-and-Tests).
 
 ## Regulatory environment of OJP
 The ITS Directive Delegated Regulation for provision of EU-wide multimodal travel information services is the legal framework for travel data access and distributed journey planning in Europe. This initiative will provide the necessary requirements to make EU-wide multimodal travel information services accurate and available across borders. One of the key requirements concerns linking travel information services for distributed journey planning. Upon request, travel information service providers shall provide to another information service provider "routing results" based on static, and where possible, dynamic information. The "routing results" shall be based on:
