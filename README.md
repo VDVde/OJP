@@ -34,7 +34,7 @@ OJP is part of the [Transmodel](https://www.transmodel-cen.eu/)) family of stand
 ## Releases
 * [OJP 1.0](https://github.com/VDVde/OJP/releases/tag/v1.0): The version described in CEN/TS 17118:2017
 * [OJP 1.0.1](https://github.com/VDVde/OJP/releases/tag/v1.0.1): Bug fix release
- * OJP 2.0  in preparation. See the following [branch](https://github.com/VDVde/OJP/tree/changes_for_v1.1) .
+ * OJP 2.0 in preparation. See the following [branch](https://github.com/VDVde/OJP/tree/changes_for_v1.1) .
 
 ## Github Repository
 
