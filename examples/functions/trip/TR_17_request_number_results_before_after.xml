@@ -91,7 +91,7 @@
 						<ExtensionDemo/>
 					</Extension>
 				</Params>
-			</OJPTripRequest>						
+			</OJPTripRequest>
 		</siri:ServiceRequest>
 	</OJPRequest>
 </OJP>
