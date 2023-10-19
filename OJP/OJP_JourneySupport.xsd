@@ -605,7 +605,7 @@
 					<xs:documentation>The desired number of trip results before the given time (at origin or destination).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NumberOfResultsAfter" type="xs:nonNegativeInteger" minOccurs="0">
+			<xs:element name="NumberOfResultsAfter" type="xs:nonNegativeInteger" default="0" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The desired number of trip results after the given time (at origin or destination).</xs:documentation>
 				</xs:annotation>
