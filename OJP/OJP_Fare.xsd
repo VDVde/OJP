@@ -66,7 +66,7 @@
 	</xs:complexType>
 	<xs:complexType name="PlaceFareRequestStructure">
 		<xs:annotation>
-			<xs:documentation>Sub-request: PLACE related fare information. This doesn't make a lot of sense for addresses, topographic place and coordinates. However, STOP PLACE, SCHEDULED STOP POINT and POINT OF INTERES&gt;T are different.</xs:documentation>
+			<xs:documentation>Sub-request: PLACE related fare information. This doesn't make a lot of sense for addresses, topographic place and coordinates. However, STOP PLACE, SCHEDULED STOP POINT and POINT OF INTEREST are different.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Place" type="PlaceStructure">
