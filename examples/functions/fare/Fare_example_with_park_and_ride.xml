@@ -130,7 +130,7 @@
 									</OriginText>
 									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
 									<DestinationText>
-										<Text xml:lang="de">Biel/Bienne (Schiff/bateau)</Text>
+										<Text xml:lang="de">Erlach</Text>
 									</DestinationText>
 									<Extension>
 										<!-- V1.1, PR #92 - Illustration of new Extension -->
