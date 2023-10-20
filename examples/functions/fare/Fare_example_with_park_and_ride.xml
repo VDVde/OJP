@@ -15,7 +15,7 @@
 						<Duration>PT38M</Duration>
 						<StartTime>2021-08-20T13:25:00Z</StartTime>
 						<EndTime>2021-08-20T14:03:00Z</EndTime>
-						<Transfers>0</Transfers>
+						<Transfers>1</Transfers>
 						<Leg>
 							<Id>1</Id>
 							<ContinuousLeg>
