@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2021-08-25T17:34:02Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<OJPFareDelivery>
+				<siri:ResponseTimestamp>2001-12-17T09:30:47Z</siri:ResponseTimestamp>
+				<siri:Status>true</siri:Status>
+				<siri:ErrorCondition>
+					<OJPError>
+						<FareProblemType>FARE_ADDITIONALCHARGES</FareProblemType>
+					</OJPError>
+				</siri:ErrorCondition>
+				<siri:ValidUntil>2001-12-18T09:30:47Z</siri:ValidUntil>
+				<FareResponseContext>
+					<Operators>
+						<Operator>
+							<siri:OperatorRef>ch:1:sboid:123123</siri:OperatorRef>
+							<siri:OperatorName>Mybuxi</siri:OperatorName>
+						</Operator>
+						<Operator>
+							<siri:OperatorRef>ch:1:sboid:11</siri:OperatorRef>
+							<siri:OperatorName>SBB NOVA</siri:OperatorName>
+						</Operator>
+					</Operators>
+				</FareResponseContext>
+				<FareResult>
+					<Id>1231231112231</Id>
+					<PlaceFareResult>
+						<Place>
+							<PointOfInterest>
+								<PublicCode>313</PublicCode>
+								<Name>
+									<Text>Park and Ride Wankdorf</Text>
+								</Name>
+							</PointOfInterest>
+							<Name>
+								<Text>Park and Ride Wankdorf</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>7.1</siri:Longitude>
+								<siri:Latitude>26.2</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<FareProduct>
+							<FareProductId>PR_SBB_Day</FareProductId>
+							<FareProductName>Park and Ride fare SBB for a day</FareProductName>
+							<FareAuthorityRef>NOVA</FareAuthorityRef>
+							<FareAuthorityText>Park and Ride</FareAuthorityText>
+							<Price>25</Price>
+							<Currency>CHF</Currency>
+							<ValidityDuration>PT24H</ValidityDuration>
+						</FareProduct>
+						<FareProduct>
+							<FareProductId>PR_SBB_Hour</FareProductId>
+							<FareProductName>Park and Ride fare SBB for an hour</FareProductName>
+							<FareAuthorityRef>NOVA</FareAuthorityRef>
+							<FareAuthorityText>Park and Ride</FareAuthorityText>
+							<Price>25</Price>
+							<Currency>CHF</Currency>
+							<ValidityDuration>PT1H</ValidityDuration>
+						</FareProduct>
+					</PlaceFareResult>
+				</FareResult>
+			</OJPFareDelivery>
+		</siri:ServiceDelivery>
+	</OJPResponse>
+</OJP>

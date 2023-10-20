@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<!-- example fare request with a park and ride
+-->
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2022-01-19T12:00:00Z</siri:RequestTimestamp>
+			<siri:RequestorRef>IRMA</siri:RequestorRef>
+			<OJPFareRequest>
+				<siri:RequestTimestamp>2022-01-19T12:00:00Z</siri:RequestTimestamp>
+				<siri:MessageIdentifier>4712</siri:MessageIdentifier>
+				<TripFareRequest>
+					<Trip>
+						<Id>ID-1232663C-71EF-4E51-8F72-3C0D4A48A809</Id>
+						<Duration>PT38M</Duration>
+						<StartTime>2021-08-20T13:25:00Z</StartTime>
+						<EndTime>2021-08-20T14:03:00Z</EndTime>
+						<Transfers>1</Transfers>
+						<Leg>
+							<Id>1</Id>
+							<ContinuousLeg>
+								<LegStart>
+									<GeoPosition>
+										<siri:Longitude>7.21</siri:Longitude>
+										<siri:Latitude>47.14</siri:Latitude>
+									</GeoPosition>
+									<Name>
+										<Text>Home</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<PointOfInterestRef>myparkandride</PointOfInterestRef>
+									<Name>
+										<Text>Park and Ride</Text>
+									</Name>
+								</LegEnd>
+								<Service>
+									<PersonalMode>car</PersonalMode>
+								</Service>
+								<Duration>PT35M</Duration>
+							</ContinuousLeg>
+						</Leg>
+						<Leg>
+							<Id>2</Id>
+							<TransferLeg>
+								<TransferType>checkIn</TransferType>
+								<TransferType>parkAndRide</TransferType>
+								<LegStart>
+									<PointOfInterestRef>myparkandride</PointOfInterestRef>
+									<Name>
+										<Text>Park and Ride</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<siri:StopPointRef>8504375</siri:StopPointRef>
+									<Name>
+										<Text>the public transport stop</Text>
+									</Name>
+								</LegEnd>
+								<Duration>PT8M</Duration>
+							</TransferLeg>
+						</Leg>
+						<Leg>
+							<Id>3</Id>
+							<TimedLeg>
+								<LegBoard>
+									<siri:StopPointRef>8504375</siri:StopPointRef>
+									<StopPointName>
+										<Text>Ligerz (Schiff)</Text>
+									</StopPointName>
+									<ServiceDeparture>
+										<TimetabledTime>2021-08-20T13:40:00Z</TimetabledTime>
+									</ServiceDeparture>
+									<Order>1</Order>
+								</LegBoard>
+								<LegAlight>
+									<siri:StopPointRef>8504376</siri:StopPointRef>
+									<StopPointName>
+										<Text>St. Petersinsel Nord</Text>
+									</StopPointName>
+									<ServiceArrival>
+										<TimetabledTime>2021-08-20T13:50:00Z</TimetabledTime>
+									</ServiceArrival>
+									<Order>2</Order>
+								</LegAlight>
+								<Service>
+									<OperatingDayRef>2021-08-20</OperatingDayRef>
+									<JourneyRef>9400B:Y:H:j21:14</JourneyRef>
+									<siri:LineRef>9400B:Y</siri:LineRef>
+									<siri:DirectionRef>H</siri:DirectionRef>
+									<Mode>
+										<PtMode>water</PtMode>
+										<siri:WaterSubmode>unknown</siri:WaterSubmode>
+										<Name>
+											<Text xml:lang="de">Schiff</Text>
+										</Name>
+										<ShortName>
+											<Text xml:lang="de">BAT</Text>
+										</ShortName>
+									</Mode>
+									<ProductCategory>
+										<!-- V1.1, PR #95 - Illustration of ProductCategory -->
+										<Name>
+											<Text>Dampfschiff</Text>
+										</Name>
+									</ProductCategory>
+									<PublishedServiceName>
+										<Text>BAT</Text>
+									</PublishedServiceName>
+									<OperatorRefs>
+										<OperatorRef>182</OperatorRef>
+									</OperatorRefs>
+									<Attribute>
+										<UserText>
+											<Text xml:lang="de">Nur 2. Klasse</Text>
+										</UserText>
+										<Code>A___2</Code>
+									</Attribute>
+									<Attribute>
+										<UserText>
+											<Text xml:lang="de">Restaurant</Text>
+										</UserText>
+										<Code>A__WR</Code>
+										<Facility>
+											<siri:RefreshmentFacility>restaurantService</siri:RefreshmentFacility>
+										</Facility>
+									</Attribute>
+									<OriginText>
+										<Text>Biel/Bienne (Schiff/bateau)</Text>
+									</OriginText>
+									<DestinationStopPointRef>de:00000:-1</DestinationStopPointRef>
+									<DestinationText>
+										<Text xml:lang="de">Erlach</Text>
+									</DestinationText>
+									<Extension>
+										<!-- V1.1, PR #92 - Illustration of new Extension -->
+										<TransportTypeName>
+											<Text xml:lang="de">Schiff</Text>
+										</TransportTypeName>
+										<PublishedJourneyNumber>
+											<Text xml:lang="de">301</Text>
+										</PublishedJourneyNumber>
+									</Extension>
+								</Service>
+								<Extension>
+									<TransportTypeName>
+										<Text xml:lang="de">Schiff</Text>
+									</TransportTypeName>
+									<PublishedJourneyNumber>
+										<Text xml:lang="de">72</Text>
+									</PublishedJourneyNumber>
+								</Extension>
+							</TimedLeg>
+						</Leg>
+					</Trip>
+				</TripFareRequest>
+				<Params>
+					<FareAuthorityFilter>NOVA</FareAuthorityFilter>
+					<PassengerCategory>Adult</PassengerCategory>
+					<Traveller>
+						<Age>26</Age>
+					</Traveller>
+					<Extension>
+						<MyExtension/>
+					</Extension>
+				</Params>
+			</OJPFareRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>

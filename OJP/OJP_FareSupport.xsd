@@ -801,6 +801,11 @@
 					<xs:documentation>Number of travellers that will make the journey and for which Fare information needs to be gathered.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="AccessModeList" type="AccessModesListOfEnumerations" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ACCESS MODEs to consider (usually only one). This is only used in very special cases. E.g. for carTransportRail. It indicates if one uses a car, truck, motorcycle or bike. The Access mode may result in no transportation being possible.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
