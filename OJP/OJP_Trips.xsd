@@ -721,7 +721,7 @@
 	</xs:complexType>
 	<xs:complexType name="ContinuousLegStructure">
 		<xs:annotation>
-			<xs:documentation>[relates to a specific type of RIDE LEG with Timed=false or an ACCESS LEG in TM and NeTEx] leg of a journey that is not bound to a timetable </xs:documentation>
+			<xs:documentation>[relates to a specific type of RIDE LEG with Timed=false or an ACCESS LEG in TM and NeTEx] leg of a journey that is not bound to a timetable.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="LegStart" type="PlaceRefStructure">
