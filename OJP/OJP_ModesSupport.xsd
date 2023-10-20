@@ -351,7 +351,7 @@
 	</xs:annotation>
 	<xs:simpleType name="PersonalModesEnumeration">
 		<xs:annotation>
-			<xs:documentation>TYPE OF MODE than can be used in an individual context. PERSONAL MODE in TM 6.2.</xs:documentation>
+			<xs:documentation>TYPE OF MODE that can be used in an individual context. PERSONAL MODE in TM 6.2.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="foot"/>
