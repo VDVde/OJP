@@ -36,7 +36,7 @@
 				</xs:element>
 				<xs:element name="MultiTripFareRequest" type="MultiTripFareRequestStructure">
 					<xs:annotation>
-						<xs:documentation>A request to calculate aggregated FARE information of multiple single trips</xs:documentation>
+						<xs:documentation>A request to calculate aggregated FARE information of multiple single trips.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
