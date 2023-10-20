@@ -351,7 +351,7 @@
 	</xs:annotation>
 	<xs:simpleType name="PersonalModesEnumeration">
 		<xs:annotation>
-			<xs:documentation>TYPE OF MODE than can be used in an individual context.</xs:documentation>
+			<xs:documentation>TYPE OF MODE that can be used in an individual context. PERSONAL MODE in TM 6.2.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="foot"/>
@@ -401,7 +401,7 @@
 		<xs:sequence>
 			<xs:element name="PtMode" type="siri:VehicleModesOfTransportEnumeration">
 				<xs:annotation>
-					<xs:documentation>Categorisation of a (conventional) TRANSPORT MODE. We use the SIRI 2.1 element which allows for many values in the enumeration. In OJP we don't use the following enumeration values: "pti1_xxx", "xxxServices" when a value without the "Service" exists for the same MODE, "allServicesExcept", "selfDrive", "taxi". Also in cases where only a "xxxService" exists in the enumeration, it should be avoided. "other" or "unknown" should only be used, if no other value applies. </xs:documentation>
+					<xs:documentation>Categorisation of a (conventional) PUBLIC TRANSPORT MODE. We use the SIRI 2.1 element which allows for many values in the enumeration. In OJP we don't use the following enumeration values: "pti1_xxx", "xxxServices" when a value without the "Service" exists for the same MODE, "allServicesExcept", "selfDrive", "taxi". Also in cases where only a "xxxService" exists in the enumeration, it should be avoided. "other" or "unknown" should only be used, if no other value applies. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="siri:PtModeChoiceGroup" minOccurs="0"/>
@@ -412,12 +412,12 @@
 	</xs:annotation>
 	<xs:complexType name="ModeFilterStructure">
 		<xs:annotation>
-			<xs:documentation>List of public transport modes ([from SIRI] mode of public transport service, corresponds to PUBLIC TRANSPORT MODE) to exclude or include. Also the necessary filter elements for PERSONAL MODE and MODE OF OPERATION.</xs:documentation>
+			<xs:documentation>List of MODE to exclude or include.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether VEHICLE MODEs in list are to be excluded or included from search. Default is to exclude.</xs:documentation>
+					<xs:documentation>Whether MODEs in list are to be excluded or included from search. Default is to exclude.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PtMode" type="siri:VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
