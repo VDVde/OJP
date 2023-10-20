@@ -590,7 +590,7 @@
 			</xs:element>
 			<xs:element name="Duration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The duration of the LEG (e.g. from Transmodel PT RIDE LEG.Duration)</xs:documentation>
+					<xs:documentation>The duration of the LEG (e.g. from Transmodel PT RIDE LEG.Duration).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
