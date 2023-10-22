@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2020-11-30T10:07:19Z</siri:ResponseTimestamp>
+			<siri:ProducerRef>OJPCH_Prod</siri:ProducerRef>
+			<siri:Status>true</siri:Status>
+			<OJPTripInfoDelivery>
+				<siri:ResponseTimestamp>2020-11-30T10:07:19Z</siri:ResponseTimestamp>
+				<siri:RequestMessageRef>756</siri:RequestMessageRef>
+				<siri:Status>true</siri:Status>
+				<CalcTime>60</CalcTime>
+				<TripInfoResponseContext>
+					<Places>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8591315</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Zürich, Rehalp</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>126356:0:</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23026261:27</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Zürich, Rehalp</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>8.58298</siri:Longitude>
+								<siri:Latitude>47.35103</siri:Latitude>
+							</GeoPosition>
+						</Place>
+						<Place>
+							<StopPlace>
+								<StopPlaceRef>8591142</StopPlaceRef>
+								<StopPlaceName>
+									<Text>Zürich, Friedhof Enzenbühl</Text>
+								</StopPlaceName>
+								<PrivateCode>
+									<System>EFA</System>
+									<Value>126192:0:</Value>
+								</PrivateCode>
+								<TopographicPlaceRef>23026261:27</TopographicPlaceRef>
+							</StopPlace>
+							<Name>
+								<Text xml:lang="de">Zürich, Friedhof Enzenbühl</Text>
+							</Name>
+							<GeoPosition>
+								<siri:Longitude>8.58028</siri:Longitude>
+								<siri:Latitude>47.35097</siri:Latitude>
+							</GeoPosition>
+						</Place>
+					</Places>
+				</TripInfoResponseContext>
+				<TripInfoResult>
+					<OnwardCall>
+						<siri:StopPointRef>8591315</siri:StopPointRef>
+						<StopPointName>
+							<Text>Zürich, Rehalp</Text>
+						</StopPointName>
+						<ServiceDeparture>
+							<TimetabledTime>2020-12-01T12:15:00Z</TimetabledTime>
+							<siri:DepartureFormationAssignment>
+								<siri:CompoundTrainRef>cen:CompoundTrain:gfa-k498sdf9-5j32-4944-h034-hjf02023h8g4</siri:CompoundTrainRef>
+								<siri:TrainStopAssignment>
+									<siri:AimedQuayRef>8591315:A</siri:AimedQuayRef>
+									<!-- e.g. saying that this carriage will be in sector A -->
+								</siri:TrainStopAssignment>
+							</siri:DepartureFormationAssignment>
+						</ServiceDeparture>
+						<Order>1</Order>
+					</OnwardCall>
+					<!--- lots of other OnwardCall -->
+					<OnwardCall>
+						<siri:StopPointRef>8591049</siri:StopPointRef>
+						<StopPointName>
+							<Text>Zürich, Auzelg</Text>
+						</StopPointName>
+						<ServiceArrival>
+							<TimetabledTime>2020-12-01T13:01:00Z</TimetabledTime>
+							<siri:ArrivalFormationAssignment>
+								<siri:CompoundTrainRef>cen:CompoundTrain:gfa-k498sdf9-5j32-4944-h034-hjf02023h8g4</siri:CompoundTrainRef>
+								<siri:TrainStopAssignment>
+									<siri:AimedQuayRef>8591049:C</siri:AimedQuayRef>
+									<!-- e.g. saying that this carriage will be in sector C -->
+								</siri:TrainStopAssignment>
+							</siri:ArrivalFormationAssignment>
+						</ServiceArrival>
+						<Order>34</Order>
+					</OnwardCall>
+					<Service>
+						<OperatingDayRef>2023-10-20</OperatingDayRef>
+						<JourneyRef>91011:A:R:j20:719</JourneyRef>
+						<siri:LineRef>91011:A</siri:LineRef>
+						<siri:DirectionRef>R</siri:DirectionRef>
+						<Mode>
+							<PtMode>tram</PtMode>
+							<siri:TramSubmode>cityTram</siri:TramSubmode>
+							<Name>
+								<Text xml:lang="de">Tram</Text>
+							</Name>
+							<ShortName>
+								<Text xml:lang="de">T</Text>
+							</ShortName>
+						</Mode>
+						<PublishedServiceName>
+							<Text>11</Text>
+						</PublishedServiceName>
+						<OperatorRefs>
+							<OperatorRef>3849</OperatorRef>
+						</OperatorRefs>
+						<OriginStopPointRef>8591315</OriginStopPointRef>
+						<OriginText>
+							<Text xml:lang="de">Zürich, Rehalp</Text>
+						</OriginText>
+						<!-- use VehicleFeatureRef with fixed values from SIRI (facilities) to express basic formation information. Especially for non-train vehicles -->
+						<siri:VehicleFeatureRef>highFloor</siri:VehicleFeatureRef>
+						<siri:VehicleFeatureRef>foldableRampAvailable</siri:VehicleFeatureRef>
+						<siri:VehicleFeatureRef>wheelchairAssistanceAvailableIfBooked</siri:VehicleFeatureRef>
+						<siri:VehicleFeatureRef>noWheelchairAcccessToilet</siri:VehicleFeatureRef>
+						<DestinationStopPointRef>8591049</DestinationStopPointRef>
+						<DestinationText>
+							<Text xml:lang="de">Basel, St-Louis Grenze</Text>
+						</DestinationText>
+						<JourneyRelations>
+							<siri:JourneyRelation>
+								<siri:JourneyRelationType>ReplacedByJourney</siri:JourneyRelationType>
+								<siri:CallInfo>
+									<siri:StopPointRef>8591315</siri:StopPointRef>
+								</siri:CallInfo>
+								<siri:RelatedJourney>
+									<siri:TrainNumberRef>70212</siri:TrainNumberRef>
+								</siri:RelatedJourney>
+							</siri:JourneyRelation>
+						</JourneyRelations>
+					</Service>
+					<JourneyTrack>
+						<TrackSection>
+							<TrackSectionStart>
+								<siri:StopPointRef>8591315</siri:StopPointRef>
+								<Name>
+									<Text xml:lang="de">Zürich, Rehalp</Text>
+								</Name>
+							</TrackSectionStart>
+							<TrackSectionEnd>
+								<siri:StopPointRef>8591049</siri:StopPointRef>
+								<Name>
+									<Text xml:lang="de">Zürich, Auzelg</Text>
+								</Name>
+							</TrackSectionEnd>
+							<Length>55032</Length>
+						</TrackSection>
+					</JourneyTrack>
+					<Extension>
+						<TransportTypeName>
+							<Text xml:lang="de"/>
+						</TransportTypeName>
+						<PublishedJourneyNumber>
+							<Text xml:lang="de">8527</Text>
+						</PublishedJourneyNumber>
+					</Extension>
+				</TripInfoResult>
+			</OJPTripInfoDelivery>
+		</siri:ServiceDelivery>
+	</OJPResponse>
+</OJP>
