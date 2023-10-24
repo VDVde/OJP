@@ -11,6 +11,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### New Services
 
+* New sub-request structures `PlaceFareRequest` and `PlaceFareResult`. [#414](https://github.com/VDVde/OJP/pull/414)
 * New `OJPTripChangeRequest`and `OJPTripChangeDelivery`. [#381](https://github.com/VDVde/OJP/pull/381), [#384](https://github.com/VDVde/OJP/pull/384)
 * New `OJPStatusRequest`and `OJPStatusDelivery`. [#216](https://github.com/VDVde/OJP/pull/216)
 * New `OJPLineInformationRequest` and `OJPLineInformationDelivery`. [#243](https://github.com/VDVde/OJP/pull/243), [#308](https://github.com/VDVde/OJP/pull/308)
@@ -20,9 +21,17 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### Added
 
-* Extended`TripFareResult`to contain `TripId` and `BookingId`, and to handle `FareProduct`s covering non-consecutive legs of a trip. [#395](https://github.com/VDVde/OJP/pull/395), [#400](https://github.com/VDVde/OJP/pull/400)
-* **[breaking]** New`ParallelService`in `TimedLegService`to describe, for instance, coupled trains with different destinations. Abandoned `ServiceSection`. [#396](https://github.com/VDVde/OJP/pull/396)
-* New elements `InterchangeRef`, `ExtraInterchange`, `InterchangeCancellation`, `siri:InterchangePropertyGroup` in `TransferLegStructure` and `UndefinedDelay` in `DatedJourneyStructure. [#390](https://github.com/VDVde/OJP/pull/390)
+* Added clarifying examples for parallel services, park and ride, journey relations, transport options, restricted lines. [#399](https://github.com/VDVde/OJP/pull/399), [#414](https://github.com/VDVde/OJP/pull/414), [#423](https://github.com/VDVde/OJP/pull/423), [#379](https://github.com/VDVde/OJP/pull/379), [#349](https://github.com/VDVde/OJP/pull/349)
+* Added `JourneyRelations` to `DatedJourneyStructure`, `ContinuousServiceStructure`, `ParallelServiceStructure`, `AlternativeServiceStructure`, `BookingPtLegStructure`. [#423](https://github.com/VDVde/OJP/pull/423)
+* Added `PlaceFareRequestStructure` and `PlaceFareResultStructure`, added access modes to `FareParamStructure`. [#414](https://github.com/VDVde/OJP/pull/414)
+* Added definitions to all requests and responses based on Transmodel. [#413](https://github.com/VDVde/OJP/pull/413)
+* Clarified behavior induced by `Location` parameter in `StopEventRequest`. [#412](https://github.com/VDVde/OJP/pull/412)
+* **[breaking]** Added and improved `GeneralAttributeStructure` to `LegBoardStructure`, `LegAlightStructure`, `LegIntermediateStructure`. [#406](https://github.com/VDVde/OJP/pull/406)
+* Additional passenger categories (dog, bicycle, car, …). [#389](https://github.com/VDVde/OJP/pull/389)
+* **[breaking]** Added handling of lines with special restrictions (access modes, passenger categories) and of motorised main travel mode. [#349](https://github.com/VDVde/OJP/pull/349)
+* Extended `TripFareResult` to contain `TripId` and `BookingId`, and to handle `FareProduct`s covering non-consecutive legs of a trip. [#395](https://github.com/VDVde/OJP/pull/395), [#400](https://github.com/VDVde/OJP/pull/400)
+* **[breaking]** New `ParallelService` in `TimedLegService`to describe, for instance, coupled trains with different destinations. Abandoned `ServiceSection`. [#396](https://github.com/VDVde/OJP/pull/396)
+* New elements `InterchangeRef`, `ExtraInterchange`, `InterchangeCancellation`, `siri:InterchangePropertyGroup` in `TransferLegStructure` and `UndefinedDelay` in `DatedJourneyStructure`. [#390](https://github.com/VDVde/OJP/pull/390)
 * `OJPTripInfoRequest`: added parameters to search by train number and operator. [#378](https://github.com/VDVde/OJP/pull/378)
 * More examples. [#373](https://github.com/VDVde/OJP/pull/373), [#374](https://github.com/VDVde/OJP/pull/374), [#375](https://github.com/VDVde/OJP/pull/375), [#376](https://github.com/VDVde/OJP/pull/376)
 * Added `FareQuota` to indicate a limited number of remaining tickets. [#371](https://github.com/VDVde/OJP/pull/371)
@@ -109,6 +118,10 @@ The releases can be found at https://github.com/VDVde/OJP/releases
 
 ### Changed
 
+* Changed `NumberOfResultsBefore` and `NumberOfResultsAfter` to optional with default value 0. [#421](https://github.com/VDVde/OJP/pull/421)
+* Changed several annotations so as to align the definitions of mode and leg  with Transmodel. [#419](https://github.com/VDVde/OJP/pull/419)
+* **[breaking]** Changed  `LegIntermediates` to `LegIntermediate` (typographic error). [#399](https://github.com/VDVde/OJP/pull/399)
+* **[breaking]** Completely reorganised `ContinuousModesEnumeration`, `PrivateModesEnumeration`, `TransferModesEnumeration`, `SharingModelEnumeration` into new `TransferTypeEnumeration`, `PersonalModesEnumeration`, `PersonalModesOfOperationEnumeration`, `ConventionalModesOfOperationEnumeration`, and `AlternativeModesOfOperationEnumeration` - together with accompanying wide-ranging changes in several structures: `ContinuousServiceStructure`,  `SharingServiceStructure` (removed),  `AlternativeServiceStructure` (new),  `ParallelServiceStructure` , `DatedJourneyStructure`, `TransferLegStructure`,  `ContinuousLegStructure`,  `LegBoardStructure`,  `BookingPtLegStructure`, `PlaceRefStructure`, `ItModesStructure` (new), `ModeAndModeOfOperationFilterStructure` (new), `PrivateModeFilterStructure` (removed), `ModeFilterStructure` (new), `PtModeFilterStructure` (removed), `IndividualTransportOptionStructure` (new), `IndividualTransportOptionsStructure` (removed), `PlaceContextStructure`, `TripParamStructure`, `MultiPointTripParamStructure`, `StopEventParamStructure`, `PlaceParamStructure`, `ModeStructure`. [#379](https://github.com/VDVde/OJP/pull/379)
 * **[breaking]** Made `MultiPointType` a required parameter in `OJPMultiPointTripRequest`. [#353](https://github.com/VDVde/OJP/pull/353)
 * **[breaking]** Changed main namespace from `SIRI` to `OJP`. [#347](https://github.com/VDVde/OJP/pull/347)
 * Updated all examples to new request and response structures, added to GitHub. [#334](https://github.com/VDVde/OJP/pull/334)
@@ -183,6 +196,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
  
 
 ### Removed
+* Removed duplicate `EMailAddressType`. [#403](https://github.com/VDVde/OJP/pull/403)
 * Removed annotations in `choice` constructs.
   [#157](https://github.com/VDVde/OJP/pull/157)
 * Omit unused requests and responses.
