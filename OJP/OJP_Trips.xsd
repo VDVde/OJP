@@ -149,7 +149,7 @@
 				<xs:annotation>
 					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport, not modeled in Transmodel).</xs:documentation>
 				</xs:annotation>
-			</xs:element>
+			</xs:element>	
 			<xs:element name="HikingProfile" default="easy" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: possible explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen</xs:documentation>
@@ -1582,6 +1582,7 @@ Can only be used when both participants recognise the same schedule version. If 
 					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:group ref="TripMobilityFilterGroup"/>
 			<xs:group ref="TripPolicyGroup"/>
 			<xs:group ref="TripContentFilterGroup"/>
 			<xs:element name="FareParam" type="FareParamStructure" minOccurs="0">
