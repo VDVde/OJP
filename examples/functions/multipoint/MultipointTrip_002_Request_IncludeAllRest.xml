@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2020-09-01T19:33:23Z</siri:RequestTimestamp>
+			<siri:RequestorRef>3CC3C04A-20A0-4B12-AC46-5A7843E328A7_test</siri:RequestorRef>
+			<OJPMultiPointTripRequest>
+				<siri:RequestTimestamp>2020-09-01T19:33:23Z</siri:RequestTimestamp>
+				<Origin>
+					<PlaceRef>
+						<StopPlaceRef>8506302</StopPlaceRef>
+						<Name>
+							<Text>Name, but can be ignored as the id usually is the only thing interpreted by the router</Text>
+						</Name>
+					</PlaceRef>
+					<DepArrTime>2020-09-30T11:00:00Z</DepArrTime>
+					<!-- with seconds -->
+				</Origin>
+				<Destination>
+					<PlaceRef>
+						<StopPlaceRef>8505000</StopPlaceRef>
+						<Name>
+							<Text>Luzern</Text>
+						</Name>
+					</PlaceRef>
+					<IndividualTransportOption>
+						<ItModeAndModeOfOperation>
+							<PersonalMode>scooter</PersonalMode>
+							<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
+						</ItModeAndModeOfOperation>
+						<MaxDistance>5000</MaxDistance>
+						<MaxDuration>PT1H</MaxDuration>
+						<Speed>120</Speed>
+					</IndividualTransportOption>
+				</Destination>
+				<Params>
+					<NumberOfResults>5</NumberOfResults>
+					<OptimisationMethod>fastest</OptimisationMethod>
+					<IncludeAllRestrictedLines>true</IncludeAllRestrictedLines>
+					<PassengerCategory>Group</PassengerCategory>
+					<MultiPointType>somePoints</MultiPointType>
+				</Params>
+			</OJPMultiPointTripRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>
