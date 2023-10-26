@@ -150,29 +150,6 @@
 					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport, not modeled in Transmodel).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-		</xs:sequence>
-	</xs:group>
-	<xs:group name="TripContentFilterGroup">
-		<xs:annotation>
-			<xs:documentation>Parameters that control the level of detail of the trip results.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:group ref="BaseTripContentFilterGroup"/>
-			<xs:element name="IncludeIntermediateStops" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the result should include intermediate stops (between the passenger's board and alight stops).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeFare" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the result should include fare information.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncludeOperatingDays" type="xs:boolean" default="false" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Whether the result should include operating day information - as encoded bit string and in natural language.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="HikingProfile" default="easy" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: possible explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen</xs:documentation>
@@ -220,6 +197,29 @@
 						</xs:enumeration>
 					</xs:restriction>
 				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="TripContentFilterGroup">
+		<xs:annotation>
+			<xs:documentation>Parameters that control the level of detail of the trip results.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="BaseTripContentFilterGroup"/>
+			<xs:element name="IncludeIntermediateStops" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the result should include intermediate stops (between the passenger's board and alight stops).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeFare" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the result should include fare information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeOperatingDays" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether the result should include operating day information - as encoded bit string and in natural language.</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="TripSummaryOnly" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
