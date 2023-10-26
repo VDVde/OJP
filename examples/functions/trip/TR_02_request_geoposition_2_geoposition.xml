@@ -31,7 +31,7 @@
 				</Destination>
 				<Params>
 					<HikingProfile>easy</HikingProfile>
-					<CyclingProfile>green</CyclingProfile>				
+					<CyclingProfile>green</CyclingProfile>
 					<IncludeAlternativeOptions>false</IncludeAlternativeOptions>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>
