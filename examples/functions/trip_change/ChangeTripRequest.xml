@@ -13,7 +13,7 @@
 					<SystemId>SBB:prod</SystemId>
 					<NoStairs>true</NoStairs>
 					<HikingProfile>difficult</HikingProfile>
-					<CyclingProfile>comfortable</CyclingProfile>					
+					<CyclingProfile>comfortable</CyclingProfile>
 					<UseRealtimeData>full</UseRealtimeData>
 					<IncludeAlternativeOptions>true</IncludeAlternativeOptions>
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
