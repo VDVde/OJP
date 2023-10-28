@@ -11,12 +11,13 @@
 					<RefineLegRef>1</RefineLegRef>
 					<RefineLegRef>3</RefineLegRef>
 					<SystemId>SBB:prod</SystemId>
+					<NoStairs>true</NoStairs>
+					<HikingProfile>difficult</HikingProfile>
+					<CyclingProfile>comfortable</CyclingProfile>
 					<UseRealtimeData>full</UseRealtimeData>
 					<IncludeAlternativeOptions>true</IncludeAlternativeOptions>
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
 					<IncludeFare>true</IncludeFare>
-					<HikingProfile>difficult</HikingProfile>
-					<CyclingProfile>comfortable</CyclingProfile>
 					<FareParam>
 						<FareAuthorityFilter>OSDM-NOVA-Prod</FareAuthorityFilter>
 						<PassengerCategory>Senior</PassengerCategory>

@@ -54,6 +54,8 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
+					<HikingProfile>easy</HikingProfile>
+					<CyclingProfile>green</CyclingProfile>
 					<ItModeToCover>
 						<PersonalMode>car</PersonalMode>
 						<PersonalModeOfOperation>own</PersonalModeOfOperation>
@@ -74,8 +76,6 @@
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
 					<IncludeFare>true</IncludeFare>
 					<IncludeOperatingDays>true</IncludeOperatingDays>
-					<HikingProfile>easy</HikingProfile>
-					<CyclingProfile>green</CyclingProfile>
 					<TripSummaryOnly>false</TripSummaryOnly>
 				</Params>
 			</OJPTripRequest>

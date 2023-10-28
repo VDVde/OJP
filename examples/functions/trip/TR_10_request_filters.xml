@@ -72,6 +72,8 @@
 					<NoTravelator>false</NoTravelator>
 					<LevelEntranceOrBoardingAid>false</LevelEntranceOrBoardingAid>
 					<BikeTransport>true</BikeTransport>
+					<HikingProfile>difficult</HikingProfile>
+					<CyclingProfile>fast</CyclingProfile>
 					<NumberOfResults>10</NumberOfResults>
 					<TimeWindow>PT60M</TimeWindow>
 					<!-- Use a 60 minutes time range.-->
@@ -84,8 +86,6 @@
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
 					<IncludeFare>true</IncludeFare>
 					<IncludeOperatingDays>true</IncludeOperatingDays>
-					<HikingProfile>difficult</HikingProfile>
-					<CyclingProfile>fast</CyclingProfile>
 					<Extension>
 						<ExtensionDemo/>
 					</Extension>

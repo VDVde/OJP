@@ -30,6 +30,8 @@
 					</PlaceRef>
 				</Destination>
 				<Params>
+					<HikingProfile>easy</HikingProfile>
+					<CyclingProfile>green</CyclingProfile>
 					<IncludeAlternativeOptions>false</IncludeAlternativeOptions>
 					<IncludeTrackSections>true</IncludeTrackSections>
 					<IncludeLegProjection>true</IncludeLegProjection>
@@ -42,8 +44,6 @@
 					<IncludeIntermediateStops>true</IncludeIntermediateStops>
 					<IncludeFare>true</IncludeFare>
 					<IncludeOperatingDays>true</IncludeOperatingDays>
-					<HikingProfile>easy</HikingProfile>
-					<CyclingProfile>green</CyclingProfile>
 					<TripSummaryOnly>false</TripSummaryOnly>
 				</Params>
 			</OJPTripRequest>
