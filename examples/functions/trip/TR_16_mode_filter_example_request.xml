@@ -40,7 +40,7 @@
 						<!-- always all combinations of MODE and MODE OF OPERATION are allowed -->
 						<PersonalMode>car</PersonalMode>
 						<PersonalModeOfOperation>own</PersonalModeOfOperation>
-						<PersonalModeOfOperation>hire</PersonalModeOfOperation>
+						<AlternativeModeOfOperation>hire</AlternativeModeOfOperation>
 					</ModeAndModeOfOperationFilter>
 					<ModeAndModeOfOperationFilter>
 						<PersonalMode>bicycle</PersonalMode>

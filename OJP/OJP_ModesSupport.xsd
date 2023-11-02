@@ -31,7 +31,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="privateLift">
 				<xs:annotation>
-					<xs:documentation>Other driver without commercial interest is driving. Typical case of being picked up or dropped off at a stop e.g. by a friend, relative. If a stranger is doing the driving, then pooling from ALTERNATIVE MODE OF OPERATION should be chosen.</xs:documentation>
+					<xs:documentation>Other driver without commercial interest is driving. Typical case of being picked up or dropped off at a stop e.g. by a friend, relative. If the offer is advertised or commercial, then pooling from ALTERNATIVE MODE OF OPERATION should be chosen.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="lease">
@@ -39,11 +39,7 @@
 					<xs:documentation>Using a leased VEHICLE.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="hire">
-				<xs:annotation>
-					<xs:documentation>Using a hired VEHICLE.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
+
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
@@ -159,6 +155,11 @@
 					<xs:documentation>ALTERNATIVE MODE OF OPERATION. To specifically state that it is hotel related. Specialisation of demand responsive.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="hire">
+				<xs:annotation>
+					<xs:documentation>Using a hired VEHICLE.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
 			<xs:enumeration value="other">
 				<xs:annotation>
 					<xs:documentation>Only use this value, when no other applies.</xs:documentation>

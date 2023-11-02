@@ -20,7 +20,7 @@
 					<IndividualTransportOption>
 						<ItModeAndModeOfOperation>
 							<PersonalMode>bicycle</PersonalMode>
-							<PersonalModeOfOperation>hire</PersonalModeOfOperation>
+							<AlternativeModeOfOperation>hire</AlternativeModeOfOperation>
 						</ItModeAndModeOfOperation>
 						<MaxDistance>240</MaxDistance>
 						<MaxDuration>PT20M</MaxDuration>
