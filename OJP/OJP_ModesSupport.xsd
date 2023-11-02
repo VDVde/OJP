@@ -39,7 +39,6 @@
 					<xs:documentation>Using a leased VEHICLE.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:annotation>
@@ -159,7 +158,7 @@
 				<xs:annotation>
 					<xs:documentation>Using a hired VEHICLE.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="other">
 				<xs:annotation>
 					<xs:documentation>Only use this value, when no other applies.</xs:documentation>
