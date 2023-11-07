@@ -72,7 +72,7 @@
 	</xs:complexType>
 	<xs:group name="TripDataFilterGroup">
 		<xs:annotation>
-			<xs:documentation>Data to be included/excluded from search, f.e. modes, operators (Transmodel: TRIP REQUEST FILTER).</xs:documentation>
+			<xs:documentation>Data to be included/excluded from search, e.g. modes, operators (Transmodel: TRIP REQUEST FILTER).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ModeAndModeOfOperationFilter" type="ModeAndModeOfOperationFilterStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1119,7 +1119,7 @@
 			</xs:element>
 			<xs:element name="BufferTime" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Buffer time as part of the overall interchange duration. Buffer times, f.e. check in/out times, sometimes are mandatory for using certain services as f.e. airplanes, ferries or highspeed trains.</xs:documentation>
+					<xs:documentation>Buffer time as part of the overall interchange duration. Buffer times, e.g. check in/out times, sometimes are mandatory for using certain services as e.g. airplanes, ferries or highspeed trains.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

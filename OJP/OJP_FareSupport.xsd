@@ -426,7 +426,7 @@
 			</xs:element>
 			<xs:element name="BookingMethods" type="BookingMethodListOfEnumerations" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Allowed Ways of Making a BOOKING.</xs:documentation>
+					<xs:documentation>Allowed ways of making a BOOKING.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BookingAccess" type="BookingAccessEnumeration" minOccurs="0">

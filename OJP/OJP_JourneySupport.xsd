@@ -115,7 +115,7 @@
 			</xs:element>
 			<xs:element name="PublishedServiceName" type="InternationalTextStructure">
 				<xs:annotation>
-					<xs:documentation>Line name or service description as known to the public, f.e. "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
+					<xs:documentation>Line name or service description as known to the public, e.g. "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TrainNumber" type="xs:normalizedString" minOccurs="0">
@@ -135,7 +135,7 @@
 			</xs:element>
 			<xs:element name="RouteDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Descriptive text for a route, f.e. "Airport via City Centre"</xs:documentation>
+					<xs:documentation>Descriptive text for a route, e.g. "Airport via City Centre"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Via" type="ServiceViaPointStructure" minOccurs="0" maxOccurs="unbounded">
@@ -205,7 +205,7 @@
 	</xs:group>
 	<xs:group name="RouteDescriptionGroup">
 		<xs:annotation>
-			<xs:documentation>Descriptive text for a route, f.e. "Airport via City Centre"</xs:documentation>
+			<xs:documentation>Descriptive text for a route, e.g. "Airport via City Centre"</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="RouteDescriptionText" type="InternationalTextStructure"/>
@@ -551,7 +551,7 @@
 			</xs:element>
 			<xs:element name="Bearing" type="siri:AbsoluteBearingType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Bearing in compass degrees in which vehicle is heading (expected to be consistent with Transmodel ROUTE -or LEG TRACK- and PATH GUIDANCE).</xs:documentation>
+					<xs:documentation>Bearing in compass degrees in which vehicle is heading (expected to be consistent with Transmodel ROUTE or LEG TRACK and PATH GUIDANCE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProgressBetweenStops" type="siri:ProgressBetweenStopsStructure" minOccurs="0">
