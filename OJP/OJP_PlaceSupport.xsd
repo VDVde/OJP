@@ -282,7 +282,7 @@
 		<xs:choice>
 			<xs:element name="OsmTag" type="OsmTagStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Open Street Map tag structure (key-value)</xs:documentation>
+					<xs:documentation>OpenStreetMap tag structure (key-value)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PointOfInterestClassification" type="xs:string" maxOccurs="unbounded">
@@ -316,17 +316,17 @@
 	</xs:complexType>
 	<xs:complexType name="OsmTagStructure">
 		<xs:annotation>
-			<xs:documentation>Structure of an Open Street Map tag.</xs:documentation>
+			<xs:documentation>Structure of an OpenStreetMap tag.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Tag" type="xs:NMTOKEN">
 				<xs:annotation>
-					<xs:documentation>Name of Open Street Map tag (amenity, leisure, tourism, bike, ...)</xs:documentation>
+					<xs:documentation>Name of OpenStreetMap tag (amenity, leisure, tourism, bike, ...)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Value" type="xs:NMTOKEN">
 				<xs:annotation>
-					<xs:documentation>Value for Open Street Map tag (charging_station, hostel, yes, ...)</xs:documentation>
+					<xs:documentation>Value for OpenStreetMap tag (charging_station, hostel, yes, ...)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
