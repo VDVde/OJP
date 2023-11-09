@@ -19,7 +19,7 @@
 				</xs:choice>
 				<xs:element ref="siri:Extensions" minOccurs="0"/>
 			</xs:sequence>
-			<xs:attribute name="version" type="xs:NMTOKEN" use="required" fixed="1.1-dev"/>
+			<xs:attribute name="version" type="xs:NMTOKEN" use="required" fixed="2.0"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="OJPRequest" type="OJPRequestStructure">
