@@ -7,24 +7,32 @@
 # The -e flag causes the script to exit as soon as one command returns a non-zero exit code
 set -e
 
-base_dir="$(readlink -f $(dirname "$0")/..)"
-xsl_dir=$base_dir/docs
-generated_dir="${base_dir}/docs/generated"
-basex="/tmp/basex.jar"
+BASE_DIRECTORY=$(readlink -f "$(dirname "${0}")/..")
+XSL_DIRECTORY=${BASE_DIRECTORY}/docs/generate_tables
+GENERATED_DIRECTORY="${BASE_DIRECTORY}/docs/generated"
+BASEX_JAR="/tmp/basex.jar"
 
-
-if [ ! -e ${basex} ]; then
-	echo "Download BaseX ..."
-	wget --output-document=${basex} https://files.basex.org/releases/10.6/BaseX106.jar	
+if [ ! -e ${BASEX_JAR} ]; then
+	echo "Downloading BaseX ..."
+	wget --output-document=${BASEX_JAR} https://files.basex.org/releases/10.6/BaseX106.jar
 fi
 
 echo "Generating documentation tables ..."
 
-# prepare generated_dir
-mkdir -p "${generated_dir}"
-rm -f "${generated_dir}"/contab/*.html
-cd ${xsl_dir}
-java -cp /tmp/basex.jar org.basex.BaseX -b report=contab -b dir=${base_dir} -b odir=${generated_dir} -b custom=custom-ojp.xml -b dnamesExcluded=".git .github" xcore.xq
-rm -fr "${generated_dir}"/edesc
+# prepare GENERATED_DIRECTORY
+mkdir -p "${GENERATED_DIRECTORY}"
+rm -f "${GENERATED_DIRECTORY}"/*.html
+
+cd "${XSL_DIRECTORY}"
+
+java -cp ${BASEX_JAR} org.basex.BaseX \
+ -b report=contab \
+ -b dir="${BASE_DIRECTORY}" \
+ -b odir="${GENERATED_DIRECTORY}" \
+ -b custom=custom-ojp.xml \
+ -b dnamesExcluded=".git .github" \
+ xcore.xq
+
+rm -rf "${GENERATED_DIRECTORY}"/edesc
 
 echo -e '\033[0;32mFinished generating documentation tables\033[0m'
