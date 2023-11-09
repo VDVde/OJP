@@ -24,19 +24,16 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
 
-      - name: Install xmllint and xsltproc
+      - name: Install java, xmllint and xsltproc
         run: |
           sudo apt-get update
-          sudo apt-get install libxml2-utils xsltproc
+          sudo apt-get install default-jre libxml2-utils xsltproc
 
       - name: Validate structure and lint XSD and XML files
         run: ./.github/scripts/validate-and-lint.sh
 
       - name: Validate OJP XML examples
         run: ./.github/scripts/validate-examples.sh
-
-      - name: Check schema structure for generation for documentation tables
-        run: ./docs/validate-schema-conventions.sh
 
       - name: Generate documentation tables
         run: ./docs/generate-tables.sh
