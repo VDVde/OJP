@@ -1,34 +1,43 @@
 #!/bin/bash
-# Generate the documentation tables as docs/generated/OJP.html from the .xsd schema files
+# Generate the documentation tables in docs/generated/ from the .xsd schema files
 #
-# You need the binary `xsltproc`
-# apt-get install xsltproc
+# You need the binary `java`
+# apt-get install default-jre
 
 # The -e flag causes the script to exit as soon as one command returns a non-zero exit code
 set -e
 
+BASE_DIRECTORY=$(readlink -f "$(dirname "${0}")/..")
+XSL_DIRECTORY="${BASE_DIRECTORY}/docs/generate_tables"
+GENERATED_DIRECTORY="${BASE_DIRECTORY}/docs/generated"
+BASEX_JAR="/tmp/basex.jar"
+
+if [ ! -e ${BASEX_JAR} ]; then
+	echo "Downloading BaseX ..."
+	wget --output-document=${BASEX_JAR} https://files.basex.org/releases/10.6/BaseX106.jar
+fi
+
 echo "Generating documentation tables ..."
 
-base_dir="$(dirname "${0}")/.."
-xsl_dir=$base_dir/docs
-generated_dir="${base_dir}/docs/generated"
+# prepare GENERATED_DIRECTORY
+mkdir -p "${GENERATED_DIRECTORY}"
+rm -f "${GENERATED_DIRECTORY}"/documentation-tables
 
-# prepare generated_dir
-mkdir -p "${generated_dir}"
-rm -f "${generated_dir}"/OJP-prep.xml "${generated_dir}"/*.adoc "${generated_dir}"/*.html
-cp "${xsl_dir}"/asciidoc.css "${generated_dir}"/
+cd "${XSL_DIRECTORY}"
 
-# create intermediate XML file for documentation
-xsltproc --xinclude "${xsl_dir}"/ojp-to-prepdoc.xsl \
- "${xsl_dir}"/schema-collection.xml \
- >> "${generated_dir}"/OJP-prep.xml
+java -cp ${BASEX_JAR} org.basex.BaseX \
+ -b report=contab \
+ -b dir="${BASE_DIRECTORY}" \
+ -b odir="${GENERATED_DIRECTORY}" \
+ -b custom=custom-ojp.xml \
+ -b dnamesExcluded=".git .github" \
+ xcore.xq
 
-# generate stand-alone HTML file for documentation
-xsltproc --xinclude "${xsl_dir}"/ojp-prep-to-html-with-toc.xsl \
- "${generated_dir}"/OJP-prep.xml \
- >> "${generated_dir}"/index.html
+# Remove interim edesc files
+rm -rf "${GENERATED_DIRECTORY}"/edesc
 
-# remove intermediate XML file
-rm -f "${generated_dir}"/OJP-prep.xml
+# move to speaking name
+mv "${GENERATED_DIRECTORY}"/contab "${GENERATED_DIRECTORY}"/documentation-tables
+mv "${GENERATED_DIRECTORY}"/documentation-tables/contab-index.html "${GENERATED_DIRECTORY}"/documentation-tables/index.html
 
 echo -e '\033[0;32mFinished generating documentation tables\033[0m'
