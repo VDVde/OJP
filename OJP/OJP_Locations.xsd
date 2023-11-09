@@ -433,7 +433,7 @@
 			</xs:element>
 			<xs:element name="Priority" type="PercentType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The priority of the exchange point. 100 is the maximum.</xs:documentation>
+					<xs:documentation>The priority of the exchange point. 100 is the maximum. The priority can be used to select given ExchangePoints more often (e.g. because the station is a main hub).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

@@ -72,7 +72,7 @@
 	</xs:complexType>
 	<xs:group name="TripDataFilterGroup">
 		<xs:annotation>
-			<xs:documentation>Data to be included/excluded from search, f.e. modes, operators (Transmodel: TRIP REQUEST FILTER).</xs:documentation>
+			<xs:documentation>Data to be included/excluded from search, e.g. modes, operators (Transmodel: TRIP REQUEST FILTER).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ModeAndModeOfOperationFilter" type="ModeAndModeOfOperationFilterStructure" minOccurs="0" maxOccurs="unbounded">
@@ -819,7 +819,7 @@
 			</xs:element>
 			<xs:element name="FeederInterchangeId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Interchange identifier of the feeding line/service at its alighting. This is not a reference. This identifier is used to recognize in a distributed environment (e.g. EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scanario (aka "line ID"). See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Interchange identifier of the feeding line/service at its alighting. This is not a reference. This identifier is used to recognize in a distributed environment (e.g. EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scenario (aka "line id"). See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
@@ -1119,7 +1119,7 @@
 			</xs:element>
 			<xs:element name="BufferTime" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Buffer time as part of the overall interchange duration. Buffer times, f.e. check in/out times, sometimes are mandatory for using certain services as f.e. airplanes, ferries or highspeed trains.</xs:documentation>
+					<xs:documentation>Buffer time as part of the overall interchange duration. Buffer times, e.g. check in/out times, sometimes are mandatory for using certain services as e.g. airplanes, ferries or highspeed trains.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

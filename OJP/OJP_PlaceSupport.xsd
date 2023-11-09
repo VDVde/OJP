@@ -26,7 +26,7 @@
 			</xs:element>
 			<xs:element name="NameSuffix" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Additional description of the stop point that may be appended to the name if enough space is available. F.e. "opposite main entrance".</xs:documentation>
+					<xs:documentation>Additional description of the stop point that may be appended to the name if enough space is available. E.g. "opposite main entrance".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PlannedQuay" type="InternationalTextStructure" minOccurs="0">
@@ -96,7 +96,7 @@
 			</xs:element>
 			<xs:element name="NameSuffix" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Additional description of the stop place that may be appended to the name if enough space is available. F.e. "Exhibition Center".</xs:documentation>
+					<xs:documentation>Additional description of the stop place that may be appended to the name if enough space is available. E.g. "Exhibition Center".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -254,7 +254,7 @@
 			</xs:element>
 			<xs:element name="NameSuffix" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Additional description of the point of interest that may be appended to the name if enough space is available. F.e. "Exhibition Center".</xs:documentation>
+					<xs:documentation>Additional description of the point of interest that may be appended to the name if enough space is available. E.g. "Exhibition Center".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PointOfInterestCategory" type="PointOfInterestCategoryStructure" minOccurs="0" maxOccurs="unbounded">
@@ -430,7 +430,7 @@
 			</xs:element>
 			<xs:element name="NameSuffix" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Additional description of the address that may be appended to the name if enough space is available. F.e. "Crossing with Peterstraße".</xs:documentation>
+					<xs:documentation>Additional description of the address that may be appended to the name if enough space is available. E.g. "Crossing with Peterstraße".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="AddressDetailGroup"/>
