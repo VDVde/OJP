@@ -156,7 +156,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="PhoneType">
 		<xs:annotation>
-			<xs:documentation>Type for an International phone number. + Country + MSISDN e.g. +41 675601 etc.</xs:documentation>
+			<xs:documentation>Type for an International phone number. + Country + MSISDN e.g., +41 675601 etc.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:normalizedString"/>
 	</xs:simpleType>
@@ -271,7 +271,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="inAdvanceOnly">
 				<xs:annotation>
-					<xs:documentation>Purchase can only be made in advance of travel (e.g. for season ticket or advance ticket).</xs:documentation>
+					<xs:documentation>Purchase can only be made in advance of travel (e.g., for season ticket or advance ticket).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="beforeBoarding">
@@ -514,20 +514,20 @@
 		<xs:sequence>
 			<xs:element name="EntitlementProduct" type="EntitlementProductStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g. military card, concessionary card, ...). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g. the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
+					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g., military card, concessionary card, ...). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g., the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="EntitlementProductCodeType">
 		<xs:annotation>
-			<xs:documentation>Identifier of an ENTITLEMENT PRODUCT (e.g. BahnCard50, BahnCard50First, military card, concessionary card, ...). It is defined by the fare authority.</xs:documentation>
+			<xs:documentation>Identifier of an ENTITLEMENT PRODUCT (e.g., BahnCard50, BahnCard50First, military card, concessionary card, ...). It is defined by the fare authority.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:NMTOKEN"/>
 	</xs:simpleType>
 	<xs:complexType name="EntitlementProductStructure">
 		<xs:annotation>
-			<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g. military card, concessionary card, ...). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g. the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
+			<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g., military card, concessionary card, ...). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g., the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="FareAuthorityRef">
@@ -537,7 +537,7 @@
 			</xs:element>
 			<xs:element name="EntitlementProductRef" type="EntitlementProductCodeType">
 				<xs:annotation>
-					<xs:documentation>Identifier of the ENTITLEMENT PRODUCT (e.g. BahnCard50, BahnCard50First, ...)</xs:documentation>
+					<xs:documentation>Identifier of the ENTITLEMENT PRODUCT (e.g., BahnCard50, BahnCard50First, ...)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ValidityPeriod" type="siri:HalfOpenTimestampOutputRangeStructure" minOccurs="0">
@@ -570,7 +570,7 @@
 			<xs:group ref="FareAuthorityGroup"/>
 			<xs:element name="ProtoProduct" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Is this product a proto product? Default is false. If true, it should not be shown to the user. In a distributed environment (e.g. EU-Spirit) partial systems may generate incomplete product information (proto product), which has to be processed further and combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Is this product a proto product? Default is false. If true, it should not be shown to the user. In a distributed environment (e.g., EU-Spirit) partial systems may generate incomplete product information (proto product), which has to be processed further and combined with other information before it is a complete fare product and can be shown to the user. See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="FareProductPriceGroup"/>
@@ -601,7 +601,7 @@
 			</xs:element>
 			<xs:element name="Currency" type="xs:NMTOKEN" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>iso 4217 currency code, e.g. EUR for Euro or GBP for Pound Sterling </xs:documentation>
+					<xs:documentation>iso 4217 currency code, e.g., EUR for Euro or GBP for Pound Sterling </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VatRate" type="Percentage" minOccurs="0">
@@ -623,7 +623,7 @@
 			</xs:element>
 			<xs:element name="RequiredCard" type="EntitlementProductStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>One or more ENTITLEMENT PRODUCTs required for the purchase of this FareProduct. In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g. the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
+					<xs:documentation>One or more ENTITLEMENT PRODUCTs required for the purchase of this FareProduct. In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g., the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ValidFor" type="PassengerCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -697,7 +697,7 @@
 	</xs:group>
 	<xs:complexType name="TripFareResultStructure">
 		<xs:annotation>
-			<xs:documentation>Structure of a single TripFareResult. This may cover the whole trip or only the part the service can answer. If only partial answers can be delivered, then this must be indicated with FARE_ADDITIONALTICKETS (as a warning). For a given trip multiple FareResults may need to be combined to get the whole tariff. A typical example may be classic public transport and a sharing leg. Some legs, e.g. TransferLegs and walking ContinuousLeg will never have a price. The service may include them in one of the tickets. If the whole trip is for free, then a TripFareResult with a price of 0 is expected. It is possible to have combined FareResults (e.g. for a bundle) and in addition price each leg individually.</xs:documentation>
+			<xs:documentation>Structure of a single TripFareResult. This may cover the whole trip or only the part the service can answer. If only partial answers can be delivered, then this must be indicated with FARE_ADDITIONALTICKETS (as a warning). For a given trip multiple FareResults may need to be combined to get the whole tariff. A typical example may be classic public transport and a sharing leg. Some legs, e.g., TransferLegs and walking ContinuousLeg will never have a price. The service may include them in one of the tickets. If the whole trip is for free, then a TripFareResult with a price of 0 is expected. It is possible to have combined FareResults (e.g., for a bundle) and in addition price each leg individually.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">
@@ -709,7 +709,7 @@
 			<xs:element name="BookingId" type="BookingObjectIdType" minOccurs="0"/>
 			<xs:group ref="LegRangeGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>A ticket may be valid for multiple non-consequtive legs. TransferLegs and ContinuousLegs without a tariff may be either included or ignored. If the tariff depends on not having a ContinuousLeg e.g. with sharing in the middle, then the server must decide, if it wants to provide more than one TripFareResult.</xs:documentation>
+					<xs:documentation>A ticket may be valid for multiple non-consequtive legs. TransferLegs and ContinuousLegs without a tariff may be either included or ignored. If the tariff depends on not having a ContinuousLeg e.g., with sharing in the middle, then the server must decide, if it wants to provide more than one TripFareResult.</xs:documentation>
 				</xs:annotation>
 			</xs:group>
 			<xs:element name="PassedZones" type="TariffZoneListInAreaStructure" minOccurs="0">
@@ -785,7 +785,7 @@
 			</xs:element>
 			<xs:element name="FareClass" type="siri:FareClassEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Fare class for which to retrieve FareProducts. Refers to TYPE OF FARE CLASS (e.g. first class). Transmodel: CLASS OF USE.</xs:documentation>
+					<xs:documentation>Fare class for which to retrieve FareProducts. Refers to TYPE OF FARE CLASS (e.g., first class). Transmodel: CLASS OF USE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -839,7 +839,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="FARE_ROUTENOTFEASIBLE">
 				<xs:annotation>
-					<xs:documentation>Fare calculation is not possible because the suggested trip is not in compliance with the fare regulations, e.g. because of round trips, LEGs that go forth and return or exceed the maximal total trip duration.</xs:documentation>
+					<xs:documentation>Fare calculation is not possible because the suggested trip is not in compliance with the fare regulations, e.g., because of round trips, LEGs that go forth and return or exceed the maximal total trip duration.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="FARE_ALREADYCOVERED">

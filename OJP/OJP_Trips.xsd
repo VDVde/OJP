@@ -72,7 +72,7 @@
 	</xs:complexType>
 	<xs:group name="TripDataFilterGroup">
 		<xs:annotation>
-			<xs:documentation>Data to be included/excluded from search, e.g. modes, operators (Transmodel: TRIP REQUEST FILTER).</xs:documentation>
+			<xs:documentation>Data to be included/excluded from search, e.g., modes, operators (Transmodel: TRIP REQUEST FILTER).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ModeAndModeOfOperationFilter" type="ModeAndModeOfOperationFilterStructure" minOccurs="0" maxOccurs="unbounded">
@@ -111,7 +111,7 @@
 			<xs:choice>
 				<xs:element name="MotorisedMainTravelMode" type="xs:boolean" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>The MotorisedMainTravelMode defines whether the trip planner works in PT mode (or pure IT mode) or includes carTransportRail and the like. If set to true (e.g. because one travels by car, truck or motorcycle), then carTransportRail, ferry are used together with roads.</xs:documentation>
+						<xs:documentation>The MotorisedMainTravelMode defines whether the trip planner works in PT mode (or pure IT mode) or includes carTransportRail and the like. If set to true (e.g., because one travels by car, truck or motorcycle), then carTransportRail, ferry are used together with roads.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:sequence>
@@ -147,18 +147,18 @@
 			</xs:element>
 			<xs:element name="AdditionalTransferTime" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport, not modeled in Transmodel).</xs:documentation>
+					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport, not modelled in Transmodel).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HikingProfile" default="easy" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: possible explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen</xs:documentation>
+					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:enumeration value="easy">
 							<xs:annotation>
-								<xs:documentation>Regular hiking/walking in valleys and plains and easy mountain trails e.g. yellow hiking signs in Switzerland or blue in Germany.</xs:documentation>
+								<xs:documentation>Regular hiking/walking in valleys and plains and easy mountain trails e.g., yellow hiking signs in Switzerland or blue in Germany.</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 						<xs:enumeration value="medium">
@@ -230,7 +230,7 @@
 	</xs:group>
 	<xs:simpleType name="OptimisationMethodEnumeration">
 		<xs:annotation>
-			<xs:documentation>The types of algorithm that can be used for planning a journey (fastest, least walking, etc.). Only one method can be used. Each one really is a whole set of a policy, which is defined below. E.g. fastest also includes least transfers as a second criteria, some modes are excluded usually by default. Implementations might differ (slightly). Also some strategies might not be implemented. The most important strategies are marked.</xs:documentation>
+			<xs:documentation>The types of algorithms that can be used for planning a journey (fastest, least walking, etc.). Only one method can be used. Each one really is a whole set of a policy, which is defined below. E.g., fastest also includes least transfers as a second criteria, some modes are excluded usually by default. Implementations might differ (slightly). Also, some strategies might not be implemented. The most important strategies are marked.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="fastest">
@@ -250,7 +250,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="leastCost">
 				<xs:annotation>
-					<xs:documentation>Cheapest fare, taking into account the applicable reductions. Might not base on actual cost, but an estimation. Expected strategy.</xs:documentation>
+					<xs:documentation>Cheapest fare, considering the applicable reductions. Might not base on actual cost, but an estimation. Expected strategy.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="leastDistance">
@@ -260,17 +260,17 @@
 			</xs:enumeration>
 			<xs:enumeration value="earliestArrival">
 				<xs:annotation>
-					<xs:documentation>Earliest possible arrival time respecting the time constraints. (forward search)</xs:documentation>
+					<xs:documentation>Earliest possible arrival time respecting the time constraints (forward search).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="latestDeparture">
 				<xs:annotation>
-					<xs:documentation>Latest departure time for a given arrival time. (backward search)</xs:documentation>
+					<xs:documentation>Latest departure time for a given arrival time (backward search).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="earliestArrivalAndLatestDeparture">
 				<xs:annotation>
-					<xs:documentation>Combines earliestArrival and latestDeparture, allowing to compress the departure time. (forward-backward-forward search)</xs:documentation>
+					<xs:documentation>Combines earliestArrival and latestDeparture, allowing to compress the departure time (forward-backward-forward search).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="minNonLevelEntrances">
@@ -432,14 +432,14 @@
 			</xs:element>
 			<xs:element name="IsAlternativeOption" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>When the result is an alternative option from IncludeAlternativeOptions, then the flag should be set to true. If it is an alternative option this means that the server decided to add this result for its own reasons: e.g. to push a certain trip leg, because it believes that it might better suit at least some possible customers. Such options are not an optimal fit to the criteria that were in the request. The client may therefore disregard such results depending on the use case.</xs:documentation>
+					<xs:documentation>When the result is an alternative option from IncludeAlternativeOptions, then the flag should be set to true. If it is an alternative option this means that the server decided to add this result for its own reasons: e.g., to push a certain trip leg, because it believes that it might better suit at least some possible customers. Such options are not an optimal fit to the criteria that were in the request. The client may therefore disregard such results depending on the use case.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TripSummaryStructure">
 		<xs:annotation>
-			<xs:documentation>Structure for trip overview information (only implementation related and therefore not modeled in Transmodel).</xs:documentation>
+			<xs:documentation>Structure for trip overview information (only implementation related and therefore not modelled in Transmodel).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TripId" type="TripObjectIdType">
@@ -539,7 +539,7 @@
 			</xs:element>
 			<xs:element name="Leg" type="LegStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Legs of the trip (Transmodel: LEG or MONITORED LEG). Note: There is always a TransferLeg between two TimedLegs. There can be a TransferLeg between two ContinuousLegs (e.g. because some special time consuming action is necessary like a car hire). There can be a TransferLeg between a ContinuousLeg and a TimedLeg for the same reason. There aren't two consecutive TransferLegs.</xs:documentation>
+					<xs:documentation>Legs of the trip (Transmodel: LEG or MONITORED LEG). Note: There is always a TransferLeg between two TimedLegs. There can be a TransferLeg between two ContinuousLegs (e.g., because some special time consuming action is necessary like a car hire). There can be a TransferLeg between a ContinuousLeg and a TimedLeg for the same reason. There aren't two consecutive TransferLegs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
@@ -580,7 +580,7 @@
 			</xs:element>
 			<xs:element name="Duration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The duration of the LEG (e.g. from Transmodel PT RIDE LEG.Duration).</xs:documentation>
+					<xs:documentation>The duration of the LEG (e.g., from Transmodel PT RIDE LEG.Duration).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
@@ -646,7 +646,7 @@
 			</xs:element>
 			<xs:element name="ParallelService" type="ParallelServiceStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Services running combined with at least parts of this journey, e.g. wing trains. The contained stop sequence interval refers to the original journey.</xs:documentation>
+					<xs:documentation>Services running combined with at least parts of this journey, e.g., wing trains. The contained stop sequence interval refers to the original journey.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="SustainabilityGroup" minOccurs="0"/>
@@ -790,7 +790,7 @@
 			</xs:element>
 			<xs:element name="DistributorInterchangeId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Interchange identifier of the distributing line/service at its boarding. This is not a reference. This identifier is used to recognize in a distributed environment (e.g. EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scanario (aka "line ID"). See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Interchange identifier of the distributing line/service at its boarding. This is not a reference. This identifier is used to recognize in a distributed environment (e.g., EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scanario (aka "line ID"). See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
@@ -809,17 +809,17 @@
 			<xs:group ref="StopPointGroup"/>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure">
 				<xs:annotation>
-					<xs:documentation>describes the arrival situation at the leg alight stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+					<xs:documentation>describes the arrival situation at the leg alight stop point (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>describes the departure situation at this leg alight stop point (empty for last leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+					<xs:documentation>describes the departure situation at this leg alight stop point (empty for last leg) (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FeederInterchangeId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Interchange identifier of the feeding line/service at its alighting. This is not a reference. This identifier is used to recognize in a distributed environment (e.g. EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scenario (aka "line id"). See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Interchange identifier of the feeding line/service at its alighting. This is not a reference. This identifier is used to recognize in a distributed environment (e.g., EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scenario (aka "line id"). See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
@@ -838,12 +838,12 @@
 			<xs:group ref="StopPointGroup"/>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure">
 				<xs:annotation>
-					<xs:documentation>describes the arrival situation a this leg board stop point (empty for first leg) ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+					<xs:documentation>describes the arrival situation a this leg board stop point (empty for first leg) (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure">
 				<xs:annotation>
-					<xs:documentation>describes the departure situation at this leg board stop point ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
+					<xs:documentation>describes the departure situation at this leg board stop point (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
@@ -883,7 +883,7 @@
 			</xs:element>
 			<xs:element name="GuidanceAdvice" type="GuidanceAdviceEnumeration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Various types of guidance advice given to traveller (according to Transmodel a view of a LEG TRACK and PATH GUIDANCE).</xs:documentation>
+					<xs:documentation>Several types of guidance advice given to traveller (according to Transmodel a view of a LEG TRACK and PATH GUIDANCE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TurnAction" type="TurnActionEnumeration" minOccurs="0">
@@ -903,7 +903,7 @@
 			</xs:element>
 			<xs:element name="DirectionHint" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Textual direction hint for better understanding, e.g. "follow signs to Hamburg" (according to Transmodel a view of a LEG TRACK and PATH GUIDANCE).</xs:documentation>
+					<xs:documentation>Textual direction hint for better understanding, e.g., "follow signs to Hamburg" (according to Transmodel a view of a LEG TRACK and PATH GUIDANCE).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AbsoluteBearing" type="siri:AbsoluteBearingType" minOccurs="0">
@@ -949,7 +949,7 @@
 	</xs:complexType>
 	<xs:simpleType name="GuidanceAdviceEnumeration">
 		<xs:annotation>
-			<xs:documentation>Various types of guidance advice given to traveller. Suitable values may differ by MODE (e.g. a car driver needs different advice than a person walking for a transfer.</xs:documentation>
+			<xs:documentation>Several types of guidance advice given to traveller. Suitable values may differ by MODE (e.g., a car driver needs different advice than a person walking for a transfer.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="origin">
@@ -1004,12 +1004,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="enter_builtup_area">
 				<xs:annotation>
-					<xs:documentation>Entering a builtup area / community.</xs:documentation>
+					<xs:documentation>Entering a built-up area / community.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="leave_builtup_area">
 				<xs:annotation>
-					<xs:documentation>Leave the builtup area / community.</xs:documentation>
+					<xs:documentation>Leave the built-up area / community.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="freewayAccessRamp">
@@ -1024,7 +1024,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="left_lane">
 				<xs:annotation>
-					<xs:documentation>If there are more than 2 lanes, then TurnAction half_left,left,sharp_left may help decide.</xs:documentation>
+					<xs:documentation>If there are more than 2 lanes, then TurnAction half_left, left, sharp_left may help decide.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="middle_lane">
@@ -1034,7 +1034,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="right_lane">
 				<xs:annotation>
-					<xs:documentation>If there are more than 2 lanes, then TurnAction half_right,right,sharp_right may help decide</xs:documentation>
+					<xs:documentation>If there are more than 2 lanes, then TurnAction half_right, right, sharp_right may help decide.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="unknown_turning_kind"/>
@@ -1114,12 +1114,12 @@
 			</xs:element>
 			<xs:element name="WalkDuration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Walk time as part of the overall interchange duration (in Transmodel might be modeled as TRANSFER.CONNECTION.DefaultDuration).</xs:documentation>
+					<xs:documentation>Walk time as part of the overall interchange duration (in Transmodel might be modelled as TRANSFER.CONNECTION.DefaultDuration).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BufferTime" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Buffer time as part of the overall interchange duration. Buffer times, e.g. check in/out times, sometimes are mandatory for using certain services as e.g. airplanes, ferries or highspeed trains.</xs:documentation>
+					<xs:documentation>Buffer time as part of the overall interchange duration. Buffer times, e.g., check in/out times, sometimes are mandatory for using certain services as e.g., airplanes, ferries or highspeed trains.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1208,7 +1208,7 @@ Can only be used when both participants recognise the same schedule version. If 
 	</xs:simpleType>
 	<xs:simpleType name="AccessibilityFeatureTypesEnumeration">
 		<xs:annotation>
-			<xs:documentation>Allowed values for AccessibilityFeature (for mobility and sensory impairments, assistance and important elements to pay attention to).</xs:documentation>
+			<xs:documentation>Allowed values for AccessibilityFeature (for mobility and sensory impairments, assistance and crucial elements to pay attention to).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="lowFloorAccess"/>
@@ -1312,7 +1312,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			</xs:element>
 			<xs:element name="Id" type="PlaceObjectIdType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Id of the element at this end of the PathLink (typically a PLACE, e.g. where the elevator is located).</xs:documentation>
+					<xs:documentation>Id of the element at this end of the PathLink (typically a PLACE, e.g., where the elevator is located).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1337,7 +1337,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			</xs:element>
 			<xs:element name="Via" type="TripViaStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops (in Transmodel modeled as TRIP REQUEST PLACE.TRIP VIA PLACE.GoVia).</xs:documentation>
+					<xs:documentation>Ordered series of points where the journey must pass through. If more than one via point is given all of them must be obeyed - in the correct order. The server is allowed to replace a via stop by equivalent stops (in Transmodel modelled as TRIP REQUEST PLACE.TRIP VIA PLACE.GoVia).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NotVia" type="NotViaStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1390,14 +1390,14 @@ Can only be used when both participants recognise the same schedule version. If 
 	<xs:simpleType name="MultiPointTypeEnumeration">
 		<xs:annotation>
 			<xs:documentation>How the multiple origin/destination points should be considered.
-			Note: Unfortunately this element was underdefined before and this resulted in different implementations.
+			Note: Unfortunately, this element was underdefined before and this resulted in different implementations.
 			Note: MultiPointType trumps the number of results. If the algorithm thinks it necessary to provide more results, it should.
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="anyPoint">
 				<xs:annotation>
-					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Some implementation will return only one origin-destination pair even for multiple results with this setting. Others will provide multiple.</xs:documentation>
+					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Some implementations will return only one origin-destination pair even for multiple results with this setting. Others will provide multiple.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="eachOrigin">
@@ -1579,7 +1579,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
+					<xs:documentation>System reference to use for the refinement. If not specified, the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="TripMobilityFilterGroup"/>
@@ -1708,7 +1708,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_REALTIMEINCOMPLETE">
 				<xs:annotation>
-					<xs:documentation>There is no realtime information available for at least one of the services within this trip result.</xs:documentation>
+					<xs:documentation>There is no real-time information available for at least one of the services within this trip result.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_ITTIMEEXTENDED">
@@ -1728,7 +1728,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_RESTRICTEDRESULTSDROPPED">
 				<xs:annotation>
-					<xs:documentation>Used for warnings, when there where possible/better results that were dropped, because of the criteria were not used (e.g. private services, offer only available for seniors).</xs:documentation>
+					<xs:documentation>Used for warnings, when there where possible/better results that were dropped, because of the criteria were not used (e.g., private services, offer only available for seniors).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_MULTIPOINT_NOTALLPOINTSCOVERED">
@@ -1806,7 +1806,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>System reference to use for the refinement. If not specified the origin systems of each leg are used for the refinement.</xs:documentation>
+					<xs:documentation>System reference to use for the refinement. If not specified, the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtendToFrontOrBack" type="ExtendToFrontOrBackType" default="extendToFront" minOccurs="0" maxOccurs="1">
@@ -1816,7 +1816,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			</xs:element>
 			<xs:element name="AdditionalWaitingTime" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Absolute time in minutes the passenger wants additionally to make the interchange. If another TransferLeg is needed (e.g. since another quay is used for the found arrival/departure) this is taken into account. If not passed, the next best arrival/departure is requested.</xs:documentation>
+					<xs:documentation>Absolute time in minutes the passenger wants additionally to make the interchange. If another TransferLeg is needed (e.g., since another quay is used for the found arrival/departure) this is taken into account. If not passed, the next best arrival/departure is requested.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TripParams" type="TripParamStructure" minOccurs="0">

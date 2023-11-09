@@ -25,17 +25,17 @@
 		<xs:sequence>
 			<xs:element name="Name" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Full name of this product category, e.g. "Autoreisezug" in Switzerland or "Dampfschiff"</xs:documentation>
+					<xs:documentation>Full name of this product category, e.g., "Autoreisezug" in Switzerland or "Dampfschiff"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ShortName" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Short name or acronym of the product category, likely to be published, e.g. "BAV", "ARZ", "TGV". The product category is more important for publication in Switzerland than Mode / Submode.</xs:documentation>
+					<xs:documentation>Short name or acronym of the product category, likely to be published, e.g., "BAV", "ARZ", "TGV". The product category is more important for publication in Switzerland than Mode / Submode.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="ProductCategoryRef" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>A reference to the product category. This is the internal code used within the reference frameworks (NeTEx, SIRI). It is usually not displayed, but interpreted by the technical system, e.g. "ch:1:TypeOfProductCategory:ARZ" (Autoreisezug in Switzerland) or "ch:1:TypeOfProductCategory:BAV".</xs:documentation>
+					<xs:documentation>A reference to the product category. This is the internal code used within the reference frameworks (NeTEx, SIRI). It is usually not displayed, but interpreted by the technical system, e.g., "ch:1:TypeOfProductCategory:ARZ" (Autoreisezug in Switzerland) or "ch:1:TypeOfProductCategory:BAV".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -59,7 +59,7 @@
 	</xs:complexType>
 	<xs:complexType name="ParallelServiceStructure">
 		<xs:annotation>
-			<xs:documentation>Services running combined with at least parts of this journey, e.g. wing trains. The contained stop sequence interval refers to the original journey.</xs:documentation>
+			<xs:documentation>Services running combined with at least parts of this journey, e.g., wing trains. The contained stop sequence interval refers to the original journey.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="StopSequenceIntervalGroup"/>
@@ -110,12 +110,12 @@
 			</xs:element>
 			<xs:element name="ProductCategory" type="ProductCategoryStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>A product category for the service. This is a classification defined in NeTEx/SIRI used to identify groups of journeys with some special properties for marketing and fare products, e.g. "TE2" for SNCF or a special panorama train "PE" in Switzerland.</xs:documentation>
+					<xs:documentation>A product category for the service. This is a classification defined in NeTEx/SIRI used to identify groups of journeys with some special properties for marketing and fare products, e.g., "TE2" for SNCF or a special panorama train "PE" in Switzerland.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PublishedServiceName" type="InternationalTextStructure">
 				<xs:annotation>
-					<xs:documentation>Line name or service description as known to the public, e.g. "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
+					<xs:documentation>Line name or service description as known to the public, e.g., "512", "S8" or "Circle Line" or "ICE 488".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TrainNumber" type="xs:normalizedString" minOccurs="0">
@@ -130,22 +130,22 @@
 			</xs:element>
 			<xs:element name="OperatorRefs" type="OperatorRefs_RelStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>References to the OPERATORS. Multiple OPERATORS in case a ContinuousLeg can be operated by more than one operator, especially in the ALTERNATIVE MODE OF OPERATION where there can be dozens of taxi companies and many free floating sharing companies.</xs:documentation>
+					<xs:documentation>References to the OPERATORS. Multiple OPERATORS in case a ContinuousLeg can be operated by more than one operator, especially in the ALTERNATIVE MODE OF OPERATION where there can be dozens of taxi companies and many free-floating sharing companies.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RouteDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Descriptive text for a route, e.g. "Airport via City Centre"</xs:documentation>
+					<xs:documentation>Descriptive text for a route, e.g., "Airport via City Centre"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Via" type="ServiceViaPointStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Via points of the service that may help identify the vehicle to the public (In Transmodel modeled as TRIP REQUEST PLACE.TRIP VIA PLACE.GoVia; it will also most probably be detailed as a VIA and associated DESTINATION DISPLAY in the ROUTE description).</xs:documentation>
+					<xs:documentation>Via points of the service that may help identify the vehicle to the public (In Transmodel modelled as TRIP REQUEST PLACE.TRIP VIA PLACE.GoVia; it will also most probably be detailed as a VIA and associated DESTINATION DISPLAY in the ROUTE description).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g. dragLift) or the LINE is only made available to certain passenger groups (e.g. school buses, hotel shuttles).</xs:documentation>
+					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g., dragLift) or the LINE is only made available to certain passenger groups (e.g., school buses, hotel shuttles).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RestrictionNote" type="InternationalTextStructure" minOccurs="0">
@@ -205,7 +205,7 @@
 	</xs:group>
 	<xs:group name="RouteDescriptionGroup">
 		<xs:annotation>
-			<xs:documentation>Descriptive text for a route, e.g. "Airport via City Centre"</xs:documentation>
+			<xs:documentation>Descriptive text for a route, e.g., "Airport via City Centre"</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="RouteDescriptionText" type="InternationalTextStructure"/>
@@ -280,7 +280,7 @@
 	</xs:complexType>
 	<xs:complexType name="TripLocationStructure">
 		<xs:annotation>
-			<xs:documentation>A trip location represents the current logical position of a journey service. It can be used similarly to a place e.g. for starting a new trip request from within this service. A trip location does not(!) describe the relative position of a traveller within a vehicle, e.g. the seat.</xs:documentation>
+			<xs:documentation>A trip location represents the current logical position of a journey service. It can be used similarly to a place e.g., for starting a new trip request from within this service. A trip location does not(!) describe the relative position of a traveller within a vehicle, e.g., the seat.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="OperatingDayRef"/>
@@ -293,7 +293,7 @@
 	</xs:annotation>
 	<xs:group name="TimeWindowGroup">
 		<xs:annotation>
-			<xs:documentation>The window of opportunity that the traveller has to perform this leg of the journey (e.g. a bridge is only open during a given interval).</xs:documentation>
+			<xs:documentation>The window of opportunity that the traveller has to perform this leg of the journey (e.g., a bridge is only open during a given interval).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TimeWindowStart" type="xs:dateTime" minOccurs="0">
@@ -586,7 +586,7 @@
 				</xs:element>
 				<xs:element name="TimeAllowance" type="xs:duration" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>Extra time needed before reaching/after leaving this location (an example of a TRIP ACCESS CONSTRAINT. In Transmodel it is modeled more extensively and could relate to ACCESS MODE e.g. walk max. 5 minutes, but cycle 10 minutes).</xs:documentation>
+						<xs:documentation>Extra time needed before reaching/after leaving this location (an example of a TRIP ACCESS CONSTRAINT. In Transmodel it is modelled more extensively and could relate to ACCESS MODE e.g., walk max. 5 minutes, but cycle 10 minutes).</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -626,7 +626,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="explanatory">
 				<xs:annotation>
-					<xs:documentation>Cancelled and delayed SERVICE JOURNEYs are still returned, but an additional explanatory textual information is provide to decribe their current real-time status.</xs:documentation>
+					<xs:documentation>Cancelled and delayed SERVICE JOURNEYs are still returned, but an additional explanatory textual information is provided to describe their current real-time status.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="none">
@@ -644,7 +644,7 @@
 			<xs:choice minOccurs="0">
 				<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementatins will deliver one of the TripResults before the indicated departure time. This means one always has to check the results against the parameters before using them.</xs:documentation>
+						<xs:documentation>The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means one always has to check the results against the parameters before using them.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:group ref="NumberOfResultsGroup" minOccurs="0"/>
@@ -661,7 +661,7 @@
 			</xs:element>
 			<xs:element name="ImmediateTripStart" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Whether the trip calculation should find a solution that starts immediately (e.g. because the user is already on the way) instead of finding the latest possible start opportunity. Default is FALSE.</xs:documentation>
+					<xs:documentation>Whether the trip calculation should find a solution that starts immediately (e.g., because the user is already on the way) instead of finding the latest possible start opportunity. Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TransferLimit" type="xs:nonNegativeInteger" minOccurs="0">
@@ -703,7 +703,7 @@
 			</xs:element>
 			<xs:element name="NoStairs" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The user is not able to walk up/down stairs.</xs:documentation>
+					<xs:documentation>The user is not able to walk up/downstairs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NoEscalator" type="xs:boolean" default="false" minOccurs="0">
@@ -775,7 +775,7 @@
 			</xs:element>
 			<xs:element name="IncludeAccessibilityDetails" type="AccessibilityDetailsProfileEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Which accessibility features and other accessibility-related information to retrieve (e.g. guidance text for the visually impaired).</xs:documentation>
+					<xs:documentation>Which accessibility features and other accessibility-related information to retrieve (e.g., guidance text for the visually impaired).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludePlacesContext" type="xs:boolean" default="true" minOccurs="0">
@@ -785,7 +785,7 @@
 			</xs:element>
 			<xs:element name="IncludeSituationsContext" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
+					<xs:documentation>Whether the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -858,7 +858,7 @@
 			</xs:element>
 			<xs:element name="LinkProjection" type="LinearShapeStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>An oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE.</xs:documentation>
+					<xs:documentation>An oriented correspondence from one LINK of a source layer, onto an entity in a target layer: e.g., LINK SEQUENCE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RoadName" type="xs:string" minOccurs="0">

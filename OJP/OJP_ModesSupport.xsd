@@ -31,7 +31,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="privateLift">
 				<xs:annotation>
-					<xs:documentation>Other driver without commercial interest is driving. Typical case of being picked up or dropped off at a stop e.g. by a friend, relative. If the offer is advertised or commercial, then pooling from ALTERNATIVE MODE OF OPERATION should be chosen.</xs:documentation>
+					<xs:documentation>Other driver without commercial interest is driving. Typical case of being picked up or dropped off at a stop e.g., by a friend, relative. If the offer is advertised or commercial, then pooling from ALTERNATIVE MODE OF OPERATION should be chosen.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="lease">
@@ -236,7 +236,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="flexibleArea">
 				<xs:annotation>
-					<xs:documentation>Specialisation of demand responsive MODE OF OPERATION. The service is based on AREAs, but still SCHEDULED STOP POINTs are used. Sometimes the characteristics of a given demand responsive service makes it mor of an ALTERNATIVE MODE OF OPERATION (e.g. pure area service). A conventional mode of operation is more indicated, when there are a limited list of stops within the area.</xs:documentation>
+					<xs:documentation>Specialisation of demand responsive MODE OF OPERATION. The service is based on AREAs, but still SCHEDULED STOP POINTs are used. Sometimes the characteristics of a given demand responsive service makes it mor of an ALTERNATIVE MODE OF OPERATION (e.g., pure area service). A conventional mode of operation is more indicated, when there are a limited list of stops within the area.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="shuttle">
@@ -246,7 +246,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="pooling">
 				<xs:annotation>
-					<xs:documentation>In some cases pooling is not an ALTERNATIVE MODE OF OPERATION, but is better served with a TimedLeg. Then this MODE OF OPERATION is to be used.</xs:documentation>
+					<xs:documentation>In some cases pooling is not an ALTERNATIVE MODE OF OPERATION, but is better served with a TimedLe.g., Then this MODE OF OPERATION is to be used.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="replacement">
@@ -286,7 +286,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="taxi">
 				<xs:annotation>
-					<xs:documentation>Indicates that the transfer is done by taxi. This type should be avoided and the taxi leg should be modeled as a ContinuousLeg.</xs:documentation>
+					<xs:documentation>Indicates that the transfer is done by taxi. This type should be avoided and the taxi leg should be modelled as a ContinuousLe.g.,</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="protectedConnection">
@@ -296,7 +296,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="guaranteedConnection">
 				<xs:annotation>
-					<xs:documentation>The connection is guaranteed. This doesn't apply very often, but e.g. a bus has to bring  people from the last train to a different destination. Then it will not depart, before the train has arrived and the passengers have changed. In some cases guaranteedConnection might be use with less strictness.</xs:documentation>
+					<xs:documentation>The connection is guaranteed. This doesn't apply very often, but e.g., a bus has to bring  people from the last train to a different destination. Then it will not depart, before the train has arrived and the passengers have changed. In some cases guaranteedConnection might be use with less strictness.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="remainInVehicle">
@@ -321,12 +321,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="parkAndRide">
 				<xs:annotation>
-					<xs:documentation>This does not model the car ride. But parking the car and getting to the stop may take way longer e.g. in a big parking garage. This is a special type of checkIn or checkOut.</xs:documentation>
+					<xs:documentation>This does not model the car ride. But parking the car and getting to the stop may take way longer e.g., in a big parking garage. This is a special type of checkIn or checkOut.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="bikeAndRide">
 				<xs:annotation>
-					<xs:documentation>In the transfer leg additional time may be needed to get or stow a bike (e.g. because the BIKE PARKING is at a special place). this can be seen as a special type of checkIn or checkOut.</xs:documentation>
+					<xs:documentation>In the transfer leg additional time may be needed to get or stow a bike (e.g., because the BIKE PARKING is at a special place). this can be seen as a special type of checkIn or checkOut.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="carHire">
@@ -473,7 +473,7 @@
 	</xs:complexType>
 	<xs:complexType name="ItModesStructure">
 		<xs:annotation>
-			<xs:documentation>Combinations of MODE and MODE OF OPERATION that should be covered as monomodal trips (or for the ACCESS LEGs). If no MODE OF OPERATION is added usually "own" is assumed. But the trip planner may add other relevant results (e.g. sharing, if sensible trips are possible).</xs:documentation>
+			<xs:documentation>Combinations of MODE and MODE OF OPERATION that should be covered as monomodal trips (or for the ACCESS LEGs). If no MODE OF OPERATION is added usually "own" is assumed. But the trip planner may add other relevant results (e.g., sharing, if sensible trips are possible).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PersonalMode" type="PersonalModesEnumeration">

@@ -73,7 +73,7 @@
 	</xs:complexType>
 	<xs:complexType name="LinearShapeStructure">
 		<xs:annotation>
-			<xs:documentation>An oriented correspondence from one LINK or ROUTE of a source layer, onto an entity in a target layer: e.g. LINK SEQUENCE. As OJP is reduced in relation to NeTEx, we use a simple general structure.</xs:documentation>
+			<xs:documentation>An oriented correspondence from one LINK or ROUTE of a source layer, onto an entity in a target layer: e.g., LINK SEQUENCE. As OJP is reduced in relation to NeTEx, we use a simple general structure.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Position" type="siri:LocationStructure" minOccurs="2" maxOccurs="unbounded">
@@ -147,7 +147,7 @@
 	</xs:annotation>
 	<xs:element name="ProductCategoryRef" type="siri:ProductCategoryRefStructure">
 		<xs:annotation>
-			<xs:documentation>Reference to a product category. Product categories should be defined once and used uniformly in all channels (e.g. NeTEx, SIRI, OJP).</xs:documentation>
+			<xs:documentation>Reference to a product category. Product categories should be defined once and used uniformly in all channels (e.g., NeTEx, SIRI, OJP).</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:annotation>
@@ -297,7 +297,7 @@
 			</xs:element>
 			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g. dragLift) or the LINE is only made available to certain passenger groups (e.g. school buses, hotel shuttles).</xs:documentation>
+					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g., dragLift) or the LINE is only made available to certain passenger groups (e.g., school buses, hotel shuttles).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RestrictionNote" type="InternationalTextStructure" minOccurs="0">
@@ -385,7 +385,7 @@
 			</xs:element>
 			<xs:element name="OperatingDaysDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Textual description of the operation days, e.g. "monday to friday" or "not on holidays".</xs:documentation>
+					<xs:documentation>Textual description of the operation days, e.g., "monday to friday" or "not on holidays".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

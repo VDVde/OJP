@@ -137,7 +137,7 @@
 			</xs:element>
 			<xs:element name="IncludeSituationsContext" type="xs:boolean" default="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Wheter the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
+					<xs:documentation>Whether the situation context is needed. If a requestor has that information by other means or can't process it, the response can be made slimmer, when set to false. Default is true</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncludeStopHierarchy" type="HierarchyEnumeration" default="local" minOccurs="0">
@@ -259,12 +259,12 @@
 			</xs:element>
 			<xs:element name="WalkDistance" type="siri:DistanceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Distance from request LOCATION / PLACE (e.g. address) to this stop in metres.</xs:documentation>
+					<xs:documentation>Distance from request LOCATION / PLACE (e.g., address) to this stop in metres.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WalkDuration" type="xs:duration" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Walking duration from request LOCATION / PLACE (e.g. address) to this stop. All user options taken into account (e.g. walk speed).</xs:documentation>
+					<xs:documentation>Walking duration from request LOCATION / PLACE (e.g., address) to this stop. All user options considered (e.g., walk speed).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -304,7 +304,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="STOPEVENT_NOREALTIME">
 				<xs:annotation>
-					<xs:documentation>There is no realtime or forecast data available for this departure/arrival event.</xs:documentation>
+					<xs:documentation>There is no real-time or forecast data available for this departure/arrival event.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="STOPEVENT_OTHER">
