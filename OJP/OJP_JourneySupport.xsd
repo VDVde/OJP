@@ -135,7 +135,7 @@
 			</xs:element>
 			<xs:element name="RouteDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Descriptive text for a route, e.g., "Airport via City Centre"</xs:documentation>
+					<xs:documentation>Descriptive text for a route, e.g., "Airport via City Centre".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Via" type="ServiceViaPointStructure" minOccurs="0" maxOccurs="unbounded">
