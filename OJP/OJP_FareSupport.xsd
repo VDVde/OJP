@@ -514,7 +514,7 @@
 		<xs:sequence>
 			<xs:element name="EntitlementProduct" type="EntitlementProductStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g., military card, concessionary card, ...). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g., the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
+					<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g., military card, concessionary card). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g., the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
