@@ -296,7 +296,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="guaranteedConnection">
 				<xs:annotation>
-					<xs:documentation>The connection is guaranteed. This doesn't apply very often, but e.g., a bus has to bring  people from the last train to a different destination. Then it will not depart, before the train has arrived and the passengers have changed. In some cases guaranteedConnection might be use with less strictness.</xs:documentation>
+					<xs:documentation>The connection is guaranteed. This doesn't apply very often, but e.g., a bus has to bring  people from the last train to a different destination. Then it will not depart before the train has arrived and the passengers have changed. In some cases guaranteedConnection might be use with less strictness.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="remainInVehicle">
