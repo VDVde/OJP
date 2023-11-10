@@ -376,12 +376,12 @@
 			<xs:group ref="StopPointGroup"/>
 			<xs:element name="ServiceArrival" type="ServiceArrivalStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Arrival times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
+					<xs:documentation>Arrival times of the service at this stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceDeparture" type="ServiceDepartureStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Departure times of the service at this stop ( group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
+					<xs:documentation>Departure times of the service at this stop (group of attributes of TIMETABLED PASSING TIME, ESTIMATED PASSING TIME, OBSERVED PASSING TIME).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="StopCallStatusGroup"/>
@@ -435,7 +435,7 @@
 				</xs:element>
 				<xs:element ref="siri:ExpectedDepartureCapacities" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
-						<xs:documentation>The Capacity structure also will probably rarely be used and parsed. When used, then it mainly show elements that are important for accessibility.</xs:documentation>
+						<xs:documentation>The Capacity structure also will probably rarely be used and parsed. When used, then it mainly shows elements that are important for accessibility.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:sequence>
@@ -448,7 +448,7 @@
 	</xs:group>
 	<xs:group name="ServiceStatusGroup">
 		<xs:annotation>
-			<xs:documentation>parameters which describe the current status of a DATED VEHICLE JOURNEY</xs:documentation>
+			<xs:documentation>parameters which describe the status of a DATED VEHICLE JOURNEY</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Unplanned" type="xs:boolean" default="false" minOccurs="0">
@@ -644,7 +644,7 @@
 			<xs:choice minOccurs="0">
 				<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means one always has to check the results against the parameters before using them.</xs:documentation>
+						<xs:documentation>The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means one always must check the results against the parameters before using them.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:group ref="NumberOfResultsGroup" minOccurs="0"/>
@@ -836,7 +836,7 @@
 		<xs:sequence>
 			<xs:element name="TrackSection" type="TrackSectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>A geographical view of a Transmodel LEG TRACK together with duration and length that can be used for representing the leg on a map. The points may be STOP PLACE, SCHEDULED STOP POINT, coordinates or ADDRESSes. Specialisation of SECTION.</xs:documentation>
+					<xs:documentation>A geographical view of a Transmodel LEG TRACK together with duration and length that can be used for representing the leg on a map. The points may be STOP PLACE, SCHEDULED STOP POINT, coordinates, or ADDRESSes. Specialisation of SECTION.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

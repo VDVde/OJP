@@ -133,7 +133,7 @@
 	</xs:group>
 	<xs:complexType name="TripInfoResultStructure">
 		<xs:annotation>
-			<xs:documentation>TripInfo result structure containing the current status of a trip.</xs:documentation>
+			<xs:documentation>TripInfo result structure containing the status of a trip.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ErrorCondition" type="OJPErrorStructure" minOccurs="0" maxOccurs="unbounded">

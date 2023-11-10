@@ -719,7 +719,7 @@
 			</xs:element>
 			<xs:element name="FareProduct" type="FareProductStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>One ore more FareProducts that are valid for this part of the trip.</xs:documentation>
+					<xs:documentation>One or more FareProducts that are valid for this part of the trip.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StaticInfoUrl" type="WebLinkStructure" minOccurs="0" maxOccurs="unbounded">

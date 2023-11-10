@@ -22,7 +22,7 @@
 				</xs:element>
 				<xs:element name="PlaceRef" type="PlaceRefStructure">
 					<xs:annotation>
-						<xs:documentation>LOCATION / PLACE for further refinement. If a Place in a previous response was marked as not "complete" it can be refined by putting it here. If Places are organised hierarchically it may be reasonable to identify the Place in a top-down approach with several steps of refining a Place on each level of hierarchy. Following this approach an initial request retrieves a first list of top-level Places (e.g., streets) which are to be refined in a subsequent request to the next level (e.g., house number intervals). The objects of the current level are presented to the user for selection. The object reference of the selected object is then sent in the next request for further refinement.</xs:documentation>
+						<xs:documentation>LOCATION / PLACE for further refinement. If a Place in a previous response was marked as not "complete" it can be refined by putting it here. If Places are organised hierarchically, it may be reasonable to identify the Place in a top-down approach with several steps of refining a Place on each level of hierarchy. Following this approach an initial request retrieves a first list of top-level Places (e.g., streets) which are to be refined in a subsequent request to the next level (e.g., house number intervals). The objects of the current level are presented to the user for selection. The object reference of the selected object is then sent in the next request for further refinement.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -161,7 +161,7 @@
 			</xs:element>
 			<xs:element name="Complete" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation>States whether the included location/place is complete or needs further refinement. Only complete locations/places are fully resolved and can be used in e.g., trip requests. Incomplete locations/places have to be refined entering them once again into a LocationInformationRequest.</xs:documentation>
+					<xs:documentation>States whether the included location/place is complete or needs further refinement. Only complete locations/places are fully resolved and can be used in e.g., trip requests. Incomplete locations/places must be refined entering them once again into a LocationInformationRequest.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Probability" minOccurs="0">
@@ -254,7 +254,7 @@
 		<xs:sequence>
 			<xs:element name="SortingMethod" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If there are multiple sorting methods supported by the system, the client can choose one of the existing. Which methods are available needs to be known to the client and may differ from system to system. Therefore use with care.</xs:documentation>
+					<xs:documentation>If there are multiple sorting methods supported by the system, the client can choose one of the existing. Which methods are available needs to be known to the client and may differ from system to system. Therefore, use with care.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeoPosition" type="siri:LocationStructure" minOccurs="0">
@@ -418,7 +418,7 @@
 			</xs:element>
 			<xs:element name="WaitDuration" type="xs:duration" default="PT0M" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it has to take care, that feeding arrival and fetching departure are at least this duration apart.</xs:documentation>
+					<xs:documentation>Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it must take care, that feeding arrival and fetching departure are at least this duration apart.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BorderPoint" type="xs:boolean" default="false" minOccurs="0">

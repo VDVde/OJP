@@ -160,7 +160,7 @@
 		<xs:sequence>
 			<xs:element name="Line" type="siri:LineDirectionStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Reference to a GROUP of DIRECTIONs of the ROUTEs belonging to the same LINE created  for the purpose of filtering and organising timetables.</xs:documentation>
+					<xs:documentation>Reference to a GROUP of DIRECTIONs of the ROUTEs belonging to the same LINE created for the purpose of filtering and organising timetables.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Exclude" type="xs:boolean" default="true" minOccurs="0">
@@ -368,7 +368,7 @@
 			</xs:element>
 			<xs:element name="Pattern" type="ValidDayBitType">
 				<xs:annotation>
-					<xs:documentation>Bit pattern for operating days between start date and end date. The length of the pattern is equal to the number of days from start date to end date. A bit value of "1" indicates that an event actually happens on the day that is represented by the bit position.</xs:documentation>
+					<xs:documentation>Bit pattern for operating days between start date and end date. The length of the pattern is equal to the number of days from start date to end date. A bit value of "1" indicates that an event happens on the day that is represented by the bit position.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -385,7 +385,7 @@
 			</xs:element>
 			<xs:element name="OperatingDaysDescription" type="InternationalTextStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Textual description of the operation days, e.g., "monday to friday" or "not on holidays".</xs:documentation>
+					<xs:documentation>Textual description of the operation days, e.g., "Monday to Friday" or "not on holidays".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

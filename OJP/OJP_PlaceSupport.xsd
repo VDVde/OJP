@@ -205,7 +205,7 @@
 			</xs:element>
 			<xs:element name="ReferredSystem" type="siri:ParticipantRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Used in distributed environments (e.g., EU-Spirit). If set, this topographic place resides within the given system (in EU-Spirit "passive server"). This system can be queried for actual places within this topographic place. This is used in an distributed environment for a two-steps place identification. In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Used in distributed environments (e.g., EU-Spirit). If set, this topographic place resides within the given system (in EU-Spirit "passive server"). This system can be queried for actual places within this topographic place. This is used in a distributed environment for a two-steps place identification. In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Area" type="AreaStructure" minOccurs="0">

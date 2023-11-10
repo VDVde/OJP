@@ -79,7 +79,7 @@ The releases can be found at https://github.com/VDVde/OJP/releases
   [#83](https://github.com/VDVde/OJP/pull/83)
 * Added parameter `NoSight` to `BaseTripMobilityFilterGroup` to allow requesting a trip for a blind user.
   [#36](https://github.com/VDVde/OJP/pull/36)
-* Added a `TripStatusGroup` consisting of parameters which describe the current status of a trip, e.g. `Cancelled` / `Delayed` / `Infeasible`. 
+* Added a `TripStatusGroup` consisting of parameters which describe the current status of a trip, e.g., `Cancelled` / `Delayed` / `Infeasible`. 
   [#116](https://github.com/VDVde/OJP/pull/116)
 * Added an optional `ProductCategory` of a `Service`. As defined in NeTEx and SIRI, a product category is a classification for VEHICLE JOURNEYs 
   to express some common properties of journeys for marketing and fare products.
