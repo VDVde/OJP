@@ -205,7 +205,7 @@
 	</xs:group>
 	<xs:group name="RouteDescriptionGroup">
 		<xs:annotation>
-			<xs:documentation>Descriptive text for a route, e.g., "Airport via City Centre"</xs:documentation>
+			<xs:documentation>Descriptive text for a route, e.g., "Airport via City Centre".</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="RouteDescriptionText" type="InternationalTextStructure"/>
