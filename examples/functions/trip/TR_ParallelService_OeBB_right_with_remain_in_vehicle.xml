@@ -224,7 +224,7 @@
 								</Service>
 								<ParallelService>
 									<!--
-										the German part of the train to Amsterdam. It is only connected up to Nürnberg with the relevant vehicle of this TimedLe.g.,
+										the German part of the train to Amsterdam. It is only connected up to Nürnberg with the relevant vehicle of this TimedLeg.
 										Since it has its own, separate JOURNEY afterwards, it is modeled in the ParallelService only up to Nürnberg.
 									-->
 									<FromStopSequenceNumber>1</FromStopSequenceNumber>
