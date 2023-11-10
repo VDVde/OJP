@@ -46,7 +46,7 @@
 			</xs:element>
 			<xs:element name="RouteGeometry" type="LinearShapeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The LINE's route geometry. A line can have multiple ROUTEs and each has its own geometry. The first should be the "main" geometry.</xs:documentation>
+					<xs:documentation>The LINE's route geometry. A line can have multiple ROUTEs, and each has its own geometry. The first should be the "main" geometry.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AreaGeometry" type="AreaStructure" minOccurs="0" maxOccurs="unbounded">
