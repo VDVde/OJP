@@ -521,13 +521,13 @@
 	</xs:complexType>
 	<xs:simpleType name="EntitlementProductCodeType">
 		<xs:annotation>
-			<xs:documentation>Identifier of an ENTITLEMENT PRODUCT (e.g., BahnCard50, BahnCard50First, military card, concessionary card, ...). It is defined by the fare authority.</xs:documentation>
+			<xs:documentation>Identifier of an ENTITLEMENT PRODUCT (e.g., BahnCard50, BahnCard50First, military card, concessionary card). It is defined by the fare authority.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:NMTOKEN"/>
 	</xs:simpleType>
 	<xs:complexType name="EntitlementProductStructure">
 		<xs:annotation>
-			<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g., military card, concessionary card, ...). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g., the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
+			<xs:documentation>[a specific form of TRAVEL DOCUMENT in TM and NeTEx] Precondition to access a service or to purchase a FARE PRODUCT issued by an organisation that may not be a PT operator (e.g., military card, concessionary card). In most cases, ENTITLEMENT PRODUCTs offer discounts, e.g., the "BahnCard50" of "Deutsche Bahn".</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="FareAuthorityRef">
@@ -537,7 +537,7 @@
 			</xs:element>
 			<xs:element name="EntitlementProductRef" type="EntitlementProductCodeType">
 				<xs:annotation>
-					<xs:documentation>Identifier of the ENTITLEMENT PRODUCT (e.g., BahnCard50, BahnCard50First, ...)</xs:documentation>
+					<xs:documentation>Identifier of the ENTITLEMENT PRODUCT (e.g., BahnCard50, BahnCard50First)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ValidityPeriod" type="siri:HalfOpenTimestampOutputRangeStructure" minOccurs="0">
