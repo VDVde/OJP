@@ -286,7 +286,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="taxi">
 				<xs:annotation>
-					<xs:documentation>Indicates that the transfer is done by taxi. This type should be avoided and the taxi leg should be modelled as a ContinuousLe.g.,</xs:documentation>
+					<xs:documentation>Indicates that the transfer is done by taxi. This type should be avoided and the taxi leg should be modelled as a ContinuousLeg.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="protectedConnection">
