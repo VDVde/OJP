@@ -84,7 +84,7 @@ By means of abstraction these functions are assembled within one single service 
 	</xs:annotation>
 	<xs:element name="OJPExchangePointsRequest" type="OJPExchangePointsRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
 		<xs:annotation>
-			<xs:documentation>Distributed journey planning requires several journey planning systems planning parts of the whole trip which shall be assembled. Each of the planners will therefore get a sub-query to plan: the first planner from the origin of the trip to its system boundaries, the next planner has to find trips from these boundaries to its boundaries with the next systems. This process will be continued until the final system where the destination of the user’s trip is located.
+			<xs:documentation>Distributed journey planning requires several journey planning systems planning parts of the whole trip which shall be assembled. Each of the planners will therefore get a sub-query to plan: the first planner from the origin of the trip to its system boundaries, the next planner must find trips from these boundaries to its boundaries with the next systems. This process will be continued until the final system where the destination of the user’s trip is located.
 The boundary points where the trip calculation is handed over to the next journey planning system are called exchange points. If they are not known in advance the exchange points can be looked up from a server by using the exchange points service. This service implements the model PI QR Location Request from TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
@@ -100,7 +100,7 @@ The boundary points where the trip calculation is handed over to the next journe
 	</xs:complexType>
 	<xs:element name="OJPExchangePointsDelivery" type="OJPExchangePointsDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xs:annotation>
-			<xs:documentation>Distributed journey planning requires several journey planning systems planning parts of the whole trip which shall be assembled. Each of the planners will therefore get a sub-query to plan: the first planner from the origin of the trip to its system boundaries, the next planner has to find trips from these boundaries to its boundaries with the next systems. This process will be continued until the final system where the destination of the user’s trip is located.
+			<xs:documentation>Distributed journey planning requires several journey planning systems planning parts of the whole trip which shall be assembled. Each of the planners will therefore get a sub-query to plan: the first planner from the origin of the trip to its system boundaries, the next planner must find trips from these boundaries to its boundaries with the next systems. This process will be continued until the final system where the destination of the user’s trip is located.
 The boundary points where the trip calculation is handed over to the next journey planning system are called exchange points. If they are not known in advance the exchange points can be looked up from a server by using the exchange points service. This service implements the model PI QR Location Request from TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
@@ -156,8 +156,8 @@ The boundary points where the trip calculation is handed over to the next journe
 	</xs:annotation>
 	<xs:element name="OJPTripInfoRequest" type="OJPTripInfoRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
 		<xs:annotation>
-			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't provide directly information about a trip. When the response changes the conditions in a way that invalidates the trip (connection no longer possible, delays, cancellation) then a new TripRequest for the reminder of the trip is necessary for a replanning of the trip.
-The service also provides information about formation, occupancy and capacity. The full SIRI elements are used. Therefore a lot of things can be expressed. Some that go beyond what usually may be required. However, if accessibility is fully to be considered (with stop-vehicle interaction), then SIRI must be used in full. The relevant SIRI documentation should be considered. This service implements PI QR Service Journey Request and PI QR Single Journey Request from TM 6.</xs:documentation>
+			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't directly provide information about a trip. When the response changes the conditions in a way that invalidates the trip (connection no longer possible, delays, cancellation) then a new TripRequest for the reminder of the trip is necessary for a replanning of the trip.
+The service also provides information about formation, occupancy, and capacity. The full SIRI elements are used. Therefore, a lot of things can be expressed. Some that go beyond what usually may be required. However, if accessibility is fully to be considered (with stop-vehicle interaction), then SIRI must be used in full. The relevant SIRI documentation should be considered. This service implements PI QR Service Journey Request and PI QR Single Journey Request from TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPTripInfoRequestStructure">
@@ -172,8 +172,8 @@ The service also provides information about formation, occupancy and capacity. T
 	</xs:complexType>
 	<xs:element name="OJPTripInfoDelivery" type="OJPTripInfoDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xs:annotation>
-			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't provide directly information about a trip. When the response changes the conditions in a way that invalidates the trip (connection no longer possible, delays, cancellation) then a new TripRequest for the reminder of the trip is necessary for a replanning of the trip.
-The service also provides information about formation, occupancy and capacity. The full SIRI elements are used. Therefore a lot of things can be expressed. Some that go beyond what usually may be required. However, if accessibility is fully to be considered (with stop-vehicle interaction), then SIRI must be used in full. The relevant SIRI documentation should be considered. This service implements PI QR Service Journey Request and PI QR Single Journey Request from TM 6.</xs:documentation>
+			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't directly provide information about a trip. When the response changes the conditions in a way that invalidates the trip (connection no longer possible, delays, cancellation) then a new TripRequest for the reminder of the trip is necessary for a replanning of the trip.
+The service also provides information about formation, occupancy, and capacity. The full SIRI elements are used. Therefore, a lot of things can be expressed. Some that go beyond what usually may be required. However, if accessibility is fully to be considered (with stop-vehicle interaction), then SIRI must be used in full. The relevant SIRI documentation should be considered. This service implements PI QR Service Journey Request and PI QR Single Journey Request from TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPTripInfoDeliveryStructure">
@@ -298,8 +298,8 @@ The service also provides information about formation, occupancy and capacity. T
 	<xs:element name="OJPTripRefineRequest" type="OJPTripRefineRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
 		<xs:annotation>
 			<xs:documentation>The trip refinement service retrieves additional or updated information (e.g., real-time data) about a given, previously retrieved trip. It does not depend on the assumption that the trip has been retrieved from the same server; it may, in fact, even stem from another source than a OJP system. 
-An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical objcet IDs, this is signalled by setting ExternalObjectRefs to true. 
-System B, being confronted with external IDs, must try to recognise the relevant objects in another way and retrieve them in its own database. In the response it will use its own object IDs. In order to maintain a consistent mapping, it is imperative that system B reflects the structure of the refine request precisely in its response (principle of structure maintenance).</xs:documentation>
+An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical object IDs, this is signalled by setting ExternalObjectRefs to true. 
+System B, being confronted with external IDs, must try to recognise the relevant objects in another way and retrieve them in its own database. In the response it will use its own object IDs. To maintain a consistent mapping, it is imperative that system B reflects the structure of the refine request precisely in its response (principle of structure maintenance).</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPTripRefineRequestStructure">
@@ -315,8 +315,8 @@ System B, being confronted with external IDs, must try to recognise the relevant
 	<xs:element name="OJPTripRefineDelivery" type="OJPTripRefineDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xs:annotation>
 			<xs:documentation>The trip refinement service retrieves additional or updated information (e.g., real-time data) about a given, previously retrieved trip. It does not depend on the assumption that the trip has been retrieved from the same server; it may, in fact, even stem from another source than a OJP system. 
-An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical objcet IDs, this is signalled by setting ExternalObjectRefs to true. 
-System B, being confronted with external IDs, must try to recognise the relevant objects in another way and retrieve them in its own database. In the response it will use its own object IDs. In order to maintain a consistent mapping, it is imperative that system B reflects the structure of the refine request precisely in its response (principle of structure maintenance).</xs:documentation>
+An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical object IDs, this is signalled by setting ExternalObjectRefs to true. 
+System B, being confronted with external IDs, must try to recognise the relevant objects in another way and retrieve them in its own database. In the response it will use its own object IDs. To maintain a consistent mapping, it is imperative that system B reflects the structure of the refine request precisely in its response (principle of structure maintenance).</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPTripRefineDeliveryStructure">

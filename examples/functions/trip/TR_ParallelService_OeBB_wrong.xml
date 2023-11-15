@@ -2,10 +2,10 @@
 <OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
 	<!--
 		We have a parallel train NJ 490 and NJ 40490
-		Changement of NJ 490 to NJ590 at the border to Germany. This should be modeled with ParallelService.
+		Changement of NJ 490 to NJ590 at the border to Germany. This should be modelled with ParallelService.
 
-		This example is not well modeled because the service (NJ490) is not really going all the way.
-		Also, it had to be duplicated in ParallelService where it is accurately modeled.
+		This example is not well modelled because the service (NJ490) is not really going all the way.
+		Also, it had to be duplicated in ParallelService where it is accurately modelled.
 		It is always better to model such a constellation by using two TimedLegs with a TransferLeg with the TransferType "remainInVehicle".
 
 		All the rest of the information is minimalized and is not necessary accurate.
@@ -221,8 +221,8 @@
 								</ParallelService>
 								<ParallelService>
 									<!--
-										the German part of the train to Amsterdam. It is only connected up to Nürnberg with the relevant vehicle of this TimedLeg.
-										Since it has its own, separate JOURNEY afterwards, it is modeled in the ParallelService only up to Nürnberg.
+										the German part of the train to Amsterdam. It is only connected up to Nürnberg with the relevant vehicle of this TimedLeg,
+										Since it has its own, separate JOURNEY afterwards, it is modelled in the ParallelService only up to Nürnberg.
 									-->
 									<FromStopSequenceNumber>5</FromStopSequenceNumber>
 									<ToStopSequenceNumber>7</ToStopSequenceNumber>

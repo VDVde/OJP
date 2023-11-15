@@ -22,7 +22,7 @@
 				</xs:element>
 				<xs:element name="PlaceRef" type="PlaceRefStructure">
 					<xs:annotation>
-						<xs:documentation>LOCATION / PLACE for further refinement. If a Place in a previous response was marked as not "complete" it can be refined by putting it here. If Places are organised hierarchically it may be reasonable to identify the Place in a top-down approach with several steps of refining a Place on each level of hierarchy. Following this approach an initial request retrieves a first list of top-level Places (e.g. streets) which are to be refined in a subsequent request to the next level (e.g. house number intervals). The objects of the current level are presented to the user for selection. The object reference of the selected object is then sent in the next request for further refinement.</xs:documentation>
+						<xs:documentation>LOCATION / PLACE for further refinement. If a Place in a previous response was marked as not "complete" it can be refined by putting it here. If Places are organised hierarchically, it may be reasonable to identify the Place in a top-down approach with several steps of refining a Place on each level of hierarchy. Following this approach an initial request retrieves a first list of top-level Places (e.g., streets) which are to be refined in a subsequent request to the next level (e.g., house number intervals). The objects of the current level are presented to the user for selection. The object reference of the selected object is then sent in the next request for further refinement.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -74,7 +74,7 @@
 			</xs:element>
 			<xs:element name="AllowedSystem" type="siri:ParticipantRefStructure" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Used in distributed environments. e.g. EU-Spirit. If none is given, the location/place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the location/place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Used in distributed environments. e.g., EU-Spirit. If none is given, the location/place information request refers to all known systems (in EU-Spirit "passive servers"). If at least one is given, the location/place information request refers only to the given systems (in EU-Spirit "passive servers"). In EU-Spirit the system IDs were previously called "provider code". See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -161,7 +161,7 @@
 			</xs:element>
 			<xs:element name="Complete" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation>States whether the included location/place is complete or needs further refinement. Only complete locations/places are fully resolved and can be used in e.g. trip requests. Incomplete locations/places have to be refined entering them once again into a LocationInformationRequest.</xs:documentation>
+					<xs:documentation>States whether the included location/place is complete or needs further refinement. Only complete locations/places are fully resolved and can be used in e.g., trip requests. Incomplete locations/places must be refined entering them once again into a LocationInformationRequest.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Probability" minOccurs="0">
@@ -177,7 +177,7 @@
 			</xs:element>
 			<xs:element name="System" type="siri:ParticipantRefStructure" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Stores the system reference, where to ask for actual locations corresponding to this city name result. In order to get actual locations, a new location information request using the system ID of this result is needed.</xs:documentation>
+					<xs:documentation>Stores the system reference, where to ask for actual locations corresponding to this city name result. To get actual locations, a new location information request using the system ID of this result is needed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Operators" type="OperatorRefs_RelStructure" minOccurs="0">
@@ -254,7 +254,7 @@
 		<xs:sequence>
 			<xs:element name="SortingMethod" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If there are multiple sorting methods supported by the system, the client can choose one of the existing. Which methods are available needs to be known to the client and may differ from system to system. Therefore use with care.</xs:documentation>
+					<xs:documentation>If there are multiple sorting methods supported by the system, the client can choose one of the existing. Which methods are available needs to be known to the client and may differ from system to system. Therefore, use with care.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeoPosition" type="siri:LocationStructure" minOccurs="0">
@@ -370,7 +370,7 @@
 			</xs:element>
 			<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (e.g. in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The location information service is expected to support a response volume of at least 500 location objects within one single response.</xs:documentation>
+					<xs:documentation>Maximum number of results to be returned. The service is allowed to return fewer objects if reasonable or otherwise appropriate. If the number of matching objects is expected to be large (e.g., in the case that all objects should be delivered) this parameter can be used to partition the response delivery into smaller chunks. The location information service is expected to support a response volume of at least 500 location objects within one single response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
@@ -418,7 +418,7 @@
 			</xs:element>
 			<xs:element name="WaitDuration" type="xs:duration" default="PT0M" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it has to take care, that feeding arrival and fetching departure are at least this duration apart.</xs:documentation>
+					<xs:documentation>Duration needed at this exchange point to change from one service to another. If a journey planning orchestrator puts together a trip at this exchange point, it must take care, that feeding arrival and fetching departure are at least this duration apart.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BorderPoint" type="xs:boolean" default="false" minOccurs="0">
@@ -433,7 +433,7 @@
 			</xs:element>
 			<xs:element name="Priority" type="PercentType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The priority of the exchange point. 100 is the maximum. The priority can be used to select given ExchangePoints more often (e.g. because the station is a main hub).</xs:documentation>
+					<xs:documentation>The priority of the exchange point. 100 is the maximum. The priority can be used to select given ExchangePoints more often (e.g., because the station is a main hub).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

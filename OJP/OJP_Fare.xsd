@@ -66,7 +66,7 @@
 	</xs:complexType>
 	<xs:complexType name="PlaceFareRequestStructure">
 		<xs:annotation>
-			<xs:documentation>Sub-request: PLACE related fare information. This doesn't make a lot of sense for addresses, topographic place and coordinates. However, STOP PLACE, SCHEDULED STOP POINT and POINT OF INTEREST are different.</xs:documentation>
+			<xs:documentation>Sub-request: PLACE related fare information. This doesn't make a lot of sense for addresses, topographic place, and coordinates. However, STOP PLACE, SCHEDULED STOP POINT and POINT OF INTEREST are different.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Place" type="PlaceStructure">
@@ -81,7 +81,7 @@
 			</xs:element>
 			<xs:element ref="FareProductRef" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Reference to a FareProduct. If no FareProductRef is specified the responding system should reply with information about all available fare products.</xs:documentation>
+					<xs:documentation>Reference to a FareProduct. If no FareProductRef is specified, the responding system should reply with information about all available fare products.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -98,7 +98,7 @@
 			</xs:element>
 			<xs:element ref="FareProductRef" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Reference to a FareProduct. If no FareProductRef is specified the responding system should reply with information about all available fare products.</xs:documentation>
+					<xs:documentation>Reference to a FareProduct. If no FareProductRef is specified, the responding system should reply with information about all available fare products.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -229,7 +229,7 @@
 		<xs:sequence>
 			<xs:element name="Place" type="PlaceStructure">
 				<xs:annotation>
-					<xs:documentation>The involved PLACE. Usually a StopPoint, StopPlace or PointOfInterest.</xs:documentation>
+					<xs:documentation>The involved PLACE. Usually,a StopPoint, StopPlace or PointOfInterest.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FareProduct" type="FareProductStructure" minOccurs="0" maxOccurs="unbounded">

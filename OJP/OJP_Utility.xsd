@@ -88,7 +88,7 @@
 			</xs:element>
 			<xs:element name="Embeddable" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Is the referenced resource meant to be embedded as a webview in a surrounding context, e.g. app or web page? If yes, the resource has to be fully responsive. Default is false.</xs:documentation>
+					<xs:documentation>Is the referenced resource meant to be embedded as a webview in a surrounding context, e.g., app or web page? If yes, the resource has to be fully responsive. Default is false.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
