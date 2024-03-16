@@ -1,24 +1,39 @@
-name: CI
-
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
+  # Triggers the workflow on push and pull request events for specific branches
   push:
-    branches: [ "master", "main", "changes_for_v*" ]
+    branches:
+      - main
+      - develop
+      - 'release/**'
+      - 'feature/**'
+      - 'bugfix/**'
   pull_request:
-    branches: [ "master", "main", "changes_for_v*" ]
+    branches:
+      - main
+      - develop
+      - 'release/**'
+      - 'feature/**'
+      - 'bugfix/**'
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+# required to upload to GitHub pages
+permissions:
+  contents: write
 
 jobs:
   run:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
 
     steps:
       - run: echo "Job was automatically triggered by a ${{ github.event_name }} event for branch ${{ github.ref }}"
 
-      - name: Check out repository code
-        uses: actions/checkout@v3
+      - name: Check out repository code for push
+        if: github.event_name == 'push' # only if this is a push to a branch
+        uses: actions/checkout@v4
+
+      - name: Check out repository code for pull_request
+        if: github.event_name == 'pull_request' # only if this is a pull_request to a branch
+        uses: actions/checkout@v4
         with:
           # https://github.com/marketplace/actions/add-commit#working-with-prs
           repository: ${{ github.event.pull_request.head.repo.full_name }}
@@ -41,8 +56,30 @@ jobs:
       - name: Generate documentation tables
         run: ./docs/generate-tables.sh
 
+      - name: Get branch name
+        id: get-branch-name
+        # Done as an extra step because ${{ github.ref }} has "refs/heads/" prepended and there is no operation on GitHub strings possible
+        # https://github.com/orgs/community/discussions/26625
+        if: github.event_name == 'push' # only if this is a push to a branch
+        # cut -d/ -f3,4 splits the ${{ github.ref }} using "/" and returns 3rd and optional 4th position
+        run: |
+          BRANCH_NAME=$(echo ${{ github.ref }} | cut -d/ -f3,4)
+          echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Upload generated documentation tables
+        if: github.event_name == 'push' # only if this is a push to a branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: './docs/generated'
+          target-folder: "${{steps.get-branch-name.outputs.BRANCH_NAME}}"
+
+      - name: Remove generated documentation tables
+        run: rm -rf ./docs/generated/index.html
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v9 # https://github.com/marketplace/actions/add-commit
         with:
           default_author: github_actions
-          message: 'Lint and update documentation tables'
+          message: 'fixup! Fixed linting errors'
+          push: --set-upstream origin "${{steps.get-branch-name.outputs.BRANCH_NAME}}"
