@@ -28,4 +28,7 @@ xsltproc --xinclude "${xsl_dir}"/ojp-prep-to-html-with-toc.xsl \
  "${generated_dir}"/OJP-prep.xml \
  >> "${generated_dir}"/index.html
 
+# remove intermediate XML file
+rm -f "${generated_dir}"/OJP-prep.xml
+
 echo -e '\033[0;32mFinished generating documentation tables\033[0m'
