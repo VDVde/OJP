@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified" id="OJP_siri_service">
+	<xs:annotation>
+		<xs:documentation>OJP/OJP_TripMonitoring.xsd - Request and response definitions for trip monitoring.</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
+	<xs:include schemaLocation="OJP_All.xsd"/>
+	<xs:annotation>
+		<xs:documentation>=============================== Alert Settings ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="AlertSettingsGroup">
+		<xs:sequence>
+			<xs:element name="AlertTimeWindow" type="WeekdayTimePeriodStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Time windows when alerts are welcome.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaximumAlertFrequency" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Maximum frequency of subsequent alerts for the same reason.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaximumTimeBeforeEvent" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Earliest time for first alert. Measured as duration before beginning of event. Only for dated events.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:annotation>
+		<xs:documentation>=============================== Trip Monitoring Parameters ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="TripMonitoringParamStructure">
+		<xs:annotation>
+			<xs:documentation>TripMonitoring parameters.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Severity" type="siri:SeverityEnumeration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Priority of events.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MinimumDelayChangeThreshold" type="xs:duration" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Minimum delay to send new notifications.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GetInformationFromDistributedSystems" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether to fetch and integrate information from other systems in the case of distributed journey planning. Default is false.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncludeAlternatives" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Whether alternative trips should be part of the response. Default is false.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!--<xs:element name="FacilityMonitoringSubscription" type="siri:FacilityMonitoringSubscriptionStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Subscribing to the SIRI facility monitoring service. The monitoring time window of OJPTripMonitoringSubscriptionRequest overrides values in FacilityMonitoringSubscription(StartTime, PreviewInterval).</xs:documentation>
+				</xs:annotation>
+			</xs:element> Schema parser doesn't find/like FacilityMonitoringSubscriptionStructure in siri_facilityMonitoring_service.xsd -->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>=============================== Trip Monitoring Response ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:group name="TripMonitoringResponseGroup">
+		<xs:annotation>
+			<xs:documentation>TripMonitoring response structure.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TripMonitoringResult" type="TripMonitoringResultStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Result structure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="TripMonitoringResultStructure">
+		<xs:sequence>
+			<xs:element name="Problem" type="TripMonitoringProblemStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Problems related to this TripMonitoring result.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AffectedLeg" type="ObjectIdType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Legs of the trip affected by a change.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripInfoResult" type="TripInfoResultStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Details about the affected dated journeys of the trip.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TripInfoResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Response context aggregated for all TripInfoResults.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AlternativeTrip" type="TripResultStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Alternatives to a delayed or otherwise compromised trip.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FacilityCondition" type="siri:FacilityConditionStructure" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Results from SIRI facility monitoring service.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="TripMonitoringProblemTypeEnumeration">
+		<xs:annotation>
+			<xs:documentation>Types of problems that may be returned in responses to trip monitoring requests.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TRIPMONITORING_SUBSCRIPTION_REGISTERED">
+				<xs:annotation>
+					<xs:documentation>Used to acknowledge the reception and successful registration of a subscription request.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_SUBSCRIPTION_TERMINATED">
+				<xs:annotation>
+					<xs:documentation>Used to indicate the termination of the subscription.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_MAJOR_DELAY">
+				<xs:annotation>
+					<xs:documentation>The trip is likely to be delayed by more than 15 minutes.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_MINOR_DELAY">
+				<xs:annotation>
+					<xs:documentation>The trip has a predicted delay of less than an hour.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_SHORTENED_TRANSFER_TIME">
+				<xs:annotation>
+					<xs:documentation>One of the transfers will be shorter than planned.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_TRIPREQUEST_ORIGIN_UNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The departure location is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_TRIPREQUEST_DESTINATION_UNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The destination location is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_TRIP_UNKNOWN">
+				<xs:annotation>
+					<xs:documentation>The trip to be monitored is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_MONITORING_INTERVAL_INALID">
+				<xs:annotation>
+					<xs:documentation>The time window to send notfications is invalid, e.g., too early before the departure time. The service is nevertheless invoked, with the time window restricted to a valid interval.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_FACILITY_UNKNOWN">
+				<xs:annotation>
+					<xs:documentation>A facility specified in FacilityMonitoringSubscription is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRIPMONITORING_OTHER">
+				<xs:annotation>
+					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TripMonitoringProblemStructure">
+		<xs:annotation>
+			<xs:documentation>Problem that may be returned in responses to trip monitoring requests.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="TripMonitoringProblemTypeEnumeration">
+				<xs:annotation>
+					<xs:documentation>Type of the trip monitoring problem.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="ProblemDetailGroup"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

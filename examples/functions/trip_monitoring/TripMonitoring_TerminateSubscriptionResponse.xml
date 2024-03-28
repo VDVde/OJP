@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
+		<siri:TerminateSubscriptionResponse>
+			<siri:ResponseTimestamp>2023-03-17T09:30:47-05:00</siri:ResponseTimestamp>
+			<siri:ResponderRef>theClient_1231</siri:ResponderRef>
+			<siri:RequestMessageRef>2301023-12331-2237871</siri:RequestMessageRef>
+			<siri:DelegatorAddress>https://182.82.1.23:89912/endpoint</siri:DelegatorAddress>
+			<siri:DelegatorRef>23188</siri:DelegatorRef>
+			<siri:TerminationResponseStatus>
+				<siri:ResponseTimestamp>2023-03-17T09:30:47-05:00</siri:ResponseTimestamp>
+				<siri:SubscriberRef>1231123</siri:SubscriberRef>
+				<siri:SubscriptionRef>123123123213</siri:SubscriptionRef>
+				<siri:Status>true</siri:Status>
+			</siri:TerminationResponseStatus>
+			<siri:TerminationResponseStatus>
+				<siri:ResponseTimestamp>2023-03-17T09:30:47-05:00</siri:ResponseTimestamp>
+				<siri:SubscriberRef>1231123</siri:SubscriberRef>
+				<siri:SubscriptionRef>9RRR2313</siri:SubscriptionRef>
+				<siri:Status>false</siri:Status>
+				<siri:ErrorCondition>
+					<siri:UnknownSubscriptionError>
+						<siri:SubscriptionCode>9RRR2313</siri:SubscriptionCode>
+					</siri:UnknownSubscriptionError>
+				</siri:ErrorCondition>
+			</siri:TerminationResponseStatus>
+		</siri:TerminateSubscriptionResponse>
+	</OJPResponse>
+</OJP>
