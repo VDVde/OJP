@@ -7,7 +7,9 @@
 </ul>
 <h2>Main repositories</h2>
 <ul id="main">
-    <li><a href="./main/index.html">main</a></li>
+<!-- Not visible until 2.0 has been released
+<li><a href="./main/index.html">main</a></li>
+-->
     <li><a href="./develop/index.html">develop</a></li>
 </ul>
 <h2>Features</h2>
@@ -25,7 +27,7 @@
 		for (let type of types) {
 			let ul = document.getElementById(type);
 			for (let branch of branches) {
-				if (branch.name.startsWith(type + '/')) {
+				if (branch.name.startsWith(type + '/') && branch.name !== 'release/1.0') {
 					ul.insertAdjacentHTML("beforeend", `<li><a href="./${branch.name}/index.html">${branch.name}</a></li>`);
 				}
 			}
