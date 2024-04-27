@@ -32,17 +32,24 @@ at [CEN](https://www.cen.eu).
 OJP is part of the [Transmodel](https://www.transmodel-cen.eu/)) family of standards together with [NeTEx](https://netex-cen.eu/), [SIRI](https://www.transmodel-cen.eu/siri-standard/)  and OPRA. It also contains elements from [DATEX II](https://datex2.eu/).
 
 ## Releases
-* [OJP 1.0](https://github.com/VDVde/OJP/releases/tag/v1.0): The version described in CEN/TS 17118:2017
-* [OJP 1.0.1](https://github.com/VDVde/OJP/releases/tag/v1.0.1): Bug fix release
- * OJP 2.0 in preparation. See the following [branch](https://github.com/VDVde/OJP/tree/changes_for_v1.1) .
+* [OJP 1.0 branch](https://github.com/VDVde/OJP/tree/release/1.0)
+  * [OJP 1.0](https://github.com/VDVde/OJP/releases/tag/v1.0): The version described in CEN/TS 17118:2017
+  * [OJP 1.0.1](https://github.com/VDVde/OJP/releases/tag/v1.0.1): Bug fix release
+* OJP 2.0 in preparation. See the following [branch](https://github.com/VDVde/OJP/tree/develop).
 
 ## Github Repository
 
 Download the XSD schema files and examples in the git repository found at https://github.com/VDVde/OJP and take a look at the [documentation tables](https://vdvde.github.io/OJP/index.html).
 
+You can contribute by:
+* Pointing out [issues](https://github.com/VDVde/OJP/issues)
+* Creating pull requests: Use the [development documentation](https://github.com/VDVde/OJP/wiki/WG:-:-Working-with-this-repository)
+
 ### Branches
 * The master branch is currently set to OJP 1.0.1
-* Development occurs currently in the changes_for_v1.1 branch.
+* Development occurs currently in the development branch: https://github.com/VDVde/OJP/tree/develop.
+* We work with release-branches
+* PR should always be created with feature/<id> as a branch.
 
 ### Wiki
 OJP uses the [wiki](https://github.com/VDVde/OJP/wiki) on github for some resources and examples.
