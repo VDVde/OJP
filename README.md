@@ -23,7 +23,6 @@ OJP systems interacting with each other additionally use:
 * Getting information about Exchange Points (places when a Trip switches from one OJP system to another)
 * Using a multi point trip service (n origins and m destinations)
 
-
 ## Standard document
 OJP is a CEN standard. Obtain a copy of the standard document ["CEN/TS 17118:2017: "Intelligent transport systems - Public transport - Open API for distributed journey planning"](https://standards.cen.eu/dyn/www/f?p=204:110:0::::FSP_PROJECT:62236&cs=1985DBD613F25D179FB65A73B0FDA4DB7) at [CEN](https://www.cen.eu).
 
