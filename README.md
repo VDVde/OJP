@@ -2,9 +2,7 @@
 # OJP - *O*pen API for distributed *J*ourney *P*lanning
 
 ## Content
-This repository contains the XSD, examples and documentation tables for the 
-"**O**pen API for distributed **J**ourney **P**lanning" published as 
-*"CEN/TS 17118:2017: "Intelligent transport systems - Public transport - Open API for distributed journey planning"*.
+This repository contains the XML Schema, examples and documentation tables for the "**O**pen API for distributed **J**ourney **P**lanning" published as *"CEN/TS 17118:2017: "Intelligent transport systems - Public transport - Open API for distributed journey planning"*.
 
 OJP consists of a set of services that can be addressed using HTTP requests.
 
