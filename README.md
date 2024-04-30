@@ -24,7 +24,7 @@ OJP systems interacting with each other additionally use:
 ## Standard document
 OJP is a CEN standard. Obtain a copy of the standard document ["CEN/TS 17118:2017: "Intelligent transport systems - Public transport - Open API for distributed journey planning"](https://standards.cen.eu/dyn/www/f?p=204:110:0::::FSP_PROJECT:62236&cs=1985DBD613F25D179FB65A73B0FDA4DB7) at [CEN](https://www.cen.eu).
 
-OJP is part of the [Transmodel](https://www.transmodel-cen.eu/)) family of standards together with [NeTEx](https://netex-cen.eu/), [SIRI](https://www.transmodel-cen.eu/siri-standard/)  and OPRA. It also contains elements from [DATEX II](https://datex2.eu/).
+OJP is part of the [Transmodel](https://www.transmodel-cen.eu/) family of standards together with [NeTEx](https://netex-cen.eu/), [SIRI](https://www.transmodel-cen.eu/siri-standard/)  and OPRA. It also contains elements from [DATEX II](https://datex2.eu/).
 
 ## Releases
 * [OJP 1.0 branch](https://github.com/VDVde/OJP/tree/release/1.0)
