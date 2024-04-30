@@ -18,7 +18,7 @@ The main services to request information are:
 * Information about lines
 
 OJP systems interacting with each other additionally use:
-* Getting information about Exchange Points (places when a Trip switches from one OJP system to another)
+* Getting information about Exchange Points (places when a trip switches from one OJP system to another)
 * Using a multi point trip service (n origins and m destinations)
 
 ## Standard document
