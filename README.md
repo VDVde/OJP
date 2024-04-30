@@ -40,7 +40,7 @@ You can contribute by:
 
 ### Branches
 * The master branch is currently set to OJP 1.0.1
-* Development occurs currently in the development branch: https://github.com/VDVde/OJP/tree/develop.
+* Development occurs currently in [the develop branch](https://github.com/VDVde/OJP/tree/develop).
 * We work with release-branches
 * PR should always be created with feature/<id> as a branch.
 
