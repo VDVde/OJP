@@ -27,10 +27,8 @@ OJP is a CEN standard. Obtain a copy of the standard document ["CEN/TS 17118:201
 OJP is part of the [Transmodel](https://www.transmodel-cen.eu/) family of standards together with [NeTEx](https://netex-cen.eu/), [SIRI](https://www.transmodel-cen.eu/siri-standard/)  and OPRA. It also contains elements from [DATEX II](https://datex2.eu/).
 
 ## Releases
-* [OJP 1.0 branch](https://github.com/VDVde/OJP/tree/release/1.0)
-  * [OJP 1.0](https://github.com/VDVde/OJP/releases/tag/v1.0): The version described in CEN/TS 17118:2017
-  * [OJP 1.0.1](https://github.com/VDVde/OJP/releases/tag/v1.0.1): Bug fix release
-* OJP 2.0 in preparation. See the following [branch](https://github.com/VDVde/OJP/tree/develop).
+* [OJP 1.0](https://github.com/VDVde/OJP/releases/tag/v1.0): The version described in CEN/TS 17118:2017
+* [OJP 1.0.1](https://github.com/VDVde/OJP/releases/tag/v1.0.1): Bug fix release
 
 ## Github Repository
 
