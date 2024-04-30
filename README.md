@@ -39,7 +39,7 @@ You can contribute by:
 * Creating pull requests: Use the [development documentation](https://github.com/VDVde/OJP/wiki/WG:-:-Working-with-this-repository)
 
 ### Branches
-* The master branch is currently set to OJP 1.0.1
+* The main branch is currently set to OJP 1.0.1
 * Development occurs currently in [the develop branch](https://github.com/VDVde/OJP/tree/develop).
 * We work with release-branches
 * PR should always be created in a branch with the name "feature/<title>".
