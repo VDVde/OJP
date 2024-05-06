@@ -1382,7 +1382,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			<xs:group ref="BaseTripPolicyGroup"/>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" default="anyPoint">
 				<xs:annotation>
-					<xs:documentation>Defines how the router should handle the multiple origins and destinations: If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found. As it is important for the strategy of the distributing trip planning the MultiPointType should be set. If the type is not supported a TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED warning or error must be returned.</xs:documentation>
+					<xs:documentation>Defines how the router should handle the multiple origins and destinations: If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found. As it is important for the strategy of the distributed trip planning the MultiPointType should be set. If the type is not supported a TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED warning or error must be returned. Default is anyPoint.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
