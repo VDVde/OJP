@@ -110,25 +110,18 @@ declare function hl:contabReport_domain(
         let $anno := $schema/z:annotation/z:documentation/string()
         let $headline := ($anno, $schemaFileName)[1]
         let $stypes := $schema/eu:getEdescReportSimpleTypes(.)
-        let $stypesTable := eu:stypesTable($stypes, $domain, $options)[$stypes]        
+        let $stypesTable := eu:stypesTable($stypes, $domain, $options)[$stypes]    
         let $tables :=
             for $comp at $cnr in (
                 $schema/z:components/*,
                 $schema/z:components/*//z:complexType[@z:typeID] ! u:copyNode(.)
             )
+            [self::z:complexType, self::z:group, self::z:element]
             let $compNr := 
                 let $shift := if ($stypes) then 1 else 0
                 return $cnr + $shift
             return
-                typeswitch($comp)
-                case element(z:complexType) | 
-                     element(z:group) |
-                     element(z:element) return
-                    hl:contabReport_complexComp($comp, $compNr, $schemaNr, $domain, $options)
-                case element(z:simpleType) return ()
-                case element(z:attributeGroup) return ()
-                case element(z:attribute) return ()                
-                default return error('Unexpected component, elem name: '||name($comp))
+                hl:contabReport_complexComp($comp, $compNr, $schemaNr, $domain, $options)
         return
             <div class="sect1" id="schema_{$schemaName}">{
                 <h2>{$schemaNr}. {$headline}</h2>,
