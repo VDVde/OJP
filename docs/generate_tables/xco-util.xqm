@@ -355,10 +355,11 @@ declare function u:writeXhtmlDoc($path as xs:string,
     let $dir := $path ! replace(., '/[^/]*$', '')
     let $_CRDIR := if (file:exists($dir)) then () else file:create-dir($dir)
     let $spar := if (exists($serParams)) then $serParams else 
-        map{'method': 'xml', 
-            'cdata-section-elements': 
-            'script', 'indent': 'yes', 
-            'doctype-system': 'html'}
+        map{'method': 'xhtml', 
+            'cdata-section-elements': 'script', 
+            'indent': 'yes', 
+            'html-version': '5.0'
+            }
     return
         file:write($path, $doc, $spar)
 };
