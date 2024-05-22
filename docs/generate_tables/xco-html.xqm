@@ -149,7 +149,7 @@ declare function hl:contabReport_domain(
     let $_WRITE :=
         let $reportPath := dm:getReportPath('contab', $domain, $options)
         where ($reportPath)
-        return u:writeXmlDoc($reportPath, $htmlReport)
+        return u:writeXhtmlDoc($reportPath, $htmlReport)
     return $htmlReport       
 };
 
@@ -242,11 +242,11 @@ declare function hl:contabReport_head(
     <script type="text/javascript"><![CDATA[
       document.addEventListener('DOMContentLoaded', function() {
         var headers = ['h2', 'h3', 'h4', 'h5', 'h6'];
-        for (var i = 0; i &lt; headers.length; i++) {
+        for (var i = 0; i < headers.length; i++) {
           var headerElements = document.getElementsByTagName(headers[i]);
-          for (var j = 0; j &lt; headerElements.length; j++) {
+          for (var j = 0; j < headerElements.length; j++) {
             var header = headerElements[j];
-            header.innerHTML += '&lt;a class="header-link" href="#' + header.parentNode.id + '"&gt;&lt;span class="link-icon"&gt;&lt;/span&gt;&lt;/a&gt;';
+            header.innerHTML += '<a class="header-link" href="#' + header.parentNode.id + '"><span class="link-icon"></span></a>';
           }
         }
       });
@@ -766,7 +766,7 @@ declare function hl:contabReportIndex(
        }</html>
        ! u:prettyNode(.)
        
-    let $_WRITE := u:writeXmlDoc($filePath, $htmlReport)
+    let $_WRITE := u:writeXhtmlDoc($filePath, $htmlReport)
        
     return $htmlReport       
 };
@@ -945,7 +945,7 @@ declare function hl:enumDict_domain(
     let $_WRITE :=
         let $reportPath := dm:getReportPartPath('contab', 'enum-dict', $domain, $options)
         where ($reportPath)
-        return u:writeXmlDoc($reportPath, $htmlReport)
+        return u:writeXhtmlDoc($reportPath, $htmlReport)
        
     return $htmlReport       
 };

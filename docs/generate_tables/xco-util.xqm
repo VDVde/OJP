@@ -336,3 +336,35 @@ declare function u:writeXmlDoc($path as xs:string,
     u:writeXmlDoc($path, $doc, ())
 };
 
+(:~
+ : Writes an XHTML document to the file system. If the folder does not
+ : yet exist, it is created now.
+ :
+ : If no serialization parameters are specified, the output document
+ : is indented.
+ :
+ : @param path the file system path of the output file
+ : @param doc the document to be written (document or element node)
+ : @serParams optional serialization parameters
+ : @return the empty sequence
+ :)
+declare function u:writeXhtmlDoc($path as xs:string, 
+                                $doc as node(), 
+                                $serParams as map(xs:string, item()*)?)
+        as empty-sequence() {
+    let $dir := $path ! replace(., '/[^/]*$', '')
+    let $_CRDIR := if (file:exists($dir)) then () else file:create-dir($dir)
+    let $spar := if (exists($serParams)) then $serParams else 
+        map{'method': 'xml', 
+            'cdata-section-elements': 
+            'script', 'indent': 'yes', 
+            'doctype-system': 'html'}
+    return
+        file:write($path, $doc, $spar)
+};
+
+declare function u:writeXhtmlDoc($path as xs:string, 
+                                $doc as node())
+        as empty-sequence() {
+    u:writeXhtmlDoc($path, $doc, ())
+};
