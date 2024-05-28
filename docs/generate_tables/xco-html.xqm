@@ -807,7 +807,7 @@ declare function hl:contabReportIndex_toc(
         let $filePath := dm:getReportPath('contab', $domain, $options)
         let $relPath := fu:getRelPath($dirPath, $filePath)        
         let $fileName := $relPath ! file:name(.)
-        let $title := $domain/processing/title/string()
+        let $title := $domain/processing/(titleToplevel, title, $fileName)[1] ! string()
         let $enumPath := 
             dm:getReportPartPath('contab', 'enum-dict', $domain, $options)[file:exists(.)]
         let $enumRelPath := $enumPath ! fu:getRelPath($dirPath, .)            
@@ -909,7 +909,7 @@ declare function hl:contabReportIndex_tocTreeREC(
                 (for $i in 1 to $level return '.  ') => string-join('')
         let $dinfo := $domainDict($path)
         let $href := $dinfo?relPath
-        let $title := $dinfo?fileName||
+        let $title := $dinfo?title||
                       ($dinfo?countEnumTypes[string()] ! (' ('||.||')'))
         let $titleClass := attribute class {'enum-dict'} 
                            [contains($href, 'enum-dict')]
