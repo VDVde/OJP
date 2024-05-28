@@ -85,7 +85,7 @@ declare function hl:contabReport($report as element()?,
 };
 
 (:~
- : Transforms an edesc report or report domain into a contab report. 
+ : Creates a section of a contab report, describing a domain. 
  :
  : If no domains have been defined, the function creates the complete
  : report, otherwise the part corresponding to a single domain.
@@ -588,7 +588,7 @@ optional, single, part of a choice
                 
             let $startChoiceItems := $row/@startChoice/tokenize(., ';\s*')
             let $startChoiceOccItems := $row/@startChoiceOcc/tokenize(., ';\s*')
-            let $_DEBUG := $row[@startChoice] ! trace(.)
+            (: let $_DEBUG := $row[@startChoice] ! trace(.) :)
             return (
                 hu:tableTextLine($startOwnContentMsg, 'announceBase', ())[$startOwnContent]
                 ,                
@@ -845,7 +845,7 @@ declare function hl:contabReportIndex_toc(
             <h4>{$title}</h4>
             <p class="tocsubtitle">{$subtitle}</p>
         </div>
-        <ul class="sectlevel1">{
+        <ul class="sectlevel1" id="ulstartpage">{
           $linkTree
         }</ul>
     </div>
@@ -865,7 +865,16 @@ declare function hl:contabReportIndex_tocTree(
                               $domainDict as map(xs:string, item()*),
                               $options as map(xs:string, item()*)?)
         as element(li)* {
-    hl:contabReportIndex_tocTreeREC($ftree, $domainDict, $options)
+    (: Determine where file entries should have a prefix indicating
+       the level of indentation - only if different labels occur. :)
+    let $options_indentationLabel :=
+        if (empty($ftree//fi[count(ancestor::fo) gt 1])) then 'no'
+        else 'yes'
+    let $optionsTocTree := 
+        map:put($options, 'withIndentationLabel', 
+        $options_indentationLabel)
+    return        
+    hl:contabReportIndex_tocTreeREC($ftree, $domainDict, $optionsTocTree)
 };
 
 declare function hl:contabReportIndex_tocTreeREC(
@@ -876,11 +885,15 @@ declare function hl:contabReportIndex_tocTreeREC(
     typeswitch($n)
     case element(fo) return
         let $level := count($n/ancestor::fo)
-        let $prefix := (for $i in 1 to $level return '>> ') => string-join('')
+        let $prefix := 
+            if ($options?withIndentationLabel eq 'no') then () else
+            (for $i in 1 to $level return '>> ') => string-join('')
+        let $name := $n/@name/string()               
         return (
+            if (not($name)) then () else
             <li>{
-                <span class="monospace">{$prefix}</span>,
-                <span class="darkbrown">{$n/@name/string()}</span>
+                $prefix ! <span class="monospace">{.}</span>,
+                <span class="darkbrown">{$name}</span>
             }</li>,
             $n/* ! hl:contabReportIndex_tocTreeREC(., $domainDict, $options)
         )
@@ -891,7 +904,9 @@ declare function hl:contabReportIndex_tocTreeREC(
         
         let $path := $n/ancestor-or-self::*/@name => string-join('/')
         let $level := count($n/ancestor::fo)
-        let $prefix := (for $i in 1 to $level return '.  ') => string-join('')
+        let $prefix := 
+            if ($options?withIndentationLabel eq 'no') then () else
+                (for $i in 1 to $level return '.  ') => string-join('')
         let $dinfo := $domainDict($path)
         let $href := $dinfo?relPath
         let $title := $dinfo?fileName||
@@ -900,7 +915,7 @@ declare function hl:contabReportIndex_tocTreeREC(
                            [contains($href, 'enum-dict')]
         return
             <li>{
-                <span class="monospace">{$prefix}</span>,
+                $prefix ! <span class="monospace">{.}</span>,
                 <a shape="rect" href="{$href}">{$titleClass, $title}</a>
             }</li>
     default return ()            

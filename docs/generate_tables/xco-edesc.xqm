@@ -93,13 +93,15 @@ declare function ed:writeExpandedCompDescsPerDomain(
 
         (: Create schema reports: 
         :    descriptors are grouped by schema and wrapped in schema elements :)
+        let $schemaMap := map:merge(
+            $schemas/map:entry(base-uri(.) ! u:normalizeUri(., ()), .))        
         let $schemaReports :=        
             for $edesc in $edescs
             group by $baseUri := $edesc/base-uri(.) ! u:normalizeUri(., ())
             return
                 <z:schema xml:base="{$baseUri}" filePath="{$baseUri}">{
                     if ($options?skipAnno) then () else
-                    let $schema := $schemas[base-uri(.) eq $baseUri]
+                    let $schema := $schemaMap($baseUri)
                     return $schema/xs:annotation[1]/cd:annotationDescriptor(.),
                     <z:components count="{count($edesc)}">{$edesc}</z:components>
                 }</z:schema>
