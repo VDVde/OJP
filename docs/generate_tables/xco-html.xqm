@@ -110,13 +110,20 @@ declare function hl:contabReport_domain(
         let $anno := $schema/z:annotation/z:documentation/string()
         let $headline := ($anno, $schemaFileName)[1]
         let $stypes := $schema/eu:getEdescReportSimpleTypes(.)
-        let $stypesTable := eu:stypesTable($stypes, $domain, $options)[$stypes]    
+        let $stypesTable := eu:stypesTable($stypes, $domain, $options)[$stypes]  
+
+        (: Deduplicate and sort local types :)
+        let $localTypes :=
+            for $ltype in $schema/z:components/*//z:complexType[@z:typeID]
+            group by $typeId := $ltype/@z:typeID
+            order by $typeId ! replace(., '.*typedef-(.*)', '$1') ! xs:decimal(.)
+            return $ltype[1]! u:copyNode(.)
         let $tables :=
             for $comp at $cnr in (
-                $schema/z:components/*,
-                $schema/z:components/*//z:complexType[@z:typeID] ! u:copyNode(.)
+                $schema/z:components/*
+                    [self::z:complexType, self::z:group, self::z:element],
+                $localTypes
             )
-            [self::z:complexType, self::z:group, self::z:element]
             let $compNr := 
                 let $shift := if ($stypes) then 1 else 0
                 return $cnr + $shift
@@ -580,11 +587,13 @@ optional, single, part of a choice
                     'Inherited content is followed by ', <b>own content</b>, ':')
                 
             let $startChoiceItems := $row/@startChoice/tokenize(., ';\s*')
+            let $startChoiceOccItems := $row/@startChoiceOcc/tokenize(., ';\s*')
+            let $_DEBUG := $row[@startChoice] ! trace(.)
             return (
                 hu:tableTextLine($startOwnContentMsg, 'announceBase', ())[$startOwnContent]
                 ,                
                 if (empty($startChoiceItems)) then () else
-                for $startChoiceItem in $startChoiceItems
+                for $startChoiceItem at $choiceNr in $startChoiceItems
                 let $items := tokenize($startChoiceItem, ',\s*')
                 let $contextbranch := $items[starts-with(., 'contextbranch')] ! substring-after(., '=')
                 let $elems := $items[starts-with(., 'elems')] ! substring-after(., '=')
@@ -597,9 +606,19 @@ optional, single, part of a choice
                     $elems ! ('elements ('||$elems||')'),
                     $seqs ! ('element sequences ('||$seqs||')')
                     ), ' or ')
+                let $oneOrNoneOrOne := 
+                    let $occs := $startChoiceOccItems[$choiceNr]
+                    let $minOcc := substring-before($occs, ':')
+                    let $maxOcc := substring-after($occs, ':')
+                    return
+                        if ($minOcc eq '0') then
+                            let $alter := if ($maxOcc eq '*') then 'more' else 'one'
+                            return 'none or '||$alter
+                        else if ($maxOcc eq '*') then 'one or more'
+                        else 'one'
                 return
                     hu:tableTextLine(
-                    ($startText, 'element contains ', <em>one</em>, 
+                    ($startText, 'element contains ', <em>{$oneOrNoneOrOne}</em>, 
                      ' of the following '||$alternatives))
                 ,
                 <tr>{
