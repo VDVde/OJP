@@ -195,7 +195,7 @@ declare function dm:constructDomains($customDomains as element()?,
  :    C o m p i l e    f i l t e r    d o m a i n s
  :)
 (:~
- : Compiles custom domain defintions, type "filter domain".
+ : Compiles custom domain definitions, type "filter domain".
  :)
 declare function dm:compileFilterDomains(
                             $schemaDescriptors as element()*,
@@ -211,15 +211,20 @@ declare function dm:compileFilterDomains(
             dm:filterSchemaDescriptorsByTns(., $schemaDescriptors)
     let $tnsMinus :=      
         $domain/content/exceptTargetNamespace/
-            dm:filterSchemaDescriptorsByFiles(., $schemaDescriptors)
+            dm:filterSchemaDescriptorsByTns(., $schemaDescriptors)
     let $filesPlus := $domain/content/files/
         dm:filterSchemaDescriptorsByFiles(., $schemaDescriptors)
     let $filesMinus := $domain/content/exceptFiles/
         dm:filterSchemaDescriptorsByFiles(., $schemaDescriptors)        
     let $selected := ($tnsPlus, $filesPlus)
         [not(. = ($tnsMinus, $filesMinus))] 
+    (: Remove repeated selections (2024-05-22, hjr) :)
+    let $selectedDedup :=
+        for $xsdd in $selected
+        group by $filePath := $xsdd/@filePath/lower-case(.)
+        return $xsdd[1]
     let $selectedOrdered := 
-        dm:sortSchemaDescriptors($selected, $domain) 
+        dm:sortSchemaDescriptors($selectedDedup, $domain) 
     let $id := 'd'||$pos
     let $name := ($domain/@name, $id)[1]
     let $summary := $domain/dm:filterDomainSummary(.)

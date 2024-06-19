@@ -305,7 +305,7 @@ declare function rp:contabReport(
     let $_WDEBUG := $xmlReport ! dg:WRITE_FILE(., 'EDESC-REPORT.XML', 'edesc-report', 'yes', $options)
     let $_LOG := trace('Write contab reports')
     let $htmlReport := hl:htmlReport('contab', $xmlReport, $xmlReportDir, $options) ! u:prettyNode(.)
-    let $_LOG := trace('Writing of contab reports fininshed')
+    let $_LOG := trace('Writing of contab reports finished')
     return ()
 }; 
 

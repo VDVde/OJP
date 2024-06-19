@@ -259,11 +259,15 @@ declare function eu:contentTable_elemRow(
     let $startChoice := (
         array:flatten($startedChoices)/eu:getChoiceSummary(.) => string-join('; ')
         )[string()]
+    let $choiceOcc := 
+        let $values := $startedChoices?* ! @z:occ => string-join('; ')
+        return $values ! attribute startChoiceOcc {.}        
     return
         <row typeCategory="{$typeCategory}">{
             (: The @startChoice attribute will trigger a text line similar to 
                "The element contains one of ..." :)
             $startChoice ! attribute startChoice {.},
+            $choiceOcc,
             $groupCol,
             $branchCol,
             <name colspan="{$nameColspan}" rowspan="1">{

@@ -85,7 +85,7 @@ declare function hl:contabReport($report as element()?,
 };
 
 (:~
- : Transforms an edesc report or report domain into a contab report. 
+ : Creates a section of a contab report, describing a domain. 
  :
  : If no domains have been defined, the function creates the complete
  : report, otherwise the part corresponding to a single domain.
@@ -110,25 +110,25 @@ declare function hl:contabReport_domain(
         let $anno := $schema/z:annotation/z:documentation/string()
         let $headline := ($anno, $schemaFileName)[1]
         let $stypes := $schema/eu:getEdescReportSimpleTypes(.)
-        let $stypesTable := eu:stypesTable($stypes, $domain, $options)[$stypes]        
+        let $stypesTable := eu:stypesTable($stypes, $domain, $options)[$stypes]  
+
+        (: Deduplicate and sort local types :)
+        let $localTypes :=
+            for $ltype in $schema/z:components/*//z:complexType[@z:typeID]
+            group by $typeId := $ltype/@z:typeID
+            order by $typeId ! replace(., '.*typedef-(.*)', '$1') ! xs:decimal(.)
+            return $ltype[1]! u:copyNode(.)
         let $tables :=
             for $comp at $cnr in (
-                $schema/z:components/*,
-                $schema/z:components/*//z:complexType[@z:typeID] ! u:copyNode(.)
+                $schema/z:components/*
+                    [self::z:complexType, self::z:group, self::z:element],
+                $localTypes
             )
             let $compNr := 
                 let $shift := if ($stypes) then 1 else 0
                 return $cnr + $shift
             return
-                typeswitch($comp)
-                case element(z:complexType) | 
-                     element(z:group) |
-                     element(z:element) return
-                    hl:contabReport_complexComp($comp, $compNr, $schemaNr, $domain, $options)
-                case element(z:simpleType) return ()
-                case element(z:attributeGroup) return ()
-                case element(z:attribute) return ()                
-                default return error('Unexpected component, elem name: '||name($comp))
+                hl:contabReport_complexComp($comp, $compNr, $schemaNr, $domain, $options)
         return
             <div class="sect1" id="schema_{$schemaName}">{
                 <h2>{$schemaNr}. {$headline}</h2>,
@@ -156,7 +156,7 @@ declare function hl:contabReport_domain(
     let $_WRITE :=
         let $reportPath := dm:getReportPath('contab', $domain, $options)
         where ($reportPath)
-        return u:writeXmlDoc($reportPath, $htmlReport)
+        return u:writeXhtmlDoc($reportPath, $htmlReport)
     return $htmlReport       
 };
 
@@ -249,11 +249,11 @@ declare function hl:contabReport_head(
     <script type="text/javascript"><![CDATA[
       document.addEventListener('DOMContentLoaded', function() {
         var headers = ['h2', 'h3', 'h4', 'h5', 'h6'];
-        for (var i = 0; i &lt; headers.length; i++) {
+        for (var i = 0; i < headers.length; i++) {
           var headerElements = document.getElementsByTagName(headers[i]);
-          for (var j = 0; j &lt; headerElements.length; j++) {
+          for (var j = 0; j < headerElements.length; j++) {
             var header = headerElements[j];
-            header.innerHTML += '&lt;a class="header-link" href="#' + header.parentNode.id + '"&gt;&lt;span class="link-icon"&gt;&lt;/span&gt;&lt;/a&gt;';
+            header.innerHTML += '<a class="header-link" href="#' + header.parentNode.id + '"><span class="link-icon"></span></a>';
           }
         }
       });
@@ -587,11 +587,13 @@ optional, single, part of a choice
                     'Inherited content is followed by ', <b>own content</b>, ':')
                 
             let $startChoiceItems := $row/@startChoice/tokenize(., ';\s*')
+            let $startChoiceOccItems := $row/@startChoiceOcc/tokenize(., ';\s*')
+            (: let $_DEBUG := $row[@startChoice] ! trace(.) :)
             return (
                 hu:tableTextLine($startOwnContentMsg, 'announceBase', ())[$startOwnContent]
                 ,                
                 if (empty($startChoiceItems)) then () else
-                for $startChoiceItem in $startChoiceItems
+                for $startChoiceItem at $choiceNr in $startChoiceItems
                 let $items := tokenize($startChoiceItem, ',\s*')
                 let $contextbranch := $items[starts-with(., 'contextbranch')] ! substring-after(., '=')
                 let $elems := $items[starts-with(., 'elems')] ! substring-after(., '=')
@@ -604,9 +606,19 @@ optional, single, part of a choice
                     $elems ! ('elements ('||$elems||')'),
                     $seqs ! ('element sequences ('||$seqs||')')
                     ), ' or ')
+                let $oneOrNoneOrOne := 
+                    let $occs := $startChoiceOccItems[$choiceNr]
+                    let $minOcc := substring-before($occs, ':')
+                    let $maxOcc := substring-after($occs, ':')
+                    return
+                        if ($minOcc eq '0') then
+                            let $alter := if ($maxOcc eq '*') then 'more' else 'one'
+                            return 'none or '||$alter
+                        else if ($maxOcc eq '*') then 'one or more'
+                        else 'one'
                 return
                     hu:tableTextLine(
-                    ($startText, 'element contains ', <em>one</em>, 
+                    ($startText, 'element contains ', <em>{$oneOrNoneOrOne}</em>, 
                      ' of the following '||$alternatives))
                 ,
                 <tr>{
@@ -650,9 +662,15 @@ optional, single, part of a choice
                         <p>{
                             hu:classP(),
                             if ($isMandatory) then
-                                <code><strong title="{$occTitle}">{$occValue}</strong></code>
+                                <strong title="{$occTitle}">{$occValue}</strong>
                             else
                                 <span title="{$occTitle}">{$occValue}</span>
+                            (: Alternative with <code> - not used
+                            if ($isMandatory) then
+                                <code><strong title="{$occTitle}">{$occValue}</strong></code>                                
+                            else
+                                <code><span title="{$occTitle}">{$occValue}</span></code>
+                             :)
                         }</p>
                     }</td>,
                     $row/type/
@@ -773,7 +791,7 @@ declare function hl:contabReportIndex(
        }</html>
        ! u:prettyNode(.)
        
-    let $_WRITE := u:writeXmlDoc($filePath, $htmlReport)
+    let $_WRITE := u:writeXhtmlDoc($filePath, $htmlReport)
        
     return $htmlReport       
 };
@@ -795,7 +813,7 @@ declare function hl:contabReportIndex_toc(
         let $filePath := dm:getReportPath('contab', $domain, $options)
         let $relPath := fu:getRelPath($dirPath, $filePath)        
         let $fileName := $relPath ! file:name(.)
-        let $title := $domain/processing/title/string()
+        let $title := $domain/processing/(titleToplevel, title, $fileName)[1] ! string()
         let $enumPath := 
             dm:getReportPartPath('contab', 'enum-dict', $domain, $options)[file:exists(.)]
         let $enumRelPath := $enumPath ! fu:getRelPath($dirPath, .)            
@@ -833,7 +851,7 @@ declare function hl:contabReportIndex_toc(
             <h4>{$title}</h4>
             <p class="tocsubtitle">{$subtitle}</p>
         </div>
-        <ul class="sectlevel1">{
+        <ul class="sectlevel1" id="ulstartpage">{
           $linkTree
         }</ul>
     </div>
@@ -853,7 +871,16 @@ declare function hl:contabReportIndex_tocTree(
                               $domainDict as map(xs:string, item()*),
                               $options as map(xs:string, item()*)?)
         as element(li)* {
-    hl:contabReportIndex_tocTreeREC($ftree, $domainDict, $options)
+    (: Determine where file entries should have a prefix indicating
+       the level of indentation - only if different labels occur. :)
+    let $options_indentationLabel :=
+        if (empty($ftree//fi[count(ancestor::fo) gt 1])) then 'no'
+        else 'yes'
+    let $optionsTocTree := 
+        map:put($options, 'withIndentationLabel', 
+        $options_indentationLabel)
+    return        
+    hl:contabReportIndex_tocTreeREC($ftree, $domainDict, $optionsTocTree)
 };
 
 declare function hl:contabReportIndex_tocTreeREC(
@@ -864,11 +891,15 @@ declare function hl:contabReportIndex_tocTreeREC(
     typeswitch($n)
     case element(fo) return
         let $level := count($n/ancestor::fo)
-        let $prefix := (for $i in 1 to $level return '>> ') => string-join('')
+        let $prefix := 
+            if ($options?withIndentationLabel eq 'no') then () else
+            (for $i in 1 to $level return '>> ') => string-join('')
+        let $name := $n/@name/string()               
         return (
+            if (not($name)) then () else
             <li>{
-                <span class="monospace">{$prefix}</span>,
-                <span class="darkbrown">{$n/@name/string()}</span>
+                $prefix ! <span class="monospace">{.}</span>,
+                <span class="darkbrown">{$name}</span>
             }</li>,
             $n/* ! hl:contabReportIndex_tocTreeREC(., $domainDict, $options)
         )
@@ -879,16 +910,18 @@ declare function hl:contabReportIndex_tocTreeREC(
         
         let $path := $n/ancestor-or-self::*/@name => string-join('/')
         let $level := count($n/ancestor::fo)
-        let $prefix := (for $i in 1 to $level return '.  ') => string-join('')
+        let $prefix := 
+            if ($options?withIndentationLabel eq 'no') then () else
+                (for $i in 1 to $level return '.  ') => string-join('')
         let $dinfo := $domainDict($path)
         let $href := $dinfo?relPath
-        let $title := $dinfo?fileName||
+        let $title := $dinfo?title||
                       ($dinfo?countEnumTypes[string()] ! (' ('||.||')'))
         let $titleClass := attribute class {'enum-dict'} 
                            [contains($href, 'enum-dict')]
         return
             <li>{
-                <span class="monospace">{$prefix}</span>,
+                $prefix ! <span class="monospace">{.}</span>,
                 <a shape="rect" href="{$href}">{$titleClass, $title}</a>
             }</li>
     default return ()            
@@ -952,7 +985,7 @@ declare function hl:enumDict_domain(
     let $_WRITE :=
         let $reportPath := dm:getReportPartPath('contab', 'enum-dict', $domain, $options)
         where ($reportPath)
-        return u:writeXmlDoc($reportPath, $htmlReport)
+        return u:writeXhtmlDoc($reportPath, $htmlReport)
        
     return $htmlReport       
 };
