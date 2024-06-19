@@ -662,9 +662,15 @@ optional, single, part of a choice
                         <p>{
                             hu:classP(),
                             if ($isMandatory) then
-                                <code><strong title="{$occTitle}">{$occValue}</strong></code>
+                                <strong title="{$occTitle}">{$occValue}</strong>
                             else
                                 <span title="{$occTitle}">{$occValue}</span>
+                            (: Alternative with <code> - not used
+                            if ($isMandatory) then
+                                <code><strong title="{$occTitle}">{$occValue}</strong></code>                                
+                            else
+                                <code><span title="{$occTitle}">{$occValue}</span></code>
+                             :)
                         }</p>
                     }</td>,
                     $row/type/
