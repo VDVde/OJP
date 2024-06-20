@@ -150,7 +150,7 @@ declare function hl:contabReport_domain(
                 <div id="content">{
                     $xsdDivs
                 }</div>,
-                <script href="../footer.js"></script>
+                <script type="text/javascript" src="../footer.js"></script>
            }</body>
        }</html>
        ! u:prettyNode(.)
