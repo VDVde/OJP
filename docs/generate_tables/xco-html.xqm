@@ -246,7 +246,7 @@ declare function hl:contabReport_head(
     <meta charset="UTF-8"/>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script type="text/javascript"><![CDATA[
+    <script type="text/javascript">/*<![CDATA[*/
       document.addEventListener('DOMContentLoaded', function() {
         var headers = ['h2', 'h3', 'h4', 'h5', 'h6'];
         for (var i = 0; i < headers.length; i++) {
@@ -257,7 +257,7 @@ declare function hl:contabReport_head(
           }
         }
       });
-    ]]></script>
+    /*]]>*/</script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"/>
     <link rel="stylesheet" href="{$cssRelFilePath}"/>
     <style><![CDATA[
