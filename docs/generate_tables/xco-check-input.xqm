@@ -17,7 +17,7 @@ declare function ci:checkInput($report as xs:string?,
     let $customElem :=
         if (not($custom)) then ()
         else
-            let $customPath := u:normalizeUri($custom, static-base-uri())
+            let $customPath := u:normalizeUri($custom, ())
             return
                 if (not(doc-available($customPath))) then
                     error((), '*** Error - custom file not valid XML; path: '||$customPath)
