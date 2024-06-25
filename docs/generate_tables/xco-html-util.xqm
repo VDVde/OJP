@@ -142,12 +142,20 @@ declare function hu:finalizeHtmlReport($report as element(),
         as element() {
     copy $report_ := $report
     modify (
-        for $att in $report_//(@id, @href) return
-            replace value of node $att with $att !  
+        for $att in $report_//(@id, @href) 
+        let $value := string($att)
+        (: Take care to preserve file paths and http:/ and https:/ :)
+        let $prefix := $value ! replace(., '^(.*?#|https?:/).*', '$1')[. ne $value]
+        let $edit := if (not($prefix)) then $value else substring-after($value, $prefix)
+        let $editResult := $edit !
                 replace(., ':', '__') !
                 replace(., '(element|type|group).', '$1_') !
                 replace(., '(\d+)\.(\d+)', '$1_$2') !
-                replace(., '-', '_') 
+                replace(., '-', '_')
+        let $editedValue := $prefix||$editResult
+        where $editedValue != $value
+        return
+            replace value of node $att with $editedValue
     )
     return $report_
 };        
