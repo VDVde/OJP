@@ -629,6 +629,7 @@ optional, single, part of a choice
                     $row/group/
                     <td colspan="{@colspan}" rowspan="{@rowspan}">{ 
                         hu:classTd(),
+                        if (not(@linkName)) then () else
                         let $displayName :=
                             if (not($custom)) then . else 
                                 cu:customComponentName(
@@ -680,6 +681,7 @@ optional, single, part of a choice
                     $row/type/
                     <td colspan="{@colspan}" rowspan="{@rowspan}">{
                         hu:classTd(),
+                        if (not(@linkName)) then () else
                         let $displayName :=
                             if (not($custom)) then . else 
                             cu:customComponentName(
