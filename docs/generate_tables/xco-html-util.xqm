@@ -149,7 +149,7 @@ declare function hu:finalizeHtmlReport($report as element(),
         let $edit := if (not($prefix)) then $value else substring-after($value, $prefix)
         let $editResult := $edit !
                 replace(., ':', '__') !
-                replace(., '(element|type|group).', '$1_') !
+                replace(., '(element|type|group)\.', '$1_') !
                 replace(., '(\d+)\.(\d+)', '$1_$2') !
                 replace(., '-', '_')
         let $editedValue := $prefix||$editResult
