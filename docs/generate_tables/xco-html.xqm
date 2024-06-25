@@ -152,7 +152,8 @@ declare function hl:contabReport_domain(
                 }</div>
            }</body>
        }</html>
-       ! u:prettyNode(.)
+       ! hu:finalizeHtmlReport(., $options)
+       ! u:prettyNode(.)       
     let $_WRITE :=
         let $reportPath := dm:getReportPath('contab', $domain, $options)
         where ($reportPath)
@@ -310,7 +311,10 @@ declare function hl:contabReport_stypes($schemaName,
                             if ($raw/contains(., '#')) then 
                                 hu:getLocalTypeLabelLines($raw)
                             else 
-                                <strong><code>{$raw/node()}</code></strong>
+                                (: Requested the omittion of prefixes (2024-06-21, Murbach) :)
+                                let $useName := $raw ! replace(., '.*:', '') 
+                                return
+                                    <strong><code>{$useName}</code></strong>
                     let $enums := $row/description/enum
                     let $anno := ($row/anno[string()]/string(), '-')[1]
                     return if (not($enums)) then
@@ -789,6 +793,7 @@ declare function hl:contabReportIndex(
                 }</div>
            }</body>
        }</html>
+       ! hu:finalizeHtmlReport(., $options)       
        ! u:prettyNode(.)
        
     let $_WRITE := u:writeXhtmlDoc($filePath, $htmlReport)
@@ -980,6 +985,7 @@ declare function hl:enumDict_domain(
                 }</div>
            }</body>
        }</html>
+       ! hu:finalizeHtmlReport(., $options)       
        ! u:prettyNode(.)
        
     let $_WRITE :=
