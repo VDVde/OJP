@@ -130,4 +130,34 @@ declare function hu:getLocalTypeLabelLines($typeLabel as xs:string)
     )
 };
 
+(:~
+ : Finalizes an HTML document. Ids and links are adapted to
+ : the constraints governing MS Word links:
+ : - replace ':' with '__'
+ : - replace '-' with '_'
+ : - replace '.' with '_' (under certain conditions)
+ :)
+declare function hu:finalizeHtmlReport($report as element(),
+                                       $options as map(xs:string, item()*)?)
+        as element() {
+    copy $report_ := $report
+    modify (
+        for $att in $report_//(@id, @href) 
+        let $value := string($att)
+        (: Take care to preserve file paths and http:/ and https:/ :)
+        let $prefix := $value ! replace(., '^(.*?#|https?:/).*', '$1')[. ne $value]
+        let $edit := if (not($prefix)) then $value else substring-after($value, $prefix)
+        let $editResult := $edit !
+                replace(., ':', '__') !
+                replace(., '(element|type|group)\.', '$1_') !
+                replace(., '(\d+)\.(\d+)', '$1_$2') !
+                replace(., '-', '_')
+        let $editedValue := $prefix||$editResult
+        where $editedValue != $value
+        return
+            replace value of node $att with $editedValue
+    )
+    return $report_
+};        
+
 
