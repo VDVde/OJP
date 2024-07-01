@@ -1429,7 +1429,7 @@ Can only be used when both participants recognise the same schedule version. If 
 		<xs:sequence>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" minOccurs="0" default="anyPoint">
 				<xs:annotation>
-					<xs:documentation>The MultiPointType used should be returned as it may be different from the one requested. Many systems will only support a subset of the MultiPointTypes, so it is important to know what the result is based on in order to define a strategy for distributed routing. If the type is not supported, it would be best to set a TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED warning. Default is anyPoint.</xs:documentation>
+					<xs:documentation>The MultiPointType used should be returned as it may be different from the one requested. Many systems will only support a subset of the MultiPointTypes, so it is important to know what the result is based on in order to define a strategy for distributed routing. If the type is not supported a TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED warning or error must be returned. Default is anyPoint.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MultiPointTripResponseContext" type="ResponseContextStructure" minOccurs="0">
