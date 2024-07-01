@@ -1382,22 +1382,19 @@ Can only be used when both participants recognise the same schedule version. If 
 			<xs:group ref="BaseTripPolicyGroup"/>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" minOccurs="0" default="anyPoint">
 				<xs:annotation>
-					<xs:documentation>Defines how the router should handle the multiple origins and destinations: If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found. As it is important for the strategy of the distributed trip planning the MultiPointType should be set. If the type is not supported a TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED warning or error must be returned. Default is anyPoint.</xs:documentation>
+					<xs:documentation>Defines how the router should handle requests with multiple origins and destinations. As it is important for the strategy of the distributed trip planning the MultiPointType should be set. If the type is not supported a TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED warning or error must be returned. Default is anyPoint.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
 	<xs:simpleType name="MultiPointTypeEnumeration">
 		<xs:annotation>
-			<xs:documentation>How the multiple origin/destination points should be considered.
-			Note: Unfortunately, this element was underdefined before and this resulted in different implementations.
-			Note: MultiPointType trumps the number of results. If the algorithm thinks it necessary to provide more results, it should.
-			</xs:documentation>
+			<xs:documentation>Defines how the router should handle requests with multiple origins and destinations. MultiPointType is more important than NumberOfResults. If the algorithm deems it necessary to return more results, it should do so.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="anyPoint">
 				<xs:annotation>
-					<xs:documentation>If a solution for any one of multiple origin/destination points is sufficient. Some implementations will return only one origin-destination pair even for multiple results with this setting. Others will provide multiple.</xs:documentation>
+					<xs:documentation>Returning one result for any of the origin/destination pairs is sufficient. As this element was not sufficiently defined in the past, some implementations will return multiple results with this setting.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="eachOrigin">
@@ -1412,7 +1409,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			</xs:enumeration>
 			<xs:enumeration value="eachOriginDestination">
 				<xs:annotation>
-					<xs:documentation>At least a result for each Origin-Destination pair must be presented.</xs:documentation>
+					<xs:documentation>At least one result for each origin/destination pair must be found.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="somePoints">
@@ -1432,7 +1429,7 @@ Can only be used when both participants recognise the same schedule version. If 
 		<xs:sequence>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" minOccurs="0" default="anyPoint">
 				<xs:annotation>
-					<xs:documentation>The used MultiPointType should be returned because it may differ from the one asked. Many systems will support only a subset of the MultiPointTypes and it is important to know, what the result is based on to formulate a strategy for distributed routing.</xs:documentation>
+					<xs:documentation>The MultiPointType used should be returned as it may be different from the one requested. Many systems will only support a subset of the MultiPointTypes, so it is important to know what the result is based on in order to define a strategy for distributed routing.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MultiPointTripResponseContext" type="ResponseContextStructure" minOccurs="0">
