@@ -704,7 +704,7 @@ declare function hl:contentHtmlTable_variant_typeName($contentTable as element()
                             <em>+<a shape="rect" href="{@linkName}" 
                                     title="{string()}">{string()}</a></em>, 
                             @substitutionGroup[string()] 
-                            ! ('(', <em>↔ {string()}</em>, ')')
+                            ! (' (', <em>↔ {string()}</em>, ')')
                     }</p>
                 }</td>,
                 anno/
