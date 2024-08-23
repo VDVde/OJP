@@ -10,7 +10,7 @@
 	</xs:annotation>
 	<xs:group name="AvailabilityRequestGroup">
 		<xs:annotation>
-			<xs:documentation>Availability request. Used to check the availability of a MOBILITY SERVICE, a VEHICLE, SERVICE JOURNEY or SINGLE JOURNEY. Be aware that usually after the response arrives, the rest of the TRIP must be recalculated. As especially pickup and setdown locations may have shifted from where they were in the previously calculated TRIP.</xs:documentation>
+			<xs:documentation>Availability request. Used to check the availability of a MOBILITY SERVICE, a VEHICLE, SERVICE JOURNEY or SINGLE JOURNEY. Be aware that usually after the response arrives, the rest of the TRIP must be recalculated. As especially pick-up and drop-off locations may have shifted from where they were in the previously calculated TRIP.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice>
@@ -393,7 +393,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_LOCATIONUNSERVED">
 				<xs:annotation>
-					<xs:documentation>At the locations (address, stop, etc.) for which the availability has been requested, there is no public transport service at all. E.g. outside of the area.</xs:documentation>
+					<xs:documentation>At the locations (address, stop, etc.) for which the availability has been requested, there is no public transport service at all. E.g. outside the area.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="AVAILABILITY_LOCATIONUNKNOWN">

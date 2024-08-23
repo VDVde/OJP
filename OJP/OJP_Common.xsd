@@ -353,7 +353,7 @@
 	</xs:element>
 	<xs:complexType name="OperatingDaysStructure">
 		<xs:annotation>
-			<xs:documentation> [TMv6] day of public transport operation of which the characteristics are defined in a specific SERVICE CALENDAR and which may last more than 24 hours. This is useful, when the trip can be made during several days. Often users search in "general" withouth setting a date and then refine with the actual date. By using OperatingDaysStructure the result can directly be reused without an additional OJPTripRequest.</xs:documentation>
+			<xs:documentation> [TMv6] day of public transport operation of which the characteristics are defined in a specific SERVICE CALENDAR and which may last more than 24 hours. This is useful, when the trip can be made during several days. Often users search in "general" without setting a date and then refine with the actual date. By using OperatingDaysStructure the result can directly be reused without an additional OJPTripRequest.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="From" type="xs:date">
