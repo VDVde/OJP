@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>OJP - Open API for distributed Journey Planning (ACSB)</title><meta charset="UTF-8"/><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="../asciidoc.css"/></head>
+  <body>
+    <div id="header">
+      <h1>OJP - Open API for distributed Journey Planning (ACSB)</h1>
+      <div class="toc" id="toc">
+        <div id="toctitle">Table of Contents</div>
+        <ul class="sectlevel1">
+          <li><a shape="rect" href="#schema_acsb_accessibility">1. Schema file: acsb_accessibility.xsd</a><ul class="sectlevel2">
+              <li><a shape="rect" href="#schema_acsb_accessibility_std">1.1. Simple type definitions</a></li>
+              <li><a shape="rect" href="#type_acsb__AccessibilityAssessmentStructure">1.2 The complexType <code>acsb:AccessibilityAssessmentStructure</code></a></li>
+              <li><a shape="rect" href="#type_acsb__AccessibilityLimitationStructure">1.3 The complexType <code>acsb:AccessibilityLimitationStructure</code></a></li>
+              <li><a shape="rect" href="#type_acsb__LimitationRefStructure">1.4 The complexType <code>acsb:LimitationRefStructure</code></a></li>
+            </ul>
+          </li>
+          <li><a shape="rect" href="#schema_acsb_limitations">2. Schema file: acsb_limitations.xsd</a><ul class="sectlevel2">
+              <li><a shape="rect" href="#schema_acsb_limitations_std">2.1. Simple type definitions</a></li>
+              <li><a shape="rect" href="#element_acsb__AudibleSignalsAvailable">2.2 The toplevel element <code>acsb:AudibleSignalsAvailable</code></a></li>
+              <li><a shape="rect" href="#element_acsb__EscalatorFreeAccess">2.3 The toplevel element <code>acsb:EscalatorFreeAccess</code></a></li>
+              <li><a shape="rect" href="#element_acsb__GuideDogAccess">2.4 The toplevel element <code>acsb:GuideDogAccess</code></a></li>
+              <li><a shape="rect" href="#element_acsb__LiftFreeAccess">2.5 The toplevel element <code>acsb:LiftFreeAccess</code></a></li>
+              <li><a shape="rect" href="#element_acsb__StepFreeAccess">2.6 The toplevel element <code>acsb:StepFreeAccess</code></a></li>
+              <li><a shape="rect" href="#element_acsb__VisualSignsAvailable">2.7 The toplevel element <code>acsb:VisualSignsAvailable</code></a></li>
+              <li><a shape="rect" href="#element_acsb__WheelchairAccess">2.8 The toplevel element <code>acsb:WheelchairAccess</code></a></li>
+              <li><a shape="rect" href="#group_acsb__MobilityLimitationGroup">2.9 The  <code>acsb:MobilityLimitationGroup</code>group
+                            </a></li>
+              <li><a shape="rect" href="#group_acsb__SensoryLimitationGroup">2.10 The  <code>acsb:SensoryLimitationGroup</code>group
+                            </a></li>
+              <li><a shape="rect" href="#type_acsb__AccessibilityStructure">2.11 The complexType <code>acsb:AccessibilityStructure</code></a></li>
+            </ul>
+          </li>
+          <li><a shape="rect" href="#schema_acsb_passengerMobility">3. Schema file: acsb_passengerMobility.xsd</a><ul class="sectlevel2">
+              <li><a shape="rect" href="#schema_acsb_passengerMobility_std">3.1. Simple type definitions</a></li>
+              <li><a shape="rect" href="#group_acsb__UserNeedGroup">3.2 The  <code>acsb:UserNeedGroup</code>group
+                            </a></li>
+              <li><a shape="rect" href="#type_acsb__PassengerAccessibilityNeedsStructure">3.3 The complexType <code>acsb:PassengerAccessibilityNeedsStructure</code></a></li>
+              <li><a shape="rect" href="#type_acsb__SuitabilityStructure">3.4 The complexType <code>acsb:SuitabilityStructure</code></a></li>
+              <li><a shape="rect" href="#type_acsb__UserNeedStructure">3.5 The complexType <code>acsb:UserNeedStructure</code></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+      <div class="sect1" id="schema_acsb_accessibility">
+        <h2>1. Fixed Objects accessibility types for IFOPT Fixed Objects in Public Transport.</h2>
+        <div class="simple-type-definitions" id="schema_acsb_accessibility_std">
+          <h3>1.1. Simple type definitions</h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:28%"/>
+                <col span="1" style="width:28%"/>
+                <col span="1" style="width:44%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p id="type_acsb__LimitationIdType" class="tableblock"><strong><code>LimitationIdType</code></strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">xs:NMTOKEN: (empty restriction)</p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Type for identifier of a hazard within a STOP PLACE.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="type_acsb__AccessibilityAssessmentStructure">
+          <h3>1.2. The complex type <code>acsb:AccessibilityAssessmentStructure</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:AccessibilityAssessmentStructure</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Type for Assesment.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:MobilityImpairedAccess</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single">1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Summary indication as to whether the component is considered to be accessible or not.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:Limitations</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#local_type_typedef_25_1" title="local-type: typedef-25.1">local-type: typedef-25.1</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">The Limitations that apply to component.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:Suitabilities</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#local_type_typedef_25_2" title="local-type: typedef-25.2">local-type: typedef-25.2</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">The Suitability of the component to meet specifc user needs.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="ifopt.html#element_ifopt__Extensions" title="ifopt:Extensions">ifopt:Extensions</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#local_type_typedef_71_1" title="local-type: typedef-71.1">local-type: typedef-71.1</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Arbitrary extensions.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="type_acsb__AccessibilityLimitationStructure">
+          <h3>1.3. The complex type <code>acsb:AccessibilityLimitationStructure</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:AccessibilityLimitationStructure</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Type for limitation on navigation.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:LimitationId</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="#type_acsb__LimitationIdType" title="acsb:LimitationIdType">acsb:LimitationIdType</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Identifier of LIMITATION.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:ValidityCondition</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="ifopt.html#type_ifopt__ValidityConditionStructure" title="ifopt:ValidityConditionStructure">ifopt:ValidityConditionStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Validity condition governing applicability of LIMITATION.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="4" class="tableblock halign-left valign-top"><a shape="rect" href="#group_acsb__MobilityLimitationGroup" title="acsb:MobilityLimitationGroup">acsb:MobilityLimitationGroup</a></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>→‍<a shape="rect" href="#element_acsb__WheelchairAccess" title="acsb:WheelchairAccess">acsb:WheelchairAccess</a></strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single">1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT is wheelchair accessible. Default is 'false'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__StepFreeAccess" title="acsb:StepFreeAccess">acsb:StepFreeAccess</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT has step free access. Default is 'unknown'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__EscalatorFreeAccess" title="acsb:EscalatorFreeAccess">acsb:EscalatorFreeAccess</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT has escalator free access. Default is 'unknown'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__LiftFreeAccess" title="acsb:LiftFreeAccess">acsb:LiftFreeAccess</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT has lift free access. Default is 'unknown'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top"><a shape="rect" href="#group_acsb__SensoryLimitationGroup" title="acsb:SensoryLimitationGroup">acsb:SensoryLimitationGroup</a></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__AudibleSignalsAvailable" title="acsb:AudibleSignalsAvailable">acsb:AudibleSignalsAvailable</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT is wheelchair accessible. Default is 'false'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__VisualSignsAvailable" title="acsb:VisualSignsAvailable">acsb:VisualSignsAvailable</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT has Visual signals available for the visually impaired.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="ifopt.html#element_ifopt__Extensions" title="ifopt:Extensions">ifopt:Extensions</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#local_type_typedef_71_1" title="local-type: typedef-71.1">local-type: typedef-71.1</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Arbitrary extensions.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="type_acsb__LimitationRefStructure">
+          <h3>1.4. The complex type <code>acsb:LimitationRefStructure</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:LimitationRefStructure</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><a shape="rect" href="#type_acsb__LimitationIdType" title="acsb:LimitationIdType">acsb:LimitationIdType</a></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Type for identifier of a hazard within a STOP PLACE.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="local_type_typedef_25_1">
+          <h3>1.5. The complex type <code>complexType[acsb:AccessibilityAssessmentStructure]/Limitations#complexType (typedef-25.1)</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>complexType[acsb:AccessibilityAssessmentStructure]</code><br/><code>  /Limitations #complexType</code><br/><code>  (typedef-25.1)</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">-</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:AccessibilityLimitation</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, at least one">1:*</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__AccessibilityLimitationStructure" title="acsb:AccessibilityLimitationStructure">acsb:AccessibilityLimitationStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">The accessibility limitations on navigation.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="local_type_typedef_25_2">
+          <h3>1.6. The complex type <code>complexType[acsb:AccessibilityAssessmentStructure]/Suitabilities#complexType (typedef-25.2)</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>complexType[acsb:AccessibilityAssessmentStructure]</code><br/><code>  /Suitabilities #complexType</code><br/><code>  (typedef-25.2)</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">-</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:Suitability</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, at least one">1:*</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__SuitabilityStructure" title="acsb:SuitabilityStructure">acsb:SuitabilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">The Suitability of com[onent to meet a specifc user need.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="local_type_typedef_71_1">
+          <h3>1.7. The complex type <code>element[ifopt:Extensions]#complexType (typedef-71.1)</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>element[ifopt:Extensions]</code><br/><code>  #complexType</code><br/><code>  (typedef-71.1)</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>xs:anyType</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">-</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="sect1" id="schema_acsb_limitations">
+        <h2>2. Fixed Objects accessibility limitation types for IFOPT Fixed Objects in Public Transport.</h2>
+        <div class="simple-type-definitions" id="schema_acsb_limitations_std">
+          <h3>2.1. Simple type definitions</h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:28%"/>
+                <col span="1" style="width:28%"/>
+                <col span="1" style="width:44%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top">
+                    <p id="type_acsb__AccessibilityEnumeration" class="tableblock"><strong><code>AccessibilityEnumeration</code></strong></p>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Enumeration of values for an accessibility value.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table class="tableblock frame-all grid-all spread">
+                      <colgroup span="1">
+                        <col span="1" style="width:28%"/>
+                        <col span="1" style="width:72%"/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">unknown</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">false</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">true</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="element_acsb__AudibleSignalsAvailable">
+          <h3>2.2. The toplevel element <code>acsb:AudibleSignalsAvailable</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:AudibleSignalsAvailable</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">Whether a PLACE / SITE ELEMENT is wheelchair accessible. Default is 'false'.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="element_acsb__EscalatorFreeAccess">
+          <h3>2.3. The toplevel element <code>acsb:EscalatorFreeAccess</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:EscalatorFreeAccess</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">Whether a PLACE / SITE ELEMENT has escalator free access. Default is 'unknown'.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="element_acsb__GuideDogAccess">
+          <h3>2.4. The toplevel element <code>acsb:GuideDogAccess</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:GuideDogAccess</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">Whether a PLACE / SITE ELEMENT allows guide dog access.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="element_acsb__LiftFreeAccess">
+          <h3>2.5. The toplevel element <code>acsb:LiftFreeAccess</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:LiftFreeAccess</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">Whether a PLACE / SITE ELEMENT has lift free access. Default is 'unknown'.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="element_acsb__StepFreeAccess">
+          <h3>2.6. The toplevel element <code>acsb:StepFreeAccess</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:StepFreeAccess</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">Whether a PLACE / SITE ELEMENT has step free access. Default is 'unknown'.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="element_acsb__VisualSignsAvailable">
+          <h3>2.7. The toplevel element <code>acsb:VisualSignsAvailable</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:VisualSignsAvailable</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">Whether a PLACE / SITE ELEMENT has Visual signals available for the visually impaired.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="element_acsb__WheelchairAccess">
+          <h3>2.8. The toplevel element <code>acsb:WheelchairAccess</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:WheelchairAccess</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">Whether a PLACE / SITE ELEMENT is wheelchair accessible. Default is 'false'.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="group_acsb__MobilityLimitationGroup">
+          <h3>2.9. The group <code>acsb:MobilityLimitationGroup</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:MobilityLimitationGroup</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Group of mobility LIMITATIONs.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="4" class="tableblock halign-left valign-top"><a shape="rect" href="#group_acsb__MobilityLimitationGroup" title="acsb:MobilityLimitationGroup">acsb:MobilityLimitationGroup</a></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>→‍<a shape="rect" href="#element_acsb__WheelchairAccess" title="acsb:WheelchairAccess">acsb:WheelchairAccess</a></strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single">1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT is wheelchair accessible. Default is 'false'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__StepFreeAccess" title="acsb:StepFreeAccess">acsb:StepFreeAccess</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT has step free access. Default is 'unknown'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__EscalatorFreeAccess" title="acsb:EscalatorFreeAccess">acsb:EscalatorFreeAccess</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT has escalator free access. Default is 'unknown'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__LiftFreeAccess" title="acsb:LiftFreeAccess">acsb:LiftFreeAccess</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT has lift free access. Default is 'unknown'.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="group_acsb__SensoryLimitationGroup">
+          <h3>2.10. The group <code>acsb:SensoryLimitationGroup</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:SensoryLimitationGroup</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Group of sensory LIMITATIONs.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top"><a shape="rect" href="#group_acsb__SensoryLimitationGroup" title="acsb:SensoryLimitationGroup">acsb:SensoryLimitationGroup</a></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__AudibleSignalsAvailable" title="acsb:AudibleSignalsAvailable">acsb:AudibleSignalsAvailable</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT is wheelchair accessible. Default is 'false'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>→‍<a shape="rect" href="#element_acsb__VisualSignsAvailable" title="acsb:VisualSignsAvailable">acsb:VisualSignsAvailable</a></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>&gt;<a shape="rect" href="#type_acsb__AccessibilityStructure" title="acsb:AccessibilityStructure">acsb:AccessibilityStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether a PLACE / SITE ELEMENT has Visual signals available for the visually impaired.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="type_acsb__AccessibilityStructure">
+          <h3>2.11. The complex type <code>acsb:AccessibilityStructure</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:AccessibilityStructure</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><a shape="rect" href="#type_acsb__AccessibilityEnumeration" title="acsb:AccessibilityEnumeration">acsb:AccessibilityEnumeration</a></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Enumeration of values for an accessibility value.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="sect1" id="schema_acsb_passengerMobility">
+        <h2>3. Fixed Objects accessibility types for IFOPT Fixed Objects in Public Transport.</h2>
+        <div class="simple-type-definitions" id="schema_acsb_passengerMobility_std">
+          <h3>3.1. Simple type definitions</h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:28%"/>
+                <col span="1" style="width:28%"/>
+                <col span="1" style="width:44%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top">
+                    <p id="type_acsb__EncumbranceEnumeration" class="tableblock"><strong><code>EncumbranceEnumeration</code></strong></p>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Enumeration of specific encumbrances USER NEEDs.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table class="tableblock frame-all grid-all spread">
+                      <colgroup span="1">
+                        <col span="1" style="width:28%"/>
+                        <col span="1" style="width:72%"/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">luggageEncumbered</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">pushchair</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">baggageTrolley</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">oversizeBaggage</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">guideDog</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">otherAnimal</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">otherEncumbrance</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top">
+                    <p id="type_acsb__MedicalNeedEnumeration" class="tableblock"><strong><code>MedicalNeedEnumeration</code></strong></p>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Enumeration of specific Medical USER NEEDs.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table class="tableblock frame-all grid-all spread">
+                      <colgroup span="1">
+                        <col span="1" style="width:28%"/>
+                        <col span="1" style="width:72%"/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">allergic</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">heartCondition</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">otherMedicalNeed</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top">
+                    <p id="type_acsb__MobilityEnumeration" class="tableblock"><strong><code>MobilityEnumeration</code></strong></p>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Identification of mobility USER NEEDs.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table class="tableblock frame-all grid-all spread">
+                      <colgroup span="1">
+                        <col span="1" style="width:28%"/>
+                        <col span="1" style="width:72%"/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">wheelchair</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">assistedWheelchair</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">motorizedWheelchair</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">walkingFrame</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">restrictedMobility</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">otherMobilityNeed</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top">
+                    <p id="type_acsb__PyschosensoryNeedEnumeration" class="tableblock"><strong><code>PyschosensoryNeedEnumeration</code></strong></p>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Enumeration of specific psychosensory USER NEEDs.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table class="tableblock frame-all grid-all spread">
+                      <colgroup span="1">
+                        <col span="1" style="width:28%"/>
+                        <col span="1" style="width:72%"/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">visualImpairment</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">auditoryImpairment</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">cognitiveInputImpairment</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">averseToLifts</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">averseToEscalators</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">averseToConfinedSpaces</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">averseToCrowds</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">otherPsychosensoryNeed</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top">
+                    <p id="type_acsb__SuitabilityEnumeration" class="tableblock"><strong><code>SuitabilityEnumeration</code></strong></p>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Identification of specific SUITABILITY.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table class="tableblock frame-all grid-all spread">
+                      <colgroup span="1">
+                        <col span="1" style="width:28%"/>
+                        <col span="1" style="width:72%"/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">suitable</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">notSuitable</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top">
+                    <p id="local_type_typedef_28_1" class="tableblock"><code>group[acsb:UserNeedGroup]</code><br/><code>  /MedicalNeed #simpleType</code><br/><code>  (typedef-28.1)</code></p>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">-</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table class="tableblock frame-all grid-all spread">
+                      <colgroup span="1">
+                        <col span="1" style="width:28%"/>
+                        <col span="1" style="width:72%"/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">allergic</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">heartCondition</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">otherMedicalNeed</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">-</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="group_acsb__UserNeedGroup">
+          <h3>3.2. The group <code>acsb:UserNeedGroup</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:UserNeedGroup</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">-</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="6" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">The element contains <em>one</em> of the following elements (a-d)</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="4" class="tableblock halign-left valign-top"><a shape="rect" href="#group_acsb__UserNeedGroup" title="acsb:UserNeedGroup">acsb:UserNeedGroup</a></td>
+                  <td colspan="" rowspan="" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>a</em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:MobilityNeed</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single, part of a choice">-1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="#type_acsb__MobilityEnumeration" title="acsb:MobilityEnumeration">acsb:MobilityEnumeration</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Passenger mobility USER NEED for which SUITABILITY is specified.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="" rowspan="" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>b</em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:PsychosensoryNeed</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single, part of a choice">-1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="#type_acsb__PyschosensoryNeedEnumeration" title="acsb:PyschosensoryNeedEnumeration">acsb:PyschosensoryNeedEnumeration</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Passenger mobility USER NEED for which SUITABILITY is specified.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="" rowspan="" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>c</em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:MedicalNeed</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single, part of a choice">-1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="/home/runner/work/OJP/OJP/docs/generated/contab/acsb.enum-dict.html#local_enum.typedef_28_1" title="local-type: typedef-28.1">local-type: typedef-28.1</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Passenger medical USER NEED for which SUITABILITY is specified.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="" rowspan="" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>d</em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:EncumbranceNeed</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single, part of a choice">-1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="#type_acsb__EncumbranceEnumeration" title="acsb:EncumbranceEnumeration">acsb:EncumbranceEnumeration</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Passenger enceumbrance USER NEED for which SUITABILITY is specified.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="type_acsb__PassengerAccessibilityNeedsStructure">
+          <h3>3.3. The complex type <code>acsb:PassengerAccessibilityNeedsStructure</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:PassengerAccessibilityNeedsStructure</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Type for accessibility needs. Records the requirementrs of a passenger that may affect choice of facilities.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:UserNeed</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, multiple">0:*</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__UserNeedStructure" title="acsb:UserNeedStructure">acsb:UserNeedStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Specific pyschosensory need that may constrain choice of services and facilities.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:AccompaniedByCarer</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether the passenger is accompanied by a carer or assistant.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="type_acsb__SuitabilityStructure">
+          <h3>3.4. The complex type <code>acsb:SuitabilityStructure</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:SuitabilityStructure</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Type for of a specific SUITABILITY.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:Suitable</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single">1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="#type_acsb__SuitabilityEnumeration" title="acsb:SuitabilityEnumeration">acsb:SuitabilityEnumeration</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether the Facility is suitable.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:UserNeed</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single">1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>+<a shape="rect" href="#type_acsb__UserNeedStructure" title="acsb:UserNeedStructure">acsb:UserNeedStructure</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">USER NEED for which SUITABILITY is specified.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="type_acsb__UserNeedStructure">
+          <h3>3.5. The complex type <code>acsb:UserNeedStructure</code></h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:UserNeedStructure</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Type for of a specific need.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="6" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">The element contains <em>one</em> of the following elements (a-d)</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="4" class="tableblock halign-left valign-top"><a shape="rect" href="#group_acsb__UserNeedGroup" title="acsb:UserNeedGroup">acsb:UserNeedGroup</a></td>
+                  <td colspan="" rowspan="" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>a</em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:MobilityNeed</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single, part of a choice">-1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="#type_acsb__MobilityEnumeration" title="acsb:MobilityEnumeration">acsb:MobilityEnumeration</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Passenger mobility USER NEED for which SUITABILITY is specified.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="" rowspan="" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>b</em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:PsychosensoryNeed</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single, part of a choice">-1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="#type_acsb__PyschosensoryNeedEnumeration" title="acsb:PyschosensoryNeedEnumeration">acsb:PyschosensoryNeedEnumeration</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Passenger mobility USER NEED for which SUITABILITY is specified.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="" rowspan="" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>c</em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:MedicalNeed</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single, part of a choice">-1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="/home/runner/work/OJP/OJP/docs/generated/contab/acsb.enum-dict.html#local_enum.typedef_28_1" title="local-type: typedef-28.1">local-type: typedef-28.1</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Passenger medical USER NEED for which SUITABILITY is specified.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="" rowspan="" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em>d</em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code><strong>acsb:EncumbranceNeed</strong></code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><strong title="mandatory, single, part of a choice">-1:1</strong></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><em><a shape="rect" href="#type_acsb__EncumbranceEnumeration" title="acsb:EncumbranceEnumeration">acsb:EncumbranceEnumeration</a></em></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Passenger enceumbrance USER NEED for which SUITABILITY is specified.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:Excluded</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Whether USER NEED is included or excluded. Default is 'included'.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:NeedRanking</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Relative ranking of USER NEED on a sclae 1-5</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><code>acsb:Extensions</code></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Extensions to USETR NEED.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div><script type="text/javascript" src="../footer.js"></script></body>
+</html>
