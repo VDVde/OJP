@@ -29,7 +29,7 @@ OJP is part of the [Transmodel](https://www.transmodel-cen.eu/) family of standa
 ## Releases
 * [OJP 1.0](https://github.com/VDVde/OJP/releases/tag/v1.0): The version described in CEN/TS 17118:2017
 * [OJP 1.0.1](https://github.com/VDVde/OJP/releases/tag/v1.0.1): Bugfix release
-* OJP 2.0 is being prepared in [the develop-branch](https://github.com/VDVde/OJP/tree/develop)
+* [OJP 2.0](https://github.com/VDVde/OJP/releases/tag/v2.0)
 
 ## GitHub Repository
 Download the XSD schema files and examples in the git repository found at https://github.com/VDVde/OJP and take a look at the [documentation tables](https://vdvde.github.io/OJP/index.html).
@@ -39,7 +39,7 @@ You can contribute by:
 * Creating pull requests: Use the [development documentation](https://github.com/VDVde/OJP/wiki/WG:-:-Working-with-this-repository)
 
 ### Branches
-* The main branch currently contains OJP 1.0.1
+* The main branch currently contains OJP 2.0
 * Development is done in [the develop branch](https://github.com/VDVde/OJP/tree/develop).
 
 ### Wiki
