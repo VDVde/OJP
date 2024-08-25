@@ -1222,7 +1222,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			<xs:enumeration value="automaticRamp"/>
 			<xs:enumeration value="suitableForWheelchairs"/>
 			<xs:enumeration value="suitableForUnassistedWheelchairs"/>
-			<xs:enumeration value="suitableForHeaviliyDisabled"/>
+			<xs:enumeration value="suitableForHeavilyDisabled"/>
 			<xs:enumeration value="suitableForPushchairs"/>
 			<xs:enumeration value="suitableForBicycles"/>
 			<xs:enumeration value="tactilePlatformEdges"/>
