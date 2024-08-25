@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_FareSupport.xsd - Supporting definitions for fare information on passenger trips</xs:documentation>
 	</xs:annotation>
@@ -13,7 +13,7 @@
 			<xs:documentation>A structure for an ordered list of booking notes.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="BookingNote" type="InternationalTextStructure" minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="BookingNote" type="InternationalTextStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Note about booking the LINE.</xs:documentation>
 				</xs:annotation>
@@ -160,7 +160,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:normalizedString"/>
 	</xs:simpleType>
-	<xs:complexType name="ContactDetailsStructure" abstract="false">
+	<xs:complexType name="ContactDetailsStructure">
 		<xs:annotation>
 			<xs:documentation>Type for contact details.</xs:documentation>
 		</xs:annotation>
@@ -219,7 +219,7 @@
 			<xs:documentation>List of values for booking values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="BookingMethod" type="BookingMethodEnumeration" minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="BookingMethod" type="BookingMethodEnumeration" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Booking methods.</xs:documentation>
 				</xs:annotation>
@@ -376,7 +376,7 @@
 			<xs:documentation>List of Booking Process values.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="BookingProcess" type="BookingProcessEnumeration" minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="BookingProcess" type="BookingProcessEnumeration" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Ways how to book (UIC 7037 codes).</xs:documentation>
 				</xs:annotation>
@@ -408,7 +408,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="BookingArrangementsStructure" abstract="false">
+	<xs:complexType name="BookingArrangementsStructure">
 		<xs:annotation>
 			<xs:documentation>Type for BOOKING ARRANGEMENTs modified from NeTEx.</xs:documentation>
 		</xs:annotation>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning</xs:documentation>
 	</xs:annotation>
@@ -150,7 +150,7 @@
 					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport, not modelled in Transmodel).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HikingProfile" default="easy" minOccurs="0" maxOccurs="1">
+			<xs:element name="HikingProfile" default="easy" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen</xs:documentation>
 				</xs:annotation>
@@ -174,7 +174,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="CyclingProfile" default="fast" minOccurs="0" maxOccurs="1">
+			<xs:element name="CyclingProfile" default="fast" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Cycling profile of the user (especially for sportive activities).</xs:documentation>
 				</xs:annotation>
@@ -658,7 +658,7 @@
 			<xs:documentation>TRANSFER LEG or CONNECTION LEG according to TM 6.2. Description of a LEG which links other LEGs where a TRANSFER or CONNECTION between different LOCATIONs is required.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TransferType" type="TransferTypeEnumeration" minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="TransferType" type="TransferTypeEnumeration" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>TYPE that is used for this interchange between public services (TYPE OF TRANSFER, but also ACCESS MODE and PERSONAL MODE as far as a TRANSFER is concerned). In some constellations multiple TransferType are possible.</xs:documentation>
 				</xs:annotation>
@@ -1809,7 +1809,7 @@ Can only be used when both participants recognise the same schedule version. If 
 					<xs:documentation>System reference to use for the refinement. If not specified, the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExtendToFrontOrBack" type="ExtendToFrontOrBackType" default="extendToFront" minOccurs="0" maxOccurs="1">
+			<xs:element name="ExtendToFrontOrBack" type="ExtendToFrontOrBackType" default="extendToFront" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether to extend the initial time interval of the ChangeLeg towards the front or the back of the trip (earlier respectively later times).</xs:documentation>
 				</xs:annotation>
