@@ -28,7 +28,7 @@
 			let ul = document.getElementById(type);
 			for (let branch of branches) {
 				if (branch.name.startsWith(type + '/') && branch.name !== 'release/1.0') {
-					ul.insertAdjacentHTML("beforeend", `<li><a href="./${branch.name}/index.html">${branch.name}</a></li>`);
+					ul.insertAdjacentHTML("beforeend", `<li><a href="./${branch.name}/documentation-tables/index.html">${branch.name}</a></li>`);
 				}
 			}
 		}
