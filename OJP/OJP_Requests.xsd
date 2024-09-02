@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified" id="OJP_siri_service">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Requests.xsd - OJP service requests and responses</xs:documentation>
 	</xs:annotation>
@@ -156,7 +156,7 @@ The boundary points where the trip calculation is handed over to the next journe
 	</xs:annotation>
 	<xs:element name="OJPTripInfoRequest" type="OJPTripInfoRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
 		<xs:annotation>
-			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't directly provide information about a trip. When the response changes the conditions in a way that invalidates the trip (connection no longer possible, delays, cancellation) then a new TripRequest for the reminder of the trip is necessary for a replanning of the trip.
+			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't directly provide information about a trip. If the response changes the conditions in such a way that the trip becomes invalid (connection no longer possible, delay, cancellation), a new TripRequest is required for the remainder of the trip.
 The service also provides information about formation, occupancy, and capacity. The full SIRI elements are used. Therefore, a lot of things can be expressed. Some that go beyond what usually may be required. However, if accessibility is fully to be considered (with stop-vehicle interaction), then SIRI must be used in full. The relevant SIRI documentation should be considered. This service implements PI QR Service Journey Request and PI QR Single Journey Request from TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
@@ -172,7 +172,7 @@ The service also provides information about formation, occupancy, and capacity. 
 	</xs:complexType>
 	<xs:element name="OJPTripInfoDelivery" type="OJPTripInfoDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xs:annotation>
-			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't directly provide information about a trip. When the response changes the conditions in a way that invalidates the trip (connection no longer possible, delays, cancellation) then a new TripRequest for the reminder of the trip is necessary for a replanning of the trip.
+			<xs:documentation>This service provides information on a single leg (service pattern, real-time status, vehicle facilities etc.). The service always provides information about a VEHICLE or a SERVICE JOURNEY. It doesn't directly provide information about a trip. If the response changes the conditions in such a way that the trip becomes invalid (connection no longer possible, delay, cancellation), a new TripRequest is required for the remainder of the trip.
 The service also provides information about formation, occupancy, and capacity. The full SIRI elements are used. Therefore, a lot of things can be expressed. Some that go beyond what usually may be required. However, if accessibility is fully to be considered (with stop-vehicle interaction), then SIRI must be used in full. The relevant SIRI documentation should be considered. This service implements PI QR Service Journey Request and PI QR Single Journey Request from TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
@@ -370,7 +370,7 @@ System B, being confronted with external IDs, must try to recognise the relevant
 	</xs:annotation>
 	<xs:element name="OJPLineInformationRequest" type="OJPLineInformationRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
 		<xs:annotation>
-			<xs:documentation>The service provides route information about a given LINE. This helps showing the LINE on maps. This implements a small part of model PI QR Schedule Request of TM 6.</xs:documentation>
+			<xs:documentation>The service provides route information about a given LINE. This helps when displaying the LINE on maps. This implements a small part of model PI QR Schedule Request of TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPLineInformationRequestStructure">
@@ -385,7 +385,7 @@ System B, being confronted with external IDs, must try to recognise the relevant
 	</xs:complexType>
 	<xs:element name="OJPLineInformationDelivery" type="OJPLineInformationDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xs:annotation>
-			<xs:documentation>The service provides route information about a given LINE. This helps showing the LINE on maps. This implements a small part of PI QR Schedule Request of TM 6.</xs:documentation>
+			<xs:documentation>The service provides route information about a given LINE. This helps when displaying the LINE on maps. This implements a small part of PI QR Schedule Request of TM 6.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="OJPLineInformationDeliveryStructure">

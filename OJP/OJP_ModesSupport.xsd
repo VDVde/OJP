@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_ModesSupport.xsd - Supporting definitions for the classification of modes of transport</xs:documentation>
 	</xs:annotation>
@@ -81,7 +81,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="parkAndRideSharing">
 				<xs:annotation>
-					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Spezialised sharing in the context of a park and ride situation.</xs:documentation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. Specialised sharing in the context of a park and ride situation.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="sharingClubSharing">
@@ -91,12 +91,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="prM">
 				<xs:annotation>
-					<xs:documentation>ALTERNATIVE MODE OF OPERATION. In relation to a conventional SERVICE JOURNEY, but when pickup and dropoff are not associated with SCHEDULED STOP POINTs.</xs:documentation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION. In relation to a conventional SERVICE JOURNEY, but when pick-up and drop-off are not associated with SCHEDULED STOP POINTs.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="pooling">
 				<xs:annotation>
-					<xs:documentation>General pooling ALTERNATIVE MODE OF OPERATION. Only use this enum when no specialsation applies. In some cases, where the pooling is very "scheduled" use the pooling in ConventionalModeOfOperation.</xs:documentation>
+					<xs:documentation>General pooling ALTERNATIVE MODE OF OPERATION. Only use this enum when no specialisation applies. In some cases, where the pooling is very "scheduled" use the pooling in ConventionalModeOfOperation.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="taxi">
@@ -136,12 +136,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="demandResponsive">
 				<xs:annotation>
-					<xs:documentation>ALTERNATIVE MODE OF OPERATION demand responsive is used when there is no SCHEDULED STOP POINTs involved and the timetable component is weak. Otherwise use the demandResponsive in ConventionalModeOfOperation.</xs:documentation>
+					<xs:documentation>ALTERNATIVE MODE OF OPERATION demand responsive is used when there is no SCHEDULED STOP POINTs involved and the timetable component is weak. Otherwise, use the demandResponsive in ConventionalModeOfOperation.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="flexibleArea">
 				<xs:annotation>
-					<xs:documentation>Specialisation of the demand responsive ALTERNATIVE MODE OF OPERATION for AREA related offers. Otherwise use the demandResponsive in ConventionalModeOfOperation.</xs:documentation>
+					<xs:documentation>Specialisation of the demand responsive ALTERNATIVE MODE OF OPERATION for AREA related offers. Otherwise, use the demandResponsive in ConventionalModeOfOperation.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="companyShuttle">
@@ -261,7 +261,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="pRM">
 				<xs:annotation>
-					<xs:documentation>If for a scheduled, conventional servce a special additional vehicle is needed to provide for special PRM needs. This kind of MODE OF OPERATION is to be used.</xs:documentation>
+					<xs:documentation>If for a scheduled, conventional service a special additional vehicle is needed to provide for special PRM needs. This kind of MODE OF OPERATION is to be used.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -296,7 +296,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="guaranteedConnection">
 				<xs:annotation>
-					<xs:documentation>The connection is guaranteed. This doesn't apply very often, but e.g., a bus has to bring  people from the last train to a different destination. Then it will not depart before the train has arrived and the passengers have changed. In some cases, guaranteedConnection might be use with less strictness.</xs:documentation>
+					<xs:documentation>The connection is guaranteed. This doesn't apply very often, but e.g., a bus has to bring  people from the last train to a different destination. Then it will not depart before the train has arrived and the passengers have changed. In some cases, guaranteedConnection might be used with less strictness.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="remainInVehicle">
@@ -306,7 +306,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="changeWithinVehicle">
 				<xs:annotation>
-					<xs:documentation>If namenly trains are split, it might be necessary to be in the right part. This is indicated with this value.</xs:documentation>
+					<xs:documentation>If namely trains are split, it might be necessary to be in the right part. This is indicated with this value.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="checkIn">

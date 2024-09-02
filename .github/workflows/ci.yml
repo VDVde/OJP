@@ -74,9 +74,17 @@ jobs:
       - name: Remove generated documentation tables
         run: rm -rf ./docs/generated/documentation-tables
 
-      - name: Commit changes
+      - name: Commit changes for push
+        if: github.event_name == 'push' # only if this is a push to a branch
         uses: EndBug/add-and-commit@v9 # https://github.com/marketplace/actions/add-commit
         with:
           default_author: github_actions
           message: 'fixup! Fixed linting errors'
           push: --set-upstream origin "${{steps.get-branch-name.outputs.BRANCH_NAME}}"
+
+      - name: Commit changes for pull_request
+        if: github.event_name == 'pull_request' # only if this is a pull_request to a branch
+        uses: EndBug/add-and-commit@v9 # https://github.com/marketplace/actions/add-commit
+        with:
+          default_author: github_actions
+          message: 'fixup! Fixed linting errors'

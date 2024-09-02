@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Locations.xsd - Request and response definitions for location information</xs:documentation>
 	</xs:annotation>
@@ -42,7 +42,7 @@
 			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
+					<xs:documentation>If the response returns fewer results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PlaceResult" type="PlaceResultStructure" minOccurs="0" maxOccurs="unbounded">
@@ -389,7 +389,7 @@
 			</xs:element>
 			<xs:element name="ContinueAt" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If the response returns less results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
+					<xs:documentation>If the response returns fewer results than expected, the value of skip can be used in a follow-up request to get further results. It tells the server to skip the given number of results in its response.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExchangePointsResult" type="ExchangePointsResultStructure" minOccurs="0" maxOccurs="unbounded">

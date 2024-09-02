@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_PlaceSupport.xsd - Supporting definitions for location information</xs:documentation>
 	</xs:annotation>
@@ -103,7 +103,7 @@
 	</xs:group>
 	<xs:complexType name="StopPlaceStructure">
 		<xs:annotation>
-			<xs:documentation>[an extended view of STOP PLACE in TMv6] a PLACE extended by ACCESSIBILITY LIMITATION properties and some attributes of the associated equipment, comprising one or more locations where vehicles may stop and where passengers may board or leave vehicles or prepare their trip, and which will usually have one or more wellknown names </xs:documentation>
+			<xs:documentation>[an extended view of STOP PLACE in TMv6] a PLACE extended by ACCESSIBILITY LIMITATION properties and some attributes of the associated equipment, comprising one or more locations where vehicles may stop and where passengers may board or leave vehicles or prepare their trip, and which will usually have one or more well-known names</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:group ref="StopPlaceGroup"/>
@@ -287,7 +287,7 @@
 			</xs:element>
 			<xs:element name="PointOfInterestClassification" type="xs:string" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Classification of the POI (when it is not from OSM). The codification of the classification Id may include de codification source (for example "IGN:[classificationCode]")</xs:documentation>
+					<xs:documentation>Classification of the POI (when it is not from OSM). The codification of the classification id may include de codification source (for example "IGN:[classificationCode]")</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:choice>

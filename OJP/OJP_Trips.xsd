@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Trips.xsd - Request and response definitions for trip requests and distributed journey planning</xs:documentation>
 	</xs:annotation>
@@ -122,7 +122,7 @@
 					</xs:element>
 					<xs:element name="IncludeAlternativeOptions" type="xs:boolean" default="false" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Whether alternative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second-best route. Should be optimised for the user expectance (see. e.g https://theses.hal.science/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
+							<xs:documentation>Whether alternative options should be presented as well. Mainly important for dominated journeys or in the case of ContinuousLegs the second-best route. Should be optimised for user expectations (see. e.g https://theses.hal.science/tel-01848737). However, what the alternative options are may vary widely depending on the optimisation methods and filters.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -137,7 +137,7 @@
 			<xs:group ref="BaseTripMobilityFilterGroup"/>
 			<xs:element name="BikeTransport" type="xs:boolean" default="false" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The user wants to carry a bike on public transport (could be extended in future to transporting big luggage/animals/etc).</xs:documentation>
+					<xs:documentation>The user wants to carry a bike on public transport (could be extended in future to transporting big luggage / animals / etc.).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WalkSpeed" type="OpenPercentType" minOccurs="0">
@@ -150,7 +150,7 @@
 					<xs:documentation>Additional time added to all transfers (also to transfers between individual to public transport, not modelled in Transmodel).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HikingProfile" default="easy" minOccurs="0" maxOccurs="1">
+			<xs:element name="HikingProfile" default="easy" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Users hiking profile. The main element to control general walking behaviour is WalkSpeed (together with accessibility constraints). Note: explanations in German can be found here: https://akademie.alpinewelten.com/bergwandern/klassifizierung-von-wanderwegen</xs:documentation>
 				</xs:annotation>
@@ -174,7 +174,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="CyclingProfile" default="fast" minOccurs="0" maxOccurs="1">
+			<xs:element name="CyclingProfile" default="fast" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Cycling profile of the user (especially for sportive activities).</xs:documentation>
 				</xs:annotation>
@@ -230,7 +230,7 @@
 	</xs:group>
 	<xs:simpleType name="OptimisationMethodEnumeration">
 		<xs:annotation>
-			<xs:documentation>The types of algorithms that can be used for planning a journey (fastest, least walking, etc.). Only one method can be used. Each one really is a whole set of a policy, which is defined below. E.g., fastest also includes least transfers as a second criteria, some modes are excluded usually by default. Implementations might differ (slightly). Also, some strategies might not be implemented. The most important strategies are marked.</xs:documentation>
+			<xs:documentation>The types of algorithms that can be used for planning a journey (fastest, least walking, etc.). Only one method can be used. Each one really is a whole set of a policy, which is defined below. E.g., "fastest" also includes "least transfers" as a second criteria, some modes are excluded usually by default. Implementations might differ (slightly). Also, some strategies might not be implemented. The most important strategies are marked.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="fastest">
@@ -275,7 +275,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="minNonLevelEntrances">
 				<xs:annotation>
-					<xs:documentation>The user wants to minimize non level entrances on the trip. this is useful for PRM who still can use some non-level entrances.</xs:documentation>
+					<xs:documentation>The user wants to minimize non-level entrances on the trip. this is useful for PRM who still can use some non-level entrances.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="minStairs">
@@ -539,7 +539,7 @@
 			</xs:element>
 			<xs:element name="Leg" type="LegStructure" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Legs of the trip (Transmodel: LEG or MONITORED LEG). Note: There is always a TransferLeg between two TimedLegs. There can be a TransferLeg between two ContinuousLegs (e.g., because some special time consuming action is necessary like a car hire). There can be a TransferLeg between a ContinuousLeg and a TimedLeg for the same reason. There aren't two consecutive TransferLegs.</xs:documentation>
+					<xs:documentation>Legs of the trip (Transmodel: LEG or MONITORED LEG). Note: There is always a TransferLeg between two TimedLegs. There can be a TransferLeg between two ContinuousLegs (e.g., because some special time-consuming action is necessary like a car hire). There can be a TransferLeg between a ContinuousLeg and a TimedLeg for the same reason. There aren't two consecutive TransferLegs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:group ref="OperatingDaysGroup" minOccurs="0"/>
@@ -658,7 +658,7 @@
 			<xs:documentation>TRANSFER LEG or CONNECTION LEG according to TM 6.2. Description of a LEG which links other LEGs where a TRANSFER or CONNECTION between different LOCATIONs is required.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TransferType" type="TransferTypeEnumeration" minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="TransferType" type="TransferTypeEnumeration" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>TYPE that is used for this interchange between public services (TYPE OF TRANSFER, but also ACCESS MODE and PERSONAL MODE as far as a TRANSFER is concerned). In some constellations multiple TransferType are possible.</xs:documentation>
 				</xs:annotation>
@@ -790,7 +790,7 @@
 			</xs:element>
 			<xs:element name="DistributorInterchangeId" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Interchange identifier of the distributing line/service at its boarding. This is not a reference. This identifier is used to recognize in a distributed environment (e.g., EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scanario (aka "line ID"). See https://eu-spirit.eu/</xs:documentation>
+					<xs:documentation>Interchange identifier of the distributing line/service at its boarding. This is not a reference. This identifier is used to recognize in a distributed environment (e.g., EU-Spirit), that two systems refer to the same line (or service) while using their own internal references. In EU-Spirit this is used to decide whether an interchange is in fact a stay-seated scenario (aka "line ID"). See https://eu-spirit.eu/</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MeetsViaRequest" type="xs:boolean" default="false" minOccurs="0">
@@ -1104,7 +1104,7 @@
 	</xs:simpleType>
 	<xs:group name="TransferDurationGroup">
 		<xs:annotation>
-			<xs:documentation>[an attribute of a CONNECTION (not INTERCHANGE) in TMv6] calculated duration in a response taking into ccount the request parameters.; TransferDuration plus waiting time is the minimum interval between arrival and departure time.</xs:documentation>
+			<xs:documentation>[an attribute of a CONNECTION (not INTERCHANGE) in TMv6] calculated duration in a response taking into account the request parameters. TransferDuration plus waiting time is the minimum interval between arrival and departure time.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Duration" type="xs:duration">
@@ -1222,7 +1222,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			<xs:enumeration value="automaticRamp"/>
 			<xs:enumeration value="suitableForWheelchairs"/>
 			<xs:enumeration value="suitableForUnassistedWheelchairs"/>
-			<xs:enumeration value="suitableForHeaviliyDisabled"/>
+			<xs:enumeration value="suitableForSeverelyDisabled"/>
 			<xs:enumeration value="suitableForPushchairs"/>
 			<xs:enumeration value="suitableForBicycles"/>
 			<xs:enumeration value="tactilePlatformEdges"/>
@@ -1245,7 +1245,7 @@ Can only be used when both participants recognise the same schedule version. If 
 	</xs:simpleType>
 	<xs:complexType name="PathLinkStructure">
 		<xs:annotation>
-			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs, BOARDING POSITIONs, POINTs OF INTEREST etc or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists, or other out-of-vehicle passengers within or between a PLACE. Here we use a reduced form of a PATH LINK containing the description of the type of accessibility on this navigation section.</xs:documentation>
+			<xs:documentation>[TMv6] a link within a PLACE of or between two PLACEs (that is STOP PLACEs, ACCESS SPACEs or QUAYs, BOARDING POSITIONs, POINTs OF INTEREST etc. or PATH JUNCTIONs) that represents a step in a possible route for pedestrians, cyclists, or other out-of-vehicle passengers within or between a PLACE. Here we use a reduced form of a PATH LINK containing the description of the type of accessibility on this navigation section.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Transition" type="TransitionEnumeration" minOccurs="0">
@@ -1429,7 +1429,7 @@ Can only be used when both participants recognise the same schedule version. If 
 		<xs:sequence>
 			<xs:element name="MultiPointType" type="MultiPointTypeEnumeration" minOccurs="0" default="anyPoint">
 				<xs:annotation>
-					<xs:documentation>The MultiPointType used should be returned as it may be different from the one requested. Many systems will only support a subset of the MultiPointTypes, so it is important to know what the result is based on in order to define a strategy for distributed routing. If the type is not supported a TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED warning or error must be returned. Default is anyPoint.</xs:documentation>
+					<xs:documentation>The MultiPointType should be returned because it may differ from the one asked. Many systems will support only a subset of the MultiPointTypes, and it is important to know what the result is based on.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MultiPointTripResponseContext" type="ResponseContextStructure" minOccurs="0">
@@ -1725,7 +1725,7 @@ Can only be used when both participants recognise the same schedule version. If 
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_RESTRICTEDRESULTSDROPPED">
 				<xs:annotation>
-					<xs:documentation>Used for warnings, when there where possible/better results that were dropped, because of the criteria were not used (e.g., private services, offer only available for seniors).</xs:documentation>
+					<xs:documentation>Used for warnings, when possible/better results were dropped, because of the criteria were not used (e.g., private services, offer only available for seniors).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TRIP_MULTIPOINT_NOTALLPOINTSCOVERED">
@@ -1806,7 +1806,7 @@ Can only be used when both participants recognise the same schedule version. If 
 					<xs:documentation>System reference to use for the refinement. If not specified, the origin systems of each leg are used for the refinement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExtendToFrontOrBack" type="ExtendToFrontOrBackType" default="extendToFront" minOccurs="0" maxOccurs="1">
+			<xs:element name="ExtendToFrontOrBack" type="ExtendToFrontOrBackType" default="extendToFront" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Whether to extend the initial time interval of the ChangeLeg towards the front or the back of the trip (earlier respectively later times).</xs:documentation>
 				</xs:annotation>

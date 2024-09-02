@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Common.xsd - Supporting definitions of common structures</xs:documentation>
 	</xs:annotation>
@@ -353,7 +353,7 @@
 	</xs:element>
 	<xs:complexType name="OperatingDaysStructure">
 		<xs:annotation>
-			<xs:documentation> [TMv6] day of public transport operation of which the characteristics are defined in a specific SERVICE CALENDAR and which may last more than 24 hours. This is useful, when the trip can be made during several days. Often users search in "general" withouth setting a date and then refine with the actual date. By using OperatingDaysStructure the result can directly be reused without an additional OJPTripRequest.</xs:documentation>
+			<xs:documentation> [TMv6] day of public transport operation of which the characteristics are defined in a specific SERVICE CALENDAR and which may last more than 24 hours. This is useful, when the trip can be made during several days. Often users search in "general" without setting a date and then refine with the actual date. By using OperatingDaysStructure the result can directly be reused without an additional OJPTripRequest.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="From" type="xs:date">
