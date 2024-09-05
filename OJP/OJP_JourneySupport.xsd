@@ -644,7 +644,7 @@
 			<xs:choice minOccurs="0">
 				<xs:element name="NumberOfResults" type="xs:positiveInteger" minOccurs="0">
 					<xs:annotation>
-						<xs:documentation>The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. MultiPointTripRequests may deliver more results than requested depending on the MultiPointType setting. This means one always must check the results against the parameters before using them.</xs:documentation>
+						<xs:documentation>The number of trip results that the user wants to see at least (according to the Transmodel TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means that you can't assume that you get the exact number of results that you indicated in the request from the server.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:group ref="NumberOfResultsGroup" minOccurs="0"/>
