@@ -1572,9 +1572,9 @@ Can only be used when both participants recognise the same schedule version. If 
 					<xs:documentation>If true, then the request may contain object references from another system. Default is FALSE.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RefineLegRef" type="LegObjectIdType" maxOccurs="unbounded">
+			<xs:element name="RefineLegRef" type="LegObjectIdType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Refers to the legs to be refined by the server. If none is given, then all legs are open for refinement (depending on if the relevant system can refine them).</xs:documentation>
+					<xs:documentation>Refers to the legs to be refined by the server. If none is specified, all legs are open for refinement (depending on whether the system in question can refine them).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SystemId" type="xs:normalizedString" minOccurs="0">
