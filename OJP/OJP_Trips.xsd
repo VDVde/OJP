@@ -1350,9 +1350,9 @@ Can only be used when both participants recognise the same schedule version. If 
 					<xs:documentation>no-change-at restrictions for a TRIP, i.e. SCHEDULED STOP POINTs or STOP PLACEs at which no TRANSFER is allowed within a TRIP (in Transmodel this would be an extension to TRIP MOBILITY FILTER).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Params" type="MultiPointTripParamStructure" minOccurs="0">
+			<xs:element name="Params" type="MultiPointTripParamStructure">
 				<xs:annotation>
-					<xs:documentation>Options to control the search behaviour and response contents.</xs:documentation>
+					<xs:documentation>Options to control the search behaviour and response contents. For this request Params is mandatory, because MultiPointType is mandatory for this request.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
