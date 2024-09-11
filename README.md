@@ -1,4 +1,3 @@
-
 # OJP - *O*pen API for distributed *J*ourney *P*lanning
 
 ## Content
@@ -27,9 +26,9 @@ OJP is a CEN standard. Obtain a copy of the standard document ["CEN/TS 17118:201
 OJP is part of the [Transmodel](https://www.transmodel-cen.eu/) family of standards together with [NeTEx](https://netex-cen.eu/), [SIRI](https://www.transmodel-cen.eu/siri-standard/) and [OpRa](https://www.opra-cen.eu/). It also contains elements from [DATEX II](https://datex2.eu/).
 
 ## Releases
-* [OJP 1.0](https://github.com/VDVde/OJP/releases/tag/v1.0): The version described in CEN/TS 17118:2017
+* [OJP 2.0](https://github.com/VDVde/OJP/releases/tag/v2.0): Latest release
 * [OJP 1.0.1](https://github.com/VDVde/OJP/releases/tag/v1.0.1): Bugfix release
-* OJP 2.0 is being prepared in [the develop-branch](https://github.com/VDVde/OJP/tree/develop)
+* [OJP 1.0](https://github.com/VDVde/OJP/releases/tag/v1.0): The version described in CEN/TS 17118:2017
 
 ## GitHub Repository
 Download the XSD schema files and examples in the git repository found at https://github.com/VDVde/OJP and take a look at the [documentation tables](https://vdvde.github.io/OJP/index.html).
@@ -39,8 +38,10 @@ You can contribute by:
 * Creating pull requests: Use the [development documentation](https://github.com/VDVde/OJP/wiki/WG:-:-Working-with-this-repository)
 
 ### Branches
-* The main branch currently contains OJP 1.0.1
-* Development is done in [the develop branch](https://github.com/VDVde/OJP/tree/develop).
+* The [main branch](https://github.com/VDVde/OJP/tree/main) contains the latest release
+* Development is done in the [develop branch](https://github.com/VDVde/OJP/tree/develop).
+* The [release/2.0 branch](https://github.com/VDVde/OJP/tree/release/2.0) contains the latest v2.0 state
+* The [release/1.0 branch](https://github.com/VDVde/OJP/tree/release/1.0) contains the latest v1.0 state
 
 ### Wiki
 OJP uses the [wiki](https://github.com/VDVde/OJP/wiki) on GitHub for some resources and examples.
