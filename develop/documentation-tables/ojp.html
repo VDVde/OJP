@@ -21362,7 +21362,7 @@
                     <p id="type_ojp__MultiPointTypeEnumeration" class="tableblock"><strong><code>MultiPointTypeEnumeration</code></strong></p>
                   </td>
                   <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock anno-text">How the multiple origin/destination points should be considered. Note: Unfortunately, this element was not sufficiently defined in the past, which led to different implementations. Note: MultiPointType trumps the number of results. If the algorithm thinks it is necessary to provide more results, it should.</p>
+                    <p class="tableblock anno-text">Defines how the router should handle requests with multiple origins and destinations. MultiPointType is more important than NumberOfResults in the sense that if 10 results are needed to fulfill the MultiPointType, then it is 10, even when NumberOfResults was set to 1.</p>
                   </td>
                 </tr>
                 <tr>
@@ -21378,7 +21378,7 @@
                             <p class="tableblock">anyPoint</p>
                           </td>
                           <td class="tableblock halign-left valign-top">
-                            <p class="tableblock anno-text">If a solution for any one of multiple origin/destination points is sufficient. Some implementations will return only one origin-destination pair even for multiple results with this setting. Others will provide multiple.</p>
+                            <p class="tableblock anno-text">Returning results for a single origin and destination (hopefully the best ones). As this element was not sufficiently defined in the past, some implementations may behave differently.</p>
                           </td>
                         </tr>
                         <tr>
@@ -21386,7 +21386,7 @@
                             <p class="tableblock">eachOrigin</p>
                           </td>
                           <td class="tableblock halign-left valign-top">
-                            <p class="tableblock anno-text">A distinct solution for each of the origin points must be found.</p>
+                            <p class="tableblock anno-text">At least a distinct solution for each of the origin points must be delivered.</p>
                           </td>
                         </tr>
                         <tr>
@@ -21394,7 +21394,7 @@
                             <p class="tableblock">eachDestination</p>
                           </td>
                           <td class="tableblock halign-left valign-top">
-                            <p class="tableblock anno-text">A distinct solution for each of the destination points must be found.</p>
+                            <p class="tableblock anno-text">At least a distinct solution for each of the destination points must be delivered.</p>
                           </td>
                         </tr>
                         <tr>
@@ -21402,7 +21402,7 @@
                             <p class="tableblock">eachOriginDestination</p>
                           </td>
                           <td class="tableblock halign-left valign-top">
-                            <p class="tableblock anno-text">At least a result for each Origin-Destination pair must be presented.</p>
+                            <p class="tableblock anno-text">At least one result for each origin/destination pair must be delivered.</p>
                           </td>
                         </tr>
                         <tr>
@@ -21410,7 +21410,7 @@
                             <p class="tableblock">somePoints</p>
                           </td>
                           <td class="tableblock halign-left valign-top">
-                            <p class="tableblock anno-text">Clarifies that some (probably the "best") origin-destination pairs should be returned.</p>
+                            <p class="tableblock anno-text">Clarifies that some (probably the "best") origin-destination pairs should be returned. How many are to be used is not defined.</p>
                           </td>
                         </tr>
                       </tbody>
@@ -22369,7 +22369,7 @@
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means one always must check the results against the parameters before using them.</p>
+                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least. Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means that you can't assume that you get the exact number of results that you asked for in the request from the server.</p>
                   </td>
                 </tr>
                 <tr>
@@ -22509,16 +22509,16 @@
                 <tr>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"><a shape="rect" href="#group_ojp__MultiPointTripPolicyGroup" title="MultiPointTripPolicy">MultiPointTripPolicy</a></td>
                   <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock"><code><strong>MultiPointType</strong></code></p>
+                    <p class="tableblock"><code>MultiPointType</code></p>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock"><strong title="mandatory, single">1:1</strong></p>
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
                     <p class="tableblock"><em><a shape="rect" href="#type_ojp__MultiPointTypeEnumeration" title="MultiPointTypeEnumeration">MultiPointTypeEnumeration</a></em></p>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found.</p>
+                    <p class="tableblock darkbrown">Defines how the router should handle requests with multiple origins and destinations. As it is important for the strategy of the distributed trip planning the MultiPointType should be set. If the type is not supported a TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED warning or error must be returned. Default is anyPoint.</p>
                   </td>
                 </tr>
               </tbody>
@@ -23476,7 +23476,7 @@
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means one always must check the results against the parameters before using them.</p>
+                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least. Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means that you can't assume that you get the exact number of results that you asked for in the request from the server.</p>
                   </td>
                 </tr>
                 <tr>
@@ -25701,7 +25701,7 @@
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means one always must check the results against the parameters before using them.</p>
+                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least. Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means that you can't assume that you get the exact number of results that you asked for in the request from the server.</p>
                   </td>
                 </tr>
                 <tr>
@@ -25841,16 +25841,16 @@
                 <tr>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"><a shape="rect" href="#group_ojp__MultiPointTripPolicyGroup" title="MultiPointTripPolicy">MultiPointTripPolicy</a></td>
                   <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock"><code><strong>MultiPointType</strong></code></p>
+                    <p class="tableblock"><code>MultiPointType</code></p>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock"><strong title="mandatory, single">1:1</strong></p>
+                    <p class="tableblock"><span title="optional, single">0:1</span></p>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
                     <p class="tableblock"><em><a shape="rect" href="#type_ojp__MultiPointTypeEnumeration" title="MultiPointTypeEnumeration">MultiPointTypeEnumeration</a></em></p>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">If a solution for any one of multiple origin/destination points is sufficient. Or a distinct solution for each of the origin/destination points has to be found.</p>
+                    <p class="tableblock darkbrown">Defines how the router should handle requests with multiple origins and destinations. As it is important for the strategy of the distributed trip planning the MultiPointType should be set. If the type is not supported a TRIP_MULTIPOINT_TYPE_NOT_SUPPORTED warning or error must be returned. Default is anyPoint.</p>
                   </td>
                 </tr>
                 <tr>
@@ -27724,7 +27724,7 @@
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means one always must check the results against the parameters before using them.</p>
+                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least. Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means that you can't assume that you get the exact number of results that you asked for in the request from the server.</p>
                   </td>
                 </tr>
                 <tr>
@@ -28353,7 +28353,7 @@
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means one always must check the results against the parameters before using them.</p>
+                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least. Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means that you can't assume that you get the exact number of results that you asked for in the request from the server.</p>
                   </td>
                 </tr>
                 <tr>
@@ -29843,7 +29843,7 @@
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top"></td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least (TRIP REQUEST POLICY.maximumNumberofJourneys). Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means one always must check the results against the parameters before using them.</p>
+                    <p class="tableblock darkbrown">The number of trip results that the user wants to see at least. Be aware that some implementations will deliver one of the TripResults before the indicated departure time. This means that you can't assume that you get the exact number of results that you asked for in the request from the server.</p>
                   </td>
                 </tr>
                 <tr>
