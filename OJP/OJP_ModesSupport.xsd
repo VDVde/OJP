@@ -306,7 +306,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="changeWithinVehicle">
 				<xs:annotation>
-					<xs:documentation>If namely trains are split, it might be necessary to be in the right part. This is indicated with this value.</xs:documentation>
+					<xs:documentation>If trains are split, it may be necessary to change to the correct part of the train. Usage of changeWithinVehicle is preferred over remainInVehicle if it is unclear whether the traveller is in the correct part of the train.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="checkIn">
