@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPRequest>
+		<siri:DataSupplyRequest>
+			<siri:RequestTimestamp>2023-03-17T09:30:47-05:00</siri:RequestTimestamp>
+			<siri:ConsumerRef>1231123</siri:ConsumerRef>
+			<siri:MessageIdentifier>7788788788</siri:MessageIdentifier>
+			<siri:AllData>true</siri:AllData>
+		</siri:DataSupplyRequest>
+	</OJPRequest>
+</OJP>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPResponse>
+		<siri:SubscriptionResponse>
+			<siri:ResponseTimestamp>2023-03-17T09:30:47-05:00</siri:ResponseTimestamp>
+			<siri:ResponderRef>er1231</siri:ResponderRef>
+			<siri:RequestMessageRef>2341231</siri:RequestMessageRef>
+			<siri:DelegatorAddress>https://182.82.1.23:89912/endpoint</siri:DelegatorAddress>
+			<siri:DelegatorRef>23188</siri:DelegatorRef>
+			<siri:ResponseStatus>
+				<siri:ResponseTimestamp>2023-03-17T09:30:47-05:00</siri:ResponseTimestamp>
+				<siri:SubscriberRef>1231123</siri:SubscriberRef>
+				<siri:SubscriptionRef>123123123213</siri:SubscriptionRef>
+				<siri:Status>true</siri:Status>
+				<siri:ShortestPossibleCycle>PT10M</siri:ShortestPossibleCycle>
+			</siri:ResponseStatus>
+			<siri:SubscriptionManagerAddress>https://182.82.1.23:89912/endpoint</siri:SubscriptionManagerAddress>
+			<siri:ServiceStartedTime>2023-03-17T09:30:47-05:00</siri:ServiceStartedTime>
+		</siri:SubscriptionResponse>
+	</OJPResponse>
+</OJP>
