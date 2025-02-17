@@ -13,16 +13,11 @@
 			<xs:documentation>Availability request. Used to check the availability of a MOBILITY SERVICE, a VEHICLE, SERVICE JOURNEY or SINGLE JOURNEY. Be aware that usually after the response arrives, the rest of the TRIP must be recalculated. As especially pick-up and drop-off locations may have shifted from where they were in the previously calculated TRIP.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:choice>
+			<xs:element name="PublicTransport" type="BookingPTLegStructure">
 				<xs:annotation>
-					<xs:documentation>A choice as we assume that here future extensions may occur (non-public transport).</xs:documentation>
+					<xs:documentation>Definition of the journey leg to be covered by public transport. Other mobility services can be added later.</xs:documentation>
 				</xs:annotation>
-				<xs:element name="PublicTransport" type="BookingPTLegStructure">
-					<xs:annotation>
-						<xs:documentation>Definition of the journey leg to be covered by public transport. Other mobility services can be added later.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:choice>
+			</xs:element>
 			<xs:element name="MobilityUser" type="BookingUserStructure" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Passenger(s) for whom the service needs to be booked, one MobilityUser per passenger.</xs:documentation>
@@ -233,13 +228,11 @@
 					<xs:documentation>Problems related to this AVAILABILITY result.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:choice>
-				<xs:element name="PublicTransport" type="BookingPTLegStructure">
-					<xs:annotation>
-						<xs:documentation>Definition of the journey leg that should be made by public transport. Other mobility services may be added later.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:choice>
+			<xs:element name="PublicTransport" type="BookingPTLegStructure">
+				<xs:annotation>
+					<xs:documentation>Definition of the journey leg that should be made by public transport. Other mobility services may be added later.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:group ref="BookableTicketAndServiceInformationGroup"/>
 			<xs:element name="Extension" type="xs:anyType" minOccurs="0"/>
 		</xs:sequence>
