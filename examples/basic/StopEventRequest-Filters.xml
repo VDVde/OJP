@@ -23,6 +23,11 @@
 						</Line>
 						<Exclude>true</Exclude>
 					</LineFilter>
+					<OperatorFilter>
+						<Exclude>true</Exclude>
+						<OperatorRef>operator-1</OperatorRef>
+						<OperatorRef>operator-2</OperatorRef>
+					</OperatorFilter>
 					<StopEventType>both</StopEventType>
 					<IncludePreviousCalls>true</IncludePreviousCalls>
 					<IncludeOnwardCalls>true</IncludeOnwardCalls>
