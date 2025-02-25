@@ -17,17 +17,17 @@
 					<DepArrTime>2020-12-01T12:00:00Z</DepArrTime>
 				</Location>
 				<Params>
-					<StopEventType>both</StopEventType>
-					<IncludePreviousCalls>true</IncludePreviousCalls>
-					<IncludeOnwardCalls>true</IncludeOnwardCalls>
-					<IncludeOperatingDays>true</IncludeOperatingDays>
-					<UseRealtimeData>full</UseRealtimeData>
 					<LineFilter>
 						<Line>
 							<siri:LineRef>7311234</siri:LineRef>
 						</Line>
 						<Exclude>true</Exclude>
 					</LineFilter>
+					<StopEventType>both</StopEventType>
+					<IncludePreviousCalls>true</IncludePreviousCalls>
+					<IncludeOnwardCalls>true</IncludeOnwardCalls>
+					<IncludeOperatingDays>true</IncludeOperatingDays>
+					<UseRealtimeData>full</UseRealtimeData>
 				</Params>
 			</OJPStopEventRequest>
 		</siri:ServiceRequest>
