@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2020 (http://www.altova.com) by Jutta Schmedding (MENTZ GmbH) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_Common.xsd - Supporting definitions of common structures</xs:documentation>
@@ -279,7 +280,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<!-- the PERSONAL MODE on which the Service bases is already defined in the Service element -->
-			<xs:element name="OperatorRef" type="siri:OperatorRefStructure">
+			<xs:element name="OperatorRefs" type="OperatorRefs_RelStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Identifier of the operator of the sharing service </xs:documentation>
 				</xs:annotation>
