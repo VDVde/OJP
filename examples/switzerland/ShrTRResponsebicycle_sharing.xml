@@ -1,4 +1,5 @@
-<OJP xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.vdv.de/ojp" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.vdv.de/ojp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
 	<OJPResponse>
 		<siri:ServiceDelivery>
 			<siri:ResponseTimestamp>2025-08-07T09:12:30.2711709+02:00</siri:ResponseTimestamp>
@@ -91,14 +92,18 @@
 									</Name>
 								</LegEnd>
 								<Service>
-									<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation> <!-- zu prüfen, ob wir hier unterscheiden könnten: stationBasedSharing und stationLessSharing -->
-									<PersonalMode>bicycle</PersonalMode> <!-- Weitere modes: scooter, car -->
+									<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
+									<!-- zu prüfen, ob wir hier unterscheiden könnten: stationBasedSharing und stationLessSharing -->
+									<PersonalMode>bicycle</PersonalMode>
+									<!-- Weitere modes: scooter, car -->
 									<AlternativeService>
-										<OperatorRef>bird-zurich-escooter:01651159-9daa-44a4-8bb1-ffce5dc91bff</OperatorRef> <!-- zu prüfen. Aktuell haben wir nur 1, 3, 5 vom ModeSharing Def zur Verfügung -->
-										<Name>Bird</Name> <!-- Bei LIR: Name / OPERATOR_NAME -->
+										<OperatorRef>bird-zurich-escooter:01651159-9daa-44a4-8bb1-ffce5dc91bff</OperatorRef>
+										<!-- zu prüfen. Aktuell haben wir nur 1, 3, 5 vom ModeSharing Def zur Verfügung -->
+										<Name>Bird</Name>
+										<!-- Bei LIR: Name / OPERATOR_NAME -->
 										<OperatorRefs>
 											<OperatorRef>ch:lime</OperatorRef>
-										</OperatorRefs>										
+										</OperatorRefs>
 									</AlternativeService>
 									<BookingArrangements>
 										<BookingArrangement>
@@ -106,7 +111,8 @@
 												<Label>
 													<Text>rental_uris.ios</Text>
 												</Label>
-												<Url>https://go.bird.co?birdId=01651159-9daa-44a4-8bb1-ffce5dc91bff&amp;lat=47.37844&amp;lng=8.5347443333</Url> <!--Info sollte von ModeSharing kommen (VehicleDetails)-->
+												<Url>https://go.bird.co?birdId=01651159-9daa-44a4-8bb1-ffce5dc91bff&amp;lat=47.37844&amp;lng=8.5347443333</Url>
+												<!--Info sollte von ModeSharing kommen (VehicleDetails)-->
 											</BookingUrl>
 										</BookingArrangement>
 										<BookingArrangement>
