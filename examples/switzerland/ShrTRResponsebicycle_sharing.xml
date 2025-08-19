@@ -1,0 +1,133 @@
+<OJP xmlns:siri="http://www.siri.org.uk/siri" xmlns="http://www.vdv.de/ojp" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPResponse>
+		<siri:ServiceDelivery>
+			<siri:ResponseTimestamp>2025-08-07T09:12:30.2711709+02:00</siri:ResponseTimestamp>
+			<siri:ProducerRef>MENTZ</siri:ProducerRef>
+			<OJPTripDelivery>
+				<siri:ResponseTimestamp>2025-08-07T09:12:30.2711715+02:00</siri:ResponseTimestamp>
+				<siri:RequestMessageRef>00-6486073608f51c1c83bb0615903bebdd-eeec2d4e58029c70-00</siri:RequestMessageRef>
+				<siri:DefaultLanguage>de</siri:DefaultLanguage>
+				<CalcTime>196</CalcTime>
+				<TripResult>
+					<Id>ID-179B62DD-3437-4BDD-8F52-D515B16FCF66</Id>
+					<Trip>
+						<Id>ID-179B62DD-3437-4BDD-8F52-D515B16FCF66</Id>
+						<Duration>PT7M</Duration>
+						<StartTime>2025-08-08T07:14:00Z</StartTime>
+						<EndTime>2025-08-08T07:21:00Z</EndTime>
+						<Transfers>0</Transfers>
+						<Distance>2390</Distance>
+						<Leg>
+							<Id>1</Id>
+							<Duration>PT4M</Duration>
+							<ContinuousLeg>
+								<LegStart>
+									<GeoPosition>
+										<siri:Longitude>8.53808</siri:Longitude>
+										<siri:Latitude>47.37683</siri:Latitude>
+									</GeoPosition>
+									<Name>
+										<Text xml:lang="de">47.376825,8.538083</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<siri:StopPointRef>8503000</siri:StopPointRef>
+									<Name>
+										<Text xml:lang="de">Zürich HB</Text>
+									</Name>
+								</LegEnd>
+								<Service>
+									<PersonalModeOfOperation>own</PersonalModeOfOperation>
+									<PersonalMode>foot</PersonalMode>
+								</Service>
+								<Duration>PT4M</Duration>
+								<Length>146</Length>
+								<LegTrack>
+									<TrackSection>
+										<TrackSectionStart>
+											<GeoPosition>
+												<siri:Longitude>8.53808</siri:Longitude>
+												<siri:Latitude>47.37683</siri:Latitude>
+											</GeoPosition>
+											<Name>
+												<Text xml:lang="de">47.376825,8.538083</Text>
+											</Name>
+										</TrackSectionStart>
+										<TrackSectionEnd>
+											<siri:StopPointRef>8503000</siri:StopPointRef>
+											<Name>
+												<Text xml:lang="de">Zürich HB</Text>
+											</Name>
+										</TrackSectionEnd>
+										<Duration>PT4M</Duration>
+										<Length>146</Length>
+									</TrackSection>
+								</LegTrack>
+							</ContinuousLeg>
+							<EmissionCO2>
+								<KilogramPerPersonKm>0</KilogramPerPersonKm>
+							</EmissionCO2>
+						</Leg>
+						<Leg>
+							<Id>2</Id>
+							<Duration>PT3M</Duration>
+							<ContinuousLeg>
+								<LegStart>
+									<GeoPosition>
+										<siri:Longitude>1.1</siri:Longitude>
+										<siri:Latitude>1.1</siri:Latitude>
+									</GeoPosition>
+									<Name>
+										<Text>Zürich HB</Text>
+									</Name>
+								</LegStart>
+								<LegEnd>
+									<GeoPosition>
+										<siri:Longitude>2.2</siri:Longitude>
+										<siri:Latitude>2.2</siri:Latitude>
+									</GeoPosition>
+									<Name>
+										<Text>Zürich, Giesshübel</Text>
+									</Name>
+								</LegEnd>
+								<Service>
+									<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation> <!-- zu prüfen, ob wir hier unterscheiden könnten: stationBasedSharing und stationLessSharing -->
+									<PersonalMode>bicycle</PersonalMode> <!-- Weitere modes: scooter, car -->
+									<AlternativeService>
+										<OperatorRef>bird-zurich-escooter:01651159-9daa-44a4-8bb1-ffce5dc91bff</OperatorRef> <!-- zu prüfen. Aktuell haben wir nur 1, 3, 5 vom ModeSharing Def zur Verfügung -->
+										<Name>Bird</Name> <!-- Bei LIR: Name / OPERATOR_NAME -->
+										<OperatorRefs>
+											<OperatorRef>ch:lime</OperatorRef>
+										</OperatorRefs>										
+									</AlternativeService>
+									<BookingArrangements>
+										<BookingArrangement>
+											<BookingUrl>
+												<Label>
+													<Text>rental_uris.ios</Text>
+												</Label>
+												<Url>https://go.bird.co?birdId=01651159-9daa-44a4-8bb1-ffce5dc91bff&amp;lat=47.37844&amp;lng=8.5347443333</Url> <!--Info sollte von ModeSharing kommen (VehicleDetails)-->
+											</BookingUrl>
+										</BookingArrangement>
+										<BookingArrangement>
+											<BookingUrl>
+												<Label>
+													<Text>rental_uris.android</Text>
+												</Label>
+												<Url>https://go.bird.co/navigate?link=https%3A%2F%2Fgo.bird.co%2Fmap%3FbirdId%3D01651159-9daa-44a4-8bb1-ffce5dc91bff%26lat%3D47.37844983333333%26lon%3D8.534744333333332</Url>
+											</BookingUrl>
+										</BookingArrangement>
+									</BookingArrangements>
+								</Service>
+								<Duration>PT15M</Duration>
+							</ContinuousLeg>
+							<EmissionCO2>
+								<KilogramPerPersonKm>0.007</KilogramPerPersonKm>
+							</EmissionCO2>
+						</Leg>
+					</Trip>
+				</TripResult>
+			</OJPTripDelivery>
+		</siri:ServiceDelivery>
+	</OJPResponse>
+</OJP>
