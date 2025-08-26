@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" version="2.0" xsi:schemaLocation="http://www.vdv.de/ojp ../../OJP.xsd">
+	<OJPRequest>
+		<siri:ServiceRequest>
+			<siri:RequestTimestamp>2025-08-05T14:37:51.270Z</siri:RequestTimestamp>
+			<siri:RequestorRef>MENTZRegTest</siri:RequestorRef>
+			<OJPTripRequest>
+				<siri:RequestTimestamp>2025-08-05T14:37:51.270Z</siri:RequestTimestamp>
+				<siri:MessageIdentifier>Shr-3b</siri:MessageIdentifier>
+				<Origin>
+					<PlaceRef>
+						<GeoPosition>
+							<siri:Longitude>7.022870</siri:Longitude>
+							<siri:Latitude>47.008970</siri:Latitude>
+						</GeoPosition>
+						<Name>
+							<Text>47.008970,7.022870</Text>
+						</Name>
+					</PlaceRef>
+					<DepArrTime>2025-12-12T11:00:00Z</DepArrTime>
+				</Origin>
+				<Destination>
+					<PlaceRef>
+						<siri:StopPointRef>8504221</siri:StopPointRef>
+						<Name>
+							<Text>Neuchâtel (Neuchâtel)</Text>
+						</Name>
+					</PlaceRef>
+				</Destination>
+				<Params>
+					<ItModeToCover>
+						<PersonalMode>bicycle</PersonalMode>
+						<AlternativeModeOfOperation>sharing</AlternativeModeOfOperation>
+					</ItModeToCover>
+					<IncludeTrackSections>true</IncludeTrackSections>
+					<IncludeLegProjection>true</IncludeLegProjection>
+					<IncludeTurnDescription>true</IncludeTurnDescription>
+					<IncludeIntermediateStops>true</IncludeIntermediateStops>
+				</Params>
+			</OJPTripRequest>
+		</siri:ServiceRequest>
+	</OJPRequest>
+</OJP>

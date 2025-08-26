@@ -295,6 +295,11 @@
 					<xs:documentation>Link to the web page providing more details on the service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="OperatorRefs" type="OperatorRefs_RelStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>References to the OPERATORS. Multiple OPERATORS in case a ContinuousLeg can be operated by more than one operator, especially in the ALTERNATIVE MODE OF OPERATION where there can be dozens of taxi companies and many free-floating sharing companies.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Restricted" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>This flag is set if the service can only be used in a restricted way. For example, a specific ACCESS MODE is required (e.g., dragLift) or the LINE is only made available to certain passenger groups (e.g., school buses, hotel shuttles).</xs:documentation>
