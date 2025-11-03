@@ -102,6 +102,7 @@
 						<xsd filePath="ojp/OJP_PlaceSupport.xsd"/>
 						<xsd filePath="ojp/OJP_StopEvents.xsd"/>
 						<xsd filePath="ojp/OJP_TripInfo.xsd"/>
+						<xsd filePath="ojp/OJP_TripMonitoring.xsd"/>
 						<xsd filePath="ojp/OJP_Trips.xsd"/>
 						<xsd filePath="ojp/OJP_JourneySupport.xsd"/>
 						<xsd filePath="ojp/OJP_Availability.xsd"/>
