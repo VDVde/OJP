@@ -1712,7 +1712,7 @@ Can only be used when both participants recognise the same schedule version. If 
 				<xs:annotation>
 					<xs:documentation>The maximum time allowed for using modes of individual transport (mostly walking or cycling) has been extended by the system because otherwise no trip could be found.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>
+			</xs:enumeration>			
 			<xs:enumeration value="TRIP_ITMODECHANGED">
 				<xs:annotation>
 					<xs:documentation>The mode of individual transport specified by the user has been replaced by the system because otherwise no trip could be found. Usually, this means taking a taxi instead of walking.</xs:documentation>
@@ -1723,6 +1723,11 @@ Can only be used when both participants recognise the same schedule version. If 
 					<xs:documentation>The trip plan in this trip result contains a long waiting time.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="TRIP_PROJECTIONROUTETRACKPROBLEM">
+				<xs:annotation>
+					<xs:documentation>Providing a suitable link projection, route, track failed.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
 			<xs:enumeration value="TRIP_RESTRICTEDRESULTSDROPPED">
 				<xs:annotation>
 					<xs:documentation>Used for warnings, when possible/better results were dropped, because of the criteria were not used (e.g., private services, offer only available for seniors).</xs:documentation>
