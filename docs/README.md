@@ -8,11 +8,11 @@ This document describes the generation of documentation for the OJP XML schemas.
 
 ## Prerequisites
 
-The documentation generation process requires an XSLT 1.0 processor like [Apache Xalan-J](http://xalan.apache.org/xalan-j/index.html) or (xsltproc](http://xmlsoft.org/XSLT/).
+The documentation generation process requires an Java runtime.
 
-On Linux, install xsltproc running `apt-get install xsltproc` (or the required equivalent in non-Debian based distributions).
+On Linux, install a Java runtime running `apt-get install default-jre` (or the required equivalent in non-Debian based distributions).
 
-For Windows, you'll find Windows binaries for xsltproc at http://xmlsoft.org/XSLT/.
+For Windows, you'll find Windows binaries for Java at https://www.oracle.com/java/technologies/downloads/
 
 ## Generation of HTML documentation
 
@@ -22,15 +22,9 @@ On Linux and with the above prerequisites at hand, you can run `generate-tables.
 
 The generated HTML file requires the file `asciidoc.css` to be in the same directory. The above script makes sure it's there.
 
-On Windows, please refer to the `generate-tables.sh` to figure out the necessary program invocations for your XSLT processor of choice.
+On Windows, please refer to the `generate-tables.sh` to figure out the necessary program invocations.
 
 ### Inner workings
 
-`generate-tables.sh` runs `xsltproc` twice. First the file `schema-collection.xml` is run against `ojp-to-prepdoc.xsl`. This combines all references XSD files to a single intermediate XML files which maps all information into a simplified structure that will make it easier in the second step to generate the final HTML documentation.
-
-Once, you have the intermediate XML file (`generated/OJP-prep.xml`), you can run that against the `ojp-prep-to-html-with-toc.xsl` stylesheet. This will generate the final `index.html` (HTML with table of contents). Alternatively, if you don't want the table of contents, you can use the stylesheet `ojp-prep-to-html.xsl`.
-
-## XML Schema Convention Check
-
-There is an additional XSLT stylesheet `check-ojp-schemas.xsl` (invoked by `check-ojp-schemas.sh`) that can be used to check whether certain conventions for the design
-of the XML schemas for OJP have been violated.
+`generate-tables.sh` runs `basex`, which does a direct transformation from XML Schema directly to HTML.
+The code for this is available under the `generate_tables` folder.
