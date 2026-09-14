@@ -393,6 +393,7 @@ System B, being confronted with external IDs, must try to recognise the relevant
 			<xs:extension base="siri:AbstractServiceDeliveryStructure">
 				<xs:sequence>
 					<xs:element ref="OJPLineInformationRequest" minOccurs="0"/>
+					<xs:group ref="ServiceResponseContextGroup"/>
 					<xs:group ref="LineInformationResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
