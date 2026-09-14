@@ -6,25 +6,26 @@ This document describes the generation of documentation for the OJP XML schemas.
 * Generate plain HTML documentation with a table of contents for reference purposes.
 * Provide the HTML documentation in a format so it can be easily integrated into the associated CEN standards document which is maintained as an MS Word file.
 
+## Generation of HTML documentation
+
 ## Prerequisites
 
-The documentation generation process requires an Java runtime.
+A Java Runtime Environment is required to create the documentation.
 
-On Linux, install a Java runtime running `apt-get install default-jre` (or the required equivalent in non-Debian based distributions).
+On Linux, install a Java Runtime Environment using the command `apt-get install default-jre` (or the equivalent command in non-Debian-based distributions).
 
-For Windows, you'll find Windows binaries for Java at https://www.oracle.com/java/technologies/downloads/
+For Windows, you can find executable for Java at [https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/)
 
-## Generation of HTML documentation
+## Creating the HTML documentation
 
 ### Instructions
 
-On Linux and with the above prerequisites at hand, you can run `generate-tables.sh` to convert the XML schemas into a single HTML file [`index.html`](generated/index.html) in the `generated` subdirectory.
+On Linux, provided the above requirements are met, you can run the script [`generate-tables.sh`](generate-tables.sh) to convert the XML schemas into a single HTML file [`index.html`](generated/index.html) in the `generated/` subdirectory.
 
-The generated HTML file requires the file `asciidoc.css` to be in the same directory. The above script makes sure it's there.
+On Windows, please refer to the file [`generate-tables.sh`](generate-tables.sh) to determine the necessary commands.
 
-On Windows, please refer to the `generate-tables.sh` to figure out the necessary program invocations.
+### How it works
 
-### Inner workings
+[`generate-tables.sh`](generate-tables.sh) downloads [BaseX](https://basex.org/) and runs it.
 
-`generate-tables.sh` runs `basex`, which does a direct transformation from XML Schema directly to HTML.
-The code for this is available under the `generate_tables` folder.
+BaseX uses the configuration in the [`generate_tables/`](generate_tables/) directory to convert the XML schema to HTML.
