@@ -16,6 +16,11 @@
 			<xs:documentation>Line Information response group.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="LineResponseContext" type="ResponseContextStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Context to hold line response objects that occur frequently.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="LineResult" type="LineResultStructure" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:group>
@@ -61,6 +66,105 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>=============================== LineInformation support functions ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="LineStructure">
+		<xs:annotation>
+			<xs:documentation>The line structure for the context.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LineRef" type="siri:LineRefStructure">
+				<xs:annotation>
+					<xs:documentation>Reference to the LINE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="siri:PublishedLineName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name or Number by which the LINE is known to the public.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DirectionRef" type="siri:DirectionRefStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>DIRECTION of LINE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Presentation" type="PresentationStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>PRESENTATION of a LINE. Based on NeTEx not SIRI.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PresentationStructure">
+		<xs:annotation>
+			<xs:documentation>Types describing common presentation properties for Display.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Colour" type="ColourValueType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Default RGB colour value for graphics associated with ENTITY - e.g. for a LINE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ColourName" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of default colour value for graphics associated with ENTITY.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ColourSystem" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of colour system used for ColourName and TextColourName: for example, 
+					- RAL, https://en.wikipedia.org/wiki/RAL_colour_standard;
+					- DIN 6164 http://www.dtpstudio.de/atlas/farbsysteme/DIN%206164_bs00_3.htm; 
+					- Pantone (be aware that Pantone is proprietary), etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BackgroundColour" type="ColourValueType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Default RGB background colour value for text and graphics associated with ENTITY - e.g. of a LINE.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BackgroundColourName" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of the background colour (in ColourSystem) for text and graphics associated with entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TextColour" type="ColourValueType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Default RGB colour value for text associated with ENTITY.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TextColourName" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of default colour value (in ColourSystem) for text associated with ENTITY.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TextFont" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Identifier of font for text.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TextFontName" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of font for text.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TextLanguage" type="xs:language" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Default language for text.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!-- infoLinks purposefully omitted for the time being -->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ColourValueType">
+		<xs:annotation>
+			<xs:documentation>Type for a Colour Value.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:hexBinary">
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:annotation>
 		<xs:documentation>========================================== Problems ==========================================</xs:documentation>
 	</xs:annotation>

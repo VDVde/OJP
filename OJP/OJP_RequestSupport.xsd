@@ -105,6 +105,14 @@
 			<xs:element name="Place" type="PlaceStructure" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="LinesStructure">
+		<xs:annotation>
+			<xs:documentation>Structure providing a collection of lines.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Line" type="LineStructure" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="Operators_RelStructure">
 		<xs:annotation>
 			<xs:documentation>Structure providing a collection of operators.</xs:documentation>
@@ -130,6 +138,11 @@
 			<xs:element name="Places" type="PlacesStructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Container for place objects. Only place objects that are referenced in the response should be put into the container.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Lines" type="LinesStructure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Container for line objects. Only line objects that are referenced in the response should be put into the container.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Situations" type="SituationsStructure" minOccurs="0">
