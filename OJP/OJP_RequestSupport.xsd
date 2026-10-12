@@ -181,7 +181,7 @@
 				<xs:annotation>
 					<xs:documentation>Providing a suitable route or area failed or is not supported.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="OJPGENERIC_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
