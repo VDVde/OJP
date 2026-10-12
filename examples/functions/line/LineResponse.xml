@@ -13,10 +13,12 @@
 					<Lines>
 						<Line>
 							<LineRef>ch:slnid:123123</LineRef>
+							<DirectionRef>ch:1:Direction:H</DirectionRef>
 							<siri:PublishedLineName>IC8</siri:PublishedLineName>
+							<OperatorRef>ch:1:sboid:100011</OperatorRef>
 							<Presentation>
 								<BackgroundColour>660022</BackgroundColour>
-								<TextColour>ffaaff</TextColour>
+								<TextColour>ffaa0f</TextColour>
 							</Presentation>
 						</Line>
 					</Lines>
