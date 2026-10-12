@@ -18,6 +18,12 @@
 				<ErrorCondition>
 					<StopEventProblemType>STOPEVENT_NOEVENTFOUND</StopEventProblemType>
 				</ErrorCondition>
+				<ErrorCondition>
+					<OJPGenericProblemType>OJPGENERIC_PROJECTION_ROUTE_TRACK_PROBLEM</OJPGenericProblemType>
+					<Details>
+						<Text>This service does not support tracks.</Text>
+					</Details>
+				</ErrorCondition>
 			</OJPStopEventDelivery>
 		</siri:ServiceDelivery>
 	</OJPResponse>
