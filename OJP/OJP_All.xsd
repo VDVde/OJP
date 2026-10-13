@@ -18,6 +18,7 @@
 	<xs:include schemaLocation="OJP_SituationSupport.xsd"/>
 	<xs:include schemaLocation="OJP_StopEvents.xsd"/>
 	<xs:include schemaLocation="OJP_TripInfo.xsd"/>
+	<xs:include schemaLocation="OJP_TripMonitoring.xsd"/>
 	<xs:include schemaLocation="OJP_Trips.xsd"/>
 	<xs:include schemaLocation="OJP_Utility.xsd"/>
 	<xs:include schemaLocation="OJP_Status.xsd"/>

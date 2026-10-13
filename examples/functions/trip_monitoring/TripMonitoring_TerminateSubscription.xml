@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OJP xmlns="http://www.vdv.de/ojp" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1-dev" xsi:schemaLocation="http://www.vdv.de/ojp ../../../OJP.xsd">
+	<OJPRequest>
+		<siri:TerminateSubscriptionRequest>
+			<siri:RequestTimestamp>2004-12-17T09:30:47-05:00</siri:RequestTimestamp>
+			<siri:RequestorRef>theClient</siri:RequestorRef>
+			<siri:DelegatorAddress>https://182.82.1.23:89912/endpoint</siri:DelegatorAddress>
+			<siri:SubscriberRef>1231123</siri:SubscriberRef>
+			<siri:SubscriptionRef>123123123213</siri:SubscriptionRef>
+			<siri:SubscriptionRef>9RRR2313</siri:SubscriptionRef>
+		</siri:TerminateSubscriptionRequest>
+	</OJPRequest>
+</OJP>

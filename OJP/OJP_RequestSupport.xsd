@@ -94,6 +94,14 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="AbstractOJPSubscriptionRequestStructure">
+		<xs:annotation>
+			<xs:documentation>Basic subscription request structure common for OJP subscription requests.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractSubscriptionStructure"/>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:annotation>
 		<xs:documentation>========================================== Collection contexts ==========================================</xs:documentation>
 	</xs:annotation>

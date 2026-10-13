@@ -297,8 +297,8 @@ The service also provides information about formation, occupancy, and capacity. 
 	</xs:annotation>
 	<xs:element name="OJPTripRefineRequest" type="OJPTripRefineRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceRequest">
 		<xs:annotation>
-			<xs:documentation>The trip refinement service retrieves additional or updated information (e.g., real-time data) about a given, previously retrieved trip. It does not depend on the assumption that the trip has been retrieved from the same server; it may, in fact, even stem from another source than a OJP system. 
-An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical object IDs, this is signalled by setting ExternalObjectRefs to true. 
+			<xs:documentation>The trip refinement service retrieves additional or updated information (e.g., real-time data) about a given, previously retrieved trip. It does not depend on the assumption that the trip has been retrieved from the same server; it may, in fact, even stem from another source than a OJP system.
+An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical object IDs, this is signalled by setting ExternalObjectRefs to true.
 System B, being confronted with external IDs, must try to recognise the relevant objects in another way and retrieve them in its own database. In the response it will use its own object IDs. To maintain a consistent mapping, it is imperative that system B reflects the structure of the refine request precisely in its response (principle of structure maintenance).</xs:documentation>
 		</xs:annotation>
 	</xs:element>
@@ -314,8 +314,8 @@ System B, being confronted with external IDs, must try to recognise the relevant
 	</xs:complexType>
 	<xs:element name="OJPTripRefineDelivery" type="OJPTripRefineDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery">
 		<xs:annotation>
-			<xs:documentation>The trip refinement service retrieves additional or updated information (e.g., real-time data) about a given, previously retrieved trip. It does not depend on the assumption that the trip has been retrieved from the same server; it may, in fact, even stem from another source than a OJP system. 
-An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical object IDs, this is signalled by setting ExternalObjectRefs to true. 
+			<xs:documentation>The trip refinement service retrieves additional or updated information (e.g., real-time data) about a given, previously retrieved trip. It does not depend on the assumption that the trip has been retrieved from the same server; it may, in fact, even stem from another source than a OJP system.
+An example scenario may involve a trip retrieved from a system A and one wishes to refine the trip with real time information from another system B. As it cannot be ascertained that both systems use identical object IDs, this is signalled by setting ExternalObjectRefs to true.
 System B, being confronted with external IDs, must try to recognise the relevant objects in another way and retrieve them in its own database. In the response it will use its own object IDs. To maintain a consistent mapping, it is imperative that system B reflects the structure of the refine request precisely in its response (principle of structure maintenance).</xs:documentation>
 		</xs:annotation>
 	</xs:element>
@@ -429,6 +429,41 @@ System B, being confronted with external IDs, must try to recognise the relevant
 					<xs:element ref="OJPTripChangeRequest" minOccurs="0"/>
 					<xs:group ref="ServiceResponseContextGroup"/>
 					<xs:group ref="TripChangeResponseGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>========================================== Trip Monitoring Service (Subscription) ==========================================</xs:documentation>
+	</xs:annotation>
+	<xs:element name="OJPTripMonitoringSubscriptionRequest" type="OJPTripMonitoringSubscriptionRequestStructure" substitutionGroup="siri:AbstractFunctionalServiceSubscriptionRequest"/>
+	<xs:complexType name="OJPTripMonitoringSubscriptionRequestStructure">
+		<xs:complexContent>
+			<xs:extension base="AbstractOJPSubscriptionRequestStructure">
+				<xs:sequence>
+					<xs:element name="Trip" type="TripStructure"/>
+					<xs:element ref="OJPTripRequest" minOccurs="0"/>
+					<xs:element name="MonitoringParameters" type="TripMonitoringParamStructure" minOccurs="0"/>
+					<xs:group ref="AlertSettingsGroup"/>
+					<xs:element ref="siri:Extensions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="OJPTerminateSubscriptionRequest" type="siri:TerminateSubscriptionRequestStructure">
+		<xs:annotation>
+			<xs:documentation>Request element for terminating subscriptions. To change parameters of a subscription, it is necessary to terminate and to re-subscribe. Successful termination is acknowledged by problem code TRIPMONITORING_SUBSCRIPTION_TERMINATED in a delivery.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="OJPTripMonitoringDelivery" type="OJPTripMonitoringDeliveryStructure" substitutionGroup="siri:AbstractFunctionalServiceDelivery"/>
+	<xs:complexType name="OJPTripMonitoringDeliveryStructure">
+		<xs:complexContent>
+			<xs:extension base="siri:AbstractServiceDeliveryStructure">
+				<xs:sequence>
+					<xs:element ref="OJPTripMonitoringSubscriptionRequest" minOccurs="0"/>
+					<xs:element ref="OJPTerminateSubscriptionRequest" minOccurs="0"/>
+					<xs:group ref="TripMonitoringResponseGroup"/>
 					<xs:element ref="siri:Extensions" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
