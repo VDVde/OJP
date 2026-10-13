@@ -17,8 +17,16 @@
 							<siri:PublishedLineName>IC8</siri:PublishedLineName>
 							<OperatorRef>ch:1:sboid:100011</OperatorRef>
 							<Presentation>
-								<BackgroundColour>660022</BackgroundColour>
-								<TextColour>ffaa0f</TextColour>
+								<Colour>ff0000</Colour>
+								<ColourName>RAL 3000 Flame red</ColourName>
+								<ColourSystem>RAL</ColourSystem>
+								<BackgroundColour>000000</BackgroundColour>
+								<BackgroundColourName>black</BackgroundColourName>					
+								<TextColour>dd0000</TextColour>
+								<TextColourName>RAL 3033 Pearl pink</TextColourName>
+								<TextFont>FrutigerLight</TextFont>
+								<TextFontName>FrutigerLight</TextFontName>
+								<TextLanguage>DE</TextLanguage>
 							</Presentation>
 						</Line>
 					</Lines>

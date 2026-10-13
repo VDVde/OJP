@@ -118,10 +118,10 @@
 			</xs:element>
 			<xs:element name="ColourSystem" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Name of colour system used for ColourName and TextColourName: for example, 
-					- RAL, https://en.wikipedia.org/wiki/RAL_colour_standard;
-					- DIN 6164 http://www.dtpstudio.de/atlas/farbsysteme/DIN%206164_bs00_3.htm; 
-					- Pantone (be aware that Pantone is proprietary), etc.</xs:documentation>
+					<xs:documentation>Name of colour system used for ColourName and TextColourName, for example:
+					- 'RAL' https://en.wikipedia.org/wiki/RAL_colour_standard
+					- 'DIN 6164' https://www.dtpstudio.de/atlas/farbsysteme/DIN%206164_bs00_3.htm
+					- 'Pantone' (be aware that Pantone is proprietary.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BackgroundColour" type="ColourValueType" minOccurs="0">
