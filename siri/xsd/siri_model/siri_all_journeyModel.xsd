@@ -13,6 +13,7 @@
  <xsd:include schemaLocation="siri_journey.xsd"/>
  <xsd:include schemaLocation="siri_journey_support.xsd"/>
  <xsd:include schemaLocation="siri_modes.xsd"/>
+ <xsd:include schemaLocation="siri_datedVehicleJourney.xsd"/> 
  <xsd:include schemaLocation="siri_monitoredVehicleJourney.xsd"/>
  <xsd:include schemaLocation="siri_operator_support.xsd"/>
  <xsd:include schemaLocation="siri_reference.xsd"/>
