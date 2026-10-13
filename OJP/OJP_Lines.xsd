@@ -154,12 +154,8 @@
 					<xs:documentation>Name of font for text.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TextLanguage" type="xs:language" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Default language for text.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<!-- infoLinks purposefully omitted for the time being -->
+			<!-- TextLanguage purposefully not copied from NeTEx as OJP/SIRI have already mechanisms for this -->
+			<!-- infoLinks purposefully not copied from NeTEx for the time being. -->
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="ColourValueType">
