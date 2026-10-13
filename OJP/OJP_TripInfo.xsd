@@ -208,7 +208,7 @@
 				<xs:annotation>
 					<xs:documentation>The JOURNEY reference was ambiguous. This may happen e.g. when a frequency based journey does not provide detailed enough reference to identify the necessary trip clearly.</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="TRIPINFO_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
