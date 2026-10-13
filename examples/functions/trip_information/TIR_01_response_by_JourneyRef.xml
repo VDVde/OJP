@@ -10,6 +10,10 @@
 				<siri:RequestMessageRef>756</siri:RequestMessageRef>
 				<siri:Status>true</siri:Status>
 				<CalcTime>60</CalcTime>
+				<ErrorCondition>
+					<TripInfoProblemType>TRIPINFO_JOURNEYREFAMBIGUOUS</TripInfoProblemType>
+					<!-- Just show how it is used. Here we still provide an answer. -->
+				</ErrorCondition>
 				<TripInfoResponseContext>
 					<Places>
 						<Place>
