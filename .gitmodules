@@ -1,0 +1,3 @@
+[submodule "SIRI"]
+	path = SIRI
+	url = https://github.com/TransmodelEcosystem/SIRI.git
