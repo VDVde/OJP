@@ -257,11 +257,18 @@
 					<xs:documentation>If there are multiple sorting methods supported by the system, the client can choose one of the existing. Which methods are available needs to be known to the client and may differ from system to system. Therefore, use with care.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeoPosition" type="siri:LocationStructure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>WGS84 coordinates position. Locations closer to this GeoPosition are preferred.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:choice>
+				<xs:element name="GeoPosition" type="siri:LocationStructure" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>WGS84 coordinates position. Locations closer to this GeoPosition are preferred. Deprecated. Use SortingNearPlaceRef. -v2.1</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SortingNearPlaceRef" type="PlaceRefStructure" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Place reference. Locations closer to this GeoPosition are preferred.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
 			<xs:element name="MinimalProbability" type="xs:float" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Ignore locations with a lower probability.</xs:documentation>
