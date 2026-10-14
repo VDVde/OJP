@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2026 (x64) (https://www.altova.com) by Urs Stöckli (Schweizerische Bundesbahnen SBB) -->
 <xs:schema xmlns="http://www.vdv.de/ojp" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.vdv.de/ojp" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_All.xsd - Includes for all OJP schema files</xs:documentation>
