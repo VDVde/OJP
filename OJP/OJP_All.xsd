@@ -3,8 +3,7 @@
 	<xs:annotation>
 		<xs:documentation>OJP/OJP_All.xsd - Includes for all OJP schema files</xs:documentation>
 	</xs:annotation>
-		<xs:import id="ifopt" namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../siri/xsd/ifopt/ifopt_allStopPlace.xsd"/>
-	<xs:import id="siri" namespace="http://www.siri.org.uk/siri" schemaLocation="../siri/xsd/siri_model/siri_all.xsd"/>
+
 	<xs:include schemaLocation="OJP_Availability.xsd"/>
 	<xs:include schemaLocation="OJP_Common.xsd"/>
 	<xs:include schemaLocation="OJP_FacilitySupport.xsd"/>
