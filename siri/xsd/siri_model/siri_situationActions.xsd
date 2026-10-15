@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situationActions">
 	<!--
-10.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
-- PublishToDisplayAction added to ActionsGroup
--->
-	<!--
 19.12.2017 D. Rubli, Siri_XML-2.0p_a0.2:
 - ActionsStructure: extended with PublishingAction
 - PassengerInformationAction.ActionValidityPeriod: changed from HalfOpenTimestampOutputRangeStructure to structure with three different time range definitions, with StartTime and Duration
@@ -28,6 +24,11 @@
    - because ParameterisedActionStructure is base of PassengerInformationAction, PublicationWindow replaces there the ActionValidityPeriod of version Siri_XML-2.0p_a0.4, which had wrongly not the name PublicationWindow
    - because ParameterisedActionStructure is base of all PublishTo...-structures, PublicationWindow is now automatically also available there
 - ScopeType renamed to Perspective with new enumeration "general" / "stopPoint" / "vehicleJourney"
+02.10.2026 SIRI-SX task force:
+- Addition of links between Consequences and Actions
+- Change of cardinality for elements in ActionDataStructure
+- Addition of attributes to Prompt in ActionDataStructure
+- Addition of URL in ActionDataStructure
 -->
 	<xsd:include schemaLocation="siri_situation.xsd"/>
 	<xsd:include schemaLocation="siri_feature_support.xsd"/>
@@ -144,14 +145,29 @@ Rail transport, Roads and road transport
 							<xsd:documentation>Description of action.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>A whitespace-separated list of arbitrary application specific classifiers, tags or message categories for filtering or display, for example as icons on a situation map. Overwrites Keywords on PtSituationElement level (in the context of this action).</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 					<xsd:element name="ActionData" type="ActionDataStructure" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation>Data associated with action.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element name="PublicationRef" type="xsd:NMTOKEN" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Unique identifier of the Published Action, intended to faciliate its tracking by data consumers. IMPORTANT NOTE: In SIRI v3.0, chances are high that the element will differ and/or be restructured though the functionality will not change.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 					<xsd:element name="PublicationWindow" type="ClosedTimestampRangeStructure" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation>Defines a number of publication windows. When not sent, then the publication windows of higher level are valid. Can be overwritten by deeper level.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ConsequenceRef" type="ConsequenceRefStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Refers to the unique identifier of one or several Consequences that trigerred this Action. The ConsequenceRef should remain unique during the lifecycle of the ActionData. IMPORTANT NOTE: In SIRI v3.0, chances are high that the element will differ and/or be restructured though the functionality will not change.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -203,7 +219,7 @@ Rail transport, Roads and road transport
 			<xsd:documentation>Type for list of SITUATIONs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="Name" type="xsd:NMTOKEN">
+			<xsd:element name="Name" type="xsd:NMTOKEN" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Name of action data Element.</xsd:documentation>
 				</xsd:annotation>
@@ -213,14 +229,29 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Data type of action data.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="Value" type="xsd:anyType" maxOccurs="unbounded">
+			<xsd:element name="Value" type="xsd:anyType" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Value for action.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="Prompt" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="Prompt" type="PromptType" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Display prompt for presenting action to user. (Unbounded since SIRI 2.0)</xsd:documentation>
+					<xsd:documentation>Display prompt for presenting action to user. (Unbounded since SIRI 2.0). Possibility to add attributes on the type of prompt and its language. There must be only one instanciation of any given combination between PromptType and lang (i.e., only one content for a plain text in English, one content for plain text in French, one for plain text in German, etc.)(+v2.3)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Url" type="ContentUriStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Direct link to the content to be published or broadcasted as is (e.g., pre-recorded message, image, video, etc.). There must be only one instanciation of a any given combination between contentType and lang (i.e., only one content for a plain text in English, one content for plain text in French, one for plain text in German, etc.)(+v2.3)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Repeat" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Indicates if the action data element should be repeated or not. Default is 'true'. +v2.3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RepeatInterval" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Specifies the time interval at which the action data element should be repeated. +v2.3</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="PublishAtScope" minOccurs="0">
@@ -229,7 +260,7 @@ Rail transport, Roads and road transport
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
+						<xsd:element name="ScopeType" type="ScopeTypeEnumeration" minOccurs="0"/>
 						<xsd:element name="Affects" type="AffectsScopeStructure"/>
 					</xsd:sequence>
 				</xsd:complexType>
@@ -568,6 +599,18 @@ Rail transport, Roads and road transport
 							<xsd:documentation>Reference to the action number within the incident concept.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Period restricts the applicability of a PassengerInformationAction to a specific sub-range of the enclosing ValidityPeriod on PtSituationElement level.
+In particular when using the Perspective 'whilePlanningTrip', a single ValidityPeriod at PtSituationElement level may be insufficient to ensure correct selection of the actually affected journeys in a journey planning context. 
+This applies whenever a PassengerInformationAction is intended to be effective only during certain parts of the overall SITUATION duration or validity (e.g. time-of-day–dependent passenger information).
+Period SHALL ONLY be used when a single ValidityPeriod is insufficient to differentiate the applicability of multiple actions.
+Period MUST always be a strict subset of the enclosing ValidityPeriod and MUST NOT start earlier or end later.
+For PassengerInformationActions with Perspective 'atStopPoint' and/or 'onBoardVehicle', Period has no meaning and SHALL NOT be used.
+If omitted, then the ValidityPeriods on PtSituationElement level apply.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 					<xsd:element name="RecordedAtTime" type="xsd:dateTime">
 						<xsd:annotation>
 							<xsd:documentation>The time of the last update. This must be the timestamp of the original data source and not that of an intermediate system, such as a data hub. This timestamp has to be changed by the source system with every update.</xsd:documentation>
@@ -575,7 +618,7 @@ Rail transport, Roads and road transport
 					</xsd:element>
 					<xsd:element name="Version" type="SituationVersion" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>The monotonically inscresing version of the passenger information instance. If absent, is the same version as the enclosing Situation</xsd:documentation>
+							<xsd:documentation>The monotonically increasing version of the passenger information instance. If absent, is the same version as the enclosing Situation</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="SourceRef" type="ParticipantRefStructure" minOccurs="0">
@@ -599,6 +642,14 @@ Rail transport, Roads and road transport
 1 = highest priority.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element name="ActionIsClosing" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>ActionIsClosing 'true' signals to the consuming system that the corresponding TextualContent informs passengers about a normalisation. 
+Consequently, the consuming system will display a specific symbol, understood by passengers as "traffic is normalizing" or "restrictions are lifted", in combination with the TextualContent of this action. 
+Actions corresponding to a normalisation of traffic typically have a lower display priority than other actions, i.e., should be displayed only if enough space is available.
+By default, an action does not correspond to a normalisation, i.e., has ActionIsClosing 'false'.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 					<xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation>The actual, structured passenger information for a specific TextualContentSize.</xsd:documentation>
@@ -619,7 +670,7 @@ Rail transport, Roads and road transport
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
+						<xsd:element name="ScopeType" type="ScopeTypeEnumeration" minOccurs="0"/>
 						<xsd:element name="Affects" type="AffectsScopeStructure"/>
 					</xsd:sequence>
 				</xsd:complexType>
@@ -748,9 +799,41 @@ Rail transport, Roads and road transport
 			<xsd:documentation>Values for perspectives.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
-			<xsd:enumeration value="general"/>
-			<xsd:enumeration value="stopPoint"/>
-			<xsd:enumeration value="vehicleJourney"/>
+			<xsd:enumeration value="general">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.3, use anywhere instead. -v2.3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopPoint">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.3, use atStopPoint instead. -v2.3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vehicleJourney">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.3, use onBoardVehicle instead. -v2.3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="anywhere">
+				<xsd:annotation>
+					<xsd:documentation>Bird's eye perspective; e.g., passenger looks at an overview of situations on a network map. +v2.3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="atStopPoint">
+				<xsd:annotation>
+					<xsd:documentation>From the passengers' perpective at a specific stop; e.g., at a display on a platform during interchange. +v2.3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="onBoardVehicle">
+				<xsd:annotation>
+					<xsd:documentation>From the passengers' perspective while on board a specific vehicle; e.g., at an onboard display while moving in a vehicle. +v2.3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="whilePlanningTrip">
+				<xsd:annotation>
+					<xsd:documentation>From the passengers' perspective while plannig a trip; e.g., while using a trip search application on a smartphone. +v2.3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 </xsd:schema>

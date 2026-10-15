@@ -239,6 +239,7 @@ Rail transport, Roads and road transport.
 			<xsd:element ref="GeneralMessageRequest" maxOccurs="unbounded"/>
 			<xsd:element ref="FacilityMonitoringRequest" maxOccurs="unbounded"/>
 			<xsd:element ref="SituationExchangeRequest" maxOccurs="unbounded"/>
+			<xsd:element ref="ControlActionRequest" maxOccurs="unbounded"/>
 		</xsd:choice>
 	</xsd:group>
 	<!--===GS: Subscription REquest ==================================================================== -->
@@ -288,6 +289,7 @@ Rail transport, Roads and road transport.
 			<xsd:element ref="GeneralMessageSubscriptionRequest" maxOccurs="unbounded"/>
 			<xsd:element ref="FacilityMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
 			<xsd:element ref="SituationExchangeSubscriptionRequest" maxOccurs="unbounded"/>
+			<xsd:element ref="ControlActionSubscriptionRequest" maxOccurs="unbounded"/>
 		</xsd:choice>
 	</xsd:group>
 	<!-- === RESPONSES ================================================================== -->
@@ -370,6 +372,15 @@ Rail transport, Roads and road transport.
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:group ref="ServiceDeliveryRequestStatusGroup"/>
+			<xsd:element name="ContainsAllDataForNewInitialState" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether this ServiceDelivery contains all data relevant in the context of this subscription, or just new updates compared to the last delivery. Default is false, i.e. just incremental updates (since the incremental updates capability has default true).
+A requirement of the incremental update function is that the data producer must establish a proper initial state or baseline for each and every data object (e.g. journeys in the context of SIRI-ET and SIRI-VM) after a new subscription is established with the client/consumer.
+Use with caution! For each SIRI-profile or agreement among participants of a certain SIRI-implementation, it should be decided if and how ContainsAllDataForNewInitialState is implemented.  
+In the context of SIRI-ET, for example, a baseline of a journey is synonymous to an EstimatedVehicleJourney message with IsCompleteStopSequence equal to 'true'. 
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="MoreData" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Whether there is a further delivery message with more current updates that follows this one. Default is 'false'.</xsd:documentation>
@@ -427,6 +438,7 @@ Rail transport, Roads and road transport.
 				</xsd:choice>
 			</xsd:sequence>
 			<xsd:element ref="SituationExchangeDelivery" maxOccurs="unbounded"/>
+			<xsd:element ref="ControlActionDelivery" maxOccurs="unbounded"/>
 		</xsd:choice>
 	</xsd:group>
 	<!-- ===Discovery==================================================================== -->
@@ -498,6 +510,7 @@ Rail transport, Roads and road transport.
 			<xsd:element ref="GeneralMessageCapabilitiesRequest" minOccurs="0"/>
 			<xsd:element ref="FacilityMonitoringCapabilitiesRequest" minOccurs="0"/>
 			<xsd:element ref="SituationExchangeCapabilitiesRequest" minOccurs="0"/>
+			<xsd:element ref="ControlActionCapabilitiesRequest" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ===GS: Capabilities Delivery==================================================================== -->
@@ -534,6 +547,7 @@ Rail transport, Roads and road transport.
 			<xsd:element ref="GeneralMessageCapabilitiesResponse" minOccurs="0"/>
 			<xsd:element ref="FacilityMonitoringCapabilitiesResponse" minOccurs="0"/>
 			<xsd:element ref="SituationExchangeCapabilitiesResponse" minOccurs="0"/>
+			<xsd:element ref="ControlActionCapabilitiesResponse" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ======================================================================= -->
