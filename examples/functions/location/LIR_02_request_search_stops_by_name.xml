@@ -8,11 +8,18 @@
 				<siri:RequestTimestamp>2020-01-19T12:00:00Z</siri:RequestTimestamp>
 				<siri:MessageIdentifier>4712</siri:MessageIdentifier>
 				<InitialInput>
-					<Name>Bern</Name>
+					<Name>Muri</Name>
 				</InitialInput>
 				<Restrictions>
 					<Type>stop</Type>
 					<IncludePtModes>true</IncludePtModes>
+					<SortingNearPlaceRef>
+						<!-- indicates that the one near the canton of Aargau should be first and then the one near Bern -->
+						<TopographicPlaceRef>ch:Cantons:Aargau</TopographicPlaceRef>
+						<Name>
+							<Text>Search near Aargau.</Text>
+						</Name>
+					</SortingNearPlaceRef>
 				</Restrictions>
 			</OJPLocationInformationRequest>
 		</siri:ServiceRequest>
