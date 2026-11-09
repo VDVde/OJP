@@ -204,6 +204,11 @@
 					<xs:documentation>No real-time information available.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="TRIPINFO_JOURNEYREFAMBIGUOUS">
+				<xs:annotation>
+					<xs:documentation>The reference to the ‘JOURNEY’ was ambiguous. This can happen, when a frequency-based journey does not provide sufficiently detailed information to uniquely identify the journey.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="TRIPINFO_OTHER">
 				<xs:annotation>
 					<xs:documentation>A problem has occurred that does not have a specific problem type.</xs:documentation>
